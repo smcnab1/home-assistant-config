@@ -1,0 +1,7 @@
+device_tracker:
+  - platform: group
+    name: All Home
+    entities:
+      - person.sam_mcnab
+      - person.leah_jinks
+    all: true

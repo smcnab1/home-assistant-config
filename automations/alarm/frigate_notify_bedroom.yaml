@@ -1,0 +1,11 @@
+id: '1659719949254'
+alias: 'Alarm: Frigate - Bedroom'
+description: ''
+use_blueprint:
+  path: hunterjm/frigate_0.10_notification.yaml
+  input:
+    camera: bedroom
+    notify_group: all_devices
+    critical: true
+    update_thumbnail: true
+    presence_filter: person.presence

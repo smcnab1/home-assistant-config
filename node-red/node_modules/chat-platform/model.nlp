@@ -1,0 +1,688 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "nlu": {
+      "log": false
+    },
+    "autoSave": false,
+    "autoLoad": false,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "modelFileName": "model.nlp"
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager",
+      "log": false
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {
+          "help,i,need": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "assist,i,need": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "help,i,need,product,with,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "help,i,need,servic,with,you": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "assist,i,need,product,the,with": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "assist,i,need,product,with,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "abl,am,i,not,servic,to,use,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "abl,am,i,not,product,to,use,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "down,is,servic,the": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "down,is,servic,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "can,how,i,servic,use,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "can,how,i,product,use,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "ani,are,instruct,there": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "ani,are,for,instruct,product,there,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "ani,are,for,instruct,servic,there,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "can,help,me,product,with,you,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "can,help,me,servic,with,you,your": {
+            "intent": "faq.needHelp",
+            "domain": "default"
+          },
+          "ok,thank": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "am,done,i,ok": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "ok": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "thank,you": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "over,start": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "begin,from,is,let,start,the": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "done": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "again,start": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          },
+          "done,that,with": {
+            "intent": "faq.startOver",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "faq.needHelp": "default",
+          "faq.startOver": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "i need help",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need assistance",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need help with your product",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need help with you services",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need assistance with the product",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need assistance with your product",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i am not able to use your service",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "i am not able to use your product",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "the service is down",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "your service is down",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can i use your service?",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can i use your product?",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "are there any instructions",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "are there any instructions for your product",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "are there any instructions for your service",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you help me with your product?",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you help me with your service?",
+            "intent": "faq.needHelp"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok, thanks",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok i'm done",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "thank you",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "start over",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "let's start from the beginning",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "done",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "start again",
+            "intent": "faq.startOver"
+          },
+          {
+            "domain": "default",
+            "utterance": "done with that",
+            "intent": "faq.startOver"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "i": 1,
+              "need": 1,
+              "help": 1,
+              "assist": 1,
+              "with": 1,
+              "your": 1,
+              "product": 1,
+              "you": 1,
+              "servic": 1,
+              "the": 1,
+              "am": 1,
+              "not": 1,
+              "abl": 1,
+              "to": 1,
+              "use": 1,
+              "is": 1,
+              "down": 1,
+              "how": 1,
+              "can": 1,
+              "are": 1,
+              "there": 1,
+              "ani": 1,
+              "instruct": 1,
+              "for": 1,
+              "me": 1,
+              "ok": 1,
+              "thank": 1,
+              "done": 1,
+              "start": 1,
+              "over": 1,
+              "let": 1,
+              "from": 1,
+              "begin": 1,
+              "again": 1,
+              "that": 1
+            },
+            "intents": {
+              "faq.needHelp": 1,
+              "faq.startOver": 1
+            },
+            "intentFeatures": {
+              "faq.needHelp": [
+                "i",
+                "need",
+                "help",
+                "assist",
+                "with",
+                "your",
+                "product",
+                "you",
+                "servic",
+                "the",
+                "am",
+                "not",
+                "abl",
+                "to",
+                "use",
+                "is",
+                "down",
+                "how",
+                "can",
+                "are",
+                "there",
+                "ani",
+                "instruct",
+                "for",
+                "me"
+              ],
+              "faq.startOver": [
+                "ok",
+                "thank",
+                "i",
+                "am",
+                "done",
+                "you",
+                "start",
+                "over",
+                "let",
+                "is",
+                "from",
+                "the",
+                "begin",
+                "again",
+                "with",
+                "that"
+              ]
+            },
+            "neuralNetwork": {
+              "features": [
+                "i",
+                "need",
+                "help",
+                "assist",
+                "with",
+                "your",
+                "product",
+                "you",
+                "servic",
+                "the",
+                "am",
+                "not",
+                "abl",
+                "to",
+                "use",
+                "is",
+                "down",
+                "how",
+                "can",
+                "are",
+                "there",
+                "ani",
+                "instruct",
+                "for",
+                "me",
+                "ok",
+                "thank",
+                "done",
+                "start",
+                "over",
+                "let",
+                "from",
+                "begin",
+                "again",
+                "that",
+                "nonefeature"
+              ],
+              "intents": [
+                "faq.needHelp",
+                "faq.startOver",
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  3.2381200790405273,
+                  3.555898666381836,
+                  3.296550750732422,
+                  3.270791530609131,
+                  -1.9575456380844116,
+                  0.6167985200881958,
+                  1.3621177673339844,
+                  0.5451315641403198,
+                  1.3756996393203735,
+                  0.624260425567627,
+                  -0.5024858713150024,
+                  1.2952213287353516,
+                  1.2952213287353516,
+                  1.2952213287353516,
+                  1.479928731918335,
+                  3.3183610439300537,
+                  4.7628679275512695,
+                  0.18470314145088196,
+                  3.196141242980957,
+                  2.522237777709961,
+                  2.522237777709961,
+                  2.522237777709961,
+                  2.522237777709961,
+                  -1.996193289756775,
+                  3.0114381313323975,
+                  -2.6237573623657227,
+                  -2.9484386444091797,
+                  -2.534069776535034,
+                  -2.183978796005249,
+                  -0.4343136250972748,
+                  -1.444516658782959,
+                  -1.444516658782959,
+                  -1.444516658782959,
+                  -0.3051500618457794,
+                  -0.44874677062034607,
+                  -2.4313607215881348,
+                  2.4188898437007462
+                ],
+                [
+                  -4.137269496917725,
+                  -2.335779905319214,
+                  -2.7259061336517334,
+                  -0.8954910039901733,
+                  -1.1803125143051147,
+                  -2.6066648960113525,
+                  -2.1975715160369873,
+                  5.378314971923828,
+                  -2.6493539810180664,
+                  -0.7376475930213928,
+                  -1.7690986394882202,
+                  -0.6156702041625977,
+                  -0.6156702041625977,
+                  -0.6156702041625977,
+                  -0.6480616331100464,
+                  -0.7433500289916992,
+                  -1.8344093561172485,
+                  -0.03239144757390022,
+                  -1.3180079460144043,
+                  -1.4914308786392212,
+                  -1.4914308786392212,
+                  -1.4914308786392212,
+                  -1.4914308786392212,
+                  0,
+                  -1.2856165170669556,
+                  6.025800704956055,
+                  0.9472818970680237,
+                  6.503326892852783,
+                  4.716848373413086,
+                  1.8125406503677368,
+                  1.0910592079162598,
+                  1.0910592079162598,
+                  1.0910592079162598,
+                  1.8132444620132446,
+                  1.1841439008712769,
+                  -5.9110918045043945,
+                  5.982354490489502
+                ],
+                [
+                  -0.8168695569038391,
+                  -0.6386598348617554,
+                  -0.33462074398994446,
+                  -0.3261703550815582,
+                  -0.3158915936946869,
+                  -0.37721478939056396,
+                  -0.21305027604103088,
+                  -0.7618848085403442,
+                  -0.5029812455177307,
+                  -0.3603227138519287,
+                  -0.07977964729070663,
+                  -0.05739288032054901,
+                  -0.05739288032054901,
+                  -0.05739288032054901,
+                  -0.15582285821437836,
+                  -0.4814259111881256,
+                  -0.43703922629356384,
+                  -0.09842997044324875,
+                  -0.12056126445531845,
+                  -0.4454389810562134,
+                  -0.4454389810562134,
+                  -0.4454389810562134,
+                  -0.4454389810562134,
+                  -0.024568889290094376,
+                  -0.022131286561489105,
+                  -1.7793139219284058,
+                  -1.0184390544891357,
+                  -1.7786701917648315,
+                  -1.2047302722930908,
+                  -0.5849290490150452,
+                  -0.04438669607043266,
+                  -0.04438669607043266,
+                  -0.04438669607043266,
+                  -0.5754146575927734,
+                  -0.2172909528017044,
+                  10.716933250427246,
+                  1.7803841825032014
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "i need help"
+      ],
+      [
+        "en",
+        "i need assistance"
+      ],
+      [
+        "en",
+        "i need help with your product"
+      ],
+      [
+        "en",
+        "i need help with you services"
+      ],
+      [
+        "en",
+        "i need assistance with the product"
+      ],
+      [
+        "en",
+        "i need assistance with your product"
+      ],
+      [
+        "en",
+        "i am not able to use your service"
+      ],
+      [
+        "en",
+        "i am not able to use your product"
+      ],
+      [
+        "en",
+        "the service is down"
+      ],
+      [
+        "en",
+        "your service is down"
+      ],
+      [
+        "en",
+        "how can i use your service?"
+      ],
+      [
+        "en",
+        "how can i use your product?"
+      ],
+      [
+        "en",
+        "are there any instructions"
+      ],
+      [
+        "en",
+        "are there any instructions for your product"
+      ],
+      [
+        "en",
+        "are there any instructions for your service"
+      ],
+      [
+        "en",
+        "can you help me with your product?"
+      ],
+      [
+        "en",
+        "can you help me with your service?"
+      ],
+      [
+        "en",
+        "ok, thanks"
+      ],
+      [
+        "en",
+        "ok i'm done"
+      ],
+      [
+        "en",
+        "ok"
+      ],
+      [
+        "en",
+        "thank you"
+      ],
+      [
+        "en",
+        "start over"
+      ],
+      [
+        "en",
+        "let's start from the beginning"
+      ],
+      [
+        "en",
+        "done"
+      ],
+      [
+        "en",
+        "start again"
+      ],
+      [
+        "en",
+        "done with that"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

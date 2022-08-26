@@ -1,0 +1,69 @@
+id: '1660766198319'
+alias: Leah Wake Up Morning
+description: ''
+trigger:
+- platform: state
+  entity_id:
+  - binary_sensor.living_room_motion
+  to: 'on'
+condition:
+- condition: state
+  entity_id: binary_sensor.sm_g998b_is_charging
+  state: 'on'
+- condition: time
+  after: 05:00:00
+  before: 06:00:00
+- condition: state
+  entity_id: input_boolean.holiday
+  state: 'off'
+action:
+- service: media_player.turn_on
+  data: {}
+  target:
+    entity_id: media_player.living_room_speaker
+- service: media_player.volume_set
+  data:
+    volume_level: 0.6
+  target:
+    entity_id: media_player.living_room_speaker
+- service: tts.cloud_say
+  data_template:
+    entity_id: media_player.living_room_speaker
+    message: 'Good Morning Leah. It is currently {{now().strftime(''%H:%M %p'')
+      }}. It is currently {{states.sensor.open_weather_feels_like_temperature.state|round}}
+      degrees outside and {{states.sensor.open_weather_condition.state}}. It is
+      going to be {{states.sensor.open_weather_forecast_condition.state}} today
+      with a high of {{states.sensor.open_weather_forecast_temperature.state|round}}
+      degrees and a low of {{states.sensor.open_weather_forecast_temperature_low.state|round}}
+      degrees. It is going to take you {{states.sensor.leah_work.state}} minutes
+      to get to work via the tube at the moment. Lets get your day off to a great
+      start with some choonage whilst you eat breakfast.
+
+      '
+- delay:
+    hours: 0
+    minutes: 0
+    seconds: 25
+    milliseconds: 0
+- service: media_player.volume_set
+  data:
+    volume_level: 0.4
+  target:
+    entity_id: media_player.living_room_speaker
+- service: spotcast.start
+  data:
+    device_name: Living Room speaker
+    entity_id: media_player.living_room_speaker
+    uri: spotify:playlist:4OrLCnci10VO8DlSQ7VK5d
+    random_song: true
+    shuffle: true
+- delay:
+    hours: 1
+    minutes: 0
+    seconds: 0
+    milliseconds: 0
+- service: media_player.media_pause
+  data: {}
+  target:
+    entity_id: media_player.living_room_speaker
+mode: single

@@ -1,0 +1,17 @@
+id: '1660669418649'
+alias: Turn ALL Lights Off
+description: ''
+trigger: []
+condition: []
+action:
+- service: light.turn_off
+  data: {}
+  target:
+    entity_id:
+    - light.all_bathroom_lights
+    - light.all_bedroom_lights
+    - light.all_hall_lights
+    - light.all_kitchen_lights
+    - light.all_living_room_lights
+    - light.all_office_lights
+mode: single

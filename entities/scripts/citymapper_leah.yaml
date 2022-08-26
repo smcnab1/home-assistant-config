@@ -1,0 +1,11 @@
+sequence:
+  - service: notify.mobile_app_leah_s_iphone
+    data:
+      title: Want help getting to work?
+      message: Open Citymapper
+      data:
+        actions:
+          - action: OPEN
+            title: Open Citymapper
+            uri: citymapper://x-callback-url/directions?endcoord=51.48927688598633%2C-0.17074406147003174&endname=Royal%20Brompton%20Hospital&endaddress=Sydney%20Street%20Chelsea%2C%20London%2C%20SW3%206NP&x-source=My%20App%20Name&x-success=myappscheme%3A%2F%2F
+mode: single
