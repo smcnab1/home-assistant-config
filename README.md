@@ -62,7 +62,8 @@
 </div>
 
 <p align="center">
-[![Op Question Mark Screen Shot][product-screenshot]](https://example.com)
+  <a href="https://github.com/smcnab1/op-question-mark">
+    <img src="https://i.imgur.com/NalP8Tn.png" alt="Logo" width="900" height="400">
 </p>
 
 <!-- GETTING STARTED -->
@@ -175,7 +176,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-url]: https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://i.imgur.com/NalP8Tn.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
