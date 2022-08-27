@@ -9,14 +9,15 @@
 <br />
 <div align="center">
   <a href="https://github.com/smcnab1/op-question-mark">
-    <img src="image/Untitled_design-removebg-preview.png" alt="Logo" width="80" height="80">
+    <img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150">
   </a>
 
 <h3 align="center">Op Question Mark</h3>
+<h4 align="center">Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!</h4>
+</div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
   <p align="center">
     This is my <b>first</b> repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system. 
     <br />
@@ -31,20 +32,38 @@
     ·
     <a href="https://github.com/smcnab1/op-question-mark/issues">ToDo List</a>
   </p>
-  <p align="center"> <b>Contents</b> </p>
-    <a href="https://github.com/smcnab1/op-question-mark">View Demo</a>
+
+<!-- CONTENTS -->
+## Contents
+<div align="center">
+  <p align="center">
+    <a href="https://github.com/smcnab1/op-question-mark">System Diagram</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Report Bug</a>
+    <a href="https://github.com/smcnab1/op-question-mark">System</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Request Feature</a>
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Networking</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">ToDo List</a>
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Google Devices</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Hubs</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Lighting</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Switches</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Security</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Cameras</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Streaming Devices</a>
+    |
+    <a href="https://github.com/smcnab1/op-question-mark/issues">Sensors</a>
+    </p>
 </div>
 
 <p align="center">
 [![Op Question Mark Screen Shot][product-screenshot]](https://example.com)
 </p>
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <!-- GETTING STARTED -->
 ## Getting Started
