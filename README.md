@@ -4,7 +4,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
+<a name="readme-top"></a>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -18,12 +18,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  <p align="center">
-    This is my <b>first</b> repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system. 
+  <p>
+    This is my <b>first</b> repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system.
+    <br />
     <br />
     This repo will be updated regularly and I am keen to make it an open & learning venture. Looking for feature suggestions and advice to increase the <b>wife-approval level</b>.
     <br />
-    <br />
+    </p>
+    <p align="center">
     <a href="https://github.com/smcnab1/op-question-mark">View Demo</a>
     ·
     <a href="https://github.com/smcnab1/op-question-mark/issues">Report Bug</a>
@@ -35,105 +37,97 @@
 
 <!-- CONTENTS -->
 ## Contents
-<div align="center">
   <p align="center">
-    <a href="https://github.com/smcnab1/op-question-mark">System Diagram</a>
+    <a href="#system-diagram">System Diagram</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark">System</a>
+    <a href="#note-automations">Noteworthy Automations</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Networking</a>
+    <a href="#devices">Devices</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Google Devices</a>
+    <a href="#automations">Automations</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Hubs</a>
+    <a href="#addon">Add-Ons</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Lighting</a>
+    <a href="#contributing">Contributing</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Switches</a>
+    <a href="#license">License</a>
     |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Security</a>
-    |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Cameras</a>
-    |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Streaming Devices</a>
-    |
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Sensors</a>
-    </p>
+    <a href="#contact">Contact</a>
 </div>
 
 <p align="center">
-  <a href="https://github.com/smcnab1/op-question-mark">
-    <img src="https://i.imgur.com/NalP8Tn.png" alt="Logo" width="900" height="400">
+<a href="https://github.com/smcnab1/op-question-mark">
+  <img src="https://i.imgur.com/NalP8Tn.png" alt="Screenshot Desktop" width="900" height="400">
+  </a>
 </p>
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- SYSTEM DIAGRAM -->
+<a name="system-diagram"></a>
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### System Diagram
+<p id="system-diagram">
+This is my current HA system diagram. Inspired by <a href="https://github.com/CCOSTAN/Home-AssistantConfigCCOSTAN">CCOSTAN's HA Repo.</a>
+<br />
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+<b><i>Currently a WIP</i></b>
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- NOTEWORTHY AUTOMATIONS -->
+<a name="note-automations"></a>
 
+### Noteworthy Automations
+This is a list of automations of note within my setup. Full list of automations can be found below.
+<br />
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+<b><i>Currently a WIP</i></b>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- DEVICES -->
+<a name="devices"></a>
 
+### Devices
+This is a list of the devices I currently use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/op-question-mark/issues">feature request.</a>
+<br />
+
+<b><i>Currently a WIP</i></b>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTOMATIONS -->
+<a name="automations"></a>
+### Automations
+
+This is a list of all of my automations within my setup. These will link to the specific yaml file for them.
+<br />
+
+<b><i>Currently a WIP</i></b>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ADD-ONS -->
+<a name="addon"></a>
+### Add-Ons
+
+This is a list of all of my add-ons within my setup. These also include the HACS integrations I currently use. (Links go to the github of the add-on/integration)
+<br />
+
+<b><i>Currently a WIP</i></b>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+<a name="contributing"></a>
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement" or "feature-request".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
+1. Fork the Project.
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
@@ -141,29 +135,26 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+<a name="license"></a>
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md">`LICENSE.md`</a> for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
+<a name="contact"></a>
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+<br />
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<b><i>Currently a WIP</i></b>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/smcnab1/op-question-mark/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
@@ -176,7 +167,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-url]: https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
-[product-screenshot]: https://i.imgur.com/NalP8Tn.png
+[product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -192,4 +183,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
