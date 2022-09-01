@@ -1,0 +1,55 @@
+---
+### Card Travel Map ###
+card_travel_map:
+  template:
+    - "icon_more_info_new"
+    - "ulm_translation_engine"
+  variables:
+    ulm_card_generic_icon: mdi:car
+    ulm_card_generic_name: Local Traffic
+
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              entity: sensor.sam_to_home
+              icon: mdi:car
+              tap_action:
+                action: "fire-dom-event"
+                browser_mod:
+                  command: "popup"
+                  large: true
+                  hide_header: true
+                  name: Local Traffic
+                  card:
+                    type: iframe
+                    url: https://www.tfljamcams.net/
+
+              styles:
+                icon: 
+                  - color: rgba(var(--color-blue), 1)
+                img-cell: 
+                  - background-color: rgba(var(--color-blue), 0.2)
+                card:
+                  - background-color: rgba(var(--color-blue), 0.2)
+
+          item2:
+            card:
+              type: "custom:button-card"
+              entity: sensor.sam_to_home
+              name: Local Traffic
+              tap_action:
+                action: "fire-dom-event"
+                browser_mod:
+                  command: "popup"
+                  large: true
+                  hide_header: true
+                  name: Local Traffic
+                  card:
+                    type: iframe
+                    url: https://www.tfljamcams.net/
+
