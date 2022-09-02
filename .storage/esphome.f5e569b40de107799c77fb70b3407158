@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.f5e569b40de107799c77fb70b3407158",
+  "data": {
+    "device_info": {
+      "uses_password": true,
+      "name": "esp-bed-sensor",
+      "mac_address": "94:B5:55:F8:49:AC",
+      "compilation_time": "Aug 21 2022, 18:20:26",
+      "model": "esp32dev",
+      "has_deep_sleep": false,
+      "esphome_version": "2022.8.0",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 6
+    },
+    "binary_sensor": [
+      {
+        "object_id": "bed_sensor_leah",
+        "key": 589992112,
+        "name": "Bed Sensor Leah",
+        "unique_id": "esp-bed-sensorbinary_sensorbed_sensor_leah",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "bed_sensor_sam",
+        "key": 2563919215,
+        "name": "Bed Sensor Sam",
+        "unique_id": "esp-bed-sensorbinary_sensorbed_sensor_sam",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      }
+    ]
+  }
+}

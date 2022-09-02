@@ -1,0 +1,321 @@
+[
+  {
+      "start": {
+          "time": "sunrise",
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_red"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 100
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_red"
+  },
+  {
+      "start": {
+          "time": "dusk",
+          "value": 0
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_red"
+  },
+  {
+      "start": {
+          "time": "nauticalDusk",
+          "value": 100
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "offset": 30,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_red"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "value": 30
+      },
+      "topic": "light.living_room_aq_rgbww_green"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "value": 30
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_green"
+  },
+  {
+      "start": {
+          "time": "dusk",
+          "value": 0
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "offset": -15,
+          "value": 30
+      },
+      "topic": "light.living_room_aq_rgbww_green"
+  },
+  {
+      "start": {
+          "time": "nauticalDusk",
+          "offset": -15,
+          "value": 30
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_green"
+  },
+  {
+      "start": {
+          "time": "dawn",
+          "offset": -60,
+          "value": 1
+      },
+      "end": {
+          "time": "dawn",
+          "value": 20
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "dawn",
+          "value": 20
+      },
+      "end": {
+          "time": "sunrise",
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "sunrise",
+          "value": 100
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "nauticalDusk",
+          "value": 0
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "offset": 30,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "nauticalDusk",
+          "offset": 30,
+          "value": 100
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "offset": 45,
+          "value": 20
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "nauticalDusk",
+          "offset": 45,
+          "value": 20
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "offset": 120,
+          "value": 1
+      },
+      "topic": "light.living_room_aq_rgbww_blue"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 30
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 30
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 210,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": 240,
+          "value": 100
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 241,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "goldenHour",
+          "offset": -91,
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHour",
+          "offset": -90,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "goldenHour",
+          "offset": -60,
+          "value": 100
+      },
+      "end": {
+          "time": "dusk",
+          "value": 20
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "dusk",
+          "value": 20
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_white_1"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": -15,
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 30
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": 15,
+          "value": 30
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 210,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  },
+  {
+      "start": {
+          "time": "goldenHourEnd",
+          "offset": 240,
+          "value": 100
+      },
+      "end": {
+          "time": "goldenHourEnd",
+          "offset": 241,
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  },
+  {
+      "start": {
+          "time": "goldenHour",
+          "offset": -91,
+          "value": 0
+      },
+      "end": {
+          "time": "goldenHour",
+          "offset": -90,
+          "value": 100
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  },
+  {
+      "start": {
+          "time": "goldenHour",
+          "offset": -60,
+          "value": 100
+      },
+      "end": {
+          "time": "dusk",
+          "value": 20
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  },
+  {
+      "start": {
+          "time": "dusk",
+          "value": 20
+      },
+      "end": {
+          "time": "nauticalDusk",
+          "value": 0
+      },
+      "topic": "light.living_room_aq_rgbww_white_2"
+  }
+]

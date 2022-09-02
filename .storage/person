@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "Sam",
+        "user_id": "47cefae3ba0f490c8ccafd6bfedad232",
+        "device_trackers": [
+          "device_tracker.sam_mcnab",
+          "device_tracker.sams_iphone"
+        ],
+        "id": "sam_mcnab",
+        "picture": "/api/image/serve/0d3f067529413545bf734131f079b572/512x512"
+      },
+      {
+        "name": "Leah",
+        "device_trackers": [
+          "device_tracker.leah_jinks"
+        ],
+        "user_id": "d5de2d519885447495a552f1d87f0a9d",
+        "picture": "/api/image/serve/2d74d841266409706f47db7e3548d1b7/512x512",
+        "id": "leah_jinks"
+      },
+      {
+        "name": "Tablet",
+        "device_trackers": [],
+        "user_id": "f1dae06d07aa49ac931cb115d72db65a",
+        "picture": null,
+        "id": "tablet"
+      },
+      {
+        "name": "Guest",
+        "device_trackers": [],
+        "user_id": null,
+        "picture": null,
+        "id": "guest"
+      },
+      {
+        "name": "Presence",
+        "device_trackers": [
+          "device_tracker.sam_mcnab",
+          "device_tracker.leah_jinks"
+        ],
+        "user_id": null,
+        "picture": null,
+        "id": "presence"
+      }
+    ]
+  }
+}

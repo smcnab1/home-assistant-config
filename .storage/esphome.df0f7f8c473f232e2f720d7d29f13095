@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.df0f7f8c473f232e2f720d7d29f13095",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esp-bed-sensor",
+      "mac_address": "94:B5:55:F8:49:AC",
+      "compilation_time": "Aug 21 2022, 16:59:29",
+      "model": "esp32dev",
+      "has_deep_sleep": false,
+      "esphome_version": "2022.8.0",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 6
+    }
+  }
+}

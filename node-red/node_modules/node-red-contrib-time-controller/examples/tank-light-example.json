@@ -1,0 +1,76 @@
+[
+  {
+    "start": {
+      "time": "sunrise",
+      "offset": 90,
+      "value": [
+        0,
+        263
+      ]
+    },
+    "end": {
+      "time": "sunrise",
+      "offset": 180,
+      "value": [
+        100,
+        263
+      ]
+    },
+    "topic": "light.office_aq_light_front"
+  },
+  {
+    "start": {
+      "time": "sunrise",
+      "offset": 90,
+      "value": [
+        0,
+        385
+      ]
+    },
+    "end": {
+      "time": "sunrise",
+      "offset": 180,
+      "value": [
+        100,
+        385
+      ]
+    },
+    "topic": "light.office_aq_light_rear"
+  },
+  {
+    "start": {
+      "time": "sunset",
+      "offset": -90,
+      "value": [
+        100,
+        263
+      ]
+    },
+    "end": {
+      "time": "sunset",
+      "value": [
+        0,
+        263
+      ]
+    },
+    "topic": "light.office_aq_light_front"
+  },
+  {
+    "start": {
+      "time": "sunset",
+      "offset": -90,
+      "value": [
+        100,
+        385
+      ]
+    },
+    "end": {
+      "time": "sunset",
+      "value": [
+        0,
+        385
+      ]
+    },
+    "topic": "light.office_aq_light_rear"
+  }
+]

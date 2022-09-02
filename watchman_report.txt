@@ -1,0 +1,142 @@
+-== Watchman Report ==- 
+
+-== Congratulations, all 43 services from your config are available!
+
+-== Missing 78 entity(ies) from 293 found in your config:
++--------------------------------+---------+--------------------------------------------------------------+
+| Entity ID                      | State   | Location                                                     |
++--------------------------------+---------+--------------------------------------------------------------+
+| camera.circle                  | missing | automations.yaml:424                                         |
+| scene.scene_bathroom_bath      | unknown | automations.yaml:780                                         |
+| ('Scene: Bathroom Bath')       |         |                                                              |
+| light.desk_lamp ('Office: Desk | unavail | automations.yaml:808,824,999                                 |
+| Lamp')                         |         |                                                              |
+| scene.scene_office_lamp        | unknown | automations.yaml:836                                         |
+| ('Scene: Office Lamp')         |         |                                                              |
+| light.living_room_lamp         | unavail | automations.yaml:899,1049                                    |
+| ('Living Room: Lamp')          |         |                                                              |
+| light.lava_lamp ('Living Room: | unavail | automations.yaml:1050                                        |
+| Lava Lamp')                    |         |                                                              |
+| scene.premovie                 | missing | automations.yaml:1071                                        |
+| binary_sensor.sm_g998b_is_char | missing | automations.yaml:1156                                        |
+| ging                           |         |                                                              |
+| person.fill                    | missing | automations.yaml:1324,1328                                   |
+| scene.prehurryup               | missing | automations.yaml:1397                                        |
+| scene.prebedmovie              | missing | automations.yaml:1610                                        |
+| automation.bedroom_daytime     | unavail | automations.yaml:1863,1905                                   |
+| ('Bedroom: Daytime')           |         |                                                              |
+| light.bed_l                    | missing | scenes.yaml:592                                              |
+| light.fairy_lights ('Fairy     | unavail | scenes.yaml:610,623,647,658                                  |
+| Lights')                       |         |                                                              |
+| scene.houseparty               | missing | scripts.yaml:108                                             |
+| sensor.kiosk_device_info       | missing | configuration.yaml:127,128                                   |
+| media_player.vardagsrum        | missing | custom_components/spotcast/services.yaml:21                  |
+| camera.front_door              | missing | custom_components/browser_mod/services.yaml:47               |
+| sensor.kitchen_device          | missing | custom_components/google_home/services.yaml:9                |
+| sensor.kitchen_alarms          | missing | custom_components/google_home/services.yaml:20               |
+| sensor.kitchen_timers          | missing | custom_components/google_home/services.yaml:38               |
+| media_player.amazon_fire_media | missing | custom_components/fullykiosk/services.yaml:9,23,44,74,88,102 |
+| _player                        |         | ,133,154,168,182                                             |
+| media_player.tv                | missing | custom_components/samsungtv_smart/services.yaml:8,29         |
+| climate.hvac                   | missing | custom_components/ui_lovelace_minimalist/lovelace/ulm_templa |
+|                                |         | tes/popup_templates/popup_buttons/popup_button_airconditionn |
+|                                |         | er.yaml:22                                                   |
+| number.match                   | missing | custom_components/ui_lovelace_minimalist/lovelace/translatio |
+|                                |         | ns/default.yaml:14,24                                        |
+| sensor.sebs_sensor_temperature | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/card_templates/chips/title_chip.yaml:5          |
+| sensor.rpi_cpu_temperature     | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/card_templates/cards/radial_icon_info.yaml:13   |
+| input_boolean.button_card_time | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+| r                              |         | lm_templates/custom_cards/card_generic_waze.yaml:26,28,35,48 |
+|                                |         | ,56,74                                                       |
+| timer.button_card_timer_1min   | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/custom_cards/card_generic_waze.yaml:42          |
+| sensor.speedtest_download      | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/custom_cards/custom_card_irmajavi_speedtest/cus |
+|                                |         | tom_card_irmajavi_speedtest.yaml:12                          |
+| sensor.speedtest_upload        | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/custom_cards/custom_card_irmajavi_speedtest/cus |
+|                                |         | tom_card_irmajavi_speedtest.yaml:13                          |
+| switch.lava_lamp ('Lava Lamp') | unavail | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/custom_cards/custom_card_esh_room/custom_card_e |
+|                                |         | sh_room_lr.yaml:279                                          |
+| switch.lounge_lamp ('Living    | unavail | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+| Room: Lamp')                   |         | lm_templates/custom_cards/custom_card_esh_room/custom_card_e |
+|                                |         | sh_room_lr.yaml:299                                          |
+| switch.desk_lamp ('Desk Lamp') | unavail | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/custom_cards/custom_card_esh_room/custom_card_e |
+|                                |         | sh_room_off.yaml:203                                         |
+| switch.fairy_lights ('Fairy    | unavail | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+| Lights')                       |         | lm_templates/custom_cards/custom_card_esh_room/custom_card_e |
+|                                |         | sh_room_bed.yaml:223                                         |
+| media_player.fire_tv_192_168_1 | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+| _104                           |         | lm_templates/custom_cards/custom_card_esh_room/custom_card_e |
+|                                |         | sh_room_bath.yaml:291                                        |
+| sensor.sam_s_phone_wifi_connec | missing | ui_lovelace_minimalist/dashboard/adaptive-dash/views-        |
+| tion                           |         | tablet/01-Home.yaml:215                                      |
+| light.hall_tablet_screen       | missing | ui_lovelace_minimalist/dashboard/adaptive-dash/views-        |
+|                                |         | tablet/01-Home.yaml:396,413,430,463                          |
+| input_select.minimalist_ui_swi | missing | ui_lovelace_minimalist/dashboard/adaptive-                   |
+| tch                            |         | dash/popup/popup.yaml:11                                     |
+| script.pause                   | missing | .storage/lovelace.lovelace_tablet:133,312,491,670,849,1028,8 |
+|                                |         | 193,8372,10708,10887,17810,17989                             |
+| light.all_living_room          | missing | .storage/lovelace.lovelace_tablet:2231                       |
+| light.all_kitchen              | missing | .storage/lovelace.lovelace_tablet:2366                       |
+| sensor.london_tfl_jubilee_940g | missing | .storage/lovelace.lovelace_tablet:3637                       |
+| zzluwhp_2                      |         |                                                              |
+| sensor.london_tfl_jubilee_940g | missing | .storage/lovelace.lovelace_tablet:3663                       |
+| zzluwhp_3                      |         |                                                              |
+| light.hall_lamp_3              | missing | .storage/lovelace.lovelace_tablet:3696                       |
+| binary_sensor.hall_motion_3    | missing | .storage/lovelace.lovelace_tablet:3705,5437,21689            |
+| media_player.hall_tablet_media | missing | .storage/lovelace.lovelace_tablet:5089,5112                  |
+| _player                        |         |                                                              |
+| script.pause_tv                | missing | .storage/lovelace.lovelace_tablet:5119,8014,10529,13468,1364 |
+|                                |         | 7,17631                                                      |
+| binary_sensor.schlafzimmer_fen | missing | .storage/lovelace.lovelace_tablet:5268,21959,22240,22521,228 |
+| ster_status                    |         | 02,23083                                                     |
+| light.lounge_led               | missing | .storage/lovelace.lovelace_tablet:6019                       |
+| light.tv_led                   | missing | .storage/lovelace.lovelace_tablet:6022                       |
+| light.dining_led               | missing | .storage/lovelace.lovelace_tablet:6025                       |
+| media_player.living_room_sonos | missing | .storage/lovelace.lovelace_tablet:6031,10701,17803           |
+| binary_sensor.lounge_motion_2  | missing | .storage/lovelace.lovelace_tablet:6034                       |
+| sensor.temperature_sensor_temp | missing | .storage/lovelace.lovelace_tablet:6037                       |
+| erature                        |         |                                                              |
+| binary_sensor.living_room_moti | missing | .storage/lovelace.lovelace_tablet:8679,18296,21970           |
+| on_2                           |         |                                                              |
+| binary_sensor.kitchen_motion   | missing | .storage/lovelace.lovelace_tablet:11194,22251                |
+| light.bedroom_bedside_left     | missing | .storage/lovelace.lovelace_tablet:13286                      |
+| media_player.bedroom_speaker   | missing | .storage/lovelace.lovelace_tablet:13640                      |
+| binary_sensor.bedroom_motion_4 | missing | .storage/lovelace.lovelace_tablet:13954,22532                |
+| binary_sensor.bathroom_motion_ | missing | .storage/lovelace.lovelace_tablet:15781,22813                |
+| sensor                         |         |                                                              |
+| sensor.hall_motion_battery_3   | missing | .storage/lovelace.lovelace_tablet:21824                      |
+| sensor.living_room_motion_batt | missing | .storage/lovelace.lovelace_tablet:22105,26259                |
+| ery_2                          |         |                                                              |
+| sensor.kitchen_motion_battery  | missing | .storage/lovelace.lovelace_tablet:22386                      |
+| sensor.bedroom_motion_battery_ | missing | .storage/lovelace.lovelace_tablet:22667                      |
+| 4                              |         |                                                              |
+| sensor.bathroom_motion_sensor_ | missing | .storage/lovelace.lovelace_tablet:22948                      |
+| battery                        |         |                                                              |
+| sensor.disk_free ('Disk free   | unavail | .storage/lovelace.lovelace_tablet:27730                      |
+| /')                            |         |                                                              |
+| sensor.disk_use ('Disk use /') | unavail | .storage/lovelace.lovelace_tablet:27740                      |
+| sensor.processor_use           | unavail | .storage/lovelace.lovelace_tablet:27757                      |
+| ('Processor use')              |         |                                                              |
+| group.halllights               | missing | .storage/lovelace.lovelace_tablet:27912                      |
+| media_player.living_room_samsu | missing | .storage/lovelace.lovelace_tablet:28028                      |
+| ng_tv                          |         |                                                              |
+| input_number.YOUR_INPUT_NUMBER | missing | .storage/lovelace.lovelace_tablet:28073                      |
+| input_number                   |         |                                                              |
+| alarm_control_panel.blink_home | missing | .storage/lovelace:21                                         |
+| _clockwork_factory_apartments  |         |                                                              |
+| weather.openweathermap         | missing | .storage/lovelace:25                                         |
+| light.your_light               | missing | .storage/lovelace:33,115                                     |
+| light.lights_on                | missing | .storage/lovelace:46                                         |
+| light.kitchen_led              | missing | .storage/lovelace:91                                         |
+| light.bedroom_led              | missing | .storage/lovelace:103                                        |
++--------------------------------+---------+--------------------------------------------------------------+
+
+-== Report created on 25 Aug 2022 12:56:07
+-== Parsed 499 files in 14.78s., ignored 0 files 
+-== Generated in: 0.10s. Validated in: 0.00s.

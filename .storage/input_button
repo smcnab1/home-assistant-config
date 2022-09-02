@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_button",
+  "data": {
+    "items": [
+      {
+        "name": "Hubert Watered",
+        "icon": "mdi:tree",
+        "id": "hubert_watered"
+      }
+    ]
+  }
+}

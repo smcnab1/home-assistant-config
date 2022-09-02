@@ -1,0 +1,261 @@
+<script type="text/javascript">
+  $.RedBot.registerType('chatbot-messenger-menu', {
+    category: $.RedBot.config.name,
+    color: '#FFCC66',
+    defaults: {
+      composerInputDisabled: {
+        value: false
+      },
+      command: {
+        value: 'set'
+      },
+      name: {
+        value: ''
+      },
+      items: {
+        value: [],
+        validate: function(items) {
+          var valid = true;
+          var idx;
+          for(idx = 0; idx < items.length; idx++) {
+            if (!$.RedBot.validate.button(items[idx])) {
+              valid = false;
+            }
+          }
+          return valid;
+        }
+      },
+      message: {
+        value: ''
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'Messenger Menu',
+    icon: 'chatbot-menu.png',
+    label: function() {
+      return this.name || 'Messenger Menu';
+    },
+    oneditsave: function() {
+      var items = $("#node-input-items-container").editableList('items');
+      var node = this;
+      node.items = [];
+      var idx;
+      for(idx = 0; idx < items.length; idx++) {
+        node.items.push($(items[idx]).RB_getButtonData());
+      }
+    },
+    oneditprepare: function() {
+      $('#node-input-command').change(function() {
+        if ($(this).val() === 'set') {
+          $('.form-row-list, .form-row-items, .form-row-composer, .form-row-buttons').show();
+        } else {
+          $('.form-row-list, .form-row-items, .form-row-composer, .form-row-buttons').hide();
+        }
+      });
+      $('#node-input-items-container').css('min-height','300px').css('min-width','450px').editableList({
+        addButton: 'Add menu item',
+        addItem: function(container, i, item) {
+          $(container).RB_mountButtonDialog({
+            types: ['postback', 'url'],
+            badges: false,
+            platforms: ['facebook']
+          });
+          $(container).RB_setButtonData(item, {
+            badges: false
+          });
+        },
+        removable: true,
+        sortable: true
+      });
+      if (this.items != null) {
+        this.items.forEach(function(item) {
+          $('#node-input-items-container').editableList('addItem', item);
+        });
+      }
+    },
+    oneditresize: function() {
+      var dialogForm = $('#dialog-form');
+      var rowName = $('.form-row-name', dialogForm);
+      var rowLabel = $('.form-row-label', dialogForm);
+      var rowCommand = $('.form-row-command', dialogForm);
+      var rowComposer = $('.form-row-composer', dialogForm);
+      var height = dialogForm.height() - rowName.height() - rowLabel.height() - rowCommand.height() - rowComposer.height() - 30;
+      $('#node-input-items-container').editableList('height', height);
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="chatbot-messenger-menu">
+<div class="form-row form-row-name">
+  <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+  <input type="text" id="node-input-name" placeholder="Name">
+</div>
+<div class="form-row form-row-command">
+  <label for="node-input-command">Action</label>
+  <select id="node-input-command" placeholder="Command">
+    <option value="set">Set</option>
+    <option value="delete">Delete</option>
+  </select>
+</div>
+<div class="form-row form-row-composer">
+  <input type="checkbox" value="true" id="node-input-composerInputDisabled" style="width: 30px;">
+  Disable user input
+</div>
+<div class="form-row form-row-label form-row-buttons" style="margin-bottom:0;">
+  <label><span>Buttons</span></label>
+</div>
+<div class="form-row form-row-items node-input-rule-container-row">
+  <ol id="node-input-items-container"></ol>
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="chatbot-messenger-menu"><p>This node will set the persistent menu next to the editable area in Facebook Messenger, there two kind of options:</p>
+<ul>
+<li><p><strong>URL</strong>: it opens a specific url. In the mobile version it’s possible to specify the size of the browser window. Also supports <a href="https://developers.facebook.com/docs/messenger-platform/webview">Messenger Extensions</a></p>
+</li>
+<li><p><strong>Postback</strong>: sends the text defined in <em>value</em> field to the chat (as a text message)</p>
+</li>
+</ul>
+<p>It also allows the disable the text area (user will interact only with menu with the chatbot) or to delete a previous menu. <strong>On desktop, remember to reload the chat window in order to see the menu changes</strong>.</p>
+<p>The menu items can be passed through the payload by the upstream node:</p>
+<pre><code class="language-javascript">msg.payload = [  
+    {    
+        type: &#39;url&#39;,    
+        label: &#39;JavaScript Jedi&#39;,    
+        url: &#39;http://javascript-jedi.com&#39;,    
+        webview_height_ratio: &#39;full&#39; // tall|full|compact  
+    },  
+    {    
+        type: &#39;postback&#39;,    
+        label: &#39;Help&#39;,    
+        value: &#39;/help&#39;  
+    }
+];
+return msg;
+</code></pre>
+<p>otherwise all parameters can be passed by the upstream node</p>
+<pre><code class="language-javascript">msg.payload = {
+    composerInputDisabled: true,  
+    command: &#39;set&#39;,  
+    items: [    
+        { 
+            type: &#39;url&#39;,      
+            label: &#39;JavaScript Jedi&#39;,      
+            url: &#39;http://javascript-jedi.com&#39;,      
+            webview_height_ratio: &#39;full&#39; // tall|full|compact    
+        },    
+        {      
+            type: &#39;postback&#39;,      
+            label: &#39;Help&#39;,      
+            value: &#39;/help&#39;    
+        }  
+    ]
+};
+return msg;
+</code></pre>
+<p>A maximum 3 menu items are allowed. If more items are needed, it’s possible to create nested menus via <code>Function node</code>:</p>
+<pre><code class="language-javascript">msg.payload = {  
+    composerInputDisabled: true,  
+    command: &#39;set&#39;,  
+    items: [    
+        {      
+            type: &#39;url&#39;,      
+            label: &#39;JavaScript Jedi&#39;,      
+            url: &#39;http://javascript-jedi.com&#39;,      
+            webview_height_ratio: &#39;full&#39; // tall|full|compact    
+        },   
+        {      
+            label: &#39;Sub Menu&#39;,      
+            items: [        
+                {          
+                    type: &#39;postback&#39;,          
+                    label: &#39;Postback 1&#39;,          
+                    value: &#39;postback1&#39;        
+                },        
+                {          
+                    type: &#39;postback&#39;,          
+                    label: &#39;Postback 2&#39;,          
+                    value: &#39;postback2&#39;        
+                }      
+            ]    
+        }  
+    ]
+};
+return msg;
+</code></pre>
+<p>Available parameters for the <code>msg.payload</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>composerInputDisabled</td>
+<td>boolean</td>
+<td>Disable text input, user will interact only with menu</td>
+</tr>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>Set or delete menu. Valid values: <em>set</em>, <em>delete</em></td>
+</tr>
+<tr>
+<td>items</td>
+<td>array of [item]</td>
+<td>Items of the menu</td>
+</tr>
+</tbody></table>
+<p>The <code>[item]</code> object</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>string</td>
+<td>Type of button: <em>url</em>, <em>postback</em></td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>Label of the button</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>Value returned as payload in <code>postback</code> buttons</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>Url to redirect to for <code>url</code> buttons or authentication URL for <code>login</code> buttons</td>
+</tr>
+<tr>
+<td>messengerExtensions</td>
+<td>boolean</td>
+<td>Include Messenger Extensions for <code>url</code> buttons</td>
+</tr>
+<tr>
+<td>webViewHeightRatio</td>
+<td>string</td>
+<td>Aspect ratio of the webview in Facebook Messenger for <code>url buttons</code>. Valid values: <em>tall</em>, <em>compact</em>, <em>full</em></td>
+</tr>
+<tr>
+<td>items</td>
+<td>array of [item]</td>
+<td>Nested menu items</td>
+</tr>
+</tbody></table>
+</script>
+
+
+
+

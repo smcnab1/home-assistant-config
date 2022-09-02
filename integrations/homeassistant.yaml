@@ -1,3 +1,3 @@
 homeassistant:
-  # Lets me customize individual entities
-  customize: !include_dir_named ../customizations/entities
+  # Load packages
+  packages: !include_dir_named integrations
