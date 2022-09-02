@@ -10,8 +10,8 @@
         "attributes": {
           "editable": false,
           "id": "sam_mcnab",
-          "latitude": 40.702677,
-          "longitude": -74.012181,
+          "latitude": 40.702781,
+          "longitude": -74.012141,
           "gps_accuracy": 15,
           "source": "device_tracker.sam_mcnab",
           "user_id": "47cefae3ba0f490c8ccafd6bfedad232",
@@ -19,15 +19,15 @@
           "friendly_name": "Sam"
         },
         "last_changed": "2022-09-02T13:14:17.931909+00:00",
-        "last_updated": "2022-09-02T21:40:36.155525+00:00",
+        "last_updated": "2022-09-02T23:41:19.158796+00:00",
         "context": {
-          "id": "01GC02C25VX3W6EE4K042Q5FQ2",
+          "id": "01GC0993DPFM9XYQCS2W054NW1",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -36,8 +36,8 @@
         "attributes": {
           "editable": false,
           "id": "leah_jinks",
-          "latitude": 40.702772,
-          "longitude": -74.012282,
+          "latitude": 40.702709,
+          "longitude": -74.012215,
           "gps_accuracy": 15,
           "source": "device_tracker.leah_jinks",
           "user_id": "d5de2d519885447495a552f1d87f0a9d",
@@ -45,15 +45,15 @@
           "friendly_name": "Leah"
         },
         "last_changed": "2022-09-02T13:14:17.932479+00:00",
-        "last_updated": "2022-09-02T22:45:21.330969+00:00",
+        "last_updated": "2022-09-02T23:15:37.154391+00:00",
         "context": {
-          "id": "01GC062M9JCVKHXDYGPV1N5B7K",
+          "id": "01GC07T1J2N2W73KJFA16SX6W1",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -75,7 +75,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -95,7 +95,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -104,22 +104,22 @@
         "attributes": {
           "editable": false,
           "id": "presence",
-          "latitude": 40.702772,
-          "longitude": -74.012282,
+          "latitude": 40.702709,
+          "longitude": -74.012215,
           "gps_accuracy": 15,
           "source": "device_tracker.leah_jinks",
           "friendly_name": "Presence"
         },
         "last_changed": "2022-09-02T13:14:17.933673+00:00",
-        "last_updated": "2022-09-02T22:45:21.331534+00:00",
+        "last_updated": "2022-09-02T23:41:41.172647+00:00",
         "context": {
-          "id": "01GC062M9K0SYRZY60FTT9PDVZ",
+          "id": "01GC099RXMEX7EWNHDFJ0NETSP",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -147,7 +147,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -175,7 +175,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -203,7 +203,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -231,7 +231,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -259,7 +259,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -287,7 +287,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -315,7 +315,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -343,7 +343,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -371,7 +371,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -399,7 +399,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -427,7 +427,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -455,7 +455,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -483,7 +483,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -511,7 +511,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -534,7 +534,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -557,7 +557,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -582,7 +582,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -607,7 +607,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -627,7 +627,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -646,7 +646,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -665,7 +665,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -686,84 +686,84 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.system_speed_test_ping",
-        "state": "10",
+        "state": "12",
         "attributes": {
           "state_class": "measurement",
           "attribution": "Data retrieved from Speedtest.net by Ookla",
           "server_name": "London",
           "server_country": "United Kingdom",
-          "server_id": "47380",
+          "server_id": "34948",
           "unit_of_measurement": "ms",
           "icon": "mdi:speedometer",
           "friendly_name": "System: Speed Test Ping"
         },
-        "last_changed": "2022-09-02T22:19:52.300439+00:00",
-        "last_updated": "2022-09-02T22:19:52.300439+00:00",
+        "last_changed": "2022-09-02T23:20:15.244404+00:00",
+        "last_updated": "2022-09-02T23:20:15.244404+00:00",
         "context": {
-          "id": "01GC04KZ3CWZZG56Y0Z44CYCNY",
+          "id": "01GC082H4CN6XB47PC4NBVAV3Z",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.system_speed_test_download",
-        "state": "71.86",
+        "state": "80.12",
         "attributes": {
           "state_class": "measurement",
           "attribution": "Data retrieved from Speedtest.net by Ookla",
           "server_name": "London",
           "server_country": "United Kingdom",
-          "server_id": "47380",
-          "bytes_received": 89997676,
+          "server_id": "34948",
+          "bytes_received": 100424456,
           "unit_of_measurement": "Mbit/s",
           "icon": "mdi:speedometer",
           "friendly_name": "System: Speed Test Download"
         },
-        "last_changed": "2022-09-02T22:19:52.300903+00:00",
-        "last_updated": "2022-09-02T22:19:52.300903+00:00",
+        "last_changed": "2022-09-02T23:20:15.245080+00:00",
+        "last_updated": "2022-09-02T23:20:15.245080+00:00",
         "context": {
-          "id": "01GC04KZ3C180FCCTV35DBYX9K",
+          "id": "01GC082H4DZGKK0SQ4BJZM4PCH",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.system_speed_test_upload",
-        "state": "78.69",
+        "state": "77.17",
         "attributes": {
           "state_class": "measurement",
           "attribution": "Data retrieved from Speedtest.net by Ookla",
           "server_name": "London",
           "server_country": "United Kingdom",
-          "server_id": "47380",
-          "bytes_sent": 100425728,
+          "server_id": "34948",
+          "bytes_sent": 96985088,
           "unit_of_measurement": "Mbit/s",
           "icon": "mdi:speedometer",
           "friendly_name": "System: Speed Test Upload"
         },
-        "last_changed": "2022-09-02T22:19:52.301257+00:00",
-        "last_updated": "2022-09-02T22:19:52.301257+00:00",
+        "last_changed": "2022-09-02T23:20:15.245595+00:00",
+        "last_updated": "2022-09-02T23:20:15.245595+00:00",
         "context": {
-          "id": "01GC04KZ3D98DWQYGMVJZ71DWN",
+          "id": "01GC082H4DPK11NW1X9WFZNQD6",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -781,7 +781,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -799,7 +799,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -817,7 +817,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -835,7 +835,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -853,7 +853,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -871,7 +871,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -889,7 +889,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -907,7 +907,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -925,7 +925,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -943,7 +943,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -961,7 +961,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -979,7 +979,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -997,7 +997,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1015,51 +1015,51 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_living_room_uptime",
-        "state": "36529",
+        "state": "39231",
         "attributes": {
           "unit_of_measurement": "s",
           "friendly_name": "ESPresense Living Room Uptime"
         },
-        "last_changed": "2022-09-02T23:00:12.166399+00:00",
-        "last_updated": "2022-09-02T23:00:12.166399+00:00",
+        "last_changed": "2022-09-02T23:45:14.436197+00:00",
+        "last_updated": "2022-09-02T23:45:14.436197+00:00",
         "context": {
-          "id": "01GC06XT86Q950GEJDFDDZ4GHS",
+          "id": "01GC09G96404V99FKFHM2RVZJH",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "36529",
+        "native_value": "39231",
         "native_unit_of_measurement": "s"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_living_room_free_mem",
-        "state": "87652",
+        "state": "88572",
         "attributes": {
           "unit_of_measurement": "bytes",
           "friendly_name": "ESPresense Living Room Free Mem"
         },
-        "last_changed": "2022-09-02T23:00:12.167775+00:00",
-        "last_updated": "2022-09-02T23:00:12.167775+00:00",
+        "last_changed": "2022-09-02T23:45:14.436771+00:00",
+        "last_updated": "2022-09-02T23:45:14.436771+00:00",
         "context": {
-          "id": "01GC06XT87FGGMTGANJJHD7YZP",
+          "id": "01GC09G964GWJ5B3ZE6VBBFHDQ",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "87652",
+        "native_value": "88572",
         "native_unit_of_measurement": "bytes"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1077,7 +1077,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1095,7 +1095,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1113,7 +1113,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1131,7 +1131,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1149,7 +1149,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1167,7 +1167,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1185,7 +1185,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1203,7 +1203,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1231,7 +1231,7 @@
         "native_unit_of_measurement": null,
         "native_value": 4.0
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1259,7 +1259,7 @@
         "native_unit_of_measurement": null,
         "native_value": 3.5
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1267,75 +1267,75 @@
         "state": "on",
         "attributes": {
           "ip": "192.168.1.107",
-          "uptime": 36529,
+          "uptime": 39231,
           "firm": "esp32",
           "rssi": -80,
           "ver": "v3.0.4",
-          "adverts": 831189,
-          "seen": 826607,
-          "reported": 61203,
-          "freeHeap": 87652,
+          "adverts": 892567,
+          "seen": 887901,
+          "reported": 65896,
+          "freeHeap": 88572,
           "maxAllocHeap": 37876,
-          "memFrag": 56.78820791,
+          "memFrag": 57.23705008,
           "scanHighWater": 1048,
           "reportHighWater": 1048,
           "device_class": "connectivity",
           "friendly_name": "ESPresense Living Room"
         },
         "last_changed": "2022-09-02T13:15:04.901302+00:00",
-        "last_updated": "2022-09-02T23:00:12.163264+00:00",
+        "last_updated": "2022-09-02T23:45:14.435136+00:00",
         "context": {
-          "id": "01GC06XT83V4VB6TMFT8SBZVTJ",
+          "id": "01GC09G963DJHH2WAACNWT3374",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_bedroom_uptime",
-        "state": "36539",
+        "state": "39229",
         "attributes": {
           "unit_of_measurement": "s",
           "friendly_name": "ESPresense Bedroom Uptime"
         },
-        "last_changed": "2022-09-02T23:00:24.192052+00:00",
-        "last_updated": "2022-09-02T23:00:24.192052+00:00",
+        "last_changed": "2022-09-02T23:45:14.643489+00:00",
+        "last_updated": "2022-09-02T23:45:14.643489+00:00",
         "context": {
-          "id": "01GC06Y6005A6KQ1Z00Y617BHB",
+          "id": "01GC09G9CK17KHQTCV6EHRWKE5",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "36539",
+        "native_value": "39229",
         "native_unit_of_measurement": "s"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_bedroom_free_mem",
-        "state": "77184",
+        "state": "80092",
         "attributes": {
           "unit_of_measurement": "bytes",
           "friendly_name": "ESPresense Bedroom Free Mem"
         },
-        "last_changed": "2022-09-02T23:00:24.193317+00:00",
-        "last_updated": "2022-09-02T23:00:24.193317+00:00",
+        "last_changed": "2022-09-02T23:45:14.643971+00:00",
+        "last_updated": "2022-09-02T23:45:14.643971+00:00",
         "context": {
-          "id": "01GC06Y601K57QFF42D7DGCXF2",
+          "id": "01GC09G9CK6CM2MGG7EWYFGVA6",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "77184",
+        "native_value": "80092",
         "native_unit_of_measurement": "bytes"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1353,7 +1353,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1371,7 +1371,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1389,7 +1389,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1407,7 +1407,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1425,7 +1425,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1443,7 +1443,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1461,7 +1461,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1479,7 +1479,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1507,7 +1507,7 @@
         "native_unit_of_measurement": null,
         "native_value": 3.0
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1535,7 +1535,7 @@
         "native_unit_of_measurement": null,
         "native_value": 3.5
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1543,75 +1543,75 @@
         "state": "on",
         "attributes": {
           "ip": "192.168.1.106",
-          "uptime": 36539,
+          "uptime": 39229,
           "firm": "esp32",
-          "rssi": -72,
+          "rssi": -73,
           "ver": "v3.0.4",
-          "adverts": 1833379,
-          "seen": 1814181,
-          "reported": 69680,
-          "freeHeap": 77184,
-          "maxAllocHeap": 56308,
-          "memFrag": 27.04705638,
+          "adverts": 1971586,
+          "seen": 1951290,
+          "reported": 75169,
+          "freeHeap": 80092,
+          "maxAllocHeap": 53236,
+          "memFrag": 33.53143885,
           "scanHighWater": 1048,
           "reportHighWater": 1048,
           "device_class": "connectivity",
           "friendly_name": "ESPresense Bedroom"
         },
         "last_changed": "2022-09-02T13:15:07.712074+00:00",
-        "last_updated": "2022-09-02T23:00:24.190934+00:00",
+        "last_updated": "2022-09-02T23:45:14.642817+00:00",
         "context": {
-          "id": "01GC06Y5ZYB0G6RVP8Z3W3P6RY",
+          "id": "01GC09G9CJ1WCAY7V58D9KZHTP",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_bathroom_uptime",
-        "state": "36532",
+        "state": "39237",
         "attributes": {
           "unit_of_measurement": "s",
           "friendly_name": "ESPresense Bathroom Uptime"
         },
-        "last_changed": "2022-09-02T23:00:11.856635+00:00",
-        "last_updated": "2022-09-02T23:00:11.856635+00:00",
+        "last_changed": "2022-09-02T23:45:16.479148+00:00",
+        "last_updated": "2022-09-02T23:45:16.479148+00:00",
         "context": {
-          "id": "01GC06XSYGATWA9Q6YK770RZ4P",
+          "id": "01GC09GB5ZADTSJDH60B60BM6R",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "36532",
+        "native_value": "39237",
         "native_unit_of_measurement": "s"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.espresense_bathroom_free_mem",
-        "state": "77312",
+        "state": "78180",
         "attributes": {
           "unit_of_measurement": "bytes",
           "friendly_name": "ESPresense Bathroom Free Mem"
         },
-        "last_changed": "2022-09-02T23:00:11.857454+00:00",
-        "last_updated": "2022-09-02T23:00:11.857454+00:00",
+        "last_changed": "2022-09-02T23:45:16.480203+00:00",
+        "last_updated": "2022-09-02T23:45:16.480203+00:00",
         "context": {
-          "id": "01GC06XSYHJ6HM4S51DSN778YB",
+          "id": "01GC09GB60C6H6B259NDAJ5G26",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "77312",
+        "native_value": "78180",
         "native_unit_of_measurement": "bytes"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1629,7 +1629,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1647,7 +1647,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1665,7 +1665,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1683,7 +1683,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1701,7 +1701,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1719,7 +1719,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1737,7 +1737,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1755,7 +1755,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1783,7 +1783,7 @@
         "native_unit_of_measurement": null,
         "native_value": 3.0
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1811,7 +1811,7 @@
         "native_unit_of_measurement": null,
         "native_value": 3.5
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1819,31 +1819,31 @@
         "state": "on",
         "attributes": {
           "ip": "192.168.1.108",
-          "uptime": 36532,
+          "uptime": 39237,
           "firm": "esp32",
-          "rssi": -42,
+          "rssi": -41,
           "ver": "v3.0.4",
-          "adverts": 1694490,
-          "seen": 1677721,
-          "reported": 36120,
-          "freeHeap": 77312,
+          "adverts": 1820704,
+          "seen": 1803447,
+          "reported": 38791,
+          "freeHeap": 78180,
           "maxAllocHeap": 57332,
-          "memFrag": 25.84333609,
+          "memFrag": 26.66666667,
           "scanHighWater": 1048,
           "reportHighWater": 1048,
           "device_class": "connectivity",
           "friendly_name": "ESPresense Bathroom"
         },
         "last_changed": "2022-09-02T13:15:11.026362+00:00",
-        "last_updated": "2022-09-02T23:00:11.855714+00:00",
+        "last_updated": "2022-09-02T23:45:16.478303+00:00",
         "context": {
-          "id": "01GC06XSYFXG1354DKGW6BQ57T",
+          "id": "01GC09GB5YSMEBPCGXJ912M896",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1869,7 +1869,7 @@
         "native_value": "Unknown",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1893,7 +1893,7 @@
         "native_value": 42,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1916,7 +1916,7 @@
         "native_value": "Not Charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1939,7 +1939,7 @@
         "native_value": 9320,
         "native_unit_of_measurement": "m"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1962,7 +1962,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "m/s"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -1989,7 +1989,7 @@
         "native_value": "2.54",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2012,7 +2012,7 @@
         "native_value": 15,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2034,7 +2034,7 @@
         "native_value": "Hilton Honors",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2057,7 +2057,7 @@
         "native_value": 16,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2080,7 +2080,7 @@
         "native_value": 15505,
         "native_unit_of_measurement": "steps"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2102,7 +2102,7 @@
         "native_value": "34:8f:27:14:3:9c",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2124,7 +2124,7 @@
         "native_value": "Wi-Fi",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2153,7 +2153,7 @@
         "native_value": "giffgaff",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2181,7 +2181,7 @@
         "native_value": "N/A",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2224,7 +2224,7 @@
         "native_value": "6 Water St\nNew York NY 10004\nUnited States",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2246,7 +2246,7 @@
         "native_value": "Background Fetch",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2265,7 +2265,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2290,7 +2290,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2315,7 +2315,7 @@
         "native_value": 40,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2337,7 +2337,7 @@
         "native_value": "charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2359,7 +2359,7 @@
         "native_value": "ac",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2381,7 +2381,7 @@
         "native_value": "good",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2406,7 +2406,7 @@
         "native_value": 31.3,
         "native_unit_of_measurement": "°C"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2426,7 +2426,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2452,34 +2452,34 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
         "entity_id": "sensor.sam_s_mac_mini_storage",
-        "state": "5.93",
+        "state": "5.94",
         "attributes": {
-          "Available": "21.79 GB",
-          "Available (Important)": "25.68 GB",
+          "Available": "21.80 GB",
+          "Available (Important)": "25.69 GB",
           "Available (Opportunistic)": "14.55 GB",
           "Total": "245.11 GB",
           "unit_of_measurement": "% available",
           "icon": "mdi:database",
           "friendly_name": "Sam's Mac Mini Storage"
         },
-        "last_changed": "2022-09-02T22:57:48.040589+00:00",
-        "last_updated": "2022-09-02T22:57:48.040589+00:00",
+        "last_changed": "2022-09-02T23:42:51.676530+00:00",
+        "last_updated": "2022-09-02T23:42:51.676530+00:00",
         "context": {
-          "id": "01GC06SDG8DE213V7Y6PKTK6ZV",
+          "id": "01GC09BXRWH91J3GDAJ9Q2G92K",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": {
-        "native_value": "5.93",
+        "native_value": "5.94",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2501,7 +2501,7 @@
         "native_value": "ALHN-72F7-5",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2523,7 +2523,7 @@
         "native_value": "e4:da:df:64:9d:6d",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2547,7 +2547,7 @@
         "native_value": "Wi-Fi",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2573,7 +2573,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2600,7 +2600,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2628,7 +2628,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2658,7 +2658,7 @@
         "native_value": 2,
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2680,7 +2680,7 @@
         "native_value": "LG FULL HD (2)",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2702,7 +2702,7 @@
         "native_value": "59354605-9A4E-4184-A3A0-7B54A2CB4E0E",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2728,7 +2728,7 @@
         "native_value": "loginwindow",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2750,7 +2750,7 @@
         "native_value": "Periodic",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2793,7 +2793,7 @@
         "native_value": null,
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2812,7 +2812,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2831,7 +2831,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2850,7 +2850,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2876,7 +2876,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2895,7 +2895,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2919,7 +2919,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -2960,7 +2960,7 @@
         "native_value": "Not Charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3002,7 +3002,7 @@
         "native_value": 27,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3024,7 +3024,7 @@
         "native_value": "No Connection",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3051,7 +3051,7 @@
         "native_value": "42.76",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3094,7 +3094,7 @@
         "native_value": "Asher House, Blackburn Road\nLondon\nEngland\nNW6 1RZ\nUnited Kingdom",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3116,7 +3116,7 @@
         "native_value": "Not Connected",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3138,7 +3138,7 @@
         "native_value": "Not Connected",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3164,7 +3164,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3191,7 +3191,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3218,7 +3218,7 @@
         "native_value": "Inactive",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3246,7 +3246,7 @@
         "native_value": 1,
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3268,7 +3268,7 @@
         "native_value": "Built-in Retina Display",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3290,7 +3290,7 @@
         "native_value": "A48F97AC-6537-33B2-0454-BA7652680792",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3316,7 +3316,7 @@
         "native_value": "System Preferences",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3338,7 +3338,7 @@
         "native_value": "Signaled",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3357,7 +3357,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3376,7 +3376,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3395,7 +3395,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3421,7 +3421,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3440,7 +3440,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3464,7 +3464,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3486,7 +3486,7 @@
         "native_value": "normal",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3511,7 +3511,7 @@
         "native_value": 80,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3533,7 +3533,7 @@
         "native_value": "discharging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3555,7 +3555,7 @@
         "native_value": "none",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3577,7 +3577,7 @@
         "native_value": "good",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3602,7 +3602,7 @@
         "native_value": 29.8,
         "native_unit_of_measurement": "°C"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3642,7 +3642,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "connection(s)"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3669,7 +3669,7 @@
         "native_value": "Bluetooth is turned off",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3691,7 +3691,7 @@
         "native_value": "off",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3713,7 +3713,7 @@
         "native_value": "Unknown",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3736,7 +3736,7 @@
         "native_value": null,
         "native_unit_of_measurement": "seconds"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3759,7 +3759,7 @@
         "native_value": "unavailable",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3781,7 +3781,7 @@
         "native_value": "far",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3808,7 +3808,7 @@
         "native_value": "Eastern Daylight Time",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3828,7 +3828,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3847,7 +3847,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3866,7 +3866,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3885,7 +3885,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3904,7 +3904,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3923,7 +3923,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3943,7 +3943,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3969,7 +3969,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -3996,7 +3996,7 @@
         "native_value": "64.83",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4019,7 +4019,7 @@
         "native_value": "Cellular",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4048,7 +4048,7 @@
         "native_value": "EE",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4072,7 +4072,7 @@
         "native_value": 22,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4094,7 +4094,7 @@
         "native_value": "Not Connected",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4117,7 +4117,7 @@
         "native_value": "Not Charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4146,7 +4146,7 @@
         "native_value": "Plus",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4189,7 +4189,7 @@
         "native_value": "50–68 Broad St\nNew York NY 10004\nUnited States",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4211,7 +4211,7 @@
         "native_value": "Not Connected",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4233,7 +4233,7 @@
         "native_value": "Significant Location Change",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4259,7 +4259,7 @@
         "native_value": "Walking",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4282,7 +4282,7 @@
         "native_value": 11731,
         "native_unit_of_measurement": "m"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4305,7 +4305,7 @@
         "native_value": 15,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4328,7 +4328,7 @@
         "native_value": 14447,
         "native_unit_of_measurement": "steps"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4351,7 +4351,7 @@
         "native_value": 15,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4374,7 +4374,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "m/s"
       },
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4393,7 +4393,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
@@ -4416,7 +4416,7 @@
         }
       },
       "extra_data": null,
-      "last_seen": "2022-09-02T23:00:26.588560+00:00"
+      "last_seen": "2022-09-02T23:45:26.592095+00:00"
     },
     {
       "state": {
