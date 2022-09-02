@@ -1,7 +1,0 @@
-input_select:
-  name: Frontend Greeting
-  options:
-    - Good Morning
-    - Good Afternoon
-    - Good Evening
-    - Good Night

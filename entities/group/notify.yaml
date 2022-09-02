@@ -1,6 +1,0 @@
-notify:
-  - platform: group
-    name: all_devices
-    services:
-      - service: mobile_app_sm_g998b
-      - service: mobile_app_leah_s_iphone

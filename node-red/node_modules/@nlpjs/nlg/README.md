@@ -1,5 +1,0 @@
-# `NLG`
-
-> TODO: description
-
-## Usage

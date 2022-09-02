@@ -1,6 +1,0 @@
-- platform: car_wash
-  weather: weather.weather
-
-- platform: meteoalarm
-  country: "united-kingdom"
-  province: "London"
