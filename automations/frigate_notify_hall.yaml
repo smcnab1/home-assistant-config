@@ -1,0 +1,11 @@
+id: '1659719926212'
+alias: 'Alarm: Frigate - Hall'
+description: ''
+use_blueprint:
+  path: hunterjm/frigate_0.10_notification.yaml
+  input:
+    camera: hall
+    notify_group: all_devices
+    critical: true
+    update_thumbnail: true
+    presence_filter: person.presence

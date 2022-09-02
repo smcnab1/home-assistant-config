@@ -1,0 +1,1 @@
+lovelace: !include_dir_named ../entities/lovelace

@@ -1,0 +1,29 @@
+id: '1660666320823'
+name: 'Scene: Bathroom Bath'
+entities:
+  light.all_bathroom_lights:
+    supported_color_modes:
+    - brightness
+    - hs
+    entity_id:
+    - light.bathroom_lights
+    icon: mdi:lightbulb-group
+    friendly_name: ALL BATHROOM LIGHTS
+    supported_features: 0
+    color_mode: hs
+    brightness: 117
+    hs_color:
+    - 360
+    - 100
+    rgb_color:
+    - 255
+    - 0
+    - 0
+    xy_color:
+    - 0.701
+    - 0.299
+    state: 'on'
+icon: mdi:bathtub
+metadata:
+  light.all_bathroom_lights:
+    entity_only: true

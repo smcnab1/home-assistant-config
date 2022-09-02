@@ -1,0 +1,92 @@
+id: '1661182702994'
+alias: Mute TV Phone Call - Sam
+description: ''
+trigger:
+- platform: state
+  entity_id:
+  - sensor.sam_s_phone_audio_mode
+  to: ringing, in_call, in_communication
+condition:
+- condition: zone
+  entity_id: device_tracker.sam_mcnab
+  zone: zone.home
+action:
+- choose:
+  - conditions:
+    - condition: state
+      entity_id: media_player.samsung_tv
+      state: 'on'
+    - condition: state
+      entity_id: sensor.sam_phone_ble
+      state: living_room
+    sequence:
+    - parallel:
+      - service: notify.mobile_app_sam_s_mac_mini
+        data:
+          message: Check your phone!
+          title: PHONE CALL INCOMING
+    - service: media_player.media_pause
+      data: {}
+      target:
+        entity_id: media_player.samsung_tv
+    - wait_for_trigger:
+      - platform: state
+        entity_id:
+        - sensor.sam_s_phone_audio_mode
+        to: normal
+    - service: media_player.media_play
+      data: {}
+      target:
+        entity_id: media_player.samsung_tv
+  - conditions:
+    - condition: state
+      entity_id: media_player.fire_tv_192_168_1_94
+      state: on, idle, playing
+    - condition: state
+      entity_id: sensor.sam_phone_ble
+      state: bedroom
+    sequence:
+    - service: media_player.media_pause
+      data: {}
+      target:
+        entity_id: media_player.fire_tv_192_168_1_94
+    - wait_for_trigger:
+      - platform: state
+        entity_id:
+        - sensor.sam_s_phone_audio_mode
+        to: normal
+    - service: media_player.media_play
+      data: {}
+      target:
+        entity_id: media_player.fire_tv_192_168_1_94
+  - conditions:
+    - condition: device
+      device_id: f617b51c483cafcda93e0efc57b80bec
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: is_playing
+    - condition: state
+      entity_id: sensor.sam_phone_ble
+      state: living_room
+    sequence:
+    - service: media_player.media_pause
+      data: {}
+      target:
+        entity_id: media_player.living_room_speaker
+    - service: tts.cloud_say
+      data:
+        entity_id: media_player.living_room_speaker
+        message: Your Phone is Ringing Sam
+    - wait_for_trigger:
+      - platform: state
+        entity_id:
+        - sensor.sam_s_phone_audio_mode
+        to: normal
+    - service: media_player.media_play
+      data: {}
+      target:
+        entity_id: media_player.living_room_speaker
+  - conditions: []
+    sequence: []
+  default: []
+mode: single

@@ -1,0 +1,16 @@
+id: '1660666993426'
+alias: 'Scene: Office Bright'
+description: ''
+trigger: []
+condition: []
+action:
+- service: scene.turn_on
+  data:
+    transition: 30
+  target:
+    entity_id: scene.scene_office_bright
+- service: light.turn_off
+  data: {}
+  target:
+    entity_id: light.desk_lamp
+mode: single

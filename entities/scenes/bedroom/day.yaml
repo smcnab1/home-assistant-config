@@ -1,0 +1,26 @@
+id: '1660668056981'
+name: 'Scene: Bedroom Day'
+entities:
+  light.bedroom_leds:
+    supported_color_modes:
+    - hs
+    icon: mdi:led-strip-variant
+    friendly_name: 'Bedroom: LEDs'
+    supported_features: 0
+    color_mode: hs
+    brightness: 255
+    hs_color:
+    - 30
+    - 100
+    rgb_color:
+    - 255
+    - 127
+    - 0
+    xy_color:
+    - 0.612
+    - 0.374
+    state: 'on'
+icon: mdi:weather-sunny
+metadata:
+  light.bedroom_leds:
+    entity_only: true
