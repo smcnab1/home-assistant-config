@@ -1,0 +1,1822 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {
+        "entry_id": "f9b3dc686934224474dcdb78133130b6",
+        "version": 1,
+        "domain": "hassio",
+        "title": "Supervisor",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "system",
+        "unique_id": "hassio",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3e7bdb2d6910d87f118a84f322fb4545",
+        "version": 1,
+        "domain": "radio_browser",
+        "title": "Radio Browser",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b5d3f358466c029a53ab0f84e436bd88",
+        "version": 1,
+        "domain": "rpi_power",
+        "title": "Raspberry Pi Power Supply Checker",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ed088918e54f78a9029a40a39a1b3b24",
+        "version": 2,
+        "domain": "samsungtv",
+        "title": "Samsung Q60AA 55 TV (QE55Q60AAUXXU)",
+        "data": {
+          "host": "192.168.1.98",
+          "mac": "64:07:f6:83:7c:4c",
+          "manufacturer": "Samsung",
+          "method": "websocket",
+          "model": "QE55Q60AAUXXU",
+          "name": "Samsung Q60AA 55 TV",
+          "port": 8002,
+          "ssdp_rendering_control_location": "http://192.168.1.99:9197/dmr",
+          "ssdp_main_tv_agent_location": null,
+          "token": "82723056"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "54406f26-12d9-49c0-846b-41fe71ef95ba",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d0ef65510bc9888d184d0bfa736dc36b",
+        "version": 1,
+        "domain": "hacs",
+        "title": "",
+        "data": {
+          "token": "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"
+        },
+        "options": {
+          "sidepanel_title": "HACS",
+          "sidepanel_icon": "hacs:hacs",
+          "release_limit": 5,
+          "country": "ALL",
+          "appdaemon": true,
+          "netdaemon": true,
+          "debug": false,
+          "experimental": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "75918391d7fe1373843d88e24478ef77",
+        "version": 1,
+        "domain": "sonos",
+        "title": "Sonos",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "sonos",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7ea0c511b90bdfa1e0140fdc3cc0a7a8",
+        "version": 1,
+        "domain": "tuya",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "endpoint": "https://openapi.tuyaeu.com",
+          "auth_type": 0,
+          "access_id": "dgxsgs5xuudmn5vsssmy",
+          "access_secret": "827c558843e4459cbe3951a29f69e3c6",
+          "username": "sammcnab.email@gmail.com",
+          "password": "Sam,McNab1.1",
+          "country_code": "44",
+          "tuya_app_type": "smartlife"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "aa95fb8dc225773bf2703454772a5c67",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Leah's iPhone",
+        "data": {
+          "supports_encryption": true,
+          "app_data": {
+            "push_token": "e8BpGFk0HUZvlwY4MpgjYH:APA91bFMDrWUymhmXkwQjntM8LW4gQYkFYuZZ4dzxtOLpaiF9CAxBCc6FMlRfWuFkbhXAq8Exq66dV5v5aaNwNfOmAzchiSr37gd8TW5v4qffJWM2qdHFqlvUIEU9tWpwS9K_CsDqD8D",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "device_name": "Leah's iPhone",
+          "os_version": "15.6",
+          "app_version": "2022.8 (2022.387)",
+          "app_id": "io.robbie.HomeAssistant",
+          "device_id": "427C1388-BF70-45CC-A6A1-38B9CC1DD4BE",
+          "manufacturer": "Apple",
+          "os_name": "iOS",
+          "app_name": "Home Assistant",
+          "model": "iPhone12,1",
+          "webhook_id": "7c509912f61c061f6b319fc04a4c0a8e6798d6ae06f2d2cf13e6e6c09ec5f163",
+          "secret": "2c3a95cdacfb3a62ab33aed339ef5d26844a8b5b11238442c9d0ecb1b214e700",
+          "user_id": "d5de2d519885447495a552f1d87f0a9d",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-427C1388-BF70-45CC-A6A1-38B9CC1DD4BE",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b01b13bf43df645495bc440a47055223",
+        "version": 2,
+        "domain": "openweathermap",
+        "title": "OpenWeatherMap",
+        "data": {
+          "api_key": "365779c032eae3b54ef3778b3fc1c2bb",
+          "name": "OpenWeatherMap",
+          "latitude": 51.54720332030558,
+          "longitude": -0.1900514401495457,
+          "mode": "onecall_daily",
+          "language": "en"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "51.54720332030558--0.1900514401495457",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "568d4d0642b5f47b31399de5d82bb584",
+        "version": 1,
+        "domain": "google",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "auth_implementation": "google_631488793948_m3gq3n286vusstc1sikit1fkst00pron_apps_googleusercontent_com",
+          "token": {
+            "access_token": "ya29.a0AVA9y1tE2KbpA74givsqdjXiSxXaQHvXoqnxO04hcButwRArxW6_vJInSe9AphRkQmASozk5sjPMomSznjyilnDsQ9KDDeZ2Sifmbt7lSsjGMxmxVFjCKhrEMVLDmVIC8X4hyC_YEtWakRl_ola3UW2f1hoFzxsaCgYKATASAQASFQE65dr8Z8xVLGpLBHIuCGEfibbSfw0166",
+            "refresh_token": "1//035M3qFwws-ZjCgYIARAAGAMSNwF-L9Ir2wsXXASDdkT7b73WIm_7aapDKkpH5m08PtIqvaSfdCWpIcGbK8vX6jUs4wvrh9MFeHY",
+            "scope": "https://www.googleapis.com/auth/calendar",
+            "token_type": "Bearer",
+            "expires_in": 3599,
+            "expires_at": 1662156916.1518884
+          }
+        },
+        "options": {
+          "calendar_access": "read_write"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "sammcnab.email@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "357d93bcb849574168b02cd3502d45ed",
+        "version": 1,
+        "domain": "homekit_controller",
+        "title": "Aqara-Hub-M2-66EB",
+        "data": {
+          "AccessoryPairingID": "CF:BF:72:B0:D9:15",
+          "AccessoryLTPK": "cd9582acc8973515dbf61c78bf1ec956c30fab386df8bf98ad186bd16441b109",
+          "iOSPairingId": "e72b6236-835b-4be8-aac9-c28a428b32a9",
+          "iOSDeviceLTSK": "367ec5ff9ef1baf8a298b9505ef640228283ebee0bd0045f1cc13851fa3e8f39",
+          "iOSDeviceLTPK": "a85cb573af7643c17d6c2bb1a84702adcdbb1f42bc8725ae943cb70857b20bb4",
+          "AccessoryIP": "192.168.1.101",
+          "AccessoryPort": 52287,
+          "Connection": "IP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "cf:bf:72:b0:d9:15",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "633cf033d2140751392ac8ce5308b41e",
+        "version": 1,
+        "domain": "life360",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "username": "sammcnab.email@gmail.com",
+          "password": "Hibernian1",
+          "authorization": "Bearer Y2M3NjhlNWEtMDA0Ny00YWY1LThmYjQtZjQ3MTg1Yzc3Y2Fk"
+        },
+        "options": {
+          "driving_speed": null,
+          "max_gps_accuracy": null,
+          "driving": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "sammcnab.email@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b5353d8aba2fc6be5b3ffabe89851a9b",
+        "version": 1,
+        "domain": "group",
+        "title": "Alarm Media",
+        "data": {},
+        "options": {
+          "group_type": "media_player",
+          "name": "Alarm Media",
+          "entities": [
+            "media_player.bedroom_speaker",
+            "media_player.living_room",
+            "media_player.living_room_speaker"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "c25ce93781442374e39d98aa0f478450",
+        "version": 1,
+        "domain": "group",
+        "title": "Alarm Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Alarm Lights",
+          "entities": [
+            "light.desk_led",
+            "light.dining_led",
+            "light.bedroom_led",
+            "light.hall_leds",
+            "light.kitchen_led",
+            "light.lounge_led",
+            "light.tv_led"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b38a362f451258e228cc7ff1687c7b7c",
+        "version": 1,
+        "domain": "watchman",
+        "title": "Watchman",
+        "data": {},
+        "options": {
+          "service": "notify.mobile_app_sam_s_phone",
+          "service_data": "{}",
+          "included_folders": [
+            "/config"
+          ],
+          "report_header": "-== Watchman Report ==-",
+          "report_path": "/config/watchman_report.txt",
+          "chunk_size": 3500,
+          "columns_width": [
+            30,
+            7,
+            60
+          ],
+          "startup_delay": 0,
+          "friendly_names": true,
+          "check_lovelace": true,
+          "ignored_items": [],
+          "ignored_states": [],
+          "ignored_files": []
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6ba8c6d8adffcf507ce5b1d71b5abdcb",
+        "version": 1,
+        "domain": "raspberry_pi",
+        "title": "Raspberry Pi",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "system",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b25fb03c0fef57c670ca9beb54cadaeb",
+        "version": 1,
+        "domain": "group",
+        "title": "Alarm Motion Sensors",
+        "data": {},
+        "options": {
+          "group_type": "binary_sensor",
+          "name": "Alarm Motion Sensors",
+          "entities": [
+            "binary_sensor.bathroom_motion_5",
+            "binary_sensor.lounge_motion_2",
+            "binary_sensor.kitchen_motion",
+            "binary_sensor.bedroom_motion_4",
+            "binary_sensor.hall_motion_3",
+            "binary_sensor.door_sensor"
+          ],
+          "hide_members": false,
+          "all": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6abd2801f12e9f1ed6b6dd5476224672",
+        "version": 1,
+        "domain": "ipp",
+        "title": "HP DeskJet 2600 series @ Leah’s MacBook Air",
+        "data": {
+          "host": "192.168.1.112",
+          "name": "HP DeskJet 2600 series @ Leah’s MacBook Air"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "627bad91-e010-31f2-7790-1287e2d22a64",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "e4b7f615514941a2aa58c720580c5042",
+        "version": 1,
+        "domain": "ui_lovelace_minimalist",
+        "title": "UI Lovelace Minimalist",
+        "data": {
+          "token": "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"
+        },
+        "options": {
+          "language": "English (GB)",
+          "sidepanel_enabled": true,
+          "sidepanel_title": "Minimalist",
+          "sidepanel_icon": "mdi:home",
+          "adaptive_ui_enabled": true,
+          "adaptive_ui_title": "Minimalist Adaptive",
+          "adaptive_ui_icon": "mdi:home",
+          "theme": "minimalist-desktop",
+          "theme_path": "themes/",
+          "include_other_cards": false,
+          "community_cards_enabled": false,
+          "community_cards": [
+            "custom_card_afvalophaling",
+            "custom_card_apexcharts",
+            "custom_card_bar_card",
+            "custom_card_camera",
+            "custom_card_chromecast",
+            "custom_card_damix48_power_details",
+            "custom_card_device_tracker",
+            "custom_card_eraycetinay_elapsed_time",
+            "custom_card_eraycetinay_lock",
+            "custom_card_esh_room",
+            "custom_card_esh_welcome",
+            "custom_card_heat_pump",
+            "custom_card_homeassistant_updates",
+            "custom_card_httpedo13_sun",
+            "custom_card_httpedo13_thermostat",
+            "custom_card_imswel_person",
+            "custom_card_input_datetime",
+            "custom_card_input_number",
+            "custom_card_irmajavi_entities",
+            "custom_card_irmajavi_speedtest",
+            "custom_card_irmajavi_weather",
+            "custom_card_light_colorpick",
+            "custom_card_media_player_sonos",
+            "custom_card_more_power_outlet",
+            "custom_card_mpse_gauge",
+            "custom_card_mpse_printer",
+            "custom_card_mpse_thermostat",
+            "custom_card_mpse_wifisignal",
+            "custom_card_nas",
+            "custom_card_neekster_update",
+            "custom_card_nik_clock",
+            "custom_card_nik_door",
+            "custom_card_nik_nas",
+            "custom_card_nik_tablet",
+            "custom_card_paddy_dwd_pollen",
+            "custom_card_paddy_waste_collection",
+            "custom_card_paddy_welcome",
+            "custom_card_person_chip",
+            "custom_card_person_info",
+            "custom_card_playstation",
+            "custom_card_qubino",
+            "custom_card_ristou_person",
+            "custom_card_saxel_fan",
+            "custom_card_scenes",
+            "custom_card_schumijo_car",
+            "custom_card_schumijo_flower",
+            "custom_card_tpx01_aircondition",
+            "custom_card_sisimomo_printer",
+            "custom_card_vncntdev_device_tracer",
+            "custom_card_water_heater",
+            "custom_card_wsly_pollen",
+            "custom_card_yagrasdemonde_lights_count",
+            "custom_chip_myenedis",
+            "custom_chip_update"
+          ]
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "135fc606b37f81cb743e1cd6c8c85dfc",
+        "version": 1,
+        "domain": "speedtestdotnet",
+        "title": "SpeedTest",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "16d00bde20423736113491657f9560b6",
+        "version": 1,
+        "domain": "ipp",
+        "title": "HP DeskJet 2600 series [E234AF]",
+        "data": {
+          "host": "192.168.1.94",
+          "port": 631,
+          "ssl": false,
+          "verify_ssl": false,
+          "base_path": "/ipp/print",
+          "name": "HP DeskJet 2600 series [E234AF]",
+          "uuid": "836abcb8-be15-7278-9123-857a55acbe98"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "836abcb8-be15-7278-9123-857a55acbe98",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ed827afa9927e7ce5dd7a69a5e0adbcd",
+        "version": 1,
+        "domain": "govee",
+        "title": "govee",
+        "data": {
+          "api_key": "9532fa5d-18fb-4ba1-958c-81bc4ce4a818",
+          "delay": 10
+        },
+        "options": {
+          "api_key": "9532fa5d-18fb-4ba1-958c-81bc4ce4a818",
+          "delay": 10,
+          "use_assumed_state": false,
+          "offline_is_off": false,
+          "disable_attribute_updates": ""
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "00cc1fb0b414caef8c50a22e863149ef",
+        "version": 1,
+        "domain": "nodered",
+        "title": "name",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "dc239fd1534265921ecff497418afa71",
+        "version": 1,
+        "domain": "spotify",
+        "title": "Spotify",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "da43514a0f6c84101e400c31f8736432",
+        "version": 1,
+        "domain": "group",
+        "title": "Speakers",
+        "data": {},
+        "options": {
+          "group_type": "media_player",
+          "name": "Speakers",
+          "entities": [
+            "media_player.living_room_speaker",
+            "media_player.living_room_sonos"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "8917071c293177cd0aa1f73d9029656f",
+        "version": 1,
+        "domain": "group",
+        "title": "Hall Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Hall Lights",
+          "entities": [
+            "light.hall_main_light_1",
+            "light.hall_main_light_2"
+          ],
+          "hide_members": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "105ab445be26108d613312f0515bba44",
+        "version": 1,
+        "domain": "group",
+        "title": "Kitchen Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Kitchen Lights",
+          "entities": [
+            "light.kitchen_main_light_1",
+            "light.kitchen_main_light_2_2",
+            "light.kitchen_main_light_3_3",
+            "light.kitchen_main_light_4_4"
+          ],
+          "hide_members": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "98c595ad17e6870750c04bb6b2bb2a2d",
+        "version": 1,
+        "domain": "group",
+        "title": "Bathroom Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Bathroom Lights",
+          "entities": [
+            "light.bathroom_main_light_1_4",
+            "light.bathroom_main_light_2_3",
+            "light.bathroom_main_light_3_2",
+            "light.bathroom_main_light_4_5"
+          ],
+          "hide_members": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "09f1a5f20493aba8c8ef86ddca74ce2a",
+        "version": 1,
+        "domain": "cast",
+        "title": "Google Cast",
+        "data": {
+          "ignore_cec": [],
+          "known_hosts": [],
+          "uuid": [],
+          "user_id": "5caa013f4fc3487ea2e18650250c4c99"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "cast",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "8b007f46d50388705cfc7815e5ddf963",
+        "version": 1,
+        "domain": "sun",
+        "title": "Sun",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "9eddbfe2dd9fca37d582ed618b4a2059",
+        "version": 1,
+        "domain": "browser_mod",
+        "title": "Browser Mod",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": true,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ea1f433c3f6218bdcf8d8c16129ff7a9",
+        "version": 1,
+        "domain": "google_home",
+        "title": "Google Home",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3979726430131a62381c3cae3191a8f0",
+        "version": 1,
+        "domain": "dlna_dmr",
+        "title": "XBOXONE",
+        "data": {
+          "url": "http://192.168.1.117:2869/upnphost/udhisapi.dll?content=uuid:4627b774-be54-4af6-8c5b-d39863188f41"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "uuid:4627b774-be54-4af6-8c5b-d39863188f41",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "003f08d9acd7daa2e769cc0a706d1710",
+        "version": 1,
+        "domain": "waze_travel_time",
+        "title": "Home to Camden",
+        "data": {
+          "name": "Home to Camden",
+          "origin": "51.5477409362793,-0.18949000537395477",
+          "destination": "51.553871154785156,-0.16064469516277313",
+          "region": "EU"
+        },
+        "options": {
+          "realtime": true,
+          "vehicle_type": "car",
+          "units": "metric",
+          "avoid_toll_roads": true,
+          "avoid_subscription_roads": true,
+          "avoid_ferries": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "475f79da0793b36974e6f7675f42dd26",
+        "version": 1,
+        "domain": "waze_travel_time",
+        "title": "Waze Islington",
+        "data": {
+          "name": "Waze Islington",
+          "origin": "51.5477409362793,-0.18949000537395477",
+          "destination": "51.54457092285156,-0.12413939833641052",
+          "region": "EU"
+        },
+        "options": {
+          "realtime": true,
+          "vehicle_type": "car",
+          "units": "metric",
+          "avoid_toll_roads": true,
+          "avoid_subscription_roads": true,
+          "avoid_ferries": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "78fd9f57855afa4d1296f8d2b8c555e2",
+        "version": 1,
+        "domain": "switchbot",
+        "title": "Bedroom",
+        "data": {
+          "address": "CC:C7:62:D3:B2:8A",
+          "name": "Bedroom",
+          "password": "Hibernian1",
+          "sensor_type": "bot"
+        },
+        "options": {
+          "retry_count": 3
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "bluetooth",
+        "unique_id": "ccc762d3b28a",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "97e54c3e99bd51cd0dc009b9484018bd",
+        "version": 1,
+        "domain": "switchbot",
+        "title": "Living Room",
+        "data": {
+          "address": "F6:BB:73:10:1F:4E",
+          "name": "Living Room",
+          "password": "Hibernian1",
+          "sensor_type": "bot"
+        },
+        "options": {
+          "retry_count": 3
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "bluetooth",
+        "unique_id": "f6bb73101f4e",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7369a0471ad0e1fcc24a93b61914138b",
+        "version": 1,
+        "domain": "mqtt",
+        "title": "core-mosquitto",
+        "data": {
+          "broker": "core-mosquitto",
+          "port": 1883,
+          "username": "mqtt-user",
+          "password": "mqtt-user",
+          "birth_message": {
+            "topic": "homeassistant/status",
+            "payload": "online",
+            "qos": 0,
+            "retain": false
+          },
+          "will_message": {
+            "topic": "homeassistant/status",
+            "payload": "offline",
+            "qos": 0,
+            "retain": false
+          },
+          "discovery": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "502113eb49fe8d1453d3f55a79c3f9ff",
+        "version": 2,
+        "domain": "frigate",
+        "title": "ccab4aaf-frigate:5000/",
+        "data": {
+          "url": "http://ccab4aaf-frigate:5000/"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d077034f3b68b3804c0ee09817156a25",
+        "version": 1,
+        "domain": "bluetooth",
+        "title": "Bluetooth",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a2ddfad2e2ff0b1224dfbbf5195564ff",
+        "version": 1,
+        "domain": "waze_travel_time",
+        "title": "Sam to Home",
+        "data": {
+          "name": "Sam to Home",
+          "origin": "device_tracker.sam_mcnab",
+          "destination": "zone.home",
+          "region": "EU"
+        },
+        "options": {
+          "realtime": true,
+          "vehicle_type": "car",
+          "avoid_toll_roads": false,
+          "avoid_subscription_roads": false,
+          "avoid_ferries": false,
+          "units": "metric"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "9b9f3cf7779eab562c1d20530326608a",
+        "version": 1,
+        "domain": "bluetooth",
+        "title": "Bluetooth",
+        "data": {},
+        "options": {
+          "adapter": "hci0"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "4629505891074f8d1c8758dfa4fdf356",
+        "version": 1,
+        "domain": "google_travel_time",
+        "title": "Leah to Home",
+        "data": {
+          "name": "Leah to Home",
+          "api_key": "AIzaSyDNDDYcUiVBqxybUAwgfa2QEpZjRFoGTrs",
+          "destination": "zone.home",
+          "origin": "person.leah_jinks"
+        },
+        "options": {
+          "mode": "transit",
+          "language": "en",
+          "units": "metric",
+          "traffic_model": "pessimistic",
+          "transit_mode": "subway"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "c59302f2da3c34d9c96c4126c80ba1ea",
+        "version": 1,
+        "domain": "google_travel_time",
+        "title": "Leah Work",
+        "data": {
+          "name": "Leah Work",
+          "api_key": "AIzaSyDNDDYcUiVBqxybUAwgfa2QEpZjRFoGTrs",
+          "destination": "zone.work_leah",
+          "origin": "person.leah_jinks"
+        },
+        "options": {
+          "mode": "transit",
+          "units": "metric",
+          "traffic_model": "best_guess",
+          "transit_mode": "subway"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "079389829470e24839cc403722f0c182",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Lenovo TB-X505F",
+        "data": {
+          "app_id": "io.homeassistant.companion.android",
+          "app_name": "Home Assistant",
+          "app_version": "2022.6.0-full (2398)",
+          "device_name": "Lenovo TB-X505F",
+          "manufacturer": "LENOVO",
+          "model": "Lenovo TB-X505F",
+          "os_name": "Android",
+          "os_version": "29",
+          "supports_encryption": false,
+          "app_data": {
+            "push_websocket_channel": true,
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+            "push_token": "fWFQ4kWAT3OK4CJ87-2CXH:APA91bF9Ik6v4RR94xLYY2W7a3mAl87GWCJqECcwCk5tVTIjS0lXu_svHjfD9tI6Nv5ZQaEyXWqX-WqAY5tLDJf1gkxW8m_MxeFz-LVdizTJPhCdbdrjbxkbiOElm6T3MrBxC-sza14f"
+          },
+          "device_id": "6be8ae34817f1f6c",
+          "cloudhook_url": "https://hooks.nabu.casa/gAAAAABi8UzYl2VGBNEYuOA6Qpp-IoBTFATvHwsv8yuS2NE6CyuGiUiNxw6Ho0tL2ffyF33ZzM3YIXQVGvHgnOcrIuYfID1aRz4CIzsPVBY0ji1KV7qRdCE-O8Ygod7uu8PfPMcPABTg9xuH8LHOt6rRCypFlfXf7-Xg9S6LKBjUyTOI4LHNfek=",
+          "webhook_id": "8604f97ca8b4fd458265d0c8eb6d73ca696aa6ecb002cf55ae94bb2e2ea6d23d",
+          "user_id": "47cefae3ba0f490c8ccafd6bfedad232"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.homeassistant.companion.android-6be8ae34817f1f6c",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6b35cd26e7d358958638ef7a062ed21d",
+        "version": 1,
+        "domain": "london_tfl",
+        "title": "London TfL",
+        "data": {
+          "stops": [
+            {
+              "line": "jubilee",
+              "station": "940GZZLUWHP",
+              "max": 3,
+              "platform": "2",
+              "shortenStationNames": true
+            }
+          ],
+          "lastLine": "jubilee"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "414a7c64e7a77b4ec5f46149eaf73d3c",
+        "version": 1,
+        "domain": "tapo",
+        "title": "Fairy Lights",
+        "data": {
+          "host": "192.168.1.78",
+          "username": "sammcnab.email@gmail.com",
+          "password": "bn&&8MAQR4hr$DR3"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "8022E629E3206B9D74B673BA9D0D41D71F40AADB",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "88acd0991bf58db666818d5ec79797bc",
+        "version": 1,
+        "domain": "tapo",
+        "title": "Hall Lamp",
+        "data": {
+          "host": "192.168.1.90",
+          "username": "sammcnab.email@gmail.com",
+          "password": "bn&&8MAQR4hr$DR3"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "80225192066677F42841F4EB3873506A1F408617",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "33d5c34521b9d98ba383d558bbc0f222",
+        "version": 1,
+        "domain": "tapo",
+        "title": "Lava Lamp",
+        "data": {
+          "host": "192.168.1.97",
+          "username": "sammcnab.email@gmail.com",
+          "password": "bn&&8MAQR4hr$DR3"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "8022C64B4C2E4089B0AEBF92C5AA083C1F40ECE1",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6fde4ddb852daa3cea27987028d4b406",
+        "version": 1,
+        "domain": "tapo",
+        "title": "Lounge Lamp",
+        "data": {
+          "host": "192.168.1.64",
+          "username": "sammcnab.email@gmail.com",
+          "password": "bn&&8MAQR4hr$DR3"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "80220F8CBF99AA9BFC7C14B27947B5EF1F4008BA",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a8276c596d5934f68d6a9b10b9f41420",
+        "version": 1,
+        "domain": "tapo",
+        "title": "Desk Lamp",
+        "data": {
+          "host": "192.168.1.76",
+          "username": "sammcnab.email@gmail.com",
+          "password": "bn&&8MAQR4hr$DR3"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "8022C66497EAE5AC5DAD1ABF648242BB1FB40850",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ecda926739cae7e655f547e421ac8de8",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Bedroom",
+        "data": {},
+        "options": {
+          "entity_id": "switch.bedroom",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "0b5a7a19e496f441361b2f4f87603f63",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Desk Lamp",
+        "data": {},
+        "options": {
+          "entity_id": "switch.desk_lamp",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f0dc6a8fbcd208475531a5bdd3f3fbab",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Fairy Lights",
+        "data": {},
+        "options": {
+          "entity_id": "switch.fairy_lights",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ecc46abb9e01078a6272a948a291c0f3",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Hall Lamp",
+        "data": {},
+        "options": {
+          "entity_id": "switch.hall_lamp",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a7b2ec84e9e273f16de34c84bbd43b31",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Lava Lamp",
+        "data": {},
+        "options": {
+          "entity_id": "switch.lava_lamp",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1688aa5b4e0a91b9d7ee33fdfbdd2670",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Living Room",
+        "data": {},
+        "options": {
+          "entity_id": "switch.living_room",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "43d2f2a6f31e7ab963c4df71eff3ee86",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL HALL LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL HALL LIGHTS",
+          "entities": [
+            "light.hall_lamp",
+            "light.hall_lights",
+            "light.hall_leds"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "0fb2c57e77cdf9937b7c3dc2b987c28d",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL KITCHEN LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL KITCHEN LIGHTS",
+          "entities": [
+            "light.kitchen_lights",
+            "light.kitchen_leds"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "eda8a8ecda3fbf9191f8124698800329",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL LIVING ROOM LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL LIVING ROOM LIGHTS",
+          "entities": [
+            "light.living_room",
+            "light.living_room_dining_led",
+            "light.living_room_leds",
+            "light.living_room_tv_leds",
+            "light.lava_lamp"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ab1520050bb88c0109a970fbf874689a",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL OFFICE LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL OFFICE LIGHTS",
+          "entities": [
+            "light.office_desk_led",
+            "light.desk_lamp"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a8c47d7d4be3677680d53567fa35b240",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL BATHROOM LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL BATHROOM LIGHTS",
+          "entities": [
+            "light.bathroom_lights"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "35580aaa72b8c6385c3a3fcf69d17468",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Living Room: Lamp",
+        "data": {},
+        "options": {
+          "entity_id": "switch.lounge_lamp",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "c4bf6ceb94ec4370b56789647f6f5e48",
+        "version": 1,
+        "domain": "xbox",
+        "title": "Home Assistant Cloud",
+        "data": {
+          "auth_implementation": "cloud",
+          "token": {
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "scope": "XboxLive.signin XboxLive.offline_access",
+            "access_token": "EwAgA+pvBAAUKods63Ys1fGlwiccIFJ+qE1hANsAAWHMSIiZO+G3OTDsVV8gnY+ds4kMjEpvmf7k+673Pxe2EuJhyuny0Ge4zlN2/8FBeGwy717EncgL9ARAT2GPuGdiXGFBfeWsHaDH0kq7TB9lwlqmS7o2Q/abIvAVIHnBlokZK9wgakk3RkpXJgv91P78iWA1SIEQZUsl0vTv2XFy5lFPpmbaMlE1trkPSd6AkV4vMfOcMlAT0Ai+y8PELvlJTEMl6h4FJzGAdSaI4Sq3XalvtpB+m9iCr0E6PvR4EmGcsqVSr5ptoVAI8RObb/BfPMA1o8e7NyjAZLgksZAbapNQO4ZBF99xqaJo4hKZgMUE9nHs2MwkA5ddMGAjZ7YDZgAACFA0vdzuNQxy8AEPvKQSPB+mi8mdwMeHJbtjFJ2N6HVzbs/kl0ZDS1rDSEzqduUUlGipGQ6O8mNPz1+Tpj1gBtXd7Pi8jxvJvDYaPgj4YDKb1I+ud44v8sK4HomKTMonLCOwci/kUZ1J2jJu/MKhajaA6JwqNSZYhA1/7N7eRzDLiOw9DHa7F4bCGFCtucAyJLugEB+Jdpp+xqu4qeB45MrQZheGprnmqsIJuU2eBNgpRYx5gINMbBS+Y96RygI/TlPR5GLnfKONi6eHZia9vjCmq9WNbv21YP/kcxVPIrHbWNtPobCud8LVDEA+VFVETJSLZoQGZ35Q1x1HOUGkudce+HW8KQNgPnFsqhZ9LwOrlnJUjfbCxIQMiQZa3V2bY3XYNA2tvB81COFUe8dhdGTM1apmXZ3gKAsIdKjbV0siJAV9Zc1OlCtBz0RmChu9ViDc62s0FcTFAvMWUvucrn4HaZJCq0oBmrMTwV/ZCNXB0+rYnrPgPaYDpFgry4gnzbq0CIQNRPrgO09QkAtcwsNK/9JmyULwi3o6uCdxf0LSqbJurwpO9IeRRgVUYNHhzu6qA1Gwjo/5h4StD9ocHUqOXjAy4MfPykGpaTVORAZPnC3yl+uXz+BwDd6ollXpBAMFO/MxzsWysruojRpxKegMpCmTaYQALCXXGwI=",
+            "refresh_token": "M.R3_BL2.-CWdq!*i2TJKzFj6dge7Z1QFPLZDDnDeVR79bqm8qzW1PqvfFYLvAH06SP!U1x4eYrKazcY2pjaoxl6RjazvMutkPgAt*cOtRE91s6DNzBol9RGfxja7fD1KDF5s9xO0fDYDuFF6u5tC8b744234FPVHd4bDZHg*5qxv6MDhBBKzEG3QC7kg0hLLEzWJp0DTKv3ObxFnJ!z1DFH7EgwbbMx2F0MsbakmbB*Nu9dRQd4igmiBRodGsWFvNPjglZ5il4sm4pPUQVMacxU1aN58D*LpyP*ylYLEKWGnmOBBFkhA0SxSmW4gqZ*Jav1LLEayUTQ$$",
+            "user_id": "AAAAAAAAAAAAAAAAAAAAAMTPpGRtkybJ3aZVYa5XAaM",
+            "service": "xbox",
+            "expires_at": 1662156816.4103043
+          }
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "xbox",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b07e3df87b32bdff6a2ba86a472e80a6",
+        "version": 1,
+        "domain": "samsungtv_smart",
+        "title": "Samsung TV (SmartThings)",
+        "data": {
+          "host": "192.168.1.99",
+          "name": "Samsung TV",
+          "port": 8002,
+          "ws_name": "Samsung TV",
+          "token": "90063170",
+          "id": "54406f26-12d9-49c0-846b-41fe71ef95ba",
+          "device_name": "Samsung Q60AA 55 TV",
+          "device_model": "QE55Q60AAUXXU",
+          "device_os": "Tizen",
+          "mac": "64:07:F6:83:7C:4C",
+          "api_key": "71ffb98c-661f-4e8a-97f8-00f047d00674",
+          "device_id": "d1ba61eb-03b3-6ebb-d579-a93308033cd2"
+        },
+        "options": {
+          "use_st_status_info": true,
+          "use_st_channel_info": true,
+          "show_channel_number": true,
+          "power_on_method": 2,
+          "logo_option": 2,
+          "use_local_logo": true,
+          "sync_turn_off": [],
+          "sync_turn_on": [],
+          "app_load_method": 1,
+          "dump_apps": false,
+          "app_launch_method": 1,
+          "wol_repeat": 1,
+          "power_on_delay": 30,
+          "ping_port": 9197,
+          "use_mute_check": true,
+          "toggle_art_mode": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "54406f26-12d9-49c0-846b-41fe71ef95ba",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d227f66aa3e25b4cff3aff555a83f8dc",
+        "version": 1,
+        "domain": "dlna_dmr",
+        "title": "Samsung Q60AA 55 TV",
+        "data": {
+          "url": "http://192.168.1.99:9197/dmr",
+          "device_id": "uuid:2abcaf72-b273-493a-9b6f-6e43497db8bb",
+          "type": "urn:schemas-upnp-org:device:MediaRenderer:1"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "uuid:2abcaf72-b273-493a-9b6f-6e43497db8bb",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "99d99c553cb9d08bffed9d7acf39e926",
+        "version": 1,
+        "domain": "google_home",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "username": "sammcnab.email@gmail.com",
+          "password": "itdvixxwbupgnrcg",
+          "master_token": "aas_et/AKppINYltFK056Tj2f5Qb7ZN9yQupbXAM-jLvXgrjyIE1uIaWmEvI2qa4uQrfXo1VjCcnvxcil6qFSOsgrY8sa19gHmSJ2x_SOypoQuU2Q87aWOhS-TSeav70XRlacUVvKwN1BD37L69W9OCWRttdPPes4CEegMaNqzy3W0-_K4RlHoJnxLXUKtLSdHh4pfWN6433Xabxp0RXmulix_5HZA=",
+          "android_id": "9e9d9484f4bac25c"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "728becb699a7b010e4c24b0c8dacae20",
+        "version": 1,
+        "domain": "garmin_connect",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "id": "sammcnab.email@gmail.com",
+          "username": "sammcnab.email@gmail.com",
+          "password": "Hibernian1"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "sammcnab.email@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "27e2db89f0f5bb49122e765b58f6eb6f",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Sam's Mac Mini",
+        "data": {
+          "app_data": {
+            "push_token": "fqq2D7F6dU91vxZQmYroZA:APA91bGY_D9lgWhryJUmq5i7px_ah8XoJYgsL9XvGTVW6h9d2v7Og4DIdnUxzuR8wBj4thNhFQlfH77VpKS5w61mQrsXfmkTQqEeQVyeCvdlUiNaNiy9Q_8zN9NXmZT9S8js65PzUxbA",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "app_version": "2022.8 (2022.387)",
+          "manufacturer": "Apple",
+          "os_name": "macOS",
+          "app_name": "Home Assistant",
+          "device_id": "A5E9171B-0494-5DE0-B0C3-4D58228874D9",
+          "device_name": "Sam's Mac Mini",
+          "app_id": "io.robbie.HomeAssistant",
+          "model": "Macmini9,1",
+          "os_version": "12.5.0",
+          "supports_encryption": true,
+          "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAM3nnjpreldlFV8hU7Ph9drMq-Gib8mNoZq_kD5bd8uo_BWnZRhokdzLi94wQ-RwuwyucB8MdxnWJ5HS0klReWl86fnFmzY0g3N7Ri_WkHmN-vD366KAsX2UKrJlJnlmTPSdkfLEnOYZT_n6H4mNF_ZyeVWrewOPOzXDqiP99_k6E4c=",
+          "webhook_id": "83d92c05f550230c36df4a4e223051763e99c55b38f1b6d31c35fcbf7f16521e",
+          "secret": "2100730b5f98aa446619dfc21935b3f32a02231c3f89633570b5039665c6c79e",
+          "user_id": "47cefae3ba0f490c8ccafd6bfedad232",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-A5E9171B-0494-5DE0-B0C3-4D58228874D9",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b2ad292f7119c97cee4ca49b5fe2c6eb",
+        "version": 1,
+        "domain": "sonoff",
+        "title": "sammcnab.email@gmail.com",
+        "data": {
+          "username": "sammcnab.email@gmail.com",
+          "password": "Hibernian1"
+        },
+        "options": {
+          "mode": "auto",
+          "debug": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "sammcnab.email@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b0e7694b3e3ffa31f4aa90d32dcd0975",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Sam’s MacBook Air",
+        "data": {
+          "app_data": {
+            "push_token": "eSlukSg3sUcHi-2ACMuqB6:APA91bG_G7Ovwpae3PEJZw0RBVxCjo-lC60O9UxXyWZB7SbUtUqNW4UZBHrrXkDvtIznLdiCtXWFt1YO7AXpHhyvM8aWdBl3uiHHRq61nbpVfpQgdyG3vxitnN11k7XzEXaJLgs4P1ZS",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "device_name": "Sam’s MacBook Air",
+          "app_version": "2022.8 (2022.387)",
+          "app_id": "io.robbie.HomeAssistant",
+          "manufacturer": "Apple",
+          "model": "MacBookAir8,1",
+          "device_id": "3EC11992-1E73-5F85-8780-89054D47EF15",
+          "supports_encryption": true,
+          "app_name": "Home Assistant",
+          "os_version": "12.5.0",
+          "os_name": "macOS",
+          "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAPVO5x0rsO9JbN7DA3yIbg6AbkUS8pzRCQfoWrZEXVUcsQ2I-D9RbdOwprtorAR9tvDroanJxGxTHaPhlpQOWMwSA6b3_k6w-rksofdZKDG7kUulqGEvPO3gKqVyrRZKwwXgMF_aGMsTlml9NmvGCu7uvV_66kEpPsduf5YwUFdeWhc=",
+          "webhook_id": "77159df69a0c805970324f6178129504810ed4fcd0e61b441b9b0e6738d4ea11",
+          "secret": "f0a0c802bf1c0ac83a0543d2fe26d219dacc9fee161a89e50112dce306c0bbc4",
+          "user_id": "47cefae3ba0f490c8ccafd6bfedad232",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-3EC11992-1E73-5F85-8780-89054D47EF15",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "e6413da0c228beb35578090176ffbf1b",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Sam's Phone",
+        "data": {
+          "app_id": "io.homeassistant.companion.android",
+          "app_name": "Home Assistant",
+          "app_version": "2022.6.0-full (2398)",
+          "device_name": "Sam's Phone",
+          "manufacturer": "samsung",
+          "model": "SM-G998B",
+          "os_name": "Android",
+          "os_version": "31",
+          "supports_encryption": false,
+          "app_data": {
+            "push_websocket_channel": true,
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+            "push_token": "foGeDfgjQO-IzzRvLqojCS:APA91bEtBB3LStmLzUyJkqjrSvf-1LQsTmFuDOLUa66P8oV8CeUb1sAwRXjEWi_86sXUHCFhyCAI_Iwax6hivK2J_lviIqSZX8xBtnbcoSdpfFlRcNFARlZ45voU8yfXU3E9Q2Oz27S_"
+          },
+          "device_id": "bf7841e69fbe665d",
+          "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAPvWKtafYovD_TcdtcNO6RoiBRwsmED3I6sTQ90M_YvswZ9VcV7RPNpJ02ZB4ehJUnv9b52OWBpsYBk5_l2sS_gZFDqp0MSt__z-ehAdYILEfV0l_bNVAVUrSyvJoCAtjTLQpiemW7n_pVXN06ctUef7OO6epYaVV6sTrP2F7AwmkNA=",
+          "webhook_id": "60bac6e591c05a318cc6b23f4994933b066d9687fd165f82e4b7c2a9afa72a0f",
+          "user_id": "47cefae3ba0f490c8ccafd6bfedad232"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.homeassistant.companion.android-bf7841e69fbe665d",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "42db038397e07a546d0920e64aac8865",
+        "version": 1,
+        "domain": "group",
+        "title": "Bedside Lamps",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Bedside Lamps",
+          "entities": [
+            "light.smart_bulb_2",
+            "light.smart_bulb"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "01783a07bba65c671fded058f16c617d",
+        "version": 1,
+        "domain": "group",
+        "title": "ALL BEDROOM LIGHTS",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "ALL BEDROOM LIGHTS",
+          "entities": [
+            "light.bedside_lamps",
+            "light.bedroom_leds",
+            "light.bedroom"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "5383fafee589500db933c159aacb2c5e",
+        "version": 1,
+        "domain": "esphome",
+        "title": "bedside-leah",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "bedside-leah",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b75fde6c64265ea1f5bf7f250bcf478f",
+        "version": 1,
+        "domain": "esphome",
+        "title": "esphome-web-f849ac",
+        "data": {
+          "host": "192.168.1.115"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "esphome-web-f849ac",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f31d44bbe4951b21c33e5c4f1d0745bd",
+        "version": 1,
+        "domain": "esphome",
+        "title": "bed-sensor",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "bed-sensor",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "df0f7f8c473f232e2f720d7d29f13095",
+        "version": 1,
+        "domain": "esphome",
+        "title": "esp-bed-sensor",
+        "data": {
+          "host": "192.168.1.115",
+          "port": 6053,
+          "password": "",
+          "noise_psk": ""
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f5e569b40de107799c77fb70b3407158",
+        "version": 1,
+        "domain": "esphome",
+        "title": "esp-bed-sensor",
+        "data": {
+          "host": "192.168.1.115",
+          "port": 6053,
+          "password": "NMZztEaFnj6Ia0XFZzstFPDW5Qdq1MqenPevnSLMpIY=",
+          "noise_psk": ""
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "0789896964d5d672fad23ca01060c8e6",
+        "version": 1,
+        "domain": "pyscript",
+        "title": "pyscript",
+        "data": {
+          "allow_all_imports": true,
+          "hass_is_global": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "pyscript",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6ae8e1f49870256c21daf674cf3269d6",
+        "version": 1,
+        "domain": "group",
+        "title": "Holiday Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Holiday Lights",
+          "entities": [
+            "light.living_room_leds",
+            "light.hall_leds",
+            "light.bedroom_leds",
+            "light.kitchen_leds",
+            "light.living_room_lamp",
+            "light.living_room"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ec360819e035c16befcab6fd2170ad07",
+        "version": 1,
+        "domain": "androidtv",
+        "title": "192.168.1.104",
+        "data": {
+          "host": "192.168.1.104",
+          "device_class": "firetv",
+          "port": 5555,
+          "adbkey": "/config/adbkey"
+        },
+        "options": {
+          "get_sources": true,
+          "exclude_unnamed_apps": false,
+          "screencap": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "24:ce:33:c0:ed:d0",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6c70732689d6c9012339863bc4068984",
+        "version": 1,
+        "domain": "nfandroidtv",
+        "title": "Fire TV",
+        "data": {
+          "host": "192.168.1.104",
+          "name": "Fire TV"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7e3165f8eb6e143e28ef91503ab6c3c2",
+        "version": 1,
+        "domain": "spotify",
+        "title": "Sam McNab",
+        "data": {
+          "auth_implementation": "spotify_a1669f567a6548d7af8afb829182f57a",
+          "token": {
+            "access_token": "BQArCLOxwEt9ufPk_VjhMGKkYlhDQ49DKDFbS5MS-0d1wP8QtMKo8fGynDDsPxB9xtMKHQciX9fDXuJzhbh2sbdmJyOFv5LFpiKjJQ0pP8GGbgOwy16ioTiaIF21NbUgpdLEFDr0PRSD13VC3iDW9ZeACFMuLDFrrd0Hry9JuwVlruN_MImrwCp0GSfXeLMIrVoKaZY-gTSFWLCfDL8wJypNyM0pwbMjKMwJeX49",
+            "token_type": "Bearer",
+            "expires_in": 3600,
+            "refresh_token": "AQAryy__mz91GmS3ljpSZxyXSL233w4ihktEA1BLeOTikIYt4yYCtrnZyEwv8kMhV8GPWtRRfdkDf7qbELGBFHBhLefB2LswibWjZKHHZs6JlyWTn4Pd9CH6Etn03MwAcBU",
+            "scope": "playlist-read-private playlist-read-collaborative user-modify-playback-state user-library-read user-follow-read user-read-playback-state user-read-recently-played user-read-playback-position user-read-private user-top-read",
+            "expires_at": 1662156915.086013
+          },
+          "id": "beb999",
+          "name": "Sam McNab"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "beb999",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "5b987db95f40ea540bc20438334853c0",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Sam’s iPhone",
+        "data": {
+          "manufacturer": "Apple",
+          "os_name": "iOS",
+          "device_id": "CD95F04D-D1B7-4D2E-945E-AAD0651C112E",
+          "os_version": "16.0",
+          "app_id": "io.robbie.HomeAssistant",
+          "app_name": "Home Assistant",
+          "model": "iPhone14,3",
+          "app_version": "2022.8 (2022.387)",
+          "supports_encryption": true,
+          "app_data": {
+            "push_token": "eOhhMG3N-UoekW5sSYMq7e:APA91bFh19TIW-dwJgwK73ZpiaiyJsBRPZ0mmZOMXWYj97MmPFBSJOEXEexzzDYFw-GIFjIzFTkGk7Rbr8J2xD-3A3aa7fkA5t7M3Dy67IpgM-CS4daMnH7ONHQP_fVAQGAv5AsO42aH",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "device_name": "iPhone",
+          "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjDLOrMC86i-WvWM7mQesYj0MsPwfMolf3GGNWknZoCRvCmMZFA1i-ikVFR9cYh6qS6Xt4GEI3s7-J5UDcNOfWVXJTyFuRlqn3AspjGR8qDcizSZv8OR04IvU8yk-HAZBy4oiQmeMwLn9OaHp1ZksO-4PN2K7pvORfZSFgvW79VMDzJmg=",
+          "webhook_id": "440bf521156cec352ddc28a608844f37a06af980db65595075197fc573b81710",
+          "secret": "8fab33c8689de8ed78542bb38bbbd9e98284ec01daa3f9eb6044031819d1ad4f",
+          "user_id": "47cefae3ba0f490c8ccafd6bfedad232",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-CD95F04D-D1B7-4D2E-945E-AAD0651C112E",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "918365a1c26f8f2ce7ead8f004338007",
+        "version": 1,
+        "domain": "github",
+        "title": "",
+        "data": {
+          "access_token": "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"
+        },
+        "options": {
+          "repositories": [
+            "smcnab1/op-question-mark"
+          ]
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      }
+    ]
+  }
+}

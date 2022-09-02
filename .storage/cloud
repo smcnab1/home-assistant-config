@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "cloud",
+  "data": {
+    "alexa_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "alexa_entity_configs": {},
+    "cloud_user": "3b584548f01f458186309fc0400e0bbf",
+    "cloudhooks": {
+      "8604f97ca8b4fd458265d0c8eb6d73ca696aa6ecb002cf55ae94bb2e2ea6d23d": {
+        "webhook_id": "8604f97ca8b4fd458265d0c8eb6d73ca696aa6ecb002cf55ae94bb2e2ea6d23d",
+        "cloudhook_id": "aabad8ab62814d97838da8e9cc41e510",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABi8UzYl2VGBNEYuOA6Qpp-IoBTFATvHwsv8yuS2NE6CyuGiUiNxw6Ho0tL2ffyF33ZzM3YIXQVGvHgnOcrIuYfID1aRz4CIzsPVBY0ji1KV7qRdCE-O8Ygod7uu8PfPMcPABTg9xuH8LHOt6rRCypFlfXf7-Xg9S6LKBjUyTOI4LHNfek=",
+        "managed": true
+      },
+      "f65e4780a395ea03f54a27e4a1a34a0f289fb544d559481283556de61b1b66c3": {
+        "webhook_id": "f65e4780a395ea03f54a27e4a1a34a0f289fb544d559481283556de61b1b66c3",
+        "cloudhook_id": "154e3fdc107f414e921e5bbe08ff16f0",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABi-_mfc6C1pq05XKuB0t_XHoiBq-yo_orcsV_bgiPJBzLVcIwdRXxGxBpcAy0sVeZ5SHjmemBSBLTqj6xxsGz8VDp5nV4BeUqqc4antO9bbf2J9FA0S9lr8AePNy8ufBAZGvD5YO-AfazMdD8a0tqByweMCwvWZ55Mnrce2CMxSJf_qDQ=",
+        "managed": true
+      },
+      "83d92c05f550230c36df4a4e223051763e99c55b38f1b6d31c35fcbf7f16521e": {
+        "webhook_id": "83d92c05f550230c36df4a4e223051763e99c55b38f1b6d31c35fcbf7f16521e",
+        "cloudhook_id": "a5e43552982844249f80b079e317685b",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAM3nnjpreldlFV8hU7Ph9drMq-Gib8mNoZq_kD5bd8uo_BWnZRhokdzLi94wQ-RwuwyucB8MdxnWJ5HS0klReWl86fnFmzY0g3N7Ri_WkHmN-vD366KAsX2UKrJlJnlmTPSdkfLEnOYZT_n6H4mNF_ZyeVWrewOPOzXDqiP99_k6E4c=",
+        "managed": true
+      },
+      "77159df69a0c805970324f6178129504810ed4fcd0e61b441b9b0e6738d4ea11": {
+        "webhook_id": "77159df69a0c805970324f6178129504810ed4fcd0e61b441b9b0e6738d4ea11",
+        "cloudhook_id": "de71c0d1de3a460481299efbdb619ede",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAPVO5x0rsO9JbN7DA3yIbg6AbkUS8pzRCQfoWrZEXVUcsQ2I-D9RbdOwprtorAR9tvDroanJxGxTHaPhlpQOWMwSA6b3_k6w-rksofdZKDG7kUulqGEvPO3gKqVyrRZKwwXgMF_aGMsTlml9NmvGCu7uvV_66kEpPsduf5YwUFdeWhc=",
+        "managed": true
+      },
+      "60bac6e591c05a318cc6b23f4994933b066d9687fd165f82e4b7c2a9afa72a0f": {
+        "webhook_id": "60bac6e591c05a318cc6b23f4994933b066d9687fd165f82e4b7c2a9afa72a0f",
+        "cloudhook_id": "bd57046c9dda423ebe086861646d303c",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjAPvWKtafYovD_TcdtcNO6RoiBRwsmED3I6sTQ90M_YvswZ9VcV7RPNpJ02ZB4ehJUnv9b52OWBpsYBk5_l2sS_gZFDqp0MSt__z-ehAdYILEfV0l_bNVAVUrSyvJoCAtjTLQpiemW7n_pVXN06ctUef7OO6epYaVV6sTrP2F7AwmkNA=",
+        "managed": true
+      },
+      "440bf521156cec352ddc28a608844f37a06af980db65595075197fc573b81710": {
+        "webhook_id": "440bf521156cec352ddc28a608844f37a06af980db65595075197fc573b81710",
+        "cloudhook_id": "12218dd1e98f4d199dfba32e86e9d3e7",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjDLOrMC86i-WvWM7mQesYj0MsPwfMolf3GGNWknZoCRvCmMZFA1i-ikVFR9cYh6qS6Xt4GEI3s7-J5UDcNOfWVXJTyFuRlqn3AspjGR8qDcizSZv8OR04IvU8yk-HAZBy4oiQmeMwLn9OaHp1ZksO-4PN2K7pvORfZSFgvW79VMDzJmg=",
+        "managed": true
+      }
+    },
+    "alexa_enabled": false,
+    "google_enabled": true,
+    "remote_enabled": true,
+    "google_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "google_entity_configs": {
+      "media_player.unnamed_room": {
+        "should_expose": true
+      },
+      "media_player.home_group": {
+        "should_expose": false
+      },
+      "media_player.living_room_speaker": {
+        "should_expose": true
+      },
+      "media_player.bedroom_speaker": {
+        "should_expose": true
+      },
+      "media_player.samsung_q60aa_55_tv_2": {
+        "should_expose": true
+      },
+      "media_player.samsung_tv": {
+        "should_expose": true
+      },
+      "media_player.samsung_q60aa_55_tv": {
+        "should_expose": true
+      },
+      "input_button.hubert_watered": {
+        "should_expose": false
+      },
+      "scene.hall_red": {
+        "should_expose": false
+      },
+      "scene.hall_normal": {
+        "should_expose": false
+      },
+      "script.find_my_phone_sam": {
+        "should_expose": false
+      },
+      "alarm_control_panel.home_alarm": {
+        "should_expose": true
+      },
+      "media_player.living_room_sonos_sonos": {
+        "should_expose": false
+      },
+      "script.hki_dark_empty": {
+        "should_expose": false
+      },
+      "script.hki_header_greeting_default": {
+        "should_expose": false
+      },
+      "script.hki_light_default": {
+        "should_expose": false
+      },
+      "script.hki_light_empty": {
+        "should_expose": false
+      },
+      "script.hki_dark_default": {
+        "should_expose": false
+      },
+      "sensor.processor_temperature": {
+        "should_expose": false
+      },
+      "sensor.open_weather_temperature": {
+        "should_expose": false
+      },
+      "sensor.open_weather_humidity": {
+        "should_expose": false
+      },
+      "sensor.open_weather_dew_point": {
+        "should_expose": false
+      },
+      "sensor.open_weather_feels_like_temperature": {
+        "should_expose": false
+      },
+      "sensor.open_weather_forecast_temperature": {
+        "should_expose": false
+      },
+      "sensor.open_weather_forecast_temperature_low": {
+        "should_expose": false
+      },
+      "light.living_room_main_light": {
+        "should_expose": false
+      },
+      "light.living_room_lava_lamp": {
+        "should_expose": false
+      },
+      "light.office_desk_lamp": {
+        "should_expose": false
+      },
+      "light.living_room_lamp": {
+        "should_expose": false
+      },
+      "light.kitchen_main_light_2_2": {
+        "should_expose": false
+      },
+      "light.kitchen_main_light_3_3": {
+        "should_expose": false
+      },
+      "light.kitchen_main_light_4_4": {
+        "should_expose": false
+      },
+      "light.kitchen_main_light_1": {
+        "should_expose": false
+      },
+      "switch.hall_tablet_screensaver": {
+        "should_expose": false
+      },
+      "light.hall_tablet_screen": {
+        "should_expose": false
+      },
+      "switch.hall_tablet_motion_detection": {
+        "should_expose": false
+      },
+      "switch.hall_tablet_maintenance_mode": {
+        "should_expose": false
+      },
+      "switch.hall_tablet_kiosk_lock": {
+        "should_expose": false
+      },
+      "light.hall_main_light_2": {
+        "should_expose": false
+      },
+      "light.hall_main_light_1": {
+        "should_expose": false
+      },
+      "light.hall_lamp": {
+        "should_expose": null
+      },
+      "script.1658844939181": {
+        "should_expose": false
+      },
+      "light.bedside_lamps": {
+        "should_expose": true
+      },
+      "light.bedroom_main_light": {
+        "should_expose": true
+      },
+      "light.bedroom_fairy_lights": {
+        "should_expose": false
+      },
+      "light.bathroom_main_light_4_5": {
+        "should_expose": false
+      },
+      "light.bathroom_main_light_3_2": {
+        "should_expose": false
+      },
+      "light.bathroom_main_light_2_3": {
+        "should_expose": false
+      },
+      "light.bathroom_main_light_1_4": {
+        "should_expose": false
+      },
+      "light.alarm_lights": {
+        "should_expose": false
+      },
+      "light.all_bathroom_lights": {
+        "should_expose": null
+      },
+      "light.all_bedroom_lights": {
+        "should_expose": null
+      },
+      "light.all_hall_lights": {
+        "should_expose": null
+      },
+      "light.all_kitchen": {
+        "should_expose": false
+      },
+      "light.all_living_room": {
+        "should_expose": false
+      },
+      "light.all_office_lights": {
+        "should_expose": null
+      },
+      "script.citymapper_work_leah": {
+        "should_expose": false
+      },
+      "script.set_bedroom_camera_home": {
+        "should_expose": false
+      },
+      "script.bedroom_camera_away": {
+        "should_expose": false
+      },
+      "media_player.fire_tv_192_168_1_104": {
+        "should_expose": true
+      },
+      "camera.bedroom": {
+        "should_expose": true
+      },
+      "camera.hall": {
+        "should_expose": true
+      },
+      "camera.living_room": {
+        "should_expose": true
+      }
+    },
+    "google_local_webhook_id": "2bc2614243030bc8cf734853a72160aaba390c44853afee9f7ec448dbf49df85",
+    "google_secure_devices_pin": "1550",
+    "remote_domain": "zbla5g2emsf0uk7hl17z3xppcn50324m.ui.nabu.casa",
+    "username": "3abe6284-f1d4-4da1-bd04-b911236e551a",
+    "tts_default_voice": [
+      "en-GB",
+      "male"
+    ]
+  }
+}

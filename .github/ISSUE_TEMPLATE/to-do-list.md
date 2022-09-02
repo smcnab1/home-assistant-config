@@ -1,9 +1,9 @@
 ---
-name: To-Do List
-about: Suggest an idea for this project
-title: ''
+name: To Do List
+about: Template to create list of things to do
+title: "[TDL]"
 labels: ''
-assignees: ''
+assignees: smcnab1
 
 ---
 

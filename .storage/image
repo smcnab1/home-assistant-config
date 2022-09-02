@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "2d74d841266409706f47db7e3548d1b7",
+        "filesize": 19821,
+        "content_type": "image/jpeg",
+        "name": "avatar (1).png",
+        "uploaded_at": "2022-08-06T12:51:53.962841+00:00"
+      },
+      {
+        "id": "0d3f067529413545bf734131f079b572",
+        "filesize": 16803,
+        "content_type": "image/jpeg",
+        "name": "avatar (2).png",
+        "uploaded_at": "2022-08-06T12:52:20.288500+00:00"
+      }
+    ]
+  }
+}

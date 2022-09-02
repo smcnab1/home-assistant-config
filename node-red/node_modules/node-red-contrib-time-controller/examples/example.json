@@ -1,0 +1,222 @@
+[
+  {
+    "start": {
+      "time": "06:00",
+      "value": 0
+    },
+    "end": {
+      "time": "06:30",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw.cmnd/channel1"
+  },
+  {
+    "start": {
+      "time": "06:30",
+      "value": 100
+    },
+    "end": {
+      "time": "07:00",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw.cmnd/channel1"
+  },
+  {
+    "start": {
+      "time": "20:30",
+      "value": 0
+    },
+    "end": {
+      "time": "21:00",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw.cmnd/channel1"
+  },
+  {
+    "start": {
+      "time": "21:01",
+      "value": 100
+    },
+    "end": {
+      "time": "21:30",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw.cmnd/channel1"
+  },
+  {
+    "start": {
+      "time": "04:45",
+      "value": 3
+    },
+    "end": {
+      "time": "05:45",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel3"
+  },
+  {
+    "start": {
+      "time": "06:00",
+      "value": 100
+    },
+    "end": {
+      "time": "06:30",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel3"
+  },
+  {
+    "start": {
+      "time": "21:00",
+      "value": 0
+    },
+    "end": {
+      "time": "21:30",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel3"
+  },
+  {
+    "start": {
+      "time": "21:31",
+      "value": 100
+    },
+    "end": {
+      "time": "22:30",
+      "value": 20
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel3"
+  },
+  {
+    "start": {
+      "time": "22:31",
+      "value": 20
+    },
+    "end": {
+      "time": "23:30",
+      "value": 3
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel3"
+  },
+  {
+    "start": {
+      "time": "06:30",
+      "value": 0
+    },
+    "end": {
+      "time": "07:00",
+      "value": 30
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "07:01",
+      "value": 30
+    },
+    "end": {
+      "time": "10:45",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "11:00",
+      "value": 100
+    },
+    "end": {
+      "time": "11:01",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "17:29",
+      "value": 0
+    },
+    "end": {
+      "time": "17:30",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "18:30",
+      "value": 100
+    },
+    "end": {
+      "time": "20:30",
+      "value": 10
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "20:31",
+      "value": 10
+    },
+    "end": {
+      "time": "21:00",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel4"
+  },
+  {
+    "start": {
+      "time": "06:30",
+      "value": 0
+    },
+    "end": {
+      "time": "07:00",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel5"
+  },
+  {
+    "start": {
+      "time": "11:00",
+      "value": 100
+    },
+    "end": {
+      "time": "11:01",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel5"
+  },
+  {
+    "start": {
+      "time": "17:29",
+      "value": 0
+    },
+    "end": {
+      "time": "17:30",
+      "value": 100
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel5"
+  },
+  {
+    "start": {
+      "time": "18:30",
+      "value": 100
+    },
+    "end": {
+      "time": "20:30",
+      "value": 80
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel5"
+  },
+  {
+    "start": {
+      "time": "20:31",
+      "value": 80
+    },
+    "end": {
+      "time": "21:00",
+      "value": 0
+    },
+    "topic": "wz_aq_rgbw/cmnd/channel5"
+  }
+]

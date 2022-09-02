@@ -1,0 +1,75 @@
+id: '1658350283156'
+alias: 'Alarm: Flash Lights when Alarm is Triggered'
+description: ''
+trigger:
+- platform: state
+  entity_id:
+  - alarm_control_panel.home_alarm
+  to: triggered
+  id: alarm-is-triggered
+- platform: state
+  entity_id:
+  - alarm_control_panel.home_alarm
+  to: disarmed
+  id: alarm-is-disarmed
+condition: []
+action:
+- choose:
+  - conditions:
+    - condition: trigger
+      id: alarm-is-triggered
+    sequence:
+    - repeat:
+        until:
+        - condition: state
+          entity_id: alarm_control_panel.home_alarm
+          state: disarmed
+        sequence:
+        - service: light.turn_on
+          data:
+            brightness_pct: 100
+            color_name: red
+          target:
+            entity_id:
+            - light.bedroom_leds
+            - light.hall_leds
+            - light.kitchen_leds
+            - light.living_room_dining_led
+            - light.living_room_leds
+            - light.living_room_tv_leds
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 200
+        - service: light.turn_off
+          data: {}
+          target:
+            entity_id:
+            - light.bedroom_leds
+            - light.hall_leds
+            - light.kitchen_leds
+            - light.living_room_dining_led
+            - light.living_room_leds
+            - light.living_room_tv_leds
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 200
+  - conditions:
+    - condition: trigger
+      id: alarm-is-disarmed
+    sequence:
+    - service: light.turn_off
+      data: {}
+      target:
+        entity_id:
+        - light.all_bathroom_lights
+        - light.all_bedroom_lights
+        - light.all_hall_lights
+        - light.all_kitchen_lights
+        - light.all_living_room_lights
+        - light.all_office_lights
+  default: []
+mode: restart

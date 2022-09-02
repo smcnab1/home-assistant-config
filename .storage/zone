@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "zone",
+  "data": {
+    "items": [
+      {
+        "latitude": 51.48925035838469,
+        "longitude": -0.17100955825299025,
+        "name": "Work-Leah",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 100.0,
+        "id": "work_leah"
+      },
+      {
+        "latitude": 51.55380068468107,
+        "longitude": -0.16094469465315345,
+        "name": "Work-Sam-Camden",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 60.0,
+        "id": "work_sam_camden"
+      },
+      {
+        "latitude": 51.545110603266394,
+        "longitude": -0.1217169687151909,
+        "name": "Work-Sam-Islington",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 100.0,
+        "id": "work_sam_islington"
+      }
+    ]
+  }
+}

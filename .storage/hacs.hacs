@@ -1,0 +1,34 @@
+{
+  "version": "6",
+  "minor_version": 1,
+  "key": "hacs.hacs",
+  "data": {
+    "archived_repositories": [
+      "custom-components/wienerlinien",
+      "Cyr-ius/hass-hue-service-advanced",
+      "Cyr-ius/hass-cozytouch",
+      "eavanvalkenburg/sia",
+      "KTibow/lovelace-dark-soft-ui-theme",
+      "KTibow/lovelace-light-soft-ui-theme",
+      "GeorgeSG/lovelace-folder-card",
+      "custom-cards/camera-card",
+      "custom-components/sensor.custom_aftership",
+      "iantrich/aftership-card",
+      "georgezhao2010/climate_ewelink"
+    ],
+    "renamed_repositories": {
+      "DarkSir23/sensor.mylar": "WillowMist/sensor.mylar",
+      "dmitry-k/yandex_smart_home": "dext0r/yandex_smart_home",
+      "9a4gl/hass-peltec": "9a4gl/hass-centrometal-boiler",
+      "nbogojevic/homeassistant-midea-dehumidifier-lan": "nbogojevic/homeassistant-midea-air-appliances-lan",
+      "78wesley/Darkish-Theme": "78wesley/Home-Assistant-Darkish-Theme",
+      "nikrolls/homeassistant-goldair-climate": "nicole-ashley/homeassistant-goldair-climate",
+      "wills106/homsassistant-solax-modbus": "wills106/homeassistant-solax-modbus",
+      "rj175/home-assistant-aws-codepipeline": "ohheyrj/home-assistant-aws-codepipeline",
+      "wernerhp/ha_integration_load_shedding": "wernerhp/ha.integration.load_shedding",
+      "wernerhp/appdaemon_aqara_motion_sensors": "wernerhp/ha.appdaemon.aqara_motion_sensors",
+      "wernerhp/appdaemon_wasp": "wernerhp/ha.appdaemon.wasp"
+    },
+    "ignored_repositories": []
+  }
+}
