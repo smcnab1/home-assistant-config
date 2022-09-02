@@ -1,1 +1,0 @@
-export default (...functions) => (state, action) => functions.reduceRight((acc, fn) => fn(acc, action), state);
