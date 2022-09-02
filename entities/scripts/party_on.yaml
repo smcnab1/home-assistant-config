@@ -1,0 +1,14 @@
+sequence:
+  - service: scene.create
+    data:
+      scene_id: houseparty
+      snapshot_entities:
+        - light.bedroom_leds
+        - light.hall_leds
+        - light.kitchen_leds
+        - light.living_room_dining_led
+        - light.living_room_leds
+        - light.living_room_tv_leds
+        - light.office_desk_led
+  - service: script.turn_on
+    entity_id: script.lights_partying

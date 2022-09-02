@@ -1,0 +1,137 @@
+<script type="text/javascript">
+  $.RedBot.registerType('chatbot-ask', {
+    category: $.RedBot.config.name,
+    color: '#FFCC66',
+    defaults: {
+      name: {
+        value: ''
+      },
+      buttons: {
+        value: []
+      },
+      message: {
+        value: ''
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'Keyboards',
+    icon: 'chatbot-ask.png',
+    label: function() {
+      return this.name || 'Keyboards';
+    },
+
+    oneditsave: function() {
+      var buttons = $("#node-input-buttons-container").editableList('items');
+      var node = this;
+      node.buttons = [];
+      var idx;
+      for(idx = 0; idx < buttons.length; idx++) {
+        node.buttons.push($(buttons[idx]).RB_getButtonData());
+      }
+    },
+    oneditprepare: function() {
+      $('#node-input-buttons-container')
+        .css('min-height','300px')
+        .css('min-width','450px')
+        .editableList({
+          addButton: 'Add button',
+          addItem: function(container, i, item) {
+            $(container).RB_mountButtonDialog({
+              types: ['keyboardButton', 'newline'],
+              platforms: ['telegram'],
+              badges: false
+            });
+            $(container).RB_setButtonData(item);
+          },
+          removable: true,
+          sortable: true
+        });
+
+      var buttons = this.buttons;
+      var idx;
+      for (idx = 0; idx < buttons.length; idx++) {
+        $('#node-input-buttons-container').editableList('addItem', buttons[idx]);
+      }
+    },
+    oneditresize: function() {
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="chatbot-ask">
+<div class="form-row">
+  <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+  <input type="text" id="node-input-name" placeholder="Name">
+</div>
+<div class="form-row">
+  <label for="node-input-message"><i class="icon-envelope"></i> Message</label>
+  <textarea id="node-input-message" placeholder="Message" style="width:93%;height:100px;"></textarea>
+  <div style="max-width: 460px;font-size: 12px;color: #999999;line-height: 14px;clear:both;margin-top:5px;">
+    Supports handlebars-like variables for chat context like {{firstName}}, {{lastName}}, etc. and emoticons (:smile:, etc.)
+  </div>
+</div>
+<div class="form-row" style="margin-bottom:0;">
+  <label><i class="fa fa-list"></i> <span>Buttons</span></label>
+</div>
+<div class="form-row node-input-rule-container-row">
+  <ol id="node-input-buttons-container"></ol>
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="chatbot-ask"><p>Show quick alternatives (canned answers) to the users with custom persistent keyboards.</p>
+<p>The keyboard automatically closes after the user clicks on a button, the keyboard is still available after use. To completely remove a keyboard use a <code>Keyboard node</code> with an empty buttons set.</p>
+<p>The custom keyboards can also be passed through the payload by an upstream node <code>Function node</code></p>
+<pre><code class="language-javascript">msg.payload = {
+  message: &#39;The message with the buttons&#39;,
+  buttons: [
+    {type: &#39;keyboardButton&#39;, label: &#39;label of the button 1&#39;},
+    {type: &#39;newline&#39;},
+    {type: &#39;keyboardButton&#39;, label: &#39;another button&#39;}
+  ]
+};
+return msg;
+</code></pre>
+<p>Available parameters for the <code>msg.payload</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>message</td>
+<td>string</td>
+<td>The message text above the buttons</td>
+</tr>
+<tr>
+<td>buttons</td>
+<td>array of <code>[button]</code></td>
+<td>The list of inline buttons</td>
+</tr>
+</tbody></table>
+<p>The <code>[button]</code> object</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>string</td>
+<td>The type of the element, could be: <em>newline</em> (adds a new line of buttons) or <em>keyboardButton</em></td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>Label of the button</td>
+</tr>
+</tbody></table>
+</script>
+
+

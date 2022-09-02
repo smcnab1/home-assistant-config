@@ -1,0 +1,11 @@
+id: '1660655688362'
+alias: 'Scene: Hall Off'
+description: ''
+trigger: []
+condition: []
+action:
+- service: light.turn_off
+  data: {}
+  target:
+    entity_id: light.all_hall_lights
+mode: single

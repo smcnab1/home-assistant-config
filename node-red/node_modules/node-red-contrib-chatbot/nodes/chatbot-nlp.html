@@ -1,0 +1,79 @@
+<script type="text/javascript">
+  $.RedBot.registerType('chatbot-nlpjs', {
+    category: $.RedBot.config.name,
+    color: '#FFCC66',
+    defaults: {
+      name: {
+        value: ''
+      },
+      debug: {
+        value: false
+      },
+      scoreThreshold: {
+        value: 50
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'NLP.js Process',
+    icon: 'chatbot-listen-lexicon.png',
+    label: function() {
+      return this.name || 'NLP.js Process' + (this.name != null && this.name !== '' ? ' (' + this.name + ')' : ' (default)');
+    }
+
+
+  });
+</script>
+
+<script type="text/x-red" data-template-name="chatbot-nlpjs">
+<div class="form-row">
+  <label for="node-input-name"><i class="icon-tag"></i> Model Name</label>
+  <input type="text" id="node-input-name" placeholder="Model Name">
+</div>
+<div class="form-row">
+  <label for="node-input-c">Score threshold</label>
+  <input type="text" id="node-input-scoreThreshold" placeholder="Score threshold" style="width:150px;text-align:right"> <b>%</b>
+  <span class="redbot-form-hint">
+    Only match intents with a score above the threshold. Lower the threshold if the node doesn't match the desidered
+    utterances, raise it if the conflicts with other models or nodes.<br/>
+    Enable the debug to learn more about matched intents and scores.
+  </span>
+</div>
+<div class="form-row">
+  <label for="node-input-debug">Debug</label>
+  <input type="checkbox" value="true" id="node-input-debug">
+  <span class="redbot-form-hint">
+    Show debug information
+  </span>
+</div>
+</script>
+<script type="text/x-red" data-help-name="chatbot-nlpjs"><p>When the model is trained and loaded into the flow, <code>NLP.js Process</code> can be used to analyse the sentences from the chatbot users.</p>
+<p><img src="https://raw.githubusercontent.com/guidone/node-red-contrib-chatbot/master/docs/images/nlp-process.png" alt="Train model"></p>
+<p>If, for example, the user writes <em>“Turn on lights in the kitchen”</em>, the output of the <a href="https://www.notion.so/bbc3deb2d39a4b338fc6515eee337cd4">NLPjs Process</a>  will be</p>
+<pre><code class="language-javascript">{ 
+    payload: {   
+        type: &#39;intent,   
+        intent: &#39;switch.on&#39;,   
+        score: 0.7,   
+        isFallback: false,   
+        language: &#39;en&#39;,   
+        variables: {     
+            room: &#39;kitchen&#39;   
+        } 
+    }
+}
+</code></pre>
+<p>The output of the <code>NLP.js Process node</code> can be chained directly to a <a href="https://www.notion.so/24a646bff58b4edfb249f1d27384230f">Context node</a>  to store the extracted variables in the chat context.</p>
+<p>Enable the <em>debug</em> option to have an insight of what the NLP model is doing trying to classify the user’s intent, this what is visible in the system console</p>
+<pre><code class="language-plain">[NLP] Processing model lights
+  Input: &quot;Turn on lights in the kitchen&quot; (en)
+  Score threshold: 90 %
+  Language guessed: false
+  Intent: switch.on
+  Domain: default
+  Score: 95.0 %
+  Sentiment: positive score 50.0 %
+</code></pre>
+<p>Which means that the sentence <em>“Turn on lights in the kitchen”</em> was correctly classified in the intent <em>switch.on</em> using the language <em>en</em> with a probability of <em>95%</em>. Use the <em>threshold</em> option in the Process node to adjust the sensitivity of <em>NLP.js</em>, if it’s too low it can match sentences not relevant, is it’s too high it could miss sentences that differ a little from the ones entered in the <a href="https://www.notion.so/c91af0a6fde74dc5b575aa7230565ba8">NLPjs Intent node</a> .</p>
+<p>What to do if it doesn’t match the user sentence? If the <em>NLP.js</em> is not detecting the right intent for some user input (in the example above, suppose the user entered a slightly different utterance <em>“Turn on the lights in my kitchen”</em>): 1. first check that the context language is the same of the trained model language (trying to classify the above sentence in the <em>“it”</em> language will return nothing) 2. update the list of utterances in the <a href="https://www.notion.so/c91af0a6fde74dc5b575aa7230565ba8">NLPjs Intent node</a>  , more training means more accurate classification, this is the recommended approach 3. or, check the system console and check the score if the classification, if the detected intent is right but the score is too low, lower the <em>threshold</em> value in the <code>NLP Process node</code> configuration</p>
+</script>

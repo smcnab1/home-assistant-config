@@ -1,0 +1,555 @@
+<script type="text/javascript">
+
+  var buildRules = function() {
+    var node = this;
+
+    function findMessageType(messageType) {
+      var messageDescription = null;
+      for (var idx = 0; idx < node.messageTypes.length; idx++) {
+        if (node.messageTypes[idx].value === messageType) {
+          messageDescription = node.messageTypes[idx];
+        }
+      }
+      return messageDescription;
+    }
+    function findEventType(eventType) {
+      var eventDescription = null;
+      for (var idx = 0; idx < node.eventTypes.length; idx++) {
+        if (node.eventTypes[idx].value === eventType) {
+          eventDescription = node.eventTypes[idx];
+        }
+      }
+      return eventDescription;
+    }
+
+    $("#node-input-rule-container").css('min-height','250px').css('min-width','450px').editableList({
+      addButton: 'Add rule',
+      addItem: function (container, i, opt) {
+        // build rule row
+        var rule = opt;
+        var row = $('<div/>').appendTo(container);
+        row
+          .append('<select name="type" style="width:30%">'
+            + '<option value="">Select rule</option>'
+            + '<optgroup label="Intent">'
+            + '  <option value="isIntent">Is intent</option>'
+            + '  <option value="isIntentName">Is intent ...</option>'
+            + '  <option value="isIntentStatus">Is intent status ...</option>'
+            + '  <option value="isIntentConfirmationStatus">Is intent confirmation ...</option>'
+            + '  <option value="isSlotConfirmationStatus">Is slot ... confirmation ...</option>'
+            + '  <option value="isNotSlotConfirmationStatus">Is slot ... confirmation not ...</option>'
+            + '</optgroup>'
+            + '<optgroup label="Message">'
+            + '  <option value="command">Message is command ...</option>'
+            + '  <option value="commandStartsWith">Message is command and starts with ...</option>'
+            + '  <option value="anyCommand">Message is a command</option>'
+            + '  <option value="environment">Environment is ...</option>'
+            + '  <option value="outbound">Message is outbound</option>'
+            + '  <option value="inbound">Message is inbound</option>'
+            + '  <option value="messageEvent">Message is event ...</option>'
+            + '  <option value="messageType">Message is type ...</option>'
+            + '  <option value="notMessageType">Message is not type ...</option>'
+            + '</optgroup>'
+            + '<optgroup label="Topic">'
+            + '  <option value="isTopicEmpty">Topic is not defined</option>'
+            + '  <option value="isNotTopic">Topic is not ...</option>'
+            + '  <option value="isTopic">Topic is ...</option>'
+            + '  <option value="topicIncludes">Topic includes ...</option>'
+            + '</optgroup>'
+            + '<optgroup label="Chat context">'
+            + '  <option value="hasNotVariable">Variable ... is not defined</option>'
+            + '  <option value="hasVariable">Variable ... is defined</option>'
+            + '  <option value="isVariable">Variable ... is ...</option>'
+            + '  <option value="isLanguage">Language is ...</option>'
+            + '</optgroup>'
+            + '<optgroup label="Transport">'
+            + '  <option value="transport">Transport is ...</option>'
+            + '  <option value="isTransportAvailable">Transport ... is available</option>'
+            + '  <option value="isTransportPreferred">Transport ... is preferred</option>'
+            + '</optgroup>'
+            + '<option value="dialogState">Dialog state is ...</option>'
+            + '<option value="notPending">No pending requests</option>'
+            + '<option value="pending">Pending requests</option>'
+            + '<option value="catchAll">If nothing of above applies</option>'
+            + '</select>')
+          .change(function() {
+            var type = $('select[name=type]', container).val();
+            container.find('input').hide();
+            container.find('span').hide();
+            container.find('select[name!=type]').hide();
+            container.find('.message-types,.event-types').hide();
+            container.find('.' + type).show();
+          });
+        // get options for message type
+        var messageTypes = '';
+        var eventTypes = '';
+        var idx;
+        for(idx = 0; idx < node.messageTypes.length; idx++) {
+          messageTypes += '<option value="' + node.messageTypes[idx].value
+            + '" class="' + $.RedBot.platformClass('select', node.messageTypes[idx].platforms) + '">'
+            + node.messageTypes[idx].label + '</option>';
+        }
+        for(idx = 0; idx < node.eventTypes.length; idx++) {
+          eventTypes += '<option value="' + node.eventTypes[idx].value
+            + '" class="' + $.RedBot.platformClass('select', node.eventTypes[idx].platforms) + '">'
+            + node.eventTypes[idx].value + '</option>';
+        }
+        // build transport options
+        var transportOptions = '';
+        for(idx = 0; idx < node.platforms.length; idx++) {
+          transportOptions += '<option value="' + node.platforms[idx].id + '">'
+            + (node.platforms[idx].name != null ? node.platforms[idx].name : node.platforms[idx].id)
+            + '</option>';
+        }
+
+        row
+          .append('<input class="hasNotVariable hasVariable" style="display:none;width:50%;margin-left:10px;" type="text" name="variable" placeholder="Context variable"/>')
+          .append('<input class="isIntentName" style="display:none;width:50%;margin-left:10px;" type="text" name="intent" placeholder="Intent name"/>')
+          .append('<input class="isVariable" style="display:none;width:25%;margin-left:10px;" type="text" name="variableName" placeholder="Name"/>')
+          .append('<span class="isVariable" style="display:none;">&nbsp;is&nbsp;</span>')
+          .append('<input class="isVariable" style="display:none;width:25%;margin-left:0px;" type="text" name="variableValue" placeholder="Value"/>')
+          .append('<input class="command commandStartsWith" style="display:none;width:50%;margin-left:10px;" type="text" name="command" placeholder="/command"/>')
+          .append('<input class="isNotTopic isTopic topicIncludes" style="display:none;width:40%;margin-left:10px;" type="text" name="topic" placeholder="Topic"/>')
+          .append('<select class="environment" name="environment" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select environment</option>'
+            + '<option value="production">production</option>'
+            + '<option value="development">development</option>'
+            + '</select>')
+          .append('<select class="dialogState" name="state" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select state</option>'
+            + '<option value="started">Started</option>'
+            + '<option value="in_progress">In progress</option>'
+            + '<option value="completed">Completed</option>'
+            + '</select>')
+          .append('<select class="messageEvent" name="event" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select type</option>'
+            + eventTypes
+            + '</select>'
+            + '<div class="messageEvent event-types" style="display:inline-block;margin-left:5px;" />')
+          .append('<input class="isSlotConfirmationStatus" style="display:none;width:25%;margin-left:10px;" type="text" name="slot" placeholder="Slot"/>')
+          .append('<select class="isSlotConfirmationStatus isIntentConfirmationStatus isNotSlotConfirmationStatus" name="confirmationStatus" style="display:none;width:25%;margin-left:10px;">'
+            + '<option value="">Select status</option>'
+            + '<option value="none">None</option>'
+            + '<option value="confirmed">Confirmed</option>'
+            + '<option value="denied">Denied</option>'
+            + '</select>')
+          .append('<select class="transport isTransportAvailable isTransportPreferred" name="transport" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select transport</option>'
+            + transportOptions
+            + '</select>')
+          .append('<select class="isLanguage" name="language" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select language</option>'
+            + '<option value="ar">Arabic</option>'
+            + '<option value="bn">Bengali</option>'
+            + '<option value="ca">Catalan</option>'
+            + '<option value="cs">Czech</option>'
+            + '<option value="da">Danish</option>'
+            + '<option value="de">German</option>'
+            + '<option value="el">Greek</option>'
+            + '<option value="en">English</option>'
+            + '<option value="es">Spanish</option>'
+            + '<option value="eu">Basque</option>'
+            + '<option value="fa">Persian</option>'
+            + '<option value="fi">Finnish</option>'
+            + '<option value="fr">French</option>'
+            + '<option value="ga">Irish</option>'
+            + '<option value="gl">Galician</option>'
+            + '<option value="hi">Hindi</option>'
+            + '<option value="hu">Hungarian</option>'
+            + '<option value="hy">Armenian</option>'
+            + '<option value="it">Italian</option>'
+            + '<option value="ja">Japanese</option>'
+            + '<option value="nl">Dutch</option>'
+            + '<option value="no">Norwegian</option>'
+            + '<option value="pt">Portuguese</option>'
+            + '<option value="ro">Romanian</option>'
+            + '<option value="ru">Russian</option>'
+            + '<option value="sl">Slovenian</option>'
+            + '<option value="sv">Swedish</option>'
+            + '<option value="ta">Tamil</option>'
+            + '<option value="th">Thai</option>'
+            + '<option value="tl">Tagalog</option>'
+            + '<option value="tr">Turkish</option>'
+            + '<option value="uk">Ukrainian</option>'
+            + '<option value="zh">Chinese</option>'
+            + '</select>')
+          .append('<span class="isTransportAvailable" style="display:none;"> is available</span>')
+          .append('<span class="isTransportPreferred" style="display:none;"> is preferred</span>')
+          .append('<select class="messageType notMessageType" name="messageType" style="display:none;width:40%;margin-left:10px;">'
+            + '<option value="">Select type</option>'
+            + messageTypes
+            + '</select>'
+            + '<div class="messageType notMessageType message-types" style="display:inline-block;margin-left:5px;" />');
+        var finalspan = $('<span/>',{style:"float: right;margin-top: 6px;"}).appendTo(row);
+        finalspan.append('&nbsp;&#8594; <span class="node-input-rule-index">' + (i + 1) + '</span>');
+
+        $('select[name="event"]', container)
+          .change(function() {
+            var eventType = $(this).val();
+            var eventDescription = findEventType(eventType);
+            if (eventDescription != null) {
+              $.RedBot.supportedBy($('.event-types', container), eventDescription.platforms);
+            }
+          });
+        $('select[name="messageType"]', container)
+          .change(function() {
+            var messageType = $(this).val();
+            var messageDescription = findMessageType(messageType);
+            if (messageDescription != null) {
+              $.RedBot.supportedBy($('.message-types', container), messageDescription.platforms);
+            }
+          });
+
+        // finally set data
+        if (rule.type != null) {
+          $('select[name=type]', container).val(rule.type);
+          container.find('input').hide();
+          container.find('select[name!=type]').hide();
+          container.find('.' + rule.type).show();
+        }
+        if (rule.variable != null && (rule.type === 'hasNotVariable' || rule.type === 'hasVariable')) {
+          $('input[name=variable]', container).val(rule.variable);
+        }
+        if (rule.variable != null && rule.type === 'isVariable') {
+          $('input[name=variableName]', container).val(rule.variable);
+        }
+        if (rule.transport != null) {
+          $('select[name=transport]', container).val(rule.transport);
+        }
+        if (rule.topic != null) {
+          $('input[name=topic]', container).val(rule.topic);
+        }
+        if (rule.command != null) {
+          $('input[name=command]', container).val(rule.command);
+        }
+        if (rule.environment != null) {
+          $('select[name=environment]', container).val(rule.environment);
+        }
+        if (rule.messageType != null) {
+          var messageDescription = findMessageType(rule.messageType);
+          if (messageDescription != null) {
+            $.RedBot.supportedBy($('.message-types', container), messageDescription.platforms);
+          }
+          $('select[name=messageType]', container).val(rule.messageType);
+        }
+        if (rule.value != null) {
+          $('input[name=variableValue]', container).val(rule.value);
+        }
+        if (rule.event != null) {
+          var eventDescription = findEventType(rule.event);
+          if (eventDescription != null) {
+            $.RedBot.supportedBy($('.event-types', container), eventDescription.platforms);
+          }
+          $('select[name=event]', container).val(rule.event);
+        }
+        if (rule.state != null) {
+          $('select[name=state]', container).val(rule.state);
+        }
+        if (rule.confirmationStatus != null) {
+          $('select[name=confirmationStatus]', container).val(rule.confirmationStatus);
+        }
+        if (rule.intent != null) {
+          $('input[name=intent]', container).val(rule.intent);
+        }
+        if (rule.slot != null) {
+          $('input[name=slot]', container).val(rule.slot);
+        }
+        if (rule.language != null) {
+          $('select[name=language]', container).val(rule.language);
+        }
+
+      },
+      removeItem: function(opt) {
+        var rules = $('#node-input-rule-container').editableList('items');
+        rules.each(function(i) {
+          $(this).find('.node-input-rule-index').html(i + 1);
+        });
+      },
+      sortItems: function() {
+        var rules = $('#node-input-rule-container').editableList('items');
+        rules.each(function(i) {
+          $(this).find('.node-input-rule-index').html(i + 1);
+        });
+      },
+      sortable: true,
+      removable: true
+    });
+
+    for (var i=0; i < node.rules.length; i++) {
+      var rule = this.rules[i];
+      $('#node-input-rule-container').editableList('addItem', rule);
+    }
+  };
+
+  $.RedBot.registerType('chatbot-rules', {
+    category: $.RedBot.config.name + ' Flow',
+    color: '#FFCC66',
+    defaults: {
+      name: {
+        value: ''
+      },
+      rules: {
+        value: [],
+        validate: function(rules) {
+          return $.RedBot.validate.rules(rules);
+        }
+      },
+      outputs: {
+        value: 1
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'Rules',
+    icon: 'chatbot-rules.png',
+    label: function() {
+      return this.name || 'Rules' ;
+    },
+    oneditsave: function() {
+      var rules = $('#node-input-rule-container').editableList('items');
+      var node = this;
+      node.rules = [];
+      rules.each(function(i) {
+        var rule = $(this);
+        var type = rule.find('select[name=type]').val();
+        if (type != null && type !== '') {
+          var obj = {
+            type: type
+          };
+          if (type === 'isLanguage') {
+            obj.language = rule.find('select[name=language]').val();
+          }
+          if (type === 'hasNotVariable' || type === 'hasVariable') {
+            obj.variable = rule.find('input[name=variable]').val();
+          }
+          if (type === 'isVariable') {
+            obj.variable = rule.find('input[name=variableName]').val();
+            obj.value = rule.find('input[name=variableValue]').val();
+          }
+          if (type === 'isNotTopic' || type === 'isTopic' || type === 'topicIncludes') {
+            obj.topic = rule.find('input[name=topic]').val();
+          }
+          if (type === 'command' || type === 'commandStartsWith') {
+            obj.command = rule.find('input[name=command]').val();
+          }
+          if (type === 'environment') {
+            obj.environment = rule.find('select[name=environment]').val();
+          }
+          if (type === 'messageType' || type === 'notMessageType') {
+            obj.messageType = rule.find('select[name=messageType]').val();
+          }
+          if (type === 'transport' || type === 'isTransportAvailable' || type === 'isTransportPreferred') {
+            obj.transport = rule.find('select[name=transport]').val();
+          }
+          if (type === 'messageEvent') {
+            obj.event = rule.find('select[name=event]').val();
+          }
+          if (type === 'dialogState') {
+            obj.state = rule.find('select[name=state]').val();
+          }
+          if (type === 'isIntentName') {
+            obj.intent = rule.find('input[name=intent]').val();
+          }
+          if (type === 'isIntentConfirmationStatus') {
+            obj.confirmationStatus = rule.find('select[name=confirmationStatus]').val();
+          }
+          if (type === 'isSlotConfirmationStatus') {
+            obj.confirmationStatus = rule.find('select[name=confirmationStatus]').val();
+            obj.slot = rule.find('input[name=slot]').val();
+          }
+          node.rules.push(obj);
+        }
+      });
+      this.outputs = node.rules.length;
+    },
+
+    oneditprepare: function() {
+      var node = this;
+      var nodeRedUrl = $.RedBot.getNodeRedUrl();
+
+      $.get(nodeRedUrl + 'redbot/globals')
+        .done(function(response) {
+          node.messageTypes = response.messageTypes;
+          node.eventTypes = response.eventTypes;
+          $.RedBot.fetchPlatforms()
+            .done(function(platforms) {
+              node.platforms = platforms;
+              buildRules.call(node);
+            });
+        });
+    },
+    oneditresize: function() {
+      var dialogForm = $('#dialog-form');
+      var rowName = $('.form-row-name', dialogForm);
+      var rowLabel = $('.form-row-label', dialogForm);
+      var rowHint = $('.redbot-form-hint', dialogForm);
+      var height = dialogForm.height() - rowName.height() - rowLabel.height() - rowHint.height() - 30;
+      $('#node-input-buttons-container').editableList('height', height);
+    },
+    outputLabels: function(index) {
+      if (this.rules == null) {
+        return;
+      }
+      var rule = this.rules[index];
+      if (rule.type === 'catchAll') {
+        return 'If no rule applies';
+      } if (rule.type === 'isIntent') {
+        return 'Message is intent';
+      } else if (rule.type === 'isIntentName') {
+        return 'Intent is "' + ($.RedBot.validate.notEmpty(rule.intent) ? rule.intent : '...') + '"';
+      } else if (rule.type === 'dialogState') {
+        var stateLabel = null;
+        switch(rule.state) {
+          case 'started': stateLabel = 'started'; break;
+          case 'in_progress': stateLabel = 'in progress'; break;
+          case 'completed': stateLabel = 'completed'; break;
+          default: stateLabel = '...';
+        }
+        return 'Dialog state is "' + stateLabel + '"';
+      } else if (rule.type === 'messageType') {
+        return 'Message type is "' + ($.RedBot.validate.notEmpty(rule.messageType) ? rule.messageType : '...') + '"';
+      } else if (rule.type === 'messageEvent') {
+        return 'Message type is event "' + ($.RedBot.validate.notEmpty(rule.event) ? rule.event : '...') + '"';
+      } else if (rule.type === 'notMessageType') {
+        return 'Message type is not "' + ($.RedBot.validate.notEmpty(rule.messageType) ? rule.messageType : '...') + '"';
+      } else if (rule.type === 'catchAll') {
+        return 'If no rule applies';
+      } else if (rule.type === 'environment') {
+        return 'Environment is "' + ($.RedBot.validate.notEmpty(rule.environment) ? rule.environment : '...') + '"';
+      } else if (rule.type === 'command') {
+        return 'Message is command "' + ($.RedBot.validate.notEmpty(rule.command) ? rule.command : '...') + '"';
+      } else if (rule.type === 'anyCommand') {
+        return 'Message is a command';
+      } else if (rule.type === 'outbound') {
+        return 'Message is outbound';
+      } else if (rule.type === 'isTopicEmpty') {
+        return 'Topic is not defined';
+      } else if (rule.type === 'pending') {
+        return 'Pending requests';
+      } else if (rule.type === 'notPending') {
+        return 'No pending requests';
+      } else if (rule.type === 'transport') {
+        return 'Trasport is "' + ($.RedBot.validate.notEmpty(rule.transport) ? rule.transport : '...') + '"';
+      } else if (rule.type === 'isTransportAvailable') {
+        return 'Trasport "' + ($.RedBot.validate.notEmpty(rule.transport) ? rule.transport : '...') + '" is available';
+      } else if (rule.type === 'isTransportPreferred') {
+        return 'Trasport "' + ($.RedBot.validate.notEmpty(rule.transport) ? rule.transport : '...') + '" is preferred';
+      } else if (rule.type === 'topicIncludes') {
+        return 'Topic includes "' + ($.RedBot.validate.notEmpty(rule.topic) ? rule.topic : '...') + '"';
+      } else if (rule.type === 'isNotTopic') {
+        return 'Topic is not "' + ($.RedBot.validate.notEmpty(rule.topic) ? rule.topic : '...') + '"';
+      } else if (rule.type === 'isTopic') {
+        return 'Topic is "' + ($.RedBot.validate.notEmpty(rule.topic) ? rule.topic : '...') + '"';
+      } else if (rule.type === 'hasNotVariable') {
+        return 'Variable "' + ($.RedBot.validate.notEmpty(rule.variable) ? rule.variable : '...') + '" is not defined';
+      } else if (rule.type === 'isVariable') {
+        return 'Variable "' + ($.RedBot.validate.notEmpty(rule.variable) ? rule.variable : '...') + '" is equal to "'
+          + ($.RedBot.validate.notEmpty(rule.value) ? rule.value : '...') + '"';
+      } else if (rule.type === 'isIntentConfirmationStatus') {
+        return 'Intent confirmation status is "' + ($.RedBot.validate.notEmpty(rule.confirmationStatus) ? rule.confirmationStatus : '...') + '"';
+      } else if (rule.type === 'isSlotConfirmationStatus') {
+        return 'Slot "' + ($.RedBot.validate.notEmpty(rule.slot) ? rule.slot : '...') + '" confirmation status is "'
+          + ($.RedBot.validate.notEmpty(rule.confirmationStatus) ? rule.confirmationStatus : '...') + '"';
+      }
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="chatbot-rules">
+  <div class="form-row form-row-name">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row form-row-label">
+    <label for="node-input-name" style="width:100%;">Forward message based on rules:</label>
+  </div>
+  <div class="form-row node-input-rule-container-row">
+      <ol id="node-input-rule-container"></ol>
+  </div>
+  <div class="redbot-form-hint">
+    The first matched rule skips the rest of the matching. To get a else-like behaviour, use <em>If nothing of above applies</em> at the end of the list to capture all messages that don't match any rule.
+  </p>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="chatbot-rules"><p><code>Rules node</code> is a multi-output node that allows to control the flow of the chatbot based on simple rules (for example <em>“The topic is myTopic”</em>, <em>“The context variable myVar is not defined”</em>). This node replace the <a href="https://www.notion.so/55036bad043447fd97b58f2a9e7365dd">Topic node</a>  that will deprecated soon.</p>
+<p>The first rule that matches trigger the redirect of the incoming message to the related output and stops the chain of rules.</p>
+<p>This node is useful to create loops in the flow, for example to keep asking some questions to the user until a list of needed information (context variables) are filled.</p>
+<p>Rules can be created programmatically by an upstream <code>Function node</code> passing array of rules in the message payload:</p>
+<pre><code class="language-javascript">msg.payload = [
+  {
+    type: &#39;hasNotVariable&#39;,
+    variable: &#39;my_variable&#39;
+  },
+  {
+    type: &#39;catchAll&#39;
+  }
+];
+return msg;
+</code></pre>
+<p>Available parameters for the <code>msg.payload</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rules</td>
+<td>array of [rule]</td>
+<td>The list of rules</td>
+</tr>
+</tbody></table>
+<p>The <code>[rule]</code> object</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>string</td>
+<td>Type of rule: <em>inbound</em>, <em>outbound</em>, <em>isTopicEmpty</em>, <em>catchAll</em>, <em>isNotTopic</em>, <em>isTopic</em>, <em>hasNotVariable</em>, <em>hasVariable</em>, <em>isVariable</em>, <em>command</em>, <em>messageType</em>, <em>notMessageType</em>, <em>transport</em>, <em>anyCommand</em>, <em>environment</em></td>
+</tr>
+<tr>
+<td>environment</td>
+<td>string</td>
+<td>Match the environment type, can be <em>production</em> or <em>development</em>. Required for type <em>environment</em></td>
+</tr>
+<tr>
+<td>transport</td>
+<td>string</td>
+<td>Match the transport type, can be <em>facebook</em>, <em>telegram</em>, <em>slack</em> or <em>smooch</em>. Required for type <em>transport</em></td>
+</tr>
+<tr>
+<td>topic</td>
+<td>string</td>
+<td>Match the rule if the flow topic matches/doesn’t match the specified topic. Required for <em>isNotTopic</em> and <em>isTopic</em></td>
+</tr>
+<tr>
+<td>variable</td>
+<td>string</td>
+<td>Match the rule if the context variable is defined/not defined. Required for <em>hasVariable</em>, <em>hasNotVariable</em> or <em>isVariable</em></td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>Match the rule the value of a variable. Required for <em>isVariable</em></td>
+</tr>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>Match the input command. Required for <em>command</em></td>
+</tr>
+<tr>
+<td>messageType</td>
+<td>string</td>
+<td>Match the message type, if any. Required for <em>messageType</em>, <em>notMessageType</em>. Can be: <em>message</em>, <em>command</em>, <em>audio</em>, <em>buttons</em>, <em>contact</em>, <em>document</em>, <em>dialog</em>, <em>inline-buttons</em>, <em>inline-query</em>, <em>location</em>, <em>photo</em>, <em>request</em>, <em>response</em>, <em>video</em></td>
+</tr>
+</tbody></table>
+</script>

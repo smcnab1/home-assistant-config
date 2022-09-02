@@ -1,0 +1,35 @@
+id: '1660668144019'
+name: 'Scene: Bedroom Movie'
+entities:
+  light.bedroom_leds:
+    supported_color_modes:
+    - hs
+    color_mode: hs
+    brightness: 76
+    hs_color:
+    - 240
+    - 100
+    rgb_color:
+    - 0
+    - 0
+    - 255
+    xy_color:
+    - 0.136
+    - 0.04
+    icon: mdi:led-strip-variant
+    friendly_name: 'Bedroom: LEDs'
+    supported_features: 0
+    state: 'on'
+  light.fairy_lights:
+    supported_color_modes:
+    - onoff
+    friendly_name: Fairy Lights
+    supported_features: 0
+    color_mode: onoff
+    state: 'on'
+icon: mdi:movie
+metadata:
+  light.bedroom_leds:
+    entity_only: true
+  light.fairy_lights:
+    entity_only: true

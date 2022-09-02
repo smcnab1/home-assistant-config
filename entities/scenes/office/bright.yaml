@@ -1,0 +1,25 @@
+id: '1660666753681'
+name: 'Scene: Office Bright'
+entities:
+  light.office_desk_led:
+    supported_color_modes:
+    - hs
+    friendly_name: 'Office: Desk LED'
+    supported_features: 0
+    color_mode: hs
+    brightness: 181
+    hs_color:
+    - 210
+    - 14.3
+    rgb_color:
+    - 218
+    - 236
+    - 255
+    xy_color:
+    - 0.29
+    - 0.309
+    state: 'on'
+icon: mdi:brightness-7
+metadata:
+  light.office_desk_led:
+    entity_only: true

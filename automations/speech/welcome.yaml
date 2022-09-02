@@ -1,0 +1,46 @@
+id: '1660926650481'
+alias: Welcome Home
+description: ''
+trigger:
+- platform: device
+  device_id: 78ed96bd29cdfd72c9f0eb7e4d7d473f
+  domain: device_tracker
+  entity_id: device_tracker.leah_s_iphone_new
+  type: enters
+  zone: zone.home
+- platform: device
+  device_id: 9b51146f740894a588a23be9ab49ca78
+  domain: device_tracker
+  entity_id: device_tracker.sam_s_phone
+  type: enters
+  zone: zone.home
+condition:
+- condition: state
+  entity_id: binary_sensor.hall_door_sensor
+  state: 'on'
+action:
+- service: media_player.volume_set
+  data:
+    volume_level: 1
+  target:
+    entity_id: media_player.living_room_speaker
+- service: tts.cloud_say
+  data_template:
+    entity_id: media_player.living_room_speaker
+    message: 'Welcome Home. It is currently {{states.sensor.time.state}}. It is
+      currently {{states.sensor.open_weather_feels_like_temperature.state|round}}
+      degrees outside and {{states.sensor.living_room_temperature_temperature.state|round}}
+      degrees inside.
+
+      '
+- delay:
+    hours: 0
+    minutes: 0
+    seconds: 25
+    milliseconds: 0
+- service: media_player.volume_set
+  data:
+    volume_level: 0.4
+  target:
+    entity_id: media_player.living_room_speaker
+mode: single
