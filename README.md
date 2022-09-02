@@ -464,7 +464,7 @@ This is a list of the devices I currently use as part of my Home Assistant setup
 <a name="automations"></a>
 ### Automations
 
-This is a list of all of my automations within my setup. These will link to the specific yaml file for them.
+This is a list of all of my automations within my setup. These will link to a breakdown of the automations below which will further link to the yaml file.
 <br />
 
 <b><i>Currently a WIP</i></b>
