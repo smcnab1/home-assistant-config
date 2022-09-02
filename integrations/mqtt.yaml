@@ -1,3 +1,0 @@
-mqtt: # MQTT Details
-  discovery: true
-  discovery_prefix: homeassistant

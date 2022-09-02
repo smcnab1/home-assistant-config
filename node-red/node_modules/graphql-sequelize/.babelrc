@@ -1,7 +1,0 @@
-{
-  "plugins": ["transform-object-rest-spread"],
-  "presets": [
-    "async-to-bluebird",
-    "es2015-node4"
-  ]
-}

@@ -1,2 +1,0 @@
-script: !include /config/scripts.yaml
-script split: !include_dir_named /config/entities/scripts
