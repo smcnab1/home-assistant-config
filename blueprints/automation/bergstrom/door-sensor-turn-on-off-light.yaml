@@ -1,0 +1,47 @@
+blueprint:
+  name: Door Sensor-activated Light
+  description: Turn on a light when door is opened.
+  domain: automation
+  input:
+    doorsensor_entity:
+      name: Door Sensor
+      selector:
+        entity:
+          domain: binary_sensor
+          multiple: false
+    light_target:
+      name: Light
+      selector:
+        target:
+          entity:
+            domain: light
+    door_closed_wait:
+      name: Wait time
+      description: Time to leave the light on after door is closed
+      default: 120
+      selector:
+        number:
+          min: 0.0
+          max: 3600.0
+          unit_of_measurement: seconds
+          mode: slider
+          step: 1.0
+  source_url: https://community.home-assistant.io/t/door-sensor-turn-on-off-light/255657
+mode: single
+max_exceeded: silent
+trigger:
+  platform: state
+  entity_id: !input doorsensor_entity
+  from: 'off'
+  to: 'on'
+action:
+- service: light.turn_on
+  target: !input light_target
+- wait_for_trigger:
+    platform: state
+    entity_id: !input doorsensor_entity
+    from: 'on'
+    to: 'off'
+- delay: !input door_closed_wait
+- service: light.turn_off
+  target: !input light_target

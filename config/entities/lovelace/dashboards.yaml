@@ -1,6 +1,0 @@
-lovelace-minimalist-2:
-  mode: yaml
-  title: Minimalist Phone
-  icon: mdi:phone
-  show_in_sidebar: true
-  filename: /config/ui_lovelace_minimalist/dashboard/adaptive-dash/adaptive-ui-2.yaml

@@ -1,0 +1,1 @@
+proximity: !include_dir_named ../entities/proximity

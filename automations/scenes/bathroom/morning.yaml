@@ -1,0 +1,12 @@
+id: '1660666455042'
+alias: 'Scene: Bathroom Morning'
+description: ''
+trigger: []
+condition: []
+action:
+- service: scene.turn_on
+  data:
+    transition: 30
+  target:
+    entity_id: scene.scene_bathroom_morning
+mode: single

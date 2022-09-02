@@ -1,0 +1,12 @@
+id: '1660654489396'
+alias: 'Scene: Kitchen Cooking'
+description: ''
+trigger: []
+condition: []
+action:
+- service: scene.turn_on
+  data:
+    transition: 20
+  target:
+    entity_id: scene.kitchen_cooking
+mode: single

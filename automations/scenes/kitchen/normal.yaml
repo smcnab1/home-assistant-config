@@ -1,0 +1,17 @@
+id: '1660654526607'
+alias: 'Scene: Kitchen Normal'
+description: ''
+trigger: []
+condition: []
+action:
+- service: scene.turn_on
+  data:
+    transition: 20
+  target:
+    entity_id: scene.kitchen_normal
+- service: light.turn_off
+  data:
+    transition: 20
+  target:
+    entity_id: light.kitchen_lights
+mode: single
