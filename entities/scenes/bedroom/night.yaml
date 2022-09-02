@@ -1,0 +1,63 @@
+id: '1660668107643'
+name: 'Scene: Bedroom Night'
+entities:
+  light.bedroom_leds:
+    supported_color_modes:
+    - hs
+    color_mode: hs
+    brightness: 128
+    hs_color:
+    - 30
+    - 100
+    rgb_color:
+    - 255
+    - 127
+    - 0
+    xy_color:
+    - 0.612
+    - 0.374
+    icon: mdi:led-strip-variant
+    friendly_name: 'Bedroom: LEDs'
+    supported_features: 0
+    state: 'on'
+  light.bedside_lamps:
+    min_mireds: 153
+    max_mireds: 500
+    supported_color_modes:
+    - brightness
+    - color_temp
+    entity_id:
+    - light.smart_bulb
+    - light.bed_l
+    icon: mdi:lightbulb-group
+    friendly_name: 'Bedroom: Bedside Lamps'
+    supported_features: 0
+    color_mode: color_temp
+    brightness: 255
+    color_temp: 500
+    hs_color:
+    - 30.601
+    - 94.547
+    rgb_color:
+    - 255
+    - 136
+    - 13
+    xy_color:
+    - 0.599
+    - 0.382
+    state: 'on'
+  light.fairy_lights:
+    supported_color_modes:
+    - onoff
+    color_mode: onoff
+    friendly_name: Fairy Lights
+    supported_features: 0
+    state: 'on'
+icon: mdi:weather-night
+metadata:
+  light.bedroom_leds:
+    entity_only: true
+  light.bedside_lamps:
+    entity_only: true
+  light.fairy_lights:
+    entity_only: true

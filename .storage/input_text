@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_text",
+  "data": {
+    "items": [
+      {
+        "name": "TTS Message Living Room",
+        "max": 255,
+        "min": 0,
+        "mode": "text",
+        "id": "tts_message"
+      },
+      {
+        "name": "TTS Message Bedroom",
+        "max": 255,
+        "min": 0,
+        "mode": "text",
+        "id": "tts_message_bedroom"
+      }
+    ]
+  }
+}

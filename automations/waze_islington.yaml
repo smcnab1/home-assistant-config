@@ -1,0 +1,15 @@
+id: '1659642532881'
+alias: Waze Islington
+description: ''
+trigger: []
+condition: []
+action:
+- service: notify.mobile_app_sam_s_phone
+  data:
+    data:
+      actions:
+      - action: URI
+        title: Open Waze
+        uri: https://waze.com/ul/?ll=51.54457092285156%2C-0.12413939833641052&navigate=yes&zoom=17
+    message: Travelling to Islington Station?
+mode: single

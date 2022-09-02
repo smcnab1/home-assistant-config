@@ -1,0 +1,1416 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.1661113164721": [
+      {
+        "extended_dict": {
+          "last_step": "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/sequence/0",
+          "run_id": "3076101ca9bd6c79b91b6959ebf9730a",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2022-08-27T21:09:20.749896+00:00",
+            "finish": "2022-08-27T21:09:26.783998+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1661113164721",
+          "trigger": "Home Assistant starting",
+          "trace": {
+            "trigger/8": [
+              {
+                "path": "trigger/8",
+                "timestamp": "2022-08-27T21:09:20.761461+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.update_notifications",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": "2022-08-27T20:06:10.281068+00:00",
+                      "mode": "parallel",
+                      "current": 0,
+                      "max": 100,
+                      "id": "1661113164721",
+                      "friendly_name": "Update notifications"
+                    },
+                    "last_changed": "2022-08-27T21:08:48.215776+00:00",
+                    "last_updated": "2022-08-27T21:08:48.215776+00:00",
+                    "context": {
+                      "id": "01GBGJ5GYQXA1E334YW3GTQ02E",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "ha_start",
+                    "idx": "8",
+                    "platform": "homeassistant",
+                    "event": "start",
+                    "description": "Home Assistant starting"
+                  },
+                  "_reminder_hours": "3",
+                  "reminder_hours": 3,
+                  "run_config_check": true,
+                  "update_entities": [
+                    "update.frigate_nvr_update",
+                    "update.frigate_server",
+                    "update.deconz_update",
+                    "update.esphome_update",
+                    "update.jupyterlab_update",
+                    "update.mariadb_update",
+                    "update.nginx_proxy_manager_update",
+                    "update.system_home_assistant_operating_system_update",
+                    "update.system_home_assistant_supervisor_update",
+                    "update.system_home_assistant_core_update",
+                    "update.node_red_update",
+                    "update.system_home_assistant_google_drive_backup_update",
+                    "update.system_mqtt_update",
+                    "update.system_studio_code_server_update",
+                    "update.terminal_ssh_update",
+                    "update.system_wireguard_update",
+                    "update.system_samba_share_update"
+                  ],
+                  "mobile_app_device": "9b51146f740894a588a23be9ab49ca78",
+                  "_mobile_app_device_2": "356340e93d30ee5fd991ec3189919a27",
+                  "mobile_app_device_2": "356340e93d30ee5fd991ec3189919a27",
+                  "send_to_ha": true,
+                  "_changelog_urls": "none",
+                  "changelog_urls": {},
+                  "take_backup": true,
+                  "core_update_entity": "update.system_home_assistant_core_update",
+                  "os_update_entity": "update.system_home_assistant_operating_system_update",
+                  "skip_action": {
+                    "action": "skip-update",
+                    "title": "Skip",
+                    "destructive": true,
+                    "authenticationRequired": true
+                  },
+                  "update_action": {
+                    "action": "install-update",
+                    "title": "Update",
+                    "destructive": true,
+                    "authenticationRequired": true
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2022-08-27T21:09:21.081516+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01GBGJ6GQD9DPZX483V36X8D3S",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "choice": 3
+                }
+              }
+            ],
+            "action/0/choose/0": [
+              {
+                "path": "action/0/choose/0",
+                "timestamp": "2022-08-27T21:09:21.097996+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.098416+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/1": [
+              {
+                "path": "action/0/choose/1",
+                "timestamp": "2022-08-27T21:09:21.105419+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/1/conditions/0": [
+              {
+                "path": "action/0/choose/1/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.105549+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/2": [
+              {
+                "path": "action/0/choose/2",
+                "timestamp": "2022-08-27T21:09:21.106161+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/2/conditions/0": [
+              {
+                "path": "action/0/choose/2/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.106263+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/3": [
+              {
+                "path": "action/0/choose/3",
+                "timestamp": "2022-08-27T21:09:21.106725+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/3/conditions/0": [
+              {
+                "path": "action/0/choose/3/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.106814+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/0": [
+              {
+                "path": "action/0/choose/3/sequence/0",
+                "timestamp": "2022-08-27T21:09:21.736630+00:00"
+              }
+            ],
+            "action/0/choose/3/sequence/0/choose/0": [
+              {
+                "path": "action/0/choose/3/sequence/0/choose/0",
+                "timestamp": "2022-08-27T21:09:21.741192+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/0/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/3/sequence/0/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.741339+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "update.system_home_assistant_core_update"
+                  ]
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1": [
+              {
+                "path": "action/0/choose/3/sequence/1",
+                "timestamp": "2022-08-27T21:09:21.742976+00:00",
+                "result": {
+                  "choice": 0
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0",
+                "timestamp": "2022-08-27T21:09:21.743766+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:21.743969+00:00",
+                "result": {
+                  "result": true,
+                  "entities": [
+                    "update.system_home_assistant_operating_system_update"
+                  ]
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/0",
+                "timestamp": "2022-08-27T21:09:22.002696+00:00"
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/1": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/1",
+                "timestamp": "2022-08-27T21:09:22.004228+00:00",
+                "changed_variables": {
+                  "entity_id": "update.system_home_assistant_operating_system_update"
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2",
+                "timestamp": "2022-08-27T21:09:22.005917+00:00",
+                "changed_variables": {
+                  "message": "clear_notification",
+                  "data": {
+                    "tag": "system_home_assistant_operating_system_update"
+                  }
+                },
+                "result": {
+                  "choice": "default"
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/0",
+                "timestamp": "2022-08-27T21:09:22.294233+00:00"
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1",
+                "timestamp": "2022-08-27T21:09:22.295670+00:00",
+                "changed_variables": {
+                  "data": {
+                    "tag": "system_home_assistant_operating_system_update",
+                    "action_data": {
+                      "tag": "system_home_assistant_operating_system_update"
+                    }
+                  }
+                },
+                "result": {
+                  "choice": 0
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0",
+                "timestamp": "2022-08-27T21:09:22.296306+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:22.296434+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0/sequence/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/1/choose/0/sequence/0",
+                "timestamp": "2022-08-27T21:09:22.425169+00:00"
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2",
+                "timestamp": "2022-08-27T21:09:25.529895+00:00",
+                "result": {
+                  "choice": 0
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0",
+                "timestamp": "2022-08-27T21:09:25.530762+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:25.530934+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0/sequence/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/2/default/2/choose/0/sequence/0",
+                "timestamp": "2022-08-27T21:09:25.538671+00:00"
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/3": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/3",
+                "timestamp": "2022-08-27T21:09:26.064583+00:00",
+                "result": {
+                  "choice": 0
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0",
+                "timestamp": "2022-08-27T21:09:26.065110+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/conditions/0",
+                "timestamp": "2022-08-27T21:09:26.065208+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/sequence/0": [
+              {
+                "path": "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/sequence/0",
+                "timestamp": "2022-08-27T21:09:26.076407+00:00",
+                "result": {
+                  "params": {
+                    "domain": "persistent_notification",
+                    "service": "dismiss",
+                    "service_data": {
+                      "notification_id": "system_home_assistant_operating_system_update"
+                    },
+                    "target": {}
+                  },
+                  "running_script": false,
+                  "limit": 10
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "parallel",
+            "max": 100,
+            "trigger_variables": {
+              "_reminder_hours": "3",
+              "reminder_hours": "{{ _reminder_hours | default(0) | int(0) }}",
+              "run_config_check": true,
+              "update_entities": [
+                "update.frigate_nvr_update",
+                "update.frigate_server",
+                "update.deconz_update",
+                "update.esphome_update",
+                "update.jupyterlab_update",
+                "update.mariadb_update",
+                "update.nginx_proxy_manager_update",
+                "update.system_home_assistant_operating_system_update",
+                "update.system_home_assistant_supervisor_update",
+                "update.system_home_assistant_core_update",
+                "update.node_red_update",
+                "update.system_home_assistant_google_drive_backup_update",
+                "update.system_mqtt_update",
+                "update.system_studio_code_server_update",
+                "update.terminal_ssh_update",
+                "update.system_wireguard_update",
+                "update.system_samba_share_update"
+              ]
+            },
+            "trigger": [
+              {
+                "id": "new",
+                "platform": "state",
+                "entity_id": [
+                  "update.frigate_nvr_update",
+                  "update.frigate_server",
+                  "update.deconz_update",
+                  "update.esphome_update",
+                  "update.jupyterlab_update",
+                  "update.mariadb_update",
+                  "update.nginx_proxy_manager_update",
+                  "update.system_home_assistant_operating_system_update",
+                  "update.system_home_assistant_supervisor_update",
+                  "update.system_home_assistant_core_update",
+                  "update.node_red_update",
+                  "update.system_home_assistant_google_drive_backup_update",
+                  "update.system_mqtt_update",
+                  "update.system_studio_code_server_update",
+                  "update.terminal_ssh_update",
+                  "update.system_wireguard_update",
+                  "update.system_samba_share_update"
+                ],
+                "to": "on"
+              },
+              {
+                "id": "started",
+                "platform": "state",
+                "entity_id": [
+                  "update.frigate_nvr_update",
+                  "update.frigate_server",
+                  "update.deconz_update",
+                  "update.esphome_update",
+                  "update.jupyterlab_update",
+                  "update.mariadb_update",
+                  "update.nginx_proxy_manager_update",
+                  "update.system_home_assistant_operating_system_update",
+                  "update.system_home_assistant_supervisor_update",
+                  "update.system_home_assistant_core_update",
+                  "update.node_red_update",
+                  "update.system_home_assistant_google_drive_backup_update",
+                  "update.system_mqtt_update",
+                  "update.system_studio_code_server_update",
+                  "update.terminal_ssh_update",
+                  "update.system_wireguard_update",
+                  "update.system_samba_share_update"
+                ],
+                "attribute": "in_progress",
+                "from": false,
+                "to": true
+              },
+              {
+                "id": "done",
+                "platform": "state",
+                "entity_id": [
+                  "update.frigate_nvr_update",
+                  "update.frigate_server",
+                  "update.deconz_update",
+                  "update.esphome_update",
+                  "update.jupyterlab_update",
+                  "update.mariadb_update",
+                  "update.nginx_proxy_manager_update",
+                  "update.system_home_assistant_operating_system_update",
+                  "update.system_home_assistant_supervisor_update",
+                  "update.system_home_assistant_core_update",
+                  "update.node_red_update",
+                  "update.system_home_assistant_google_drive_backup_update",
+                  "update.system_mqtt_update",
+                  "update.system_studio_code_server_update",
+                  "update.terminal_ssh_update",
+                  "update.system_wireguard_update",
+                  "update.system_samba_share_update"
+                ],
+                "from": "on",
+                "to": "off"
+              },
+              {
+                "id": "install",
+                "platform": "event",
+                "event_type": "mobile_app_notification_action",
+                "event_data": {
+                  "action": "install-update"
+                }
+              },
+              {
+                "id": "install_ios",
+                "platform": "event",
+                "event_type": "mobile_app_notification_action",
+                "event_data": {
+                  "actionName": "install-update"
+                }
+              },
+              {
+                "id": "skip",
+                "platform": "event",
+                "event_type": "mobile_app_notification_action",
+                "event_data": {
+                  "action": "skip-update"
+                }
+              },
+              {
+                "id": "skip_ios",
+                "platform": "event",
+                "event_type": "mobile_app_notification_action",
+                "event_data": {
+                  "actionName": "skip-update"
+                }
+              },
+              {
+                "id": "core_check",
+                "platform": "template",
+                "value_template": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}"
+              },
+              {
+                "id": "ha_start",
+                "platform": "homeassistant",
+                "event": "start"
+              },
+              {
+                "platform": "template",
+                "value_template": "{{ states.update | selectattr('state', 'eq', 'on') | list | count > 0\n  and reminder_hours > 0 and now().hour % reminder_hours == 0\n  and now().minute == 0 and now().second == 0 }}"
+              },
+              {
+                "id": "sticky_ios",
+                "platform": "event",
+                "event_type": "mobile_app_notification_action",
+                "event_data": {
+                  "action": "URI"
+                }
+              }
+            ],
+            "variables": {
+              "mobile_app_device": "9b51146f740894a588a23be9ab49ca78",
+              "_mobile_app_device_2": "356340e93d30ee5fd991ec3189919a27",
+              "mobile_app_device_2": "{{ _mobile_app_device_2 if _mobile_app_device_2 != mobile_app_device }}",
+              "send_to_ha": true,
+              "_changelog_urls": "none",
+              "changelog_urls": "{{ _changelog_urls if _changelog_urls is mapping else {} }}",
+              "take_backup": true,
+              "core_update_entity": "{% for u in integration_entities('hassio') | select('search', '^update[.]')\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {{ u }}\n{% endfor %}",
+              "os_update_entity": "{% for u in integration_entities('hassio') | select('search', '^update[.]')\n        if (device_attr(u, 'identifiers') | first)[1] == 'OS' %}\n    {{ u }}\n{% endfor %}",
+              "skip_action": {
+                "action": "skip-update",
+                "title": "Skip",
+                "destructive": true,
+                "authenticationRequired": true
+              },
+              "update_action": {
+                "action": "install-update",
+                "title": "Update",
+                "destructive": true,
+                "authenticationRequired": true
+              }
+            },
+            "action": {
+              "choose": [
+                {
+                  "alias": "Install update action",
+                  "conditions": "{{ trigger.id in ['install', 'install_ios'] }}",
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "update.{{ trigger.event.data.tag\n  if trigger.event.data.tag is string and trigger.event.data.tag != ''\n  else trigger.event.data.action_data.tag }}"
+                      }
+                    },
+                    {
+                      "service": "update.install",
+                      "data": {
+                        "entity_id": "{{ entity_id }}",
+                        "backup": "{% set ids = device_attr(entity_id, 'identifiers') | first %} {{ take_backup and ids[0] == 'hassio' and ids[1] not in ['supervisor', 'OS'] }}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "Skip update action",
+                  "conditions": "{{ trigger.id in ['skip', 'skip_ios'] }}",
+                  "sequence": {
+                    "service": "update.skip",
+                    "data": {
+                      "entity_id": "update.{{ trigger.event.data.tag\n  if trigger.event.data.tag is string and trigger.event.data.tag != ''\n  else trigger.event.data.action_data.tag }}"
+                    }
+                  }
+                },
+                {
+                  "alias": "Update completed",
+                  "conditions": "{{ trigger.id == 'done' }}",
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "{{ trigger.entity_id }}"
+                      }
+                    },
+                    {
+                      "variables": {
+                        "message": "clear_notification",
+                        "data": {
+                          "tag": "{{ entity_id[7:] }}"
+                        }
+                      }
+                    },
+                    {
+                      "choose": [],
+                      "default": [
+                        {
+                          "variables": {
+                            "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                          }
+                        },
+                        {
+                          "choose": {
+                            "alias": "Send to first mobile device if specified",
+                            "conditions": "{{ not not mobile_app_device }}",
+                            "sequence": {
+                              "device_id": "9b51146f740894a588a23be9ab49ca78",
+                              "domain": "mobile_app",
+                              "type": "notify",
+                              "title": "{{ title | default('') }}",
+                              "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                              "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                            }
+                          }
+                        },
+                        {
+                          "choose": {
+                            "alias": "Send to second mobile device if specified",
+                            "conditions": "{{ not not mobile_app_device_2 }}",
+                            "sequence": {
+                              "device_id": "356340e93d30ee5fd991ec3189919a27",
+                              "domain": "mobile_app",
+                              "type": "notify",
+                              "title": "{{ title | default('') }}",
+                              "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                              "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "alias": "Dismiss from HA if replicating there",
+                      "choose": {
+                        "conditions": "{{ send_to_ha }}",
+                        "sequence": {
+                          "service": "persistent_notification.dismiss",
+                          "data": {
+                            "notification_id": "{{ entity_id[7:] }}"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "On startup, dismiss core and os notifications as they occurred while off",
+                  "conditions": "{{ trigger.id == 'ha_start' }}",
+                  "sequence": [
+                    {
+                      "alias": "Dismiss core update notification if off",
+                      "choose": {
+                        "conditions": "{{ core_update_entity != '' and expand(core_update_entity) | first | attr('state') == 'off' }}",
+                        "sequence": [
+                          {
+                            "variables": {
+                              "entity_id": "{{ core_update_entity }}"
+                            }
+                          },
+                          {
+                            "variables": {
+                              "message": "clear_notification",
+                              "data": {
+                                "tag": "{{ entity_id[7:] }}"
+                              }
+                            }
+                          },
+                          {
+                            "choose": [],
+                            "default": [
+                              {
+                                "variables": {
+                                  "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                                }
+                              },
+                              {
+                                "choose": {
+                                  "alias": "Send to first mobile device if specified",
+                                  "conditions": "{{ not not mobile_app_device }}",
+                                  "sequence": {
+                                    "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                    "domain": "mobile_app",
+                                    "type": "notify",
+                                    "title": "{{ title | default('') }}",
+                                    "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                    "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                  }
+                                }
+                              },
+                              {
+                                "choose": {
+                                  "alias": "Send to second mobile device if specified",
+                                  "conditions": "{{ not not mobile_app_device_2 }}",
+                                  "sequence": {
+                                    "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                    "domain": "mobile_app",
+                                    "type": "notify",
+                                    "title": "{{ title | default('') }}",
+                                    "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                    "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "alias": "Dismiss from HA if replicating there",
+                            "choose": {
+                              "conditions": "{{ send_to_ha }}",
+                              "sequence": {
+                                "service": "persistent_notification.dismiss",
+                                "data": {
+                                  "notification_id": "{{ entity_id[7:] }}"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "alias": "Dismiss os update notification if off",
+                      "choose": {
+                        "conditions": "{{ os_update_entity != '' and expand(os_update_entity) | first | attr('state') == 'off' }}",
+                        "sequence": [
+                          {
+                            "variables": {
+                              "entity_id": "{{ os_update_entity }}"
+                            }
+                          },
+                          {
+                            "variables": {
+                              "message": "clear_notification",
+                              "data": {
+                                "tag": "{{ entity_id[7:] }}"
+                              }
+                            }
+                          },
+                          {
+                            "choose": [],
+                            "default": [
+                              {
+                                "variables": {
+                                  "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                                }
+                              },
+                              {
+                                "choose": {
+                                  "alias": "Send to first mobile device if specified",
+                                  "conditions": "{{ not not mobile_app_device }}",
+                                  "sequence": {
+                                    "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                    "domain": "mobile_app",
+                                    "type": "notify",
+                                    "title": "{{ title | default('') }}",
+                                    "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                    "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                  }
+                                }
+                              },
+                              {
+                                "choose": {
+                                  "alias": "Send to second mobile device if specified",
+                                  "conditions": "{{ not not mobile_app_device_2 }}",
+                                  "sequence": {
+                                    "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                    "domain": "mobile_app",
+                                    "type": "notify",
+                                    "title": "{{ title | default('') }}",
+                                    "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                    "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "alias": "Dismiss from HA if replicating there",
+                            "choose": {
+                              "conditions": "{{ send_to_ha }}",
+                              "sequence": {
+                                "service": "persistent_notification.dismiss",
+                                "data": {
+                                  "notification_id": "{{ entity_id[7:] }}"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "New update available",
+                  "conditions": "{{ trigger.id == 'new' }}",
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "{{ trigger.entity_id }}"
+                      }
+                    },
+                    {
+                      "variables": {
+                        "ids": "{{ device_attr(entity_id, 'identifiers') | first }}",
+                        "changelog_action": {
+                          "action": "URI",
+                          "title": "Changelog",
+                          "uri": "{% set version = state_attr(entity_id, 'latest_version') %} {{ state_attr(entity_id, 'release_url')\n    | default(changelog_urls[entity_id] | default(''), true)\n    | regex_replace('(/CHANGELOG.md)$', '\\\\1#' ~ version | regex_replace('[^-\\\\w]'))\n    | default(None, true) }}"
+                        },
+                        "include_core_check": "{{ run_config_check and ids[0] == 'hassio' and ids[1] == 'core' }}",
+                        "core_check_complete": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}",
+                        "title": "{{ state_attr(entity_id, 'friendly_name') }}",
+                        "message": "{% set summary = state_attr(entity_id, 'release_summary') %} Newest version is {{ state_attr(entity_id, 'latest_version') }}<br> Installed version is {{ state_attr(entity_id, 'installed_version') }} {% if include_core_check %}\n  <br>Config check has {{ 'completed, check addon logs for status.'\n    if core_check_complete else 'started, should be done soon.' }}\n{% endif %} {{ '<br>' ~ summary if summary is string }}",
+                        "url": "{% set url = device_attr(entity_id, 'configuration_url') %} {% set ids = device_attr(entity_id, 'identifiers') | first %} {% if url is string %}\n  {{ url | regex_replace('^homeassistant://') }}\n{% elif ids[0] == 'hassio' and ids[1] in ['supervisor', 'OS'] %}\n  /hassio/system\n{% elif run_config_check and ids[0] == 'hassio' and ids[1] == 'core' %}\n  /hassio/addon/core_check_config/logs\n{% else %}\n  /config\n{% endif %}",
+                        "data": {
+                          "tag": "{{ entity_id[7:] }}",
+                          "channel": "Updates",
+                          "group": "Updates",
+                          "notification_icon": "mdi:package-up",
+                          "icon_url": "{{ state_attr(entity_id, 'entity_picture') | default('', true) }}",
+                          "url": "{{ url }}",
+                          "clickAction": "{{ url }}",
+                          "sticky": "true",
+                          "actions": "{{ ([changelog_action] if changelog_action.uri is string else []) + [update_action] +\n  ([] if ids[0] == 'hassio' and ids[1] == 'supervisor' else [skip_action]) }}"
+                        }
+                      }
+                    },
+                    {
+                      "choose": {
+                        "alias": "Only send to mobile devices if within provided time range",
+                        "conditions": {
+                          "condition": "time",
+                          "after": "00:00:00",
+                          "before": "00:00:00"
+                        },
+                        "sequence": {
+                          "choose": [],
+                          "default": [
+                            {
+                              "variables": {
+                                "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to first mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device }}",
+                                "sequence": {
+                                  "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to second mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device_2 }}",
+                                "sequence": {
+                                  "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "alias": "Send to HA if replicating there",
+                      "choose": {
+                        "conditions": "{{ send_to_ha }}",
+                        "sequence": {
+                          "service": "persistent_notification.create",
+                          "data": {
+                            "notification_id": "{{ entity_id[7:] }}",
+                            "title": "{{ title }}",
+                            "message": "{{ '%s\\n\\n### More info\\n- [Open](%s)' % (message | replace('<br>', '\\n'), data.url) ~\n  ('\\n- [Changelog](%s)' % changelog_action.uri if changelog_action.uri is string else '') }}"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "alias": "Stop if this isn't core or we're not running a config check",
+                      "condition": "{{ include_core_check }}"
+                    },
+                    {
+                      "alias": "Start config check addon",
+                      "service": "hassio.addon_start",
+                      "data": {
+                        "addon": "core_check_config"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "Emulate sticky on IOS by recreating the notification",
+                  "conditions": [
+                    "{{ trigger.id == 'sticky_ios' }}",
+                    "{{ trigger.event.data.action_data is mapping and trigger.event.data.action_data.tag is string }}",
+                    "{{ is_state('update.' ~ trigger.event.data.action_data.tag, 'on') }}"
+                  ],
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "update.{{ trigger.event.data.tag\n  if trigger.event.data.tag is string and trigger.event.data.tag != ''\n  else trigger.event.data.action_data.tag }}"
+                      }
+                    },
+                    {
+                      "variables": {
+                        "ids": "{{ device_attr(entity_id, 'identifiers') | first }}",
+                        "changelog_action": {
+                          "action": "URI",
+                          "title": "Changelog",
+                          "uri": "{% set version = state_attr(entity_id, 'latest_version') %} {{ state_attr(entity_id, 'release_url')\n    | default(changelog_urls[entity_id] | default(''), true)\n    | regex_replace('(/CHANGELOG.md)$', '\\\\1#' ~ version | regex_replace('[^-\\\\w]'))\n    | default(None, true) }}"
+                        },
+                        "include_core_check": "{{ run_config_check and ids[0] == 'hassio' and ids[1] == 'core' }}",
+                        "core_check_complete": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}",
+                        "title": "{{ state_attr(entity_id, 'friendly_name') }}",
+                        "message": "{% set summary = state_attr(entity_id, 'release_summary') %} Newest version is {{ state_attr(entity_id, 'latest_version') }}<br> Installed version is {{ state_attr(entity_id, 'installed_version') }} {% if include_core_check %}\n  <br>Config check has {{ 'completed, check addon logs for status.'\n    if core_check_complete else 'started, should be done soon.' }}\n{% endif %} {{ '<br>' ~ summary if summary is string }}",
+                        "url": "{% set url = device_attr(entity_id, 'configuration_url') %} {% set ids = device_attr(entity_id, 'identifiers') | first %} {% if url is string %}\n  {{ url | regex_replace('^homeassistant://') }}\n{% elif ids[0] == 'hassio' and ids[1] in ['supervisor', 'OS'] %}\n  /hassio/system\n{% elif run_config_check and ids[0] == 'hassio' and ids[1] == 'core' %}\n  /hassio/addon/core_check_config/logs\n{% else %}\n  /config\n{% endif %}",
+                        "data": {
+                          "tag": "{{ entity_id[7:] }}",
+                          "channel": "Updates",
+                          "group": "Updates",
+                          "notification_icon": "mdi:package-up",
+                          "icon_url": "{{ state_attr(entity_id, 'entity_picture') | default('', true) }}",
+                          "url": "{{ url }}",
+                          "clickAction": "{{ url }}",
+                          "sticky": "true",
+                          "actions": "{{ ([changelog_action] if changelog_action.uri is string else []) + [update_action] +\n  ([] if ids[0] == 'hassio' and ids[1] == 'supervisor' else [skip_action]) }}"
+                        }
+                      }
+                    },
+                    {
+                      "choose": [],
+                      "default": [
+                        {
+                          "variables": {
+                            "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                          }
+                        },
+                        {
+                          "choose": {
+                            "alias": "Send to first mobile device if specified",
+                            "conditions": "{{ not not mobile_app_device }}",
+                            "sequence": {
+                              "device_id": "9b51146f740894a588a23be9ab49ca78",
+                              "domain": "mobile_app",
+                              "type": "notify",
+                              "title": "{{ title | default('') }}",
+                              "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                              "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                            }
+                          }
+                        },
+                        {
+                          "choose": {
+                            "alias": "Send to second mobile device if specified",
+                            "conditions": "{{ not not mobile_app_device_2 }}",
+                            "sequence": {
+                              "device_id": "356340e93d30ee5fd991ec3189919a27",
+                              "domain": "mobile_app",
+                              "type": "notify",
+                              "title": "{{ title | default('') }}",
+                              "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                              "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "alias": "Send to HA if replicating there",
+                      "choose": {
+                        "conditions": "{{ send_to_ha }}",
+                        "sequence": {
+                          "service": "persistent_notification.create",
+                          "data": {
+                            "notification_id": "{{ entity_id[7:] }}",
+                            "title": "{{ title }}",
+                            "message": "{{ '%s\\n\\n### More info\\n- [Open](%s)' % (message | replace('<br>', '\\n'), data.url) ~\n  ('\\n- [Changelog](%s)' % changelog_action.uri if changelog_action.uri is string else '') }}"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "Core check addon completed",
+                  "conditions": "{{ trigger.id == 'core_check' }}",
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "{{ core_update_entity }}"
+                      }
+                    },
+                    {
+                      "variables": {
+                        "ids": "{{ device_attr(entity_id, 'identifiers') | first }}",
+                        "changelog_action": {
+                          "action": "URI",
+                          "title": "Changelog",
+                          "uri": "{% set version = state_attr(entity_id, 'latest_version') %} {{ state_attr(entity_id, 'release_url')\n    | default(changelog_urls[entity_id] | default(''), true)\n    | regex_replace('(/CHANGELOG.md)$', '\\\\1#' ~ version | regex_replace('[^-\\\\w]'))\n    | default(None, true) }}"
+                        },
+                        "include_core_check": "{{ run_config_check and ids[0] == 'hassio' and ids[1] == 'core' }}",
+                        "core_check_complete": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}",
+                        "title": "{{ state_attr(entity_id, 'friendly_name') }}",
+                        "message": "{% set summary = state_attr(entity_id, 'release_summary') %} Newest version is {{ state_attr(entity_id, 'latest_version') }}<br> Installed version is {{ state_attr(entity_id, 'installed_version') }} {% if include_core_check %}\n  <br>Config check has {{ 'completed, check addon logs for status.'\n    if core_check_complete else 'started, should be done soon.' }}\n{% endif %} {{ '<br>' ~ summary if summary is string }}",
+                        "url": "{% set url = device_attr(entity_id, 'configuration_url') %} {% set ids = device_attr(entity_id, 'identifiers') | first %} {% if url is string %}\n  {{ url | regex_replace('^homeassistant://') }}\n{% elif ids[0] == 'hassio' and ids[1] in ['supervisor', 'OS'] %}\n  /hassio/system\n{% elif run_config_check and ids[0] == 'hassio' and ids[1] == 'core' %}\n  /hassio/addon/core_check_config/logs\n{% else %}\n  /config\n{% endif %}",
+                        "data": {
+                          "tag": "{{ entity_id[7:] }}",
+                          "channel": "Updates",
+                          "group": "Updates",
+                          "notification_icon": "mdi:package-up",
+                          "icon_url": "{{ state_attr(entity_id, 'entity_picture') | default('', true) }}",
+                          "url": "{{ url }}",
+                          "clickAction": "{{ url }}",
+                          "sticky": "true",
+                          "actions": "{{ ([changelog_action] if changelog_action.uri is string else []) + [update_action] +\n  ([] if ids[0] == 'hassio' and ids[1] == 'supervisor' else [skip_action]) }}"
+                        }
+                      }
+                    },
+                    {
+                      "choose": {
+                        "alias": "Only send to mobile devices if within provided time range",
+                        "conditions": {
+                          "condition": "time",
+                          "after": "00:00:00",
+                          "before": "00:00:00"
+                        },
+                        "sequence": {
+                          "choose": [],
+                          "default": [
+                            {
+                              "variables": {
+                                "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to first mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device }}",
+                                "sequence": {
+                                  "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to second mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device_2 }}",
+                                "sequence": {
+                                  "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "alias": "Send to HA if replicating there",
+                      "choose": {
+                        "conditions": "{{ send_to_ha }}",
+                        "sequence": {
+                          "service": "persistent_notification.create",
+                          "data": {
+                            "notification_id": "{{ entity_id[7:] }}",
+                            "title": "{{ title }}",
+                            "message": "{{ '%s\\n\\n### More info\\n- [Open](%s)' % (message | replace('<br>', '\\n'), data.url) ~\n  ('\\n- [Changelog](%s)' % changelog_action.uri if changelog_action.uri is string else '') }}"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "Update started",
+                  "conditions": "{{ trigger.id == 'started' }}",
+                  "sequence": [
+                    {
+                      "variables": {
+                        "entity_id": "{{ trigger.entity_id }}"
+                      }
+                    },
+                    {
+                      "variables": {
+                        "ids": "{{ device_attr(entity_id, 'identifiers') | first }}",
+                        "changelog_action": {
+                          "action": "URI",
+                          "title": "Changelog",
+                          "uri": "{% set version = state_attr(entity_id, 'latest_version') %} {{ state_attr(entity_id, 'release_url')\n    | default(changelog_urls[entity_id] | default(''), true)\n    | regex_replace('(/CHANGELOG.md)$', '\\\\1#' ~ version | regex_replace('[^-\\\\w]'))\n    | default(None, true) }}"
+                        },
+                        "include_core_check": "{{ run_config_check and ids[0] == 'hassio' and ids[1] == 'core' }}",
+                        "core_check_complete": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}",
+                        "title": "{{ state_attr(entity_id, 'friendly_name') }}",
+                        "message": "{% set summary = state_attr(entity_id, 'release_summary') %} Newest version is {{ state_attr(entity_id, 'latest_version') }}<br> Installed version is {{ state_attr(entity_id, 'installed_version') }} {% if include_core_check %}\n  <br>Config check has {{ 'completed, check addon logs for status.'\n    if core_check_complete else 'started, should be done soon.' }}\n{% endif %} {{ '<br>' ~ summary if summary is string }}",
+                        "url": "{% set url = device_attr(entity_id, 'configuration_url') %} {% set ids = device_attr(entity_id, 'identifiers') | first %} {% if url is string %}\n  {{ url | regex_replace('^homeassistant://') }}\n{% elif ids[0] == 'hassio' and ids[1] in ['supervisor', 'OS'] %}\n  /hassio/system\n{% elif run_config_check and ids[0] == 'hassio' and ids[1] == 'core' %}\n  /hassio/addon/core_check_config/logs\n{% else %}\n  /config\n{% endif %}",
+                        "data": {
+                          "tag": "{{ entity_id[7:] }}",
+                          "channel": "Updates",
+                          "group": "Updates",
+                          "notification_icon": "mdi:package-up",
+                          "icon_url": "{{ state_attr(entity_id, 'entity_picture') | default('', true) }}",
+                          "url": "{{ url }}",
+                          "clickAction": "{{ url }}",
+                          "sticky": "true",
+                          "actions": "{{ ([changelog_action] if changelog_action.uri is string else []) + [update_action] +\n  ([] if ids[0] == 'hassio' and ids[1] == 'supervisor' else [skip_action]) }}"
+                        }
+                      }
+                    },
+                    {
+                      "variables": {
+                        "message": "Updating...",
+                        "data": "{{ dict(data, actions=[changelog_action] if changelog_action.uri is string else []) }}"
+                      }
+                    },
+                    {
+                      "choose": {
+                        "alias": "Only send to mobile devices if within provided time range",
+                        "conditions": {
+                          "condition": "time",
+                          "after": "00:00:00",
+                          "before": "00:00:00"
+                        },
+                        "sequence": {
+                          "choose": [],
+                          "default": [
+                            {
+                              "variables": {
+                                "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to first mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device }}",
+                                "sequence": {
+                                  "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            },
+                            {
+                              "choose": {
+                                "alias": "Send to second mobile device if specified",
+                                "conditions": "{{ not not mobile_app_device_2 }}",
+                                "sequence": {
+                                  "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                  "domain": "mobile_app",
+                                  "type": "notify",
+                                  "title": "{{ title | default('') }}",
+                                  "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                  "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "alias": "Send to HA if replicating there",
+                      "choose": {
+                        "conditions": "{{ send_to_ha }}",
+                        "sequence": {
+                          "service": "persistent_notification.create",
+                          "data": {
+                            "notification_id": "{{ entity_id[7:] }}",
+                            "title": "{{ title }}",
+                            "message": "{{ '%s\\n\\n### More info\\n- [Open](%s)' % (message | replace('<br>', '\\n'), data.url) ~\n  ('\\n- [Changelog](%s)' % changelog_action.uri if changelog_action.uri is string else '') }}"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "alias": "Send reminders if enabled",
+                  "conditions": "{{ reminder_hours > 0 }}",
+                  "sequence": [
+                    {
+                      "alias": "Get all pending, unstarted updates",
+                      "variables": {
+                        "updates": "{{ states.update\n    | selectattr('state', 'eq', 'on')\n    | rejectattr('attributes.in_progress', 'true')\n    | map(attribute='entity_id') | list }}"
+                      }
+                    },
+                    {
+                      "alias": "Loop over updates and send reminder",
+                      "repeat": {
+                        "count": "{{ updates | count }}",
+                        "sequence": [
+                          {
+                            "variables": {
+                              "entity_id": "{{ updates[repeat.index - 1] }}"
+                            }
+                          },
+                          {
+                            "variables": {
+                              "ids": "{{ device_attr(entity_id, 'identifiers') | first }}",
+                              "changelog_action": {
+                                "action": "URI",
+                                "title": "Changelog",
+                                "uri": "{% set version = state_attr(entity_id, 'latest_version') %} {{ state_attr(entity_id, 'release_url')\n    | default(changelog_urls[entity_id] | default(''), true)\n    | regex_replace('(/CHANGELOG.md)$', '\\\\1#' ~ version | regex_replace('[^-\\\\w]'))\n    | default(None, true) }}"
+                              },
+                              "include_core_check": "{{ run_config_check and ids[0] == 'hassio' and ids[1] == 'core' }}",
+                              "core_check_complete": "{% set ns = namespace(core=none) %} {% for u in integration_entities('hassio') | select('in', update_entities)\n        if (device_attr(u, 'identifiers') | first)[1] == 'core' %}\n    {% set ns.core = u %}\n{% endfor %} {% if run_config_check and ns.core is string and expand(ns.core) | first | attr('state') == 'on' %}\n  {% for e in expand(integration_entities('hassio')) | selectattr('attributes.device_class', 'eq', 'running')\n        if (device_attr(e.entity_id, 'identifiers') | first)[1] == 'core_check_config' %}\n      {{ e.state == 'off' and e.last_changed > expand(ns.core) | first | attr('last_changed') }}\n  {% endfor %}\n{% else %}\n  {{ false }}\n{% endif %}",
+                              "title": "{{ state_attr(entity_id, 'friendly_name') }}",
+                              "message": "{% set summary = state_attr(entity_id, 'release_summary') %} Newest version is {{ state_attr(entity_id, 'latest_version') }}<br> Installed version is {{ state_attr(entity_id, 'installed_version') }} {% if include_core_check %}\n  <br>Config check has {{ 'completed, check addon logs for status.'\n    if core_check_complete else 'started, should be done soon.' }}\n{% endif %} {{ '<br>' ~ summary if summary is string }}",
+                              "url": "{% set url = device_attr(entity_id, 'configuration_url') %} {% set ids = device_attr(entity_id, 'identifiers') | first %} {% if url is string %}\n  {{ url | regex_replace('^homeassistant://') }}\n{% elif ids[0] == 'hassio' and ids[1] in ['supervisor', 'OS'] %}\n  /hassio/system\n{% elif run_config_check and ids[0] == 'hassio' and ids[1] == 'core' %}\n  /hassio/addon/core_check_config/logs\n{% else %}\n  /config\n{% endif %}",
+                              "data": {
+                                "tag": "{{ entity_id[7:] }}",
+                                "channel": "Updates",
+                                "group": "Updates",
+                                "notification_icon": "mdi:package-up",
+                                "icon_url": "{{ state_attr(entity_id, 'entity_picture') | default('', true) }}",
+                                "url": "{{ url }}",
+                                "clickAction": "{{ url }}",
+                                "sticky": "true",
+                                "actions": "{{ ([changelog_action] if changelog_action.uri is string else []) + [update_action] +\n  ([] if ids[0] == 'hassio' and ids[1] == 'supervisor' else [skip_action]) }}"
+                              }
+                            }
+                          },
+                          {
+                            "choose": {
+                              "alias": "Only send to mobile devices if within provided time range",
+                              "conditions": {
+                                "condition": "time",
+                                "after": "00:00:00",
+                                "before": "00:00:00"
+                              },
+                              "sequence": {
+                                "choose": [],
+                                "default": [
+                                  {
+                                    "variables": {
+                                      "data": "{{ dict(data, action_data={'tag': data.tag}) }}"
+                                    }
+                                  },
+                                  {
+                                    "choose": {
+                                      "alias": "Send to first mobile device if specified",
+                                      "conditions": "{{ not not mobile_app_device }}",
+                                      "sequence": {
+                                        "device_id": "9b51146f740894a588a23be9ab49ca78",
+                                        "domain": "mobile_app",
+                                        "type": "notify",
+                                        "title": "{{ title | default('') }}",
+                                        "message": "{{ message if device_attr(mobile_app_device, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                        "data": "{{ data if\n      device_attr(mobile_app_device, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "choose": {
+                                      "alias": "Send to second mobile device if specified",
+                                      "conditions": "{{ not not mobile_app_device_2 }}",
+                                      "sequence": {
+                                        "device_id": "356340e93d30ee5fd991ec3189919a27",
+                                        "domain": "mobile_app",
+                                        "type": "notify",
+                                        "title": "{{ title | default('') }}",
+                                        "message": "{{ message if device_attr(mobile_app_device_2, 'manufacturer') != 'Apple'\n    else message | replace('<br>', '\\n') }}",
+                                        "data": "{{ data if\n      device_attr(mobile_app_device_2, 'manufacturer') != 'Apple' or data.icon_url is not string\n    else dict(data, image=data.icon_url) }}"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          {
+                            "alias": "Send to HA if replicating there",
+                            "choose": {
+                              "conditions": "{{ send_to_ha }}",
+                              "sequence": {
+                                "service": "persistent_notification.create",
+                                "data": {
+                                  "notification_id": "{{ entity_id[7:] }}",
+                                  "title": "{{ title }}",
+                                  "message": "{{ '%s\\n\\n### More info\\n- [Open](%s)' % (message | replace('<br>', '\\n'), data.url) ~\n  ('\\n- [Changelog](%s)' % changelog_action.uri if changelog_action.uri is string else '') }}"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "id": "1661113164721",
+            "alias": "Update notifications",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1661113164721",
+            "alias": "Update notifications",
+            "description": "",
+            "use_blueprint": {
+              "path": "mdegat01/update_notifications.yaml",
+              "input": {
+                "reminder_hours": "3",
+                "update_entities": [
+                  "update.frigate_nvr_update",
+                  "update.frigate_server",
+                  "update.deconz_update",
+                  "update.esphome_update",
+                  "update.jupyterlab_update",
+                  "update.mariadb_update",
+                  "update.nginx_proxy_manager_update",
+                  "update.system_home_assistant_operating_system_update",
+                  "update.system_home_assistant_supervisor_update",
+                  "update.system_home_assistant_core_update",
+                  "update.node_red_update",
+                  "update.system_home_assistant_google_drive_backup_update",
+                  "update.system_mqtt_update",
+                  "update.system_studio_code_server_update",
+                  "update.terminal_ssh_update",
+                  "update.system_wireguard_update",
+                  "update.system_samba_share_update"
+                ],
+                "mobile_app_device": "9b51146f740894a588a23be9ab49ca78",
+                "mobile_app_device_2": "356340e93d30ee5fd991ec3189919a27",
+                "send_to_ha": true,
+                "run_config_check": true
+              }
+            }
+          },
+          "context": {
+            "id": "01GBGJ6GQD9DPZX483V36X8D3S",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0/choose/3/sequence/1/choose/0/sequence/3/choose/0/sequence/0",
+          "run_id": "3076101ca9bd6c79b91b6959ebf9730a",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2022-08-27T21:09:20.749896+00:00",
+            "finish": "2022-08-27T21:09:26.783998+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1661113164721",
+          "trigger": "Home Assistant starting"
+        }
+      }
+    ]
+  }
+}

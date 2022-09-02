@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "title": "Home",
+      "views": [
+        {
+          "theme": "Backend-selected",
+          "title": "Home",
+          "path": "home",
+          "icon": "mdi:home",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:mushroom-chips-card",
+              "chips": [
+                {
+                  "type": "alarm-control-panel",
+                  "entity": "alarm_control_panel.blink_home_clockwork_factory_apartments"
+                },
+                {
+                  "type": "weather",
+                  "entity": "weather.openweathermap",
+                  "show_conditions": true,
+                  "show_temperature": true
+                }
+              ]
+            },
+            {
+              "type": "custom:mushroom-template-card",
+              "primary": "{% if is_state('light.your_light', 'on') %}\n  orange\n{% endif %}\n\n\n{% set time = now().hour %}\n{% if (time >= 18) %}\n  Good Evening, {{user}}!\n{% elif (time >= 12) %}\n  Good Afternoon, {{user}}!\n{% elif (time >= 5) %}\n  Good Morning, {{user}}!\n{% else %}\n  Hello, {{user}}!\n{% endif %}",
+              "secondary": "",
+              "icon": ""
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:home",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.lights_on', 'on') %}\n  orange\n{% endif %}",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "home"
+                  },
+                  "hold_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:door",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.hall_leds', 'on') %}\n  orange\n{% endif %}",
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "hallway"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:sofa",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.lounge_led', 'on') %}\n  orange\n{% endif %}",
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "living-room"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:chef-hat",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.kitchen_led', 'on') %}\n  orange\n{% endif %}",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "kitchen"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:bed-double",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.bedroom_led', 'on') %}\n  orange\n{% endif %}",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "bedroom"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "",
+                  "secondary": "{{states('sensor.temperature_sensor_temperature')}} °c",
+                  "icon": "mdi:bathtub",
+                  "layout": "vertical",
+                  "icon_color": "{% if is_state('light.your_light', 'on') %}\n  orange\n{% endif %}",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "bathroom"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-person-card",
+                  "entity": "device_tracker.sam_s_phone",
+                  "name": "Sam"
+                },
+                {
+                  "type": "custom:mushroom-person-card",
+                  "entity": "device_tracker.leah_s_iphone_new",
+                  "name": "Leah"
+                }
+              ]
+            },
+            {
+              "initial_view": "dayGridMonth",
+              "type": "calendar",
+              "entities": [
+                "calendar.sam_mcnab_personal",
+                "calendar.joint_calendar",
+                "calendar.sam_mcnab_work",
+                "calendar.hubert_watering",
+                "calendar.mcnab_sam_eac",
+                "calendar.university",
+                "calendar.beqa_leah_hotmail_com"
+              ]
+            },
+            {
+              "type": "area",
+              "area": "bedroom",
+              "navigation_path": "bedroom",
+              "show_camera": true
+            },
+            {
+              "type": "area",
+              "area": "hall",
+              "show_camera": true,
+              "navigation_path": "hallway"
+            },
+            {
+              "type": "area",
+              "area": "living_room",
+              "show_camera": true,
+              "navigation_path": "living-room"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Hallway",
+          "path": "hallway",
+          "icon": "mdi:door",
+          "badges": [],
+          "cards": []
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Living Room",
+          "path": "living-room",
+          "icon": "mdi:sofa",
+          "badges": [],
+          "cards": []
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Kitchen",
+          "path": "kitchen",
+          "icon": "mdi:chef-hat",
+          "badges": [],
+          "cards": []
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Bedroom",
+          "path": "bedroom",
+          "icon": "mdi:bed-double",
+          "badges": [],
+          "cards": []
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Bathroom",
+          "path": "bathroom",
+          "icon": "mdi:bathtub",
+          "badges": [],
+          "cards": []
+        }
+      ]
+    }
+  }
+}

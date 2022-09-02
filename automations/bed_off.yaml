@@ -1,0 +1,12 @@
+id: '1660668400964'
+alias: 'Scene: Bedroom Off'
+description: ''
+trigger: []
+condition: []
+action:
+- service: light.turn_off
+  data: {}
+  target:
+    entity_id:
+    - light.all_bedroom_lights
+mode: single

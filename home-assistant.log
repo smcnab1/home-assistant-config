@@ -1,0 +1,777 @@
+2022-09-02 14:14:18.180 WARNING (Recorder) [homeassistant.components.recorder.util] The system could not validate that the sqlite3 database at //config/home-assistant_v2.db was shutdown cleanly
+2022-09-02 14:14:18.367 WARNING (Recorder) [homeassistant.components.recorder.util] Ended unfinished session (id=22 from 2022-09-01 06:28:18.389135)
+2022-09-02 14:14:40.031 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:14:43.728 ERROR (MainThread) [homeassistant.setup] Setup failed for watchman: Integration not found.
+2022-09-02 14:14:43.771 ERROR (MainThread) [homeassistant.setup] Setup failed for google_home: Integration not found.
+2022-09-02 14:14:43.775 ERROR (MainThread) [homeassistant.setup] Setup failed for garmin_connect: Integration not found.
+2022-09-02 14:14:43.778 ERROR (MainThread) [homeassistant.setup] Setup failed for hacs: Integration not found.
+2022-09-02 14:14:43.782 ERROR (MainThread) [homeassistant.setup] Setup failed for ui_lovelace_minimalist: Integration not found.
+2022-09-02 14:14:43.997 ERROR (MainThread) [homeassistant.setup] Setup failed for nodered: Integration not found.
+2022-09-02 14:14:44.006 ERROR (MainThread) [homeassistant.setup] Setup failed for sonoff: Integration not found.
+2022-09-02 14:14:44.010 ERROR (MainThread) [homeassistant.setup] Setup failed for frigate: Integration not found.
+2022-09-02 14:14:44.014 ERROR (MainThread) [homeassistant.setup] Setup failed for samsungtv_smart: Integration not found.
+2022-09-02 14:14:44.017 ERROR (MainThread) [homeassistant.setup] Setup failed for browser_mod: Integration not found.
+2022-09-02 14:14:44.019 ERROR (MainThread) [homeassistant.setup] Setup failed for tapo: Integration not found.
+2022-09-02 14:14:44.023 ERROR (MainThread) [homeassistant.setup] Setup failed for pyscript: Integration not found.
+2022-09-02 14:14:44.027 ERROR (MainThread) [homeassistant.setup] Setup failed for govee: Integration not found.
+2022-09-02 14:14:44.029 ERROR (MainThread) [homeassistant.setup] Setup failed for london_tfl: Integration not found.
+2022-09-02 14:14:59.842 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
+2022-09-02 14:14:59.845 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
+2022-09-02 14:14:59.848 WARNING (MainThread) [homeassistant.setup] Setup of input_button is taking over 10 seconds.
+2022-09-02 14:14:59.850 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
+2022-09-02 14:14:59.853 WARNING (MainThread) [homeassistant.setup] Setup of zone is taking over 10 seconds.
+2022-09-02 14:14:59.863 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform group is taking over 10 seconds.
+2022-09-02 14:14:59.866 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform group is taking over 10 seconds.
+2022-09-02 14:15:01.850 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform dlna_dmr is taking over 10 seconds.
+2022-09-02 14:15:02.119 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Bedroom' for switchbot integration not ready yet: Could not find Switchbot bot with address CC:C7:62:D3:B2:8A; Retrying in background
+2022-09-02 14:15:04.371 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Fire TV' for nfandroidtv integration not ready yet: Failed to connect to host: 192.168.1.104; Retrying in background
+2022-09-02 14:15:08.128 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:15:08.178 WARNING (MainThread) [homeassistant.config_entries] Config entry '192.168.1.104' for androidtv integration not ready yet: Could not connect to Fire TV device at 192.168.1.104:5555 using Python ADB implementation with adbkey='/config/adbkey'; Retrying in background
+2022-09-02 14:15:08.182 WARNING (MainThread) [homeassistant.config_entries] Config entry 'HP DeskJet 2600 series [E234AF]' for ipp integration not ready yet: Invalid response from API: Error occurred while communicating with IPP server.; Retrying in background
+2022-09-02 14:15:11.401 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform samsungtv is taking over 10 seconds.
+2022-09-02 14:15:15.004 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of binary_sensor platform homekit_controller is taking over 10 seconds.
+2022-09-02 14:15:15.006 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform homekit_controller is taking over 10 seconds.
+2022-09-02 14:15:15.242 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for esp-bed-sensor @ 192.168.1.115: Invalid password!
+2022-09-02 14:15:27.415 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:15:28.516 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:15:40.267 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:16:01.355 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:16:42.370 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:18:03.389 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:19:24.401 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:19:42.179 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:19:47.837 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:20:45.413 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:22:06.428 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:23:27.440 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:24:44.148 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:24:47.856 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:24:48.456 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:26:09.467 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:27:30.479 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:28:26.733 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [547791264096] Disconnected: Did not receive auth message within 10 seconds
+2022-09-02 14:28:38.551 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [547791269520] Disconnected: Did not receive auth message within 10 seconds
+2022-09-02 14:28:51.492 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:29:05.291 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [547791329104] Disconnected: Did not receive auth message within 10 seconds
+2022-09-02 14:29:46.163 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:29:47.811 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:30:12.505 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:31:33.524 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:32:54.541 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:34:15.562 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:34:47.839 WARNING (SyncWorker_7) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 14:34:48.174 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:35:36.574 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:36:57.585 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:38:18.597 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:39:39.608 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:39:47.842 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:39:50.207 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:41:00.621 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:42:21.634 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:43:42.646 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:44:47.825 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:44:52.142 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:45:03.658 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:46:24.670 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:47:45.682 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:49:06.696 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:49:47.845 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:49:54.137 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:50:27.710 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:51:48.720 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:53:09.733 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:54:30.746 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:54:47.831 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:54:56.155 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 14:55:51.760 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:57:12.772 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:58:33.788 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:59:47.875 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 14:59:54.799 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 14:59:58.168 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:01:15.812 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:02:36.829 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:03:57.841 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:04:47.898 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:05:00.177 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:05:18.854 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:06:39.873 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:08:00.887 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:09:21.901 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:09:47.920 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:10:02.154 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:10:42.913 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:12:03.925 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:13:24.938 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:14:45.951 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:14:47.833 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 15:15:04.160 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:16:06.969 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:17:27.985 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:18:48.997 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:19:47.888 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:20:06.183 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:20:10.013 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:21:31.024 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:22:52.038 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:24:13.051 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:24:47.862 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:25:08.173 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:25:34.064 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:26:55.077 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:28:16.087 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:29:37.111 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:29:47.867 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:30:10.217 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:30:58.123 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:32:19.135 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:33:40.147 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:34:47.837 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:35:01.159 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:35:12.165 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:36:22.171 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:37:43.184 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:39:04.197 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:39:47.870 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 15:39:47.885 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:40:14.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:40:25.209 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:41:46.220 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:43:07.232 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:44:28.244 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:44:47.857 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:45:16.151 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:45:49.255 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:47:10.267 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:48:31.279 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:49:47.944 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:49:52.289 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:50:18.147 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:51:13.301 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:52:34.315 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:53:55.327 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:54:47.850 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 15:55:16.342 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:55:20.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 15:56:37.353 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:57:58.365 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:59:19.379 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 15:59:53.907 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:00:22.176 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:00:40.392 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:02:01.406 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:03:22.417 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:04:43.430 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:04:47.887 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:05:24.157 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:06:04.442 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:07:25.455 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:08:46.472 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:09:47.947 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:10:07.483 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:10:26.157 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:11:28.495 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:12:49.506 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:14:10.521 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:14:47.951 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:15:28.148 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:15:31.535 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:16:52.548 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:18:13.565 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:19:34.576 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:19:47.933 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:20:30.162 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:20:55.589 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:22:16.601 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:23:37.612 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:24:47.865 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:24:58.625 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:25:32.144 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:26:19.636 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:27:40.649 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:29:01.663 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:29:47.864 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:30:22.674 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:30:34.161 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:31:43.686 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:33:04.698 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:34:25.711 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:34:47.923 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 16:35:36.180 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:35:46.725 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:37:07.739 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:38:28.750 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:39:48.012 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:39:49.769 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:40:38.151 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:41:10.784 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:42:31.798 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:43:52.811 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:44:47.875 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:45:13.822 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:45:40.195 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:46:34.836 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:47:55.852 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:49:16.865 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:49:48.081 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 16:50:37.876 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:50:42.154 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:51:58.887 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:53:19.899 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:54:40.912 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:54:47.852 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 16:55:44.167 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 16:56:01.926 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:57:22.941 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:58:43.953 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 16:59:47.984 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:00:04.967 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:00:46.149 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:01:25.982 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:02:46.996 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:04:08.008 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:04:48.081 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:05:29.020 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:05:48.160 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:06:50.031 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:08:11.043 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:09:32.054 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:09:47.873 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:10:50.142 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:10:53.066 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:12:14.095 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:13:35.106 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:14:47.846 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 17:14:47.861 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:14:56.120 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:15:52.161 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:16:17.134 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:17:38.146 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:18:59.166 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:19:47.892 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:20:20.177 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:20:54.163 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:21:41.189 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:23:02.202 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:24:23.215 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:24:47.870 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:25:44.231 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:25:56.187 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:27:05.244 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:28:26.258 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:29:47.270 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:29:47.886 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:29:47.892 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 17:30:58.161 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:31:08.285 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:32:29.298 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:33:50.309 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:34:47.884 WARNING (SyncWorker_7) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:35:11.322 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:36:00.185 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:36:32.336 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:37:53.349 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:39:14.360 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:39:47.905 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:40:35.374 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:41:02.138 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:41:56.388 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:43:17.403 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:44:38.416 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:44:47.867 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 17:45:59.429 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:46:04.149 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:47:20.441 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:48:41.455 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:49:48.614 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:50:02.468 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:51:06.168 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:51:23.480 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:52:44.494 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:54:05.506 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:54:47.886 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 17:55:26.518 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:56:08.131 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 17:56:47.533 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:58:08.545 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:59:29.560 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 17:59:47.902 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:00:50.571 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:01:10.144 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:02:11.583 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:03:32.593 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:04:53.608 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:04:57.746 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.sam_to_home is taking over 10 seconds
+2022-09-02 18:05:00.008 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:06:12.142 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:06:14.621 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:07:35.633 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:08:56.644 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:09:47.908 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 18:09:47.944 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:10:17.655 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:11:14.153 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:11:38.666 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:12:59.679 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:14:20.691 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:14:47.877 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 18:14:47.934 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:15:41.723 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:16:16.174 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:17:02.738 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:18:23.753 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:19:44.768 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:19:47.891 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:20:19.976 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [547790050336] Disconnected: Did not receive auth message within 10 seconds
+2022-09-02 18:21:05.779 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:21:18.169 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:22:26.792 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:23:47.804 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:24:47.888 WARNING (SyncWorker_7) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:25:08.819 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:26:20.163 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:26:29.832 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:27:50.845 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:29:11.859 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:29:47.898 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:30:32.872 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:31:22.182 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:31:53.885 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:33:14.898 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:34:35.911 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:34:47.866 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 18:34:47.886 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:35:56.924 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:36:24.183 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:37:17.938 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:38:38.952 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:39:47.959 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:39:59.965 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:41:20.977 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:41:26.176 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:42:41.990 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:44:03.000 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:44:47.873 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:45:24.011 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:46:28.149 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:46:45.023 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:48:06.033 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:49:27.045 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:49:47.913 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 18:49:47.924 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:50:48.059 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:51:30.165 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:52:09.074 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:53:30.085 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:54:47.910 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 18:54:51.096 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:56:12.107 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:56:32.173 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 18:57:33.120 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:58:54.136 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 18:59:47.926 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:00:15.147 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:01:34.154 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:01:36.160 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:02:57.179 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:04:18.190 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:04:47.898 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 19:05:39.204 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:06:36.160 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:07:00.217 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:08:21.227 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:09:42.252 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:09:53.947 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:11:03.263 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:11:38.158 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:12:24.274 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:13:45.298 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:14:47.881 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:15:06.310 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:16:27.323 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:16:40.158 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:17:48.337 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:19:09.352 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:19:47.930 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:20:30.365 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:21:42.164 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:21:51.376 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:23:12.387 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:24:33.401 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:24:47.899 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:25:54.413 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:26:44.162 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:27:15.426 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:28:36.440 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:29:47.923 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 19:29:57.452 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:31:18.464 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:31:46.150 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:32:39.476 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:34:00.487 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:34:48.745 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:35:21.499 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:36:42.511 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:36:48.147 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:38:03.525 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:39:24.537 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:39:47.917 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:40:45.551 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:41:50.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:42:06.564 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:43:27.578 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:44:47.920 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 19:44:48.592 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:46:09.603 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:46:52.159 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:47:30.614 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:48:51.628 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:49:47.909 WARNING (SyncWorker_7) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 19:50:12.639 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:51:33.652 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:51:54.174 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:52:54.665 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:54:15.680 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:54:47.895 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 19:55:36.693 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:56:56.156 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 19:56:57.705 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:58:18.720 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:59:39.735 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 19:59:47.934 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 19:59:53.953 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:01:00.746 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:01:58.159 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:02:21.759 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:03:42.770 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:04:47.917 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:05:03.783 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:06:24.794 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:07:00.148 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:07:45.807 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:09:06.827 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:09:47.925 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:10:27.841 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:11:48.862 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:12:02.210 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:13:09.876 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:14:30.893 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:14:47.902 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 20:15:51.905 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:17:04.153 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:17:12.947 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:18:33.963 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:19:47.918 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 20:19:47.949 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:19:54.976 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:21:15.988 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:22:06.163 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:22:37.000 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:23:58.013 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:24:47.925 WARNING (SyncWorker_7) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:25:19.024 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:26:40.036 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:27:08.153 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:28:01.048 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:29:22.061 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:29:53.960 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:30:43.073 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:32:04.087 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:32:10.139 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:33:25.099 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:34:46.111 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:34:53.950 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:36:07.124 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:37:12.161 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:37:28.137 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:38:49.148 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:39:48.084 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:40:10.159 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:41:31.172 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:42:14.140 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:42:52.184 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:44:13.198 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:44:47.932 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:45:34.213 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:46:55.225 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:47:16.157 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:48:16.238 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:49:37.249 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:49:47.934 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:50:58.262 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:52:18.149 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:52:19.276 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:53:40.288 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:54:47.918 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 20:55:01.301 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:56:22.313 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:57:20.163 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 20:57:43.323 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:59:04.334 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 20:59:47.951 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 20:59:47.961 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:00:25.352 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:01:46.363 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:02:22.180 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:03:07.374 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:04:28.389 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:04:47.946 WARNING (SyncWorker_13) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:05:49.404 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:07:10.415 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:07:24.186 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:08:31.430 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:09:47.939 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:09:52.440 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:11:13.453 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:12:26.141 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:12:34.465 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:13:55.480 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:14:47.929 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:15:16.493 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:16:37.505 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:17:28.152 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:17:58.517 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:19:19.530 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:19:53.975 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:20:40.543 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:22:01.555 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:22:30.137 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:23:22.565 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:24:43.575 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:24:48.006 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:26:04.587 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:27:25.602 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:27:32.167 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:28:46.615 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:29:53.996 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:30:07.627 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:31:28.641 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:32:34.145 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:32:49.652 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:34:10.667 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:34:47.941 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 21:35:31.680 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:36:52.697 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:37:36.135 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:38:13.710 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:39:34.726 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:39:48.035 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:40:55.739 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:42:16.755 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:42:38.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:43:37.773 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:44:47.946 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:44:58.784 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:46:19.809 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:47:40.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:47:40.821 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:49:01.831 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:49:47.980 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:50:22.844 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:51:43.857 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:52:42.157 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:53:04.868 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:54:25.879 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:54:53.967 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:55:46.893 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:57:07.909 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:57:44.166 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 21:58:28.923 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 21:59:47.946 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 21:59:47.958 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 21:59:49.936 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:01:10.952 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:02:31.965 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:02:46.139 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:03:52.977 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:04:47.942 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:05:13.988 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:06:35.002 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:07:48.153 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:07:56.019 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:09:17.034 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:09:47.956 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:09:47.959 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:10:38.048 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:11:59.060 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:12:50.135 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:13:20.072 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:14:41.084 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:14:47.957 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:16:02.101 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:17:23.127 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:17:52.153 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:18:44.143 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:19:54.038 WARNING (SyncWorker_9) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:19:57.826 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.home_to_camden is taking over 10 seconds
+2022-09-02 22:20:05.166 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:21:26.181 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:22:47.197 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:22:54.229 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:24:08.212 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:24:48.025 WARNING (SyncWorker_2) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:25:29.227 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:26:50.240 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:27:56.185 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:28:11.253 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:29:32.269 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:29:47.967 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:29:47.987 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:30:53.289 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:32:14.300 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:32:58.135 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:33:35.312 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:34:47.988 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:34:56.325 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:36:17.336 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:37:38.348 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:38:00.329 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:38:59.362 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:39:47.989 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:40:20.375 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:41:41.388 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:43:02.158 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:43:02.401 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:44:23.414 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:44:43.420 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/namespaces/events.py", line 116, in _subscriber
+    response.data = [
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/namespaces/events.py", line 117, in <listcomp>
+    GitHubEventModel(event) for event in reversed(response.data or [])
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/models/base.py", line 35, in __init__
+    for key, value in self._raw_data.items():
+AttributeError: 'str' object has no attribute 'items'
+2022-09-02 22:44:47.967 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 22:44:47.979 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:45:44.426 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:47:05.461 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:48:10.499 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:48:14.419 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/core_mosquitto/stats request
+2022-09-02 22:48:15.256 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for core_mosquitto: 
+2022-09-02 22:48:15.258 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/core_ssh/stats request
+2022-09-02 22:48:15.260 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for core_ssh: 
+2022-09-02 22:48:15.263 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/a0d7b954_nodered/stats request
+2022-09-02 22:48:15.264 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nodered: 
+2022-09-02 22:48:15.267 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/core_mariadb/stats request
+2022-09-02 22:48:15.269 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for core_mariadb: 
+2022-09-02 22:48:15.271 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/5c53de3b_esphome/stats request
+2022-09-02 22:48:15.272 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for 5c53de3b_esphome: 
+2022-09-02 22:48:15.275 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/cebe7a76_hassio_google_drive_backup/stats request
+2022-09-02 22:48:15.276 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for cebe7a76_hassio_google_drive_backup: 
+2022-09-02 22:48:15.279 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/a0d7b954_vscode/stats request
+2022-09-02 22:48:15.281 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_vscode: 
+2022-09-02 22:48:15.284 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /addons/core_samba/stats request
+2022-09-02 22:48:15.285 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for core_samba: 
+2022-09-02 22:48:26.475 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:49:49.811 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:49:54.908 WARNING (SyncWorker_3) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:51:10.866 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:52:31.880 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:53:16.177 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:53:52.893 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:54:47.982 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 22:55:13.907 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:56:34.925 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:57:55.943 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:58:18.179 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 22:59:16.961 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 22:59:48.003 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:00:37.977 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:01:58.992 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:03:20.025 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:03:20.197 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:04:41.043 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:04:47.960 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:04:48.022 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:06:02.063 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:07:23.077 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:08:22.189 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:08:44.091 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:09:47.981 WARNING (SyncWorker_4) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:09:47.995 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:10:05.108 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:11:26.124 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:12:47.140 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:13:24.169 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:14:08.153 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:14:47.970 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:14:47.978 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:15:10.235 ERROR (MainThread) [homeassistant.components.github] Bad credentials
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/github/coordinator.py", line 128, in _async_update_data
+    response = await self._client.graphql(
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/github.py", line 225, in graphql
+    return await self._client.async_call_api(
+  File "/usr/local/lib/python3.10/site-packages/aiogithubapi/client.py", line 141, in async_call_api
+    raise exception(message or response.data)
+aiogithubapi.exceptions.GitHubAuthenticationException: Bad credentials
+2022-09-02 23:15:10.279 ERROR (MainThread) [homeassistant.components.github] Error fetching smcnab1/op-question-mark data: Bad credentials
+2022-09-02 23:15:29.169 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:16:50.186 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:18:11.207 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:18:26.182 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:19:32.232 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:19:48.236 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:20:53.253 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:22:14.274 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:23:28.165 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:23:35.294 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:24:47.975 WARNING (SyncWorker_0) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:24:47.984 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:24:56.312 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:26:17.329 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:27:38.343 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:28:30.155 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:28:59.356 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:29:48.431 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:30:20.370 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:31:41.383 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:33:02.430 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:33:32.400 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:34:23.444 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:34:54.079 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:35:44.457 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:37:05.470 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:38:26.482 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:38:35.158 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:39:47.511 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:39:48.050 WARNING (SyncWorker_11) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:39:48.081 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:41:08.539 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:42:29.552 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:43:37.409 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:43:50.566 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:44:48.023 WARNING (SyncWorker_5) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:45:11.584 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:46:32.600 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:47:53.614 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:48:39.340 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:49:14.632 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:49:48.037 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:50:35.646 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:51:56.671 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:53:17.686 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:53:42.543 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:54:38.704 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:54:48.002 WARNING (SyncWorker_6) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: empty response
+2022-09-02 23:54:48.013 WARNING (SyncWorker_10) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-02 23:55:59.722 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:57:20.735 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:58:41.748 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-02 23:58:45.394 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-02 23:59:48.055 WARNING (SyncWorker_1) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-03 00:00:02.769 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:01:23.783 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:02:44.797 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:03:48.194 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-03 00:04:05.810 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:04:48.031 WARNING (SyncWorker_12) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-03 00:05:26.827 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:06:47.843 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:08:08.860 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:08:50.269 WARNING (MainThread) [homeassistant.components.hassio] Could not fetch stats for a0d7b954_nginxproxymanager: Container addon_a0d7b954_nginxproxymanager is not running
+2022-09-03 00:09:29.876 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)
+2022-09-03 00:09:48.057 WARNING (SyncWorker_8) [homeassistant.components.waze_travel_time.sensor] Error on retrieving data: Internal Error
+2022-09-03 00:10:50.897 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.1.104:5555.  TcpTimeoutException: Connecting to 192.168.1.104:5555 timed out (1.0 seconds)

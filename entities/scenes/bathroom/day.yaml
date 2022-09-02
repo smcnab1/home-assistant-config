@@ -1,0 +1,19 @@
+id: '1660666229244'
+name: 'Scene: Bathroom Day'
+entities:
+  light.all_bathroom_lights:
+    supported_color_modes:
+    - brightness
+    - hs
+    entity_id:
+    - light.bathroom_lights
+    icon: mdi:lightbulb-group
+    friendly_name: ALL BATHROOM LIGHTS
+    supported_features: 0
+    color_mode: brightness
+    brightness: 117
+    state: 'on'
+icon: mdi:weather-sunny
+metadata:
+  light.all_bathroom_lights:
+    entity_only: true

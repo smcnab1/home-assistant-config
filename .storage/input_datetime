@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_datetime",
+  "data": {
+    "items": [
+      {
+        "has_time": true,
+        "has_date": false,
+        "name": "Alarm Time Sam",
+        "id": "alarm_time_sam"
+      },
+      {
+        "name": "Alarm Time Leah",
+        "has_date": false,
+        "has_time": true,
+        "id": "alarm_time_leah"
+      }
+    ]
+  }
+}

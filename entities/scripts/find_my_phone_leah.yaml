@@ -1,0 +1,9 @@
+sequence:
+  - service: notify.mobile_app_leah_s_iphone
+    data:
+      message: Find my Phone
+      data:
+        data:
+          interruption-level: critical
+      title: Home Assistant is looking for your phone
+mode: single

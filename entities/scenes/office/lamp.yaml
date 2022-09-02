@@ -1,0 +1,34 @@
+id: '1660666914576'
+name: 'Scene: Office Lamp'
+entities:
+  light.desk_lamp:
+    supported_color_modes:
+    - onoff
+    friendly_name: 'Office: Desk Lamp'
+    supported_features: 0
+    color_mode: onoff
+    state: 'on'
+  light.office_desk_led:
+    supported_color_modes:
+    - hs
+    friendly_name: 'Office: Desk LED'
+    supported_features: 0
+    color_mode: hs
+    brightness: 168
+    hs_color:
+    - 195
+    - 14.3
+    rgb_color:
+    - 218
+    - 245
+    - 255
+    xy_color:
+    - 0.287
+    - 0.32
+    state: 'on'
+icon: mdi:desk-lamp
+metadata:
+  light.desk_lamp:
+    entity_only: true
+  light.office_desk_led:
+    entity_only: true

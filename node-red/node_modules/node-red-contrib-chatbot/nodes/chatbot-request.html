@@ -1,0 +1,95 @@
+<script type="text/javascript">
+  $.RedBot.registerType('chatbot-request', {
+    category: $.RedBot.config.name,
+    color: '#FFCC66',
+    defaults: {
+      name: {
+        value: ''
+      },
+      message: {
+        value: '',
+        required: true
+      },
+      requestType: {
+        value: 'location'
+      },
+      buttonLabel: {
+        value: ''
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'Request',
+    icon: 'chatbot-request.png',
+    label: function() {
+      return this.name || 'Request';
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="chatbot-request">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+      <label for="node-input-type">Type</label>
+      <select id="node-input-requestType">
+        <option value="location">Request user location</option>
+        <option value="phone-number">Request user's phone number</option>
+      </select>
+  </div>
+  <div class="form-row">
+    <label for="node-input-message">Message</label>
+    <textarea id="node-input-message" placeholder="Message" style="width:93%;height:200px;"></textarea>
+    <div style="max-width: 460px;font-size: 12px;color: #999999;line-height: 14px;clear:both;margin-top:5px;">
+      Supports handlebars-like variables for chat context like {{firstName}}, {{lastName}}, etc. and emoticons (:smile:, etc.)
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="node-input-buttonLabel">Label</label>
+    <input type="text" id="node-input-buttonLabel" placeholder="Button label" class="platform-telegram">
+    <div style="max-width: 460px;font-size: 12px;color: #999999;line-height: 14px;">
+      Optional label for the request button
+    </div>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="chatbot-request"><p>Trigger a special request button in <em>Facebook Messenger</em> or <em>Telegram</em> client, like current position or phone number (only for <em>Telegram</em>).</p>
+<p>With <em>Facebook Messenger</em> it’s also possible to use <a href="https://www.notion.so/200e9ae1a1fd459baa29c76d6a4025e2">Quick Replies node</a>  to ask the current position of the user.</p>
+<p>The parameters for the <code>Request node</code> can be defined in a upstream <code>Function node</code>, for example</p>
+<pre><code class="language-javascript">msg.payload = {
+  message: &#39;Please tell me where you are&#39;,
+  requestType: &#39;location&#39;,
+  buttonLabel: &#39;Your position&#39;
+};
+return msg;
+</code></pre>
+<p>Available parameters for the <code>msg.payload</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>message</td>
+<td>string</td>
+<td>The message text above the request button</td>
+</tr>
+<tr>
+<td>requestType</td>
+<td>string</td>
+<td>Type of request. Can be <em>location</em> or <em>phone-number</em></td>
+</tr>
+<tr>
+<td>buttonLabel</td>
+<td>string</td>
+<td>Button label (only for <em>Telegram</em>)</td>
+</tr>
+</tbody></table>
+</script>
+
+

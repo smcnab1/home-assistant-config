@@ -1,0 +1,15 @@
+id: '1659640391455'
+alias: Waze Camden
+description: ''
+trigger: []
+condition: []
+action:
+- service: notify.mobile_app_sam_s_phone
+  data:
+    data:
+      actions:
+      - action: URI
+        title: Open Waze
+        uri: https://waze.com/ul/?ll=51.553794860839844%2C-0.1612287014722824&navigate=yes&zoom=17
+    message: Travelling to Camden Station?
+mode: single

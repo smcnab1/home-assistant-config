@@ -1,0 +1,15 @@
+id: '1660668216864'
+alias: 'Scene: Bedroom Night'
+description: ''
+trigger: []
+condition: []
+action:
+- service: scene.turn_on
+  data: {}
+  target:
+    entity_id: scene.scene_bedroom_night
+- service: light.turn_off
+  data: {}
+  target:
+    entity_id: light.bedroom
+mode: single

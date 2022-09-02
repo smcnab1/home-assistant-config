@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "home-assistant-voice-node-red",
+  "private_key_id": "f2d0ad06ea635607079ba6b7c309475a472b42c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDdxccq+AnWS8Ua\njB2DbMpXrTWUuFRpRKtcwZJKaE6Noeq4jlrwDnld+GMS8jxf32nkxtWvIkPHUJty\nSwWGr48JLntDIGRQMJkkJQAQQIBNFM0/HUmK4PMCPbiinuje00YsLbzjs2u52KSm\nc4cCXpU3AuseJhPp38NoEAM7PyPggv3FkqQTqoRgX/VJBary6rBuCbvVD93spe4Y\n+E+QZlUxTxm3eNvfkNUb8jbTGslfN1XoITI00OT1VlaV3uUlea9cu0p7dAK07EKA\nqEqIXSIkBYscfYUHiYNttELn/zauTeLzSQidbXlIfIIPKzxOyGsKgtL2ZAOClB8L\n03cQRRMBAgMBAAECggEAAoZkxkpNAQnGJI9m1fRlo1+UphepLQpRRyeUYlDTYCJx\nToj0Y8T5Fcb6XctbQPOFZvY/6ulhdddRmxixPJTVdJMjvSJqcffzrmkrby6aJ1vZ\ncGKwJSrQKXzevsnqDdYVokgiXUH8M9anHUFgeU2ZYPx2r9Za0LAHBLF1+p/f6TJJ\n1h2brgo6oTXfL1vu4S7U9Hh9c6Jxgu1KgwXofVe0UMimmnMPAGHqljLT0u5ylayY\nIppxge0mfNyaENeJ5ADIS7XjTT5WxdUtOA2b0V6Ag5GN0sQSdPWfHLo73cv+RmAo\nezAzVqPMf8W62KBHzX3SGQUTh7WfcqKPD7hWBBhb/wKBgQD9VOF+WakbgctB0n3D\ndRP9CcwjWVByZCCt6vvFyVpno/vwv3343OOseWaL0RpYMDfBUb6ilGRUZeL0QyLL\nSrB3KEqzlcy5QX1Dg2UC2wwM75xRDHFKOCbjMYrxFYydT+W1uZ3hhxeo3/cj3zfT\nkxa/tf/57xRl6BU5J9mn2o7gHwKBgQDgG8wJFdABDJx0093+jYxRZMYrvUGSShba\n3Hk+9KrzngiFKt905le9nA5u/j+8cwoqyq3F/lGMJzxmkunSw6AePz3ATu7QoBwC\nK3eWevHb8TMrqFtoB5FC2lHxdhdQOM4CGy+TNuGhqrchy9cg/ey07yBdXK/pc5w4\nw8LG/9Uo3wKBgQDJ9J8HcUcFLMXzJXEpHu7ebK8XBx7A8t2yiIBKvyiZMvuog6BT\ngxTl7Ko5kGtmHpp0PUyyo4YQWmFBxTu5wUNI2xAidquMjI7mAZvHWQUUUvjVDAxM\n1NL7kAVqCHne91DzPJSGtIHCGToWmN8ShlI+Z0M35sbmLsyskf5MeEoqlQKBgFEF\n+7h1KGSYuKAMUUBM0KREuNjrbZ+EJcsu1q8KKhw10ILEw1EyThqBJz69sTFirhRW\nfokMr1LqhI3ZI6xNicAlwR+b6f+HQ1kNegjvni2UgJmSHqn3wm7XG7UeqsMYJnLg\nfUzOFLksTVVsqvSEmWW45oyajAbtA1gKfosPx3MlAoGBAJyGiX2UEkruIfm02xPm\n8heb7TuICMv2nVfJpDjPDFwYOkwJm6J4BpPpEi4wOQxyaTYIjlJrvP94UnQ6bTTO\nBwxBJtvXqeQ1U3vtag2k29ZvfAlCEzfaJSHQQlLT6on5WLIQ+Vp7CYmLXpft3reA\n4ZklgacHZNV9nci3tojY7QXp\n-----END PRIVATE KEY-----\n",
+  "client_email": "node-red-ha@home-assistant-voice-node-red.iam.gserviceaccount.com",
+  "client_id": "116944722641413596228",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/node-red-ha%40home-assistant-voice-node-red.iam.gserviceaccount.com"
+}

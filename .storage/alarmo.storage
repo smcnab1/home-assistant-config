@@ -1,0 +1,50 @@
+{
+  "version": 6,
+  "minor_version": 1,
+  "key": "alarmo.storage",
+  "data": {
+    "config": {
+      "code_arm_required": false,
+      "code_disarm_required": false,
+      "code_format": "number",
+      "disarm_after_trigger": false,
+      "master": {
+        "enabled": true,
+        "name": "master"
+      },
+      "mqtt": {
+        "enabled": false,
+        "state_topic": "alarmo/state",
+        "state_payload": {},
+        "command_topic": "alarmo/command",
+        "command_payload": {},
+        "require_code": true,
+        "event_topic": "alarmo/event"
+      }
+    },
+    "areas": [
+      {
+        "area_id": "1659476683",
+        "name": "Alarmo",
+        "modes": {
+          "armed_away": {
+            "enabled": true,
+            "exit_time": 60,
+            "entry_time": 60,
+            "trigger_time": 1800
+          },
+          "armed_home": {
+            "enabled": true,
+            "exit_time": 0,
+            "entry_time": 0,
+            "trigger_time": 1800
+          }
+        }
+      }
+    ],
+    "sensors": [],
+    "users": [],
+    "automations": [],
+    "sensor_groups": []
+  }
+}

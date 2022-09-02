@@ -1,0 +1,458 @@
+---
+card_esh_room_lr:
+  color: "var(--google-grey-500)"
+  show_icon: true
+  show_name: true
+  show_label: true
+  template:
+    - "ulm_translation_engine"
+  size: "20px"
+  variables:
+    ulm_custom_card_esh_room_light_entity: null
+    ulm_custom_card_esh_room_climate_entity: null
+    ulm_card_thermostat_enable_popup: false
+    ulm_card_light_enable_popup: true
+  styles:
+    card:
+      - border-radius: "20px"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+    grid:
+      - grid-template-areas: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "'i light' 'n climate' 'l climate'";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "'i light' 'n n' 'l l'";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "'i .' 'n climate' 'l climate'";
+            } else {
+                return "'i .' 'n n' 'l l'";
+            }
+          ]]]
+      - grid-template-columns: "1fr 1fr"
+      - grid-template-rows: "min-content"
+    icon:
+      - color: "rgba(var(--color-theme),0.2)"
+    img_cell:
+      - background-color: "rgba(var(--color-theme),0.05)"
+      - border-radius: "50%"
+      - place-self: "center"
+      - width: "42px"
+      - height: "42px"
+    name:
+      - align-self: "end"
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "14px"
+      - margin-left: "12px"
+      - margin-top: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "8px";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "12px";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "8px";
+            } else {
+                return "12px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "100%";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else {
+                return "100%";
+            }
+          ]]]
+    label:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+      - margin-bottom: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "0px";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "3px";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "0px";
+            } else {
+                return "3px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "100%";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else {
+                return "100%";
+            }
+          ]]]
+    state:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+    custom_fields:
+      light:
+        - display: >
+            [[[
+                  if (variables.ulm_custom_card_esh_room_light_entity) {
+                      return "block";
+                  } else {
+                      return "none";
+                  }
+            ]]]
+      climate:
+        - display: >
+            [[[
+                  if (variables.ulm_custom_card_esh_room_climate_entity) {
+                      return "block";
+                  } else {
+                      return "none";
+                  }
+            ]]]
+  custom_fields:
+    light:
+      card:
+        entity: "[[[ return variables.ulm_custom_card_esh_room_light_entity ]]]"
+        name: "[[[ return name ]]]"
+        state:
+          - value: "on"
+            icon: "mdi:lightbulb-group"
+            styles:
+              icon:
+                - color: "rgba(var(--color-blue),1)"
+              img_cell:
+                - background-color: "rgba(var(--color-blue), 0.2)"
+          - value: "off"
+            icon: "mdi:lightbulb-group-off"
+        type: "custom:button-card"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+        variables: >
+          [[[
+            let vars = {};
+            vars.ulm_card_light_enable_popup = variables.ulm_card_light_enable_popup;
+
+            if(variables.ulm_card_light_enable_popup) {
+              vars.ulm_custom_popup = {
+                'template': 'popup_light_brightness',
+                'popup_variables': {
+                  'ulm_popup_light_entity': variables.ulm_custom_card_esh_room_light_entity,
+                }
+              };
+            }
+            return vars;
+          ]]]
+        tap_action:
+          action: "fire-dom-event"
+          browser_mod:
+            command: "popup"
+            hide_header: false
+            title: "Living Room Lights"
+            large: true
+            card:
+              type: "vertical-stack"
+              cards:
+                - type: custom:slider-button-card
+                  entity: switch.living_room
+                  name: Main Lights
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:ceiling-light
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: more-info
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: light.living_room_leds
+                  name: Main LEDs
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:led-strip
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: "fire-dom-event"
+                      browser_mod:
+                        command: "popup"
+                        large: true
+                        hide_header: true
+                        card:
+                          type: "custom:button-card"
+                          template: "popup_light_brightness"
+                          entity: light.living_room_leds
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: light.living_room_dining_led
+                  name: Display LEDs
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:led-strip
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: "fire-dom-event"
+                      browser_mod:
+                        command: "popup"
+                        large: true
+                        hide_header: true
+                        card:
+                          type: "custom:button-card"
+                          template: "popup_light_brightness"
+                          entity: light.living_room_dining_led
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: light.living_room_tv_leds
+                  name: TV LEDs
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:led-strip
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: "fire-dom-event"
+                      browser_mod:
+                        command: "popup"
+                        large: true
+                        hide_header: true
+                        card:
+                          type: "custom:button-card"
+                          template: "popup_light_brightness"
+                          entity: light.living_room_tv_leds
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: switch.lava_lamp
+                  name: Lava Lamp
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:lava-lamp
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: more-info
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: switch.lounge_lamp
+                  name: Lamp
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:floor-lamp
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: more-info
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: custom:slider-button-card
+                  entity: light.living_room_dreamview
+                  name: DreamView
+                  slider: 
+                    direction: left-right
+                    background: gradient
+                    use_state_color: true
+                    show_track: true
+                    force_square: false
+                  icon:
+                    icon: mdi:movie
+                    use_state_color: true
+                    show: true
+                    tap_action:
+                      action: more-info
+                  action_button:
+                    mode: custom
+                    show: true
+                    tap_action:
+                      action: toggle
+                - type: "custom:button-card"
+                  template: "card_title"
+                  name: "Scenes"
+                - type: horizontal-stack
+                  cards:
+                    - type: 'custom:button-card'
+                      template: card_vertical_button
+                      entity: automation.scene_living_room_day
+                      name: Day
+                      icon: mdi:weather-sunny
+                      show_last_changed: true
+                      tap_action:
+                        action: call-service
+                        service: automation.trigger
+                        service_data:
+                          entity_id: automation.scene_living_room_day
+                    - type: 'custom:button-card'
+                      template: card_vertical_button
+                      entity: automation.scene_living_room_night
+                      name: Night
+                      icon: mdi:weather-night
+                      show_last_changed: true
+                      tap_action:
+                        action: call-service
+                        service: automation.trigger
+                        service_data:
+                          entity_id: automation.scene_living_room_night
+                    - type: 'custom:button-card'
+                      template: card_vertical_button
+                      entity: automation.scene_living_room_movie
+                      name: Movie
+                      icon: mdi:movie
+                      show_last_changed: true
+                      tap_action:
+                        action: call-service
+                        service: automation.trigger
+                        service_data:
+                          entity_id: automation.scene_living_room_movie
+                    - type: 'custom:button-card'
+                      template: card_vertical_button
+                      entity: automation.scene_living_room_off
+                      name: All Off
+                      icon: mdi:lightbulb-off
+                      show_last_changed: true
+                      tap_action:
+                        action: call-service
+                        service: automation.trigger
+                        service_data:
+                          entity_id: automation.scene_living_room_off
+
+
+    climate:
+      card:
+        entity: "[[[ return variables.ulm_custom_card_esh_room_climate_entity ]]]"
+        name: "[[[ return name ]]]"
+        icon: mdi:devices
+        type: "custom:button-card"
+        styles:
+          card:
+            - margin-top: "5px"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+        variables: >
+          [[[
+            let vars = {};
+            vars.ulm_card_thermostat_enable_popup = variables.ulm_card_light_enable_popup;
+
+            if(variables.ulm_card_thermostat_enable_popup) {
+              vars.ulm_custom_popup = {
+                'template': 'popup_thermostat_temperature',
+                'popup_variables': {
+                  'ulm_popup_thermostat_entity': variables.ulm_custom_card_esh_room_climate_entity,
+                }
+              };
+            }
+            return vars;
+          ]]]
+        tap_action:
+          action: "fire-dom-event"
+          browser_mod:
+            command: "popup"
+            hide_header: false
+            title: "Living Room Media"
+            large: true
+            card:
+              type: "vertical-stack"
+              cards:
+                - type: "custom:button-card"
+                  template: card_media_player
+                  entity: media_player.samsung_tv
+                  variables:
+                    ulm_card_media_player_name : Samsung TV
+                    ulm_card_media_player_icon: mdi:television
+                    ulm_card_media_player_enable_art: true
+                    ulm_card_media_player_enable_controls: true
+                    ulm_card_media_player_enable_volume_slider: true
+                    ulm_card_media_player_enable_popup: true
+                    ulm_card_media_player_more_info: true
+                - type: "custom:button-card"
+                  template: card_media_player
+                  entity: media_player.living_room_speaker
+                  variables:
+                    ulm_card_media_player_name : Google Assistant
+                    ulm_card_media_player_icon: mdi:google-assistant
+                    ulm_card_media_player_enable_art: true
+                    ulm_card_media_player_enable_controls: true
+                    ulm_card_media_player_enable_volume_slider: true
+                    ulm_card_media_player_enable_popup: true
+                    ulm_card_media_player_more_info: true
+                - type: "custom:button-card"
+                  template: card_media_player
+                  entity: media_player.living_room_sonos_sonos
+                  variables:
+                    ulm_card_media_player_name : Sonos Speaker
+                    ulm_card_media_player_icon: mdi:speaker
+                    ulm_card_media_player_enable_art: true
+                    ulm_card_media_player_enable_controls: true
+                    ulm_card_media_player_enable_volume_slider: true
+                    ulm_card_media_player_enable_popup: true
+                    ulm_card_media_player_more_info: true

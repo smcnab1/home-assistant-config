@@ -1,0 +1,38 @@
+blueprint:
+  name: System Set Default Theme
+  description: Set the default themes on start.
+  domain: automation
+  input:
+    theme:
+      name: Which Theme
+      description: Which theme would you like to set as default on reload / start-up?
+      selector:
+        select:
+          options:
+          - minimalist-desktop
+          - minimalist-mobile
+          - minimalist-mobile-tapbar
+          custom_value: false
+          multiple: false
+    mode:
+      name: Which Mode should it be default in
+      description: Default in Dark or Light mode?
+      selector:
+        select:
+          options:
+          - light
+          - dark
+          custom_value: false
+          multiple: false
+  source_url: https://github.com/UI-Lovelace-Minimalist/UI/blob/main/custom_components/ui_lovelace_minimalist/blueprints/set_theme.yaml
+mode: single
+trigger:
+- platform: homeassistant
+  event: start
+- platform: event
+  event_type: automation_reload
+action:
+- service: frontend.set_theme
+  data:
+    name: !input theme
+    mode: !input mode
