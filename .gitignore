@@ -48,3 +48,11 @@ www/community
 
 # Temporary ignores
 .old_config
+adbkey
+adbkey.pub
+frigate.yaml
+govee_learning.yaml
+home-assistant-voice-node-red-f2d0ad06ea63.json
+nodered.json
+rtsp2webrtc_v5_aarch64
+watchman_report.txt
