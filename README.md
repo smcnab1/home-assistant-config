@@ -38,8 +38,6 @@
 <!-- CONTENTS -->
 ## Contents
   <p align="center">
-    <a href="#system-diagram">System Diagram</a>
-    |
     <a href="#note-automations">Noteworthy Automations</a>
     |
     <a href="#devices">Devices</a>
@@ -60,19 +58,6 @@
   <img src="https://i.imgur.com/NalP8Tn.png" alt="Screenshot Desktop" width="900" height="400">
   </a>
 </p>
-
-<!-- SYSTEM DIAGRAM -->
-<a name="system-diagram"></a>
-
-### System Diagram
-<p id="system-diagram">
-This is my current HA system diagram. Inspired by <a href="https://github.com/CCOSTAN/Home-AssistantConfigCCOSTAN">CCOSTAN's HA Repo.</a>
-<br />
-
-<b><i>Currently a WIP</i></b>
-</p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- NOTEWORTHY AUTOMATIONS -->
 <a name="note-automations"></a>
