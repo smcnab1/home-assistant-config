@@ -1,1 +1,1 @@
-binary_sensor: !include_dir_named ../entities/binary_sensor
+binary_sensor: !include ../entities/binary_sensor.yaml
