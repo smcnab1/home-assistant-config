@@ -1,8 +1,8 @@
 ---
 name: Bug report
-about: Create a report to help me improve
+about: Create a report to help fix current bugs found
 title: "[BUG]"
-labels: bug
+labels: 'Priority: High, Type: Bug'
 assignees: smcnab1
 
 ---
