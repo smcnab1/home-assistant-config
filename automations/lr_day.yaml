@@ -1,11 +1,11 @@
-id: '1660667701310'
+
 alias: 'Scene: Living Room Day'
 description: ''
 trigger: []
 condition: []
 action:
-- service: scene.turn_on
-  data: {}
-  target:
-    entity_id: scene.scene_living_room_day
+  - service: scene.turn_on
+    data: {}
+    target:
+      entity_id: scene.scene_living_room_day
 mode: single

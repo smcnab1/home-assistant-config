@@ -1,77 +1,77 @@
-id: '1658352284044'
+
 alias: 'Alarm: Sound Siren when Alarm Triggered'
 description: ''
 trigger:
-- platform: state
-  entity_id:
-  - alarm_control_panel.home_alarm
-  to: triggered
-  id: alarm-is-triggered
-- platform: state
-  entity_id:
-  - alarm_control_panel.home_alarm
-  to: disarmed
-  id: alarm-is-disarmed
+  - platform: state
+    entity_id:
+    - alarm_control_panel.home_alarm
+    to: triggered
+    id: alarm-is-triggered
+  - platform: state
+    entity_id:
+    - alarm_control_panel.home_alarm
+    to: disarmed
+    id: alarm-is-disarmed
 condition: []
 action:
-- choose:
-  - conditions:
-    - condition: trigger
-      id: alarm-is-triggered
-    sequence:
-    - service: media_player.volume_set
-      data:
-        volume_level: 1
-      target:
-        entity_id:
-        - media_player.living_room_sonos_sonos
-        - media_player.bedroom
-        - media_player.living_room_speaker
-    - repeat:
-        until:
-        - condition: state
-          entity_id: alarm_control_panel.home_alarm
-          state: disarmed
-        sequence:
-        - service: media_player.play_media
-          data:
-            media_content_id: http://homeassistant.local:8123/local/Alarm-System_config_www_alarm1.mp3
-            media_content_type: music
-          target:
-            entity_id: media_player.living_room_sonos_sonos
-        - delay:
-            hours: 0
-            minutes: 0
-            seconds: 10
-            milliseconds: 0
-        - service: tts.cloud_say
-          data:
-            entity_id: media_player.home_group
-            message: Alarm has been activated. Police have been called and are on
-              the way
-        - delay:
-            hours: 0
-            minutes: 0
-            seconds: 30
-            milliseconds: 0
-        - service: tts.cloud_say
-          data:
-            entity_id: media_player.home_group
-            message: Police are now 1 minute away
-  - conditions:
-    - condition: trigger
-      id: alarm-is-disarmed
-    sequence:
-    - service: media_player.media_stop
-      data: {}
-      target:
-        entity_id: media_player.living_room_sonos_sonos
-    - service: media_player.volume_set
-      data:
-        volume_level: 0.2
-      target:
-        entity_id:
-        - media_player.living_room_sonos_sonos
-        - media_player.home_group
-  default: []
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: alarm-is-triggered
+      sequence:
+      - service: media_player.volume_set
+        data:
+          volume_level: 1
+        target:
+          entity_id:
+          - media_player.living_room_sonos_sonos
+          - media_player.bedroom
+          - media_player.living_room_speaker
+      - repeat:
+          until:
+          - condition: state
+            entity_id: alarm_control_panel.home_alarm
+            state: disarmed
+          sequence:
+          - service: media_player.play_media
+            data:
+              media_content_id: http://homeassistant.local:8123/local/Alarm-System_config_www_alarm1.mp3
+              media_content_type: music
+            target:
+              entity_id: media_player.living_room_sonos_sonos
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 10
+              milliseconds: 0
+          - service: tts.cloud_say
+            data:
+              entity_id: media_player.home_group
+              message: Alarm has been activated. Police have been called and are on
+                the way
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 30
+              milliseconds: 0
+          - service: tts.cloud_say
+            data:
+              entity_id: media_player.home_group
+              message: Police are now 1 minute away
+    - conditions:
+      - condition: trigger
+        id: alarm-is-disarmed
+      sequence:
+      - service: media_player.media_stop
+        data: {}
+        target:
+          entity_id: media_player.living_room_sonos_sonos
+      - service: media_player.volume_set
+        data:
+          volume_level: 0.2
+        target:
+          entity_id:
+          - media_player.living_room_sonos_sonos
+          - media_player.home_group
+    default: []
 mode: restart

@@ -1,14 +1,14 @@
-id: '1658408979140'
+
 alias: 'Tag: Alarm ARM if scanned'
 description: ''
 trigger:
-- platform: tag
-  tag_id: 26b3d90e-242b-46f0-8540-5d6ebac1364b
+  - platform: tag
+    tag_id: 26b3d90e-242b-46f0-8540-5d6ebac1364b
 condition: []
 action:
-- service: alarm_control_panel.alarm_arm_away
-  data: {}
-  target:
-    entity_id:
-    - alarm_control_panel.home_alarm
+  - service: alarm_control_panel.alarm_arm_away
+    data: {}
+    target:
+      entity_id:
+      - alarm_control_panel.home_alarm
 mode: single

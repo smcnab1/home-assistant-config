@@ -1,12 +1,12 @@
-id: '1660666555954'
+
 alias: 'Scene: Bathroom Off'
 description: ''
 trigger: []
 condition: []
 action:
-- service: light.turn_off
-  data:
-    transition: 30
-  target:
-    entity_id: light.all_bathroom_lights
+  - service: light.turn_off
+    data:
+      transition: 30
+    target:
+      entity_id: light.all_bathroom_lights
 mode: single

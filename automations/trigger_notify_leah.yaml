@@ -1,62 +1,62 @@
-id: '1659706530100'
+
 alias: 'Alarm: Trigger Notification - Leah'
 description: ''
 trigger:
-- platform: state
-  entity_id:
-  - alarm_control_panel.home_alarm
-  to: triggered
+  - platform: state
+    entity_id:
+    - alarm_control_panel.home_alarm
+    to: triggered
 condition:
-- type: is_motion
-  condition: device
-  device_id: 72ff176259d52b26c418dccc887eef13
-  entity_id: binary_sensor.bedroom_motion_sensor_4
-  domain: binary_sensor
+  - type: is_motion
+    condition: device
+    device_id: 72ff176259d52b26c418dccc887eef13
+    entity_id: binary_sensor.bedroom_motion_sensor_4
+    domain: binary_sensor
 action:
-- service: notify.mobile_app_leah_s_iphone
-  data:
-    title: INTRUDER ALERT - HOME ALARM TRIGGERED
-    message: What would you like to do?
+  - service: notify.mobile_app_leah_s_iphone
     data:
-      sticky: 'true'
-      icon:
-      ttl: 0
-      importance: high
-      persistent: true
-      tag: persistent
-      visibility: public
-      push:
-        sound:
-          name: 3rd_party_critical.caf
-          critical: 1
-          volume: 1
-        interruption-level: critical
-        presentation_options:
-        - alert
-      actions:
-      - action: URI
-        title: View Cameras
-        uri: /ui-lovelace-minimalist/secure
-        icon: sfsymbols:camera.circle.fill
-      - action: URI
-        title: Text Sam
-        uri: https://api.whatsapp.com/send?phone=+447513595678&text=Alarm%20has%20gone%20off%0EYou%20at%20home%1F#Intent;package=com.whatsapp;scheme=whatsapp;end&phone=+447531049994
-        icon: "sfsymbols:phone.circle.fill"
-      - action: DISARM_ALARM
-        title: Disarm
-        icon: sfsymbols:bell.fill
-        destructive: true
-      - action: CALL
-        title: Call the Police
-        uri: tel:999
-        icon: sfsymbols:phone.fill
-        destructive: true
-- delay:
-    hours: 0
-    minutes: 5
-    seconds: 0
-    milliseconds: 0
-- service: notify.mobile_app_leah_s_iphone
-  data:
-    message: clear_notification
+      title: INTRUDER ALERT - HOME ALARM TRIGGERED
+      message: What would you like to do?
+      data:
+        sticky: 'true'
+        icon:
+        ttl: 0
+        importance: high
+        persistent: true
+        tag: persistent
+        visibility: public
+        push:
+          sound:
+            name: 3rd_party_critical.caf
+            critical: 1
+            volume: 1
+          interruption-level: critical
+          presentation_options:
+          - alert
+        actions:
+        - action: URI
+          title: View Cameras
+          uri: /ui-lovelace-minimalist/secure
+          icon: sfsymbols:camera.circle.fill
+        - action: URI
+          title: Text Sam
+          uri: https://api.whatsapp.com/send?phone=+447513595678&text=Alarm%20has%20gone%20off%0EYou%20at%20home%1F#Intent;package=com.whatsapp;scheme=whatsapp;end&phone=+447531049994
+          icon: "sfsymbols:phone.circle.fill"
+        - action: DISARM_ALARM
+          title: Disarm
+          icon: sfsymbols:bell.fill
+          destructive: true
+        - action: CALL
+          title: Call the Police
+          uri: tel:999
+          icon: sfsymbols:phone.fill
+          destructive: true
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - service: notify.mobile_app_leah_s_iphone
+    data:
+      message: clear_notification
 mode: single

@@ -1,19 +1,18 @@
-id: '1659722016272'
-alias: 'Alarm: Arm Alarm Notification'
-description: ''
+alias: "Alarm: Arm Alarm Notification"
+description: ""
+mode: single
 trigger:
-- platform: event
-  event_type: mobile_app_notification_action
-  event_data:
-    action: ARM_ALARM
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data: 
+      action: ARM_ALARM
 condition: []
 action:
-- service: alarm_control_panel.alarm_arm_away
-  data: {}
-  target:
-    entity_id: alarm_control_panel.home_alarm
-- service: notify.notify
-  data:
-    title: Alarm has been Armed
-    message: Alarm has been Armed
-mode: single
+  - service: alarm_control_panel.alarm_arm_away
+    data: {}
+    target:
+      entity_id: alarm_control_panel.home_alarm
+  - service: notify.notify
+    data:
+      title: Alarm has been Armed
+      message: Alarm has been Armed

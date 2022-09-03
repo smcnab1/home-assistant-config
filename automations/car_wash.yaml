@@ -1,29 +1,29 @@
-id: '1660652751839'
+
 alias: 'Car Wash: Wash Car Notification'
 description: ''
 trigger:
-- platform: state
-  entity_id:
-  - binary_sensor.car_wash
-  to: 'on'
+  - platform: state
+    entity_id:
+    - binary_sensor.car_wash
+    to: 'on'
 condition:
-- condition: state
-  entity_id: input_boolean.holiday
-  state: 'off'
+  - condition: state
+    entity_id: input_boolean.holiday
+    state: 'off'
 action:
-- service: notify.mobile_app_sam_s_phone
-  data:
-    title: Wash Your Car
-    message: What would you like to do?
+  - service: notify.mobile_app_sam_s_phone
     data:
-      ttl: 0
-      importance: high
-      notification_icon: mdi:car-wash
-      actions:
-      - action: URI
-        title: Navigate to Local Car Wash
-        uri: https://waze.com/ul/?ll=51.54787782194006%2C-0.1840422629292826&navigate=yes&zoom=17
-      - action: URI
-        title: Book Car Wash Visit
-        uri: app://com.splashanddrip
+      title: Wash Your Car
+      message: What would you like to do?
+      data:
+        ttl: 0
+        importance: high
+        notification_icon: mdi:car-wash
+        actions:
+        - action: URI
+          title: Navigate to Local Car Wash
+          uri: https://waze.com/ul/?ll=51.54787782194006%2C-0.1840422629292826&navigate=yes&zoom=17
+        - action: URI
+          title: Book Car Wash Visit
+          uri: app://com.splashanddrip
 mode: single
