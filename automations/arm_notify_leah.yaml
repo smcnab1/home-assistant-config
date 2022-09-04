@@ -3,7 +3,7 @@ description: ''
 trigger:
   - platform: state
     entity_id:
-    - person.leah_jinks
+    - device_tracker.leah_jinks
     to: away
 condition: []
 action:
