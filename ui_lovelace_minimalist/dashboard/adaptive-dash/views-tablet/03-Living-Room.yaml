@@ -268,27 +268,27 @@ cards:
       name: Camera
       icon: mdi:cctv
       tap_action:
-        action: "fire-dom-event"
+        action: fire-dom-event
         browser_mod:
-          command: "popup"
-          hide_header: false
-          title: Living Room Camera
-          card:
-            type: custom:frigate-card
-            cameras:
-              - camera_entity: camera.living_room
-                camera_name: Living Room
-            view:
-              default: live
-            menu:
-              mode: overlay-bottom
-              buttons:
-                image: true
-            live:
-              lazy_load: false
-              auto_unmute: true
-              preload: true
-              controls:
-                thumbnails:
-                  media: clips
-                  mode: below
+          service: browser_mod.popup
+          data:
+            title: "Living Room Camera"
+            content:
+              type: custom:frigate-card
+              cameras:
+                - camera_entity: camera.living_room
+                  camera_name: Living Room
+              view:
+                default: live
+              menu:
+                mode: overlay-bottom
+                buttons:
+                  image: true
+              live:
+                lazy_load: false
+                auto_unmute: true
+                preload: true
+                controls:
+                  thumbnails:
+                    media: clips
+                    mode: below

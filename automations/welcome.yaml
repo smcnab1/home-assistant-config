@@ -5,13 +5,13 @@ trigger:
   - platform: device
     device_id: 78ed96bd29cdfd72c9f0eb7e4d7d473f
     domain: device_tracker
-    entity_id: device_tracker.leah_s_iphone_new
+    entity_id: device_tracker.leah_jinks
     type: enters
     zone: zone.home
   - platform: device
     device_id: 9b51146f740894a588a23be9ab49ca78
     domain: device_tracker
-    entity_id: device_tracker.sam_s_phone
+    entity_id: device_tracker.sam_mcnab
     type: enters
     zone: zone.home
 condition:

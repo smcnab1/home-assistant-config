@@ -11,36 +11,37 @@ card_input_party:
   tap_action: ##############################
     action: fire-dom-event
     browser_mod:
-      command: popup
-      hide_header: false
-      title: Control Your Party
-      large: true
-      card:
-        type: vertical-stack
-        cards:
-          - type: 'custom:button-card'
-            template: card_party_activate
-            entity: input_boolean.party
-            variables:
-              ulm_card_input_boolean_name: Activate House Party Mode
-            tap_action:
-              action: toggle
-            state:
-              - value: 'on'
-                styles:
-                  icon:
-                    - animation:
-                        - blink .5s linear infinite
-                        - rotating 1s linear infinite
-                    - color: |
-                        [[[
-                            return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
-                        ]]]
-          - type: 'custom:button-card'
-            template: card_input_number
-            entity: input_number.party_speed
-            variables:
-              ulm_card_input_number_name: "House Party Speed"
+      service: browser_mod.popup
+      data:
+        hide_header: false
+        title: Control Your Party
+        large: true
+        card:
+          type: vertical-stack
+          cards:
+            - type: 'custom:button-card'
+              template: card_party_activate
+              entity: input_boolean.party
+              variables:
+                ulm_card_input_boolean_name: Activate House Party Mode
+              tap_action:
+                action: toggle
+              state:
+                - value: 'on'
+                  styles:
+                    icon:
+                      - animation:
+                          - blink .5s linear infinite
+                          - rotating 1s linear infinite
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+            - type: 'custom:button-card'
+              template: card_input_number
+              entity: input_number.party_speed
+              variables:
+                ulm_card_input_number_name: "House Party Speed"
   custom_fields:
     item1:
       card:
@@ -65,36 +66,37 @@ card_input_party:
               tap_action: ##############################
                 action: fire-dom-event
                 browser_mod:
-                  command: popup
-                  hide_header: false
-                  title: Control Your Party
-                  large: true
-                  card:
-                    type: vertical-stack
-                    cards:
-                      - type: 'custom:button-card'
-                        template: card_party_activate
-                        entity: input_boolean.party
-                        variables:
-                          ulm_card_input_boolean_name: Activate House Party Mode
-                        tap_action:
-                          action: toggle
-                        state:
-                          - value: 'on'
-                            styles:
-                              icon:
-                                - animation:
-                                    - blink .5s linear infinite
-                                    - rotating 1s linear infinite
-                                - color: |
-                                    [[[
-                                        return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
-                                    ]]]
-                      - type: 'custom:button-card'
-                        template: card_input_number
-                        entity: input_number.party_speed
-                        variables:
-                          ulm_card_input_number_name: "House Party Speed"
+                  service: browser_mod.popup
+                  data:
+                    hide_header: false
+                    title: Control Your Party
+                    large: true
+                    card:
+                      type: vertical-stack
+                      cards:
+                        - type: 'custom:button-card'
+                          template: card_party_activate
+                          entity: input_boolean.party
+                          variables:
+                            ulm_card_input_boolean_name: Activate House Party Mode
+                          tap_action:
+                            action: toggle
+                          state:
+                            - value: 'on'
+                              styles:
+                                icon:
+                                  - animation:
+                                      - blink .5s linear infinite
+                                      - rotating 1s linear infinite
+                                  - color: |
+                                      [[[
+                                          return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                                      ]]]
+                        - type: 'custom:button-card'
+                          template: card_input_number
+                          entity: input_number.party_speed
+                          variables:
+                            ulm_card_input_number_name: "House Party Speed"
           item2:
             card:
               type: "custom:button-card"
@@ -115,33 +117,34 @@ card_input_party:
               tap_action: ##############################
                 action: fire-dom-event
                 browser_mod:
-                  command: popup
-                  hide_header: false
-                  title: Control Your Party
-                  large: true
-                  card:
-                    type: vertical-stack
-                    cards:
-                      - type: 'custom:button-card'
-                        template: card_party_activate
-                        entity: input_boolean.party
-                        variables:
-                          ulm_card_input_boolean_name: Activate House Party Mode
-                        tap_action:
-                          action: toggle
-                        state:
-                          - value: 'on'
-                            styles:
-                              icon:
-                                - animation:
-                                    - blink .5s linear infinite
-                                    - rotating 1s linear infinite
-                                - color: |
-                                    [[[
-                                        return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
-                                    ]]]
-                      - type: 'custom:button-card'
-                        template: card_input_number
-                        entity: input_number.party_speed
-                        variables:
-                          ulm_card_input_number_name: "House Party Speed"
+                  service: browser_mod.popup
+                  data:
+                    hide_header: false
+                    title: Control Your Party
+                    large: true
+                    card:
+                      type: vertical-stack
+                      cards:
+                        - type: 'custom:button-card'
+                          template: card_party_activate
+                          entity: input_boolean.party
+                          variables:
+                            ulm_card_input_boolean_name: Activate House Party Mode
+                          tap_action:
+                            action: toggle
+                          state:
+                            - value: 'on'
+                              styles:
+                                icon:
+                                  - animation:
+                                      - blink .5s linear infinite
+                                      - rotating 1s linear infinite
+                                  - color: |
+                                      [[[
+                                          return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                                      ]]]
+                        - type: 'custom:button-card'
+                          template: card_input_number
+                          entity: input_number.party_speed
+                          variables:
+                            ulm_card_input_number_name: "House Party Speed"

@@ -162,140 +162,137 @@ card_esh_room_hall:
             return vars;
           ]]]
         tap_action:
-          action: "fire-dom-event"
+          action: fire-dom-event
           browser_mod:
-            command: "popup"
-            hide_header: false
-            title: "Hall Lights"
-            large: true
-            card:
-              type: "vertical-stack"
-              cards:
-                - type: custom:slider-button-card
-                  entity: light.hall_lights
-                  name: Main Lights
-                  slider: 
-                    direction: left-right
-                    background: gradient
-                    use_state_color: true
-                    show_track: true
-                    force_square: false
-                  icon:
-                    icon: mdi:ceiling-light
-                    use_state_color: true
-                    show: true
+            service: browser_mod.popup
+            data:
+              title: "Hall Lighting"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: custom:slider-button-card
+                    entity: light.hall_lights
+                    name: Main Lights
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:ceiling-light
+                      use_state_color: true
+                      show: true
                     tap_action:
-                      action: "fire-dom-event"
+                      action: fire-dom-event
                       browser_mod:
-                        command: "popup"
-                        large: true
-                        hide_header: true
-                        card:
-                          type: "custom:button-card"
-                          template: "popup_light_brightness"
-                          entity: light.hall_lights
-                  action_button:
-                    mode: custom
-                    show: true
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.hall_lights
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: light.hall_leds
+                    name: LEDs
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:led-strip
+                      use_state_color: true
+                      show: true
                     tap_action:
-                      action: toggle
-                - type: custom:slider-button-card
-                  entity: light.hall_leds
-                  name: LEDs
-                  slider: 
-                    direction: left-right
-                    background: gradient
-                    use_state_color: true
-                    show_track: true
-                    force_square: false
-                  icon:
-                    icon: mdi:led-strip
-                    use_state_color: true
-                    show: true
-                    tap_action:
-                      action: "fire-dom-event"
+                      action: fire-dom-event
                       browser_mod:
-                        command: "popup"
-                        large: true
-                        hide_header: true
-                        card:
-                          type: "custom:button-card"
-                          template: "popup_light_brightness"
-                          entity: light.hall_leds
-                  action_button:
-                    mode: custom
-                    show: true
-                    tap_action:
-                      action: toggle
-                - type: custom:slider-button-card
-                  entity: switch.hall_lamp
-                  name: Hall Lamp
-                  slider: 
-                    direction: left-right
-                    background: gradient
-                    use_state_color: true
-                    show_track: true
-                    force_square: false
-                  icon:
-                    icon: mdi:lamp
-                    use_state_color: true
-                    show: true
-                    tap_action:
-                      action: more-info
-                  action_button:
-                    mode: custom
-                    show: true
-                    tap_action:
-                      action: toggle
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Scenes"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_kitchen_normal
-                      name: Day
-                      icon: mdi:weather-sunny
-                      show_last_changed: true
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.hall_leds
+                    action_button:
+                      mode: custom
+                      show: true
                       tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_hall_day
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_hall_night_2
-                      name: Night
-                      icon: mdi:weather-night
-                      show_last_changed: true
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: switch.hall_lamp
+                    name: Hall Lamp
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:lamp
+                      use_state_color: true
+                      show: true
                       tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_hall_night_2
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_hall_sleep
-                      name: Sleeping
-                      icon: mdi:sleep
-                      show_last_changed: true
+                        action: more-info
+                    action_button:
+                      mode: custom
+                      show: true
                       tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_hall_sleep
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_hall_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      show_last_changed: true
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_hall_off
+                        action: toggle
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Scenes"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_kitchen_normal
+                        name: Day
+                        icon: mdi:weather-sunny
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_hall_day
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_hall_night_2
+                        name: Night
+                        icon: mdi:weather-night
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_hall_night_2
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_hall_sleep
+                        name: Sleeping
+                        icon: mdi:sleep
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_hall_sleep
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_hall_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_hall_off
 
 
     climate:

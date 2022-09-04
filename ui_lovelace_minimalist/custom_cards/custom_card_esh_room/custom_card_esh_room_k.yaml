@@ -163,109 +163,106 @@ card_esh_room_k:
             return vars;
           ]]]
         tap_action:
-          action: "fire-dom-event"
+          action: fire-dom-event
           browser_mod:
-            command: "popup"
-            hide_header: false
-            title: "Kitchen Lights"
-            large: true
-            card:
-              type: "vertical-stack"
-              cards:
-                - type: custom:slider-button-card
-                  entity: light.kitchen_lights
-                  name: Main Lights
-                  slider:
-                    direction: left-right
-                    background: gradient
-                    use_state_color: true
-                    show_track: true
-                    force_square: false
-                  icon:
-                    icon: mdi:ceiling-light
-                    use_state_color: true
-                    show: true
+            service: browser_mod.popup
+            data:
+              title: "Kitchen Media"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: custom:slider-button-card
+                    entity: light.kitchen_lights
+                    name: Main Lights
+                    slider:
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:ceiling-light
+                      use_state_color: true
+                      show: true
                     tap_action:
-                      action: "fire-dom-event"
+                      action: fire-dom-event
                       browser_mod:
-                        command: "popup"
-                        large: true
-                        hide_header: true
-                        card:
-                          type: "custom:button-card"
-                          template: "popup_light_brightness"
-                          entity: light.kitchen_lights
-                  action_button:
-                    mode: custom
-                    show: true
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.kitchen_lights
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: light.kitchen_leds
+                    name: LEDs
+                    slider:
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:led-strip
+                      use_state_color: true
+                      show: true
                     tap_action:
-                      action: toggle
-                - type: custom:slider-button-card
-                  entity: light.kitchen_leds
-                  name: LEDs
-                  slider:
-                    direction: left-right
-                    background: gradient
-                    use_state_color: true
-                    show_track: true
-                    force_square: false
-                  icon:
-                    icon: mdi:led-strip
-                    use_state_color: true
-                    show: true
-                    tap_action:
-                      action: "fire-dom-event"
+                      action: fire-dom-event
                       browser_mod:
-                        command: "popup"
-                        large: true
-                        hide_header: true
-                        card:
-                          type: "custom:button-card"
-                          template: "popup_light_brightness"
-                          entity: light.kitchen_leds
-                  action_button:
-                    mode: custom
-                    show: true
-                    tap_action:
-                      action: toggle
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Scenes"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_kitchen_normal
-                      name: Normal
-                      icon: mdi:chef-hat
-                      show_last_changed: true
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.kitchen_leds
+                    action_button:
+                      mode: custom
+                      show: true
                       tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_kitchen_normal
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_kitchen_cooking
-                      name: Cooking
-                      icon: mdi:stove
-                      show_last_changed: true
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_kitchen_cooking
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.scene_kitchen_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      show_last_changed: true
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.scene_kitchen_off
+                        action: toggle
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Scenes"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_kitchen_normal
+                        name: Normal
+                        icon: mdi:chef-hat
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_kitchen_normal
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_kitchen_cooking
+                        name: Cooking
+                        icon: mdi:stove
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_kitchen_cooking
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.scene_kitchen_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        show_last_changed: true
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.scene_kitchen_off
 
     climate:
       card:
@@ -295,34 +292,33 @@ card_esh_room_k:
             return vars;
           ]]]
         tap_action:
-          action: "fire-dom-event"
+          action: fire-dom-event
           browser_mod:
-            command: "popup"
-            hide_header: false
-            title: "Kitchen Media"
-            large: true
-            card:
-              type: "vertical-stack"
-              cards:
-                - type: "custom:button-card"
-                  template: card_media_player
-                  entity: media_player.living_room_speaker
-                  variables:
-                    ulm_card_media_player_name: Google Assistant
-                    ulm_card_media_player_icon: mdi:google-assistant
-                    ulm_card_media_player_enable_art: true
-                    ulm_card_media_player_enable_controls: true
-                    ulm_card_media_player_enable_volume_slider: true
-                    ulm_card_media_player_enable_popup: true
-                    ulm_card_media_player_more_info: true
-                - type: "custom:button-card"
-                  template: card_media_player
-                  entity: media_player.living_room_sonos_sonos
-                  variables:
-                    ulm_card_media_player_name: Sonos Speaker
-                    ulm_card_media_player_icon: mdi:speaker
-                    ulm_card_media_player_enable_art: true
-                    ulm_card_media_player_enable_controls: true
-                    ulm_card_media_player_enable_volume_slider: true
-                    ulm_card_media_player_enable_popup: true
-                    ulm_card_media_player_more_info: true
+            service: browser_mod.popup
+            data:
+              title: "Kitchen Media"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.living_room_speaker
+                    variables:
+                      ulm_card_media_player_name: Google Assistant
+                      ulm_card_media_player_icon: mdi:google-assistant
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.living_room_sonos_sonos
+                    variables:
+                      ulm_card_media_player_name: Sonos Speaker
+                      ulm_card_media_player_icon: mdi:speaker
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true

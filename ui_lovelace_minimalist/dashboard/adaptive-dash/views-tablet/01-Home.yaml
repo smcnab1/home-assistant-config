@@ -102,15 +102,14 @@ cards:
     - type: weather-forecast
       entity: weather.weather
       tap_action:
-        action: "fire-dom-event"
+        action: fire-dom-event
         browser_mod:
-          command: "popup"
-          large: true
-          hide_header: true
-          card:
-            type: "custom:button-card"
-            template: "popup_weather_forecast"
-            entity: weather.weather
+          service: browser_mod.popup
+          data:
+            content:
+              type: "custom:button-card"
+              template: "popup_weather_forecast"
+              entity: weather.weather
 
   ### PERSON CARDS ###
   - view_layout: 
@@ -122,226 +121,230 @@ cards:
         variables:
           - entity: person.sam_mcnab
           - name: Sam
-          - battery: device_tracker.sam_mcnab
+          - battery: sensor.sams_iphone_battery_level
+          - battery_state: sensor.sams_iphone_battery_state
           - work_sensor: sensor.waze_islington
           - home_sensor: sensor.sam_to_home
           - work_icon: mdi:car
           - entity_picture: /local/avatar_sam.png
           - show_entity_picture: true
           - tap_action:
-              action: "fire-dom-event"
+              action: fire-dom-event
               browser_mod:
-                command: "popup"
-                title: Sam McNab
-                style:
-                  $: >
-                    [[[
-                      if (hass.themes.theme.includes("desktop")){
-                        var dialog = `
-                          .mdc-dialog__surface{
-                            border-radius: var(--border-radius) !important;
-                          }
-                        `;
-                      } else{
-                        var dialog = "";
-                      }
-                      return `
-                        *{
-                          --secondary-background-color: none !important;
-                        }
-                        ${dialog}
-                      `;
-                    ]]]
-                  hui-vertical-stack-card:
+                service: browser_mod.popup
+                data:
+                  title: "Sam"
+                  style:
                     $: >
-                      button-card {
-                        align-self: center;
-                        padding: 0.2em 0 2.3em 0;
-                      }
-                      hui-entities-card{
-                        padding: 0.8em 1.4em;
-                      }
-                    $hui-entities-card$: >
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-history-graph-card$: >
-                      .content {
-                        padding: 0 2.4em !important;
-                      }
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-glance-card$: >
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-map-card:
-                      $: >
-                        ha-icon-button {
-                          color: rgba(var(--color-blue),1);
+                      [[[
+                        if (hass.themes.theme.includes("desktop")){
+                          var dialog = `
+                            .mdc-dialog__surface{
+                              border-radius: var(--border-radius) !important;
+                            }
+                          `;
+                        } else{
+                          var dialog = "";
                         }
-                      $ha-map:
+                        return `
+                          *{
+                            --secondary-background-color: none !important;
+                          }
+                          ${dialog}
+                        `;
+                      ]]]
+                    hui-vertical-stack-card:
+                      $: >
+                        button-card {
+                          align-self: center;
+                          padding: 0.2em 0 2.3em 0;
+                        }
+                        hui-entities-card{
+                          padding: 0.8em 1.4em;
+                        }
+                      $hui-entities-card$: >
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-history-graph-card$: >
+                        .content {
+                          padding: 0 2.4em !important;
+                        }
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-glance-card$: >
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-map-card:
                         $: >
-                          .leaflet-control-attribution {
-                            display: none;
+                          ha-icon-button {
+                            color: rgba(var(--color-blue),1);
                           }
-                          .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
-                            border: 2px solid rgba(var(--color-blue),0.4) !important;
-                          }
-                          .leaflet-bar a {
-                            background-color: rgba(var(--color-blue),0.2) !important;
-                            color: rgba(var(--color-blue),1) !important;
-                          }
-                          .leaflet-bar a:first-child {
-                            border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
-                          }
-                          .leaflet-pane.leaflet-tile-pane {
-                            filter: contrast(95%);
-                          }
-                card:
-                  type: "vertical-stack"
-                  cards:
-                    - type: "entities"
-                      entities:
-                        - entity: person.sam_mcnab
-                          secondary_info: "last-changed"
-                    - type: "history-graph"
-                      entities:
-                        - entity: person.sam_mcnab
-                    - type: "glance"
-                      show_state: false
-                      entities:
-                        - entity: sensor.sam_s_phone_wifi_connection
-                          name: "WiFi"
-                          icon: "mdi:wifi"
-                        - entity: person.sam_mcnab
-                          name: "GPS"
-                          icon: "mdi:map-marker"
-                    - type: "custom:button-card"
-                      template:
-                        - "find_my_phone_button"
-                      entity: script.find_my_phone_sam
-                    - type: "map"
-                      aspect_ratio: "12x10"
-                      default_zoom: 16
-                      entities:
-                        - person.sam_mcnab
-                        - person.leah_jinks
-                        - zone.home
+                        $ha-map:
+                          $: >
+                            .leaflet-control-attribution {
+                              display: none;
+                            }
+                            .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+                              border: 2px solid rgba(var(--color-blue),0.4) !important;
+                            }
+                            .leaflet-bar a {
+                              background-color: rgba(var(--color-blue),0.2) !important;
+                              color: rgba(var(--color-blue),1) !important;
+                            }
+                            .leaflet-bar a:first-child {
+                              border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
+                            }
+                            .leaflet-pane.leaflet-tile-pane {
+                              filter: contrast(95%);
+                            }
+                  content:
+                    type: "vertical-stack"
+                    cards:
+                      - type: "entities"
+                        entities:
+                          - entity: person.sam_mcnab
+                            secondary_info: "last-changed"
+                      - type: "history-graph"
+                        entities:
+                          - entity: person.sam_mcnab
+                      - type: "glance"
+                        show_state: false
+                        entities:
+                          - entity: sensor.sams_iphone_ssid
+                            name: "WiFi"
+                            icon: "mdi:wifi"
+                          - entity: person.sam_mcnab
+                            name: "GPS"
+                            icon: "mdi:map-marker"
+                      - type: "custom:button-card"
+                        template:
+                          - "find_my_phone_button"
+                        entity: script.find_my_phone_sam
+                      - type: "map"
+                        aspect_ratio: "12x10"
+                        default_zoom: 16
+                        entities:
+                          - person.sam_mcnab
+                          - person.leah_jinks
+                          - zone.home
 
       - type: "custom:decluttering-card" # Leah Person Card & Pop-Up
         template: person_card_new
         variables:
           - entity: person.leah_jinks
           - name: Leah
-          - battery: device_tracker.leah_jinks
+          - battery: sensor.leah_s_iphone_battery_level
+          - battery_state: sensor.leah_s_iphone_battery_state
           - work_sensor: sensor.leah_work
           - home_sensor: sensor.leah_to_home
           - work_icon: mdi:train
           - entity_picture: /local/avatar_leah.png
           - show_entity_picture: true
           - tap_action:
-              action: "fire-dom-event"
+              action: fire-dom-event
               browser_mod:
-                command: "popup"
-                title: Sam McNab
-                style:
-                  $: >
-                    [[[
-                      if (hass.themes.theme.includes("desktop")){
-                        var dialog = `
-                          .mdc-dialog__surface{
-                            border-radius: var(--border-radius) !important;
-                          }
-                        `;
-                      } else{
-                        var dialog = "";
-                      }
-                      return `
-                        *{
-                          --secondary-background-color: none !important;
-                        }
-                        ${dialog}
-                      `;
-                    ]]]
-                  hui-vertical-stack-card:
+                service: browser_mod.popup
+                data:
+                  title: "Leah"
+                  style:
                     $: >
-                      button-card {
-                        align-self: center;
-                        padding: 0.2em 0 2.3em 0;
-                      }
-                      hui-entities-card{
-                        padding: 0.8em 1.4em;
-                      }
-                    $hui-entities-card$: >
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-history-graph-card$: >
-                      .content {
-                        padding: 0 2.4em !important;
-                      }
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-glance-card$: >
-                      ha-card{
-                        box-shadow: none;
-                      }
-                    $hui-map-card:
-                      $: >
-                        ha-icon-button {
-                          color: rgba(var(--color-blue),1);
+                      [[[
+                        if (hass.themes.theme.includes("desktop")){
+                          var dialog = `
+                            .mdc-dialog__surface{
+                              border-radius: var(--border-radius) !important;
+                            }
+                          `;
+                        } else{
+                          var dialog = "";
                         }
-                      $ha-map:
+                        return `
+                          *{
+                            --secondary-background-color: none !important;
+                          }
+                          ${dialog}
+                        `;
+                      ]]]
+                    hui-vertical-stack-card:
+                      $: >
+                        button-card {
+                          align-self: center;
+                          padding: 0.2em 0 2.3em 0;
+                        }
+                        hui-entities-card{
+                          padding: 0.8em 1.4em;
+                        }
+                      $hui-entities-card$: >
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-history-graph-card$: >
+                        .content {
+                          padding: 0 2.4em !important;
+                        }
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-glance-card$: >
+                        ha-card{
+                          box-shadow: none;
+                        }
+                      $hui-map-card:
                         $: >
-                          .leaflet-control-attribution {
-                            display: none;
+                          ha-icon-button {
+                            color: rgba(var(--color-blue),1);
                           }
-                          .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
-                            border: 2px solid rgba(var(--color-blue),0.4) !important;
-                          }
-                          .leaflet-bar a {
-                            background-color: rgba(var(--color-blue),0.2) !important;
-                            color: rgba(var(--color-blue),1) !important;
-                          }
-                          .leaflet-bar a:first-child {
-                            border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
-                          }
-                          .leaflet-pane.leaflet-tile-pane {
-                            filter: contrast(95%);
-                          }
-                card:
-                  type: "vertical-stack"
-                  cards:
-                    - type: "entities"
-                      entities:
-                        - entity: person.leah_jinks
-                          secondary_info: "last-changed"
-                    - type: "history-graph"
-                      entities:
-                        - entity: person.leah_jinks
-                    - type: "glance"
-                      show_state: false
-                      entities:
-                        - entity: sensor.leah_s_iphone_connection_type
-                          name: "WiFi"
-                          icon: "mdi:wifi"
-                        - entity: person.leah_jinks
-                          name: "GPS"
-                          icon: "mdi:map-marker"
-                    - type: "custom:button-card"
-                      template:
-                        - "find_my_phone_button"
-                      entity: script.1658844939181
-                    - type: "map"
-                      aspect_ratio: "12x10"
-                      default_zoom: 16
-                      entities:
-                        - person.leah_jinks
-                        - person.sam_mcnab
-                        - zone.home
+                        $ha-map:
+                          $: >
+                            .leaflet-control-attribution {
+                              display: none;
+                            }
+                            .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+                              border: 2px solid rgba(var(--color-blue),0.4) !important;
+                            }
+                            .leaflet-bar a {
+                              background-color: rgba(var(--color-blue),0.2) !important;
+                              color: rgba(var(--color-blue),1) !important;
+                            }
+                            .leaflet-bar a:first-child {
+                              border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
+                            }
+                            .leaflet-pane.leaflet-tile-pane {
+                              filter: contrast(95%);
+                            }
+                  content:
+                    type: "vertical-stack"
+                    cards:
+                      - type: "entities"
+                        entities:
+                          - entity: person.leah_jinks
+                            secondary_info: "last-changed"
+                      - type: "history-graph"
+                        entities:
+                          - entity: person.leah_jinks
+                      - type: "glance"
+                        show_state: false
+                        entities:
+                          - entity: sensor.leah_s_iphone_connection_type
+                            name: "WiFi"
+                            icon: "mdi:wifi"
+                          - entity: person.leah_jinks
+                            name: "GPS"
+                            icon: "mdi:map-marker"
+                      - type: "custom:button-card"
+                        template:
+                          - "find_my_phone_button"
+                        entity: script.1658844939181
+                      - type: "map"
+                        aspect_ratio: "12x10"
+                        default_zoom: 16
+                        entities:
+                          - person.leah_jinks
+                          - person.sam_mcnab
+                          - zone.home
 
   ### TRAVEL CARDS ###
   - view_layout:

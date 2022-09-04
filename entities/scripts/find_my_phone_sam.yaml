@@ -1,11 +1,10 @@
 sequence:
-  - service: notify.mobile_app_sam_s_phone
+  - service: notify.mobile_app_iphone
     data:
-      message: TTS
+      title: Home Assistant is looking for your phone
+      message: Find my Phone
       data:
-        data:
-          ttl: 0
-          priority: high
-          channel: alarm_stream
-      title: FIND MY PHONE
+        push:
+          sound: "US-EN-Morgan-Freeman-Welcome-Home.wav"
+          interruption-level: critical
 mode: single

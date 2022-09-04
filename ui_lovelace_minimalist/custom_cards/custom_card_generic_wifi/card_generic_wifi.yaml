@@ -13,50 +13,48 @@ card_generic_wifi:
       card:
         type: "custom:button-card"
         tap_action:
-          action: "fire-dom-event"
+          action: fire-dom-event
           browser_mod:
-            command: "popup"
-            hide_header: false
-            large: false
-            title: Scan QR Code with your Phone for WiFi Code
-            card:
-              type: markdown
-              content: >
-                <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-              style:
-                .: |
-                  align: center;
-                  justify-content: center;
-                  width: 100px!important;
-                  padding-right: 0px;
-                  margin: 0px;
-                hui-image: |
-                  align: center;
+            service: browser_mod.popup
+            data:
+              title: "Scan QR Code with your Phone for WiFi Code"
+              content:
+                type: markdown
+                content: >
+                  <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
+                style:
+                  .: |
+                    align: center;
+                    justify-content: center;
+                    width: 100px!important;
+                    padding-right: 0px;
+                    margin: 0px;
+                  hui-image: |
+                    align: center;
         custom_fields:
           item1:
             card:
               type: "custom:button-card"
               entity: "[[[ return entity.entity_id ]]]"
               tap_action:
-                action: "fire-dom-event"
+                action: fire-dom-event
                 browser_mod:
-                  command: "popup"
-                  hide_header: false
-                  large: false
-                  title: Scan QR Code with your Phone for WiFi Code
-                  card:
-                    type: markdown
-                    content: >
-                      <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-                    style:
-                      .: |
-                        align: center;
-                        justify-content: center;
-                        width: 100px!important;
-                        padding-right: 0px;
-                        margin: 0px;
-                      hui-image: |
-                        align: center;
+                  service: browser_mod.popup
+                  data:
+                    title: "Scan QR Code with your Phone for WiFi Code"
+                    content:
+                      type: markdown
+                      content: >
+                        <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
+                      style:
+                        .: |
+                          align: center;
+                          justify-content: center;
+                          width: 100px!important;
+                          padding-right: 0px;
+                          margin: 0px;
+                        hui-image: |
+                          align: center;
               icon: mdi:wifi
 
           item2:
@@ -64,24 +62,23 @@ card_generic_wifi:
               type: "custom:button-card"
               entity: "[[[ return entity.entity_id ]]]"
               tap_action:
-                action: "fire-dom-event"
+                action: fire-dom-event
                 browser_mod:
-                  command: "popup"
-                  hide_header: false
-                  large: false
-                  title: Scan QR Code with your Phone for WiFi Code
-                  card:
-                    type: markdown
-                    content: >
-                      <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-                    style:
-                      .: |
-                        align: center;
-                        justify-content: center;
-                        width: 100px!important;
-                        padding-right: 0px;
-                        margin: 0px;
-                      hui-image: |
-                        align: center;
+                  service: browser_mod.popup
+                  data:
+                    title: "Scan QR Code with your Phone for WiFi Code"
+                    content:
+                      type: markdown
+                      content: >
+                        <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
+                      style:
+                        .: |
+                          align: center;
+                          justify-content: center;
+                          width: 100px!important;
+                          padding-right: 0px;
+                          margin: 0px;
+                        hui-image: |
+                          align: center;
               label: Click for WiFi Login
               name: WiFi Access
