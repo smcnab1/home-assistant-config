@@ -18,3 +18,6 @@ alarm_control_panel:
       delay_time: 0
 
 browser_mod:
+
+owntracks:
+  max_gps_accuracy: 200
