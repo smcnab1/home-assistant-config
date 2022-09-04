@@ -23,8 +23,6 @@ card_binary_sensor_alert_car:
         template:
           - "blue"
         tap_action:
-          action: more-info
-        double_tap_action:
           action: "call-service"
           service: "automation.trigger"
           service_data:
@@ -36,8 +34,6 @@ card_binary_sensor_alert_car:
               template:
                 - "blue"
               tap_action:
-                action: more-info
-              double_tap_action:
                 action: "call-service"
                 service: "automation.trigger"
                 service_data:

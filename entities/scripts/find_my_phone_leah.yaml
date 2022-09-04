@@ -1,9 +1,10 @@
 sequence:
   - service: notify.mobile_app_leah_s_iphone
     data:
+      title: Home Assistant is looking for your phone
       message: Find my Phone
       data:
-        data:
+        push:
+          sound: "US-EN-Morgan-Freeman-Welcome-Home.wav"
           interruption-level: critical
-      title: Home Assistant is looking for your phone
 mode: single

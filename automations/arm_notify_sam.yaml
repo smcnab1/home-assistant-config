@@ -1,5 +1,4 @@
-
-alias: 'Alarm: Arm Option Notification - Sam'
+alias: 'Alarm: Alarm Notification Option - Sam'
 description: ''
 trigger:
   - platform: state
@@ -8,10 +7,10 @@ trigger:
     to: away
 condition: []
 action:
-  - service: notify.mobile_app_sam_s_phone
+  - service: notify.mobile_app_iphone
     data:
-      message: Would you like to set it?
       title: Set Alarm?
+      message: Would you like to set it?
       data:
         icon:
         ttl: 0
@@ -22,6 +21,9 @@ action:
         actions:
         - action: IGNORE
           title: Don't Arm Alarm
+          icon: sfsymbols:bell.slash.fill
         - action: ARM_ALARM
           title: Arm Alarm
+          icon: sfsymbols:bell.fill
+          destructive: true
 mode: single

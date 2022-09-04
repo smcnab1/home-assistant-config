@@ -1,6 +1,5 @@
-
-alias: 'Alarm: Disarm Alarm Action - Leah'
-description: ''
+alias: "Alarm: Disarm Alarm Action - Leah"
+description: ""
 trigger:
   - platform: event
     event_type: mobile_app_notification_action
@@ -8,12 +7,12 @@ trigger:
       action: DISARM_ALARM
     context:
       user_id:
-      - d5de2d519885447495a552f1d87f0a9d
+        - d5de2d519885447495a552f1d87f0a9d
 condition: []
 action:
   - service: alarm_control_panel.alarm_disarm
     data:
-      code: '1550'
+      code: "1550"
     target:
       entity_id: alarm_control_panel.home_alarm
   - service: notify.notify

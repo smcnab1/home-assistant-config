@@ -22,6 +22,7 @@ person_card_new:
   card:
     type: custom:button-card
     battery: '[[battery]]'
+    battery_state: '[[battery_state]]'
     home_sensor: '[[home_sensor]]'
     work_sensor: '[[work_sensor]]'
     work_icon: '[[work_icon]]'
@@ -100,15 +101,15 @@ person_card_new:
     custom_fields:
           battery: >
               [[[
-                if (states['[[battery]]'].attributes.battery_charging === false)
+                if (states['[[battery_state]]'].state == 'charging')
                   return `<ha-icon
-                    icon="mdi:battery"
+                    icon="mdi:battery-charging"
                     style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
-                    </ha-icon><span>${states['[[battery]]'].attributes.battery_level}%</span>`
+                    </ha-icon><span>${states['[[battery]]'].state}%</span>`
                 else return `<ha-icon
-                  icon="mdi:battery-charging"
+                  icon="mdi:battery"
                   style="; --mdc-icon-size: 14px; padding-left: 5px; padding-right: 5px; color: var(--primary-color);">
-                  </ha-icon><span>${states['[[battery]]'].attributes.battery_level}%</span>`
+                  </ha-icon><span>${states['[[battery]]'].state}%</span>`
               ]]]
           home: >
               [[[

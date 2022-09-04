@@ -35,26 +35,25 @@ action:
             icon: sfsymbols:pip.remove
             destructive: true
   - if:
-    - condition: device
-      device_id: 9b51146f740894a588a23be9ab49ca78
-      domain: device_tracker
-      entity_id: device_tracker.sam_s_phone
-      type: is_home
+    - condition: state
+      entity_id: person.sam_mcnab
+      state: home
     then:
-    - service: notify.mobile_app_sam_s_phone
+    - service: notify.mobile_app_iphone
       data:
-        message: Do you want to control it?
-        title: TV has been turned on
-        data:
-          sticky: 'true'
-          color: blue
-          ttl: 0
-          visibility: public
-          notification_icon: mdi:remote-tv
-          actions:
-          - action: URI
-            title: Control TV with Phone
-            uri: app://com.samsung.android.oneconnect
-          - action: IGNORE
-            title: Control TV with Remote
+        icon:
+        ttl: 0
+        visibility: public
+        push:
+          sound:
+            volume: 1
+        actions:
+        - action: URI
+          title: Control TV with Phone
+          uri: smartthings://
+          icon: sfsymbols:av.remote.fill
+        - action: IGNORE
+          title: Control with Normal Remote
+          icon: sfsymbols:pip.remove
+          destructive: true
 mode: single

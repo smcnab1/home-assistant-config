@@ -6,12 +6,6 @@ trigger:
     entity_id:
     - alarm_control_panel.home_alarm
     to: triggered
-condition:
-  - type: is_motion
-    condition: device
-    device_id: 72ff176259d52b26c418dccc887eef13
-    entity_id: binary_sensor.bedroom_motion_sensor_4
-    domain: binary_sensor
 action:
   - service: notify.mobile_app_leah_s_iphone
     data:

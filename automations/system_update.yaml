@@ -23,7 +23,7 @@ use_blueprint:
     - update.terminal_ssh_update
     - update.system_wireguard_update
     - update.system_samba_share_update
-    mobile_app_device: 9b51146f740894a588a23be9ab49ca78
-    mobile_app_device_2: 356340e93d30ee5fd991ec3189919a27
+    mobile_app_device: 356340e93d30ee5fd991ec3189919a27
+    mobile_app_device_2: 690e4484fd88167f89c15ffbf493a54d
     send_to_ha: true
     run_config_check: true

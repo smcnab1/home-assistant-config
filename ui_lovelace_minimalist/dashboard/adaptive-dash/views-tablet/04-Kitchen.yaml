@@ -40,13 +40,13 @@ cards:
       grid-area: "topbar"
     type: horizontal-stack
     cards:
-    - type: 'custom:button-card'
-      template: chip_back
-      variables:
-        ulm_chip_back_path: /adaptive-dash/home
-    - type: "custom:button-card"
-      template: "card_title"
-      name: "Kitchen"
+      - type: "custom:button-card"
+        template: chip_back
+        variables:
+          ulm_chip_back_path: /adaptive-dash/home
+      - type: "custom:button-card"
+        template: "card_title"
+        name: "Kitchen"
   - view_layout: ### STATE CHIPS ###
       grid-area: "chip1"
     type: horizontal-stack
@@ -106,7 +106,7 @@ cards:
       grid-area: "card2"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_day
         name: Day
@@ -117,7 +117,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_day
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_night
         name: Night
@@ -128,7 +128,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_night
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_movie
         name: Movie
@@ -139,7 +139,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_movie
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_off
         name: All Off
@@ -164,7 +164,7 @@ cards:
         template: card_media_player
         entity: media_player.living_room_sonos_sonos
         variables:
-          ulm_card_media_player_name : Sonos
+          ulm_card_media_player_name: Sonos
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -173,7 +173,7 @@ cards:
         template: card_media_player
         entity: media_player.living_room_speaker
         variables:
-          ulm_card_media_player_name : Google Assistant
+          ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -188,7 +188,7 @@ cards:
       grid-area: "card4"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_binary_sensor_alert
         name: Motion
         variables:
@@ -196,7 +196,7 @@ cards:
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
         entity: binary_sensor.kitchen_motion_sensor_2
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_battery
         entity: sensor.kitchen_motion_sensor_battery_sensor_2
         name: Motion
@@ -212,33 +212,33 @@ cards:
       pin:
         code: 1550
     card:
-      type: 'custom:button-card'
+      type: "custom:button-card"
       template: card_vertical_button
       entity: input_boolean.test_toggle
       name: Camera
       icon: mdi:cctv
       tap_action:
-        action: "fire-dom-event"
+        action: fire-dom-event
         browser_mod:
-          command: "popup"
-          hide_header: false
-          title: Living Room Camera
-          card:
-            type: custom:frigate-card
-            cameras:
-              - camera_entity: camera.living_room
-                camera_name: Living Room
-            view:
-              default: live
-            menu:
-              mode: overlay-bottom
-              buttons:
-                image: true
-            live:
-              lazy_load: false
-              auto_unmute: true
-              preload: true
-              controls:
-                thumbnails:
-                  media: clips
-                  mode: below
+          service: browser_mod.popup
+          data:
+            title: "Kitchen Camera"
+            content:
+              type: custom:frigate-card
+              cameras:
+                - camera_entity: camera.living_room
+                  camera_name: Living Room
+              view:
+                default: live
+              menu:
+                mode: overlay-bottom
+                buttons:
+                  image: true
+              live:
+                lazy_load: false
+                auto_unmute: true
+                preload: true
+                controls:
+                  thumbnails:
+                    media: clips
+                    mode: below
