@@ -4,11 +4,11 @@ description: ''
 trigger: []
 condition: []
 action:
-  - service: notify.mobile_app_sam_s_phone
+  - service: notify.mobile_app_iphone
     data:
       data:
         actions:
-        - action: URI
+        - action: OPEN
           title: Open Waze
           uri: https://waze.com/ul/?ll=51.54457092285156%2C-0.12413939833641052&navigate=yes&zoom=17
       message: Travelling to Islington Station?

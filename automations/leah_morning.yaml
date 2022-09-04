@@ -8,8 +8,8 @@ trigger:
     to: 'on'
 condition:
   - condition: state
-    entity_id: binary_sensor.sm_g998b_is_charging
-    state: 'on'
+    entity_id: sensor.sams_iphone_battery_state
+    state: 'charging'
   - condition: time
     after: 05:00:00
     before: 06:00:00
