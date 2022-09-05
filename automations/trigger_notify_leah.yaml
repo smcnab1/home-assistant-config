@@ -13,7 +13,6 @@ action:
       message: What would you like to do?
       data:
         sticky: 'true'
-        icon:
         ttl: 0
         importance: high
         persistent: true

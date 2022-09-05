@@ -13,7 +13,6 @@ action:
       message: What would you like to do?
       data:
         sticky: 'true'
-        icon:
         ttl: 0
         importance: high
         persistent: true
@@ -33,7 +32,7 @@ action:
           uri: /ui-lovelace-minimalist/secure
           icon: sfsymbols:camera.circle.fill
         - action: URI
-          title: Text Sam
+          title: Text Leah
           uri: https://api.whatsapp.com/send?phone=+447531049994&text=Alarm%20has%20gone%20off%0EYou%20at%20home%1F#Intent;package=com.whatsapp;scheme=whatsapp;end&phone=+447513595678
           icon: "sfsymbols:phone.circle.fill"
         - action: DISARM_ALARM
