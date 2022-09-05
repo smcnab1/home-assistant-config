@@ -208,7 +208,7 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.fire_tv_192_168_1_94
+        entity: media_player.fire_tv_192_168_1_104
         variables:
           ulm_card_media_player_name : Fire TV
           ulm_card_media_player_enable_popup: true

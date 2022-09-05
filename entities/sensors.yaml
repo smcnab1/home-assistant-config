@@ -256,11 +256,3 @@
     - startUrl
     - currentPage
   resource: !secret foo_rest
-  value_template: '{{ value_json.isScreenOn }}'
-
-- platform: template
-  sensors:
-    foo_battery_level:
-      friendly_name: "foo_battery_level"
-      unit_of_measurement: '%'
-      value_template: "{{ states.sensor.foo.attributes.batteryLevel }}"

@@ -4,8 +4,8 @@ description: ''
 trigger:
   - platform: state
     entity_id:
-    - media_player.fire_tv_192_168_1_94
-    to: idle, playing
+    - media_player.fire_tv_192_168_1_104
+    to: playing
 condition: []
 action:
   - service: scene.create
@@ -23,8 +23,8 @@ action:
   - wait_for_trigger:
     - platform: state
       entity_id:
-      - media_player.fire_tv_192_168_1_94
-      to: standby, off
+      - media_player.fire_tv_192_168_1_104
+      to: off
   - service: scene.turn_on
     data:
       transition: 60

@@ -44,9 +44,7 @@ action:
       snapshot_entities:
       - light.living_room_dining_led
       - light.living_room_leds
-      - light.living_room
       - light.living_room_dreamview
-      - light.living_room_lamp
       - light.lava_lamp
       - light.living_room_tv_leds
   - service: automation.trigger

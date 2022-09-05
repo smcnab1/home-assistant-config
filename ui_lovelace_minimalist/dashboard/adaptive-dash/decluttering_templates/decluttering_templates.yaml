@@ -14,50 +14,50 @@ person_card_new:
     - show_last_changed: false
     - show_entity_picture: false
     - margin-right: 10px
-    - label: '&nbsp;'
+    - label: "&nbsp;"
     - off_icon_color: gray
     - off_name_color: gray
     - off_state_color: gray
     - aspect_ratio: 2/0.80
   card:
     type: custom:button-card
-    battery: '[[battery]]'
-    battery_state: '[[battery_state]]'
-    home_sensor: '[[home_sensor]]'
-    work_sensor: '[[work_sensor]]'
-    work_icon: '[[work_icon]]'
-    name: '[[name]]'
-    icon: 'mdi:[[icon]]'
-    size: '[[size]]'
-    color: '[[color]]'
-    aspect_ratio: '[[aspect_ratio]]'
-    entity: '[[entity]]'
-    label: '[[label]]'
-    show_name: '[[show_name]]'
-    show_icon: '[[show_icon]]'
-    show_state: '[[show_state]]'
-    show_label: '[[show_label]]'
-    show_last_changed: '[[show_last_changed]]'
-    tap_action: '[[tap_action]]'
-    hold_action: '[[hold_action]]'
-    entity_picture: '[[entity_picture]]'
-    show_entity_picture: '[[show_entity_picture]]'
+    battery: "[[battery]]"
+    battery_state: "[[battery_state]]"
+    home_sensor: "[[home_sensor]]"
+    work_sensor: "[[work_sensor]]"
+    work_icon: "[[work_icon]]"
+    name: "[[name]]"
+    icon: "mdi:[[icon]]"
+    size: "[[size]]"
+    color: "[[color]]"
+    aspect_ratio: "[[aspect_ratio]]"
+    entity: "[[entity]]"
+    label: "[[label]]"
+    show_name: "[[show_name]]"
+    show_icon: "[[show_icon]]"
+    show_state: "[[show_state]]"
+    show_label: "[[show_label]]"
+    show_last_changed: "[[show_last_changed]]"
+    tap_action: "[[tap_action]]"
+    hold_action: "[[hold_action]]"
+    entity_picture: "[[entity_picture]]"
+    show_entity_picture: "[[show_entity_picture]]"
     styles:
       card:
         - border-radius: 20px
-        - --card-background-color: '[[background_color]]'
+        - --card-background-color: "[[background_color]]"
       icon:
         - grid-column: 1
         - grid-row: 1 / 4
       label:
         - color: gray
         - font-size: 12px
-#        - font-family: Helvetica
+        #        - font-family: Helvetica
         - padding: 0px 10px
         - justify-self: start
       state:
         - font-size: 12px
-#        - font-family: Helvetica
+        #        - font-family: Helvetica
         - padding: 0px 10px
         - justify-self: start
         - text-transform: capitalize
@@ -71,12 +71,12 @@ person_card_new:
       img_cell:
         - align-self: start
         - text-align: start
-#        - margin-right: '[[margin-right]]'
+      #        - margin-right: '[[margin-right]]'
       name:
         - justify-self: start
         - padding-left: 10px
         - font-weight: bold
-#        - font-family: Helvetica 
+        #        - font-family: Helvetica
         - font-size: 13px
       entity_picture:
         - height: 55px
@@ -99,32 +99,32 @@ person_card_new:
           - font-size: 12px
           - color: var(--secondary-text-color)
     custom_fields:
-          battery: >
-              [[[
-                if (states['[[battery_state]]'].state == 'charging')
-                  return `<ha-icon
-                    icon="mdi:battery-charging"
-                    style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
-                    </ha-icon><span>${states['[[battery]]'].state}%</span>`
-                else return `<ha-icon
-                  icon="mdi:battery"
-                  style="; --mdc-icon-size: 14px; padding-left: 5px; padding-right: 5px; color: var(--primary-color);">
-                  </ha-icon><span>${states['[[battery]]'].state}%</span>`
-              ]]]
-          home: >
-              [[[
-                return `<ha-icon
-                  icon="mdi:home-import-outline"
-                  style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
-                  </ha-icon><span>${states['[[home_sensor]]'].state}mins</span>`
-              ]]]
-          work: >
-              [[[
-                return `<ha-icon
-                  icon="[[work_icon]]"
-                  style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
-                  </ha-icon><span>${states['[[work_sensor]]'].state}mins</span>`
-              ]]]
+      battery: >
+        [[[
+          if (states['[[battery_state]]'].state == 'charging')
+            return `<ha-icon
+              icon="mdi:battery-charging"
+              style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
+              </ha-icon><span>${states['[[battery]]'].state}%</span>`
+          else return `<ha-icon
+            icon="mdi:battery"
+            style="; --mdc-icon-size: 14px; padding-left: 5px; padding-right: 5px; color: var(--primary-color);">
+            </ha-icon><span>${states['[[battery]]'].state}%</span>`
+        ]]]
+      home: >
+        [[[
+          return `<ha-icon
+            icon="mdi:home-import-outline"
+            style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
+            </ha-icon><span>${states['[[home_sensor]]'].state}mins</span>`
+        ]]]
+      work: >
+        [[[
+          return `<ha-icon
+            icon="[[work_icon]]"
+            style="; --mdc-icon-size: 14px; padding-left: 6px; padding-right: 5px; color: var(--primary-color);">
+            </ha-icon><span>${states['[[work_sensor]]'].state}mins</span>`
+        ]]]
     state:
       - value: "not_home"
         styles:
