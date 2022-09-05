@@ -13,10 +13,8 @@ card_input_party:
     browser_mod:
       service: browser_mod.popup
       data:
-        hide_header: false
         title: Control Your Party
-        large: true
-        card:
+        content:
           type: vertical-stack
           cards:
             - type: 'custom:button-card'
@@ -68,10 +66,8 @@ card_input_party:
                 browser_mod:
                   service: browser_mod.popup
                   data:
-                    hide_header: false
                     title: Control Your Party
-                    large: true
-                    card:
+                    content:
                       type: vertical-stack
                       cards:
                         - type: 'custom:button-card'
@@ -119,10 +115,8 @@ card_input_party:
                 browser_mod:
                   service: browser_mod.popup
                   data:
-                    hide_header: false
                     title: Control Your Party
-                    large: true
-                    card:
+                    content:
                       type: vertical-stack
                       cards:
                         - type: 'custom:button-card'

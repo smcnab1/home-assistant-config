@@ -167,13 +167,14 @@ card_esh_room_k:
           browser_mod:
             service: browser_mod.popup
             data:
-              title: "Kitchen Media"
+              title: "Kitchen Lighting"
               content:
                 type: "vertical-stack"
                 cards:
                   - type: custom:slider-button-card
                     entity: light.kitchen_lights
                     name: Main Lights
+                    compact: true
                     slider:
                       direction: left-right
                       background: gradient
@@ -201,6 +202,7 @@ card_esh_room_k:
                   - type: custom:slider-button-card
                     entity: light.kitchen_leds
                     name: LEDs
+                    compact: true
                     slider:
                       direction: left-right
                       background: gradient
@@ -230,9 +232,9 @@ card_esh_room_k:
                     name: "Scenes"
                   - type: horizontal-stack
                     cards:
-                      - type: 'custom:button-card'
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_kitchen_normal
+                        entity: automation.scene_kitchen_normal_2
                         name: Normal
                         icon: mdi:chef-hat
                         show_last_changed: true
@@ -240,10 +242,10 @@ card_esh_room_k:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_kitchen_normal
-                      - type: 'custom:button-card'
+                            entity_id: automation.scene_kitchen_normal_2
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_kitchen_cooking
+                        entity: automation.scene_kitchen_cooking_2
                         name: Cooking
                         icon: mdi:stove
                         show_last_changed: true
@@ -251,10 +253,10 @@ card_esh_room_k:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_kitchen_cooking
-                      - type: 'custom:button-card'
+                            entity_id: automation.scene_kitchen_cooking_2
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_kitchen_off
+                        entity: automation.scene_kitchen_off_2
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -262,7 +264,7 @@ card_esh_room_k:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_kitchen_off
+                            entity_id: automation.scene_kitchen_off_2
 
     climate:
       card:

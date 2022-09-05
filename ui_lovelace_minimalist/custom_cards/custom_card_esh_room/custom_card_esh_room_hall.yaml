@@ -173,6 +173,7 @@ card_esh_room_hall:
                   - type: custom:slider-button-card
                     entity: light.hall_lights
                     name: Main Lights
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -200,6 +201,7 @@ card_esh_room_hall:
                   - type: custom:slider-button-card
                     entity: light.hall_leds
                     name: LEDs
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -227,6 +229,7 @@ card_esh_room_hall:
                   - type: custom:slider-button-card
                     entity: switch.hall_lamp
                     name: Hall Lamp
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -251,7 +254,7 @@ card_esh_room_hall:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_kitchen_normal
+                        entity: automation.scene_kitchen_normal_2
                         name: Day
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -259,7 +262,7 @@ card_esh_room_hall:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_day
+                            entity_id: automation.scene_hall_day_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
                         entity: automation.scene_hall_night_2
@@ -273,7 +276,7 @@ card_esh_room_hall:
                             entity_id: automation.scene_hall_night_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_sleep
+                        entity: automation.scene_hall_sleep_2
                         name: Sleeping
                         icon: mdi:sleep
                         show_last_changed: true
@@ -281,10 +284,10 @@ card_esh_room_hall:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_sleep
+                            entity_id: automation.scene_hall_sleep_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_off
+                        entity: automation.scene_hall_off_2
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -292,7 +295,7 @@ card_esh_room_hall:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_off
+                            entity_id: automation.scene_hall_off_2
 
 
     climate:

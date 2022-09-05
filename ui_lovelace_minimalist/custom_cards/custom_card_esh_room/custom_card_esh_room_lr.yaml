@@ -173,6 +173,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: switch.living_room
                     name: Main Lights
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -193,6 +194,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: light.living_room_leds
                     name: Main LEDs
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -220,6 +222,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: light.living_room_dining_led
                     name: Display LEDs
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -247,6 +250,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: light.living_room_tv_leds
                     name: TV LEDs
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -274,6 +278,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: switch.lava_lamp
                     name: Lava Lamp
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -294,6 +299,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: switch.lounge_lamp
                     name: Lamp
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -314,6 +320,7 @@ card_esh_room_lr:
                   - type: custom:slider-button-card
                     entity: light.living_room_dreamview
                     name: DreamView
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -338,7 +345,7 @@ card_esh_room_lr:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_day
+                        entity: automation.scene_living_room_day_2
                         name: Day
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -346,10 +353,10 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_day
+                            entity_id: automation.scene_living_room_day_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_night
+                        entity: automation.scene_living_room_night_2
                         name: Night
                         icon: mdi:weather-night
                         show_last_changed: true
@@ -357,10 +364,10 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_night
+                            entity_id: automation.scene_living_room_night_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_movie
+                        entity: automation.scene_living_room_movie_2
                         name: Movie
                         icon: mdi:movie
                         show_last_changed: true
@@ -368,10 +375,10 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_movie
+                            entity_id: automation.scene_living_room_movie_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_off
+                        entity: automation.scene_living_room_off_2
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -379,7 +386,7 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_off
+                            entity_id: automation.scene_living_room_off_2
 
 
     climate:

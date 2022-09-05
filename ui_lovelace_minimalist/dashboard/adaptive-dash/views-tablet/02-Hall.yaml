@@ -83,6 +83,8 @@ cards:
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
+          ulm_card_light_enable_slider: true
+          ulm_card_enable_collapse: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
@@ -91,6 +93,8 @@ cards:
         variables:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
+          ulm_card_light_enable_slider: true
+          ulm_card_enable_collapse: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
@@ -99,6 +103,9 @@ cards:
         variables:
           ulm_card_light_name: Lamp
           ulm_card_light_icon: mdi:lamp
+          ulm_card_light_enable_slider: true
+          ulm_card_enable_collapse: true
+          ulm_card_light_enable_popup: true
           ulm_card_light_force_background_color: true
         tap_action:
           action: more-info
@@ -113,7 +120,7 @@ cards:
     cards:
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_kitchen_normal
+        entity: automation.scene_kitchen_normal_2
         name: Day
         icon: mdi:weather-sunny
         show_last_changed: true
@@ -121,7 +128,7 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_day
+            entity_id: automation.scene_hall_day_2
       - type: 'custom:button-card'
         template: card_vertical_button
         entity: automation.scene_hall_night_2
@@ -135,7 +142,7 @@ cards:
             entity_id: automation.scene_hall_night_2
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_hall_sleep
+        entity: automation.scene_hall_sleep_2
         name: Sleeping
         icon: mdi:sleep
         show_last_changed: true
@@ -143,10 +150,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_sleep
+            entity_id: automation.scene_hall_sleep_2
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_hall_off
+        entity: automation.scene_hall_off_2
         name: All Off
         icon: mdi:lightbulb-off
         show_last_changed: true
@@ -154,7 +161,7 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_off
+            entity_id: automation.scene_hall_off_2
 
   - view_layout: ### SECURITY ###
       grid-area: "title3"
