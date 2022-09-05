@@ -3,7 +3,7 @@ description: ''
 trigger:
   - platform: state
     entity_id:
-    - person.sam_mcnab
+      - device_tracker.sam_mcnab
     to: away
 condition: []
 action:
