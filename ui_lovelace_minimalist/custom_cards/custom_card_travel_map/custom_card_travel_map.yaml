@@ -10,7 +10,7 @@ card_travel_map:
       service: browser_mod.popup
       data:
         title: "Local Traffic Map"
-        large: <true>
+        size: fullscreen
         content:
           type: iframe
           url: https://www.tfljamcams.net/
@@ -32,7 +32,7 @@ card_travel_map:
                   service: browser_mod.popup
                   data:
                     title: "Local Traffic Map"
-                    large: <true>
+                    size: fullscreen
                     content:
                       type: iframe
                       url: https://www.tfljamcams.net/
@@ -53,7 +53,7 @@ card_travel_map:
                   service: browser_mod.popup
                   data:
                     title: "Local Traffic Map"
-                    large: <true>
+                    size: fullscreen
                     content:
                       type: iframe
                       url: https://www.tfljamcams.net/

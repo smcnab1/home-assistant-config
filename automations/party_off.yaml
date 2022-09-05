@@ -17,4 +17,4 @@ action:
     - light.living_room_tv_leds
     - light.office_desk_led
   - delay: 1
-  - service: script.lights_partying_off
+  - service: script.party_off

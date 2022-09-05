@@ -173,6 +173,7 @@ card_esh_room_off:
                   - type: custom:slider-button-card
                     entity: light.office_desk_led
                     name: LEDs
+                    compact: true
                     slider:
                       direction: left-right
                       background: gradient
@@ -200,6 +201,7 @@ card_esh_room_off:
                   - type: custom:slider-button-card
                     entity: switch.desk_lamp
                     name: Desk Lamp
+                    compact: true
                     slider:
                       direction: left-right
                       background: gradient
@@ -224,7 +226,7 @@ card_esh_room_off:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_office_bright
+                        entity: automation.scene_office_bright_2
                         name: Bright
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -232,10 +234,10 @@ card_esh_room_off:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_bright
+                            entity_id: automation.scene_office_bright_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_office_dull
+                        entity: automation.scene_office_dull_2
                         name: Dull
                         icon: mdi:weather-night
                         show_last_changed: true
@@ -243,10 +245,10 @@ card_esh_room_off:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_dull
+                            entity_id: automation.scene_office_dull_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_office_lamp
+                        entity: automation.scene_office_lamp_2
                         name: Lamp
                         icon: mdi:desk-lamp
                         show_last_changed: true
@@ -254,10 +256,10 @@ card_esh_room_off:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_lamp
+                            entity_id: automation.scene_office_lamp_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_office_off
+                        entity: automation.scene_office_off_2
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -265,7 +267,7 @@ card_esh_room_off:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_off
+                            entity_id: automation.scene_office_off_2
 
     climate:
       card:

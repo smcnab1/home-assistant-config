@@ -173,6 +173,7 @@ card_esh_room_bed:
                   - type: custom:slider-button-card
                     entity: switch.bedroom
                     name: Main Lights
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -193,6 +194,7 @@ card_esh_room_bed:
                   - type: custom:slider-button-card
                     entity: light.bedroom_leds
                     name: Main LEDs
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -220,6 +222,7 @@ card_esh_room_bed:
                   - type: custom:slider-button-card
                     entity: switch.fairy_lights
                     name: Fairy Lights
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -240,6 +243,7 @@ card_esh_room_bed:
                   - type: custom:slider-button-card
                     entity: light.smart_bulb_2
                     name: Bedside Left
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -267,6 +271,7 @@ card_esh_room_bed:
                   - type: custom:slider-button-card
                     entity: light.smart_bulb
                     name: Bedside Right
+                    compact: true
                     slider: 
                       direction: left-right
                       background: gradient
@@ -298,7 +303,7 @@ card_esh_room_bed:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_bedroom_day
+                        entity: automation.scene_bedroom_day_2
                         name: Day
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -306,10 +311,10 @@ card_esh_room_bed:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bedroom_day
+                            entity_id: automation.scene_bedroom_day_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_bedroom_night
+                        entity: automation.scene_bedroom_night_2
                         name: Night
                         icon: mdi:weather-night
                         show_last_changed: true
@@ -317,10 +322,10 @@ card_esh_room_bed:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bedroom_night
+                            entity_id: automation.scene_bedroom_night_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_bedroom_movie
+                        entity: automation.scene_bedroom_movie_2
                         name: Movie
                         icon: mdi:movie
                         show_last_changed: true
@@ -328,10 +333,10 @@ card_esh_room_bed:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bedroom_movie
+                            entity_id: automation.scene_bedroom_movie_2
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_bedroom_off
+                        entity: automation.scene_bedroom_off_2
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -339,7 +344,7 @@ card_esh_room_bed:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bedroom_off
+                            entity_id: automation.scene_bedroom_off_2
 
 
     climate:
