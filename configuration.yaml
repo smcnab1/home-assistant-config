@@ -20,3 +20,8 @@ alarm_control_panel:
 
 owntracks:
   max_gps_accuracy: 200
+
+samsungtv_smart:
+  - host: 192.168.1.98
+    app_list: '{"Netflix": "11101200001/RN1MCdNq8t.Netflix", "YouTube": "111299001912/9Ur5IzDKqV.TizenYouTube", "Spotify": "3201606009684/rJeHak5zRg.Spotify", "Internet": "org.tizen.browser", "Prime Video": "3201512006785/org.tizen.primevideo", "Disney+": "3201901017640/MCmYXNxgcu.DisneyPlus", "Paramount Plus": "rJyOSqC6Up.PPlusIntl", "Discovery+": "pIaMf8YZyZ.whiteLabelTal", "BBC iPlayer": "DqEoaplKlw.bbchybrid", "ITV Hub": "OEvCiupaFR.ITVHub", "All 4": "OCaxbgg9v6.chfourctv", "My5": "EkzyZtmneG.My5"}'
+    source_list: '{"TV": "ST_TV", "Laptop HDMI": "ST_HDMI1", "DVD Player": "ST_HDMI2", "HDMI3": "ST_HDMI3", "HDMI4": "ST_HDMI4"}'

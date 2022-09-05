@@ -45,12 +45,4 @@ action:
           uri: tel:999
           icon: sfsymbols:phone.fill
           destructive: true
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-      milliseconds: 0
-  - service: notify.mobile_app_iphone
-    data:
-      message: clear_notification
 mode: single

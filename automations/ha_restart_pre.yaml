@@ -1,0 +1,56 @@
+alias: Home Assistant Shutdown Notification
+description: ""
+mode: single
+trigger:
+  - platform: homeassistant
+    event: shutdown
+condition: []
+action:
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: device_tracker.leah_jinks
+            state: home
+        then:
+          - service: notify.mobile_app_leah_s_iphone
+            data:
+              message: Things won't work. So silly eh
+              title: Home Assistant - Restarting
+              data:
+                actions:
+                  - action: URI
+                    title: Text Sam
+                    uri: >-
+                      https://api.whatsapp.com/send?phone=+447531049994&text=You%20so%20silly%1F#Intent;package=com.whatsapp;scheme=whatsapp;end&phone=+447513595678
+                    icon: sfsymbols:phone.circle.fill
+      - if:
+          - condition: state
+            entity_id: binary_sensor.sam_s_mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_sam_s_mac_mini
+            data:
+              title: Home Assistant - System Management
+              message: Home Assistant is Restarting
+        else:
+          - service: notify.mobile_app_iphone
+            data:
+              message: Home Assistant is Restarting
+              title: Home Assistant - System Management
+      - if:
+          - condition: state
+            entity_id: person.presence
+            state: home
+        then:
+          - service: tts.cloud_say
+            data:
+              entity_id: media_player.living_room_speaker
+              message: >-
+                Home Assistant is Restarting. Things may not work until it is
+                back up. So silly, so silly
+          - service: tts.cloud_say
+            data:
+              entity_id: media_player.bedroom
+              message: >-
+                Home Assistant is Restarting. Things may not work until it is
+                back up. So silly, so silly

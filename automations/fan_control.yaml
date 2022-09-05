@@ -10,7 +10,7 @@ action:
       device_id: 7ab72c275e4466f60c318693cc65c5dd
       entity_id: sensor.server_temperature
       domain: sensor
-      above: 25
+      above: 30
     then:
     - service: switch.turn_on
       data: {}
@@ -27,7 +27,7 @@ action:
       device_id: 7ab72c275e4466f60c318693cc65c5dd
       entity_id: sensor.server_temperature
       domain: sensor
-      below: 25
+      below: 30
   - service: switch.turn_off
     data: {}
     target:
