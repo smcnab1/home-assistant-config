@@ -201,16 +201,16 @@
     - 'beat'
 
 - platform: mqtt_room
-  name: "Leah: Phone BLE"
-  device_id: "apple:1006:10-8"
-  state_topic: "espresense/devices/apple:1006:10-8"
+  name: "Sam: Phone BLE"
+  device_id: "Sam"
+  state_topic: "espresense/devices/Sam"
   timeout: 5
   away_timeout: 120
 
 - platform: mqtt_room
-  name: "Sam: Phone BLE"
-  device_id: "iBeacon:57a5f3fc-83df-4423-a949-0f02b5081d5f-100-1"
-  state_topic: "espresense/devices/iBeacon:57a5f3fc-83df-4423-a949-0f02b5081d5f-100-1"
+  name: "Leah: Phone BLE"
+  device_id: "Leah"
+  state_topic: "espresense/devices/Leah"
   timeout: 5
   away_timeout: 120
 
