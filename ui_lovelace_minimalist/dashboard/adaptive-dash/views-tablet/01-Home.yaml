@@ -357,7 +357,7 @@ cards:
         entity: sensor.london_tfl_jubilee_940gzzluwhp
       - type: 'custom:button-card'
         template: card_travel_map
-        entity: sensor.sam_to_home
+        entity: sensor.sam_to_home_2
         name: Local Traffic
 
   ### ROOM CARDS ###

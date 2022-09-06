@@ -357,10 +357,19 @@ cards:
       template: "card_title"
       name: "Rooms"
     - type: 'custom:button-card'
-      template: chip_alarm
-      entity: alarm_control_panel.home_alarm
-      states:
-        - arm_away
+      template: chip_icon_label
+      icon: 'mdi:shield'
+      tap_action:
+        action: fire-dom-event
+        browser_mod:
+          service: browser_mod.popup
+          data:
+            title: "Alarm Panel"
+            content:
+              type: alarm-panel
+              entity: alarm_control_panel.home_alarm
+              states:
+                - arm_away
     - type: 'custom:button-card'
       template: chip_icon_label
       icon: 'mdi:lightbulb'
@@ -570,7 +579,6 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_enable_color: true
                         ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
@@ -594,7 +602,6 @@ cards:
                         ulm_card_light_name: Bedroom LEDs
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
                         ulm_card_light_enable_color: true
                         ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
@@ -1273,7 +1280,23 @@ cards:
                   label: Notify Hall Tablet
                   card_title: Send Notification to Hall Tablet
                   notification_title: 'New Notification'
-
+    - type: 'custom:button-card'
+      template: chip_icon_label
+      icon: 'mdi:movie'
+      tap_action:
+        action: fire-dom-event
+        browser_mod:
+          service: browser_mod.popup
+          data:
+            title: "Watch List"
+            content:
+              type: "shopping-list"
+    - type: 'custom:button-card'
+      template: chip_icon_label
+      icon: 'mdi:network'
+      tap_action:
+        action: navigate
+        navigation_path: "system"
 
   - view_layout:  ### HALL & LIVING ROOM ###
       grid-area: "card1"

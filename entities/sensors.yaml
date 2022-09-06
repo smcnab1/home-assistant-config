@@ -185,6 +185,10 @@
           Evening
         {% endif %}
 
+    date_last_boot:
+      friendly_name: "Last Boot"
+      value_template: '{{ states.sensor.last_boot.state.split("T")[0] }}'
+
 - platform: time_date
   display_options:
     - 'time'
@@ -256,3 +260,42 @@
     - startUrl
     - currentPage
   resource: !secret foo_rest
+
+- platform: command_line
+  name: core_updates
+  command: 'curl http://supervisor/core/info -H "Authorization: Bearer $(printenv SUPERVISOR_TOKEN)" | jq ''{"latest_version":.data.version_latest,"installed_version":.data.version,"update_available":.data.update_available}'''
+  value_template: '{{ value_json.update_available }}'
+  scan_interval: 600
+  json_attributes:
+    - update_available
+    - latest_version
+    - installed_version
+
+- platform: command_line
+  name: supervisor_updates
+  command: 'curl http://supervisor/supervisor/info -H "Authorization: Bearer $(printenv SUPERVISOR_TOKEN)" | jq ''{"latest_version":.data.version_latest,"installed_version":.data.version,"update_available":.data.update_available}'''
+  value_template: '{{ value_json.update_available }}'
+  scan_interval: 600
+  json_attributes:
+    - update_available
+    - latest_version
+    - installed_version
+
+- platform: command_line
+  name: os_updates
+  command: 'curl http://supervisor/os/info -H "Authorization: Bearer $(printenv SUPERVISOR_TOKEN)" | jq ''{"latest_version":.data.version_latest,"installed_version":.data.version,"update_available":.data.update_available}'''
+  value_template: '{{ value_json.update_available }}'
+  scan_interval: 600
+  json_attributes:
+    - update_available
+    - latest_version
+    - installed_version
+
+- platform: command_line
+  name: addons_updates
+  command: 'curl http://supervisor/addons -H "Authorization: Bearer $(printenv SUPERVISOR_TOKEN)" | jq ''{"addons":[.data.addons[] | select(.update_available)]}'''
+  value_template: '{{ value_json.addons | length }}'
+  scan_interval: 600
+  unit_of_measurement: pending update(s)
+  json_attributes:
+    - addons

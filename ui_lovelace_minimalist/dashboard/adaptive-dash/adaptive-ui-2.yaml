@@ -118,6 +118,22 @@ views:
     cards:
       - !include "views-phone/07-Office.yaml"
 
+  - type: "custom:grid-layout"
+    title: "System"
+    icon: "mdi:network"
+    path: "system"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/08-System.yaml"
+
 resources:
   - url: /local/camera-card.js
     type: module
@@ -140,4 +156,6 @@ resources:
   - url: /local/notify-card.js
     type: module
   - url: /local/mini-media-player-bundle.js?v=1.16.4
+    type: module
+  - url: /local/custom-lovelace/swipe-card/swipe-card.js
     type: module

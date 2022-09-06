@@ -4,3 +4,14 @@
 - platform: meteoalarm
   country: "united-kingdom"
   province: "London"
+
+
+- platform: template
+  sensors:
+    updater_core:
+      friendly_name: Core
+      device_class: problem
+      value_template: "{{ states('sensor.core_updates') }}"
+      attribute_templates:
+        installed_version: "{{ state_attr('sensor.core_updates', 'installed_version') }}"
+        latest_version: "{{ state_attr('sensor.core_updates', 'latest_version') }}"

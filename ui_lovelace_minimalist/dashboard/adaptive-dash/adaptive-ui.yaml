@@ -126,3 +126,5 @@ resources:
     type: module
   - url: /local/mini-media-player-bundle.js?v=1.16.4
     type: module
+  - url: /local/custom-lovelace/swipe-card/swipe-card.js
+    type: module

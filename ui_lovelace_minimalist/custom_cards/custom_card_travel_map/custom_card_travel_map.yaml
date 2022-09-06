@@ -16,7 +16,7 @@ card_travel_map:
           url: https://www.tfljamcams.net/
           aspect_ratio: 75%
   variables:
-    ulm_card_generic_icon: "[[[ return entity.attributes.icon ]]]"
+    ulm_card_generic_icon: mdi:car
     ulm_card_generic_name: Local Traffic Map
   custom_fields:
     item1:
@@ -37,15 +37,15 @@ card_travel_map:
                       type: iframe
                       url: https://www.tfljamcams.net/
                       aspect_ratio: 75%
-              entity: sensor.sam_to_home
-              icon: "[[[ return entity.attributes.icon ]]]"
+              entity: sensor.sam_to_home_2
+              icon: mdi:car
               styles:
                 icon:
                   - color: "rgba(var(--color-blue),0.9)"
           item2:
             card:
               type: "custom:button-card"
-              entity: sensor.sam_to_home
+              entity: sensor.sam_to_home_2
               name: Local Traffic Map
               tap_action:
                 action: fire-dom-event
