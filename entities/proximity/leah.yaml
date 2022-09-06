@@ -1,5 +1,5 @@
 zone: home
 devices:
-  - device_tracker.leah_jinks
+  - person.leah_jinks
 tolerance: 50
 unit_of_measurement: mi
