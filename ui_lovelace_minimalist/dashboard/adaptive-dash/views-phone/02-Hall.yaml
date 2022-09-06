@@ -5,16 +5,16 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
-        "topbar topbar topbar topbar topbar topbar"
-        "title1 title1 title1 title1 title1 title1"
-        "card1 card1 card1 card1 card1 card1"
-        "card11 card11 card11 card11 card11 card11"
-        "title2 title2 title2 title2 title2 title2"
-        "card3 card3 card3 card3 card3 card3"
-        "title3 title3 title3 title3 title3 title3"
-        "card4 card4 card4 card4 card4 card4"
-        "card5 card5 card5 card5 card5 card5"
-        "card6 card6 card6 card6 card6 card6"
+    "topbar topbar topbar topbar topbar topbar"
+    "title1 title1 title1 title1 title1 title1"
+    "card1 card1 card1 card1 card1 card1"
+    "card11 card11 card11 card11 card11 card11"
+    "title2 title2 title2 title2 title2 title2"
+    "card3 card3 card3 card3 card3 card3"
+    "title3 title3 title3 title3 title3 title3"
+    "card4 card4 card4 card4 card4 card4"
+    "card5 card5 card5 card5 card5 card5"
+    "card6 card6 card6 card6 card6 card6"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
@@ -38,13 +38,13 @@ cards:
       grid-area: "topbar"
     type: horizontal-stack
     cards:
-    - type: 'custom:button-card'
-      template: chip_back
-      variables:
-        ulm_chip_back_path: /lovelace-minimalist-2/home
-    - type: "custom:button-card"
-      template: "card_title"
-      name: "Hall"
+      - type: "custom:button-card"
+        template: chip_back
+        variables:
+          ulm_chip_back_path: /lovelace-minimalist-2/home
+      - type: "custom:button-card"
+        template: "card_title"
+        name: "Hall"
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
@@ -97,7 +97,7 @@ cards:
       grid-area: "card3"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_hall_day
         name: Day
@@ -108,7 +108,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_hall_day
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_hall_night
         name: Night
@@ -119,7 +119,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_hall_night
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_hall_sleep
         name: Sleeping
@@ -130,7 +130,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_hall_sleep
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_hall_off
         name: All Off
@@ -151,7 +151,7 @@ cards:
       grid-area: "card4"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_binary_sensor_alert
         name: Door
         variables:
@@ -159,7 +159,7 @@ cards:
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Door
         entity: binary_sensor.hall_door_sensor
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_battery
         entity: sensor.hall_door_sensor_battery
         name: Door
@@ -172,14 +172,14 @@ cards:
       grid-area: "card5"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_binary_sensor_alert
         variables:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
         entity: binary_sensor.hall_motion_sensor_3
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_battery
         entity: sensor.hall_motion_sensor_battery_sensor_3
         variables:
@@ -189,7 +189,7 @@ cards:
           ulm_card_battery_name: Motion
   - view_layout: ### CAMERA ###
       grid-area: "card6"
-    type: 'custom:button-card'
+    type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle
     name: Camera
@@ -201,21 +201,86 @@ cards:
         data:
           title: "Hall Camera"
           content:
-            type: custom:frigate-card
-            cameras:
-              - camera_entity: camera.hall
-                camera_name: Hall
-            view:
-              default: live
-            menu:
-              mode: overlay-bottom
-              buttons:
-                image: true
-            live:
-              lazy_load: false
-              auto_unmute: true
-              preload: true
-              controls:
-                thumbnails:
-                  media: clips
-                  mode: below
+            type: custom:swipe-card
+            cards:
+              - type: picture-glance
+                title: Hall
+                camera_image: camera.hall_hd
+                camera_view: live
+                entities:
+                  - entity: camera.hall_hd
+                    icon: "mdi:arrow-left-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        pan: LEFT
+                  - entity: camera.hall_hd
+                    icon: "mdi:arrow-up-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        tilt: UP
+                  - entity: camera.hall_hd
+                    icon: "mdi:arrow-down-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        tilt: DOWN
+                  - entity: camera.hall_hd
+                    icon: "mdi:arrow-right-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        pan: RIGHT
+                  - entity: camera.hall_hd
+                    icon: "mdi:chef-hat"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        preset: KitchenDoor
+                  - entity: camera.hall_hd
+                    icon: "mdi:door-open"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.hall_hd
+                        preset: MainDoor
+                  - entity: camera.hall_hd
+                    icon: "mdi:power"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.reboot
+                      service_data:
+                        entity_id: camera.hall_hd
+                hold_action:
+                  action: more-info
+
+              - type: custom:frigate-card
+                cameras:
+                  - camera_entity: camera.hall
+                    camera_name: Hall
+                view:
+                  default: live
+                menu:
+                  mode: overlay-bottom
+                  buttons:
+                    image: true
+                live:
+                  lazy_load: false
+                  auto_unmute: true
+                  preload: true
+                  controls:
+                    thumbnails:
+                      media: clips
+                      mode: below

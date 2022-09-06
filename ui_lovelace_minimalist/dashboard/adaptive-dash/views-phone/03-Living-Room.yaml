@@ -5,20 +5,20 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
-        "topbar topbar topbar topbar topbar topbar"
-        "title1 title1 title1 title1 title1 title1"
-        "card1 card1 card1 card1 card1 card1"
-        "card2 card2 card2 card2 card2 card2"
-        "card22 card22 card22 card22 card22 card22"
-        "card3 card3 card3 card3 card3 card3"
-        "title2 title2 title2 title2 title2 title2"
-        "card4 card4 card4 card4 card4 card4"
-        "title3 title3 title3 title3 title3 title3"
-        "card5 card5 card5 card5 card5 card5"
-        "card6 card6 card6 card6 card6 card6"
-        "title4 title4 title4 title4 title4 title4"
-        "card7 card7 card7 card7 card7 card7"
-        "card8 card8 card8 card8 card8 card8"
+    "topbar topbar topbar topbar topbar topbar"
+    "title1 title1 title1 title1 title1 title1"
+    "card1 card1 card1 card1 card1 card1"
+    "card2 card2 card2 card2 card2 card2"
+    "card22 card22 card22 card22 card22 card22"
+    "card3 card3 card3 card3 card3 card3"
+    "title2 title2 title2 title2 title2 title2"
+    "card4 card4 card4 card4 card4 card4"
+    "title3 title3 title3 title3 title3 title3"
+    "card5 card5 card5 card5 card5 card5"
+    "card6 card6 card6 card6 card6 card6"
+    "title4 title4 title4 title4 title4 title4"
+    "card7 card7 card7 card7 card7 card7"
+    "card8 card8 card8 card8 card8 card8"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
@@ -46,18 +46,18 @@ cards:
       grid-area: "topbar"
     type: horizontal-stack
     cards:
-    - type: 'custom:button-card'
-      template: chip_back
-      variables:
-        ulm_chip_back_path: /lovelace-minimalist-2/home
-    - type: "custom:button-card"
-      template: "card_title"
-      name: "Living Room"
-    - type: "custom:button-card"
-      template: chip_mdi_icon_state
-      variables:
-        ulm_chip_mdi_icon_state_entity: sensor.living_room_temperature_temperature
-        ulm_chip_mdi_icon_state_icon: mdi:thermometer
+      - type: "custom:button-card"
+        template: chip_back
+        variables:
+          ulm_chip_back_path: /lovelace-minimalist-2/home
+      - type: "custom:button-card"
+        template: "card_title"
+        name: "Living Room"
+      - type: "custom:button-card"
+        template: chip_mdi_icon_state
+        variables:
+          ulm_chip_mdi_icon_state_entity: sensor.living_room_temperature_temperature
+          ulm_chip_mdi_icon_state_icon: mdi:thermometer
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
@@ -156,7 +156,7 @@ cards:
       grid-area: "card4"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_day
         name: Day
@@ -167,7 +167,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_day
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_night
         name: Night
@@ -178,7 +178,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_night
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_movie
         name: Movie
@@ -189,7 +189,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_living_room_movie
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_living_room_off
         name: All Off
@@ -214,7 +214,7 @@ cards:
         template: card_media_player
         entity: media_player.samsung_tv
         variables:
-          ulm_card_media_player_name : Samsung TV
+          ulm_card_media_player_name: Samsung TV
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -223,7 +223,7 @@ cards:
         template: card_media_player
         entity: media_player.living_room_sonos_sonos
         variables:
-          ulm_card_media_player_name : Sonos
+          ulm_card_media_player_name: Sonos
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -236,7 +236,7 @@ cards:
         template: card_media_player
         entity: media_player.living_room_speaker
         variables:
-          ulm_card_media_player_name : Google Assistant
+          ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -251,7 +251,7 @@ cards:
       grid-area: "card7"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_binary_sensor_alert
         name: Motion
         variables:
@@ -259,7 +259,7 @@ cards:
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
         entity: binary_sensor.living_room_motion
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_battery
         entity: sensor.living_room_motion_battery_sensor
         name: Motion
@@ -270,7 +270,7 @@ cards:
           ulm_card_battery_name: Motion
   - view_layout: ### CAMERA ###
       grid-area: "card8"
-    type: 'custom:button-card'
+    type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle
     name: Camera
@@ -283,21 +283,87 @@ cards:
         data:
           title: "Living Room Camera"
           content:
-            type: custom:frigate-card
-            cameras:
-              - camera_entity: camera.living_room
-                camera_name: Living Room
-            view:
-              default: live
-            menu:
-              mode: overlay-bottom
-              buttons:
-                image: true
-            live:
-              lazy_load: false
-              auto_unmute: true
-              preload: true
-              controls:
-                thumbnails:
-                  media: clips
-                  mode: below
+            type: custom:swipe-card
+            cards:
+              - type: picture-glance
+                title: Living Room
+                camera_image: camera.living_room_hd
+                camera_view: live
+                entities:
+                  - entity: camera.living_room_hd
+                    icon: "mdi:arrow-left-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        pan: LEFT
+                  - entity: camera.living_room_hd
+                    icon: "mdi:arrow-up-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        tilt: UP
+                  - entity: camera.living_room_hd
+                    icon: "mdi:arrow-down-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        tilt: DOWN
+                  - entity: camera.living_room_hd
+                    icon: "mdi:arrow-right-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        pan: RIGHT
+                  - entity: camera.living_room_hd
+                    icon: "mdi:television"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        preset: LivingRoom
+                  - entity: camera.living_room_hd
+                    icon: "mdi:desk"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        preset: Desk
+                  - entity: camera.living_room_hd
+                    icon: "mdi:blinds"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.living_room_hd
+                        preset: Window
+                hold_action:
+                  action: more-info
+
+              - type: custom:frigate-card
+                cameras:
+                  - camera_entity: camera.living_room
+                    camera_name: Living Room
+                view:
+                  default: live
+                menu:
+                  mode: overlay-bottom
+                  buttons:
+                    image: true
+                live:
+                  lazy_load: false
+                  auto_unmute: true
+                  preload: true
+                  controls:
+                    thumbnails:
+                      media: clips
+                      mode: below

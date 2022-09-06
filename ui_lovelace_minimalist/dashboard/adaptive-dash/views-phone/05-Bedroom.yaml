@@ -5,18 +5,18 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
-        "topbar topbar topbar topbar topbar topbar"
-        "title1 title1 title1 title1 title1 title1"
-        "card1 card1 card1 card1 card1 card1"
-        "card2 card2 card2 card2 card2 card2"
-        "card22 card22 card22 card22 card22 card22"
-        "title2 title2 title2 title2 title2 title2"
-        "card4 card4 card4 card4 card4 card4"
-        "title3 title3 title3 title3 title3 title3"
-        "card5 card5 card5 card5 card5 card5"
-        "title4 title4 title4 title4 title4 title4"
-        "card6 card6 card6 card6 card6 card6"
-        "card7 card7 card7 card7 card7 card7"
+    "topbar topbar topbar topbar topbar topbar"
+    "title1 title1 title1 title1 title1 title1"
+    "card1 card1 card1 card1 card1 card1"
+    "card2 card2 card2 card2 card2 card2"
+    "card22 card22 card22 card22 card22 card22"
+    "title2 title2 title2 title2 title2 title2"
+    "card4 card4 card4 card4 card4 card4"
+    "title3 title3 title3 title3 title3 title3"
+    "card5 card5 card5 card5 card5 card5"
+    "title4 title4 title4 title4 title4 title4"
+    "card6 card6 card6 card6 card6 card6"
+    "card7 card7 card7 card7 card7 card7"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
@@ -42,18 +42,18 @@ cards:
       grid-area: "topbar"
     type: horizontal-stack
     cards:
-    - type: 'custom:button-card'
-      template: chip_back
-      variables:
-        ulm_chip_back_path: /lovelace-minimalist-2/home
-    - type: "custom:button-card"
-      template: "card_title"
-      name: "Bedroom"
-    - type: "custom:button-card"
-      template: chip_mdi_icon_state
-      variables:
-        ulm_chip_mdi_icon_state_entity: sensor.bedroom_temperature_temperature_2
-        ulm_chip_mdi_icon_state_icon: mdi:thermometer
+      - type: "custom:button-card"
+        template: chip_back
+        variables:
+          ulm_chip_back_path: /lovelace-minimalist-2/home
+      - type: "custom:button-card"
+        template: "card_title"
+        name: "Bedroom"
+      - type: "custom:button-card"
+        template: chip_mdi_icon_state
+        variables:
+          ulm_chip_mdi_icon_state_entity: sensor.bedroom_temperature_temperature_2
+          ulm_chip_mdi_icon_state_icon: mdi:thermometer
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
@@ -130,7 +130,7 @@ cards:
       grid-area: "card4"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_bedroom_day
         name: Day
@@ -141,7 +141,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_bedroom_day
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_bedroom_night
         name: Night
@@ -152,7 +152,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_bedroom_night
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_bedroom_movie
         name: Movie
@@ -163,7 +163,7 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.scene_bedroom_movie
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.scene_bedroom_off
         name: All Off
@@ -188,7 +188,7 @@ cards:
         template: card_media_player
         entity: media_player.fire_tv_192_168_1_104
         variables:
-          ulm_card_media_player_name : Amazon TV
+          ulm_card_media_player_name: Amazon TV
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -197,7 +197,7 @@ cards:
         template: card_media_player
         entity: media_player.bedroom
         variables:
-          ulm_card_media_player_name : Google Assistant
+          ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
@@ -212,7 +212,7 @@ cards:
       grid-area: "card6"
     type: horizontal-stack
     cards:
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_binary_sensor_alert
         name: Motion
         variables:
@@ -220,7 +220,7 @@ cards:
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
         entity: binary_sensor.bedroom_motion_sensor_4
-      - type: 'custom:button-card'
+      - type: "custom:button-card"
         template: card_battery
         entity: sensor.bedroom_motion_sensor_battery_sensor_4
         name: Motion
@@ -231,7 +231,7 @@ cards:
           ulm_card_battery_name: Motion
   - view_layout: ### CAMERA ###
       grid-area: "card7"
-    type: 'custom:button-card'
+    type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle
     name: Camera
@@ -244,21 +244,86 @@ cards:
         data:
           title: "Bedroom Camera"
           content:
-            type: custom:frigate-card
-            cameras:
-              - camera_entity: camera.bedroom
-                camera_name: Bedroom
-            view:
-              default: live
-            menu:
-              mode: overlay-bottom
-              buttons:
-                image: true
-            live:
-              lazy_load: false
-              auto_unmute: true
-              preload: true
-              controls:
-                thumbnails:
-                  media: clips
-                  mode: below
+            type: custom:swipe-card
+            cards:
+              - type: picture-glance
+                title: Bedroom
+                camera_image: camera.bedroom_hd
+                camera_view: live
+                entities:
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:arrow-left-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        pan: LEFT
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:arrow-up-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        tilt: UP
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:arrow-down-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        tilt: DOWN
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:arrow-right-drop-circle-outline"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        pan: RIGHT
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:bed-double"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        preset: Bedroom
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:blinds"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.ptz
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                        preset: Window
+                  - entity: camera.bedroom_hd
+                    icon: "mdi:power"
+                    tap_action:
+                      action: call-service
+                      service: tapo_control.reboot
+                      service_data:
+                        entity_id: camera.bedroom_hd
+                hold_action:
+                  action: more-info
+
+              - type: custom:frigate-card
+                cameras:
+                  - camera_entity: camera.bedroom
+                    camera_name: Bedroom
+                view:
+                  default: live
+                menu:
+                  mode: overlay-bottom
+                  buttons:
+                    image: true
+                live:
+                  lazy_load: false
+                  auto_unmute: true
+                  preload: true
+                  controls:
+                    thumbnails:
+                      media: clips
+                      mode: below

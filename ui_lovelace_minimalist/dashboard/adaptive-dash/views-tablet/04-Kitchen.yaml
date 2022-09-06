@@ -217,21 +217,87 @@ cards:
           data:
             title: "Kitchen Camera"
             content:
-              type: custom:frigate-card
-              cameras:
-                - camera_entity: camera.living_room
-                  camera_name: Living Room
-              view:
-                default: live
-              menu:
-                mode: overlay-bottom
-                buttons:
-                  image: true
-              live:
-                lazy_load: false
-                auto_unmute: true
-                preload: true
-                controls:
-                  thumbnails:
-                    media: clips
-                    mode: below
+              type: custom:swipe-card
+              cards:
+                - type: picture-glance
+                  title: Kitchen
+                  camera_image: camera.living_room_hd
+                  camera_view: live
+                  entities:
+                    - entity: camera.living_room_hd
+                      icon: "mdi:arrow-left-drop-circle-outline"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          pan: LEFT
+                    - entity: camera.living_room_hd
+                      icon: "mdi:arrow-up-drop-circle-outline"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          tilt: UP
+                    - entity: camera.living_room_hd
+                      icon: "mdi:arrow-down-drop-circle-outline"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          tilt: DOWN
+                    - entity: camera.living_room_hd
+                      icon: "mdi:arrow-right-drop-circle-outline"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          pan: RIGHT
+                    - entity: camera.living_room_hd
+                      icon: "mdi:television"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          preset: LivingRoom
+                    - entity: camera.living_room_hd
+                      icon: "mdi:desk"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          preset: Desk
+                    - entity: camera.living_room_hd
+                      icon: "mdi:blinds"
+                      tap_action:
+                        action: call-service
+                        service: tapo_control.ptz
+                        service_data:
+                          entity_id: camera.living_room_hd
+                          preset: Window
+                  hold_action:
+                    action: more-info
+
+                - type: custom:frigate-card
+                  cameras:
+                    - camera_entity: camera.living_room
+                      camera_name: Living Room
+                  view:
+                    default: live
+                  menu:
+                    mode: overlay-bottom
+                    buttons:
+                      image: true
+                  live:
+                    lazy_load: false
+                    auto_unmute: true
+                    preload: true
+                    controls:
+                      thumbnails:
+                        media: clips
+                        mode: below
