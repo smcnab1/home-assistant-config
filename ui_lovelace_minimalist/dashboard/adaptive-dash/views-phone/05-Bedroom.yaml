@@ -9,7 +9,7 @@ layout:
         "title1 title1 title1 title1 title1 title1"
         "card1 card1 card1 card1 card1 card1"
         "card2 card2 card2 card2 card2 card2"
-        "card3 card3 card3 card3 card3 card3"
+        "card22 card22 card22 card22 card22 card22"
         "title2 title2 title2 title2 title2 title2"
         "card4 card4 card4 card4 card4 card4"
         "title3 title3 title3 title3 title3 title3"
@@ -26,7 +26,7 @@ layout:
         "title1 title1"
         "card1 card1"
         "card2 card2"
-        "card3 card3"
+        "card22 card22"
         "title2 title2"
         "card4 card4"
         "title3 title3"
@@ -66,16 +66,13 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: switch.bedroom
+        entity: light.bedroom
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
-          ulm_card_light_enable_popup: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
       - type: "custom:button-card"
         template: card_light
         entity: light.bedroom_leds
@@ -83,7 +80,7 @@ cards:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
@@ -97,11 +94,9 @@ cards:
           ulm_card_light_name: Bedside Left
           ulm_card_light_icon: mdi:lamp
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
-        tap_action:
-          action: more-info
       - type: "custom:button-card"
         template: card_light
         entity: light.smart_bulb
@@ -109,25 +104,23 @@ cards:
           ulm_card_light_name: Bedside Right
           ulm_card_light_icon: mdi:lamp
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
-      grid-area: "card3"
+      grid-area: "card22"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: switch.fairy_lights
+        entity: light.fairy_lights
         variables:
           ulm_card_light_name: Fairy Lights
           ulm_card_light_icon: mdi:string-lights
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
-          ulm_card_light_enable_popup: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
+
   - view_layout: ### SCENES ###
       grid-area: "title2"
     type: "custom:button-card"
@@ -139,7 +132,7 @@ cards:
     cards:
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_bedroom_day_2
+        entity: automation.scene_bedroom_day
         name: Day
         icon: mdi:weather-sunny
         show_last_changed: true
@@ -147,10 +140,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_day_2
+            entity_id: automation.scene_bedroom_day
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_bedroom_night_2
+        entity: automation.scene_bedroom_night
         name: Night
         icon: mdi:weather-night
         show_last_changed: true
@@ -158,10 +151,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_night_2
+            entity_id: automation.scene_bedroom_night
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_bedroom_movie_2
+        entity: automation.scene_bedroom_movie
         name: Movie
         icon: mdi:movie
         show_last_changed: true
@@ -169,10 +162,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_movie_2
+            entity_id: automation.scene_bedroom_movie
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_bedroom_off_2
+        entity: automation.scene_bedroom_off
         name: All Off
         icon: mdi:lightbulb-off
         show_last_changed: true
@@ -180,7 +173,7 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_off_2
+            entity_id: automation.scene_bedroom_off
 
   - view_layout: ### MEDIA ###
       grid-area: "title3"

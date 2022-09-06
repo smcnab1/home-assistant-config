@@ -383,7 +383,7 @@ cards:
                         ulm_chip_mdi_icon_only_icon: mdi:door-open
                       tap_action:
                         action: call-service
-                        service: light.toggle
+                        service: light.turn_off
                         service_data:
                           entity_id: light.all_hall_lights
                     - type: 'custom:button-card'
@@ -392,7 +392,7 @@ cards:
                         ulm_chip_mdi_icon_only_icon: mdi:sofa
                       tap_action:
                         action: call-service
-                        service: light.toggle
+                        service: light.turn_off
                         service_data:
                           entity_id: light.all_living_room_lights
                     - type: 'custom:button-card'
@@ -401,7 +401,7 @@ cards:
                         ulm_chip_mdi_icon_only_icon: mdi:chef-hat
                       tap_action:
                         action: call-service
-                        service: light.toggle
+                        service: light.turn_off
                         service_data:
                           entity_id: light.all_kitchen_lights
                     - type: 'custom:button-card'
@@ -410,7 +410,7 @@ cards:
                         ulm_chip_mdi_icon_only_icon: mdi:bed-double
                       tap_action:
                         action: call-service
-                        service: light.toggle
+                        service: light.turn_off
                         service_data:
                           entity_id: light.all_bedroom_lights
                     - type: 'custom:button-card'
@@ -428,7 +428,7 @@ cards:
                         ulm_chip_mdi_icon_only_icon: mdi:desk
                       tap_action:
                         action: call-service
-                        service: light.toggle
+                        service: light.turn_off
                         service_data:
                           entity_id: light.all_office_lights
                     - type: custom:gap-card
@@ -438,521 +438,238 @@ cards:
                   name: "Hall"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.hall_lights
-                      name: Main Lights
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:ceiling-light
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.hall_lights
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                      variables:
+                        ulm_card_light_name: Main Lights
+                        ulm_card_light_icon: mdi:ceiling-light
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.hall_leds
-                      name: LEDs
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.hall_leds
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
-                      entity: switch.hall_lamp
-                      name: Hall Lamp
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Hall LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                - type: "horizontal-stack"
+                  cards:
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.hall_lamp
+                      variables:
+                        ulm_card_light_name: Hall Lamp
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Living Room"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
-                      entity: switch.living_room
-                      name: Main Lights
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:ceiling-light
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.living_room
+                      variables:
+                        ulm_card_light_name: Main Light
+                        ulm_card_light_icon: mdi:ceiling-light
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.living_room_leds
-                      name: Main LEDs
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.living_room_leds
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
-                      entity: light.living_room_dining_led
-                      name: Display LEDs
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.living_room_dining_led
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Main LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.living_room_dining_led
+                      variables:
+                        ulm_card_light_name: Display LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.living_room_tv_leds
-                      name: TV LEDs
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.living_room_tv_leds
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
-                      entity: switch.lava_lamp
-                      name: Lava Lamp
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:lava-lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
-                      entity: switch.lounge_lamp
-                      name: Lamp
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:floor-lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                      variables:
+                        ulm_card_light_name: TV LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                - type: "horizontal-stack"
+                  cards:
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.lava_lamp
+                      variables:
+                        ulm_card_light_name: Lava Lamp
+                        ulm_card_light_icon: mdi:lava-lamp
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.lounge_lamp
+                      variables:
+                        ulm_card_light_name: Lamp
+                        ulm_card_light_icon: mdi:floor-lamp
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                - type: "horizontal-stack"
+                  cards:
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.living_room_dreamview
-                      name: DreamView
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:movie
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: DreamView
+                        ulm_card_light_icon: mdi:movie
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Kitchen"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.kitchen_lights
-                      name: Main Lights
-                      slider:
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:ceiling-light
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.kitchen_lights
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                      variables:
+                        ulm_card_light_name: Main Lights
+                        ulm_card_light_icon: mdi:ceiling-light
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.kitchen_leds
-                      name: LEDs
-                      slider:
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.kitchen_leds
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Kitchen LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Bedroom"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
-                      entity: switch.bedroom
-                      name: Main Lights
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:ceiling-light
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.bedroom
+                      variables:
+                        ulm_card_light_name: Main Lights
+                        ulm_card_light_icon: mdi:ceiling-light
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.bedroom_leds
-                      name: Main LEDs
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.bedroom_leds
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Bedroom LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.smart_bulb
-                      name: Bedside Right
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.smart_bulb
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
+                      variables:
+                        ulm_card_light_name: Bedside Right
+                        ulm_card_light_icon: mdi:lamp
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.smart_bulb_2
-                      name: Bedside Left
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.smart_bulb_2
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Bedside Left
+                        ulm_card_light_icon: mdi:lamp
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
-                      entity: switch.fairy_lights
-                      name: Fairy Lights
-                      slider: 
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:string-lights
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.fairy_lights
+                      variables:
+                        ulm_card_light_name: Fairy Lights
+                        ulm_card_light_icon: mdi:string-lights
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Bathroom"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.bathroom_lights
-                      name: Main Lights
-                      slider:
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:ceiling-light
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.bathroom_lights
-                        action_button:
-                          mode: custom
-                          show: true
-                          tap_action:
-                            action: toggle
+                      variables:
+                        ulm_card_light_name: Bathroom Lights
+                        ulm_card_light_icon: mdi:ceiling-light
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Office"
                 - type: "horizontal-stack"
                   cards:
-                    - type: custom:slider-button-card
+                    - type: "custom:button-card"
+                      template: card_light
                       entity: light.office_desk_led
-                      name: LEDs
-                      slider:
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:led-strip
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: fire-dom-event
-                          browser_mod:
-                            service: browser_mod.popup
-                            data:
-                              content:
-                                type: "custom:button-card"
-                                template: "popup_light_brightness"
-                                entity: light.office_desk_led
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
-                    - type: custom:slider-button-card
-                      entity: switch.desk_lamp
-                      name: Desk Lamp
-                      slider:
-                        direction: left-right
-                        background: gradient
-                        use_state_color: true
-                        show_track: true
-                        force_square: false
-                      icon:
-                        icon: mdi:desk-lamp
-                        use_state_color: true
-                        show: true
-                        tap_action:
-                          action: more-info
-                      action_button:
-                        mode: custom
-                        show: true
-                        tap_action:
-                          action: toggle
+                      variables:
+                        ulm_card_light_name: Desk LEDs
+                        ulm_card_light_icon: mdi:led-strip
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_popup: true
+                    - type: "custom:button-card"
+                      template: card_light
+                      entity: light.desk_lamp
+                      variables:
+                        ulm_card_light_name: Desk Lamp
+                        ulm_card_light_icon: mdi:desk-lamp
+                        ulm_card_light_enable_slider: true
+                        ulm_card_light_enable_color: true
+                        ulm_card_light_force_background_color: true
     - type: 'custom:button-card'
       template: chip_icon_label
       icon: 'mdi:palette'
@@ -972,7 +689,7 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_kitchen_normal
+                      entity: automation.scene_hall_day
                       name: Day
                       icon: mdi:weather-sunny
                       show_last_changed: true
@@ -983,7 +700,7 @@ cards:
                           entity_id: automation.scene_hall_day
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_hall_night_2
+                      entity: automation.scene_hall_night
                       name: Night
                       icon: mdi:weather-night
                       show_last_changed: true
@@ -991,7 +708,7 @@ cards:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_hall_night_2
+                          entity_id: automation.scene_hall_night
                     - type: 'custom:button-card'
                       template: card_vertical_button
                       entity: automation.scene_hall_sleep

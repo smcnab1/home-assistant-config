@@ -88,21 +88,18 @@ cards:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
         template: card_light
-        entity: switch.desk_lamp
+        entity: light.desk_lamp
         variables:
           ulm_card_light_name: Desk Lamp
           ulm_card_light_icon: mdi:desk-lamp
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
-          ulm_card_light_enable_popup: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
   - view_layout: ### SCENES ###
       grid-area: "title2"
     type: "custom:button-card"
@@ -114,7 +111,7 @@ cards:
     cards:
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_office_bright_2
+        entity: automation.scene_office_bright
         name: Bright
         icon: mdi:weather-sunny
         show_last_changed: true
@@ -122,10 +119,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_office_bright_2
+            entity_id: automation.scene_office_bright
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_office_dull_2
+        entity: automation.scene_office_dull
         name: Dull
         icon: mdi:weather-night
         show_last_changed: true
@@ -133,10 +130,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_office_dull_2
+            entity_id: automation.scene_office_dull
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_office_lamp_2
+        entity: automation.scene_office_lamp
         name: Lamp
         icon: mdi:desk-lamp
         show_last_changed: true
@@ -144,10 +141,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_office_lamp_2
+            entity_id: automation.scene_office_lamp
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_office_off_2
+        entity: automation.scene_office_off
         name: All Off
         icon: mdi:lightbulb-off
         show_last_changed: true
@@ -155,7 +152,7 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_office_off_2
+            entity_id: automation.scene_office_off
 
   - view_layout: ### MEDIA ###
       grid-area: "title3"

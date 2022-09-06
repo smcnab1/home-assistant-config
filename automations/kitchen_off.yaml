@@ -5,8 +5,7 @@ trigger: []
 condition: []
 action:
   - service: light.turn_off
-    data:
-      transition: 20
+    data: {}
     target:
       entity_id: light.all_kitchen_lights
 mode: single

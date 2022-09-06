@@ -170,34 +170,18 @@ card_esh_room_bath:
               content:
                 type: "vertical-stack"
                 cards:
-                  - type: custom:slider-button-card
-                    entity: light.bathroom_lights
-                    name: Main Lights
-                    compact: true
-                    slider:
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:ceiling-light
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.bathroom_lights
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bathroom_lights
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                          ulm_card_light_enable_popup: true
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
@@ -205,7 +189,7 @@ card_esh_room_bath:
                     cards:
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_bathroom_morning_2
+                        entity: automation.scene_bathroom_morning
                         name: Morning
                         icon: mdi:weather-sunset-up
                         show_last_changed: true
@@ -213,10 +197,10 @@ card_esh_room_bath:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bathroom_morning_2
+                            entity_id: automation.scene_bathroom_morning
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_bathroom_normal_2
+                        entity: automation.scene_bathroom_normal
                         name: Normal
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -224,10 +208,10 @@ card_esh_room_bath:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bathroom_normal_2
+                            entity_id: automation.scene_bathroom_normal
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_bathroom_bath_2
+                        entity: automation.scene_bathroom_bath
                         name: Bath
                         icon: mdi:bathtub
                         show_last_changed: true
@@ -235,10 +219,12 @@ card_esh_room_bath:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bathroom_bath_2
+                            entity_id: automation.scene_bathroom_bath
+                  - type: "horizontal-stack"
+                    cards:
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_bathroom_off_2
+                        entity: automation.scene_bathroom_off
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -246,7 +232,7 @@ card_esh_room_bath:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_bathroom_off_2
+                            entity_id: automation.scene_bathroom_off
 
     climate:
       card:

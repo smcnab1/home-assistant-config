@@ -1,5 +1,5 @@
 popup_light:
-  template: popup_3_items
+  template: popup_4_items
   custom_fields:
     item1:
       card:

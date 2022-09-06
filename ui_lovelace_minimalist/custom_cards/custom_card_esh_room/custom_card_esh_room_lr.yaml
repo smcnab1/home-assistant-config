@@ -170,174 +170,81 @@ card_esh_room_lr:
               content:
                 type: "vertical-stack"
                 cards:
-                  - type: custom:slider-button-card
-                    entity: switch.living_room
-                    name: Main Lights
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:ceiling-light
-                      use_state_color: true
-                      show: true
-                      tap_action:
-                        action: more-info
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: light.living_room_leds
-                    name: Main LEDs
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:led-strip
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.living_room_leds
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: light.living_room_dining_led
-                    name: Display LEDs
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:led-strip
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.living_room_dining_led
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: light.living_room_tv_leds
-                    name: TV LEDs
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:led-strip
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.living_room_tv_leds
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: switch.lava_lamp
-                    name: Lava Lamp
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:lava-lamp
-                      use_state_color: true
-                      show: true
-                      tap_action:
-                        action: more-info
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: switch.lounge_lamp
-                    name: Lamp
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:floor-lamp
-                      use_state_color: true
-                      show: true
-                      tap_action:
-                        action: more-info
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: light.living_room_dreamview
-                    name: DreamView
-                    compact: true
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:movie
-                      use_state_color: true
-                      show: true
-                      tap_action:
-                        action: more-info
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room
+                        variables:
+                          ulm_card_light_name: Main Light
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_leds
+                        variables:
+                          ulm_card_light_name: Main LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_dining_led
+                        variables:
+                          ulm_card_light_name: Display LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_tv_leds
+                        variables:
+                          ulm_card_light_name: TV LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.lava_lamp
+                        variables:
+                          ulm_card_light_name: Lava Lamp
+                          ulm_card_light_icon: mdi:lava-lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.lounge_lamp
+                        variables:
+                          ulm_card_light_name: Lamp
+                          ulm_card_light_icon: mdi:floor-lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_dreamview
+                        variables:
+                          ulm_card_light_name: DreamView
+                          ulm_card_light_icon: mdi:movie
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_force_background_color: true
+                          ulm_card_light_enable_popup: true
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
@@ -345,7 +252,7 @@ card_esh_room_lr:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_day_2
+                        entity: automation.scene_living_room_day
                         name: Day
                         icon: mdi:weather-sunny
                         show_last_changed: true
@@ -353,10 +260,10 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_day_2
+                            entity_id: automation.scene_living_room_day
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_night_2
+                        entity: automation.scene_living_room_night
                         name: Night
                         icon: mdi:weather-night
                         show_last_changed: true
@@ -364,10 +271,10 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_night_2
+                            entity_id: automation.scene_living_room_night
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_movie_2
+                        entity: automation.scene_living_room_movie
                         name: Movie
                         icon: mdi:movie
                         show_last_changed: true
@@ -375,10 +282,12 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_movie_2
+                            entity_id: automation.scene_living_room_movie
+                  - type: "horizontal-stack"
+                    cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_off_2
+                        entity: automation.scene_living_room_off
                         name: All Off
                         icon: mdi:lightbulb-off
                         show_last_changed: true
@@ -386,7 +295,7 @@ card_esh_room_lr:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_off_2
+                            entity_id: automation.scene_living_room_off
 
 
     climate:

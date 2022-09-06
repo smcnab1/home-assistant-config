@@ -9,8 +9,8 @@ layout:
         "title1 title1 title1 title1 title1 title1"
         "card1 card1 card1 card1 card1 card1"
         "card2 card2 card2 card2 card2 card2"
+        "card22 card22 card22 card22 card22 card22"
         "card3 card3 card3 card3 card3 card3"
-        "card9 card9 card9 card9 card9 card9"
         "title2 title2 title2 title2 title2 title2"
         "card4 card4 card4 card4 card4 card4"
         "title3 title3 title3 title3 title3 title3"
@@ -28,8 +28,8 @@ layout:
         "title1 title1"
         "card1 card1"
         "card2 card2"
+        "card22 card22"
         "card3 card3"
-        "card9 card9"
         "title2 title2"
         "card4 card4"
         "title3 title3"
@@ -70,16 +70,13 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: switch.living_room
+        entity: light.living_room
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
-          ulm_card_light_enable_popup: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
       - type: "custom:button-card"
         template: card_light
         entity: light.living_room_leds
@@ -87,7 +84,7 @@ cards:
           ulm_card_light_name: Main LEDs
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
@@ -101,7 +98,7 @@ cards:
           ulm_card_light_name: Display LEDs
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
@@ -111,37 +108,33 @@ cards:
           ulm_card_light_name: TV LEDs
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
-      grid-area: "card3"
+      grid-area: "card22"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: switch.lava_lamp
+        entity: light.lava_lamp
         variables:
           ulm_card_light_name: Lava Lamp
           ulm_card_light_icon: mdi:lava-lamp
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
-          ulm_card_light_enable_popup: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
       - type: "custom:button-card"
         template: card_light
-        entity: switch.lounge_lamp
+        entity: light.lounge_lamp
         variables:
           ulm_card_light_name: Lamp
           ulm_card_light_icon: mdi:floor-lamp
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_slider: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
-        tap_action:
-          action: more-info
   - view_layout:
-      grid-area: "card9"
+      grid-area: "card3"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
@@ -151,11 +144,9 @@ cards:
           ulm_card_light_name: DreamView
           ulm_card_light_icon: mdi:movie
           ulm_card_light_enable_slider: true
-          ulm_card_enable_collapse: true
+          ulm_card_light_enable_color: true
           ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
-        tap_action:
-          action: more-info
   - view_layout: ### SCENES ###
       grid-area: "title2"
     type: "custom:button-card"
@@ -167,7 +158,7 @@ cards:
     cards:
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_living_room_day_2
+        entity: automation.scene_living_room_day
         name: Day
         icon: mdi:weather-sunny
         show_last_changed: true
@@ -175,10 +166,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_living_room_day_2
+            entity_id: automation.scene_living_room_day
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_living_room_night_2
+        entity: automation.scene_living_room_night
         name: Night
         icon: mdi:weather-night
         show_last_changed: true
@@ -186,10 +177,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_living_room_night_2
+            entity_id: automation.scene_living_room_night
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_living_room_movie_2
+        entity: automation.scene_living_room_movie
         name: Movie
         icon: mdi:movie
         show_last_changed: true
@@ -197,10 +188,10 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_living_room_movie_2
+            entity_id: automation.scene_living_room_movie
       - type: 'custom:button-card'
         template: card_vertical_button
-        entity: automation.scene_living_room_off_2
+        entity: automation.scene_living_room_off
         name: All Off
         icon: mdi:lightbulb-off
         show_last_changed: true
@@ -208,7 +199,7 @@ cards:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_living_room_off_2
+            entity_id: automation.scene_living_room_off
 
   - view_layout: ### MEDIA ###
       grid-area: "title3"

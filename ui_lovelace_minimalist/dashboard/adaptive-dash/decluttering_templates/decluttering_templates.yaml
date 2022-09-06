@@ -144,3 +144,7 @@ person_card_new:
         styles:
           entity_picture:
             - border: 2px solid orange
+      - value: "Gym"
+        styles:
+          entity_picture:
+            - border: 2px solid purple
