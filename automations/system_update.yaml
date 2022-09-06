@@ -14,6 +14,19 @@ use_blueprint:
       - binary_sensor.updater_addons
       - binary_sensor.updater_hacs
       - binary_sensor.updater_supervisor
+      - update.esphome_update
+      - update.git_pull_update
+      - update.mariadb_update
+      - update.nginx_proxy_manager_update
+      - update.node_red_update
+      - update.system_home_assistant_core_update
+      - update.system_home_assistant_google_drive_backup_update
+      - update.system_home_assistant_operating_system_update
+      - update.system_home_assistant_supervisor_update
+      - update.system_mqtt_update
+      - update.system_samba_share_update
+      - update.system_studio_code_server_update
+      - update.terminal_ssh_update
     mobile_app_device: 356340e93d30ee5fd991ec3189919a27
     mobile_app_device_2: 690e4484fd88167f89c15ffbf493a54d
     send_to_ha: true

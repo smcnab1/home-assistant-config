@@ -99,6 +99,19 @@ views:
       - !include "views-tablet/01-Home.yaml"
       - !include "views-tablet/07-Office.yaml"
 
+  - type: "custom:grid-layout"
+    title: "System"
+    icon: "mdi:network"
+    path: "system"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/08-System.yaml"
+
 resources:
   - url: /local/camera-card.js
     type: module

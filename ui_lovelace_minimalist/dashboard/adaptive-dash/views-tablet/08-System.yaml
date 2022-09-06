@@ -1,0 +1,204 @@
+---
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "topbar topbar . . . ."
+    "title1 title1 . . . ."
+    "card1 card1 card1 card1 card1 card1"
+    "title2 title2 . . . ."
+    "card2 card2 card2 card2 card2 card2"
+    "card3 card3 card3 card3 card3 card3"
+    "title4 title4 . . . ."
+    "card4 card4 card4 card4 card4 card4"
+    "card5 card5 card5 card5 card5 card5"
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "topbar topbar . . . ."
+        "title1 title1 . . . ."
+        "card1 card1 card1 card1 card1 card1"
+        "title2 title2 . . . ."
+        "card2 card2 card2 card2 card2 card2"
+        "card3 card3 card3 card3 card3 card3"
+        "title4 title4 . . . ."
+        "card4 card4 card4 card4 card4 card4"
+        "card5 card5 card5 card5 card5 card5"
+
+view_layout:
+  grid-area: "popup"
+cards:
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: horizontal-stack
+    cards:
+    - type: 'custom:button-card'
+      template: chip_back
+      variables:
+        ulm_chip_back_path: /lovelace-minimalist-2/home
+    - type: "custom:button-card"
+      template: "card_title"
+      name: "System Overview"
+
+  - view_layout: ### SYSTEM UPDATES ###
+      grid-area: "title2"
+    type: "custom:button-card"
+    template: "card_title"
+    name: "System Updates"
+  - view_layout:
+      grid-area: "card2"
+    type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_homeassistant_updates
+        variables:
+          ulm_card_homeassistant_entity: "binary_sensor.updater_core"
+          ulm_card_homeassistant_core: "sensor.core_updates"
+          ulm_card_homeassistant_supervisor: "sensor.supervisor_updates"
+          ulm_card_homeassistant_os: "sensor.os_updates"
+      - type: 'custom:button-card'
+        template: card_generic
+        entity: sensor.hacs
+        variables:
+          ulm_card_generic_name: HACS Outstanding Updates
+          ulm_card_generic_icon: hacs:hacs
+
+  - view_layout: ### NETWORK ###
+      grid-area: "card3"
+    type: horizontal-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Network Status"
+          - type: custom:button-card
+            template: custom_card_irmajavi_speedtest
+            variables:
+              ulm_custom_card_irmajavi_speedtest_download_speed_entity: sensor.system_speed_test_download
+              ulm_custom_card_irmajavi_speedtest_upload_speed_entity: sensor.system_speed_test_upload
+              ulm_custom_card_irmajavi_speedtest_color: blue
+              ulm_custom_card_irmajavi_speedtest_router_name: Nokia
+              ulm_custom_card_irmajavi_speedtest_router_model: G-2426G-A
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Tablet Status"
+          - type: "custom:button-card"
+            template: "custom_card_nik_tablet"
+            variables:
+              ulm_custom_card_nik_tablet_main: binary_sensor.lenovo_tab_m10_kiosk_mode
+              ulm_custom_card_nik_tablet_name: "Lenovo M10 Tablet"
+              ulm_custom_card_nik_tablet_battery: sensor.lenovo_tab_m10_battery_level
+              ulm_custom_card_nik_tablet_battery_name: "Battery"
+              ulm_custom_card_nik_tablet_button1: switch.sonoff_100149c411_1
+              ulm_custom_card_nik_tablet_button2: switch.lenovo_tab_m10_motion_detection
+              ulm_custom_card_nik_tablet_button3: light.lenovo_tab_m10_screen
+              ulm_custom_card_nik_tablet_restart: button.lenovo_tab_m10_restart_browser
+              ulm_custom_card_nik_tablet_reload: button.lenovo_tab_m10_load_start_url
+              ulm_custom_card_nik_tablet_maintenance: switch.lenovo_tab_m10_maintenance_mode
+              ulm_custom_card_nik_tablet_par1: sensor.lenovo_tab_m10_ram_free_memory
+              ulm_custom_card_nik_tablet_par1_name: "RAM"
+              ulm_custom_card_nik_tablet_par2: sensor.lenovo_tab_m10_internal_storage_free_space
+              ulm_custom_card_nik_tablet_par2_name: "Disk"
+              ulm_custom_card_nik_tablet_par3: binary_sensor.lenovo_tab_m10_plugged_in
+              ulm_custom_card_nik_tablet_par3_name: "Power"
+
+  - view_layout: ### SYSTEM STATS ###
+      grid-area: "title4"
+    type: "custom:button-card"
+    template: "card_title"
+    name: "System Statistics"
+  - view_layout: 
+      grid-area: "card4"
+    type: horizontal-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Disk Statistics"
+          - type: "custom:button-card"
+            template: "custom_card_apexcharts"
+            variables:
+              chart_type: "radialBar"
+              graph_span: "1d"
+              entity_1:
+                entity_id: "sensor.disk_free"
+                icon: ""
+                name: "Disk Free"
+                color: "blue"
+                max_value: 300
+              entity_2:
+                entity_id: "sensor.disk_use_percent"
+                icon: ""
+                name: "Disk Use %"
+                color: "yellow"
+                max_value: 50
+              entity_3:
+                entity_id: "sensor.cpu_temp"
+                icon: ""
+                name: "CPU Temperature"
+                color: "green"
+                max_value: 50
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Processor Statistics"
+          - type: "custom:button-card"
+            template: "custom_card_apexcharts"
+            variables:
+              chart_type: "radialBar"
+              graph_span: "1d"
+              entity_1:
+                entity_id: "sensor.memory_use_percent"
+                icon: ""
+                name: "Memory %"
+                color: "blue"
+                max_value: 100
+              entity_2:
+                entity_id: "sensor.processor_use"
+                icon: ""
+                name: "Processor Use %"
+                color: "yellow"
+                max_value: 100
+              entity_3:
+                entity_id: "sensor.processor_temperature"
+                icon: ""
+                name: "Processor Temp"
+                color: "green"
+                max_value: 50
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Network Statistics"
+          - type: "custom:button-card"
+            template: "custom_card_apexcharts"
+            variables:
+              chart_type: "radialBar"
+              graph_span: "1d"
+              entity_1:
+                entity_id: "sensor.network_in_eth0"
+                icon: ""
+                name: "Network IN"
+                color: "blue"
+                max_value: 50
+              entity_2:
+                entity_id: "sensor.network_out_eth0"
+                icon: ""
+                name: "Network OUT"
+                color: "yellow"
+                max_value: 50
+              entity_3:
+                entity_id: "sensor.network_throughput_in_eth0"
+                icon: ""
+                name: "Network THR"
+                color: "green"
+                max_value: 50
