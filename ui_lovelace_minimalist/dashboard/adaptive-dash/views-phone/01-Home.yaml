@@ -125,8 +125,8 @@ cards:
           - name: Sam
           - battery: sensor.sams_iphone_battery_level
           - battery_state: sensor.sams_iphone_battery_level
-          - work_sensor: sensor.waze_islington
-          - home_sensor: sensor.sam_to_home
+          - work_sensor: sensor.sam_to_work
+          - home_sensor: sensor.sam_to_home_2
           - work_icon: mdi:car
           - entity_picture: /local/avatar_sam.png
           - show_entity_picture: true
@@ -240,7 +240,7 @@ cards:
           - name: Leah
           - battery: sensor.leah_s_iphone_battery_level
           - battery_state: sensor.leah_s_iphone_battery_state
-          - work_sensor: sensor.leah_work
+          - work_sensor: sensor.leah_to_work
           - home_sensor: sensor.leah_to_home
           - work_icon: mdi:train
           - entity_picture: /local/avatar_leah.png
