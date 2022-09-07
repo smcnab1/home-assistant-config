@@ -1,0 +1,21 @@
+#                                        _    _ _           _                             _   _  __      
+# __ __ ____ _ ______   ___ __ _ _ __   (_)__| (_)_ _  __ _| |_ ___ _ _    ___   _ _  ___| |_(_)/ _|_  _ 
+# \ V  V / _` |_ / -_) (_-</ _` | '  \  | (_-< | | ' \/ _` |  _/ _ \ ' \  |___| | ' \/ _ \  _| |  _| || |
+#  \_/\_/\__,_/__\___| /__/\__,_|_|_|_| |_/__/_|_|_||_\__, |\__\___/_||_|       |_||_\___/\__|_|_|  \_, |
+#                                                     |___/                                         |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Transport Waze Islington
+description: 'Automation triggered by dashboard pushing actionable notification to my phone that automatically navigates to work location with the Waze Mobile App.'
+trigger: []
+condition: []
+action:
+  - service: notify.mobile_app_iphone
+    data:
+      data:
+        actions:
+        - action: OPEN
+          title: Open Waze
+          uri: !secret waze_islington
+      message: Travelling to Islington Station?
+mode: single
