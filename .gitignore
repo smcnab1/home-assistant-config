@@ -40,7 +40,7 @@ secrets.yaml
 __pycache__
 
 # Ignore Directories
-node-red/
+node-red
 .old_config
 custom_components
 themes
