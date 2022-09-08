@@ -5,7 +5,7 @@
 #                                   |___/|___/                                        
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: "Alarm Sound"
+alias: "Alarm Trigger Sound"
 description: Trigger siren and TTS when alarm is triggered
 trigger:
   - platform: state

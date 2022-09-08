@@ -7,8 +7,9 @@
 
 alias: Alarm Arm Notify Reminder
 description: >-
-  Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't already been set. 
-  This automation then arms the alarm and sends notifications to everyone to confirm it is now armed.
+  Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't
+  already been set.  This automation then arms the alarm and sends notifications
+  to everyone to confirm it is now armed.
 mode: single
 trigger:
   - platform: state
@@ -52,12 +53,6 @@ action:
               title: Set Alarm?
               message: Would you like to set it?
               data:
-                icon: null
-                ttl: 0
-                visibility: public
-                push:
-                  sound:
-                    volume: 1
                 actions:
                   - action: IGNORE
                     title: Don't Arm Alarm
@@ -75,12 +70,6 @@ action:
               title: Set Alarm?
               message: Would you like to set it?
               data:
-                icon: null
-                ttl: 0
-                visibility: public
-                push:
-                  sound:
-                    volume: 1
                 actions:
                   - action: IGNORE
                     title: Don't Arm Alarm
