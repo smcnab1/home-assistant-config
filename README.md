@@ -915,7 +915,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 &nbsp;&nbsp;*which uses:*
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
-</blockquote></details>
+</blockquote></details></details>
 
 <!-- TRANSPORT AUTOMATIONS -->
 <details><summary><b><a name="transport">Transport 🚌🚝 Automations (6 automations)</a></b></summary><blockquote>
