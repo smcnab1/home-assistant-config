@@ -61,7 +61,7 @@
 <!-- DEVICES -->
 <a name="devices"></a>
 
-### Devices
+### Devices *(as at Sept 22)*
 This is a list of the devices I currently use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/op-question-mark/issues">feature request.</a>
 <br />
 
@@ -190,50 +190,56 @@ This is a list of the devices I currently use as part of my Home Assistant setup
         <tr>
             <td>Samsung Q60AA</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>559.00</td>
+            <td>559.00</td>
         </tr>
         <tr>
             <td>BLAUPUNKT 32"</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>139.95</td>
+            <td>139.95</td>
         </tr>
         <tr>
             <td>SONOS Play 1</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>164.99</td>
+            <td>164.99</td>
         </tr>
         <tr>
             <td>Google Nest Hub Mini</td>
             <td>2</td>
-            <td>null</td>
-            <td>null</td>
+            <td>27.99</td>
+            <td>55.98</td>
         </tr>
         <tr>
-            <td>Lenovo M10 Tablet</td>
+            <td>Lenovo M10 Tablet with Ethernet Connection</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>79.99</td>
+            <td>79.99</td>
         </tr>
         <tr>
             <td>XBOX One Console</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>164.97</td>
+            <td>164.97</td>
         </tr>
         <tr>
             <td>Apple Mac Mini</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>629.97</td>
+            <td>629.97</td>
         </tr>
         <tr>
             <td>MacBook Air</td>
             <td>2</td>
-            <td>null</td>
-            <td>null</td>
+            <td>949.00</td>
+            <td>1898.00</td>
+        </tr>
+        <tr>
+            <td><i><b>Total</b></i></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><b>3,692.85</b></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -396,22 +402,28 @@ This is a list of the devices I currently use as part of my Home Assistant setup
         <tr>
             <th>Device tracker 🔍</th>
             <th>Units (#)</th>
-            <th>Price per unit (€)</th>
-            <th>Price (€)</th>
+            <th>Price per unit (£)</th>
+            <th>Price (£)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>iPhone 13 Pro Max with Companion App & Life360</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>1049.00</td>
+            <td>1049.00</td>
         </tr>
         <tr>
             <td>iPhone 11 with Companion App & Life360</td>
             <td>1</td>
-            <td>null</td>
-            <td>null</td>
+            <td>429.00</td>
+            <td>429.00</td>
+        </tr>
+        <tr>
+            <td><i><b>Total</b></i></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><b>1,478.78</b></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -422,10 +434,18 @@ This is a list of the devices I currently use as part of my Home Assistant setup
     </tbody>
     <thead>
         <tr>
-            <th>Total</th>
+            <th>Total of Smart Home Devices (excl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
             <th></th>
             <th></th>
-            <th><b>£1461.11</b></th>
+            <th><b>£1,461.11</b></th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <th>Total of All Devices (incl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
+            <th></th>
+            <th></th>
+            <th><b>😳£6,632.74😳</b></th>
         </tr>
     </thead>
 </table>
@@ -440,7 +460,7 @@ This is a list of the devices I currently use as part of my Home Assistant setup
 This is a list of all of my add-ons within my setup. These also include the HACS integrations I currently use.
 <br />
 <br />
-<b>Standard Add-Ons</b>
+<b>Standard Add-Ons <i>(as at Sept 22)</i></b>
 <br />
 <!-- start-addons -->
 - [ESPHome](https://github.com/esphome/esphome) version 2022.8.1 by @esphome
@@ -457,7 +477,11 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 <!-- end-addons -->
 
 <!-- start-hacs-integrations -->
+<<<<<<< HEAD
+<b>HACS Integrations & Frontend <i>(as at Sept 22)</i></b>
+=======
 <b>HACS Integrations & Frontend</b>
+>>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 <br />
 - [Pyscript](https://github.com/custom-components/pyscript) version 1.3.3 by @craigbarratt
 - [Spotcast](https://github.com/fondberg/spotcast) version 3.6.30 by @fondberg
@@ -480,6 +504,27 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 <!-- end-hacs-integrations -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<<<<<<< HEAD
+
+<!-- AUTOMATIONS TOC -->
+<a name="automations"></a>
+## Automations *(as at Sept 22)*
+
+There is a full list of all of my automations <a href="automations-all">here</a>. Below is the table of contents of all of the automations.
+<br />
+
+<!-- start-automations -->
+**Table of Contents**
+ 1. [Security 👮🚨](#security) (9 automations)
+ 2. [Lighting 🌄🌇](#lighting) (38 automations)
+ 3. [Transport 🚌🚝](#transport) (6 automations)
+ 4. [HA-System ⏰🖥️](#hasystem) (6 automations)
+ 5. [Media 🔊📺](#media) (4 automations)
+ 6. [TTS 🔊📱](#tts) (4 automations)
+ 7. [Sleeping 🛏️📡](#sleep) (6 automations)
+
+⚠️ Total number of automations: **73** ⚠️  
+=======
 
 <!-- AUTOMATIONS TOC -->
 <a name="automations"></a>
@@ -499,6 +544,7 @@ There is a full list of all of my automations <a href="automations-all">here</a>
  7. [Sleeping 🛏️📡](#sleep) (6 automations)
 
 ⚠️ Total number of automations: **73** ⚠️
+>>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -541,7 +587,11 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- ALL AUTOMATIONS -->
 <a name="automations-all"></a>
+<<<<<<< HEAD
+## All Automations *(as at Sept 22)*
+=======
 ## All Automations
+>>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 <!-- SECURITY AUTOMATIONS -->
 <details><summary><b><a name="security">Security 👮🚨 Automations (9 automations)</a></b></summary><blockquote>
 
