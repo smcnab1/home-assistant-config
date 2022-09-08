@@ -563,8 +563,8 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <a name="automations-all"></a>
 ## All Automations *(as at Sept 22)*
 <!-- SECURITY AUTOMATIONS -->
-<details><summary><b>Security 👮🚨 Automations (9 automations)</b></summary><blockquote>
-<a name="security"></a>
+<details><summary><b><a name="security">Security 👮🚨 Automations (9 automations)</a></b></summary><blockquote>
+
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Arm Notifiction Reminder</a></b></summary>
 <b><i>Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't already been set. This automation then arms the alarm and sends notifications to everyone to confirm it is now armed.</b></i>
 
