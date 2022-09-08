@@ -1,2 +1,10 @@
-script: !include /config/scripts.yaml
-script split: !include_dir_named /config/entities/scripts
+#  ___  ___ ___ ___ ___ _____ ___ 
+# / __|/ __| _ \_ _| _ \_   _/ __|
+# \__ \ (__|   /| ||  _/ | | \__ \
+# |___/\___|_|_\___|_|   |_| |___/
+#                                 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to scripts within the scripts directory.
+
+script: !include ../scripts.yaml
+script split: !include_dir_named ../entities/scripts

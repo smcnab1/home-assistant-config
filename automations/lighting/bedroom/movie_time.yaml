@@ -1,16 +1,18 @@
-#  _            _                                          _       _   _           
-# | |__  ___ __| |_ _ ___  ___ _ __    ___   _ __  _____ _(_)___  | |_(_)_ __  ___ 
+#  _            _                                          _       _   _
+# | |__  ___ __| |_ _ ___  ___ _ __    ___   _ __  _____ _(_)___  | |_(_)_ __  ___
 # | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ V / / -_) |  _| | '  \/ -_)
 # |_.__/\___\__,_|_| \___/\___/_|_|_|       |_|_|_\___/\_/|_\___|  \__|_|_|_|_\___|
-#                                                                                  
+#
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: Lighting Bedroom Movie Time
-description: 'Automation automatically turn on Movie Scene when TV is turned on to certain apps/channels.'
+description: >-
+  Automation automatically turn on Movie Scene when TV is turned on to certain
+  apps/channels.
 trigger:
   - platform: state
     entity_id:
-    - media_player.fire_tv_192_168_1_104
+      - media_player.fire_tv_192_168_1_98
     to: playing
 condition: []
 action:
@@ -18,19 +20,21 @@ action:
     data:
       scene_id: prebedmovie
       snapshot_entities:
-      - light.bedroom
-      - light.bedroom_leds
-      - light.bedside_lamps
+        - light.bedroom
+        - light.bedroom_leds
+        - light.bedside_lamps
+        - light.fairy_lights
   - service: automation.trigger
     data:
       skip_condition: false
     target:
-      entity_id: automation.scene_bedroom_movie
+      entity_id: automation.lighting_bedroom_movie
   - wait_for_trigger:
-    - platform: state
-      entity_id:
-      - media_player.fire_tv_192_168_1_104
-      to: off
+      - platform: state
+        entity_id:
+          - media_player.fire_tv_192_168_1_98
+        to: "off"
+    continue_on_timeout: false
   - service: scene.turn_on
     data:
       transition: 60

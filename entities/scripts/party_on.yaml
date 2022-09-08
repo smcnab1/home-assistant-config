@@ -1,3 +1,11 @@
+#                 _                         
+#  _ __  __ _ _ _| |_ _  _   ___   ___ _ _  
+# | '_ \/ _` | '_|  _| || | |___| / _ \ ' \ 
+# | .__/\__,_|_|  \__|\_, |       \___/_||_|
+# |_|                 |__/                  
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Script which turns on party mode.
+
 sequence:
   - service: scene.create
     data:

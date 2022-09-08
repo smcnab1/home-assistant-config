@@ -10,7 +10,7 @@ description: 'Automation triggered by dashboard pushing actionable notification 
 trigger: []
 condition:
   - condition: state
-    entity_id: person.leah_jinks
+    entity_id: person.leah
     state: home
   - condition: state
     entity_id: input_boolean.holiday

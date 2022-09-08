@@ -12,7 +12,7 @@ trigger:
     at: '21:30:00'
 condition:
   - condition: state
-    entity_id: person.sam_mcnab
+    entity_id: person.sam
     state: home
   - condition: state
     entity_id: binary_sensor.sam_s_mac_mini_active

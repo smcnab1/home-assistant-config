@@ -1,2 +1,10 @@
+#    _  _   _ _____ ___  __  __   _ _____ ___ ___  _  _ 
+#   /_\| | | |_   _/ _ \|  \/  | /_\_   _|_ _/ _ \| \| |
+#  / _ \ |_| | | || (_) | |\/| |/ _ \| |  | | (_) | .` |
+# /_/ \_\___/  |_| \___/|_|  |_/_/ \_\_| |___\___/|_|\_|
+#                                                       
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to automations within the automations directory.
+
 automation: !include ../automations.yaml
 automation split: !include_dir_list ../automations

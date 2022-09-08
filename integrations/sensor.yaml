@@ -1,1 +1,9 @@
-sensor: !include ../entities/sensors.yaml
+#  ___ ___ _  _ ___  ___  ___  ___ 
+# / __| __| \| / __|/ _ \| _ \/ __|
+# \__ \ _|| .` \__ \ (_) |   /\__ \
+# |___/___|_|\_|___/\___/|_|_\|___/
+#                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to sensor entities within the sensors directory.
+
+sensor: !include_dir_list ../entities/sensor

@@ -1,5 +1,11 @@
-id: '1660668144019'
-name: 'Scene: Bedroom Movie'
+#  _            _                                          _     
+# | |__  ___ __| |_ _ ___  ___ _ __    ___   _ __  _____ _(_)___ 
+# | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ V / / -_)
+# |_.__/\___\__,_|_| \___/\___/_|_|_|       |_|_|_\___/\_/|_\___|
+#                                                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Bedroom Movie'
 entities:
   light.bedroom_leds:
     supported_color_modes:

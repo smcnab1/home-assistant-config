@@ -5,7 +5,7 @@
 #                   |__/       |_|                                                   
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: Hurry Up Sam Action
+alias: Media Hurry Up Sam Action
 description: Automation which is triggered by the wife through actionable notification. Flashes lights in office red and plays TTS through google home telling me to hurry up. Also sends me a notification on PC on other monitor.
 trigger:
   - platform: event

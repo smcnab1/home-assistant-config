@@ -1,5 +1,11 @@
-id: '1660666156439'
-name: 'Scene: Bathroom Morning'
+#  _          _   _                                                  _           
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   _ __  ___ _ _ _ _ (_)_ _  __ _ 
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ '_| ' \| | ' \/ _` |
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       |_|_|_\___/_| |_||_|_|_||_\__, |
+#                                                                          |___/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Bathroom Morning'
 entities:
   light.all_bathroom_lights:
     supported_color_modes:

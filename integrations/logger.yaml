@@ -1,3 +1,11 @@
+#  _    ___   ___  ___ ___ ___ 
+# | |  / _ \ / __|/ __| __| _ \
+# | |_| (_) | (_ | (_ | _||   /
+# |____\___/ \___|\___|___|_|_\
+#                              
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Activates logging and specifies filters.
+
 logger:
   default: warning
 

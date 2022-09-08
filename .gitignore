@@ -20,7 +20,7 @@ ip_bans.yaml
 secrets.yaml
 
 # Build-in blueprints ignores
-blueprints/*/homeassistant
+blueprints
 
 # ESPHome ignores
 esphome/.*/
@@ -42,6 +42,8 @@ notebooks
 custom_components
 themes
 www/community
+WiFiLogin_1.png
+WiFiLogin.png
 
 # Specific keeps
 !custom_components/telegram_bot_conversation
@@ -57,3 +59,10 @@ home-assistant-voice-node-red-f2d0ad06ea63.json
 nodered.json
 rtsp2webrtc_v5_aarch64
 watchman_report.txt
+
+WiFiLogin_1.png
+WiFiLogin.png
+
+node-red
+
+rtsp2webrtc_v5_aarch64

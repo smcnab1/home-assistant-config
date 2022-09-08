@@ -1,5 +1,5 @@
 blueprint:
-  name: Update notifications
+  name: HA System Update Notifications
   description: Send notifications for new updates and install or skip on action
   homeassistant:
     min_version: 2022.4.0
@@ -52,8 +52,8 @@ blueprint:
           - '6'
           - '12'
           - '24'
-          multiple: false
           custom_value: false
+          multiple: false
     take_backup:
       name: Take backup
       description: Do a partial backup before updating if able

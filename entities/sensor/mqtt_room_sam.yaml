@@ -1,0 +1,14 @@
+#             _   _                                               
+#  _ __  __ _| |_| |_   _ _ ___  ___ _ __    ___   ___ __ _ _ __  
+# | '  \/ _` |  _|  _| | '_/ _ \/ _ \ '  \  |___| (_-</ _` | '  \ 
+# |_|_|_\__, |\__|\__| |_| \___/\___/_|_|_|       /__/\__,_|_|_|_|
+#          |_|                                                    
+#--FROM https://github.com/smcnab1/op-question-mark
+#---MQTT Room Sensors for house which communicates through BLE through ESPresense and ESPhome allowing accurate room presense detection.
+
+platform: mqtt_room
+name: "Sam: Phone BLE"
+device_id: "Sam"
+state_topic: "espresense/devices/Sam"
+timeout: 5
+away_timeout: 120

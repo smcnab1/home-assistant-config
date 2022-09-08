@@ -1,3 +1,11 @@
+#                 _                              _           _   _   _           
+#  _ __  __ _ _ _| |_ _  _   ____ __  ___ ___ __| |  ___ ___| |_| |_(_)_ _  __ _ 
+# | '_ \/ _` | '_|  _| || | (_-< '_ \/ -_) -_) _` | (_-</ -_)  _|  _| | ' \/ _` |
+# | .__/\__,_|_|  \__|\_, | /__/ .__/\___\___\__,_| /__/\___|\__|\__|_|_||_\__, |
+# |_|                 |__/     |_|                                         |___/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Input Number allowing adjusting of speed of light changing in party mode.
+
 name: House Party Speed
 initial: 0.4
 min: 0.1

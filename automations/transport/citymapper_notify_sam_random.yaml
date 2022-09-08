@@ -10,7 +10,7 @@ description: 'Automation triggered by dashboard pushing actionable notification 
 trigger: []
 condition:
   - condition: state
-    entity_id: person.sam_mcnab
+    entity_id: person.sam
     state: home
 action:
   - service: notify.mobile_app_iphone

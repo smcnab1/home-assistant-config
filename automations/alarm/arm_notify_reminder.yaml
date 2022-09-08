@@ -8,98 +8,63 @@
 alias: Alarm Arm Notify Reminder
 description: >-
   Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't
-  already been set.  This automation then arms the alarm and sends notifications
-  to everyone to confirm it is now armed.
+  already been set.
 mode: single
 trigger:
   - platform: state
     entity_id:
-      - person.leah_jinks
+      - person.leah
     from: home
     id: LEAHLEAVE
   - platform: state
     entity_id:
-      - person.sam_mcnab
+      - person.sam
     from: home
     id: SAMLEAVE
-  - platform: event
-    event_type: mobile_app_notification_action
-    event_data:
-      action: ARM_ALARM
-    context:
-      user_id:
-        - d5de2d519885447495a552f1d87f0a9d
-    id: LEAHARM
-  - platform: event
-    event_type: mobile_app_notification_action
-    event_data:
-      action: ARM_ALARM
-    context:
-      user_id:
-        - 47cefae3ba0f490c8ccafd6bfedad232
-    id: SAMARM
 condition:
-  - condition: state
-    entity_id: alarm_control_panel.home_alarm
-    state: disarmed
+  - condition: and
+    conditions:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+      - condition: state
+        entity_id: person.leah
+        state: not_home
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: disarmed
 action:
-  - choose:
-      - conditions:
-          - condition: trigger
-            id: LEAHLEAVE
-        sequence:
-          - service: notify.mobile_app_leah_s_iphone
-            data:
-              title: Set Alarm?
-              message: Would you like to set it?
-              data:
-                actions:
-                  - action: IGNORE
-                    title: Don't Arm Alarm
-                    icon: sfsymbols:bell.slash.fill
-                  - action: ARM_ALARM
-                    title: Arm Alarm
-                    icon: sfsymbols:bell.fill
-                    destructive: true
-      - conditions:
-          - condition: trigger
-            id: SAMLEAVE
-        sequence:
-          - service: notify.mobile_app_iphone
-            data:
-              title: Set Alarm?
-              message: Would you like to set it?
-              data:
-                actions:
-                  - action: IGNORE
-                    title: Don't Arm Alarm
-                    icon: sfsymbols:bell.slash.fill
-                  - action: ARM_ALARM
-                    title: Arm Alarm
-                    icon: sfsymbols:bell.fill
-                    destructive: true
-      - conditions:
-          - condition: trigger
-            id: LEAHARM
-        sequence:
-          - service: alarm_control_panel.alarm_arm_away
-            data: {}
-            target:
-              entity_id: alarm_control_panel.home_alarm
-          - service: notify.mobile_app_leah_s_iphone
-            data:
-              message: You have armed the alarm
-              title: ALARM ARMED
-      - conditions:
-          - condition: trigger
-            id: SAMARM
-        sequence:
-          - service: alarm_control_panel.alarm_arm_away
-            data: {}
-            target:
-              entity_id: alarm_control_panel.home_alarm
-          - service: notify.mobile_app_iphone
-            data:
-              title: ALARM ARMED
-              message: You have armed the alarm
-    default: single
+  - if:
+      - condition: trigger
+        id: LEAHLEAVE
+    then:
+      - service: notify.mobile_app_leah_s_iphone
+        data:
+          message: Would you like to set it?
+          title: The alarm isn't set and nobody is home!
+          data:
+            actions:
+              - action: IGNORE
+                title: Don't Arm Alarm
+                icon: sfsymbols:bell.slash.fill
+              - action: ARM_ALARM
+                title: Arm Alarm
+                icon: sfsymbols:bell.fill
+                destructive: true
+  - if:
+      - condition: trigger
+        id: LEAHLEAVE
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          data:
+            actions:
+              - action: IGNORE
+                title: Don't Arm Alarm
+                icon: sfsymbols:bell.slash.fill
+              - action: ARM_ALARM
+                title: Arm Alarm
+                icon: sfsymbols:bell.fill
+                destructive: true
+          message: Would you like to set it?
+          title: Set Alarm?

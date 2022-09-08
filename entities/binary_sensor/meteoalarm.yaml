@@ -1,0 +1,11 @@
+#            _                 _                
+#  _ __  ___| |_ ___ ___  __ _| |__ _ _ _ _ __  
+# | '  \/ -_)  _/ -_) _ \/ _` | / _` | '_| '  \ 
+# |_|_|_\___|\__\___\___/\__,_|_\__,_|_| |_|_|_|
+#                                               
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Binary Sensor indicating if there are any current weather warnings in London, UK.
+
+platform: meteoalarm
+country: "united-kingdom"
+province: "London"

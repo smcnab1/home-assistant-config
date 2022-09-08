@@ -1,1 +1,9 @@
+#  _  _  ___ _____ ___ _____   __
+# | \| |/ _ \_   _|_ _| __\ \ / /
+# | .` | (_) || |  | || _| \ V / 
+# |_|\_|\___/ |_| |___|_|   |_|  
+#                                
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to notify entities within the notify directory.
+
 notify: !include_dir_list ../entities/notify

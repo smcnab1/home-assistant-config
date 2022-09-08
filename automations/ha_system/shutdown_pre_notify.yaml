@@ -16,7 +16,7 @@ action:
   - parallel:
       - if:
           - condition: state
-            entity_id: device_tracker.leah_jinks
+            entity_id: device_tracker.leah
             state: home
         then:
           - service: notify.mobile_app_leah_s_iphone
