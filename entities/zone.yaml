@@ -6,8 +6,8 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 #---Home Zone with 40m Radius
 
-name: Home
-latitude: !secret home_lat
-longitude: !secret home_lon
-radius: 40
-icon: mdi:home
+- name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  radius: 40
+  icon: mdi:home

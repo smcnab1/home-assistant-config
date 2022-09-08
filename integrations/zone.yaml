@@ -6,4 +6,4 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 #---Links to zone entities within the zones directory.
 
-zone: !include_dir_named ../entities/zones
+zone: !include_dir_named ../entities/zone
