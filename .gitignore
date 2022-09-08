@@ -1,4 +1,35 @@
-# Generic ignores
+#       ___ ___ _____ ___ ___ _  _  ___  ___ ___ 
+#      / __|_ _|_   _|_ _/ __| \| |/ _ \| _ \ __|
+#  _  | (_ || |  | |  | | (_ | .` | (_) |   / _| 
+# (_)  \___|___| |_| |___\___|_|\_|\___/|_|_\___|
+#                                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
+# Ignore Files
+rtsp2webrtc_v5_aarch64
+adbkey
+adbkey.pub
+frigate.yml
+govee_learning.yaml
+home-assistant-voice-node-red-f2d0ad06ea63.json
+nodered.json
+watchman_report.txt
+WiFiLogin_1.png
+WiFiLogin.png
+.vscode
+.theia
+.Trash*
+.ssh
+.cloud
+.storage
+.shopping_list.json
+aircast.xml
+airsonos.xml
+notebooks
+core
+image
+ip_bans.yaml
+secrets.yaml
 *.log
 *.log.*
 *.db
@@ -8,61 +39,20 @@
 ._*
 __pycache__
 
-# Directory (contents) ignores
+# Ignore Directories
+node-red/
+.old_config
+custom_components
+themes
+www/
+esphome/.*/
+blueprints/*/homeassistant
 .cloud
 .storage
 deps
 
-# Specific file ignores
-core
-image
-ip_bans.yaml
-secrets.yaml
-
-# Build-in blueprints ignores
-blueprints
-
-# ESPHome ignores
-esphome/.*/
-
-# Ignore add-on files
-aircast.xml
-airsonos.xml
-notebooks
-
-# Ignore files created by IDE's
-.vscode
-.theia
-.Trash*
-.ssh
-.cloud
-.storage
-.shopping_list.json
-# Ignore vendored stuff
-custom_components
-themes
-www/community
-WiFiLogin_1.png
-WiFiLogin.png
-
-# Specific keeps
-!custom_components/telegram_bot_conversation
+# Keep Directories
 !.gitkeep
 
-# Temporary ignores
-.old_config
-adbkey
-adbkey.pub
-frigate.yml
-govee_learning.yaml
-home-assistant-voice-node-red-f2d0ad06ea63.json
-nodered.json
-rtsp2webrtc_v5_aarch64
-watchman_report.txt
-
-WiFiLogin_1.png
-WiFiLogin.png
-
-node-red
-
-rtsp2webrtc_v5_aarch64
+# Keep Files
+!custom_components/telegram_bot_conversation
