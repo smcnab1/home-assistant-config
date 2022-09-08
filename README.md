@@ -477,11 +477,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 <!-- end-addons -->
 
 <!-- start-hacs-integrations -->
-<<<<<<< HEAD
 <b>HACS Integrations & Frontend <i>(as at Sept 22)</i></b>
-=======
-<b>HACS Integrations & Frontend</b>
->>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 <br />
 - [Pyscript](https://github.com/custom-components/pyscript) version 1.3.3 by @craigbarratt
 - [Spotcast](https://github.com/fondberg/spotcast) version 3.6.30 by @fondberg
@@ -504,7 +500,6 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 <!-- end-hacs-integrations -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<<<<<<< HEAD
 
 <!-- AUTOMATIONS TOC -->
 <a name="automations"></a>
@@ -524,27 +519,6 @@ There is a full list of all of my automations <a href="automations-all">here</a>
  7. [Sleeping 🛏️📡](#sleep) (6 automations)
 
 ⚠️ Total number of automations: **73** ⚠️  
-=======
-
-<!-- AUTOMATIONS TOC -->
-<a name="automations"></a>
-## Automations
-
-There is a full list of all of my automations <a href="automations-all">here</a>. Below is the table of contents of all of the automations.
-<br />
-
-<!-- start-automations -->
-**Table of Contents**
- 1. [Security 👮🚨](#security) (9 automations)
- 2. [Lighting 🌄🌇](#lighting) (38 automations)
- 3. [Transport 🚌🚝](#transport) (6 automations)
- 4. [HA-System ⏰🖥️](#hasystem) (6 automations)
- 5. [Media 🔊📺](#media) (4 automations)
- 6. [TTS 🔊📱](#tts) (4 automations)
- 7. [Sleeping 🛏️📡](#sleep) (6 automations)
-
-⚠️ Total number of automations: **73** ⚠️
->>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -587,11 +561,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- ALL AUTOMATIONS -->
 <a name="automations-all"></a>
-<<<<<<< HEAD
 ## All Automations *(as at Sept 22)*
-=======
-## All Automations
->>>>>>> 85b5be11db9a20c00db203dab92d1bd28cad1a3e
 <!-- SECURITY AUTOMATIONS -->
 <details><summary><b><a name="security">Security 👮🚨 Automations (9 automations)</a></b></summary><blockquote>
 
@@ -945,7 +915,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 &nbsp;&nbsp;*which uses:*
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
-</blockquote></details>
+</blockquote></details></details>
 
 <!-- TRANSPORT AUTOMATIONS -->
 <details><summary><b><a name="transport">Transport 🚌🚝 Automations (6 automations)</a></b></summary><blockquote>
