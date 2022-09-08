@@ -1,0 +1,18 @@
+#  _          _   _                               _          _   _    
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___  | |__  __ _| |_| |_  
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| | '_ \/ _` |  _| ' \ 
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       |_.__/\__,_|\__|_||_|
+#                                                                     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Bathroom Bath'
+description: Automation to activate bath time scene.
+trigger: []
+condition: []
+action:
+  - service: scene.turn_on
+    data:
+      transition: 30
+    target:
+      entity_id: scene.scene_bathroom_bath
+mode: single

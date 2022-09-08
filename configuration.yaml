@@ -1,27 +1,10 @@
+#   ___ ___  _  _ ___ ___ ___ _   _ ___    _ _____ ___ ___  _  _ 
+#  / __/ _ \| \| | __|_ _/ __| | | | _ \  /_\_   _|_ _/ _ \| \| |
+# | (_| (_) | .` | _| | | (_ | |_| |   / / _ \| |  | | (_) | .` |
+#  \___\___/|_|\_|_| |___\___|\___/|_|_\/_/ \_\_| |___\___/|_|\_|
+#                                                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
 homeassistant:
   # Load packages
   packages: !include_dir_named integrations
-
-alarm_control_panel:
-  - platform: manual
-    name: Home Alarm
-    code: 1550
-    code_arm_required: false
-    arming_time: 30 # The time of the 'arming' state before effecting a state change.
-    delay_time: 30 # The time of the 'pending' state before triggering the alarm.
-    trigger_time: 120 # The time of the 'triggered' state in which the alarm is firing.
-    disarm_after_trigger: false
-    disarmed:
-      trigger_time: 0
-    armed_home:
-      arming_time: 0
-      delay_time: 0
-      delay_time: 0
-
-owntracks:
-  max_gps_accuracy: 200
-
-samsungtv_smart:
-  - host: 192.168.1.98
-    app_list: '{"Netflix": "11101200001/RN1MCdNq8t.Netflix", "YouTube": "111299001912/9Ur5IzDKqV.TizenYouTube", "Spotify": "3201606009684/rJeHak5zRg.Spotify", "Internet": "org.tizen.browser", "Prime Video": "3201512006785/org.tizen.primevideo", "Disney+": "3201901017640/MCmYXNxgcu.DisneyPlus", "Paramount Plus": "rJyOSqC6Up.PPlusIntl", "Discovery+": "pIaMf8YZyZ.whiteLabelTal", "BBC iPlayer": "DqEoaplKlw.bbchybrid", "ITV Hub": "OEvCiupaFR.ITVHub", "All 4": "OCaxbgg9v6.chfourctv", "My5": "EkzyZtmneG.My5"}'
-    source_list: '{"TV": "ST_TV", "Laptop HDMI": "ST_HDMI1", "DVD Player": "ST_HDMI2", "HDMI3": "ST_HDMI3", "HDMI4": "ST_HDMI4"}'

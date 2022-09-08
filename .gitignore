@@ -37,6 +37,7 @@ notebooks
 .ssh
 .cloud
 .storage
+.shopping_list.json
 # Ignore vendored stuff
 custom_components
 themes
@@ -50,7 +51,7 @@ www/community
 .old_config
 adbkey
 adbkey.pub
-frigate.yaml
+frigate.yml
 govee_learning.yaml
 home-assistant-voice-node-red-f2d0ad06ea63.json
 nodered.json

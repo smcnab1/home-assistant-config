@@ -1,0 +1,18 @@
+#  _          _   _                                    __  __ 
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   ___ / _|/ _|
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| / _ \  _|  _|
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       \___/_| |_|  
+#                                                             
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Bathroom Off'
+description: Automation to turn off all bathroom lights.
+trigger: []
+condition: []
+action:
+  - service: light.turn_off
+    data:
+      transition: 30
+    target:
+      entity_id: light.all_bathroom_lights
+mode: single

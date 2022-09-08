@@ -215,7 +215,7 @@ cards:
       browser_mod:
         service: browser_mod.popup
         data:
-          title: "Living Room Camera"
+          title: "Office Camera"
           content:
             type: custom:frigate-card
             cameras:

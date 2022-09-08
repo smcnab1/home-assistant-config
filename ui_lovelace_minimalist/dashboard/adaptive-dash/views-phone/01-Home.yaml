@@ -358,20 +358,6 @@ cards:
       name: "Rooms"
     - type: 'custom:button-card'
       template: chip_icon_label
-      icon: 'mdi:shield'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "Alarm Panel"
-            content:
-              type: alarm-panel
-              entity: alarm_control_panel.home_alarm
-              states:
-                - arm_away
-    - type: 'custom:button-card'
-      template: chip_icon_label
       icon: 'mdi:lightbulb'
       tap_action:
         action: fire-dom-event
