@@ -14,5 +14,5 @@ action:
     data:
       transition: 20
     target:
-      entity_id: scene.scene_hall_day
+      entity_id: scene.hall_day
 mode: single

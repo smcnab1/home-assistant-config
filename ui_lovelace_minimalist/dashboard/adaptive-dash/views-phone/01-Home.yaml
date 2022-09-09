@@ -123,10 +123,10 @@ cards:
         variables:
           - entity: person.sam
           - name: Sam
-          - battery: sensor.sams_iphone_battery_level
-          - battery_state: sensor.sams_iphone_battery_level
+          - battery: sensor.sams_iphone_ha_app_battery_level
+          - battery_state: sensor.sams_iphone_ha_app_battery_state
           - work_sensor: sensor.sam_to_work
-          - home_sensor: sensor.sam_to_home_2
+          - home_sensor: sensor.sam_to_home
           - work_icon: mdi:car
           - entity_picture: /local/avatar_sam.png
           - show_entity_picture: true
@@ -339,7 +339,7 @@ cards:
                       - type: "custom:button-card"
                         template:
                           - "find_my_phone_button"
-                        entity: script.1658844939181
+                        entity: script.find_my_phone_leah
                       - type: "map"
                         aspect_ratio: "12x10"
                         default_zoom: 16
@@ -435,13 +435,12 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.hall_lights
+                      entity: light.hall_main_lights
                       variables:
                         ulm_card_light_name: Main Lights
                         ulm_card_light_icon: mdi:ceiling-light
                         ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
+                        ulm_card_light_enable_color: tru
                         ulm_card_light_enable_popup: true
                     - type: "custom:button-card"
                       template: card_light
@@ -451,7 +450,6 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
@@ -463,7 +461,6 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Living Room"
@@ -471,13 +468,12 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.living_room
+                      entity: light.living_room_main_light
                       variables:
                         ulm_card_light_name: Main Light
                         ulm_card_light_icon: mdi:ceiling-light
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                     - type: "custom:button-card"
                       template: card_light
                       entity: light.living_room_leds
@@ -486,19 +482,17 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.living_room_dining_led
+                      entity: light.living_room_display_led
                       variables:
                         ulm_card_light_name: Display LEDs
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                     - type: "custom:button-card"
                       template: card_light
@@ -508,28 +502,25 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.lava_lamp
+                      entity: light.living_room_lava_lamp
                       variables:
                         ulm_card_light_name: Lava Lamp
                         ulm_card_light_icon: mdi:lava-lamp
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.lounge_lamp
+                      entity: light.living_room_lamp
                       variables:
                         ulm_card_light_name: Lamp
                         ulm_card_light_icon: mdi:floor-lamp
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                 - type: "horizontal-stack"
                   cards:
                     - type: "custom:button-card"
@@ -540,7 +531,6 @@ cards:
                         ulm_card_light_icon: mdi:movie
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
@@ -549,13 +539,12 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.kitchen_lights
+                      entity: light.kitchen_main_lights
                       variables:
                         ulm_card_light_name: Main Lights
                         ulm_card_light_icon: mdi:ceiling-light
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                     - type: "custom:button-card"
                       template: card_light
@@ -565,7 +554,6 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
@@ -574,13 +562,12 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.bedroom
+                      entity: light.bedroom_main_light
                       variables:
                         ulm_card_light_name: Main Lights
                         ulm_card_light_icon: mdi:ceiling-light
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                     - type: "custom:button-card"
                       template: card_light
                       entity: light.bedroom_leds
@@ -589,41 +576,37 @@ cards:
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.smart_bulb
+                      entity: light.bedside_leah
                       variables:
-                        ulm_card_light_name: Bedside Right
+                        ulm_card_light_name: Bedside Leah
                         ulm_card_light_icon: mdi:lamp
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.smart_bulb_2
+                      entity: light.bedside_sam
                       variables:
-                        ulm_card_light_name: Bedside Left
+                        ulm_card_light_name: Bedside Sam
                         ulm_card_light_icon: mdi:lamp
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "horizontal-stack"
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.fairy_lights
+                      entity: light.bedroom_fairy_lights
                       variables:
                         ulm_card_light_name: Fairy Lights
                         ulm_card_light_icon: mdi:string-lights
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Bathroom"
@@ -631,13 +614,12 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.bathroom_lights
+                      entity: light.bathroom_main_lights
                       variables:
                         ulm_card_light_name: Bathroom Lights
                         ulm_card_light_icon: mdi:ceiling-light
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                 - type: "custom:button-card"
                   template: "card_title"
@@ -646,23 +628,21 @@ cards:
                   cards:
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.office_desk_led
+                      entity: light.office_leds
                       variables:
                         ulm_card_light_name: Desk LEDs
                         ulm_card_light_icon: mdi:led-strip
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
                         ulm_card_light_enable_popup: true
                     - type: "custom:button-card"
                       template: card_light
-                      entity: light.desk_lamp
+                      entity: light.office_desk_lamp
                       variables:
                         ulm_card_light_name: Desk Lamp
                         ulm_card_light_icon: mdi:desk-lamp
                         ulm_card_light_enable_slider: true
                         ulm_card_light_enable_color: true
-                        ulm_card_light_force_background_color: true
     - type: 'custom:button-card'
       template: chip_icon_label
       icon: 'mdi:palette'
@@ -682,48 +662,44 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_hall_day
+                      entity: automation.lighting_hall_day
                       name: Day
                       icon: mdi:weather-sunny
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_hall_day
+                          entity_id: automation.lighting_hall_day
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_hall_night
+                      entity: automation.lighting_hall_night
                       name: Night
                       icon: mdi:weather-night
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_hall_night
+                          entity_id: automation.lighting_hall_night
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_hall_sleep
+                      entity: automation.lighting_hall_sleep
                       name: Sleeping
                       icon: mdi:sleep
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_hall_sleep
+                          entity_id: automation.lighting_hall_sleep
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_hall_off
+                      entity: automation.lighting_hall_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_hall_off
+                          entity_id: automation.lighting_hall_off
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Living Room"
@@ -731,48 +707,44 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_living_room_day
+                      entity: automation.lighting_living_room_day
                       name: Day
                       icon: mdi:weather-sunny
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_living_room_day
+                          entity_id: automation.lighting_living_room_day
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_living_room_night
+                      entity: automation.lighting_living_room_night
                       name: Night
                       icon: mdi:weather-night
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_living_room_night
+                          entity_id: automation.lighting_living_room_night
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_living_room_movie
+                      entity: automation.lighting_living_room_movie
                       name: Movie
                       icon: mdi:movie
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_living_room_movie
+                          entity_id: automation.lighting_living_room_movie
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_living_room_off
+                      entity: automation.lighting_living_room_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_living_room_off
+                          entity_id: automation.lighting_living_room_off
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Kitchen"
@@ -780,37 +752,34 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_kitchen_normal
+                      entity: automation.lighting_kitchen_normal
                       name: Normal
                       icon: mdi:chef-hat
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_kitchen_normal
+                          entity_id: automation.lighting_kitchen_normal
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_kitchen_cooking
+                      entity: automation.lighting_kitchen_cooking
                       name: Cooking
                       icon: mdi:stove
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_kitchen_cooking
+                          entity_id: automation.lighting_kitchen_cooking
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_kitchen_off
+                      entity: automation.lighting_kitchen_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_kitchen_off
+                          entity_id: automation.lighting_kitchen_off
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Bedroom"
@@ -818,48 +787,44 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bedroom_day
+                      entity: automation.lighting_bedroom_day
                       name: Day
                       icon: mdi:weather-sunny
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bedroom_day
+                          entity_id: automation.lighting_bedroom_day
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bedroom_night
+                      entity: automation.lighting_bedroom_night
                       name: Night
                       icon: mdi:weather-night
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bedroom_night
+                          entity_id: automation.lighting_bedroom_night
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bedroom_movie
+                      entity: automation.lighting_bedroom_movie
                       name: Movie
                       icon: mdi:movie
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bedroom_movie
+                          entity_id: automation.lighting_bedroom_movie
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bedroom_off
+                      entity: automation.lighting_bedroom_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bedroom_off
+                          entity_id: automation.lighting_bedroom_off
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Bathroom"
@@ -867,48 +832,44 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bathroom_morning
+                      entity: automation.lighting_bathroom_morning
                       name: Morning
                       icon: mdi:weather-sunset-up
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bathroom_morning
+                          entity_id: automation.lighting_bathroom_morning
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bathroom_normal
+                      entity: automation.lighting_bathroom_normal
                       name: Normal
                       icon: mdi:weather-sunny
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bathroom_normal
+                          entity_id: automation.lighting_bathroom_normal
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bathroom_bath
+                      entity: automation.lighting_bathroom_bath
                       name: Bath
                       icon: mdi:bathtub
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bathroom_bath
+                          entity_id: automation.lighting_bathroom_bath
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_bathroom_off
+                      entity: automation.lighting_bathroom_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_bathroom_off
+                          entity_id: automation.lighting_bathroom_off
                 - type: "custom:button-card"
                   template: "card_title"
                   name: "Office"
@@ -916,48 +877,44 @@ cards:
                   cards:
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_office_bright
+                      entity: automation.lighting_office_bright
                       name: Bright
                       icon: mdi:weather-sunny
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_office_bright
+                          entity_id: automation.lighting_office_bright
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_office_dull
+                      entity: automation.lighting_office_dull
                       name: Dull
                       icon: mdi:weather-night
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_office_dull
+                          entity_id: automation.lighting_office_dull
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_office_lamp
+                      entity: automation.lighting_office_lamp
                       name: Lamp
                       icon: mdi:desk-lamp
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_office_lamp
+                          entity_id: automation.lighting_office_lamp
                     - type: 'custom:button-card'
                       template: card_vertical_button
-                      entity: automation.scene_office_off
+                      entity: automation.lighting_office_off
                       name: All Off
                       icon: mdi:lightbulb-off
-                      show_last_changed: true
                       tap_action:
                         action: call-service
                         service: automation.trigger
                         service_data:
-                          entity_id: automation.scene_office_off
+                          entity_id: automation.lighting_office_off
     - type: 'custom:button-card'
       template: chip_icon_label
       icon: 'mdi:shield'
@@ -982,11 +939,11 @@ cards:
                         - arm_away
                 - type: custom:frigate-card
                   cameras:
-                    - camera_entity: camera.hall
+                    - camera_entity: camera.hall_frigate
                       camera_name: Hall
-                    - camera_entity: camera.bedroom
+                    - camera_entity: camera.bedroom_camera_frigate
                       camera_name: Bedroom
-                    - camera_entity: camera.living_room
+                    - camera_entity: camera.living_room_camera_frigate
                       camera_name: Living Room
                   view:
                     default: live
@@ -1014,13 +971,13 @@ cards:
                         ulm_card_binary_sensor_alert: true
                         ulm_show_last_changed: true
                         ulm_card_binary_sensor_alert_name: Door
-                      entity: binary_sensor.hall_door_sensor
+                      entity: binary_sensor.front_door_sensor
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.hall_door_sensor_battery
+                      entity: sensor.front_door_sensor_battery
                       name: Door
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.hall_door_sensor_battery
+                        ulm_card_battery_charger_type_entity_id: sensor.front_door_sensor_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Door
@@ -1032,12 +989,12 @@ cards:
                         ulm_card_binary_sensor_alert: true
                         ulm_show_last_changed: true
                         ulm_card_binary_sensor_alert_name: Hall
-                      entity: binary_sensor.hall_motion_sensor_3
+                      entity: binary_sensor.hall_motion_sensor
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.hall_motion_sensor_battery_sensor_3
+                      entity: sensor.hall_motion_sensor_battery
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery_sensor_3
+                        ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Hall
@@ -1053,10 +1010,10 @@ cards:
                       entity: binary_sensor.living_room_motion
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.living_room_motion_battery_sensor
+                      entity: sensor.living_room_motion_battery
                       name: Living Room
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery_sensor
+                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Living Room
@@ -1069,13 +1026,13 @@ cards:
                         ulm_card_binary_sensor_alert: true
                         ulm_show_last_changed: true
                         ulm_card_binary_sensor_alert_name: Kitchen
-                      entity: binary_sensor.kitchen_motion_sensor_2
+                      entity: binary_sensor.kitchen_motion_sensor
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.kitchen_motion_sensor_battery_sensor_2
+                      entity: sensor.kitchen_motion_sensor_battery
                       name: Kitchen
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery_sensor_2
+                        ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Kitchen
@@ -1088,13 +1045,13 @@ cards:
                         ulm_card_binary_sensor_alert: true
                         ulm_show_last_changed: true
                         ulm_card_binary_sensor_alert_name: Bedroom
-                      entity: binary_sensor.bedroom_motion_sensor_4
+                      entity: binary_sensor.bedroom_motion_sensor
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.bedroom_motion_sensor_battery_sensor_4
+                      entity: sensor.bedroom_motion_sensor_battery
                       name: Bedroom
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery_sensor_4
+                        ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Bedroom
@@ -1107,13 +1064,13 @@ cards:
                         ulm_card_binary_sensor_alert: true
                         ulm_show_last_changed: true
                         ulm_card_binary_sensor_alert_name: Bathroom
-                      entity: binary_sensor.bathroom_motion_sensor_5
+                      entity: binary_sensor.bathroom_motion_sensor
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.bathroom_motion_sensor_battery_sensor_5
+                      entity: sensor.bathroom_motion_sensor_battery
                       name: Bathroom
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery_sensor_5
+                        ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Bathroom
@@ -1129,10 +1086,10 @@ cards:
                       entity: binary_sensor.living_room_motion
                     - type: 'custom:button-card'
                       template: card_battery
-                      entity: sensor.living_room_motion_battery_sensor
+                      entity: sensor.living_room_motion_battery
                       name: Office
                       variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery_sensor
+                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
                         ulm_card_battery_battery_level_danger: 30
                         ulm_card_battery_battery_level_warning: 80
                         ulm_card_battery_name: Office
@@ -1211,9 +1168,9 @@ cards:
                                   name: "Living Room"
                                 - type: entities
                                   entities: 
-                                    - input_text.tts_message
+                                    - input_text.tts_message_living_room
                                 - type: custom:slider-button-card
-                                  entity: media_player.living_room_speaker
+                                  entity: media_player.living_room_google_home
                                   slider:
                                     direction: left-right
                                     background: gradient
@@ -1227,7 +1184,7 @@ cards:
                                       action: call-service
                                       service: automation.trigger
                                       service_data:
-                                        entity_id: automation.text_input_for_tts_living_room
+                                        entity_id: automation.tts_input_push_living_room
                                   name: Living Room Speaker
                                 - type: "custom:button-card"
                                   template: "card_title"
@@ -1236,7 +1193,7 @@ cards:
                                   entities: 
                                     - input_text.tts_message_bedroom
                                 - type: custom:slider-button-card
-                                  entity: media_player.bedroom
+                                  entity: media_player.bedroom_google_home
                                   slider:
                                     direction: left-right
                                     background: gradient
@@ -1250,21 +1207,39 @@ cards:
                                       action: call-service
                                       service: automation.trigger
                                       service_data:
-                                        entity_id: automation.text_input_for_tts_bedroom
+                                        entity_id: automation.tts_input_push_bedroom
+                                - type: "custom:button-card"
+                                  template: "card_title"
+                                  name: "Hall"
+                                - type: entities
+                                  entities: 
+                                    - input_text.tts_message_hall
+                                - type: custom:slider-button-card
+                                  entity: media_player.dashboard_tablet
+                                  slider:
+                                    direction: left-right
+                                    background: gradient
+                                    use_state_color: true
+                                  compact: true
+                                  icon:
+                                    show: false
+                                  action_button:
+                                    icon: mdi:send
+                                    tap_action:
+                                      action: call-service
+                                      service: automation.trigger
+                                      service_data:
+                                        entity_id: automation.tts_input_push_hall
+                                  name: Hall Tablet
                 - type: 'custom:notify-card'
                   target: notify.notify
                   label: Notify Everyone
                   card_title: Send Notification to All
                   notification_title: 'New Notification'
                 - type: 'custom:notify-card'
-                  target: notify.fire_tv
+                  target: notify.bedroom_tv_notify
                   label: Notify Bedroom TV
                   card_title: Send Notification to Bedroom TV
-                  notification_title: 'New Notification'
-                - type: 'custom:notify-card'
-                  target: mobile_app_lenovo_tb_x505f
-                  label: Notify Hall Tablet
-                  card_title: Send Notification to Hall Tablet
                   notification_title: 'New Notification'
     - type: 'custom:button-card'
       template: chip_icon_label
@@ -1301,7 +1276,10 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_hall_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
+        ]]]
     - type: "custom:button-card"
       template:
         - card_esh_room_lr
@@ -1315,8 +1293,10 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_living_room_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
-
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
+        ]]]
   - view_layout:  ### KITCHEN & BEDROOM ###
       grid-area: "card2"
     type: horizontal-stack
@@ -1334,7 +1314,10 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_kitchen_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.kitchen_temperature_temperature_2"].state + "°C" ]]]'
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.kitchen_temperature'].state + "°C"
+        ]]]
     - type: "custom:button-card"
       template:
         - card_esh_room_bed
@@ -1348,7 +1331,10 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_bedroom_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.bedroom_temperature_temperature_2"].state + "°C" ]]]'
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.bedroom_temperature'].state + "°C"
+        ]]]
 
   - view_layout:  ### BATHROOM & OFFICE ###
       grid-area: "card3"
@@ -1367,7 +1353,10 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_bathroom_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.bathroom_temperature_temperature"].state + "°C" ]]]'
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.bathroom_temperature'].state + "°C"
+        ]]]
     - type: "custom:button-card"
       template:
         - card_esh_room_off
@@ -1381,4 +1370,7 @@ cards:
       variables:
         ulm_custom_card_esh_room_light_entity: light.all_office_lights
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-      label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
+      label: >
+        [[[
+          return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C " + " 💻 " + states[ 'sensor.server_temperature'].state + "°C"
+        ]]]

@@ -6,7 +6,9 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: HA System Fan Control
-description: Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs
+description: >-
+  Controls server cabinet temperature using temperature sensor and USB fans in
+  Sonoff USB plugs
 trigger: []
 condition: []
 action:
@@ -21,7 +23,7 @@ action:
       - service: switch.turn_on
         data: {}
         target:
-          entity_id: switch.sonoff_100149c418_1
+          entity_id: switch.server_fans
       - service: notify.mobile_app_sam_s_mac_mini
         data:
           message: It's getting a little hot in there
@@ -37,7 +39,7 @@ action:
   - service: switch.turn_off
     data: {}
     target:
-      entity_id: switch.sonoff_100149c418_1
+      entity_id: switch.server_fans
   - service: notify.mobile_app_sam_s_mac_mini
     data:
       title: Server Fans Off

@@ -14,7 +14,7 @@ action:
     data:
       transition: 20
     target:
-      entity_id: scene.scene_hall_sleep
+      entity_id: scene.hall_sleep
   - service: light.turn_off
     data: {}
     target:

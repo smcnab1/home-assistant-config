@@ -7,6 +7,7 @@
 #---Input Select outputting time of day from the time of day sensor, populating dashboard with welcome message and populating TTS greetings.
 
 name: Frontend Greeting
+icon: mdi:weather-sunny
 options:
   - Good Morning
   - Good Afternoon

@@ -6,28 +6,25 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: Media Hurry Up Sam Notify
-description: Automation which sends notification to wifes phone when I turn on my XBOX and she is home. Uses actionable notifications to trigger a hurry up automation.
+description: >-
+  Automation which sends notification to wifes phone when I turn on my XBOX and
+  she is home. Uses actionable notifications to trigger a hurry up automation.
 trigger:
   - platform: state
     entity_id:
-    - binary_sensor.sam_7he_ex7reme
-    to: 'on'
+      - binary_sensor.xbox_status
+    to: "on"
 condition:
-  - condition: device
-    device_id: 78ed96bd29cdfd72c9f0eb7e4d7d473f
-    domain: device_tracker
-    entity_id: device_tracker.leah_s_iphone_new
-    type: is_home
   - condition: state
-    entity_id: input_boolean.holiday
-    state: 'off'
+    entity_id: person.leah
+    state: home
 action:
   - service: notify.mobile_app_leah_s_iphone
     data:
       title: Sam's on his XBOX
       message: What would you like to do?
       data:
-        icon:
+        icon: null
         ttl: 0
         visibility: public
         tag: hurryup
@@ -35,22 +32,22 @@ action:
           sound:
             volume: 1
         actions:
-        - action: HURRY
-          title: Hurry Up
-          icon: sfsymbols:person.fill.checkmark
-          destructive: true
-        - action: IGNORE
-          title: Nothing
-          icon: sfsymbols:person.fill.xmark
+          - action: HURRY
+            title: Hurry Up
+            icon: sfsymbols:person.fill.checkmark
+            destructive: true
+          - action: IGNORE
+            title: Nothing
+            icon: sfsymbols:person.fill.xmark
   - wait_for_trigger:
-    - platform: state
-      entity_id:
-      - binary_sensor.sam_7he_ex7reme
-      to: 'off'
-    - platform: event
-      event_type: mobile_app_notification_action
-      event_data:
-        action: IGNORE
+      - platform: state
+        entity_id:
+          - binary_sensor.xbox_status
+        to: "off"
+      - platform: event
+        event_type: mobile_app_notification_action
+        event_data:
+          action: IGNORE
     continue_on_timeout: false
   - service: notify.mobile_app_leah_s_iphone
     data:

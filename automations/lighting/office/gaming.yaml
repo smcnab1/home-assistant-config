@@ -14,9 +14,9 @@ action:
     data:
       transition: 30
     target:
-      entity_id: scene.scene_gaming
+      entity_id: scene.office_gaming
   - service: light.turn_off
     data: {}
     target:
-      entity_id: light.desk_lamp
+      entity_id: light.office_desk_lamp
 mode: single

@@ -6,7 +6,9 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: Alarm Arm Notify Actions
-description: This automation then arms the alarm and sends notifications to everyone to confirm it is now armed.
+description: >-
+  This automation then arms the alarm and sends notifications to everyone to
+  confirm it is now armed.
 mode: single
 trigger:
   - platform: event

@@ -7,11 +7,11 @@
 
 name: 'Living Room Day'
 entities:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     supported_color_modes:
     - hs
     icon: mdi:led-strip-variant
-    friendly_name: 'Living Room: Dining LED'
+    friendly_name: 'Living Room Display LED'
     supported_features: 0
     color_mode: hs
     brightness: 255
@@ -66,7 +66,7 @@ entities:
     state: 'on'
 icon: mdi:weather-sunny
 metadata:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     entity_only: true
   light.living_room_leds:
     entity_only: true

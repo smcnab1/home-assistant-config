@@ -13,19 +13,19 @@ condition: []
 action:
   - if:
       - condition: numeric_state
-        entity_id: sensor.lenovo_tab_m10_battery_level
+        entity_id: sensor.dashboard_tablet_battery
         below: "40"
     then:
       - service: switch.turn_on
         data: {}
         target:
-          entity_id: switch.sonoff_100149c411_1
+          entity_id: switch.tablet_charger
     else:
       - wait_for_trigger:
           - platform: numeric_state
-            entity_id: sensor.lenovo_tab_m10_battery_level
+            entity_id: sensor.dashboard_tablet_battery
             above: "90"
       - service: switch.turn_off
         data: {}
         target:
-          entity_id: switch.sonoff_100149c411_1
+          entity_id: switch.tablet_charger

@@ -12,7 +12,7 @@ description: >-
 trigger:
   - platform: state
     entity_id:
-      - media_player.fire_tv_192_168_1_98
+      - media_player.bedroom_tv
     to: playing
 condition: []
 action:
@@ -20,10 +20,10 @@ action:
     data:
       scene_id: prebedmovie
       snapshot_entities:
-        - light.bedroom
+        - light.bedroom_main_light
         - light.bedroom_leds
         - light.bedside_lamps
-        - light.fairy_lights
+        - light.bedroom_fairy_lights
   - service: automation.trigger
     data:
       skip_condition: false
@@ -32,7 +32,7 @@ action:
   - wait_for_trigger:
       - platform: state
         entity_id:
-          - media_player.fire_tv_192_168_1_98
+          - media_player.bedroom_tv
         to: "off"
     continue_on_timeout: false
   - service: scene.turn_on

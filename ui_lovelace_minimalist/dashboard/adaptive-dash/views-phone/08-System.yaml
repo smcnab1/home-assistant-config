@@ -46,22 +46,12 @@ cards:
             variables:
               ulm_card_generic_name: System Last Boot
               ulm_card_generic_icon: mdi:DesktopClassic
-          - type: "custom:button-card"
-            template: "card_title"
-            name: "System Updates"
-          - type: "custom:button-card"
-            template: card_homeassistant_updates
-            variables:
-              ulm_card_homeassistant_entity: "binary_sensor.updater_core"
-              ulm_card_homeassistant_core: "sensor.core_updates"
-              ulm_card_homeassistant_supervisor: "sensor.supervisor_updates"
-              ulm_card_homeassistant_os: "sensor.os_updates"
           - type: 'custom:button-card'
             template: card_generic
-            entity: sensor.hacs
+            entity: sensor.backup_state
             variables:
-              ulm_card_generic_name: HACS Outstanding Updates
-              ulm_card_generic_icon: hacs:hacs
+              ulm_card_generic_name: Backup Status
+              ulm_card_generic_icon: mdi:folder-download
 
       - type: vertical-stack
         cards:
@@ -71,8 +61,8 @@ cards:
           - type: custom:button-card
             template: custom_card_irmajavi_speedtest
             variables:
-              ulm_custom_card_irmajavi_speedtest_download_speed_entity: sensor.system_speed_test_download
-              ulm_custom_card_irmajavi_speedtest_upload_speed_entity: sensor.system_speed_test_upload
+              ulm_custom_card_irmajavi_speedtest_download_speed_entity: sensor.speed_test_download
+              ulm_custom_card_irmajavi_speedtest_upload_speed_entity: sensor.speed_test_upload
               ulm_custom_card_irmajavi_speedtest_color: blue
               ulm_custom_card_irmajavi_speedtest_router_name: Nokia
               ulm_custom_card_irmajavi_speedtest_router_model: G-2426G-A
@@ -85,21 +75,21 @@ cards:
           - type: "custom:button-card"
             template: "custom_card_nik_tablet"
             variables:
-              ulm_custom_card_nik_tablet_main: binary_sensor.lenovo_tab_m10_kiosk_mode
+              ulm_custom_card_nik_tablet_main: binary_sensor.dashboard_tablet_kiosk_mode
               ulm_custom_card_nik_tablet_name: "Lenovo M10 Tablet"
-              ulm_custom_card_nik_tablet_battery: sensor.lenovo_tab_m10_battery_level
+              ulm_custom_card_nik_tablet_battery: sensor.dashboard_tablet_battery
               ulm_custom_card_nik_tablet_battery_name: "Battery"
-              ulm_custom_card_nik_tablet_button1: switch.sonoff_100149c411_1
-              ulm_custom_card_nik_tablet_button2: switch.lenovo_tab_m10_motion_detection
-              ulm_custom_card_nik_tablet_button3: light.lenovo_tab_m10_screen
-              ulm_custom_card_nik_tablet_restart: button.lenovo_tab_m10_restart_browser
-              ulm_custom_card_nik_tablet_reload: button.lenovo_tab_m10_load_start_url
-              ulm_custom_card_nik_tablet_maintenance: switch.lenovo_tab_m10_maintenance_mode
-              ulm_custom_card_nik_tablet_par1: sensor.lenovo_tab_m10_ram_free_memory
-              ulm_custom_card_nik_tablet_par1_name: "RAM"
-              ulm_custom_card_nik_tablet_par2: sensor.lenovo_tab_m10_internal_storage_free_space
+              ulm_custom_card_nik_tablet_button1: switch.tablet_charger
+              ulm_custom_card_nik_tablet_button2: switch.dashboard_tablet_motion_detection
+              ulm_custom_card_nik_tablet_button3: light.dashboard_tablet_screen
+              ulm_custom_card_nik_tablet_restart: button.dashboard_tablet_restart_browser
+              ulm_custom_card_nik_tablet_reload: button.dashboard_tablet_load_start_url
+              ulm_custom_card_nik_tablet_maintenance: switch.dashboard_tablet_maintenance_mode
+              ulm_custom_card_nik_tablet_par1: sensor.dashboard_tablet_free_memory
+              ulm_custom_card_nik_tablet_par1_name: "Free Memory"
+              ulm_custom_card_nik_tablet_par2: sensor.dashboard_tablet_internal_storage_free_space
               ulm_custom_card_nik_tablet_par2_name: "Disk"
-              ulm_custom_card_nik_tablet_par3: binary_sensor.lenovo_tab_m10_plugged_in
+              ulm_custom_card_nik_tablet_par3: binary_sensor.dashboard_tablet_plugged_in
               ulm_custom_card_nik_tablet_par3_name: "Power"
 
       - type: vertical-stack
@@ -125,7 +115,7 @@ cards:
                 color: "yellow"
                 max_value: 50
               entity_3:
-                entity_id: "sensor.cpu_temp"
+                entity_id: "sensor.processor_temperature"
                 icon: ""
                 name: "CPU Temperature"
                 color: "green"
@@ -156,6 +146,8 @@ cards:
                 name: "Processor Temp"
                 color: "green"
                 max_value: 50
+      - type: vertical-stack
+        cards:
           - type: "custom:button-card"
             template: "card_title"
             name: "Network Statistics"
@@ -180,5 +172,31 @@ cards:
                 entity_id: "sensor.network_throughput_in_eth0"
                 icon: ""
                 name: "Network THR"
+                color: "green"
+                max_value: 50
+          - type: "custom:button-card"
+            template: "card_title"
+            name: "Frigate Statistics"
+          - type: "custom:button-card"
+            template: "custom_card_apexcharts"
+            variables:
+              chart_type: "radialBar"
+              graph_span: "1d"
+              entity_1:
+                entity_id: "sensor.coral_inference_speed"
+                icon: ""
+                name: "Coral Inf"
+                color: "blue"
+                max_value: 50
+              entity_2:
+                entity_id: "sensor.detection_fps"
+                icon: ""
+                name: "Det FPS"
+                color: "yellow"
+                max_value: 50
+              entity_3:
+                entity_id: "sensor.living_room_camera_process_fps"
+                icon: ""
+                name: "Proc FPS"
                 color: "green"
                 max_value: 50

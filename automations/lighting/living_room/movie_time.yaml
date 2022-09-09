@@ -10,37 +10,37 @@ description: 'Automation automatically turn on movie scene when TV is turned on 
 trigger:
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: Disney+
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: DVD Player
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: Prime Video
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: Paramount Plus
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: Discovery+
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     attribute: source
     to: org.tizen.netflix-app
   - platform: state
     entity_id:
-    - media_player.samsung_tv
+    - media_player.living_room_tv
     to: Netflix
 condition: []
 action:
@@ -48,16 +48,16 @@ action:
     data:
       scene_id: premovie
       snapshot_entities:
-      - light.living_room_dining_led
+      - light.living_room_display_led
       - light.living_room_leds
       - light.living_room_dreamview
-      - light.lava_lamp
+      - light.living_room_lava_lamp
       - light.living_room_tv_leds
   - service: automation.trigger
     data:
       skip_condition: false
     target:
-      entity_id: automation.scene_living_room_movie
+      entity_id: automation.living_room_movie
   - service: light.turn_on
     data:
       profile: Video
@@ -66,7 +66,7 @@ action:
   - wait_for_trigger:
     - platform: state
       entity_id:
-      - media_player.samsung_tv
+      - media_player.living_room_tv
       to: 'off'
   - service: scene.turn_on
     data:

@@ -78,7 +78,7 @@ cards:
           .: |
             ha-card {
               background-color:
-                {% if states('sensor.living_room_temperature_temperature') >= ('sensor.open_weather_temperature')%}
+                {% if states('sensor.living_room_temperature') >= ('sensor.open_weather_temperature')%}
                   rgba(var(--color-blue), 0.3)
                 {% else %}
                   rgba(var(--color-red), 0.3)
@@ -93,7 +93,7 @@ cards:
               padding: 4px;
             }
         content: |
-            {% if states('sensor.living_room_temperature_temperature') >= ('sensor.open_weather_temperature') %}
+            {% if states('sensor.living_room_temperature') >= ('sensor.open_weather_temperature') %}
               ## <ha-icon icon="mdi:snowflake"></ha-icon><br>It's warmer outside than inside <br> Close windows and turn on fans
             {% else %}
               ### <ha-icon icon="mdi:weather-sunny"></ha-icon><br>It's cooler outside than inside <br> Open windows and turn on the fans
@@ -122,10 +122,10 @@ cards:
         variables:
           - entity: person.sam
           - name: Sam
-          - battery: sensor.sams_iphone_battery_level
-          - battery_state: sensor.sams_iphone_battery_state
+          - battery: sensor.sams_iphone_ha_app_battery_level
+          - battery_state: sensor.sams_iphone_ha_app_battery_state
           - work_sensor: sensor.sam_to_work
-          - home_sensor: sensor.sam_to_home_2
+          - home_sensor: sensor.sam_to_home
           - work_icon: mdi:car
           - entity_picture: /local/avatar_sam.png
           - show_entity_picture: true
@@ -214,7 +214,7 @@ cards:
                       - type: "glance"
                         show_state: false
                         entities:
-                          - entity: sensor.sams_iphone_ssid
+                          - entity: sensor.sams_iphone_ha_app_ssid
                             name: "WiFi"
                             icon: "mdi:wifi"
                           - entity: person.sam
@@ -329,7 +329,7 @@ cards:
                       - type: "glance"
                         show_state: false
                         entities:
-                          - entity: sensor.leah_s_iphone_connection_type
+                          - entity: sensor.leah_s_iphone_ssid
                             name: "WiFi"
                             icon: "mdi:wifi"
                           - entity: person.leah
@@ -338,7 +338,7 @@ cards:
                       - type: "custom:button-card"
                         template:
                           - "find_my_phone_button"
-                        entity: script.1658844939181
+                        entity: script.find_my_phone_leah
                       - type: "map"
                         aspect_ratio: "12x10"
                         default_zoom: 16
@@ -354,10 +354,10 @@ cards:
     cards:
       - type: 'custom:button-card'
         template: card_generic_travel
-        entity: sensor.london_tfl_jubilee_940gzzluwhp
+        entity: sensor.london_tfl_jubilee_city
       - type: 'custom:button-card'
         template: card_travel_map
-        entity: sensor.sam_to_home_2
+        entity: sensor.sam_to_work
         name: Local Traffic
 
   ### ROOM CARDS ###
@@ -381,7 +381,10 @@ cards:
       navigation_path: "hall"
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_hall_lights
-    label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
+      ]]]
   ### LIVING ROOM ###
   - view_layout:
       grid-area: "card2"
@@ -398,7 +401,10 @@ cards:
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_living_room_lights
       ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-    label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
+      ]]]
   ### KITCHEN ###
   - view_layout:
       grid-area: "card3"
@@ -415,7 +421,10 @@ cards:
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_kitchen_lights
       ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-    label: '[[[ return states["sensor.kitchen_temperature_temperature_2"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.kitchen_temperature'].state + "°C"
+      ]]]
   ### BEDROOM ###
   - view_layout:
       grid-area: "card4"
@@ -432,7 +441,10 @@ cards:
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_bedroom_lights
       ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-    label: '[[[ return states["sensor.bedroom_temperature_temperature_2"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.bedroom_temperature'].state + "°C"
+      ]]]
   ### BATHROOM ###
   - view_layout:
       grid-area: "card5"
@@ -448,7 +460,10 @@ cards:
       navigation_path: "bathroom"
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_bathroom_lights
-    label: '[[[ return states["sensor.bathroom_temperature_temperature"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.bathroom_temperature'].state + "°C"
+      ]]]
   ### OFFICE ###
   - view_layout:
       grid-area: "card6"
@@ -465,4 +480,7 @@ cards:
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_office_lights
       ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
-    label: '[[[ return states["sensor.living_room_temperature_temperature"].state + "°C" ]]]'
+    label: >
+      [[[
+        return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C " + " 💻 " + states[ 'sensor.server_temperature'].state + "°C"
+      ]]]

@@ -17,6 +17,7 @@ layout:
     "title4 title4 title4 title4 title4 title4"
     "card6 card6 card6 card6 card6 card6"
     "card7 card7 card7 card7 card7 card7"
+    "card8 card8 card8 card8 card8 card8"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
@@ -34,6 +35,7 @@ layout:
         "title4 title4"
         "card6 card6"
         "card7 card7"
+        "card8 card8"
 
 view_layout:
   grid-area: "popup"
@@ -52,7 +54,7 @@ cards:
       - type: "custom:button-card"
         template: chip_mdi_icon_state
         variables:
-          ulm_chip_mdi_icon_state_entity: sensor.bedroom_temperature_temperature_2
+          ulm_chip_mdi_icon_state_entity: sensor.bedroom_temperature
           ulm_chip_mdi_icon_state_icon: mdi:thermometer
 
   - view_layout: ### LIGHTING ###
@@ -66,13 +68,12 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: light.bedroom
+        entity: light.bedroom_main_light
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
       - type: "custom:button-card"
         template: card_light
         entity: light.bedroom_leds
@@ -81,7 +82,6 @@ cards:
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
       grid-area: "card2"
@@ -89,23 +89,21 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: light.smart_bulb_2
+        entity: light.bedside_leah
         variables:
-          ulm_card_light_name: Bedside Left
+          ulm_card_light_name: Bedside Leah
           ulm_card_light_icon: mdi:lamp
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
         template: card_light
-        entity: light.smart_bulb
+        entity: light.bedside_sam
         variables:
-          ulm_card_light_name: Bedside Right
+          ulm_card_light_name: Bedside Sam
           ulm_card_light_icon: mdi:lamp
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
       grid-area: "card22"
@@ -113,13 +111,12 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: light.fairy_lights
+        entity: light.bedroom_fairy_lights
         variables:
           ulm_card_light_name: Fairy Lights
           ulm_card_light_icon: mdi:string-lights
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
 
   - view_layout: ### SCENES ###
       grid-area: "title2"
@@ -132,48 +129,44 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_bedroom_day
+        entity: automation.lighting_bedroom_day
         name: Day
         icon: mdi:weather-sunny
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_day
+            entity_id: automation.lighting_bedroom_day
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_bedroom_night
+        entity: automation.lighting_bedroom_night
         name: Night
         icon: mdi:weather-night
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_night
+            entity_id: automation.lighting_bedroom_night
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_bedroom_movie
+        entity: automation.lighting_bedroom_movie
         name: Movie
         icon: mdi:movie
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_movie
+            entity_id: automation.lighting_bedroom_movie
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_bedroom_off
+        entity: automation.lighting_bedroom_off
         name: All Off
         icon: mdi:lightbulb-off
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_bedroom_off
+            entity_id: automation.lighting_bedroom_off
 
   - view_layout: ### MEDIA ###
       grid-area: "title3"
@@ -186,16 +179,16 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.fire_tv_192_168_1_104
+        entity: media_player.bedroom_tv
         variables:
-          ulm_card_media_player_name: Amazon TV
+          ulm_card_media_player_name: TV
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
           ulm_card_media_player_icon: mdi:television
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.bedroom
+        entity: media_player.bedroom_google_home
         variables:
           ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
@@ -219,24 +212,43 @@ cards:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.bedroom_motion_sensor_4
+        entity: binary_sensor.bedroom_motion_sensor
       - type: "custom:button-card"
         template: card_battery
-        entity: sensor.bedroom_motion_sensor_battery_sensor_4
+        entity: sensor.bedroom_motion_sensor_battery
         name: Motion
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery_sensor_4
+          ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery
           ulm_card_battery_battery_level_danger: 30
           ulm_card_battery_battery_level_warning: 80
           ulm_card_battery_name: Motion
-  - view_layout: ### CAMERA ###
+  - view_layout:
       grid-area: "card7"
+    type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_binary_sensor_alert
+        name: Leah Sleeping
+        variables:
+          ulm_card_binary_sensor_alert: true
+          ulm_show_last_changed: true
+          ulm_card_binary_sensor_alert_name: Motion
+        entity: binary_sensor.leah_sleeping
+      - type: "custom:button-card"
+        template: card_binary_sensor_alert
+        name: Sam Sleeping
+        variables:
+          ulm_card_binary_sensor_alert: true
+          ulm_show_last_changed: true
+          ulm_card_binary_sensor_alert_name: Motion
+        entity: binary_sensor.sam_sleeping
+  - view_layout: ### CAMERA ###
+      grid-area: "card8"
     type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle
     name: Camera
     icon: mdi:cctv
-    show_last_changed: true
     tap_action:
       action: fire-dom-event
       browser_mod:
@@ -246,7 +258,7 @@ cards:
           content:
             type: custom:frigate-card
             cameras:
-              - camera_entity: camera.bedroom
+              - camera_entity: camera.bedroom_camera_frigate
                 camera_name: Bedroom
             view:
               default: live

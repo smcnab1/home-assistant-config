@@ -26,7 +26,7 @@ entities:
     friendly_name: 'Bedroom: LEDs'
     supported_features: 0
     state: 'on'
-  light.fairy_lights:
+  light.bedroom_fairy_lights:
     supported_color_modes:
     - onoff
     friendly_name: Fairy Lights
@@ -37,5 +37,5 @@ icon: mdi:movie
 metadata:
   light.bedroom_leds:
     entity_only: true
-  light.fairy_lights:
+  light.bedroom_fairy_lights:
     entity_only: true

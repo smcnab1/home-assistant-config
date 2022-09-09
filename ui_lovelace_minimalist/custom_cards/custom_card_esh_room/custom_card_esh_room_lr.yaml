@@ -167,6 +167,7 @@ card_esh_room_lr:
             service: browser_mod.popup
             data:
               title: "Living Room Lighting"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
@@ -174,13 +175,12 @@ card_esh_room_lr:
                     cards:
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.living_room
+                        entity: light.living_room_main_light
                         variables:
                           ulm_card_light_name: Main Light
                           ulm_card_light_icon: mdi:ceiling-light
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                       - type: "custom:button-card"
                         template: card_light
                         entity: light.living_room_leds
@@ -189,19 +189,17 @@ card_esh_room_lr:
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                   - type: "horizontal-stack"
                     cards:
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.living_room_dining_led
+                        entity: light.living_room_display_led
                         variables:
                           ulm_card_light_name: Display LEDs
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                       - type: "custom:button-card"
                         template: card_light
@@ -211,28 +209,25 @@ card_esh_room_lr:
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                   - type: "horizontal-stack"
                     cards:
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.lava_lamp
+                        entity: light.living_room_lava_lamp
                         variables:
                           ulm_card_light_name: Lava Lamp
                           ulm_card_light_icon: mdi:lava-lamp
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.lounge_lamp
+                        entity: light.living_room_lamp
                         variables:
                           ulm_card_light_name: Lamp
                           ulm_card_light_icon: mdi:floor-lamp
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                   - type: "horizontal-stack"
                     cards:
                       - type: "custom:button-card"
@@ -243,7 +238,6 @@ card_esh_room_lr:
                           ulm_card_light_icon: mdi:movie
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                   - type: "custom:button-card"
                     template: "card_title"
@@ -252,50 +246,46 @@ card_esh_room_lr:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_day
+                        entity: automation.lighting_living_room_day
                         name: Day
                         icon: mdi:weather-sunny
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_day
+                            entity_id: automation.lighting_living_room_day
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_night
+                        entity: automation.lighting_living_room_night
                         name: Night
                         icon: mdi:weather-night
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_night
+                            entity_id: automation.lighting_living_room_night
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_movie
+                        entity: automation.lighting_living_room_movie
                         name: Movie
                         icon: mdi:movie
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_movie
+                            entity_id: automation.lighting_living_room_movie
                   - type: "horizontal-stack"
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_living_room_off
+                        entity: automation.lighting_living_room_off
                         name: All Off
                         icon: mdi:lightbulb-off
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_living_room_off
+                            entity_id: automation.lighting_living_room_off
 
 
     climate:
@@ -331,14 +321,15 @@ card_esh_room_lr:
             service: browser_mod.popup
             data:
               title: "Living Room Media"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.samsung_tv
+                    entity: media_player.living_room_tv
                     variables:
-                      ulm_card_media_player_name : Samsung TV
+                      ulm_card_media_player_name : TV
                       ulm_card_media_player_icon: mdi:television
                       ulm_card_media_player_enable_art: true
                       ulm_card_media_player_enable_controls: true
@@ -347,7 +338,7 @@ card_esh_room_lr:
                       ulm_card_media_player_more_info: true
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.living_room_speaker
+                    entity: media_player.living_room_google_home
                     variables:
                       ulm_card_media_player_name : Google Assistant
                       ulm_card_media_player_icon: mdi:google-assistant
@@ -358,7 +349,7 @@ card_esh_room_lr:
                       ulm_card_media_player_more_info: true
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.living_room_sonos_sonos
+                    entity: media_player.living_room_sonos
                     variables:
                       ulm_card_media_player_name : Sonos Speaker
                       ulm_card_media_player_icon: mdi:speaker

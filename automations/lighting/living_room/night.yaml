@@ -18,6 +18,6 @@ action:
     data: {}
     target:
       entity_id:
-      - light.living_room
+      - light.living_room_main_light_2
       - light.living_room_dreamview
 mode: single

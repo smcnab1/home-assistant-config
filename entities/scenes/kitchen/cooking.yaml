@@ -7,22 +7,22 @@
 
 name: 'Kitchen Cooking'
 entities:
-  light.kitchen_lights:
+  light.kitchen_main_lights:
     supported_color_modes:
     - brightness
     - hs
     entity_id:
     - light.kitchen_main_light_1
-    - light.kitchen_main_light_2_2
-    - light.kitchen_main_light_3_3
-    - light.kitchen_main_light_4_4
+    - light.kitchen_main_light_2
+    - light.kitchen_main_light_3
+    - light.kitchen_main_light_4
     icon: mdi:lightbulb-group
     friendly_name: 'Kitchen: Main Lights'
     supported_features: 0
     color_mode: brightness
     brightness: 177
     state: 'on'
-  light.kitchen_leds:
+  light.kitchen_main_lights:
     supported_color_modes:
     - hs
     icon: mdi:led-strip-variant
@@ -43,7 +43,7 @@ entities:
     state: 'on'
 icon: mdi:chef-hat
 metadata:
-  light.kitchen_lights:
+  light.kitchen_main_lights:
     entity_only: true
   light.kitchen_leds:
     entity_only: true

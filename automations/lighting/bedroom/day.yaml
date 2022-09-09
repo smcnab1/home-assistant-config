@@ -13,5 +13,5 @@ action:
   - service: scene.turn_on
     data: {}
     target:
-      entity_id: scene.scene_bedroom_day
+      entity_id: scene.bedroom_day
 mode: single

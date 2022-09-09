@@ -7,7 +7,7 @@
 
 name: 'Office Meeting'
 entities:
-  light.office_desk_led:
+  light.office_leds:
     supported_color_modes:
     - hs
     color_mode: hs
@@ -27,5 +27,5 @@ entities:
     state: 'on'
 icon: mdi:monitor-account
 metadata:
-  light.office_desk_led:
+  light.office_leds:
     entity_only: true

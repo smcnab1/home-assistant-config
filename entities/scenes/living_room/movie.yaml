@@ -7,7 +7,7 @@
 
 name: 'Living Room Movie'
 entities:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     supported_color_modes:
     - hs
     color_mode: hs
@@ -47,7 +47,7 @@ entities:
     state: 'on'
 icon: mdi:movie
 metadata:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     entity_only: true
   light.living_room_leds:
     entity_only: true

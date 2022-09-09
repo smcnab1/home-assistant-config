@@ -7,7 +7,7 @@
 
 name: 'Office Dull'
 entities:
-  light.office_desk_led:
+  light.office_leds:
     supported_color_modes:
     - hs
     friendly_name: 'Office: Desk LED'
@@ -27,5 +27,5 @@ entities:
     state: 'on'
 icon: mdi:brightness-1
 metadata:
-  light.office_desk_led:
+  light.office_leds:
     entity_only: true

@@ -14,5 +14,5 @@ action:
     data:
       transition: 30
     target:
-      entity_id: scene.scene_bathroom_bath
+      entity_id: scene.bathroom_bath
 mode: single

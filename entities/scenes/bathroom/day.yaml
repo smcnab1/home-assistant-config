@@ -7,12 +7,12 @@
 
 name: 'Bathroom Day'
 entities:
-  light.all_bathroom_lights:
+  light.bathroom_main_lights:
     supported_color_modes:
     - brightness
     - hs
     entity_id:
-    - light.bathroom_lights
+    - light.bathroom_main_lights
     icon: mdi:lightbulb-group
     friendly_name: ALL BATHROOM LIGHTS
     supported_features: 0
@@ -21,5 +21,5 @@ entities:
     state: 'on'
 icon: mdi:weather-sunny
 metadata:
-  light.all_bathroom_lights:
+  light.bathroom_main_lights:
     entity_only: true

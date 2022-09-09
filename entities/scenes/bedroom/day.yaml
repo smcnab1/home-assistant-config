@@ -11,7 +11,7 @@ entities:
     supported_color_modes:
     - hs
     icon: mdi:led-strip-variant
-    friendly_name: 'Bedroom: LEDs'
+    friendly_name: 'Bedroom LEDs'
     supported_features: 0
     color_mode: hs
     brightness: 255

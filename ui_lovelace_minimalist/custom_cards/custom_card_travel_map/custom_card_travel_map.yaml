@@ -37,7 +37,7 @@ card_travel_map:
                       type: iframe
                       url: https://www.tfljamcams.net/
                       aspect_ratio: 75%
-              entity: sensor.sam_to_home_2
+              entity: sensor.sam_to_home
               icon: mdi:car
               styles:
                 icon:
@@ -45,7 +45,7 @@ card_travel_map:
           item2:
             card:
               type: "custom:button-card"
-              entity: sensor.sam_to_home_2
+              entity: sensor.sam_to_home
               name: Local Traffic Map
               tap_action:
                 action: fire-dom-event

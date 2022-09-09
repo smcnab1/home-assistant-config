@@ -167,6 +167,7 @@ card_esh_room_off:
             service: browser_mod.popup
             data:
               title: "Office Lighting"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
@@ -174,74 +175,68 @@ card_esh_room_off:
                     cards:
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.office_desk_led
+                        entity: light.office_leds
                         variables:
                           ulm_card_light_name: LEDs
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.desk_lamp
+                        entity: light.office_desk_lamp
                         variables:
                           ulm_card_light_name: Desk Lamp
                           ulm_card_light_icon: mdi:desk-lamp
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
                   - type: horizontal-stack
                     cards:
-                      - type: 'custom:button-card'
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_office_bright
+                        entity: automation.lighting_office_bright
                         name: Bright
                         icon: mdi:weather-sunny
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_bright
-                      - type: 'custom:button-card'
+                            entity_id: automation.lighting_office_bright
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_office_dull
+                        entity: automation.lighting_office_dull
                         name: Dull
                         icon: mdi:weather-night
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_dull
-                      - type: 'custom:button-card'
+                            entity_id: automation.lighting_office_dull
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_office_lamp
+                        entity: automation.lighting_office_lamp
                         name: Lamp
                         icon: mdi:desk-lamp
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_lamp
+                            entity_id: automation.lighting_office_lamp
                   - type: "horizontal-stack"
                     cards:
-                      - type: 'custom:button-card'
+                      - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.scene_office_off
+                        entity: automation.lighting_office_off
                         name: All Off
                         icon: mdi:lightbulb-off
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_office_off
+                            entity_id: automation.lighting_office_off
 
     climate:
       card:
@@ -276,12 +271,13 @@ card_esh_room_off:
             service: browser_mod.popup
             data:
               title: "Office Media"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.living_room_speaker
+                    entity: media_player.living_room_google_home
                     variables:
                       ulm_card_media_player_name: Google Assistant
                       ulm_card_media_player_icon: mdi:google-assistant
@@ -292,7 +288,7 @@ card_esh_room_off:
                       ulm_card_media_player_more_info: true
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.living_room_sonos_sonos
+                    entity: media_player.living_room_sonos
                     variables:
                       ulm_card_media_player_name: Sonos Speaker
                       ulm_card_media_player_icon: mdi:speaker

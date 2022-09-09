@@ -7,7 +7,7 @@
 
 name: 'Living Room Night'
 entities:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     supported_color_modes:
     - hs
     icon: mdi:led-strip-variant
@@ -64,7 +64,7 @@ entities:
     - 0.477
     - 0.196
     state: 'on'
-  light.lava_lamp:
+  light.living_room_lava_lamp:
     supported_color_modes:
     - onoff
     friendly_name: 'Living Room: Lava Lamp'
@@ -73,11 +73,11 @@ entities:
     state: 'on'
 icon: mdi:weather-night
 metadata:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     entity_only: true
   light.living_room_leds:
     entity_only: true
   light.living_room_tv_leds:
     entity_only: true
-  light.lava_lamp:
+  light.living_room_lava_lamp:
     entity_only: true

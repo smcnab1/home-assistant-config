@@ -6,7 +6,9 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: Alarm Overnight Living Room
-description: Automation to send notification and camera screenshot to bedroom TV if motion detected in Living Room when everyone is asleep.
+description: >-
+  Automation to send notification and camera screenshot to bedroom TV if motion
+  detected in Living Room when everyone is asleep.
 trigger:
   - platform: mqtt
     topic: frigate/events
@@ -14,12 +16,11 @@ trigger:
 condition:
   - condition: and
     conditions:
-    - condition: template
-      value_template: '{{ trigger.payload_json[''after''][''label''] == ''person''
-        }}'
+      - condition: template
+        value_template: "{{ trigger.payload_json['after']['label'] == 'person' }}"
   - condition: state
-    entity_id: input_boolean.sleeping
-    state: 'on'
+    entity_id: input_boolean.all_sleeping
+    state: "on"
     for:
       hours: 0
       minutes: 30
@@ -34,43 +35,43 @@ action:
     data:
       volume_level: 0.7
     target:
-      entity_id: media_player.bedroom
+      entity_id: media_player.bedroom_google_home
   - service: media_player.turn_on
     data: {}
     target:
-      entity_id: media_player.fire_tv_192_168_1_94
+      entity_id: media_player.bedroom_tv
   - service: media_player.play_media
     target:
       entity_id: media_player.bedroom
     data:
-      media_content_id: media-source://media_source/local/Alarm-System_config_www_alarm1
-        (1).mp3
+      media_content_id: media-source://media_source/local/Alarm-System_config_www_alarm1 (1).mp3
       media_content_type: audio/mpeg
     metadata:
       title: Alarm-System_config_www_alarm1 (1).mp3
-      thumbnail:
+      thumbnail: null
       media_class: music
-      children_media_class:
+      children_media_class: null
       navigateIds:
-      - {}
-      - media_content_type: app
-        media_content_id: media-source://media_source
-  - service: tts.cloud_say
-    data:
-      entity_id: media_player.bedroom
-      message: Motion Detected in Living Room. Look at the TV
-  - service: notify.fire_tv
-    data:
-      message: Motion Detected in Living Room
-      title: MOTION DETECTED IN LIVING ROOM
-      data:
-        duration: 30
-        fontsize: large
-        position: center
-        color: red
-        interrupt: 1
-        icon:
-          path: /www/warning-icon.png
-        image:
-          url: http://ccab4aaf-frigate:5000/api/events/{{trigger.payload_json["after"]["id"]}}/thumbnail.jpg
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+#  - service: tts.cloud_say
+#    data:
+#      entity_id: media_player.bedroom_google_home
+#      message: Motion Detected in Living Room. Look at the TV
+#  - service: notify.fire_tv
+#    data:
+#      message: Motion Detected in Living Room
+#      title: MOTION DETECTED IN LIVING ROOM
+#      data:
+#        duration: 30
+#        fontsize: large
+#        position: center
+#        color: red
+#        interrupt: 1
+#        icon:
+#          path: /www/warning-icon.png
+#        image:
+#          url: >-
+#            http://ccab4aaf-frigate:5000/api/events/{{trigger.payload_json["after"]["id"]}}/thumbnail.jpg
 mode: single

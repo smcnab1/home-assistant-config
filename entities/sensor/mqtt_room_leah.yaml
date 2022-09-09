@@ -7,7 +7,7 @@
 #---MQTT Room Sensors for house which communicates through BLE through ESPresense and ESPhome allowing accurate room presense detection.
 
 platform: mqtt_room
-name: "Leah: Phone BLE"
+name: "Leah Phone BLE"
 device_id: "Leah"
 state_topic: "espresense/devices/Leah"
 timeout: 5

@@ -10,12 +10,12 @@ description: Automation to trigger the alarm if motion is detected within the ho
 trigger:
   - platform: state
     entity_id:
-      - binary_sensor.bathroom_motion_sensor_5
-      - binary_sensor.hall_motion_sensor_3
-      - binary_sensor.hall_door_sensor
-      - binary_sensor.kitchen_motion_sensor_2
-      - binary_sensor.bedroom_motion_sensor_4
+      - binary_sensor.bathroom_motion_sensor
+      - binary_sensor.bedroom_motion_sensor
+      - binary_sensor.hall_motion_sensor
+      - binary_sensor.kitchen_motion_sensor
       - binary_sensor.living_room_motion
+      - binary_sensor.front_door_sensor
     to: "on"
 condition:
   - condition: state

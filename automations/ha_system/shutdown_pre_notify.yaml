@@ -6,17 +6,28 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: HA System Shutdown Pre Notify
-description: Automation which sends notification to my mac, wifes phone and google hubs through TTS to alert us that system is restartinh. Gives the wife a heads up that things won't work for a few minutes.
+description: >-
+  Automation which sends notification to my mac, wifes phone and google hubs
+  through TTS to alert us that system is restartinh. Gives the wife a heads up
+  that things won't work for a few minutes.
 mode: single
 trigger:
   - platform: homeassistant
     event: shutdown
-condition: []
+condition:
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: person.leah
+        state: home
+      - condition: state
+        entity_id: person.sam
+        state: home
 action:
   - parallel:
       - if:
           - condition: state
-            entity_id: device_tracker.leah
+            entity_id: person.leah
             state: home
         then:
           - service: notify.mobile_app_leah_s_iphone
@@ -37,20 +48,15 @@ action:
             data:
               message: Home Assistant is Restarting
               title: Home Assistant - System Management
-      - if:
-          - condition: state
-            entity_id: person.presence
-            state: home
-        then:
-          - service: tts.cloud_say
-            data:
-              entity_id: media_player.living_room_speaker
-              message: >-
-                Home Assistant is Restarting. Things may not work until it is
-                back up. So silly, so silly
-          - service: tts.cloud_say
-            data:
-              entity_id: media_player.bedroom
-              message: >-
-                Home Assistant is Restarting. Things may not work until it is
-                back up. So silly, so silly
+  - service: tts.cloud_say
+    data:
+      entity_id: media_player.bedroom_google_home
+      message: >-
+        Home Assistant is Restarting. Things may not work until it is back up.
+        So silly, so silly
+  - service: tts.cloud_say
+    data:
+      entity_id: media_player.living_room_google_home
+      message: >-
+        Home Assistant is Restarting. Things may not work until it is back up.
+        So silly, so silly

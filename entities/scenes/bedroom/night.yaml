@@ -52,7 +52,7 @@ entities:
     - 0.599
     - 0.382
     state: 'on'
-  light.fairy_lights:
+  light.bedroom_fairy_lights:
     supported_color_modes:
     - onoff
     color_mode: onoff
@@ -65,5 +65,5 @@ metadata:
     entity_only: true
   light.bedside_lamps:
     entity_only: true
-  light.fairy_lights:
+  light.bedroom_fairy_lights:
     entity_only: true

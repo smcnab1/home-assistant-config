@@ -167,6 +167,7 @@ card_esh_room_hall:
             service: browser_mod.popup
             data:
               title: "Hall Lighting"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
@@ -174,13 +175,12 @@ card_esh_room_hall:
                     cards:
                       - type: "custom:button-card"
                         template: card_light
-                        entity: light.hall_lights
+                        entity: light.hall_main_lights
                         variables:
                           ulm_card_light_name: Main Lights
                           ulm_card_light_icon: mdi:ceiling-light
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                       - type: "custom:button-card"
                         template: card_light
@@ -190,7 +190,6 @@ card_esh_room_hall:
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                           ulm_card_light_enable_popup: true
                   - type: "horizontal-stack"
                     cards:
@@ -202,7 +201,6 @@ card_esh_room_hall:
                           ulm_card_light_icon: mdi:led-strip
                           ulm_card_light_enable_slider: true
                           ulm_card_light_enable_color: true
-                          ulm_card_light_force_background_color: true
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
@@ -210,50 +208,46 @@ card_esh_room_hall:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_day
+                        entity: automation.lighting_hall_day
                         name: Day
                         icon: mdi:weather-sunny
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_day
+                            entity_id: automation.lighting_hall_day
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_night
+                        entity: automation.lighting_hall_night
                         name: Night
                         icon: mdi:weather-night
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_night
+                            entity_id: automation.lighting_hall_night
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_sleep
+                        entity: automation.lighting_hall_sleep
                         name: Sleeping
                         icon: mdi:sleep
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_sleep
+                            entity_id: automation.lighting_hall_sleep
                   - type: "horizontal-stack"
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_off
+                        entity: automation.lighting_hall_off
                         name: All Off
                         icon: mdi:lightbulb-off
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_off
+                            entity_id: automation.lighting_hall_off
 
 
     climate:
@@ -283,3 +277,24 @@ card_esh_room_hall:
             }
             return vars;
           ]]]
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Hall Media"
+              size: wide
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.dashboard_tablet
+                    variables:
+                      ulm_card_media_player_name: Tablet
+                      ulm_card_media_player_icon: mdi:tablet
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true

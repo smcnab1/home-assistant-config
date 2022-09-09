@@ -32,16 +32,16 @@ action:
       data:
         volume_level: 0.3
       target:
-        entity_id: media_player.living_room_speaker
+        entity_id: media_player.living_room_google_home
     else:
     - service: media_player.volume_set
       data:
         volume_level: 0.5
       target:
-        entity_id: media_player.living_room_speaker
+        entity_id: media_player.living_room_google_home
   - service: tts.cloud_say
     data:
-      entity_id: media_player.living_room_speaker
+      entity_id: media_player.living_room_google_home
       message: Get off your computer dickhead its 9 o'clock
   - repeat:
       count: '30'
@@ -51,7 +51,7 @@ action:
           color_name: red
           brightness: 255
         target:
-          entity_id: light.office_desk_led
+          entity_id: light.office_leds
       - delay:
           hours: 0
           minutes: 0
@@ -60,7 +60,7 @@ action:
       - service: light.turn_off
         data: {}
         target:
-          entity_id: light.office_desk_led
+          entity_id: light.office_leds
       - delay:
           hours: 0
           minutes: 0
@@ -70,10 +70,10 @@ action:
     data:
       transition: 90
     target:
-      entity_id: scene.scene_office_bright
+      entity_id: scene.office_bright
   - service: media_player.volume_set
     data:
       volume_level: 0.4
     target:
-      entity_id: media_player.living_room_speaker
+      entity_id: media_player.living_room_google_home
 mode: single

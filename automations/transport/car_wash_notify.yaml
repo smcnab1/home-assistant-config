@@ -1,34 +1,31 @@
-#                               _                     _   _  __      
-#  __ __ _ _ _  __ __ ____ _ __| |_    ___   _ _  ___| |_(_)/ _|_  _ 
+#                               _                     _   _  __
+#  __ __ _ _ _  __ __ ____ _ __| |_    ___   _ _  ___| |_(_)/ _|_  _
 # / _/ _` | '_| \ V  V / _` (_-< ' \  |___| | ' \/ _ \  _| |  _| || |
 # \__\__,_|_|    \_/\_/\__,_/__/_||_|       |_||_\___/\__|_|_|  \_, |
-#                                                               |__/ 
+#                                                               |__/
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Transport Car Wash Notify'
-description: 'Using the car wash input boolean to predict upcoming weather to see if it is worth washing my car or not. Then providing options as to either book car wash at home or show me navigation to nearest car wash.'
+alias: "Transport Car Wash Notify"
+description: "Using the car wash input boolean to predict upcoming weather to see if it is worth washing my car or not. Then providing options as to either book car wash at home or show me navigation to nearest car wash."
+mode: single
 trigger:
   - platform: state
     entity_id:
-    - binary_sensor.car_wash
-    to: 'on'
-condition:
-  - condition: state
-    entity_id: input_boolean.holiday
-    state: 'off'
+      - binary_sensor.car_wash
+    to: "on"
+condition: []
 action:
   - service: notify.mobile_app_iphone
     data:
-      title: Wash Your Car
       message: What would you like to do?
+      title: It's a Good Idea to Wash Your Car
       data:
         ttl: 0
         icon: mdi:car-wash
         actions:
-        - action: OPEN
-          title: Navigate to Local Car Wash
-          uri: !secret car_wash_location
-        - action: OPEN
-          title: Book Car Wash Visit
-          uri: !secret car_wash_booking
-mode: single
+          - action: OPEN
+            title: Navigate to Local Car Wash
+            uri: !secret car_wash_location
+          - action: OPEN
+            title: Book Car Wash Visit
+            uri: !secret car_wash_booking

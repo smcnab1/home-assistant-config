@@ -12,9 +12,6 @@ condition:
   - condition: state
     entity_id: person.leah
     state: home
-  - condition: state
-    entity_id: input_boolean.holiday
-    state: 'off'
 action:
   - service: notify.mobile_app_leah_s_iphone
     data:

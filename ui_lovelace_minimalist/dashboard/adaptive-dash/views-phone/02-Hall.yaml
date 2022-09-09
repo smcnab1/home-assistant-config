@@ -45,6 +45,11 @@ cards:
       - type: "custom:button-card"
         template: "card_title"
         name: "Hall"
+      - type: "custom:button-card"
+        template: chip_mdi_icon_state
+        variables:
+          ulm_chip_mdi_icon_state_entity: sensor.living_room_temperature
+          ulm_chip_mdi_icon_state_icon: mdi:thermometer
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
@@ -57,13 +62,12 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: light.hall_lights
+        entity: light.hall_main_lights
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
         template: card_light
@@ -73,7 +77,6 @@ cards:
           ulm_card_light_icon: mdi:led-strip
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout:
       grid-area: "card11"
@@ -87,7 +90,6 @@ cards:
           ulm_card_light_icon: mdi:lamp
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
   - view_layout: ### SCENES ###
       grid-area: "title2"
     type: "custom:button-card"
@@ -99,48 +101,44 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_hall_day
+        entity: automation.lighting_hall_day
         name: Day
         icon: mdi:weather-sunny
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_day
+            entity_id: automation.lighting_hall_day
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_hall_night
+        entity: automation.lighting_hall_night
         name: Night
         icon: mdi:weather-night
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_night
+            entity_id: automation.lighting_hall_night
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_hall_sleep
+        entity: automation.lighting_hall_sleep
         name: Sleeping
         icon: mdi:sleep
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_sleep
+            entity_id: automation.lighting_hall_sleep
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.scene_hall_off
+        entity: automation.lighting_hall_off
         name: All Off
         icon: mdi:lightbulb-off
-        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.scene_hall_off
+            entity_id: automation.lighting_hall_off
 
   - view_layout: ### SECURITY ###
       grid-area: "title3"
@@ -158,13 +156,13 @@ cards:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Door
-        entity: binary_sensor.hall_door_sensor
+        entity: binary_sensor.front_door_sensor
       - type: "custom:button-card"
         template: card_battery
-        entity: sensor.hall_door_sensor_battery
+        entity: sensor.front_door_sensor_battery
         name: Door
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.hall_door_sensor_battery
+          ulm_card_battery_charger_type_entity_id: sensor.front_door_sensor_battery
           ulm_card_battery_battery_level_danger: 30
           ulm_card_battery_battery_level_warning: 80
           ulm_card_battery_name: Door
@@ -178,12 +176,12 @@ cards:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.hall_motion_sensor_3
+        entity: binary_sensor.hall_motion_sensor
       - type: "custom:button-card"
         template: card_battery
-        entity: sensor.hall_motion_sensor_battery_sensor_3
+        entity: sensor.hall_motion_sensor_battery
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery_sensor_3
+          ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery
           ulm_card_battery_battery_level_danger: 30
           ulm_card_battery_battery_level_warning: 80
           ulm_card_battery_name: Motion
@@ -203,7 +201,7 @@ cards:
           content:
             type: custom:frigate-card
             cameras:
-              - camera_entity: camera.hall
+              - camera_entity: camera.hall_frigate
                 camera_name: Hall
             view:
               default: live
