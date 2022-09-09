@@ -5,19 +5,20 @@
 #                |___/                                    |___/         
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Lighting Living Room Night'
-description: 'Automation to activate living room night time scene.'
+alias: Lighting Living Room Night
+description: Automation to activate living room night time scene.
 trigger: []
 condition: []
 action:
   - service: scene.turn_on
     data: {}
     target:
-      entity_id: scene.scene_living_room_night
+      entity_id: scene.living_room_night
   - service: light.turn_off
     data: {}
     target:
       entity_id:
-      - light.living_room_main_light_2
-      - light.living_room_dreamview
+        - light.living_room_dreamview
+        - light.living_room_main_light
 mode: single
+

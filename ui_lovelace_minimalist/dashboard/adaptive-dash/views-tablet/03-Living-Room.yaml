@@ -154,7 +154,6 @@ cards:
           ulm_card_light_icon: mdi:movie
           ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout: ### SCENES ###
       grid-area: "title2"
