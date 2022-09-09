@@ -1,77 +1,92 @@
+<!-- TOP ROW OF BADGES -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![Kofi][kofi-badge]][kofi-url] 
-
+[![Kofi][kofi-badge]][kofi-url]
 <a name="readme-top"></a>
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/smcnab1/op-question-mark">
-    <img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150">
-  </a>
 
-<h3 align="center">Op Question Mark</h3>
-<h4 align="center">Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!</h4>
+<!-- PROJECT HEADING -->
+<div align="center">
+<a href="https://github.com/smcnab1/op-question-mark">
+<img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150"></a>
+
+## **Op Question Mark**
+
+#### Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!
+
 </div>
+
+---
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
-  <p>
-    This is my <b>first</b> repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system.
-    <br />
-    <br />
-    This repo will be updated regularly and I am keen to make it an open & learning venture. Looking for feature suggestions and advice to increase the <b>wife-approval level</b>.
-    <br />
-    </p>
-    <p align="center">
-    <a href="https://github.com/smcnab1/op-question-mark">View Demo</a>
-    ·
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/smcnab1/op-question-mark/issues">Request Feature</a>
-    ·
-    <a href="https://github.com/smcnab1/op-question-mark/issues">ToDo List</a>
-  </p>
+
+This is my **first** repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system.
+
+This repo will be updated regularly and I am keen to make it an open & learning venture. Looking for feature suggestions and advice to increase the **wife-approval level**😎.
 
 <!-- CONTENTS -->
+
 ## Contents
-  <p align="center">
-    <a href="#devices">Devices</a>
-    |
-    <a href="#addon">Add-Ons</a>
-    |
-    <a href="#automations">Automations</a>
-    |
-    <a href="#contributing">Contributing</a>
-    |
-    <a href="#license">License</a>
-    |
-    <a href="#contact">Contact</a>
+
+<div align="center">
+<a href="https://github.com/smcnab1/op-question-mark">
+
+**View Demo**
+</a>
+**·**
+<a href="https://github.com/smcnab1/op-question-mark/issues">
+**Report Bug**
+</a>
+**·**
+<a href="https://github.com/smcnab1/op-question-mark/issues">
+**Request Feature**
+</a>
+**·**
+<a href="https://github.com/smcnab1/op-question-mark/issues">
+**ToDo List**
+</a>
+
 </div>
 
-<p align="center">
-<a href="https://github.com/smcnab1/op-question-mark">
-  <img src="https://i.imgur.com/NalP8Tn.png" alt="Screenshot Desktop" width="900" height="400">
-  </a>
-</p>
+<div align="center">
+<a href="#devices">Devices</a>
+|
+<a href="#addon">Add-Ons</a>
+|
+<a href="#automations">Automations</a>
+|
+<a href="#contributing">Contributing</a>
+|
+<a href="#license">License</a>
+|
+<a href="#contact">Contact</a>
+</div>
+&nbsp;
+<div align="center">
+<img src="https://i.imgur.com/NalP8Tn.png" alt="Screenshot Desktop" width="900" height="400">
+</div>
 
 <!-- DEVICES -->
+
 <a name="devices"></a>
 
-### Devices *(as at Sept 22)*
-This is a list of the devices I currently use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/op-question-mark/issues">feature request.</a>
+## All Devices _(as at Sept 22)_
+
+This is a list of the devices I **currently** use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/op-question-mark/issues">feature request.</a>
 <br />
 
 <!-- start-table -->
-
+<details><summary><b>View all Devices</i></b></summary>
 <table>
     <thead>
         <tr>
             <th>Switches 🎚</th>
-            <th>Units (#)</th>
+            <th>Qty (#)</th>
             <th>Price per unit (£)</th>
             <th>Price (£)</th>
         </tr>
@@ -450,19 +465,21 @@ This is a list of the devices I currently use as part of my Home Assistant setup
     </thead>
 </table>
 <!-- end-table -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+</details>
+&nbsp;
 <!-- ADD-ONS -->
+
 <a name="addon"></a>
-## Add-Ons
+
+## Add-Ons _(as at Sept 22)_
 
 This is a list of all of my add-ons within my setup. These also include the HACS integrations I currently use.
-<br />
-<br />
-<b>Standard Add-Ons <i>(as at Sept 22)</i></b>
-<br />
+
 <!-- start-addons -->
+<details><summary><b>Standard Add-Ons</b></summary>
+
 - [ESPHome](https://github.com/esphome/esphome) version 2022.8.1 by @esphome
 - [Frigate NVR](https://github.com/blakeblackshear/frigate) version 0.10.1 by @blakeblackshear
 - [Git Pull](https://github.com/home-assistant/addons/tree/master/git_pull) version 7.13.1 by @hassio-addons
@@ -474,11 +491,13 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Samba Share](https://github.com/home-assistant/addons/tree/master/samba) version 10.0.0 by @hassio-addons
 - [Studio Code Server](https://github.com/hassio-addons/addon-vscode) version 5.3.0 by @hassio-addons
 - [Terminal & SSH](https://github.com/hassio-addons/addon-ssh) version 12.0.2 by @hassio-addons
-<!-- end-addons -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+</details>
+<!-- end-addons -->
+
 <!-- start-hacs-integrations -->
-<b>HACS Integrations <i>(as at Sept 22)</i></b>
-<br />
+<details><summary><b>HACS Integrations <i>(as at Sept 22)</i></b></summary>
+
 - [HACS](https://github.com/hacs) version 1.27.1 by @ludeeus
 - [Spotcast](https://github.com/fondberg/spotcast) version 3.6.30 by @fondberg
 - [MeteoAlarm](https://github.com/kodi1/meteoalarm) version 294bc3a by @kodi1
@@ -495,11 +514,13 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Watchman](https://github.com/dummylabs/thewatchman#configuration) version 0.6.0 by @dummylabs
 - [LondonTfL](https://github.com/morosanmihail/HA-LondonTfL) version 0.3.1 by @morosanmihail
 - [Music Assistant](https://github.com/music-assistant/hass-music-assistant) version 2022.8.4 by @marcelveldt
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</details>
 <!-- end-hacs-integrations -->
 
 <!-- start-hacs-frontend -->
-<b>HACS Frontend <i>(as at Sept 22)</i></b>
-<br />
+<details><summary><b>HACS Frontend <i>(as at Sept 22)</i></b></summary>
+
 - [Swipe Card](https://github.com/bramkragten/swipe-card) version 4.0.0 by @bramkragten
 - [Button Card](https://github.com/custom-cards/button-card) version 3.5.0 by @RomRider
 - [Decluttering Card](https://github.com/custom-cards/decluttering-card) version 0.6.3 @RomRider
@@ -522,33 +543,40 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Kiosk Mode](https://github.com/NemesisRE/kiosk-mode) version 1.7.3 by @NemesisRE
 - [My Cards Bundle](https://github.com/AnthonMS/my-cards) version 1.0.2 by @AnthonMS
 - [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) version 1.11.0 by @thomasloven
-<!-- end-hacs-integrations -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+</details>
+<!-- end-hacs-frontend -->
+&nbsp;
 
 <!-- AUTOMATIONS TOC -->
+
 <a name="automations"></a>
-## Automations *(as at Sept 22)*
+
+## Automations _(as at Sept 22)_
 
 There is a full list of all of my automations <a href="automations-all">here</a>. Below is the table of contents of all of the automations.
 <br />
 
 <!-- start-automations -->
-**Table of Contents**
- 1. [Security 👮🚨](#security) (10 automations)
- 2. [Lighting 🌄🌇](#lighting) (38 automations)
- 3. [Transport 🚌🚝](#transport) (6 automations)
- 4. [HA-System ⏰🖥️](#hasystem) (6 automations)
- 5. [Media 🔊📺](#media) (4 automations)
- 6. [TTS 🔊📱](#tts) (4 automations)
- 7. [Sleeping 🛏️📡](#sleep) (6 automations)
 
-⚠️ Total number of automations: **73** ⚠️  
+**Table of Contents**
+
+1.  [Security 👮🚨](#security) (10 automations)
+2.  [Lighting 🌄🌇](#lighting) (38 automations)
+3.  [Transport 🚌🚝](#transport) (7 automations)
+4.  [HA-System ⏰🖥️](#hasystem) (6 automations)
+5.  [Media 🔊📺](#media) (5 automations)
+6.  [TTS 🔊📱](#tts) (5 automations)
+7.  [Sleeping 🛏️📡](#sleep) (1 automations)
+
+⚠️ Total number of automations: **73** ⚠️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+
 <a name="contributing"></a>
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -565,7 +593,9 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
+
 <a name="license"></a>
+
 ## License
 
 Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md">`LICENSE.md`</a> for more information.
@@ -573,8 +603,11 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
+
 <a name="contact"></a>
+
 ## Contact
+
 [![Email][email-badge]][email-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![GitHub][git-badge]][git-url]
@@ -582,18 +615,23 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [![Signal][signal-badge]][signal-url]
 [![Telegram][telegram-badge]][telegram-url]
 <br />
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ALL AUTOMATIONS -->
+
 <a name="automations-all"></a>
-## All Automations *(as at Sept 22)*
+
+## All Automations _(as at Sept 22)_
+
 <!-- SECURITY AUTOMATIONS -->
 <details><summary><b><a name="security">Security 👮🚨 Automations (10 automations)</a></b></summary><blockquote>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Arm Notifiction Reminder & Actions</a></b></summary>
 <b><i>Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't already been set. This automation then arms the alarm and sends notifications to everyone to confirm it is now armed.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***)
 - [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zones.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
@@ -601,36 +639,41 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Disarm Nofification</a></b></summary>
 <b><i>Automation to disarm the alarm and notify everyone that it has been disarmed following the alarm triggering.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [alarm_control_panel.home_alarm](***) 
+&nbsp;&nbsp;_which uses:_
+
+- [alarm_control_panel.home_alarm](***)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Overnight Living Room</a></b></summary>
 <b><i>Automation to send notification and camera screenshot to bedroom TV if motion detected in Living Room when everyone is asleep.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [input_boolean.sleeping](***) 
+&nbsp;&nbsp;_which uses:_
+
+- [input_boolean.sleeping](***)
 - [MQTT Add-On](https://github.com/home-assistant/addons/tree/master/mosquitto)
 - [Frigate Add-On](https://github.com/blakeblackshear/frigate)
-- [Android TV Notifications Integration](https://www.home-assistant.io/integrations/nfandroidtv/) 
+- [Android TV Notifications Integration](https://www.home-assistant.io/integrations/nfandroidtv/)
 - [Android TV Integration](https://www.home-assistant.io/integrations/androidtv/)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Trigger</a></b></summary>
 <b><i>Automation to trigger the alarm if motion is detected within the house when set to armed away and nobody home.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Trigger Lighting</a></b></summary>
 <b><i>Automation to trigger the lighting sequence if alarm is triggered when set to armed away and nobody home.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Trigger Sound</a></b></summary>
 <b><i>Automation to trigger the sound sequence if alarm is triggered when set to armed away and nobody home. Includes audible siren and TTS.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***)
 - [Alarm Siren Sound Effect](https://github.com/smcnab1/op-question-mark/blob/master/www/Alarm-System_config_www_alarm1.mp3)
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) </details>
@@ -638,21 +681,24 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Trigger Notify</a></b></summary>
 <b><i>Automation to notify everyone when the alarm is triggered when set to armed away and nobody home.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Disarm Tag</a></b></summary>
 <b><i>NFC Tag used to easily disarm the alarm system</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Alarm Arm Tag</a></b></summary>
 <b><i>NFC Tag used to easily arm the alarm system</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [alarm_control_panel.home_alarm](***)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
@@ -673,26 +719,30 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"68862836.29c7a8","type":"subflow","name":"Lights Motion Control","info":"","category":"home_assistant","in":[{"x":57,"y":162,"wires":[{"id":"92cf1e14.7068"}]}],"out":[{"x":470,"y":375,"wires":[{"id":"38649522.99f89a","port":0}]},{"x":560,"y":390,"wires":[{"id":"38649522.99f89a","port":1}]},{"x":650,"y":75,"wires":[{"id":"2a0d169a.91782a","port":0}]},{"x":890,"y":105,"wires":[{"id":"d5248d86.f7096","port":0}]}],"env":[{"name":"timeOffAfter","type":"num","value":"120"},{"name":"manualCooldown","type":"num","value":"30"},{"name":"brightness","type":"num","value":"100","ui":{"type":"input","opts":{"types":["num","bool","json","bin"]}}},{"name":"transitionOn","type":"num","value":"2"},{"name":"transitionOff","type":"num","value":"2"},{"name":"pause","type":"str","value":"5"},{"name":"controlLights","type":"str","value":""},{"name":"manualLight","type":"bool","value":"false"}],"meta":{},"color":"#52C0F2","icon":"font-awesome/fa-lightbulb-o","status":{"x":1027,"y":157,"wires":[{"id":"effe188b.5340f8","port":0}]}},{"id":"cf76e785.ab1978","type":"change","z":"68862836.29c7a8","name":"motion","rules":[{"t":"set","p":"payload","pt":"msg","to":"motion","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":544,"y":178,"wires":[["d5248d86.f7096"]]},{"id":"d5248d86.f7096","type":"state-machine","z":"68862836.29c7a8","name":"","triggerProperty":"payload","triggerPropertyType":"msg","stateProperty":"payload","statePropertyType":"msg","initialDelay":"","persistOnReload":true,"outputStateChangeOnly":true,"throwException":false,"states":["switch","motion-detected","motion-on","motion-off","off","on"],"transitions":[{"name":"motion","from":"off","to":"motion-detected"},{"name":"motion","from":"motion-off","to":"motion-detected"},{"name":"motion","from":"motion-on","to":"motion-on"},{"name":"off","from":"*","to":"off"},{"name":"on","from":"*","to":"on"},{"name":"switch","from":"off","to":"switch"},{"name":"switch","from":"on","to":"switch"},{"name":"switch","from":"switch","to":"switch"},{"name":"switch","from":"motion-on","to":"switch"},{"name":"motion-on","from":"motion-detected","to":"motion-on"},{"name":"motion-off","from":"motion-on","to":"motion-off"}],"x":741,"y":157,"wires":[["38649522.99f89a","effe188b.5340f8"]]},{"id":"d2742f90.7a1ce","type":"change","z":"68862836.29c7a8","name":"switch","rules":[{"t":"set","p":"payload","pt":"msg","to":"switch","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":541,"y":223,"wires":[["d5248d86.f7096"]]},{"id":"cab8f6da.31e818","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":630,"wires":[["380a05c00a74bf5f"]]},{"id":"ca0b865c.9f9898","type":"inject","z":"68862836.29c7a8","name":"Initial State","props":[{"p":"reset","v":"true","vt":"bool"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":"10","topic":"","x":665,"y":570,"wires":[["6210bc08.905bc4","3044ab1b0964f72a"]]},{"id":"faa9cc31.66ec7","type":"link in","z":"68862836.29c7a8","name":"","links":["801822a5.c6d75","e8072572.fffa18"],"x":592,"y":120,"wires":[["d5248d86.f7096"]]},{"id":"801822a5.c6d75","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":1020,"y":570,"wires":[]},{"id":"38649522.99f89a","type":"switch","z":"68862836.29c7a8","name":"State Action","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"motion-detected","vt":"str"},{"t":"eq","v":"motion-off","vt":"str"},{"t":"eq","v":"motion-on","vt":"str"},{"t":"eq","v":"switch","vt":"str"}],"checkall":"true","repair":false,"outputs":4,"x":230,"y":465,"wires":[["4c844b6f.159114","a26b8394.bcc5c"],["3dda34d6.1dd5bc"],["7f31ef6f068e5b93"],["cab8f6da.31e818","ba847a7ca44c07c3"]]},{"id":"82902d91.d0dbf","type":"rbe","z":"68862836.29c7a8","name":"","func":"rbe","gap":"","start":"","inout":"out","property":"payload","x":369,"y":223,"wires":[["d2742f90.7a1ce"]]},{"id":"92cf1e14.7068","type":"switch","z":"68862836.29c7a8","name":"Topic Route","property":"topic","propertyType":"msg","rules":[{"t":"regex","v":"^config\\b","vt":"str","case":false},{"t":"regex","v":"^reset\\b","vt":"str","case":false},{"t":"eq","v":"light_state","vt":"str"},{"t":"cont","v":"sensor.","vt":"str"},{"t":"regex","v":"^(light|switch)\\.","vt":"str","case":false}],"checkall":"true","repair":false,"outputs":5,"x":175,"y":162,"wires":[["2a0d169a.91782a"],["ba8e1c42c48890af"],["d5248d86.f7096"],["d1f38468.a6c768"],["82902d91.d0dbf","4a9e28b2.6d3bf8"]]},{"id":"2a0d169a.91782a","type":"function","z":"68862836.29c7a8","name":"Update Configuration","func":"// Init our Lights state while we're here\nlet lights = flow.get('lights')\n// Is this our start-up initialisation? (If so, reset config!)\nlet init = msg.init || false\nif (!lights)\n  flow.set('lights', { state: { }, ids: [], ids_csv: '' })\n\n// Merge new Payload with existing config and defaults\nlet cfg = Object.assign(\n  // Existing Config\n  init?flow.get('cfg')||{}:{},  // 'cfg.'+id\n  // Updated Config\n  msg.payload)\n\n// Make sure Light IDs are initted.\n// if (!cfg.lights) cfg.lights = []\nif (!cfg.brightness)\n  cfg.brightness = env.get('brightness') || 100\n\nif (!cfg.transitionOn && cfg.transitionOn !== 0)\n  cfg.transitionOn = env.get('transitionOn') || 2\n  \nif (!cfg.transitionOff && cfg.transitionOff !== 0)\n  cfg.transitionOff = env.get('transitionOff') || 2\n\nif (!cfg.lights && env.get('controlLights') && env.get('controlLights').length>0)\n    cfg.lights = env.get('controlLights').split(/\\s*,\\s*/)\n\nflow.set('cfg', cfg)\n\nreturn { topic: 'config', payload: cfg, lights }","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":505,"y":75,"wires":[[]]},{"id":"d1f38468.a6c768","type":"switch","z":"68862836.29c7a8","name":"motion on","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":375,"y":178,"wires":[["cf76e785.ab1978"]]},{"id":"4a9e28b2.6d3bf8","type":"function","z":"68862836.29c7a8","name":"Track Lights","func":"// Keep a record of all the light entity_ids coming in, for later switching\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\n\nlet [all, id] = msg.topic.match(/^light\\.(.*)/)\nlet update = false\n\nif (id) {\n  lights.state[id] = msg.data.new_state\n  if (!lights.ids.includes(id)) {\n    lights.ids.push(id)\n    update = true\n  }\n  lights.ids_csv = lights.ids.join(',')\n}\n\nflow.set('lights', lights)\n\nreturn {update}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":389,"y":268,"wires":[["daf678d0db2af786"]]},{"id":"4c844b6f.159114","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light On. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    brightness: Math.floor(cfg.brightness/100*255),\n    transition: cfg.transitionOn,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":330,"wires":[["3cbac613.622432","e49dfffe0583db4e"]]},{"id":"3dda34d6.1dd5bc","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light Off. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    transition: cfg.transitionOff,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":435,"wires":[["35ad226.a497bde","b1d245649953149b"]]},{"id":"35088d77.068da2","type":"inject","z":"68862836.29c7a8","name":"Default Configuration","props":[{"p":"payload"},{"p":"topic","vt":"str"},{"p":"init","v":"true","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"config","payload":"{}","payloadType":"json","x":235,"y":75,"wires":[["2a0d169a.91782a"]]},{"id":"949bf90b.fc19e8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn on light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"json","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":285,"wires":[[]]},{"id":"a68e2b6.6b0c1d8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn off light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":435,"wires":[[]]},{"id":"6210bc08.905bc4","type":"function","z":"68862836.29c7a8","name":"Check State","func":"// Fetch light state from our \"Track Lights\" data\n// - no need for a HA State node\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\nlet cfg = flow.get('cfg')|| {}\n\n// Return \"on\" if any one light is \"on\"\nreturn {\n    topic: 'light.'+lights.ids_csv,\n    payload: lights.ids.map(id => lights.state[id].state).includes('on') ? 'on' : 'off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":910,"y":525,"wires":[["801822a5.c6d75"]]},{"id":"3c89b834.84d1a8","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":880,"y":285,"wires":[["949bf90b.fc19e8"]]},{"id":"389eef7d.ef9a","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":875,"y":435,"wires":[["a68e2b6.6b0c1d8"]]},{"id":"39541c73.33d464","type":"function","z":"68862836.29c7a8","name":"motion-on","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-on'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":885,"y":330,"wires":[["e8072572.fffa18"]]},{"id":"2368d65a.ed031a","type":"function","z":"68862836.29c7a8","name":"motion-off","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":900,"y":615,"wires":[["801822a5.c6d75"]]},{"id":"a26b8394.bcc5c","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":530,"y":480,"wires":[["b1d245649953149b"]]},{"id":"effe188b.5340f8","type":"function","z":"68862836.29c7a8","name":"status","func":"\nmsg.payload = {\n    text: msg.payload, \n    shape: msg.payload.match(/on/) ? 'ring' : 'dot',\n    fill: msg.payload == 'switch' ? 'red' : 'green'\n}\nreturn msg;","outputs":1,"noerr":0,"x":928,"y":157,"wires":[[]]},{"id":"3cbac613.622432","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":285,"wires":[[],["3c89b834.84d1a8"]]},{"id":"35ad226.a497bde","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":435,"wires":[[],["389eef7d.ef9a"]]},{"id":"e8072572.fffa18","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":990,"y":330,"wires":[]},{"id":"ba8e1c42c48890af","type":"function","z":"68862836.29c7a8","name":"Reset","func":"flow.set('lights', null)\nflow.set('cfg', null)\n\nreturn msg","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":365,"y":135,"wires":[["2a0d169a.91782a"]]},{"id":"daf678d0db2af786","type":"switch","z":"68862836.29c7a8","name":"Updated?","property":"update","propertyType":"msg","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":540,"y":270,"wires":[["2a0d169a.91782a"]]},{"id":"e49dfffe0583db4e","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":330,"wires":[["39541c73.33d464"]]},{"id":"b1d245649953149b","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":480,"wires":[["6210bc08.905bc4"]]},{"id":"3044ab1b0964f72a","type":"trigger","z":"68862836.29c7a8","name":"Back to Auto","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":715,"y":525,"wires":[["6210bc08.905bc4"]]},{"id":"ba847a7ca44c07c3","type":"change","z":"68862836.29c7a8","name":"cooldown","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('manualCooldown')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":525,"y":525,"wires":[["3044ab1b0964f72a"]]},{"id":"7f31ef6f068e5b93","type":"change","z":"68862836.29c7a8","name":"timeOffAfter","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('timeOffAfter')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":455,"y":585,"wires":[["380a05c00a74bf5f"]]},{"id":"380a05c00a74bf5f","type":"trigger","z":"68862836.29c7a8","name":"Turn Off after motion ends","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":685,"y":615,"wires":[["2368d65a.ed031a"]]},{"id":"c46ec6da75a29ac3","type":"tab","label":"Bathroom","disabled":false,"info":"","env":[]},{"id":"f62a5fe922bbfc46","type":"group","z":"c46ec6da75a29ac3","name":"Bathroom Lighting - Motion Control","style":{"label":true},"nodes":["8507bbf2b43edb42","320a5239e659a925","5de7c99b23116528","e32d0d9f4c16c828","3dc06a21f17a8a5f","a354ab4fe46b4009","786c57f14537f62a","27bf483d8e1ad89d","a19d428692b659d3"],"x":14,"y":19,"w":892,"h":262},{"id":"8507bbf2b43edb42","type":"server-state-changed","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Light Changed - Bathroom","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"light.bathroom_main_lights","entityidfiltertype":"regex","outputinitially":true,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":150,"y":100,"wires":[["e32d0d9f4c16c828"]]},{"id":"320a5239e659a925","type":"server-state-changed","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Presence - Bathroom","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.bathroom_motion_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":140,"y":165,"wires":[["e32d0d9f4c16c828"],[]]},{"id":"5de7c99b23116528","type":"subflow:68862836.29c7a8","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"","env":[{"name":"timeOffAfter","value":"500","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":540,"y":100,"wires":[["a354ab4fe46b4009"],["a19d428692b659d3"],[],[]]},{"id":"e32d0d9f4c16c828","type":"time-range-switch","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Day?","lat":"","lon":"","startTime":"10:00","endTime":"23:00","startOffset":0,"endOffset":0,"x":350,"y":140,"wires":[["5de7c99b23116528"],["3dc06a21f17a8a5f"]]},{"id":"3dc06a21f17a8a5f","type":"subflow:68862836.29c7a8","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"","env":[{"name":"timeOffAfter","value":"500","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":540,"y":180,"wires":[["786c57f14537f62a"],["27bf483d8e1ad89d"],[],[]]},{"id":"a354ab4fe46b4009","type":"api-call-service","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Day Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.bathroom_day"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":760,"y":60,"wires":[[]]},{"id":"786c57f14537f62a","type":"api-call-service","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Night Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.bathroom_morning"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":760,"y":180,"wires":[[]]},{"id":"27bf483d8e1ad89d","type":"api-call-service","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Bathroom Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.bathroom_main_lights"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":780,"y":240,"wires":[[]]},{"id":"a19d428692b659d3","type":"api-call-service","z":"c46ec6da75a29ac3","g":"f62a5fe922bbfc46","name":"Bathroom Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.bathroom_main_lights"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":780,"y":120,"wires":[[]]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Bath Time</a></b></summary><blockquote>
 <b><i>Automation to activate bath time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bathroom_bath](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Morning</a></b></summary><blockquote>
 <b><i>Automation to activate morning bathroom scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bathroom_morning](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Normal</a></b></summary><blockquote>
 <b><i>Automation to activate normal bathroom scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bathroom_normal](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Off</a></b></summary><blockquote>
@@ -713,33 +763,38 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"68862836.29c7a8","type":"subflow","name":"Lights Motion Control","info":"","category":"home_assistant","in":[{"x":57,"y":162,"wires":[{"id":"92cf1e14.7068"}]}],"out":[{"x":470,"y":375,"wires":[{"id":"38649522.99f89a","port":0}]},{"x":560,"y":390,"wires":[{"id":"38649522.99f89a","port":1}]},{"x":650,"y":75,"wires":[{"id":"2a0d169a.91782a","port":0}]},{"x":890,"y":105,"wires":[{"id":"d5248d86.f7096","port":0}]}],"env":[{"name":"timeOffAfter","type":"num","value":"120"},{"name":"manualCooldown","type":"num","value":"30"},{"name":"brightness","type":"num","value":"100","ui":{"type":"input","opts":{"types":["num","bool","json","bin"]}}},{"name":"transitionOn","type":"num","value":"2"},{"name":"transitionOff","type":"num","value":"2"},{"name":"pause","type":"str","value":"5"},{"name":"controlLights","type":"str","value":""},{"name":"manualLight","type":"bool","value":"false"}],"meta":{},"color":"#52C0F2","icon":"font-awesome/fa-lightbulb-o","status":{"x":1027,"y":157,"wires":[{"id":"effe188b.5340f8","port":0}]}},{"id":"cf76e785.ab1978","type":"change","z":"68862836.29c7a8","name":"motion","rules":[{"t":"set","p":"payload","pt":"msg","to":"motion","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":544,"y":178,"wires":[["d5248d86.f7096"]]},{"id":"d5248d86.f7096","type":"state-machine","z":"68862836.29c7a8","name":"","triggerProperty":"payload","triggerPropertyType":"msg","stateProperty":"payload","statePropertyType":"msg","initialDelay":"","persistOnReload":true,"outputStateChangeOnly":true,"throwException":false,"states":["switch","motion-detected","motion-on","motion-off","off","on"],"transitions":[{"name":"motion","from":"off","to":"motion-detected"},{"name":"motion","from":"motion-off","to":"motion-detected"},{"name":"motion","from":"motion-on","to":"motion-on"},{"name":"off","from":"*","to":"off"},{"name":"on","from":"*","to":"on"},{"name":"switch","from":"off","to":"switch"},{"name":"switch","from":"on","to":"switch"},{"name":"switch","from":"switch","to":"switch"},{"name":"switch","from":"motion-on","to":"switch"},{"name":"motion-on","from":"motion-detected","to":"motion-on"},{"name":"motion-off","from":"motion-on","to":"motion-off"}],"x":741,"y":157,"wires":[["38649522.99f89a","effe188b.5340f8"]]},{"id":"d2742f90.7a1ce","type":"change","z":"68862836.29c7a8","name":"switch","rules":[{"t":"set","p":"payload","pt":"msg","to":"switch","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":541,"y":223,"wires":[["d5248d86.f7096"]]},{"id":"cab8f6da.31e818","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":630,"wires":[["380a05c00a74bf5f"]]},{"id":"ca0b865c.9f9898","type":"inject","z":"68862836.29c7a8","name":"Initial State","props":[{"p":"reset","v":"true","vt":"bool"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":"10","topic":"","x":665,"y":570,"wires":[["6210bc08.905bc4","3044ab1b0964f72a"]]},{"id":"faa9cc31.66ec7","type":"link in","z":"68862836.29c7a8","name":"","links":["801822a5.c6d75","e8072572.fffa18"],"x":592,"y":120,"wires":[["d5248d86.f7096"]]},{"id":"801822a5.c6d75","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":1020,"y":570,"wires":[]},{"id":"38649522.99f89a","type":"switch","z":"68862836.29c7a8","name":"State Action","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"motion-detected","vt":"str"},{"t":"eq","v":"motion-off","vt":"str"},{"t":"eq","v":"motion-on","vt":"str"},{"t":"eq","v":"switch","vt":"str"}],"checkall":"true","repair":false,"outputs":4,"x":230,"y":465,"wires":[["4c844b6f.159114","a26b8394.bcc5c"],["3dda34d6.1dd5bc"],["7f31ef6f068e5b93"],["cab8f6da.31e818","ba847a7ca44c07c3"]]},{"id":"82902d91.d0dbf","type":"rbe","z":"68862836.29c7a8","name":"","func":"rbe","gap":"","start":"","inout":"out","property":"payload","x":369,"y":223,"wires":[["d2742f90.7a1ce"]]},{"id":"92cf1e14.7068","type":"switch","z":"68862836.29c7a8","name":"Topic Route","property":"topic","propertyType":"msg","rules":[{"t":"regex","v":"^config\\b","vt":"str","case":false},{"t":"regex","v":"^reset\\b","vt":"str","case":false},{"t":"eq","v":"light_state","vt":"str"},{"t":"cont","v":"sensor.","vt":"str"},{"t":"regex","v":"^(light|switch)\\.","vt":"str","case":false}],"checkall":"true","repair":false,"outputs":5,"x":175,"y":162,"wires":[["2a0d169a.91782a"],["ba8e1c42c48890af"],["d5248d86.f7096"],["d1f38468.a6c768"],["82902d91.d0dbf","4a9e28b2.6d3bf8"]]},{"id":"2a0d169a.91782a","type":"function","z":"68862836.29c7a8","name":"Update Configuration","func":"// Init our Lights state while we're here\nlet lights = flow.get('lights')\n// Is this our start-up initialisation? (If so, reset config!)\nlet init = msg.init || false\nif (!lights)\n  flow.set('lights', { state: { }, ids: [], ids_csv: '' })\n\n// Merge new Payload with existing config and defaults\nlet cfg = Object.assign(\n  // Existing Config\n  init?flow.get('cfg')||{}:{},  // 'cfg.'+id\n  // Updated Config\n  msg.payload)\n\n// Make sure Light IDs are initted.\n// if (!cfg.lights) cfg.lights = []\nif (!cfg.brightness)\n  cfg.brightness = env.get('brightness') || 100\n\nif (!cfg.transitionOn && cfg.transitionOn !== 0)\n  cfg.transitionOn = env.get('transitionOn') || 2\n  \nif (!cfg.transitionOff && cfg.transitionOff !== 0)\n  cfg.transitionOff = env.get('transitionOff') || 2\n\nif (!cfg.lights && env.get('controlLights') && env.get('controlLights').length>0)\n    cfg.lights = env.get('controlLights').split(/\\s*,\\s*/)\n\nflow.set('cfg', cfg)\n\nreturn { topic: 'config', payload: cfg, lights }","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":505,"y":75,"wires":[[]]},{"id":"d1f38468.a6c768","type":"switch","z":"68862836.29c7a8","name":"motion on","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":375,"y":178,"wires":[["cf76e785.ab1978"]]},{"id":"4a9e28b2.6d3bf8","type":"function","z":"68862836.29c7a8","name":"Track Lights","func":"// Keep a record of all the light entity_ids coming in, for later switching\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\n\nlet [all, id] = msg.topic.match(/^light\\.(.*)/)\nlet update = false\n\nif (id) {\n  lights.state[id] = msg.data.new_state\n  if (!lights.ids.includes(id)) {\n    lights.ids.push(id)\n    update = true\n  }\n  lights.ids_csv = lights.ids.join(',')\n}\n\nflow.set('lights', lights)\n\nreturn {update}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":389,"y":268,"wires":[["daf678d0db2af786"]]},{"id":"4c844b6f.159114","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light On. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    brightness: Math.floor(cfg.brightness/100*255),\n    transition: cfg.transitionOn,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":330,"wires":[["3cbac613.622432","e49dfffe0583db4e"]]},{"id":"3dda34d6.1dd5bc","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light Off. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    transition: cfg.transitionOff,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":435,"wires":[["35ad226.a497bde","b1d245649953149b"]]},{"id":"35088d77.068da2","type":"inject","z":"68862836.29c7a8","name":"Default Configuration","props":[{"p":"payload"},{"p":"topic","vt":"str"},{"p":"init","v":"true","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"config","payload":"{}","payloadType":"json","x":235,"y":75,"wires":[["2a0d169a.91782a"]]},{"id":"949bf90b.fc19e8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn on light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"json","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":285,"wires":[[]]},{"id":"a68e2b6.6b0c1d8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn off light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":435,"wires":[[]]},{"id":"6210bc08.905bc4","type":"function","z":"68862836.29c7a8","name":"Check State","func":"// Fetch light state from our \"Track Lights\" data\n// - no need for a HA State node\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\nlet cfg = flow.get('cfg')|| {}\n\n// Return \"on\" if any one light is \"on\"\nreturn {\n    topic: 'light.'+lights.ids_csv,\n    payload: lights.ids.map(id => lights.state[id].state).includes('on') ? 'on' : 'off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":910,"y":525,"wires":[["801822a5.c6d75"]]},{"id":"3c89b834.84d1a8","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":880,"y":285,"wires":[["949bf90b.fc19e8"]]},{"id":"389eef7d.ef9a","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":875,"y":435,"wires":[["a68e2b6.6b0c1d8"]]},{"id":"39541c73.33d464","type":"function","z":"68862836.29c7a8","name":"motion-on","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-on'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":885,"y":330,"wires":[["e8072572.fffa18"]]},{"id":"2368d65a.ed031a","type":"function","z":"68862836.29c7a8","name":"motion-off","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":900,"y":615,"wires":[["801822a5.c6d75"]]},{"id":"a26b8394.bcc5c","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":530,"y":480,"wires":[["b1d245649953149b"]]},{"id":"effe188b.5340f8","type":"function","z":"68862836.29c7a8","name":"status","func":"\nmsg.payload = {\n    text: msg.payload, \n    shape: msg.payload.match(/on/) ? 'ring' : 'dot',\n    fill: msg.payload == 'switch' ? 'red' : 'green'\n}\nreturn msg;","outputs":1,"noerr":0,"x":928,"y":157,"wires":[[]]},{"id":"3cbac613.622432","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":285,"wires":[[],["3c89b834.84d1a8"]]},{"id":"35ad226.a497bde","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":435,"wires":[[],["389eef7d.ef9a"]]},{"id":"e8072572.fffa18","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":990,"y":330,"wires":[]},{"id":"ba8e1c42c48890af","type":"function","z":"68862836.29c7a8","name":"Reset","func":"flow.set('lights', null)\nflow.set('cfg', null)\n\nreturn msg","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":365,"y":135,"wires":[["2a0d169a.91782a"]]},{"id":"daf678d0db2af786","type":"switch","z":"68862836.29c7a8","name":"Updated?","property":"update","propertyType":"msg","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":540,"y":270,"wires":[["2a0d169a.91782a"]]},{"id":"e49dfffe0583db4e","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":330,"wires":[["39541c73.33d464"]]},{"id":"b1d245649953149b","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":480,"wires":[["6210bc08.905bc4"]]},{"id":"3044ab1b0964f72a","type":"trigger","z":"68862836.29c7a8","name":"Back to Auto","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":715,"y":525,"wires":[["6210bc08.905bc4"]]},{"id":"ba847a7ca44c07c3","type":"change","z":"68862836.29c7a8","name":"cooldown","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('manualCooldown')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":525,"y":525,"wires":[["3044ab1b0964f72a"]]},{"id":"7f31ef6f068e5b93","type":"change","z":"68862836.29c7a8","name":"timeOffAfter","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('timeOffAfter')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":455,"y":585,"wires":[["380a05c00a74bf5f"]]},{"id":"380a05c00a74bf5f","type":"trigger","z":"68862836.29c7a8","name":"Turn Off after motion ends","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":685,"y":615,"wires":[["2368d65a.ed031a"]]},{"id":"c2ba449f446e667c","type":"tab","label":"Bedroom","disabled":false,"info":"","env":[]},{"id":"a9ed94a8c0885970","type":"group","z":"c2ba449f446e667c","name":"Bedroom Lighting - Motion Control","style":{"label":true},"nodes":["a6d4405666584127","e159fb0e6c4fdbf2","8de12ee17d89f7fb","c0bb8748fcb2cb13","19b4e894794049a7","627907943fe7ca2c","2b4aabe62a2daa1a","5886ac45d9e31869","5fff236b6952929a","e79bef5d13a253c9","3299822ae2316393","b5110810dc1aeb62","711ad1a37ac1cfe5"],"x":14,"y":19,"w":1452,"h":262},{"id":"e79bef5d13a253c9","type":"time-range-switch","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"10-23","lat":"","lon":"","startTime":"23:00","endTime":"10:00","startOffset":0,"endOffset":0,"x":810,"y":80,"wires":[[],[]]},{"id":"a6d4405666584127","type":"server-state-changed","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Light Changed - Bedroom","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":["light.bedroom_fairy_lights","light.bedroom_leds","light.bedroom_main_light","light.bedside_lamps"],"entityidfiltertype":"list","outputinitially":true,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":150,"y":120,"wires":[["5fff236b6952929a"]]},{"id":"e159fb0e6c4fdbf2","type":"server-state-changed","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Presence - Bedroom","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.bedroom_motion_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":130,"y":185,"wires":[["5fff236b6952929a"],[]]},{"id":"8de12ee17d89f7fb","type":"subflow:68862836.29c7a8","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"","env":[{"name":"timeOffAfter","value":"400","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":560,"y":120,"wires":[["3299822ae2316393"],["5886ac45d9e31869"],[],[]]},{"id":"c0bb8748fcb2cb13","type":"subflow:68862836.29c7a8","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"","env":[{"name":"timeOffAfter","value":"300","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":560,"y":200,"wires":[["a3ad11667466f55b"],["2b4aabe62a2daa1a"],[],[]]},{"id":"19b4e894794049a7","type":"api-call-service","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Day Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.bedroom_day"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":1360,"y":60,"wires":[[]]},{"id":"627907943fe7ca2c","type":"api-call-service","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Night Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.bedroom_night"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":1360,"y":180,"wires":[[]]},{"id":"2b4aabe62a2daa1a","type":"api-call-service","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Bedroom Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.bedroom_fairy_lights","light.bedroom_leds","light.bedroom_main_light","light.bedside_lamps"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":840,"y":240,"wires":[[]]},{"id":"5886ac45d9e31869","type":"api-call-service","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Bedroom Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.bedroom_fairy_lights","light.bedroom_leds","light.bedroom_main_light","light.bedside_lamps"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":840,"y":120,"wires":[[]]},{"id":"5fff236b6952929a","type":"time-range-switch","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Day?","lat":"","lon":"","startTime":"08:00","endTime":"18:00","startOffset":0,"endOffset":0,"x":370,"y":160,"wires":[["8de12ee17d89f7fb"],["c0bb8748fcb2cb13"]]},{"id":"3299822ae2316393","type":"api-current-state","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Leah in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"binary_sensor.bed_sensor_leah","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":810,"y":60,"wires":[[],["b5110810dc1aeb62"]]},{"id":"b5110810dc1aeb62","type":"api-current-state","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Sam in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"binary_sensor.bed_sensor_sam","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":990,"y":60,"wires":[[],["711ad1a37ac1cfe5"]]},{"id":"711ad1a37ac1cfe5","type":"api-current-state","z":"c2ba449f446e667c","g":"a9ed94a8c0885970","name":"Both in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.all_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":1170,"y":60,"wires":[[],["19b4e894794049a7"]]},{"id":"a3ad11667466f55b","type":"api-current-state","z":"c2ba449f446e667c","name":"Leah in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"binary_sensor.bed_sensor_leah","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":810,"y":180,"wires":[[],["9c79de8faa4f7e84"]]},{"id":"9c79de8faa4f7e84","type":"api-current-state","z":"c2ba449f446e667c","name":"Sam in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"binary_sensor.bed_sensor_sam","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":990,"y":180,"wires":[[],["914e207b35930fe2"]]},{"id":"914e207b35930fe2","type":"api-current-state","z":"c2ba449f446e667c","name":"Both in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.all_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":1170,"y":180,"wires":[[],["627907943fe7ca2c"]]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
-- [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) 
+- [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows)
 - [Sleep Sensor Control](#sleep) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Day</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom day time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bedroom_day](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Night</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom night time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bedroom_night](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Movie Scene</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom movie scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bedroom_movie](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Movie Time</a></b></summary><blockquote>
 <b><i>Automation automatically turn on <a name="LINK-TO-SCENE">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.bedroom_movie](***)
 - [Android TV Integration](https://www.home-assistant.io/integrations/androidtv/) </details>
 
@@ -761,26 +816,30 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"68862836.29c7a8","type":"subflow","name":"Lights Motion Control","info":"","category":"home_assistant","in":[{"x":57,"y":162,"wires":[{"id":"92cf1e14.7068"}]}],"out":[{"x":470,"y":375,"wires":[{"id":"38649522.99f89a","port":0}]},{"x":560,"y":390,"wires":[{"id":"38649522.99f89a","port":1}]},{"x":650,"y":75,"wires":[{"id":"2a0d169a.91782a","port":0}]},{"x":890,"y":105,"wires":[{"id":"d5248d86.f7096","port":0}]}],"env":[{"name":"timeOffAfter","type":"num","value":"120"},{"name":"manualCooldown","type":"num","value":"30"},{"name":"brightness","type":"num","value":"100","ui":{"type":"input","opts":{"types":["num","bool","json","bin"]}}},{"name":"transitionOn","type":"num","value":"2"},{"name":"transitionOff","type":"num","value":"2"},{"name":"pause","type":"str","value":"5"},{"name":"controlLights","type":"str","value":""},{"name":"manualLight","type":"bool","value":"false"}],"meta":{},"color":"#52C0F2","icon":"font-awesome/fa-lightbulb-o","status":{"x":1027,"y":157,"wires":[{"id":"effe188b.5340f8","port":0}]}},{"id":"cf76e785.ab1978","type":"change","z":"68862836.29c7a8","name":"motion","rules":[{"t":"set","p":"payload","pt":"msg","to":"motion","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":544,"y":178,"wires":[["d5248d86.f7096"]]},{"id":"d5248d86.f7096","type":"state-machine","z":"68862836.29c7a8","name":"","triggerProperty":"payload","triggerPropertyType":"msg","stateProperty":"payload","statePropertyType":"msg","initialDelay":"","persistOnReload":true,"outputStateChangeOnly":true,"throwException":false,"states":["switch","motion-detected","motion-on","motion-off","off","on"],"transitions":[{"name":"motion","from":"off","to":"motion-detected"},{"name":"motion","from":"motion-off","to":"motion-detected"},{"name":"motion","from":"motion-on","to":"motion-on"},{"name":"off","from":"*","to":"off"},{"name":"on","from":"*","to":"on"},{"name":"switch","from":"off","to":"switch"},{"name":"switch","from":"on","to":"switch"},{"name":"switch","from":"switch","to":"switch"},{"name":"switch","from":"motion-on","to":"switch"},{"name":"motion-on","from":"motion-detected","to":"motion-on"},{"name":"motion-off","from":"motion-on","to":"motion-off"}],"x":741,"y":157,"wires":[["38649522.99f89a","effe188b.5340f8"]]},{"id":"d2742f90.7a1ce","type":"change","z":"68862836.29c7a8","name":"switch","rules":[{"t":"set","p":"payload","pt":"msg","to":"switch","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":541,"y":223,"wires":[["d5248d86.f7096"]]},{"id":"cab8f6da.31e818","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":630,"wires":[["380a05c00a74bf5f"]]},{"id":"ca0b865c.9f9898","type":"inject","z":"68862836.29c7a8","name":"Initial State","props":[{"p":"reset","v":"true","vt":"bool"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":"10","topic":"","x":665,"y":570,"wires":[["6210bc08.905bc4","3044ab1b0964f72a"]]},{"id":"faa9cc31.66ec7","type":"link in","z":"68862836.29c7a8","name":"","links":["801822a5.c6d75","e8072572.fffa18"],"x":592,"y":120,"wires":[["d5248d86.f7096"]]},{"id":"801822a5.c6d75","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":1020,"y":570,"wires":[]},{"id":"38649522.99f89a","type":"switch","z":"68862836.29c7a8","name":"State Action","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"motion-detected","vt":"str"},{"t":"eq","v":"motion-off","vt":"str"},{"t":"eq","v":"motion-on","vt":"str"},{"t":"eq","v":"switch","vt":"str"}],"checkall":"true","repair":false,"outputs":4,"x":230,"y":465,"wires":[["4c844b6f.159114","a26b8394.bcc5c"],["3dda34d6.1dd5bc"],["7f31ef6f068e5b93"],["cab8f6da.31e818","ba847a7ca44c07c3"]]},{"id":"82902d91.d0dbf","type":"rbe","z":"68862836.29c7a8","name":"","func":"rbe","gap":"","start":"","inout":"out","property":"payload","x":369,"y":223,"wires":[["d2742f90.7a1ce"]]},{"id":"92cf1e14.7068","type":"switch","z":"68862836.29c7a8","name":"Topic Route","property":"topic","propertyType":"msg","rules":[{"t":"regex","v":"^config\\b","vt":"str","case":false},{"t":"regex","v":"^reset\\b","vt":"str","case":false},{"t":"eq","v":"light_state","vt":"str"},{"t":"cont","v":"sensor.","vt":"str"},{"t":"regex","v":"^(light|switch)\\.","vt":"str","case":false}],"checkall":"true","repair":false,"outputs":5,"x":175,"y":162,"wires":[["2a0d169a.91782a"],["ba8e1c42c48890af"],["d5248d86.f7096"],["d1f38468.a6c768"],["82902d91.d0dbf","4a9e28b2.6d3bf8"]]},{"id":"2a0d169a.91782a","type":"function","z":"68862836.29c7a8","name":"Update Configuration","func":"// Init our Lights state while we're here\nlet lights = flow.get('lights')\n// Is this our start-up initialisation? (If so, reset config!)\nlet init = msg.init || false\nif (!lights)\n  flow.set('lights', { state: { }, ids: [], ids_csv: '' })\n\n// Merge new Payload with existing config and defaults\nlet cfg = Object.assign(\n  // Existing Config\n  init?flow.get('cfg')||{}:{},  // 'cfg.'+id\n  // Updated Config\n  msg.payload)\n\n// Make sure Light IDs are initted.\n// if (!cfg.lights) cfg.lights = []\nif (!cfg.brightness)\n  cfg.brightness = env.get('brightness') || 100\n\nif (!cfg.transitionOn && cfg.transitionOn !== 0)\n  cfg.transitionOn = env.get('transitionOn') || 2\n  \nif (!cfg.transitionOff && cfg.transitionOff !== 0)\n  cfg.transitionOff = env.get('transitionOff') || 2\n\nif (!cfg.lights && env.get('controlLights') && env.get('controlLights').length>0)\n    cfg.lights = env.get('controlLights').split(/\\s*,\\s*/)\n\nflow.set('cfg', cfg)\n\nreturn { topic: 'config', payload: cfg, lights }","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":505,"y":75,"wires":[[]]},{"id":"d1f38468.a6c768","type":"switch","z":"68862836.29c7a8","name":"motion on","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":375,"y":178,"wires":[["cf76e785.ab1978"]]},{"id":"4a9e28b2.6d3bf8","type":"function","z":"68862836.29c7a8","name":"Track Lights","func":"// Keep a record of all the light entity_ids coming in, for later switching\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\n\nlet [all, id] = msg.topic.match(/^light\\.(.*)/)\nlet update = false\n\nif (id) {\n  lights.state[id] = msg.data.new_state\n  if (!lights.ids.includes(id)) {\n    lights.ids.push(id)\n    update = true\n  }\n  lights.ids_csv = lights.ids.join(',')\n}\n\nflow.set('lights', lights)\n\nreturn {update}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":389,"y":268,"wires":[["daf678d0db2af786"]]},{"id":"4c844b6f.159114","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light On. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    brightness: Math.floor(cfg.brightness/100*255),\n    transition: cfg.transitionOn,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":330,"wires":[["3cbac613.622432","e49dfffe0583db4e"]]},{"id":"3dda34d6.1dd5bc","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light Off. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    transition: cfg.transitionOff,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":435,"wires":[["35ad226.a497bde","b1d245649953149b"]]},{"id":"35088d77.068da2","type":"inject","z":"68862836.29c7a8","name":"Default Configuration","props":[{"p":"payload"},{"p":"topic","vt":"str"},{"p":"init","v":"true","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"config","payload":"{}","payloadType":"json","x":235,"y":75,"wires":[["2a0d169a.91782a"]]},{"id":"949bf90b.fc19e8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn on light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"json","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":285,"wires":[[]]},{"id":"a68e2b6.6b0c1d8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn off light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":435,"wires":[[]]},{"id":"6210bc08.905bc4","type":"function","z":"68862836.29c7a8","name":"Check State","func":"// Fetch light state from our \"Track Lights\" data\n// - no need for a HA State node\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\nlet cfg = flow.get('cfg')|| {}\n\n// Return \"on\" if any one light is \"on\"\nreturn {\n    topic: 'light.'+lights.ids_csv,\n    payload: lights.ids.map(id => lights.state[id].state).includes('on') ? 'on' : 'off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":910,"y":525,"wires":[["801822a5.c6d75"]]},{"id":"3c89b834.84d1a8","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":880,"y":285,"wires":[["949bf90b.fc19e8"]]},{"id":"389eef7d.ef9a","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":875,"y":435,"wires":[["a68e2b6.6b0c1d8"]]},{"id":"39541c73.33d464","type":"function","z":"68862836.29c7a8","name":"motion-on","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-on'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":885,"y":330,"wires":[["e8072572.fffa18"]]},{"id":"2368d65a.ed031a","type":"function","z":"68862836.29c7a8","name":"motion-off","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":900,"y":615,"wires":[["801822a5.c6d75"]]},{"id":"a26b8394.bcc5c","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":530,"y":480,"wires":[["b1d245649953149b"]]},{"id":"effe188b.5340f8","type":"function","z":"68862836.29c7a8","name":"status","func":"\nmsg.payload = {\n    text: msg.payload, \n    shape: msg.payload.match(/on/) ? 'ring' : 'dot',\n    fill: msg.payload == 'switch' ? 'red' : 'green'\n}\nreturn msg;","outputs":1,"noerr":0,"x":928,"y":157,"wires":[[]]},{"id":"3cbac613.622432","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":285,"wires":[[],["3c89b834.84d1a8"]]},{"id":"35ad226.a497bde","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":435,"wires":[[],["389eef7d.ef9a"]]},{"id":"e8072572.fffa18","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":990,"y":330,"wires":[]},{"id":"ba8e1c42c48890af","type":"function","z":"68862836.29c7a8","name":"Reset","func":"flow.set('lights', null)\nflow.set('cfg', null)\n\nreturn msg","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":365,"y":135,"wires":[["2a0d169a.91782a"]]},{"id":"daf678d0db2af786","type":"switch","z":"68862836.29c7a8","name":"Updated?","property":"update","propertyType":"msg","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":540,"y":270,"wires":[["2a0d169a.91782a"]]},{"id":"e49dfffe0583db4e","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":330,"wires":[["39541c73.33d464"]]},{"id":"b1d245649953149b","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":480,"wires":[["6210bc08.905bc4"]]},{"id":"3044ab1b0964f72a","type":"trigger","z":"68862836.29c7a8","name":"Back to Auto","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":715,"y":525,"wires":[["6210bc08.905bc4"]]},{"id":"ba847a7ca44c07c3","type":"change","z":"68862836.29c7a8","name":"cooldown","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('manualCooldown')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":525,"y":525,"wires":[["3044ab1b0964f72a"]]},{"id":"7f31ef6f068e5b93","type":"change","z":"68862836.29c7a8","name":"timeOffAfter","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('timeOffAfter')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":455,"y":585,"wires":[["380a05c00a74bf5f"]]},{"id":"380a05c00a74bf5f","type":"trigger","z":"68862836.29c7a8","name":"Turn Off after motion ends","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":685,"y":615,"wires":[["2368d65a.ed031a"]]},{"id":"7c547859912b407f","type":"tab","label":"Hall","disabled":false,"info":"","env":[]},{"id":"d7c147689bbe4353","type":"group","z":"7c547859912b407f","name":"Hall Lighting - Motion Control","style":{"label":true},"nodes":["62efa5699f57d51f","de1df19184f06c83","68906fa59ab52bf4","a94a530f88e5f4f9","98dd8f5eb34caff1","7fbeaa9f8e7c04ee","2632c616d1300e99","245d1471ec1e228e","bad02d499148ab35"],"x":14,"y":19,"w":812,"h":262},{"id":"e47d3124ce86e5cf","type":"group","z":"7c547859912b407f","name":"Hall Lighting - Door Control","style":{"label":true},"nodes":["0d31b91fa456ef0a","34ed0ea27e507b41","1160707e1d5f6745","e067aa5a9a5ad390"],"x":14,"y":299,"w":612,"h":122},{"id":"464bc9ab39de8545","type":"group","z":"7c547859912b407f","name":"Hall Lighting - Laundry Door Control","style":{"label":true},"nodes":["d195ee04f84b7928","69ebe74c270b5bb1","ee688e398b26730a"],"x":14,"y":439,"w":432,"h":122},{"id":"62efa5699f57d51f","type":"server-state-changed","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Light Changed - Hall","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":["light.hall_lamp","light.hall_leds"],"entityidfiltertype":"list","outputinitially":true,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":130,"y":80,"wires":[["a94a530f88e5f4f9"]]},{"id":"de1df19184f06c83","type":"server-state-changed","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Presence - Hall","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.hall_motion_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":120,"y":145,"wires":[["a94a530f88e5f4f9"],[]]},{"id":"68906fa59ab52bf4","type":"subflow:68862836.29c7a8","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"","env":[{"name":"timeOffAfter","value":"300","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":500,"y":80,"wires":[["7fbeaa9f8e7c04ee"],["bad02d499148ab35"],[],[]]},{"id":"a94a530f88e5f4f9","type":"time-range-switch","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Day?","lat":"","lon":"","startTime":"08:00","endTime":"18:00","startOffset":0,"endOffset":0,"x":310,"y":120,"wires":[["68906fa59ab52bf4"],["98dd8f5eb34caff1"]]},{"id":"98dd8f5eb34caff1","type":"subflow:68862836.29c7a8","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"","env":[{"name":"timeOffAfter","value":"300","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":500,"y":160,"wires":[["2632c616d1300e99"],["245d1471ec1e228e"],[],[]]},{"id":"7fbeaa9f8e7c04ee","type":"api-call-service","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Day Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.hall_day"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":720,"y":60,"wires":[[]]},{"id":"2632c616d1300e99","type":"api-call-service","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Night Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.hall_night"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":720,"y":180,"wires":[[]]},{"id":"245d1471ec1e228e","type":"api-call-service","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Hall Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.hall_lamp","light.hall_leds"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":720,"y":240,"wires":[[]]},{"id":"0d31b91fa456ef0a","type":"server-state-changed","z":"7c547859912b407f","g":"e47d3124ce86e5cf","name":"Hall Door Open","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.hall_door_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":true,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":120,"y":360,"wires":[["34ed0ea27e507b41"],["1160707e1d5f6745"]]},{"id":"34ed0ea27e507b41","type":"api-call-service","z":"7c547859912b407f","g":"e47d3124ce86e5cf","name":"Main Lights ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":["light.hall_main_lights"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":320,"y":340,"wires":[["1160707e1d5f6745"]]},{"id":"1160707e1d5f6745","type":"delay","z":"7c547859912b407f","g":"e47d3124ce86e5cf","name":"","pauseType":"delay","timeout":"1","timeoutUnits":"minutes","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"allowrate":false,"outputs":1,"x":300,"y":380,"wires":[["e067aa5a9a5ad390"]]},{"id":"e067aa5a9a5ad390","type":"api-call-service","z":"7c547859912b407f","g":"e47d3124ce86e5cf","name":"Main Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.hall_main_lights"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":520,"y":360,"wires":[[]]},{"id":"d195ee04f84b7928","type":"server-state-changed","z":"7c547859912b407f","g":"464bc9ab39de8545","name":"Laundry Door Open","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.hall_washing_room","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":true,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":130,"y":500,"wires":[["69ebe74c270b5bb1"],["ee688e398b26730a"]]},{"id":"69ebe74c270b5bb1","type":"api-call-service","z":"7c547859912b407f","g":"464bc9ab39de8545","name":"Main Light ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":["light.hall_main_light_1"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":340,"y":480,"wires":[[]]},{"id":"ee688e398b26730a","type":"api-call-service","z":"7c547859912b407f","g":"464bc9ab39de8545","name":"Main Light OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.hall_main_light_1"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":340,"y":520,"wires":[[]]},{"id":"bad02d499148ab35","type":"api-call-service","z":"7c547859912b407f","g":"d7c147689bbe4353","name":"Hall Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.hall_lamp","light.hall_leds"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":720,"y":120,"wires":[[]]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Day</a></b></summary><blockquote>
 <b><i>Automation to activate hallway day time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.hall_day](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Night</a></b></summary><blockquote>
 <b><i>Automation to activate hallway night time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.hall_night](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Sleep Scene</a></b></summary><blockquote>
 <b><i>Automation to activate hallway sleeping scene when going for a pee at night.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.hall_sleep](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Off</a></b></summary><blockquote>
@@ -801,20 +860,23 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"68862836.29c7a8","type":"subflow","name":"Lights Motion Control","info":"","category":"home_assistant","in":[{"x":57,"y":162,"wires":[{"id":"92cf1e14.7068"}]}],"out":[{"x":470,"y":375,"wires":[{"id":"38649522.99f89a","port":0}]},{"x":560,"y":390,"wires":[{"id":"38649522.99f89a","port":1}]},{"x":650,"y":75,"wires":[{"id":"2a0d169a.91782a","port":0}]},{"x":890,"y":105,"wires":[{"id":"d5248d86.f7096","port":0}]}],"env":[{"name":"timeOffAfter","type":"num","value":"120"},{"name":"manualCooldown","type":"num","value":"30"},{"name":"brightness","type":"num","value":"100","ui":{"type":"input","opts":{"types":["num","bool","json","bin"]}}},{"name":"transitionOn","type":"num","value":"2"},{"name":"transitionOff","type":"num","value":"2"},{"name":"pause","type":"str","value":"5"},{"name":"controlLights","type":"str","value":""},{"name":"manualLight","type":"bool","value":"false"}],"meta":{},"color":"#52C0F2","icon":"font-awesome/fa-lightbulb-o","status":{"x":1027,"y":157,"wires":[{"id":"effe188b.5340f8","port":0}]}},{"id":"cf76e785.ab1978","type":"change","z":"68862836.29c7a8","name":"motion","rules":[{"t":"set","p":"payload","pt":"msg","to":"motion","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":544,"y":178,"wires":[["d5248d86.f7096"]]},{"id":"d5248d86.f7096","type":"state-machine","z":"68862836.29c7a8","name":"","triggerProperty":"payload","triggerPropertyType":"msg","stateProperty":"payload","statePropertyType":"msg","initialDelay":"","persistOnReload":true,"outputStateChangeOnly":true,"throwException":false,"states":["switch","motion-detected","motion-on","motion-off","off","on"],"transitions":[{"name":"motion","from":"off","to":"motion-detected"},{"name":"motion","from":"motion-off","to":"motion-detected"},{"name":"motion","from":"motion-on","to":"motion-on"},{"name":"off","from":"*","to":"off"},{"name":"on","from":"*","to":"on"},{"name":"switch","from":"off","to":"switch"},{"name":"switch","from":"on","to":"switch"},{"name":"switch","from":"switch","to":"switch"},{"name":"switch","from":"motion-on","to":"switch"},{"name":"motion-on","from":"motion-detected","to":"motion-on"},{"name":"motion-off","from":"motion-on","to":"motion-off"}],"x":741,"y":157,"wires":[["38649522.99f89a","effe188b.5340f8"]]},{"id":"d2742f90.7a1ce","type":"change","z":"68862836.29c7a8","name":"switch","rules":[{"t":"set","p":"payload","pt":"msg","to":"switch","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":541,"y":223,"wires":[["d5248d86.f7096"]]},{"id":"cab8f6da.31e818","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":630,"wires":[["380a05c00a74bf5f"]]},{"id":"ca0b865c.9f9898","type":"inject","z":"68862836.29c7a8","name":"Initial State","props":[{"p":"reset","v":"true","vt":"bool"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":"10","topic":"","x":665,"y":570,"wires":[["6210bc08.905bc4","3044ab1b0964f72a"]]},{"id":"faa9cc31.66ec7","type":"link in","z":"68862836.29c7a8","name":"","links":["801822a5.c6d75","e8072572.fffa18"],"x":592,"y":120,"wires":[["d5248d86.f7096"]]},{"id":"801822a5.c6d75","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":1020,"y":570,"wires":[]},{"id":"38649522.99f89a","type":"switch","z":"68862836.29c7a8","name":"State Action","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"motion-detected","vt":"str"},{"t":"eq","v":"motion-off","vt":"str"},{"t":"eq","v":"motion-on","vt":"str"},{"t":"eq","v":"switch","vt":"str"}],"checkall":"true","repair":false,"outputs":4,"x":230,"y":465,"wires":[["4c844b6f.159114","a26b8394.bcc5c"],["3dda34d6.1dd5bc"],["7f31ef6f068e5b93"],["cab8f6da.31e818","ba847a7ca44c07c3"]]},{"id":"82902d91.d0dbf","type":"rbe","z":"68862836.29c7a8","name":"","func":"rbe","gap":"","start":"","inout":"out","property":"payload","x":369,"y":223,"wires":[["d2742f90.7a1ce"]]},{"id":"92cf1e14.7068","type":"switch","z":"68862836.29c7a8","name":"Topic Route","property":"topic","propertyType":"msg","rules":[{"t":"regex","v":"^config\\b","vt":"str","case":false},{"t":"regex","v":"^reset\\b","vt":"str","case":false},{"t":"eq","v":"light_state","vt":"str"},{"t":"cont","v":"sensor.","vt":"str"},{"t":"regex","v":"^(light|switch)\\.","vt":"str","case":false}],"checkall":"true","repair":false,"outputs":5,"x":175,"y":162,"wires":[["2a0d169a.91782a"],["ba8e1c42c48890af"],["d5248d86.f7096"],["d1f38468.a6c768"],["82902d91.d0dbf","4a9e28b2.6d3bf8"]]},{"id":"2a0d169a.91782a","type":"function","z":"68862836.29c7a8","name":"Update Configuration","func":"// Init our Lights state while we're here\nlet lights = flow.get('lights')\n// Is this our start-up initialisation? (If so, reset config!)\nlet init = msg.init || false\nif (!lights)\n  flow.set('lights', { state: { }, ids: [], ids_csv: '' })\n\n// Merge new Payload with existing config and defaults\nlet cfg = Object.assign(\n  // Existing Config\n  init?flow.get('cfg')||{}:{},  // 'cfg.'+id\n  // Updated Config\n  msg.payload)\n\n// Make sure Light IDs are initted.\n// if (!cfg.lights) cfg.lights = []\nif (!cfg.brightness)\n  cfg.brightness = env.get('brightness') || 100\n\nif (!cfg.transitionOn && cfg.transitionOn !== 0)\n  cfg.transitionOn = env.get('transitionOn') || 2\n  \nif (!cfg.transitionOff && cfg.transitionOff !== 0)\n  cfg.transitionOff = env.get('transitionOff') || 2\n\nif (!cfg.lights && env.get('controlLights') && env.get('controlLights').length>0)\n    cfg.lights = env.get('controlLights').split(/\\s*,\\s*/)\n\nflow.set('cfg', cfg)\n\nreturn { topic: 'config', payload: cfg, lights }","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":505,"y":75,"wires":[[]]},{"id":"d1f38468.a6c768","type":"switch","z":"68862836.29c7a8","name":"motion on","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":375,"y":178,"wires":[["cf76e785.ab1978"]]},{"id":"4a9e28b2.6d3bf8","type":"function","z":"68862836.29c7a8","name":"Track Lights","func":"// Keep a record of all the light entity_ids coming in, for later switching\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\n\nlet [all, id] = msg.topic.match(/^light\\.(.*)/)\nlet update = false\n\nif (id) {\n  lights.state[id] = msg.data.new_state\n  if (!lights.ids.includes(id)) {\n    lights.ids.push(id)\n    update = true\n  }\n  lights.ids_csv = lights.ids.join(',')\n}\n\nflow.set('lights', lights)\n\nreturn {update}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":389,"y":268,"wires":[["daf678d0db2af786"]]},{"id":"4c844b6f.159114","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light On. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    brightness: Math.floor(cfg.brightness/100*255),\n    transition: cfg.transitionOn,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":330,"wires":[["3cbac613.622432","e49dfffe0583db4e"]]},{"id":"3dda34d6.1dd5bc","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light Off. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    transition: cfg.transitionOff,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":435,"wires":[["35ad226.a497bde","b1d245649953149b"]]},{"id":"35088d77.068da2","type":"inject","z":"68862836.29c7a8","name":"Default Configuration","props":[{"p":"payload"},{"p":"topic","vt":"str"},{"p":"init","v":"true","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"config","payload":"{}","payloadType":"json","x":235,"y":75,"wires":[["2a0d169a.91782a"]]},{"id":"949bf90b.fc19e8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn on light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"json","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":285,"wires":[[]]},{"id":"a68e2b6.6b0c1d8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn off light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":435,"wires":[[]]},{"id":"6210bc08.905bc4","type":"function","z":"68862836.29c7a8","name":"Check State","func":"// Fetch light state from our \"Track Lights\" data\n// - no need for a HA State node\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\nlet cfg = flow.get('cfg')|| {}\n\n// Return \"on\" if any one light is \"on\"\nreturn {\n    topic: 'light.'+lights.ids_csv,\n    payload: lights.ids.map(id => lights.state[id].state).includes('on') ? 'on' : 'off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":910,"y":525,"wires":[["801822a5.c6d75"]]},{"id":"3c89b834.84d1a8","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":880,"y":285,"wires":[["949bf90b.fc19e8"]]},{"id":"389eef7d.ef9a","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":875,"y":435,"wires":[["a68e2b6.6b0c1d8"]]},{"id":"39541c73.33d464","type":"function","z":"68862836.29c7a8","name":"motion-on","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-on'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":885,"y":330,"wires":[["e8072572.fffa18"]]},{"id":"2368d65a.ed031a","type":"function","z":"68862836.29c7a8","name":"motion-off","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":900,"y":615,"wires":[["801822a5.c6d75"]]},{"id":"a26b8394.bcc5c","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":530,"y":480,"wires":[["b1d245649953149b"]]},{"id":"effe188b.5340f8","type":"function","z":"68862836.29c7a8","name":"status","func":"\nmsg.payload = {\n    text: msg.payload, \n    shape: msg.payload.match(/on/) ? 'ring' : 'dot',\n    fill: msg.payload == 'switch' ? 'red' : 'green'\n}\nreturn msg;","outputs":1,"noerr":0,"x":928,"y":157,"wires":[[]]},{"id":"3cbac613.622432","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":285,"wires":[[],["3c89b834.84d1a8"]]},{"id":"35ad226.a497bde","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":435,"wires":[[],["389eef7d.ef9a"]]},{"id":"e8072572.fffa18","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":990,"y":330,"wires":[]},{"id":"ba8e1c42c48890af","type":"function","z":"68862836.29c7a8","name":"Reset","func":"flow.set('lights', null)\nflow.set('cfg', null)\n\nreturn msg","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":365,"y":135,"wires":[["2a0d169a.91782a"]]},{"id":"daf678d0db2af786","type":"switch","z":"68862836.29c7a8","name":"Updated?","property":"update","propertyType":"msg","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":540,"y":270,"wires":[["2a0d169a.91782a"]]},{"id":"e49dfffe0583db4e","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":330,"wires":[["39541c73.33d464"]]},{"id":"b1d245649953149b","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":480,"wires":[["6210bc08.905bc4"]]},{"id":"3044ab1b0964f72a","type":"trigger","z":"68862836.29c7a8","name":"Back to Auto","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":715,"y":525,"wires":[["6210bc08.905bc4"]]},{"id":"ba847a7ca44c07c3","type":"change","z":"68862836.29c7a8","name":"cooldown","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('manualCooldown')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":525,"y":525,"wires":[["3044ab1b0964f72a"]]},{"id":"7f31ef6f068e5b93","type":"change","z":"68862836.29c7a8","name":"timeOffAfter","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('timeOffAfter')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":455,"y":585,"wires":[["380a05c00a74bf5f"]]},{"id":"380a05c00a74bf5f","type":"trigger","z":"68862836.29c7a8","name":"Turn Off after motion ends","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":685,"y":615,"wires":[["2368d65a.ed031a"]]},{"id":"5925a2ee8761878a","type":"tab","label":"Kitchen","disabled":false,"info":"","env":[]},{"id":"41246c4ab2371aa1","type":"group","z":"5925a2ee8761878a","name":"Kitchen Lighting - Motion Control","style":{"label":true},"nodes":["ba71cc4f57d4c89a","4ed1fdd622c3a862","c27661af82753469","cfc85bb2b3337b65","7fe6c7fcb9b882ff","81c4cb157bb5d74e","d01a6faf42988334","2d71b56498fa6fac","eb02612872271538"],"x":14,"y":19,"w":872,"h":262},{"id":"ba71cc4f57d4c89a","type":"server-state-changed","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Light Changed - Kitchen","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":["light.kitchen_leds","light.kitchen_main_lights"],"entityidfiltertype":"list","outputinitially":true,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":150,"y":100,"wires":[["eb02612872271538"]]},{"id":"4ed1fdd622c3a862","type":"server-state-changed","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Presence - Kitchen","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.kitchen_motion_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":130,"y":165,"wires":[["eb02612872271538"],[]]},{"id":"c27661af82753469","type":"subflow:68862836.29c7a8","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"","env":[{"name":"timeOffAfter","value":"400","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":540,"y":100,"wires":[["7fe6c7fcb9b882ff"],["2d71b56498fa6fac"],[],[]]},{"id":"cfc85bb2b3337b65","type":"subflow:68862836.29c7a8","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"","env":[{"name":"timeOffAfter","value":"300","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":540,"y":180,"wires":[["81c4cb157bb5d74e"],["d01a6faf42988334"],[],[]]},{"id":"7fe6c7fcb9b882ff","type":"api-call-service","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Day Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.kitchen_cooking"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":760,"y":60,"wires":[[]]},{"id":"81c4cb157bb5d74e","type":"api-call-service","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Night Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.kitchen_normal"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":760,"y":180,"wires":[[]]},{"id":"d01a6faf42988334","type":"api-call-service","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Kitchen Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.kitchen_leds"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":770,"y":240,"wires":[[]]},{"id":"2d71b56498fa6fac","type":"api-call-service","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Kitchen Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.kitchen_leds","light.kitchen_main_lights"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":770,"y":120,"wires":[[]]},{"id":"eb02612872271538","type":"time-range-switch","z":"5925a2ee8761878a","g":"41246c4ab2371aa1","name":"Day?","lat":"","lon":"","startTime":"12:30","endTime":"20:00","startOffset":0,"endOffset":0,"x":350,"y":140,"wires":[["c27661af82753469"],["cfc85bb2b3337b65"]]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Cooking</a></b></summary><blockquote>
 <b><i>Automation to activate kitchen cooking scene during certain times.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.kitchen_cooking](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Normal</a></b></summary><blockquote>
 <b><i>Automation to activate normal kitchen scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.kitchen_normal](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Off</a></b></summary><blockquote>
@@ -835,32 +897,37 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"68862836.29c7a8","type":"subflow","name":"Lights Motion Control","info":"","category":"home_assistant","in":[{"x":57,"y":162,"wires":[{"id":"92cf1e14.7068"}]}],"out":[{"x":470,"y":375,"wires":[{"id":"38649522.99f89a","port":0}]},{"x":560,"y":390,"wires":[{"id":"38649522.99f89a","port":1}]},{"x":650,"y":75,"wires":[{"id":"2a0d169a.91782a","port":0}]},{"x":890,"y":105,"wires":[{"id":"d5248d86.f7096","port":0}]}],"env":[{"name":"timeOffAfter","type":"num","value":"120"},{"name":"manualCooldown","type":"num","value":"30"},{"name":"brightness","type":"num","value":"100","ui":{"type":"input","opts":{"types":["num","bool","json","bin"]}}},{"name":"transitionOn","type":"num","value":"2"},{"name":"transitionOff","type":"num","value":"2"},{"name":"pause","type":"str","value":"5"},{"name":"controlLights","type":"str","value":""},{"name":"manualLight","type":"bool","value":"false"}],"meta":{},"color":"#52C0F2","icon":"font-awesome/fa-lightbulb-o","status":{"x":1027,"y":157,"wires":[{"id":"effe188b.5340f8","port":0}]}},{"id":"cf76e785.ab1978","type":"change","z":"68862836.29c7a8","name":"motion","rules":[{"t":"set","p":"payload","pt":"msg","to":"motion","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":544,"y":178,"wires":[["d5248d86.f7096"]]},{"id":"d5248d86.f7096","type":"state-machine","z":"68862836.29c7a8","name":"","triggerProperty":"payload","triggerPropertyType":"msg","stateProperty":"payload","statePropertyType":"msg","initialDelay":"","persistOnReload":true,"outputStateChangeOnly":true,"throwException":false,"states":["switch","motion-detected","motion-on","motion-off","off","on"],"transitions":[{"name":"motion","from":"off","to":"motion-detected"},{"name":"motion","from":"motion-off","to":"motion-detected"},{"name":"motion","from":"motion-on","to":"motion-on"},{"name":"off","from":"*","to":"off"},{"name":"on","from":"*","to":"on"},{"name":"switch","from":"off","to":"switch"},{"name":"switch","from":"on","to":"switch"},{"name":"switch","from":"switch","to":"switch"},{"name":"switch","from":"motion-on","to":"switch"},{"name":"motion-on","from":"motion-detected","to":"motion-on"},{"name":"motion-off","from":"motion-on","to":"motion-off"}],"x":741,"y":157,"wires":[["38649522.99f89a","effe188b.5340f8"]]},{"id":"d2742f90.7a1ce","type":"change","z":"68862836.29c7a8","name":"switch","rules":[{"t":"set","p":"payload","pt":"msg","to":"switch","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":541,"y":223,"wires":[["d5248d86.f7096"]]},{"id":"cab8f6da.31e818","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":630,"wires":[["380a05c00a74bf5f"]]},{"id":"ca0b865c.9f9898","type":"inject","z":"68862836.29c7a8","name":"Initial State","props":[{"p":"reset","v":"true","vt":"bool"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":"10","topic":"","x":665,"y":570,"wires":[["6210bc08.905bc4","3044ab1b0964f72a"]]},{"id":"faa9cc31.66ec7","type":"link in","z":"68862836.29c7a8","name":"","links":["801822a5.c6d75","e8072572.fffa18"],"x":592,"y":120,"wires":[["d5248d86.f7096"]]},{"id":"801822a5.c6d75","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":1020,"y":570,"wires":[]},{"id":"38649522.99f89a","type":"switch","z":"68862836.29c7a8","name":"State Action","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"motion-detected","vt":"str"},{"t":"eq","v":"motion-off","vt":"str"},{"t":"eq","v":"motion-on","vt":"str"},{"t":"eq","v":"switch","vt":"str"}],"checkall":"true","repair":false,"outputs":4,"x":230,"y":465,"wires":[["4c844b6f.159114","a26b8394.bcc5c"],["3dda34d6.1dd5bc"],["7f31ef6f068e5b93"],["cab8f6da.31e818","ba847a7ca44c07c3"]]},{"id":"82902d91.d0dbf","type":"rbe","z":"68862836.29c7a8","name":"","func":"rbe","gap":"","start":"","inout":"out","property":"payload","x":369,"y":223,"wires":[["d2742f90.7a1ce"]]},{"id":"92cf1e14.7068","type":"switch","z":"68862836.29c7a8","name":"Topic Route","property":"topic","propertyType":"msg","rules":[{"t":"regex","v":"^config\\b","vt":"str","case":false},{"t":"regex","v":"^reset\\b","vt":"str","case":false},{"t":"eq","v":"light_state","vt":"str"},{"t":"cont","v":"sensor.","vt":"str"},{"t":"regex","v":"^(light|switch)\\.","vt":"str","case":false}],"checkall":"true","repair":false,"outputs":5,"x":175,"y":162,"wires":[["2a0d169a.91782a"],["ba8e1c42c48890af"],["d5248d86.f7096"],["d1f38468.a6c768"],["82902d91.d0dbf","4a9e28b2.6d3bf8"]]},{"id":"2a0d169a.91782a","type":"function","z":"68862836.29c7a8","name":"Update Configuration","func":"// Init our Lights state while we're here\nlet lights = flow.get('lights')\n// Is this our start-up initialisation? (If so, reset config!)\nlet init = msg.init || false\nif (!lights)\n  flow.set('lights', { state: { }, ids: [], ids_csv: '' })\n\n// Merge new Payload with existing config and defaults\nlet cfg = Object.assign(\n  // Existing Config\n  init?flow.get('cfg')||{}:{},  // 'cfg.'+id\n  // Updated Config\n  msg.payload)\n\n// Make sure Light IDs are initted.\n// if (!cfg.lights) cfg.lights = []\nif (!cfg.brightness)\n  cfg.brightness = env.get('brightness') || 100\n\nif (!cfg.transitionOn && cfg.transitionOn !== 0)\n  cfg.transitionOn = env.get('transitionOn') || 2\n  \nif (!cfg.transitionOff && cfg.transitionOff !== 0)\n  cfg.transitionOff = env.get('transitionOff') || 2\n\nif (!cfg.lights && env.get('controlLights') && env.get('controlLights').length>0)\n    cfg.lights = env.get('controlLights').split(/\\s*,\\s*/)\n\nflow.set('cfg', cfg)\n\nreturn { topic: 'config', payload: cfg, lights }","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":505,"y":75,"wires":[[]]},{"id":"d1f38468.a6c768","type":"switch","z":"68862836.29c7a8","name":"motion on","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":375,"y":178,"wires":[["cf76e785.ab1978"]]},{"id":"4a9e28b2.6d3bf8","type":"function","z":"68862836.29c7a8","name":"Track Lights","func":"// Keep a record of all the light entity_ids coming in, for later switching\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\n\nlet [all, id] = msg.topic.match(/^light\\.(.*)/)\nlet update = false\n\nif (id) {\n  lights.state[id] = msg.data.new_state\n  if (!lights.ids.includes(id)) {\n    lights.ids.push(id)\n    update = true\n  }\n  lights.ids_csv = lights.ids.join(',')\n}\n\nflow.set('lights', lights)\n\nreturn {update}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":389,"y":268,"wires":[["daf678d0db2af786"]]},{"id":"4c844b6f.159114","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light On. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    brightness: Math.floor(cfg.brightness/100*255),\n    transition: cfg.transitionOn,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":330,"wires":[["3cbac613.622432","e49dfffe0583db4e"]]},{"id":"3dda34d6.1dd5bc","type":"function","z":"68862836.29c7a8","name":"Light Cfg","func":"let cfg = flow.get('cfg')|| {}\nlet lights = flow.get('lights') || {}\n// Use Light IDs from Config if defined - otherwise use detected\nlet light_ids = cfg.lights || lights.ids\nlet delay = env.get('pause')*1000\n\n// Prepare config paramters for Light Off. This is\n// an Array of Payload Data, one for each light\nlet payload = light_ids.map(id => { return {\n  data: {\n    transition: cfg.transitionOff,\n    entity_id: 'light.'+id\n  }\n}})\n\nreturn {\n    topic: 'light.'+light_ids.join(','),\n    payload,\n    delay\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":525,"y":435,"wires":[["35ad226.a497bde","b1d245649953149b"]]},{"id":"35088d77.068da2","type":"inject","z":"68862836.29c7a8","name":"Default Configuration","props":[{"p":"payload"},{"p":"topic","vt":"str"},{"p":"init","v":"true","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"config","payload":"{}","payloadType":"json","x":235,"y":75,"wires":[["2a0d169a.91782a"]]},{"id":"949bf90b.fc19e8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn on light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_on","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"json","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":285,"wires":[[]]},{"id":"a68e2b6.6b0c1d8","type":"api-call-service","z":"68862836.29c7a8","name":"Turn off light","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":[],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"data"}],"queue":"none","x":1045,"y":435,"wires":[[]]},{"id":"6210bc08.905bc4","type":"function","z":"68862836.29c7a8","name":"Check State","func":"// Fetch light state from our \"Track Lights\" data\n// - no need for a HA State node\n\nlet lights = flow.get('lights') || { state: { }, ids: [], ids_csv: '' }\nlet cfg = flow.get('cfg')|| {}\n\n// Return \"on\" if any one light is \"on\"\nreturn {\n    topic: 'light.'+lights.ids_csv,\n    payload: lights.ids.map(id => lights.state[id].state).includes('on') ? 'on' : 'off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":910,"y":525,"wires":[["801822a5.c6d75"]]},{"id":"3c89b834.84d1a8","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":880,"y":285,"wires":[["949bf90b.fc19e8"]]},{"id":"389eef7d.ef9a","type":"split","z":"68862836.29c7a8","name":"Each Light","splt":"\\n","spltType":"str","arraySplt":1,"arraySpltType":"len","stream":false,"addname":"","x":875,"y":435,"wires":[["a68e2b6.6b0c1d8"]]},{"id":"39541c73.33d464","type":"function","z":"68862836.29c7a8","name":"motion-on","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-on'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":885,"y":330,"wires":[["e8072572.fffa18"]]},{"id":"2368d65a.ed031a","type":"function","z":"68862836.29c7a8","name":"motion-off","func":"// We use a function here to generate a new clean message\n\nreturn {\n    topic: 'state',\n    payload: 'motion-off'\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":900,"y":615,"wires":[["801822a5.c6d75"]]},{"id":"a26b8394.bcc5c","type":"change","z":"68862836.29c7a8","name":"stop","rules":[{"t":"set","p":"reset","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":530,"y":480,"wires":[["b1d245649953149b"]]},{"id":"effe188b.5340f8","type":"function","z":"68862836.29c7a8","name":"status","func":"\nmsg.payload = {\n    text: msg.payload, \n    shape: msg.payload.match(/on/) ? 'ring' : 'dot',\n    fill: msg.payload == 'switch' ? 'red' : 'green'\n}\nreturn msg;","outputs":1,"noerr":0,"x":928,"y":157,"wires":[[]]},{"id":"3cbac613.622432","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":285,"wires":[[],["3c89b834.84d1a8"]]},{"id":"35ad226.a497bde","type":"switch","z":"68862836.29c7a8","name":"Manual?","property":"manualLight","propertyType":"env","rules":[{"t":"true"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":705,"y":435,"wires":[[],["389eef7d.ef9a"]]},{"id":"e8072572.fffa18","type":"link out","z":"68862836.29c7a8","name":"living room state","links":["faa9cc31.66ec7"],"x":990,"y":330,"wires":[]},{"id":"ba8e1c42c48890af","type":"function","z":"68862836.29c7a8","name":"Reset","func":"flow.set('lights', null)\nflow.set('cfg', null)\n\nreturn msg","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":365,"y":135,"wires":[["2a0d169a.91782a"]]},{"id":"daf678d0db2af786","type":"switch","z":"68862836.29c7a8","name":"Updated?","property":"update","propertyType":"msg","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":540,"y":270,"wires":[["2a0d169a.91782a"]]},{"id":"e49dfffe0583db4e","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":330,"wires":[["39541c73.33d464"]]},{"id":"b1d245649953149b","type":"trigger","z":"68862836.29c7a8","name":"pause","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":695,"y":480,"wires":[["6210bc08.905bc4"]]},{"id":"3044ab1b0964f72a","type":"trigger","z":"68862836.29c7a8","name":"Back to Auto","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":715,"y":525,"wires":[["6210bc08.905bc4"]]},{"id":"ba847a7ca44c07c3","type":"change","z":"68862836.29c7a8","name":"cooldown","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('manualCooldown')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":525,"y":525,"wires":[["3044ab1b0964f72a"]]},{"id":"7f31ef6f068e5b93","type":"change","z":"68862836.29c7a8","name":"timeOffAfter","rules":[{"t":"set","p":"delay","pt":"msg","to":"$env('timeOffAfter')*1000","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":455,"y":585,"wires":[["380a05c00a74bf5f"]]},{"id":"380a05c00a74bf5f","type":"trigger","z":"68862836.29c7a8","name":"Turn Off after motion ends","op1":"","op2":"","op1type":"nul","op2type":"payl","duration":"5","extend":true,"overrideDelay":true,"units":"s","reset":"stop","bytopic":"all","topic":"topic","outputs":1,"x":685,"y":615,"wires":[["2368d65a.ed031a"]]},{"id":"e0c421ee2f5c3583","type":"tab","label":"Living Room","disabled":false,"info":"","env":[]},{"id":"fc60c2e22cb6a5b6","type":"group","z":"e0c421ee2f5c3583","name":"Living Room Lighting - Motion Control","style":{"label":true},"nodes":["56f6cba8f2b189a6","2161bd8d13751ab1","d290edb76b1f1a1a","e06050b0c1337d0b","c889feed3908ab39","97faaeaadfd9af3a","9475c3a27378fec3","0e6422737040fceb","eef825106d7c68a6","59bbe0214ace61b2","ebbe0fdf06af722c","807e512198d41211","a9b8d1f6c0bf776b"],"x":14,"y":19,"w":1112,"h":262},{"id":"56f6cba8f2b189a6","type":"server-state-changed","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Light Changed - Living Room","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":["light.living_room_display_led","light.living_room_dreamview","light.living_room_lamp","light.living_room_lava_lamp","light.living_room_leds","light.living_room_main_light","light.living_room_tv_leds"],"entityidfiltertype":"list","outputinitially":true,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":160,"y":100,"wires":[["0e6422737040fceb"]]},{"id":"2161bd8d13751ab1","type":"server-state-changed","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Presence - Living Room","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.living_room_motion","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":false,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":140,"y":165,"wires":[["0e6422737040fceb"],[]]},{"id":"d290edb76b1f1a1a","type":"subflow:68862836.29c7a8","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"","env":[{"name":"timeOffAfter","value":"400","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":580,"y":100,"wires":[["ebbe0fdf06af722c"],["807e512198d41211"],[],[]]},{"id":"e06050b0c1337d0b","type":"api-call-service","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Day Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.living_room_day"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":960,"y":60,"wires":[["76a8af99da83469f"]]},{"id":"c889feed3908ab39","type":"api-call-service","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Night Scene ON","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"scene","service":"turn_on","areaId":[],"deviceId":[],"entityId":["scene.living_room_night"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":960,"y":180,"wires":[["76a8af99da83469f"]]},{"id":"97faaeaadfd9af3a","type":"api-call-service","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Living Room Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.living_room_display_led","light.living_room_lava_lamp","light.living_room_leds","light.living_room_main_light","light.living_room_tv_leds"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":990,"y":240,"wires":[["76a8af99da83469f"]]},{"id":"9475c3a27378fec3","type":"api-call-service","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Living Room Lights OFF","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"light","service":"turn_off","areaId":[],"deviceId":[],"entityId":["light.living_room_display_led","light.living_room_leds","light.living_room_main_light","light.living_room_tv_leds"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":990,"y":120,"wires":[["76a8af99da83469f"]]},{"id":"0e6422737040fceb","type":"time-range-switch","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"Day?","lat":"","lon":"","startTime":"09:00","endTime":"18:00","startOffset":0,"endOffset":0,"x":370,"y":140,"wires":[["d290edb76b1f1a1a"],["a9b8d1f6c0bf776b"]]},{"id":"eef825106d7c68a6","type":"api-current-state","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"TV On?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"media_player.living_room_tv","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":780,"y":240,"wires":[[],["97faaeaadfd9af3a"]]},{"id":"59bbe0214ace61b2","type":"api-current-state","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"TV On?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"media_player.living_room_tv","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":780,"y":180,"wires":[[],["c889feed3908ab39"]]},{"id":"ebbe0fdf06af722c","type":"api-current-state","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"TV On?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"media_player.living_room_tv","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":780,"y":60,"wires":[[],["e06050b0c1337d0b"]]},{"id":"807e512198d41211","type":"api-current-state","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"TV On?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"media_player.living_room_tv","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":780,"y":120,"wires":[[],["9475c3a27378fec3"]]},{"id":"a9b8d1f6c0bf776b","type":"subflow:68862836.29c7a8","z":"e0c421ee2f5c3583","g":"fc60c2e22cb6a5b6","name":"","env":[{"name":"timeOffAfter","value":"400","type":"num"},{"name":"brightness","value":"","type":"num"},{"name":"manualLight","value":"true","type":"bool"}],"x":580,"y":180,"wires":[["59bbe0214ace61b2"],["eef825106d7c68a6"],[],[]]},{"id":"76a8af99da83469f","type":"debug","z":"e0c421ee2f5c3583","name":"debug 2","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":1300,"y":140,"wires":[]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Day</a></b></summary><blockquote>
 <b><i>Automation to activate living room day time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.living_room_day](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Night</a></b></summary><blockquote>
 <b><i>Automation to activate living room night time scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.living_room_night](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Movie</a></b></summary><blockquote>
 <b><i>Automation to activate living room movie scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.living_room_movie](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Movie Time</a></b></summary><blockquote>
 <b><i>Automation automatically turn on <a name="LINK-TO-SCENE">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.living_room_movie_time](***)
 - [Samsung SmartTV Integration](https://github.com/ollo69/ha-samsungtv-smart) </details>
 
@@ -883,45 +950,52 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 </details>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Bright</a></b></summary><blockquote>
 <b><i>Automation to activate bright office scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_bright](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Dull</a></b></summary><blockquote>
 <b><i>Automation to activate dull office scene.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_dull](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Gaming</a></b></summary><blockquote>
 <b><i>Automation to activate gaming scene when xbox turned on.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_gaming](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Lamp</a></b></summary><blockquote>
 <b><i>Automation to activate bright office scene with desk lamp.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_lamp](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Desk Lamp Tag</a></b></summary><blockquote>
 <b><i>NFC Tag used to easily turn on the desk lamp.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_lamp](***)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Meeting</a></b></summary><blockquote>
 <b><i>Automation to activate meeting scene so wife knows on meeting when camera or audio input activated on mac.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [scene.office_meeting](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Off</a></b></summary><blockquote>
@@ -936,14 +1010,16 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Party On</a></b></summary><blockquote>
 <b><i>Automation to activate party mode which alternates lighting using a script.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [input_boolean.party](***)
 - [script.party_on](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Party Off</a></b></summary><blockquote>
 <b><i>Automation to de-activate party mode.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [input_boolean.party](***)
 - [script.party_off](***) </details>
 
@@ -952,7 +1028,8 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Tag All Off</a></b></summary><blockquote>
 <b><i>Automation to turn all lights off using NFC Tags next to our bed.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 </blockquote></details></details>
 
@@ -962,41 +1039,46 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Car Wash Notify</a></b></summary>
 <b><i>Using the car wash input boolean to predict upcoming weather to see if it is worth washing my car or not. Then providing options as to either book car wash at home or show me navigation to nearest car wash.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [binary_sensor.car_wash](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/entities/binary_sensor.yaml#L1)
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Car Wash Binary Sensor Integration](https://github.com/Limych/ha-car_wash) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Citymapper Notify Wife (Random)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to wifes phone to input end location from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Citymapper Notify Wife (Work)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to wifes phone to work which auto populates directions from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Citymapper Notify Sam (Random)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to my phone to input end location from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Waze to Work x2</a></b></summary>
 <b><i>2x automations triggered by dashboard pushing actionable notification to my phone that automatically navigates to two work locations with the <a href="https://www.waze.com/en-GB/live-map/">Waze Mobile App.</a></b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Waze URL API](https://developers.google.com/waze/deeplinks)
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354) </details>
 
 </blockquote></details>
@@ -1007,43 +1089,49 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Server Cabinet Fan Control</a></b></summary>
 <b><i>Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [sensor.server_temperature](***) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Git Auto Update</a></b></summary>
 <b><i>Script that automatically updates github at 23:23:23 everyday to keep repo up-to-date.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [ha_gitpush.sh](***)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Restart Complete Notify</a></b></summary>
 <b><i>Automation which sends notification to my mac and google hubs through TTS to alert us that system restart has been complete and now back up. Gives the wife a heads up that things are now working and gives me actionable notification to open HA from notification on PC.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Pre-Shutdown Notify</a></b></summary>
 <b><i>Automation which sends notification to my mac, wifes phone and google hubs through TTS to alert us that system is restarting. Gives the wife a heads up that things won't work for a few minutes.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">System Updates Notify</a></b></summary>
 <b><i>Provides notifications for all system notifications including HACS and Add-Ons. Sensors are also pushed to the HA Dashboard.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [HA Supervisor Update Sensors](https://www.home-assistant.io/integrations/hassio)
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)
 - [Update Notifications Blueprint](https://github.com/smcnab1/op-question-mark/blob/master/blueprints/automation/mdegat01/update_notifications.yaml) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Tablet Charging</a></b></summary>
 <b><i>Automation to trigger dashboard tablet's charging schedule. When battery level gets below 40%, charging begins. When above 90%, charging stops.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk) </details>
 
 </blockquote></details>
@@ -1054,32 +1142,36 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">TV Control Notify</a></b></summary>
 <b><i>Automation which sends actionable notification to open Smartthings Remote App to control TV when switched on.</b></i>
 
-&nbsp;&nbsp;*which uses:*
+&nbsp;&nbsp;_which uses:_
+
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Samsung SmartTV Integration](https://github.com/ollo69/ha-samsungtv-smart) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">Night Reminder</a></b></summary>
 <b><i>Automation which triggers at 21:30 to remind me to get off my PC if I am still on it. Using flashing red lights, TTS & Actionable Notification through my PC.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">XBOX Hurry Up Notify</a></b></summary>
 <b><i>Automation which sends notification to wifes phone when I turn on my XBOX and she is home. Uses actionable notifications to trigger a hurry up <a href="ACTIONS-URL">automation.</a></b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [HA XBOX Integration](https://www.home-assistant.io/integrations/xbox/)
 </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">XBOX Hurry Up Actions</a></b></summary>
 <b><i>Automation which is triggered by the wife through actionable notification. Flashes lights in office red and plays TTS through google home telling me to hurry up. Also sends me a notification on PC on other monitor.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
-- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [HA XBOX Integration](https://www.home-assistant.io/integrations/xbox/) </details>
 
 </blockquote></details>
@@ -1090,29 +1182,33 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="LINK-TO-AUTO">Wife Morning Briefing</a></b></summary>
 <b><i>Automation which sends TTS morning briefing for wife when she gets up for work. Provides update on weather and travel time. Then plays relaxing music from Spotify.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [Spotify Integration](https://www.home-assistant.io/integrations/spotify/) </details>
 
 <details><summary><b><a name="LINK-TO-AUTO">TTS Input Bedroom</a></b></summary>
 <b><i>Automation that sends input from HA Dashboard to Google Hub Mini's as TTS Message.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">TTS Input Living Room</a></b></summary>
 <b><i>Automation that sends input from HA Dashboard to Google Hub Mini's as TTS Message.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/blob/209288097b76e70e89e5073b850b7376bfef1dd1/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet/01-Home.yaml#L354)</details>
 
 <details><summary><b><a name="LINK-TO-AUTO">TTS Welcome Home Message</a></b></summary>
 <b><i>Automation which triggers TTS Briefing when arriving back at home. Pulls person who arrives home into the automation for personalised message.</b></i>
 
-&nbsp;&nbsp;*which uses:*
-- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) 
+&nbsp;&nbsp;_which uses:_
+
+- [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 </blockquote></details>
@@ -1129,17 +1225,17 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [{"id":"cdd59c9d83846168","type":"tab","label":"Sleep Control","disabled":false,"info":"","env":[]},{"id":"6e0637a92024e97a","type":"group","z":"cdd59c9d83846168","name":"Bed Sensor Control","style":{"label":true},"nodes":["594b179734804509","8a8acaa98d476bff","546da122fe24161c","934f749c9cf008ef","a8146ffcf68f5f5e","a3969041aa39c0ca","14d952390185890f","3fe19f20e16b2ad9","c0fd77c0c1859d2e","c7565947a8c99983","7810e1359aaade77","584434e5093fe849"],"x":14,"y":19,"w":812,"h":202},{"id":"594b179734804509","type":"server-state-changed","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Sam in Bed","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.bed_sensor_sam","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":true,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":110,"y":80,"wires":[["546da122fe24161c"],["a3969041aa39c0ca"]]},{"id":"8a8acaa98d476bff","type":"server-state-changed","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Leah in Bed","server":"f43d015e.4b29","version":4,"exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"entityidfilter":"binary_sensor.bed_sensor_leah","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"on","halt_if_type":"str","halt_if_compare":"is","outputs":2,"output_only_on_state_change":true,"for":"0","forType":"num","forUnits":"minutes","ignorePrevStateNull":false,"ignorePrevStateUnknown":false,"ignorePrevStateUnavailable":false,"ignoreCurrentStateUnknown":false,"ignoreCurrentStateUnavailable":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"eventData"},{"property":"topic","propertyType":"msg","value":"","valueType":"triggerId"}],"x":110,"y":160,"wires":[["934f749c9cf008ef"],["a8146ffcf68f5f5e"]]},{"id":"546da122fe24161c","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Sam is in Bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_on","areaId":[],"deviceId":[],"entityId":["input_boolean.sam_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":300,"y":60,"wires":[["14d952390185890f"]]},{"id":"934f749c9cf008ef","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Leah is in bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_on","areaId":[],"deviceId":[],"entityId":["input_boolean.leah_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":300,"y":140,"wires":[["3fe19f20e16b2ad9"]]},{"id":"a8146ffcf68f5f5e","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Leah out of Bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_off","areaId":[],"deviceId":[],"entityId":["input_boolean.leah_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":300,"y":180,"wires":[["584434e5093fe849"]]},{"id":"a3969041aa39c0ca","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Sam out of Bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_off","areaId":[],"deviceId":[],"entityId":["input_boolean.sam_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":300,"y":100,"wires":[["7810e1359aaade77"]]},{"id":"14d952390185890f","type":"api-current-state","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Leah in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.leah_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":490,"y":60,"wires":[["c0fd77c0c1859d2e"],[]]},{"id":"3fe19f20e16b2ad9","type":"api-current-state","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Sam in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.sam_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":490,"y":140,"wires":[["c0fd77c0c1859d2e"],[]]},{"id":"c0fd77c0c1859d2e","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Both in Bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_on","areaId":[],"deviceId":[],"entityId":["input_boolean.all_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":710,"y":80,"wires":[[]]},{"id":"c7565947a8c99983","type":"api-call-service","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Both out of Bed","server":"f43d015e.4b29","version":5,"debugenabled":false,"domain":"input_boolean","service":"turn_on","areaId":[],"deviceId":[],"entityId":["input_boolean.all_sleeping"],"data":"","dataType":"jsonata","mergeContext":"","mustacheAltTags":false,"outputProperties":[],"queue":"none","x":720,"y":160,"wires":[[]]},{"id":"7810e1359aaade77","type":"api-current-state","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Leah in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.leah_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":490,"y":100,"wires":[[],["c7565947a8c99983"]]},{"id":"584434e5093fe849","type":"api-current-state","z":"cdd59c9d83846168","g":"6e0637a92024e97a","name":"Sam in Bed?","server":"f43d015e.4b29","version":3,"outputs":2,"halt_if":"on","halt_if_type":"str","halt_if_compare":"is","entity_id":"input_boolean.sam_sleeping","state_type":"str","blockInputOverrides":false,"outputProperties":[{"property":"payload","propertyType":"msg","value":"","valueType":"entityState"},{"property":"data","propertyType":"msg","value":"","valueType":"entity"}],"for":"0","forType":"num","forUnits":"minutes","override_topic":false,"state_location":"payload","override_payload":"msg","entity_location":"data","override_data":"msg","x":490,"y":180,"wires":[[],["c7565947a8c99983"]]},{"id":"f43d015e.4b29","type":"server","name":"Home Assistant","version":4,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true,"heartbeat":false,"heartbeatInterval":30,"areaSelector":"friendlyName","deviceSelector":"friendlyName","entitySelector":"friendlyName","statusSeparator":"at: ","statusYear":"hidden","statusMonth":"short","statusDay":"numeric","statusHourCycle":"h23","statusTimeFormat":"h:m"}]
 </details>
 
-&nbsp;&nbsp;*which uses:*
-- [ESPresense Integration](https://espresense.com/home_assistant) 
+&nbsp;&nbsp;_which uses:_
+
+- [ESPresense Integration](https://espresense.com/home_assistant)
 - [ESPHome Add-On](https://github.com/esphome/esphome)
 </details>
 </blockquote></details>
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/smcnab1/op-question-mark.svg?style=for-the-badge
 [contributors-url]: https://github.com/smcnab1/op-question-mark/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/smcnab1/op-question-mark.svg?style=for-the-badge

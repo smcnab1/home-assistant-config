@@ -5,14 +5,26 @@
 #                                                                     
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Lighting Bathroom Bath'
+alias: Lighting Bathroom Bath
 description: Automation to activate bath time scene.
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
+  - service: light.turn_on
     data:
-      transition: 30
+      transition: 60
+      brightness: 117
+      hs_color:
+        - 2
+        - 100
+      xy_color:
+        - 0.699
+        - 0.3
+      rgb_color:
+        - 255
+        - 8
+        - 0
     target:
-      entity_id: scene.bathroom_bath
-mode: single
+      entity_id: light.bathroom_main_lights
+

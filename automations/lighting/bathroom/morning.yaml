@@ -5,14 +5,25 @@
 #                                                                          |___/ 
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Lighting Bathroom Morning'
-description: Automation to activate morning bathroom scene.
+alias: Lighting Bathroom Morning
+description: Automation to activate bathroom morning scene.
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
+  - service: light.turn_on
     data:
       transition: 30
+      brightness: 117
+      hs_color:
+        - 2
+        - 100
+      xy_color:
+        - 0.699
+        - 0.3
+      rgb_color:
+        - 255
+        - 8
+        - 0
     target:
-      entity_id: scene.bathroom_morning
-mode: single
+      entity_id: light.bathroom_main_lights
