@@ -1,0 +1,53 @@
+#             _            _                       _     _                        _   _  __      
+#  _ _ ___ __| |_ __ _ _ _| |_   __ ___ _ __  _ __| |___| |_ ___   ___   _ _  ___| |_(_)/ _|_  _ 
+# | '_/ -_|_-<  _/ _` | '_|  _| / _/ _ \ '  \| '_ \ / -_)  _/ -_) |___| | ' \/ _ \  _| |  _| || |
+# |_| \___/__/\__\__,_|_|  \__| \__\___/_|_|_| .__/_\___|\__\___|       |_||_\___/\__|_|_|  \_, |
+#                                            |_|                                            |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Restart Complete Notify
+description: >-
+  Automation which sends notification to my mac and google hubs through TTS to
+  alert us that system restart has been complete and now back up. Gives the wife
+  a heads up that things are now working and gives me actionable notification to
+  open HA from notification on PC.
+mode: single
+trigger:
+  - platform: homeassistant
+    event: start
+condition: []
+action:
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: binary_sensor.sam_s_mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_sam_s_mac_mini
+            data:
+              title: Home Assistant - System Management
+              message: Home Assistant has Restarted
+              data:
+                actions:
+                  - action: OPEN
+                    title: Open Home Assistant
+                    uri: http://homeassistant.local:8123/
+                    icon: sfsymbols:safari
+      - if:
+          - condition: state
+            entity_id: person.presence
+            state: home
+        then:
+          - service: tts.cloud_say
+            data:
+              message: >-
+                Home Assistant is back up. Things should work now. Not so silly
+                now
+              entity_id: media_player.bedroom_google_home
+          - service: tts.cloud_say
+            data:
+              message: >-
+                Home Assistant is back up. Things should work now. Not so silly
+                now
+              entity_id: media_player.living_room_google_home
+

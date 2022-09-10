@@ -1,0 +1,139 @@
+---
+button_card_templates: 
+  !include_dir_merge_named "../../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
+decluttering_templates:
+  !include "/config/ui_lovelace_minimalist/dashboard/adaptive-dash/decluttering_templates/decluttering_templates.yaml"
+
+title: "Minimalist Tablet"
+theme: "minimalist-navbar"
+background: "var(--background-image)"
+views:
+  - type: "custom:grid-layout"
+    title: "home"
+    icon: "mdi:home"
+    path: "home"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "1fr 1fr"
+      grid-template-areas: |
+        "main right"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/01-Home-Right.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Hall"
+    icon: "mdi:door-open"
+    path: "hall"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/02-Hall.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Living Room"
+    icon: "mdi:sofa"
+    path: "living-room"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/03-Living-Room.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Kitchen"
+    icon: "mdi:chef-hat"
+    path: "kitchen"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/04-Kitchen.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Bedroom"
+    icon: "mdi:bed-double"
+    path: "bedroom"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/05-Bedroom.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Bathroom"
+    icon: "mdi:bathtub"
+    path: "bathroom"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/06-Bathroom.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Office"
+    icon: "mdi:desk"
+    path: "office"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/07-Office.yaml"
+
+  - type: "custom:grid-layout"
+    title: "System"
+    icon: "mdi:network"
+    path: "system"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+    cards:
+      - !include "views-tablet/01-Home.yaml"
+      - !include "views-tablet/08-System.yaml"
+
+resources:
+  - url: /browser_mod.js
+    type: module
+  - url: /local/decluttering-card.js
+    type: module
+  - url: /hacsfiles/button-card/button-card.js
+    tyle: module
+  - url: /hacsfiles/lovelace-card-mod/card-mod.js
+    type: module
+  - url: /hacsfiles/frigate-hass-card/frigate-hass-card.js
+    type: module
+  - url: /local/restriction-card.js
+    type: module
+  - url: /local/community/atomic-calendar-revive/atomic-calendar-revive.js
+    type: module
+  - url: /local/hasl-departure-card.js
+    type: js
+  - url: /local/notify-card.js
+    type: module
+  - url: /local/mini-media-player-bundle.js?v=1.16.4
+    type: module
+  - url: /local/custom-lovelace/swipe-card/swipe-card.js
+    type: module
+  - url: /hacsfiles/lovelace-layout-card/layout-card.js
+    type: module

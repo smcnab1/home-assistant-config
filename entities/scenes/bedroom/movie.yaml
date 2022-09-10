@@ -1,0 +1,41 @@
+#  _            _                                          _     
+# | |__  ___ __| |_ _ ___  ___ _ __    ___   _ __  _____ _(_)___ 
+# | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ V / / -_)
+# |_.__/\___\__,_|_| \___/\___/_|_|_|       |_|_|_\___/\_/|_\___|
+#                                                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Bedroom Movie'
+entities:
+  light.bedroom_leds:
+    supported_color_modes:
+    - hs
+    color_mode: hs
+    brightness: 76
+    hs_color:
+    - 240
+    - 100
+    rgb_color:
+    - 0
+    - 0
+    - 255
+    xy_color:
+    - 0.136
+    - 0.04
+    icon: mdi:led-strip-variant
+    friendly_name: 'Bedroom: LEDs'
+    supported_features: 0
+    state: 'on'
+  light.bedroom_fairy_lights:
+    supported_color_modes:
+    - onoff
+    friendly_name: Fairy Lights
+    supported_features: 0
+    color_mode: onoff
+    state: 'on'
+icon: mdi:movie
+metadata:
+  light.bedroom_leds:
+    entity_only: true
+  light.bedroom_fairy_lights:
+    entity_only: true

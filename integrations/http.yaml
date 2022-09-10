@@ -1,0 +1,13 @@
+#  _  _ _____ _____ ___ 
+# | || |_   _|_   _| _ \
+# | __ | | |   | | |  _/
+# |_||_| |_|   |_| |_|  
+#                       
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Activates HTTP Access.
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: !secret http_trusted_proxies
+  ip_ban_enabled: false
+  login_attempts_threshold: 5

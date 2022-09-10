@@ -1,0 +1,10 @@
+#  __  __  ___ _____ _____ 
+# |  \/  |/ _ \_   _|_   _|
+# | |\/| | (_) || |   | |  
+# |_|  |_|\__\_\|_|   |_|  
+#                          
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Activates the MQTT Integration.
+
+mqtt: # MQTT Details
+

@@ -1,0 +1,291 @@
+---
+card_esh_room_k:
+  color: "var(--google-grey-500)"
+  show_icon: true
+  show_name: true
+  show_label: true
+  template:
+    - "ulm_translation_engine"
+  size: "20px"
+  variables:
+    ulm_custom_card_esh_room_light_entity: null
+    ulm_custom_card_esh_room_climate_entity: null
+    ulm_card_thermostat_enable_popup: false
+    ulm_card_light_enable_popup: true
+  styles:
+    card:
+      - border-radius: "20px"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+    grid:
+      - grid-template-areas: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "'i light' 'n climate' 'l climate'";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "'i light' 'n n' 'l l'";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "'i .' 'n climate' 'l climate'";
+            } else {
+                return "'i .' 'n n' 'l l'";
+            }
+          ]]]
+      - grid-template-columns: "1fr 1fr"
+      - grid-template-rows: "min-content"
+    icon:
+      - color: "rgba(var(--color-theme),0.2)"
+    img_cell:
+      - background-color: "rgba(var(--color-theme),0.05)"
+      - border-radius: "50%"
+      - place-self: "center"
+      - width: "42px"
+      - height: "42px"
+    name:
+      - align-self: "end"
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "14px"
+      - margin-left: "12px"
+      - margin-top: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "8px";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "12px";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "8px";
+            } else {
+                return "12px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "100%";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else {
+                return "100%";
+            }
+          ]]]
+    label:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+      - margin-bottom: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "0px";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "3px";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "0px";
+            } else {
+                return "3px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_esh_room_light_entity && variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else if (variables.ulm_custom_card_esh_room_light_entity) {
+                return "100%";
+            } else if (variables.ulm_custom_card_esh_room_climate_entity) {
+                return "85%";
+            } else {
+                return "100%";
+            }
+          ]]]
+    state:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+    custom_fields:
+      light:
+        - display: >
+            [[[
+                  if (variables.ulm_custom_card_esh_room_light_entity) {
+                      return "block";
+                  } else {
+                      return "none";
+                  }
+            ]]]
+      climate:
+        - display: >
+            [[[
+                  if (variables.ulm_custom_card_esh_room_climate_entity) {
+                      return "block";
+                  } else {
+                      return "none";
+                  }
+            ]]]
+  custom_fields:
+    light:
+      card:
+        entity: "[[[ return variables.ulm_custom_card_esh_room_light_entity ]]]"
+        name: "[[[ return name ]]]"
+        state:
+          - value: "on"
+            icon: "mdi:lightbulb-group"
+            styles:
+              icon:
+                - color: "rgba(var(--color-blue),1)"
+              img_cell:
+                - background-color: "rgba(var(--color-blue), 0.2)"
+          - value: "off"
+            icon: "mdi:lightbulb-group-off"
+        type: "custom:button-card"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+          - "blue_on"
+        variables: >
+          [[[
+            let vars = {};
+            vars.ulm_card_light_enable_popup = variables.ulm_card_light_enable_popup;
+
+            if(variables.ulm_card_light_enable_popup) {
+              vars.ulm_custom_popup = {
+                'template': 'popup_light_brightness',
+                'popup_variables': {
+                  'ulm_popup_light_entity': variables.ulm_custom_card_esh_room_light_entity,
+                }
+              };
+            }
+            return vars;
+          ]]]
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Kitchen Lighting"
+              size: wide
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.kitchen_main_lights
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.kitchen_leds
+                        variables:
+                          ulm_card_light_name: LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Scenes"
+                  - type: horizontal-stack
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_normal
+                        name: Normal
+                        icon: mdi:chef-hat
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_normal
+                      - type: "custom:button-card"
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_cooking
+                        name: Cooking
+                        icon: mdi:stove
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_cooking
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_off
+
+    climate:
+      card:
+        entity: "[[[ return variables.ulm_custom_card_esh_room_climate_entity ]]]"
+        name: "[[[ return name ]]]"
+        icon: mdi:devices
+        type: "custom:button-card"
+        styles:
+          card:
+            - margin-top: "5px"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+        variables: >
+          [[[
+            let vars = {};
+            vars.ulm_card_thermostat_enable_popup = variables.ulm_card_light_enable_popup;
+
+            if(variables.ulm_card_thermostat_enable_popup) {
+              vars.ulm_custom_popup = {
+                'template': 'popup_thermostat_temperature',
+                'popup_variables': {
+                  'ulm_popup_thermostat_entity': variables.ulm_custom_card_esh_room_climate_entity,
+                }
+              };
+            }
+            return vars;
+          ]]]
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Kitchen Media"
+              size: wide
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.living_room_google_home
+                    variables:
+                      ulm_card_media_player_name: Google Assistant
+                      ulm_card_media_player_icon: mdi:google-assistant
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.living_room_sonos
+                    variables:
+                      ulm_card_media_player_name: Sonos Speaker
+                      ulm_card_media_player_icon: mdi:speaker
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true

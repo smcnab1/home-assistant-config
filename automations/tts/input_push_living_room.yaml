@@ -1,0 +1,16 @@
+#  _   _        _                _           _ _     _                                
+# | |_| |_ ___ (_)_ _  _ __ _  _| |_   ___  | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __  
+# |  _|  _(_-< | | ' \| '_ \ || |  _| |___| | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \ 
+#  \__|\__/__/ |_|_||_| .__/\_,_|\__|       |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|
+#                     |_|                                  |___/                      
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: TTS Input Push Living Room
+description: Automation that sends input from HA Dashboard to Google Hub Mini's as TTS Message.
+trigger: []
+condition: []
+action:
+  - data_template:
+      entity_id: media_player.living_room_google_home
+      message: '{{ states(''input_text.tts_message_living_room'') }}'
+    service: tts.cloud_say

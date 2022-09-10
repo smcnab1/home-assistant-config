@@ -1,0 +1,11 @@
+#_ _      _              _           
+#  __ _| | |  __| |___ ___ _ __(_)_ _  __ _ 
+# / _` | | | (_-< / -_) -_) '_ \ | ' \/ _` |
+# \__,_|_|_| /__/_\___\___| .__/_|_||_\__, |
+#                         |_|         |___/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Input Boolean indicating if everyone in the house is sleeping.
+
+name: All Sleeping
+icon: mdi:bed-double
+initial: off

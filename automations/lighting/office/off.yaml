@@ -1,0 +1,17 @@
+#       __  __ _                     __  __ 
+#  ___ / _|/ _(_)__ ___   ___   ___ / _|/ _|
+# / _ \  _|  _| / _/ -_) |___| / _ \  _|  _|
+# \___/_| |_| |_\__\___|       \___/_| |_|  
+#                                           
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Office Off'
+description: 'Automation to turn off all office lights.'
+trigger: []
+condition: []
+action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.all_office_lights
+mode: single

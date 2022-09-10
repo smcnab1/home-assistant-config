@@ -1,0 +1,67 @@
+#  _          _   _                               _          _   _
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___  | |__  __ _| |_| |_
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| | '_ \/ _` |  _| ' \
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       |_.__/\__,_|\__|_||_|
+#
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting Bathroom Bath
+description: Automation to activate bath time scene.
+mode: single
+trigger:
+  - platform: state
+    entity_id:
+      - input_boolean.bath_time
+    to: "on"
+    id: "ON"
+  - platform: state
+    entity_id:
+      - input_boolean.bath_time
+    to: "off"
+    id: "OFF"
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: "ON"
+        sequence:
+          - service: scene.create
+            data:
+              scene_id: prebath
+              snapshot_entities: light.bathroom_main_lights
+          - service: light.turn_on
+            data:
+              transition: 60
+              brightness: 117
+              hs_color:
+                - 2
+                - 100
+              xy_color:
+                - 0.699
+                - 0.3
+              rgb_color:
+                - 255
+                - 8
+                - 0
+            target:
+              entity_id: light.bathroom_main_lights
+      - conditions:
+          - condition: trigger
+            id: "OFF"
+        sequence:
+          - service: scene.turn_on
+            data:
+              transition: 57
+            target:
+              entity_id: scene.prebath
+          - delay:
+              hours: 0
+              minutes: 1
+              seconds: 0
+              milliseconds: 0
+          - service: light.turn_off
+            data:
+              transition: 112
+            target:
+              entity_id: light.bathroom_main_lights
