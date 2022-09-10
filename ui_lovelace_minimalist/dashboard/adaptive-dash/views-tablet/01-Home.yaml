@@ -381,6 +381,7 @@ cards:
       navigation_path: "hall"
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_hall_lights
+      ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
     label: >
       [[[
         return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
@@ -460,6 +461,7 @@ cards:
       navigation_path: "bathroom"
     variables:
       ulm_custom_card_esh_room_light_entity: light.all_bathroom_lights
+      ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
     label: >
       [[[
         return "🌡️ " + states[ 'sensor.bathroom_temperature'].state + "°C"
