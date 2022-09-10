@@ -1,0 +1,16 @@
+
+alias: 'Scene: Hall Sleep'
+description: ''
+trigger: []
+condition: []
+action:
+  - service: scene.turn_on
+    data:
+      transition: 20
+    target:
+      entity_id: scene.scene_hall_sleep
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.hall_lamp
+mode: single

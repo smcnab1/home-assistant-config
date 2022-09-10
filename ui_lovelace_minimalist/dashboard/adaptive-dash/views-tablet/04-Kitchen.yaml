@@ -59,20 +59,18 @@ cards:
       - type: "custom:button-card"
         template: chip_mdi_icon_state
         variables:
-          ulm_chip_mdi_icon_state_entity: sensor.kitchen_switches_on
+          ulm_chip_mdi_icon_state_entity: sensor.kitchen_switch_on
           ulm_chip_mdi_icon_state_icon: mdi:power-socket-uk
       - type: "custom:button-card"
         template: chip_mdi_icon_state
         variables:
-          ulm_chip_mdi_icon_state_entity: sensor.kitchen_media_on
+          ulm_chip_mdi_icon_state_entity: sensor.kitchen_media_players_on
           ulm_chip_mdi_icon_state_icon: mdi:television
-      - type: 'custom:button-card'
-        template: chip_icon_label
-        icon: mdi:thermometer
-        label: >
-          [[[
-            return states[ 'sensor.kitchen_temperature'].state + "°C "
-          ]]]
+      - type: "custom:button-card"
+        template: chip_mdi_icon_state
+        variables:
+          ulm_chip_mdi_icon_state_entity: sensor.kitchen_temperature_temperature_2
+          ulm_chip_mdi_icon_state_icon: mdi:thermometer
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
@@ -85,12 +83,11 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_light
-        entity: light.kitchen_main_lights
+        entity: light.kitchen_lights
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
-          ulm_card_light_enable_slider: true
-          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
         template: card_light
@@ -98,8 +95,7 @@ cards:
         variables:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
-          ulm_card_light_enable_slider: true
-          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
           ulm_card_light_enable_popup: true
   - view_layout: ### SCENES ###
       grid-area: "title2"
@@ -112,34 +108,48 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.lighting_kitchen_normal
-        name: Normal
+        entity: automation.scene_living_room_day
+        name: Day
         icon: mdi:weather-sunny
+        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.lighting_kitchen_normal
+            entity_id: automation.scene_living_room_day
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.lighting_kitchen_cooking
-        name: Cooking
-        icon: mdi:chef-hat
+        entity: automation.scene_living_room_night
+        name: Night
+        icon: mdi:weather-night
+        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.lighting_kitchen_cooking
+            entity_id: automation.scene_living_room_night
       - type: "custom:button-card"
         template: card_vertical_button
-        entity: automation.lighting_kitchen_off
+        entity: automation.scene_living_room_movie
+        name: Movie
+        icon: mdi:movie
+        show_last_changed: true
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data:
+            entity_id: automation.scene_living_room_movie
+      - type: "custom:button-card"
+        template: card_vertical_button
+        entity: automation.scene_living_room_off
         name: All Off
         icon: mdi:lightbulb-off
+        show_last_changed: true
         tap_action:
           action: call-service
           service: automation.trigger
           service_data:
-            entity_id: automation.lighting_kitchen_off
+            entity_id: automation.scene_living_room_off
 
   - view_layout: ### MEDIA ###
       grid-area: "title3"
@@ -152,7 +162,7 @@ cards:
     cards:
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.living_room_sonos
+        entity: media_player.living_room_sonos_sonos
         variables:
           ulm_card_media_player_name: Sonos
           ulm_card_media_player_enable_popup: true
@@ -161,7 +171,7 @@ cards:
           ulm_card_media_player_icon: mdi:speaker
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.living_room_google_home
+        entity: media_player.living_room_speaker
         variables:
           ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
@@ -185,13 +195,13 @@ cards:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.kitchen_motion_sensor
+        entity: binary_sensor.kitchen_motion_sensor_2
       - type: "custom:button-card"
         template: card_battery
-        entity: sensor.kitchen_motion_sensor_battery
+        entity: sensor.kitchen_motion_sensor_battery_sensor_2
         name: Motion
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
+          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery_sensor_2
           ulm_card_battery_battery_level_danger: 30
           ulm_card_battery_battery_level_warning: 80
           ulm_card_battery_name: Motion
@@ -216,8 +226,8 @@ cards:
             content:
               type: custom:frigate-card
               cameras:
-                - camera_entity: camera.living_room_camera_frigate
-                  camera_name: Kitchen
+                - camera_entity: camera.living_room
+                  camera_name: Living Room
               view:
                 default: live
               menu:

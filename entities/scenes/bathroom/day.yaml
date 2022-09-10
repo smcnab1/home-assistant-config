@@ -1,18 +1,12 @@
-#  _          _   _                                  _           
-# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   __| |__ _ _  _ 
-# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| / _` / _` | || |
-# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       \__,_\__,_|\_, |
-#                                                           |__/ 
-#--FROM https://github.com/smcnab1/op-question-mark
-
-name: 'Bathroom Day'
+id: '1660666229244'
+name: 'Scene: Bathroom Day'
 entities:
-  light.bathroom_main_lights:
+  light.all_bathroom_lights:
     supported_color_modes:
     - brightness
     - hs
     entity_id:
-    - light.bathroom_main_lights
+    - light.bathroom_lights
     icon: mdi:lightbulb-group
     friendly_name: ALL BATHROOM LIGHTS
     supported_features: 0
@@ -21,5 +15,5 @@ entities:
     state: 'on'
 icon: mdi:weather-sunny
 metadata:
-  light.bathroom_main_lights:
+  light.all_bathroom_lights:
     entity_only: true

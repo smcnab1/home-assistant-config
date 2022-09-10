@@ -28,74 +28,21 @@ card_generic_travel:
                           type: "horizontal-stack"
                           cards:
                             - type: "custom:button-card"
-                              name: "Car"
-                              icon: "mdi:car"
+                              name: "Work"
+                              icon: "mdi:briefcase"
                               tap_action:
-                                action: fire-dom-event
-                                browser_mod:
-                                  service: browser_mod.popup
-                                  data:
-                                    title: "Choose an Option"
-                                    content:
-                                      type: horizontal-stack
-                                      cards:
-                                        - type: "custom:button-card"
-                                          name: "Work"
-                                          icon: "mdi:briefcase"
-                                          tap_action:
-                                            action: fire-dom-event
-                                            browser_mod:
-                                              service: browser_mod.popup
-                                              data:
-                                                title: "Choose an Option"
-                                                content:
-                                                  type: "horizontal-stack"
-                                                  cards:
-                                                    - type: "custom:button-card"
-                                                      name: "Camden"
-                                                      icon: "mdi:car"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_waze_camden"
-                                                    - type: "custom:button-card"
-                                                      name: "Islington"
-                                                      icon: "mdi:car"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_waze_islington"
-                                        - type: "custom:button-card"
-                                          name: "Random"
-                                          icon: "mdi:car"
-                                          tap_action:
-                                            action: "call-service"
-                                            service: "automation.trigger"
-                                            service_data:
-                                              entity_id: "automation.transport_waze_random"
+                                action: "call-service"
+                                service: "automation.trigger"
+                                service_data:
+                                  entity_id: "automation.citymapper_notifications_sam_2"
                             - type: "custom:button-card"
-                              name: "Public Transport"
+                              name: "Custom"
                               icon: "mdi:train"
                               tap_action:
-                                action: fire-dom-event
-                                browser_mod:
-                                  service: browser_mod.popup
-                                  data:
-                                    title: "Choose an Option"
-                                    content:
-                                      type: horizontal-stack
-                                      cards:
-                                        - type: "custom:button-card"
-                                          name: "Custom"
-                                          icon: "mdi:train"
-                                          tap_action:
-                                            action: "call-service"
-                                            service: "automation.trigger"
-                                            service_data:
-                                              entity_id: "automation.transport_citymapper_notify_sam_random"
-
+                                action: "call-service"
+                                service: "automation.trigger"
+                                service_data:
+                                  entity_id: "automation.citymapper_notifications_sam_2"
                 - type: "custom:button-card"
                   entity_picture: "/local/avatar_leah.png"
                   show_entity_picture: true
@@ -115,7 +62,7 @@ card_generic_travel:
                                 action: "call-service"
                                 service: "automation.trigger"
                                 service_data:
-                                  entity_id: "automation.transport_citymapper_notify_leah_work"
+                                  entity_id: "automation.citymapper_notifications_leah_work"
                             - type: "custom:button-card"
                               name: "Custom"
                               icon: "mdi:train"
@@ -123,7 +70,7 @@ card_generic_travel:
                                 action: "call-service"
                                 service: "automation.trigger"
                                 service_data:
-                                  entity_id: "automation.transport_citymapper_notify_leah_random"
+                                  entity_id: "automation.citymapper_notifications_leah_random_2"
             - type: "custom:button-card"
               name: "Other Train Times"
               tap_action:
@@ -144,7 +91,7 @@ card_generic_travel:
                       hide_departed: true
                       language: en-EN
                       entities:
-                        - sensor.london_tfl_jubilee_city
+                        - sensor.london_tfl_jubilee_940gzzluwhp
 
   custom_fields:
     item1:
@@ -154,7 +101,7 @@ card_generic_travel:
           item1:
             card:
               type: "custom:button-card"
-              entity: sensor.london_tfl_jubilee_city
+              entity: sensor.london_tfl_jubilee_940gzzluwhp
               icon: "[[[ return variables.ulm_card_generic_icon; ]]]"
               tap_action:
                 action: fire-dom-event
@@ -180,74 +127,21 @@ card_generic_travel:
                                       type: "horizontal-stack"
                                       cards:
                                         - type: "custom:button-card"
-                                          name: "Car"
-                                          icon: "mdi:car"
+                                          name: "Work"
+                                          icon: "mdi:briefcase"
                                           tap_action:
-                                            action: fire-dom-event
-                                            browser_mod:
-                                              service: browser_mod.popup
-                                              data:
-                                                title: "Choose an Option"
-                                                content:
-                                                  type: horizontal-stack
-                                                  cards:
-                                                    - type: "custom:button-card"
-                                                      name: "Work"
-                                                      icon: "mdi:briefcase"
-                                                      tap_action:
-                                                        action: fire-dom-event
-                                                        browser_mod:
-                                                          service: browser_mod.popup
-                                                          data:
-                                                            title: "Choose an Option"
-                                                            content:
-                                                              type: "horizontal-stack"
-                                                              cards:
-                                                                - type: "custom:button-card"
-                                                                  name: "Camden"
-                                                                  icon: "mdi:car"
-                                                                  tap_action:
-                                                                    action: "call-service"
-                                                                    service: "automation.trigger"
-                                                                    service_data:
-                                                                      entity_id: "automation.transport_waze_camden"
-                                                                - type: "custom:button-card"
-                                                                  name: "Islington"
-                                                                  icon: "mdi:car"
-                                                                  tap_action:
-                                                                    action: "call-service"
-                                                                    service: "automation.trigger"
-                                                                    service_data:
-                                                                      entity_id: "automation.transport_waze_islington"
-                                                    - type: "custom:button-card"
-                                                      name: "Random"
-                                                      icon: "mdi:car"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_waze_random"
+                                            action: "call-service"
+                                            service: "automation.trigger"
+                                            service_data:
+                                              entity_id: "automation.citymapper_notifications_sam_2"
                                         - type: "custom:button-card"
-                                          name: "Public Transport"
+                                          name: "Custom"
                                           icon: "mdi:train"
                                           tap_action:
-                                            action: fire-dom-event
-                                            browser_mod:
-                                              service: browser_mod.popup
-                                              data:
-                                                title: "Choose an Option"
-                                                content:
-                                                  type: horizontal-stack
-                                                  cards:
-                                                    - type: "custom:button-card"
-                                                      name: "Custom"
-                                                      icon: "mdi:train"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_citymapper_notify_sam_random"
-
+                                            action: "call-service"
+                                            service: "automation.trigger"
+                                            service_data:
+                                              entity_id: "automation.citymapper_notifications_sam_2"
                             - type: "custom:button-card"
                               entity_picture: "/local/avatar_leah.png"
                               show_entity_picture: true
@@ -267,7 +161,7 @@ card_generic_travel:
                                             action: "call-service"
                                             service: "automation.trigger"
                                             service_data:
-                                              entity_id: "automation.transport_citymapper_notify_leah_work"
+                                              entity_id: "automation.citymapper_notifications_leah_work"
                                         - type: "custom:button-card"
                                           name: "Custom"
                                           icon: "mdi:train"
@@ -275,7 +169,7 @@ card_generic_travel:
                                             action: "call-service"
                                             service: "automation.trigger"
                                             service_data:
-                                              entity_id: "automation.transport_citymapper_notify_leah_random"
+                                              entity_id: "automation.citymapper_notifications_leah_random_2"
                         - type: "custom:button-card"
                           name: "Other Train Times"
                           tap_action:
@@ -296,7 +190,7 @@ card_generic_travel:
                                   hide_departed: true
                                   language: en-EN
                                   entities:
-                                    - sensor.london_tfl_jubilee_city
+                                    - sensor.london_tfl_jubilee_940gzzluwhp
               styles:
                 icon: 
                   - color: >
@@ -332,7 +226,7 @@ card_generic_travel:
           item2:
             card:
               type: "custom:button-card"
-              entity: sensor.london_tfl_jubilee_city
+              entity: sensor.london_tfl_jubilee_940gzzluwhp
               tap_action:
                 action: fire-dom-event
                 browser_mod:
@@ -357,74 +251,21 @@ card_generic_travel:
                                       type: "horizontal-stack"
                                       cards:
                                         - type: "custom:button-card"
-                                          name: "Car"
-                                          icon: "mdi:car"
+                                          name: "Work"
+                                          icon: "mdi:briefcase"
                                           tap_action:
-                                            action: fire-dom-event
-                                            browser_mod:
-                                              service: browser_mod.popup
-                                              data:
-                                                title: "Choose an Option"
-                                                content:
-                                                  type: horizontal-stack
-                                                  cards:
-                                                    - type: "custom:button-card"
-                                                      name: "Work"
-                                                      icon: "mdi:briefcase"
-                                                      tap_action:
-                                                        action: fire-dom-event
-                                                        browser_mod:
-                                                          service: browser_mod.popup
-                                                          data:
-                                                            title: "Choose an Option"
-                                                            content:
-                                                              type: "horizontal-stack"
-                                                              cards:
-                                                                - type: "custom:button-card"
-                                                                  name: "Camden"
-                                                                  icon: "mdi:car"
-                                                                  tap_action:
-                                                                    action: "call-service"
-                                                                    service: "automation.trigger"
-                                                                    service_data:
-                                                                      entity_id: "automation.transport_waze_camden"
-                                                                - type: "custom:button-card"
-                                                                  name: "Islington"
-                                                                  icon: "mdi:car"
-                                                                  tap_action:
-                                                                    action: "call-service"
-                                                                    service: "automation.trigger"
-                                                                    service_data:
-                                                                      entity_id: "automation.transport_waze_islington"
-                                                    - type: "custom:button-card"
-                                                      name: "Random"
-                                                      icon: "mdi:car"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_waze_random"
+                                            action: "call-service"
+                                            service: "automation.trigger"
+                                            service_data:
+                                              entity_id: "automation.citymapper_notifications_sam_2"
                                         - type: "custom:button-card"
-                                          name: "Public Transport"
+                                          name: "Custom"
                                           icon: "mdi:train"
                                           tap_action:
-                                            action: fire-dom-event
-                                            browser_mod:
-                                              service: browser_mod.popup
-                                              data:
-                                                title: "Choose an Option"
-                                                content:
-                                                  type: horizontal-stack
-                                                  cards:
-                                                    - type: "custom:button-card"
-                                                      name: "Custom"
-                                                      icon: "mdi:train"
-                                                      tap_action:
-                                                        action: "call-service"
-                                                        service: "automation.trigger"
-                                                        service_data:
-                                                          entity_id: "automation.transport_citymapper_notify_sam_random"
-
+                                            action: "call-service"
+                                            service: "automation.trigger"
+                                            service_data:
+                                              entity_id: "automation.citymapper_notifications_sam_2"
                             - type: "custom:button-card"
                               entity_picture: "/local/avatar_leah.png"
                               show_entity_picture: true
@@ -444,7 +285,7 @@ card_generic_travel:
                                             action: "call-service"
                                             service: "automation.trigger"
                                             service_data:
-                                              entity_id: "automation.transport_citymapper_notify_leah_work"
+                                              entity_id: "automation.citymapper_notifications_leah_work"
                                         - type: "custom:button-card"
                                           name: "Custom"
                                           icon: "mdi:train"
@@ -452,7 +293,7 @@ card_generic_travel:
                                             action: "call-service"
                                             service: "automation.trigger"
                                             service_data:
-                                              entity_id: "automation.transport_citymapper_notify_leah_random"
+                                              entity_id: "automation.citymapper_notifications_leah_random_2"
                         - type: "custom:button-card"
                           name: "Other Train Times"
                           tap_action:
@@ -473,7 +314,7 @@ card_generic_travel:
                                   hide_departed: true
                                   language: en-EN
                                   entities:
-                                    - sensor.london_tfl_jubilee_city
+                                    - sensor.london_tfl_jubilee_940gzzluwhp
               label: |
                 [[[
                   if (entity.state == 'none') return 'No Trains Running'

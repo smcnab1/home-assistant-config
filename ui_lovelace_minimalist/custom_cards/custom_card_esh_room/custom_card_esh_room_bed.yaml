@@ -167,106 +167,180 @@ card_esh_room_bed:
             service: browser_mod.popup
             data:
               title: "Bedroom Lights"
-              size: wide
               content:
                 type: "vertical-stack"
                 cards:
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bedroom_main_light
-                        variables:
-                          ulm_card_light_name: Main Lights
-                          ulm_card_light_icon: mdi:ceiling-light
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bedroom_leds
-                        variables:
-                          ulm_card_light_name: LEDs
-                          ulm_card_light_icon: mdi:led-strip
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
-                          ulm_card_light_enable_popup: true
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bedside_leah
-                        variables:
-                          ulm_card_light_name: Bedside Leah
-                          ulm_card_light_icon: mdi:lamp
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
-                          ulm_card_light_enable_popup: true
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bedside_sam
-                        variables:
-                          ulm_card_light_name: Bedside Sam
-                          ulm_card_light_icon: mdi:lamp
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
-                          ulm_card_light_enable_popup: true
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bedroom_fairy_lights
-                        variables:
-                          ulm_card_light_name: Fairy Lights
-                          ulm_card_light_icon: mdi:string-lights
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
+                  - type: custom:slider-button-card
+                    entity: switch.bedroom
+                    name: Main Lights
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:ceiling-light
+                      use_state_color: true
+                      show: true
+                      tap_action:
+                        action: more-info
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: light.bedroom_leds
+                    name: Main LEDs
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:led-strip
+                      use_state_color: true
+                      show: true
+                    tap_action:
+                      action: fire-dom-event
+                      browser_mod:
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.bedroom_leds
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: switch.fairy_lights
+                    name: Fairy Lights
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:string-lights
+                      use_state_color: true
+                      show: true
+                      tap_action:
+                        action: more-info
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: light.smart_bulb_2
+                    name: Bedside Left
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:lamp
+                      use_state_color: true
+                      show: true
+                    tap_action:
+                      action: fire-dom-event
+                      browser_mod:
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.smart_bulb_2
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
+                  - type: custom:slider-button-card
+                    entity: light.smart_bulb
+                    name: Bedside Right
+                    slider: 
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:lamp
+                      use_state_color: true
+                      show: true
+                    tap_action:
+                      action: fire-dom-event
+                      browser_mod:
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.smart_bulb
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
                   - type: horizontal-stack
                     cards:
-                      - type: "custom:button-card"
+                      - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.lighting_bedroom_day
+                        entity: automation.scene_bedroom_day
                         name: Day
                         icon: mdi:weather-sunny
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bedroom_day
-                      - type: "custom:button-card"
+                            entity_id: automation.scene_bedroom_day
+                      - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.lighting_bedroom_night
+                        entity: automation.scene_bedroom_night
                         name: Night
                         icon: mdi:weather-night
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bedroom_night
-                      - type: "custom:button-card"
+                            entity_id: automation.scene_bedroom_night
+                      - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.lighting_bedroom_movie
+                        entity: automation.scene_bedroom_movie
                         name: Movie
                         icon: mdi:movie
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bedroom_movie
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: "custom:button-card"
+                            entity_id: automation.scene_bedroom_movie
+                      - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.lighting_bedroom_off
+                        entity: automation.scene_bedroom_off
                         name: All Off
                         icon: mdi:lightbulb-off
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bedroom_off
+                            entity_id: automation.scene_bedroom_off
+
 
     climate:
       card:
@@ -303,13 +377,12 @@ card_esh_room_bed:
               title: "Bedroom Media"
               content:
                 type: "vertical-stack"
-                size: wide
                 cards:
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.bedroom_tv
+                    entity: media_player.fire_tv_192_168_1_94
                     variables:
-                      ulm_card_media_player_name: TV
+                      ulm_card_media_player_name : Amazon TV
                       ulm_card_media_player_icon: mdi:television
                       ulm_card_media_player_enable_art: true
                       ulm_card_media_player_enable_controls: true
@@ -318,9 +391,9 @@ card_esh_room_bed:
                       ulm_card_media_player_more_info: true
                   - type: "custom:button-card"
                     template: card_media_player
-                    entity: media_player.bedroom_google_home
+                    entity: media_player.bedroom
                     variables:
-                      ulm_card_media_player_name: Google Assistant
+                      ulm_card_media_player_name : Google Assistant
                       ulm_card_media_player_icon: mdi:google-assistant
                       ulm_card_media_player_enable_art: true
                       ulm_card_media_player_enable_controls: true

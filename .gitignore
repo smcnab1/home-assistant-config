@@ -1,96 +1,58 @@
-#       ___ ___ _____ ___ ___ _  _  ___  ___ ___ 
-#      / __|_ _|_   _|_ _/ __| \| |/ _ \| _ \ __|
-#  _  | (_ || |  | |  | | (_ | .` | (_) |   / _| 
-# (_)  \___|___| |_| |___\___|_|\_|\___/|_|_\___|
-#                                                
-#--FROM https://github.com/smcnab1/op-question-mark
-
-#                        _      _                          
-#  __ _ ___ _ _  ___ _ _(_)__  (_)__ _ _ _  ___ _ _ ___ ___
-# / _` / -_) ' \/ -_) '_| / _| | / _` | ' \/ _ \ '_/ -_|_-<
-# \__, \___|_||_\___|_| |_\__| |_\__, |_||_\___/_| \___/__/
-# |___/                          |___/                     
+# Generic ignores
 *.log
 *.log.*
 *.db
 *.db-shm
 *.db-wal
 *.pyc
-*.backup
 ._*
 __pycache__
 
-#                  _  __ _       __ _ _       _                          
-#  ____ __  ___ __(_)/ _(_)__   / _(_) |___  (_)__ _ _ _  ___ _ _ ___ ___
-# (_-< '_ \/ -_) _| |  _| / _| |  _| | / -_) | / _` | ' \/ _ \ '_/ -_|_-<
-# /__/ .__/\___\__|_|_| |_\__| |_| |_|_\___| |_\__, |_||_\___/_| \___/__/
-#    |_|                                       |___/                     
+# Directory (contents) ignores
+.cloud
+.storage
+deps
+
+# Specific file ignores
 core
 image
 ip_bans.yaml
 secrets.yaml
-adbkey
-adbkey.pub
-.shopping_list.json
 
-#     _ _            _                  _                          
-#  __| (_)_ _ ___ __| |_ ___ _ _ _  _  (_)__ _ _ _  ___ _ _ ___ ___
-# / _` | | '_/ -_) _|  _/ _ \ '_| || | | / _` | ' \/ _ \ '_/ -_|_-<
-# \__,_|_|_| \___\__|\__\___/_|  \_, | |_\__, |_||_\___/_| \___/__/
-#                                |__/    |___/                     
-.cloud
-.storage
-.ssh
-deps
-.old_config
-custom_components
-themes
-www/
-blueprints/*/homeassistant
-node-red/
-
-#  _    _                   _     _     _                          
-# | |__| |_  _ ___ _ __ _ _(_)_ _| |_  (_)__ _ _ _  ___ _ _ ___ ___
-# | '_ \ | || / -_) '_ \ '_| | ' \  _| | / _` | ' \/ _ \ '_/ -_|_-<
-# |_.__/_|\_,_\___| .__/_| |_|_||_\__| |_\__, |_||_\___/_| \___/__/
-#                 |_|                    |___/                     
+# Build-in blueprints ignores
 blueprints/*/homeassistant
 
-#              _                    _                          
-#  ___ ____ __| |_  ___ _ __  ___  (_)__ _ _ _  ___ _ _ ___ ___
-# / -_|_-< '_ \ ' \/ _ \ '  \/ -_) | / _` | ' \/ _ \ '_/ -_|_-<
-# \___/__/ .__/_||_\___/_|_|_\___| |_\__, |_||_\___/_| \___/__/
-#        |_|                         |___/                     
+# ESPHome ignores
 esphome/.*/
 
-#  _    _        __ _ _       _                          
-# (_)__| |___   / _(_) |___  (_)__ _ _ _  ___ _ _ ___ ___
-# | / _` / -_) |  _| | / -_) | / _` | ' \/ _ \ '_/ -_|_-<
-# |_\__,_\___| |_| |_|_\___| |_\__, |_||_\___/_| \___/__/
-#                              |___/                     
-.vscode
-.theia
-.Trash*
-
-#          _    _                     __ _ _       _                          
-#  __ _ __| |__| |  ___   ___ _ _    / _(_) |___  (_)__ _ _ _  ___ _ _ ___ ___
-# / _` / _` / _` | |___| / _ \ ' \  |  _| | / -_) | / _` | ' \/ _ \ '_/ -_|_-<
-# \__,_\__,_\__,_|       \___/_||_| |_| |_|_\___| |_\__, |_||_\___/_| \___/__/
-#                                                   |___/                     
-rtsp2webrtc_v5_aarch64
-frigate.yml
-watchman_report.txt
-govee_learning.yaml
-home-assistant-voice-node-red-f2d0ad06ea63.json
+# Ignore add-on files
 aircast.xml
 airsonos.xml
 notebooks
-nodered.json
 
-#  _                     _ _            _           _        
-# | |_____ ___ _ __   __| (_)_ _ ___ __| |_ ___ _ _(_)___ ___
-# | / / -_) -_) '_ \ / _` | | '_/ -_) _|  _/ _ \ '_| / -_|_-<
-# |_\_\___\___| .__/ \__,_|_|_| \___\__|\__\___/_| |_\___/__/
-#             |_|                                            
+# Ignore files created by IDE's
+.vscode
+.theia
+.Trash*
+.ssh
+.cloud
+.storage
+# Ignore vendored stuff
+custom_components
+themes
+www/community
 
+# Specific keeps
+!custom_components/telegram_bot_conversation
 !.gitkeep
+
+# Temporary ignores
+.old_config
+adbkey
+adbkey.pub
+frigate.yaml
+govee_learning.yaml
+home-assistant-voice-node-red-f2d0ad06ea63.json
+nodered.json
+rtsp2webrtc_v5_aarch64
+watchman_report.txt

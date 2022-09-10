@@ -167,21 +167,36 @@ card_esh_room_bath:
             service: browser_mod.popup
             data:
               title: "Bathroom Lights"
-              size: wide
               content:
                 type: "vertical-stack"
                 cards:
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: "custom:button-card"
-                        template: card_light
-                        entity: light.bathroom_main_lights
-                        variables:
-                          ulm_card_light_name: Main Lights
-                          ulm_card_light_icon: mdi:ceiling-light
-                          ulm_card_light_enable_slider: true
-                          ulm_card_light_enable_color: true
-                          ulm_card_light_enable_popup: true
+                  - type: custom:slider-button-card
+                    entity: light.bathroom_lights
+                    name: Main Lights
+                    slider:
+                      direction: left-right
+                      background: gradient
+                      use_state_color: true
+                      show_track: true
+                      force_square: false
+                    icon:
+                      icon: mdi:ceiling-light
+                      use_state_color: true
+                      show: true
+                    tap_action:
+                      action: fire-dom-event
+                      browser_mod:
+                        service: browser_mod.popup
+                        data:
+                          content:
+                            type: "custom:button-card"
+                            template: "popup_light_brightness"
+                            entity: light.bathroom_lights
+                    action_button:
+                      mode: custom
+                      show: true
+                      tap_action:
+                        action: toggle
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
@@ -189,46 +204,48 @@ card_esh_room_bath:
                     cards:
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.lighting_bathroom_morning
+                        entity: automation.scene_bathroom_morning
                         name: Morning
                         icon: mdi:weather-sunset-up
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bathroom_morning
+                            entity_id: automation.scene_bathroom_morning
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.lighting_bathroom_normal
+                        entity: automation.scene_bathroom_normal
                         name: Normal
                         icon: mdi:weather-sunny
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bathroom_normal
+                            entity_id: automation.scene_bathroom_normal
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.lighting_bathroom_bath
+                        entity: automation.scene_bathroom_bath
                         name: Bath
                         icon: mdi:bathtub
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bathroom_bath
-                  - type: "horizontal-stack"
-                    cards:
+                            entity_id: automation.scene_bathroom_bath
                       - type: "custom:button-card"
                         template: card_vertical_button
-                        entity: automation.lighting_bathroom_off
+                        entity: automation.scene_bathroom_off
                         name: All Off
                         icon: mdi:lightbulb-off
+                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.lighting_bathroom_off
+                            entity_id: automation.scene_bathroom_off
 
     climate:
       card:
@@ -263,7 +280,28 @@ card_esh_room_bath:
             service: browser_mod.popup
             data:
               title: "Bathroom Media"
-              size: wide
               content:
                 type: "vertical-stack"
                 cards:
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.fire_tv_192_168_1_104
+                    variables:
+                      ulm_card_media_player_name: Amazon TV
+                      ulm_card_media_player_icon: mdi:television
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.bedroom
+                    variables:
+                      ulm_card_media_player_name: Google Assistant
+                      ulm_card_media_player_icon: mdi:google-assistant
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true

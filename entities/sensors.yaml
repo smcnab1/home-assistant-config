@@ -1,0 +1,236 @@
+- platform: template
+  sensors:
+    bathroom_lights_on: ### BATHROOM COUNTS ###
+      friendly_name: Bathroom Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bathroom'])
+          | list | count }}
+    bathroom_switch_on:
+      friendly_name: Bathroom Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bathroom'])
+          | list | count }}
+    bathroom_media_players_on:
+      friendly_name: Bathroom Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bathroom'])
+          | list | count }}
+    bedroom_lights_on: ### BEDROOM COUNTS ###
+      friendly_name: Bedroom Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bedroom'])
+          | list | count }}
+    bedroom_switch_on:
+      friendly_name: Bedroom Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bedroom'])
+          | list | count }}
+    bedroom_media_players_on:
+      friendly_name: Bedroom Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Bedroom'])
+          | list | count }}
+    hall_lights_on: ### HALL COUNTS ###
+      friendly_name: Hall Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Hall'])
+          | list | count }}
+    hall_switch_on:
+      friendly_name: Hall Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Hall'])
+          | list | count }}
+    hall_media_players_on:
+      friendly_name: Hall Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Hall'])
+          | list | count }}
+    lights_on:
+      friendly_name: Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr("state", "equalto", "on") | list | length }}
+    media_on:
+      friendly_name: Media On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr("state", "equalto", "on") | list | length }}
+    switches_on:
+      friendly_name: Switches On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | list | count }}
+    kitchen_lights_on: ### KITCHEN COUNTS ###
+      friendly_name: Kitchen Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Kitchen'])
+          | list | count }}
+    kitchen_switch_on:
+      friendly_name: Kitchen Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Kitchen'])
+          | list | count }}
+    kitchen_media_players_on:
+      friendly_name: Kitchen Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Kitchen'])
+          | list | count }}
+    living_room_lights_on: ### LIVING ROOM COUNTS ###
+      friendly_name: Living Room Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Living Room'])
+          | list | count }}
+    living_room_switch_on:
+      friendly_name: Living Room Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Living Room'])
+          | list | count }}
+    living_room_media_players_on:
+      friendly_name: Living Room Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Living Room'])
+          | list | count }}
+    office_lights_on: ### OFFICE COUNTS ###
+      friendly_name: Office Lights On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.light | selectattr('state', 'eq', 'on')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Office'])
+          | list | count }}
+    office_switch_on:
+      friendly_name: Office Switch On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.switch | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Office'])
+          | list | count }}
+    office_media_players_on:
+      friendly_name: Office Media Players On
+      unit_of_measurement: "On"
+      value_template: >
+        {{ states.media_player | selectattr('state', 'eq', 'on')
+          | rejectattr('name', 'search', 'frigate')
+          | map(attribute='entity_id') | map('area_name')
+          | select('in', ['Kitchen'])
+          | list | count }}
+
+    time_of_day:
+      value_template: >
+        {% set current_hour = strptime(states('sensor.time'), "%H:%M").hour %}
+        {% if current_hour < 12 %}
+          Morning
+        {% elif 12 <= current_hour < 18 %}
+          Afternoon
+        {% else %}
+          Evening
+        {% endif %}
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'date_time_utc'
+    - 'date_time_iso'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'
+
+- platform: mqtt_room
+  name: "Leah: Phone BLE"
+  device_id: "apple:1006:10-8"
+  state_topic: "espresense/devices/apple:1006:10-8"
+  timeout: 5
+  away_timeout: 120
+
+- platform: mqtt_room
+  name: "Sam: Phone BLE"
+  device_id: "iBeacon:57a5f3fc-83df-4423-a949-0f02b5081d5f-100-1"
+  state_topic: "espresense/devices/iBeacon:57a5f3fc-83df-4423-a949-0f02b5081d5f-100-1"
+  timeout: 5
+  away_timeout: 120
+
+- platform: systemmonitor
+  resources:
+  - type: processor_use
+  - type: disk_use_percent
+    arg: "/"
+  - type: disk_free
+    arg: "/"
+  - type: memory_use_percent
+  - type: network_in
+    arg: eth0
+  - type: throughput_network_in
+    arg: eth0
+  - type: network_out
+    arg: eth0
+  - type: throughput_network_out
+    arg: eth0
+  - type: processor_temperature
+  - type: last_boot
+# OPTIONAL CPU Raspberry Pi Temp
+- platform: command_line
+  name: CPU Temp
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  value_template: '{{ value | multiply(0.001) | round(2)  }}'

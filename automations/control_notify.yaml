@@ -1,0 +1,59 @@
+
+alias: TV Control
+description: ''
+trigger:
+  - platform: state
+    entity_id:
+    - media_player.samsung_tv
+    to: 'on'
+    from: 'off'
+condition: []
+action:
+  - if:
+    - condition: state
+      entity_id: person.leah_jinks
+      state: home
+    then:
+    - service: notify.mobile_app_leah_s_iphone
+      data:
+        title: TV has been turned on
+        message: Do you want to control it?
+        data:
+          icon:
+          ttl: 0
+          visibility: public
+          push:
+            sound:
+              volume: 1
+          actions:
+          - action: URI
+            title: Control TV with Phone
+            uri: smartthings://
+            icon: sfsymbols:av.remote.fill
+          - action: IGNORE
+            title: Control with Normal Remote
+            icon: sfsymbols:pip.remove
+            destructive: true
+  - if:
+    - condition: state
+      entity_id: person.sam_mcnab
+      state: home
+    then:
+    - service: notify.mobile_app_iphone
+      data:
+        icon:
+        ttl: 0
+        visibility: public
+        push:
+          sound:
+            volume: 1
+        actions:
+        - action: URI
+          title: Control TV with Phone
+          uri: smartthings://
+          icon: sfsymbols:av.remote.fill
+        - action: IGNORE
+          title: Control with Normal Remote
+          icon: sfsymbols:pip.remove
+          destructive: true
+mode: single

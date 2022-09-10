@@ -1,0 +1,29 @@
+alias: 'Alarm: Alarm Notification Option - Leah'
+description: ''
+trigger:
+  - platform: state
+    entity_id:
+    - person.leah_jinks
+    to: away
+condition: []
+action:
+  - service: notify.mobile_app_leah_s_iphone
+    data:
+      title: Set Alarm?
+      message: Would you like to set it?
+      data:
+        icon:
+        ttl: 0
+        visibility: public
+        push:
+          sound:
+            volume: 1
+        actions:
+        - action: IGNORE
+          title: Don't Arm Alarm
+          icon: sfsymbols:bell.slash.fill
+        - action: ARM_ALARM
+          title: Arm Alarm
+          icon: sfsymbols:bell.fill
+          destructive: true
+mode: single

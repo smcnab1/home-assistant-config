@@ -1,0 +1,39 @@
+
+alias: Server Fan Control
+description: ''
+trigger: []
+condition: []
+action:
+  - if:
+    - type: is_temperature
+      condition: device
+      device_id: 7ab72c275e4466f60c318693cc65c5dd
+      entity_id: sensor.server_temperature
+      domain: sensor
+      above: 25
+    then:
+    - service: switch.turn_on
+      data: {}
+      target:
+        entity_id: switch.sonoff_100149c418_1
+    - service: notify.mobile_app_sam_s_mac_mini
+      data:
+        message: It's getting a little hot in there
+        title: Server Fans On
+    else: []
+  - wait_for_trigger:
+    - type: temperature
+      platform: device
+      device_id: 7ab72c275e4466f60c318693cc65c5dd
+      entity_id: sensor.server_temperature
+      domain: sensor
+      below: 25
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.sonoff_100149c418_1
+  - service: notify.mobile_app_sam_s_mac_mini
+    data:
+      title: Server Fans Off
+      message: It's not so hot in there
+mode: single

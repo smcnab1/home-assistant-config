@@ -1,0 +1,11 @@
+
+alias: 'Scene: Living Room Off'
+description: ''
+trigger: []
+condition: []
+action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.all_living_room_lights
+mode: single

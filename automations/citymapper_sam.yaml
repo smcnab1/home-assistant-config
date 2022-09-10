@@ -1,0 +1,20 @@
+
+alias: Citymapper Notifications - Sam
+description: ''
+trigger: []
+condition:
+  - condition: state
+    entity_id: person.sam_mcnab
+    state: home
+action:
+  - service: notify.mobile_app_iphone
+    data:
+      title: Want help getting somewhere?
+      message: Open Citymapper
+      data:
+        actions:
+        - action: OPEN
+          title: Navigate
+          uri: citymapper://x-callback-url/directions?startcoord=51.5477409362793%2C-0.18949000537395477&startname=Home&startaddress=Clockwork%20Factory%20Apartments%2C%20London%2C%20NW6%201RZ&x-source=Home%20Assistant&x-success=myappscheme%3A%2F%2F
+          icon: sfsymbols:tram.fill.tunnel
+mode: single

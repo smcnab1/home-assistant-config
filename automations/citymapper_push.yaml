@@ -1,0 +1,14 @@
+
+alias: Citymapper Push
+description: ''
+trigger: []
+condition: []
+action:
+  - service: automation.trigger
+    data:
+      skip_condition: false
+    target:
+      entity_id:
+      - automation.citymapper_notifications_leah
+      - automation.citymapper_notifications_sam
+mode: single

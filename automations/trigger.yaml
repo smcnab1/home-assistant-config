@@ -1,0 +1,23 @@
+
+alias: 'Alarm: Trigger Alarm when Armed Away'
+description: ''
+trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.bathroom_motion_sensor_5
+    - binary_sensor.hall_motion_sensor_3
+    - binary_sensor.hall_door_sensor
+    - binary_sensor.kitchen_motion_sensor_2
+    - binary_sensor.bedroom_motion_sensor_4
+    - binary_sensor.living_room_motion
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.home_alarm
+    state: armed_away
+action:
+  - service: alarm_control_panel.alarm_trigger
+    data: {}
+    target:
+      entity_id: alarm_control_panel.home_alarm
+mode: single

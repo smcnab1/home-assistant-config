@@ -1,0 +1,20 @@
+
+alias: Lights partying off
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: input_boolean.party
+    from: 'on'
+    to: 'off'
+action:
+  - service: light.turn_off
+    entity_id:
+    - light.bedroom_leds
+    - light.hall_leds
+    - light.kitchen_leds
+    - light.living_room_dining_led
+    - light.living_room_leds
+    - light.living_room_tv_leds
+    - light.office_desk_led
+  - delay: 1
+  - service: script.lights_partying_off

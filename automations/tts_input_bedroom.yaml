@@ -1,0 +1,11 @@
+
+alias: Text Input for TTS Bedroom
+description: ''
+trigger: []
+condition: []
+action:
+  - data_template:
+      entity_id: media_player.bedroom
+      message: '{{ states(''input_text.tts_message_bedroom'') }}'
+    service: tts.cloud_say
+mode: single

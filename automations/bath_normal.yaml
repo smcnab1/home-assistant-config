@@ -1,0 +1,12 @@
+
+alias: 'Scene: Bathroom Normal'
+description: ''
+trigger: []
+condition: []
+action:
+  - service: scene.turn_on
+    data:
+      transition: 30
+    target:
+      entity_id: scene.scene_bathroom_day
+mode: single

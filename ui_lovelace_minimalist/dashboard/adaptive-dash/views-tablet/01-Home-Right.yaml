@@ -33,19 +33,19 @@ cards:
     cardHeight: 333px
     linkTarget: "https://calendar.google.com/calendar/u/0/r/week"
     entities:
-    - entity: calendar.personal
+    - entity: calendar.sam_mcnab_personal
       name: 'Sam (Personal)'
       color: purple
-    - entity: calendar.work
+    - entity: calendar.sam_mcnab_work
       name: 'Sam (Work)'
       color: blue
     - entity: calendar.university
       name: 'Sam (University)'
       color: yellow
-    - entity: calendar.las
+    - entity: calendar.mcnab_sam_eac
       name: 'Sam (LAS)'
       color: blue
-    - entity: calendar.joint
+    - entity: calendar.joint_calendar
       name: 'Joint Calendar'
       color: purple
     - entity: calendar.hubert_watering
@@ -86,23 +86,6 @@ cards:
     variables:
       ulm_card_binary_sensor_alert: true
     entity: binary_sensor.car_wash
-    tap_action:
-      action: fire-dom-event
-      browser_mod:
-        service: browser_mod.popup
-        data:
-          title: "Choose an Option"
-          content:
-            type: horizontal-stack
-            cards:
-              - type: "custom:button-card"
-                name: "Send Notification"
-                icon: "mdi:car-wash"
-                tap_action:
-                  action: "call-service"
-                  service: "automation.trigger"
-                  service_data:
-                    entity_id: "automation.transport_car_wash_notify"
 
   ### WIFI SPEED ###
   - view_layout:
@@ -110,8 +93,8 @@ cards:
     type: custom:button-card
     template: custom_card_irmajavi_speedtest
     variables:
-      ulm_custom_card_irmajavi_speedtest_download_speed_entity: sensor.speed_test_download
-      ulm_custom_card_irmajavi_speedtest_upload_speed_entity: sensor.speed_test_upload
+      ulm_custom_card_irmajavi_speedtest_download_speed_entity: sensor.system_speed_test_download
+      ulm_custom_card_irmajavi_speedtest_upload_speed_entity: sensor.system_speed_test_upload
       ulm_custom_card_irmajavi_speedtest_color: blue
       ulm_custom_card_irmajavi_speedtest_router_name: Nokia
       ulm_custom_card_irmajavi_speedtest_router_model: G-2426G-A
