@@ -555,7 +555,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 
 ## Automations _(as at Sept 22)_
 
-There is a full list of all of my automations <a href="automations-all">here</a>. Below is the table of contents of all of the automations.
+There is a full list of all of my automations <a href="allautomations">here</a>. Below is the table of contents of all of the automations.
 <br />
 
 <!-- start-automations -->
@@ -570,7 +570,7 @@ There is a full list of all of my automations <a href="automations-all">here</a>
 6.  [TTS 🔊📱](#tts) (5 automations)
 7.  [Sleeping 🛏️📡](#sleep) (1 automations)
 
-⚠️ Total number of automations: **73** ⚠️
+⚠️ Total number of automations: **71** ⚠️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -621,7 +621,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- ALL AUTOMATIONS -->
 
-<a name="automations-all"></a>
+<a name="allautomations"></a>
 
 ## All Automations _(as at Sept 22)_
 
@@ -637,18 +637,18 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 &nbsp;&nbsp;_which uses:_
 
 - [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/entities/alarm.yaml)
-- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zones.yaml)
+- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zone.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
   
 <!-- 2 -->
-    
+ 
 <details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_actions.yaml">Alarm Arm Notifiction Actions</a></b></summary>
 <b><i>This automation arms the alarm and sends notifications to everyone to confirm it is now armed.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
-- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zones.yaml)
+- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zone.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
     
 <!-- 3 -->
@@ -700,7 +700,6 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 &nbsp;&nbsp;_which uses:_
 
 - [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
-- [Alarm Siren Sound Effect](https://github.com/smcnab1/op-question-mark/blob/master/www/Alarm-System_config_www_alarm1.mp3)
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) </details>
 
 <!-- 8 -->
@@ -1142,9 +1141,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/fan_control.yaml">Server Cabinet Fan Control</a></b></summary>
 <b><i>Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs</b></i>
 
-&nbsp;&nbsp;_which uses:_
-
-- [sensor.server_temperature](***) </details>
+    </details>
 
 <details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/git_auto_update.yaml">Git Auto Update</a></b></summary>
 <b><i>Script that automatically updates github at 23:23:23 everyday to keep repo up-to-date.</b></i>
