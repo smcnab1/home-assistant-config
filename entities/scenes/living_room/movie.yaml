@@ -1,7 +1,13 @@
-id: '1660667651279'
-name: 'Scene: Living Room Movie'
+#  _ _     _                                                      _     
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    ___   _ __  _____ _(_)___ 
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ V / / -_)
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|       |_|_|_\___/\_/|_\___|
+#                |___/                                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Living Room Movie'
 entities:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     supported_color_modes:
     - hs
     color_mode: hs
@@ -41,7 +47,7 @@ entities:
     state: 'on'
 icon: mdi:movie
 metadata:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     entity_only: true
   light.living_room_leds:
     entity_only: true

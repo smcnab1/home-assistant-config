@@ -1,0 +1,83 @@
+#       _                     _ _                                     _   _  __      
+#  __ _| |__ _ _ _ _ __    __| (_)___ __ _ _ _ _ __    ___   _ _  ___| |_(_)/ _|_  _ 
+# / _` | / _` | '_| '  \  / _` | (_-</ _` | '_| '  \  |___| | ' \/ _ \  _| |  _| || |
+# \__,_|_\__,_|_| |_|_|_| \__,_|_/__/\__,_|_| |_|_|_|       |_||_\___/\__|_|_|  \_, |
+#                                                                               |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Disarm Notify
+description: Automation to disarm the alarm and notify everyone from trigger notification
+mode: single
+trigger:
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: DISARM_ALARM
+    context:
+      user_id:
+        - d5de2d519885447495a552f1d87f0a9d
+    id: LEAHDISARM
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: DISARM_ALARM
+    context:
+      user_id:
+        - 47cefae3ba0f490c8ccafd6bfedad232
+    id: SAMDISARM
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: LEAHDISARM
+          - condition: state
+            entity_id: alarm_control_panel.home_alarm
+            state: armed_away
+        sequence:
+          - service: alarm_control_panel.alarm_disarm
+            data:
+              code: "!secret alarm_code"
+            target:
+              entity_id: alarm_control_panel.home_alarm
+          - wait_for_trigger:
+              - platform: state
+                entity_id:
+                  - alarm_control_panel.home_alarm
+                to: disarmed
+            continue_on_timeout: false
+          - service: notify.mobile_app_leah_s_iphone
+            data:
+              title: ALARM DISARMED
+              message: You have disarmed the alarm
+          - service: notify.mobile_app_iphone
+            data:
+              title: ALARM DISARMED
+              message: Leah has disarmed the alarm
+      - conditions:
+          - condition: trigger
+            id: SAMDISARM
+          - condition: state
+            entity_id: alarm_control_panel.home_alarm
+            state: armed_away
+        sequence:
+          - service: alarm_control_panel.alarm_disarm
+            data:
+              code: "!secret alarm_code"
+            target:
+              entity_id: alarm_control_panel.home_alarm
+          - wait_for_trigger:
+              - platform: state
+                entity_id:
+                  - alarm_control_panel.home_alarm
+                to: disarmed
+            continue_on_timeout: false
+          - service: notify.mobile_app_leah_s_iphone
+            data:
+              title: ALARM DISARMED
+              message: You have disarmed the alarm
+          - service: notify.mobile_app_leah_s_iphone
+            data:
+              message: Sam has disarmed the alarm
+              title: ALARM DISARMED
+    default: []

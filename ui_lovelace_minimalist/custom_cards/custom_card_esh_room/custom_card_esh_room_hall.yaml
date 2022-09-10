@@ -167,83 +167,40 @@ card_esh_room_hall:
             service: browser_mod.popup
             data:
               title: "Hall Lighting"
+              size: wide
               content:
                 type: "vertical-stack"
                 cards:
-                  - type: custom:slider-button-card
-                    entity: light.hall_lights
-                    name: Main Lights
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:ceiling-light
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.hall_lights
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: light.hall_leds
-                    name: LEDs
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:led-strip
-                      use_state_color: true
-                      show: true
-                    tap_action:
-                      action: fire-dom-event
-                      browser_mod:
-                        service: browser_mod.popup
-                        data:
-                          content:
-                            type: "custom:button-card"
-                            template: "popup_light_brightness"
-                            entity: light.hall_leds
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
-                  - type: custom:slider-button-card
-                    entity: switch.hall_lamp
-                    name: Hall Lamp
-                    slider: 
-                      direction: left-right
-                      background: gradient
-                      use_state_color: true
-                      show_track: true
-                      force_square: false
-                    icon:
-                      icon: mdi:lamp
-                      use_state_color: true
-                      show: true
-                      tap_action:
-                        action: more-info
-                    action_button:
-                      mode: custom
-                      show: true
-                      tap_action:
-                        action: toggle
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_main_lights
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_leds
+                        variables:
+                          ulm_card_light_name: Hall LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_lamp
+                        variables:
+                          ulm_card_light_name: Hall Lamp
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
                   - type: "custom:button-card"
                     template: "card_title"
                     name: "Scenes"
@@ -251,48 +208,46 @@ card_esh_room_hall:
                     cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_kitchen_normal
+                        entity: automation.lighting_hall_day
                         name: Day
                         icon: mdi:weather-sunny
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_day
+                            entity_id: automation.lighting_hall_day
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_night_2
+                        entity: automation.lighting_hall_night
                         name: Night
                         icon: mdi:weather-night
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_night_2
+                            entity_id: automation.lighting_hall_night
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_sleep
+                        entity: automation.lighting_hall_sleep
                         name: Sleeping
                         icon: mdi:sleep
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_sleep
+                            entity_id: automation.lighting_hall_sleep
+                  - type: "horizontal-stack"
+                    cards:
                       - type: 'custom:button-card'
                         template: card_vertical_button
-                        entity: automation.scene_hall_off
+                        entity: automation.lighting_hall_off
                         name: All Off
                         icon: mdi:lightbulb-off
-                        show_last_changed: true
                         tap_action:
                           action: call-service
                           service: automation.trigger
                           service_data:
-                            entity_id: automation.scene_hall_off
+                            entity_id: automation.lighting_hall_off
 
 
     climate:
@@ -322,3 +277,24 @@ card_esh_room_hall:
             }
             return vars;
           ]]]
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Hall Media"
+              size: wide
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "custom:button-card"
+                    template: card_media_player
+                    entity: media_player.dashboard_tablet
+                    variables:
+                      ulm_card_media_player_name: Tablet
+                      ulm_card_media_player_icon: mdi:tablet
+                      ulm_card_media_player_enable_art: true
+                      ulm_card_media_player_enable_controls: true
+                      ulm_card_media_player_enable_volume_slider: true
+                      ulm_card_media_player_enable_popup: true
+                      ulm_card_media_player_more_info: true

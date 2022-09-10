@@ -1,0 +1,18 @@
+#       _ _               _                       _      _       
+#  __ _(_) |_   __ _ _  _| |_ ___   _  _ _ __  __| |__ _| |_ ___ 
+# / _` | |  _| / _` | || |  _/ _ \ | || | '_ \/ _` / _` |  _/ -_)
+# \__, |_|\__| \__,_|\_,_|\__\___/  \_,_| .__/\__,_\__,_|\__\___|
+# |___/                                 |_|                      
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Git Auto Update
+description: Script that automatically updates github at 23:23:23 everyday to keep repo up-to-date.
+trigger:
+  # Everyday at 23:23:23 time
+  - at: '23:23:23'
+    platform: time
+action:
+  - data:
+      addon: a0d7b954_ssh
+      input: /config/entities/gitpush/ha_gitpush.sh
+    service: hassio.addon_stdin

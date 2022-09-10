@@ -1,0 +1,60 @@
+#  _                    _           _ _                          _   _  __
+# | |___ __  __ ___ _ _| |_ _ _ ___| | |___ _ _   ___   _ _  ___| |_(_)/ _|_  _
+# |  _\ V / / _/ _ \ ' \  _| '_/ _ \ | / -_) '_| |___| | ' \/ _ \  _| |  _| || |
+#  \__|\_/  \__\___/_||_\__|_| \___/_|_\___|_|         |_||_\___/\__|_|_|  \_, |
+#                                                                          |__/
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Media TV Controller Notify
+description: >-
+  Automation which sends actionable notification to open Smartthings Remote App
+  to control TV when switched on.
+trigger:
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: "on"
+    from: "off"
+condition: []
+action:
+  - if:
+      - condition: state
+        entity_id: person.leah
+        state: home
+    then:
+      - service: notify.mobile_app_leah_s_iphone
+        data:
+          title: TV has been turned on
+          message: Do you want to control it?
+          data:
+            actions:
+              - action: URI
+                title: Control TV with Phone
+                uri: smartthings://
+                icon: sfsymbols:av.remote.fill
+              - action: IGNORE
+                title: Control with Normal Remote
+                icon: sfsymbols:pip.remove
+                destructive: true
+  - if:
+      - condition: state
+        entity_id: person.sam
+        state: home
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          actions:
+            - action: URI
+              title: Control TV with Phone
+              uri: smartthings://
+              icon: sfsymbols:av.remote.fill
+            - action: IGNORE
+              title: Control with Normal Remote
+              icon: sfsymbols:pip.remove
+              destructive: true
+  - delay:
+      hours: 2
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+mode: single

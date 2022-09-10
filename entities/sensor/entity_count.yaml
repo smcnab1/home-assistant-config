@@ -1,0 +1,224 @@
+#  ___ _  _ _____ ___ _______   __   ___ ___  _   _ _  _ _____ ___ 
+# | __| \| |_   _|_ _|_   _\ \ / /  / __/ _ \| | | | \| |_   _/ __|
+# | _|| .` | | |  | |  | |  \ V /  | (_| (_) | |_| | .` | | | \__ \
+# |___|_|\_| |_| |___| |_|   |_|    \___\___/ \___/|_|\_| |_| |___/
+#                                                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensors indicating what entities are on throughout the house and in individual rooms, outputted to dashboard.
+
+#  _                     
+# | |_  ___ _  _ ___ ___ 
+# | ' \/ _ \ || (_-</ -_)
+# |_||_\___/\_,_/__/\___|
+#                        
+platform: template
+sensors:
+  house_lights_on: ## LIGHTING ##
+    friendly_name: House Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr("state", "equalto", "on") | list | length }}
+  house_media_on: ## MEDIA ##
+    friendly_name: House Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr("state", "equalto", "on") | list | length }}
+  house_switches_on: ## SWITCHES ##
+    friendly_name: House Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | list | count }}
+
+#  _          _   _                       
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __  
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \ 
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|
+#                                         
+  bathroom_lights_on: ## LIGHTING ##
+    friendly_name: Bathroom Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bathroom'])
+        | list | count }}
+  bathroom_media_on: ## MEDIA ##
+    friendly_name: Bathroom Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bathroom'])
+        | list | count }}
+  bathroom_switches_on: ## SWITCHES ##
+    friendly_name: Bathroom Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bathroom'])
+        | list | count }}
+
+#  _            _                    
+# | |__  ___ __| |_ _ ___  ___ _ __  
+# | '_ \/ -_) _` | '_/ _ \/ _ \ '  \ 
+# |_.__/\___\__,_|_| \___/\___/_|_|_|
+#                                    
+  bedroom_lights_on: ## LIGHTING ##
+    friendly_name: Bedroom Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bedroom'])
+        | list | count }}
+  bedroom_media_on: ## MEDIA ##
+    friendly_name: Bedroom Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bedroom'])
+        | list | count }}
+  bedroom_switches_on: ## SWITCHES ##
+    friendly_name: Bedroom Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Bedroom'])
+        | list | count }}
+
+#  _         _ _ 
+# | |_  __ _| | |
+# | ' \/ _` | | |
+# |_||_\__,_|_|_|
+#                
+  hall_lights_on: ## LIGHTING ##
+    friendly_name: Hall Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Hall'])
+        | list | count }}
+  hall_media_on: ## MEDIA ##
+    friendly_name: Hall Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Hall'])
+        | list | count }}
+  hall_switches_on: ## SWITCHES ##
+    friendly_name: Hall Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Hall'])
+        | list | count }}
+
+#  _   _ _      _             
+# | |_(_) |_ __| |_  ___ _ _  
+# | / / |  _/ _| ' \/ -_) ' \ 
+# |_\_\_|\__\__|_||_\___|_||_|
+#                             
+  kitchen_lights_on: ## LIGHTING ##
+    friendly_name: Kitchen Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Kitchen'])
+        | list | count }}
+  kitchen_media_on: ## MEDIA ##
+    friendly_name: Kitchen Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Kitchen'])
+        | list | count }}
+  kitchen_switches_on: ## SWITCHES ##
+    friendly_name: Kitchen Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Kitchen'])
+        | list | count }}
+
+#  _ _     _                                
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __  
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \ 
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|
+#                |___/                      
+  living_room_lights_on: ## LIGHTING ##
+    friendly_name: Living Room Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Living Room'])
+        | list | count }}
+  living_room_media_on: ## MEDIA ##
+    friendly_name: Living Room Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Living Room'])
+        | list | count }}
+  living_room_switches_on: ## SWITCHES ##
+    friendly_name: Living Room Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Living Room'])
+        | list | count }}
+
+#       __  __ _        
+#  ___ / _|/ _(_)__ ___ 
+# / _ \  _|  _| / _/ -_)
+# \___/_| |_| |_\__\___|
+#                       
+  office_lights_on: ## LIGHTING ##
+    friendly_name: Office Lights On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.light | selectattr('state', 'eq', 'on')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Office'])
+        | list | count }}
+  office_media_on: ## MEDIA ##
+    friendly_name: Office Media On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.media_player | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Kitchen'])
+        | list | count }}
+  office_switches_on: ## SWITCHES ##
+    friendly_name: Office Switches On
+    unit_of_measurement: "On"
+    value_template: >
+      {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('name', 'search', 'frigate')
+        | map(attribute='entity_id') | map('area_name')
+        | select('in', ['Office'])
+        | list | count }}

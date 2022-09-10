@@ -1,0 +1,79 @@
+#               _ _                              _      _   _                    _   _  __      
+#  _ __  ___ __| (_)__ _   ___ __ _ _ __    _ _ (_)__ _| |_| |_   ___   _ _  ___| |_(_)/ _|_  _ 
+# | '  \/ -_) _` | / _` | (_-</ _` | '  \  | ' \| / _` | ' \  _| |___| | ' \/ _ \  _| |  _| || |
+# |_|_|_\___\__,_|_\__,_| /__/\__,_|_|_|_| |_||_|_\__, |_||_\__|       |_||_\___/\__|_|_|  \_, |
+#                                                 |___/                                    |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Media Sam Night Notification'
+description: Automation which triggers at 21:30 to remind me to get off my PC if I am still on it. Using flashing red lights, TTS & Actionable Notification through my PC.
+trigger:
+  - platform: time
+    at: '21:30:00'
+condition:
+  - condition: state
+    entity_id: person.sam
+    state: home
+  - condition: state
+    entity_id: binary_sensor.sam_s_mac_mini_active
+    state: 'on'
+action:
+  - if:
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: sensor.leah_phone_ble
+        state: bedroom
+      - condition: state
+        entity_id: sensor.leah_s_iphone_battery_state
+        state: charging
+    then:
+    - service: media_player.volume_set
+      data:
+        volume_level: 0.3
+      target:
+        entity_id: media_player.living_room_google_home
+    else:
+    - service: media_player.volume_set
+      data:
+        volume_level: 0.5
+      target:
+        entity_id: media_player.living_room_google_home
+  - service: tts.cloud_say
+    data:
+      entity_id: media_player.living_room_google_home
+      message: Get off your computer dickhead its 9 o'clock
+  - repeat:
+      count: '30'
+      sequence:
+      - service: light.turn_on
+        data:
+          color_name: red
+          brightness: 255
+        target:
+          entity_id: light.office_leds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 250
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.office_leds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 250
+  - service: scene.turn_on
+    data:
+      transition: 90
+    target:
+      entity_id: scene.office_bright
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.4
+    target:
+      entity_id: media_player.living_room_google_home
+mode: single

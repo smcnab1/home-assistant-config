@@ -1,11 +1,17 @@
-id: '1660667422220'
-name: 'Scene: Living Room Day'
+#  _ _     _                                           _           
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    ___   __| |__ _ _  _ 
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  |___| / _` / _` | || |
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|       \__,_\__,_|\_, |
+#                |___/                                        |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Living Room Day'
 entities:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     supported_color_modes:
     - hs
     icon: mdi:led-strip-variant
-    friendly_name: 'Living Room: Dining LED'
+    friendly_name: 'Living Room Display LED'
     supported_features: 0
     color_mode: hs
     brightness: 255
@@ -60,7 +66,7 @@ entities:
     state: 'on'
 icon: mdi:weather-sunny
 metadata:
-  light.living_room_dining_led:
+  light.living_room_display_led:
     entity_only: true
   light.living_room_leds:
     entity_only: true

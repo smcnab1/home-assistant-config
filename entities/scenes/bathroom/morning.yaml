@@ -1,19 +1,25 @@
-id: '1660666156439'
-name: 'Scene: Bathroom Morning'
+#  _          _   _                                                  _           
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   _ __  ___ _ _ _ _ (_)_ _  __ _ 
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ '_| ' \| | ' \/ _` |
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       |_|_|_\___/_| |_||_|_|_||_\__, |
+#                                                                          |___/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+name: 'Bathroom Morning'
 entities:
-  light.all_bathroom_lights:
+  light.bathroom_main_lights:
     supported_color_modes:
     - brightness
     - hs
     color_mode: brightness
     brightness: 15
     entity_id:
-    - light.bathroom_lights
+    - light.bathroom_main_lights
     icon: mdi:lightbulb-group
     friendly_name: ALL BATHROOM LIGHTS
     supported_features: 0
     state: 'on'
 icon: mdi:weather-sunset-up
 metadata:
-  light.all_bathroom_lights:
+  light.bathroom_main_lights:
     entity_only: true

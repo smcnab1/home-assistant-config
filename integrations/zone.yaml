@@ -1,1 +1,9 @@
-zone: !include_dir_named ../entities/zones.yaml
+#  _______  _  _ ___ ___ 
+# |_  / _ \| \| | __/ __|
+#  / / (_) | .` | _|\__ \
+# /___\___/|_|\_|___|___/
+#                        
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to zone entities within the zones directory.
+
+zone: !include_dir_named ../entities/zone
