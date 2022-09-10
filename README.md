@@ -68,7 +68,8 @@ This repo will be updated regularly and I am keen to make it an open & learning 
 </div>
 &nbsp;
 <div align="center">
-<img src="https://i.imgur.com/NalP8Tn.png" alt="Screenshot Desktop" width="900" height="400">
+<a href="SCREESHOTPAGE">Click the image to see more screenshots of my current Dashboard
+<img src="https://i.imgur.com/z3pnxzt.png" alt="Screenshot Desktop"></a>
 </div>
 
 <!-- DEVICES -->
