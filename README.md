@@ -555,7 +555,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 
 ## Automations _(as at Sept 22)_
 
-There is a full list of all of my automations <a href="allautomations">here</a>. Below is the table of contents of all of the automations.
+There is a full list of all of my automations <a href="#allautomations">here</a>. Below is the table of contents of all of the automations.
 <br />
 
 <!-- start-automations -->
