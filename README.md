@@ -112,7 +112,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <td>23.98</td>
         </tr>
         <tr>
-            <td><a href="https://amzn.to/3B41VeB">[SwitchBot Smart Switch]</a></td>
+            <td><a href="https://amzn.to/3B41VeB">SwitchBot Smart Switch</a></td>
             <td>2</td>
             <td>29.99</td>
             <td>59.98</td>
@@ -372,7 +372,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <td>151.00</td>
         </tr>
         <tr>
-            <td><a href="https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4<">Raspberry Pi 4 IceBerry Cooling Case/a></td>
+            <td><a href="https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4<">Raspberry Pi 4 IceBerry Cooling Case</a></td>
             <td>2</td>
             <td>16.00</td>
             <td>32.00</td>
