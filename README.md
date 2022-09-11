@@ -94,25 +94,25 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>TP-Link Tapo P100</td>
+            <td>[TP-Link Tapo P100](https://amzn.to/3Qw7cBb)</td>
             <td>7</td>
             <td>9.49</td>
             <td>66.43</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Single Button</td>
+            <td>[Xiaomi Aqara Single Button](https://amzn.to/3qtOL5D)</td>
             <td>1</td>
             <td>17.99</td>
             <td>17.99</td>
         </tr>
         <tr>
-            <td>SONOFF Micro USB Smart Adapter</td>
+            <td>[SONOFF Micro USB Smart Adapter](https://amzn.to/3TYq6DL)</td>
             <td>2</td>
             <td>11.99</td>
             <td>23.98</td>
         </tr>
         <tr>
-            <td>SwitchBot Smart Switch</td>
+            <td>[SwitchBot Smart Switch](https://amzn.to/3B41VeB)</td>
             <td>2</td>
             <td>29.99</td>
             <td>59.98</td>
@@ -140,52 +140,52 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Xiaomi Aqara Door Sensor</td>
+            <td>[Xiaomi Aqara Door Sensor](https://amzn.to/3BGwOaB)</td>
             <td>2</td>
             <td>16.99</td>
             <td>33.98</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Temperature Sensor</td>
+            <td>[Xiaomi Aqara Temperature Sensor](https://amzn.to/3DguZlz)</td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Motion Sensor</td>
+            <td>[Xiaomi Aqara Motion Sensor](https://amzn.to/3DlSMAV)</td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Vibration Sensor</td>
-            <td>1</td>
-            <td>19.99</td>
-            <td>19.99</td>
-        </tr>
-        <tr>
-            <td>ESP32 for Presense</td>
-            <td>3</td>
-            <td>7.29</td>
-            <td>21.87</td>
-        </tr>
-        <tr>
-            <td>ESP32 for Bed Sensor</td>
-            <td>1</td>
-            <td>7.29</td>
-            <td>7.29</td>
-        </tr>
-        <tr>
-            <td>Bed Pressure Mats</td>
+            <td>[Xiaomi Aqara Vibration Sensor](https://amzn.to/3RUy13b)</td>
             <td>2</td>
+            <td>19.99</td>
+            <td>39.98</td>
+        </tr>
+        <tr>
+            <td>[ESP32 Boards](https://amzn.to/3QzIksm)</td>
+            <td>6</td>
+            <td>7.00</td>
+            <td>42.00</td>
+        </tr>
+        <tr>
+            <td>[ESP32 Cases](https://www.thingiverse.com/thing:4125952)</td>
+            <td>6</td>
+            <td>8.00</td>
+            <td>48.00</td>
+        </tr>
+        <tr>
+            <td>[Bed Pressure Mats](https://amzn.to/3BwBIXv)</td>
+            <td>4</td>
             <td>11.79</td>
-            <td>23.58</td>
+            <td>47.16</td>
         </tr>
         <tr>
             <td><i><b>Total</b></i></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td><b>306.61</b></td>
+            <td><b>411.02</b></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -204,49 +204,49 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Samsung Q60AA</td>
+            <td>[Samsung Q60AA](https://amzn.to/3DfYOmp)</td>
             <td>1</td>
             <td>559.00</td>
             <td>559.00</td>
         </tr>
         <tr>
-            <td>BLAUPUNKT 32"</td>
+            <td>[BLAUPUNKT 32"](https://amzn.to/3Qydv7u)</td>
             <td>1</td>
             <td>139.95</td>
             <td>139.95</td>
         </tr>
         <tr>
-            <td>SONOS Play 1</td>
+            <td>[SONOS Play 1](https://amzn.to/3RWi2Sk)</td>
             <td>1</td>
             <td>164.99</td>
             <td>164.99</td>
         </tr>
         <tr>
-            <td>Google Nest Hub Mini</td>
+            <td>[Google Nest Hub Mini](https://store.google.com/gb/product/google_nest_mini?hl=en-GB&pli=1)</td>
             <td>2</td>
             <td>27.99</td>
             <td>55.98</td>
         </tr>
         <tr>
-            <td>Lenovo M10 Tablet with Ethernet Connection</td>
+            <td>[Lenovo M10 Tablet with Ethernet Connection](https://amzn.to/3RHybLK)</td>
             <td>1</td>
             <td>79.99</td>
             <td>79.99</td>
         </tr>
         <tr>
-            <td>XBOX One Console</td>
+            <td>[XBOX One Console](https://amzn.to/3But0J8)</td>
             <td>1</td>
             <td>164.97</td>
             <td>164.97</td>
         </tr>
         <tr>
-            <td>Apple Mac Mini</td>
+            <td>[Apple Mac Mini](https://amzn.to/3RyR7Mo)</td>
             <td>1</td>
             <td>629.97</td>
             <td>629.97</td>
         </tr>
         <tr>
-            <td>MacBook Air</td>
+            <td>[MacBook Air](https://amzn.to/3d2Ivi6)</td>
             <td>2</td>
             <td>949.00</td>
             <td>1898.00</td>
@@ -274,31 +274,31 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Lepro GU10 LED RGB Bulb</td>
+            <td>[Lepro GU10 LED RGB Bulb](https://amzn.to/3RKY4K6)</td>
             <td>10</td>
             <td>9.00</td>
             <td>90.00</td>
         </tr>
         <tr>
-            <td>Lepro E14 LED Dimmable Bulb</td>
+            <td>[Lepro E14 LED Dimmable Bulb](https://amzn.to/3RNhQEY)</td>
             <td>2</td>
             <td>8.50</td>
             <td>17.00</td>
         </tr>
         <tr>
-            <td>Lepro LED Strip RGB 5m</td>
+            <td>[Lepro LED Strip RGB 5m](https://amzn.to/3RVTDME)</td>
             <td>10</td>
             <td>15.99</td>
             <td>159.90</td>
         </tr>
         <tr>
-            <td>Govee DreamView T1 Immersion LED Kit</td>
+            <td>[Govee DreamView T1 Immersion LED Kit](https://amzn.to/3U59JFI)</td>
             <td>1</td>
             <td>56.09</td>
             <td>56.09</td>
         </tr>
         <tr>
-            <td>Mathmos Astro Lava Lamp</td>
+            <td>[Mathmos Astro Lava Lamp](https://amzn.to/3DgTnnb)</td>
             <td>1</td>
             <td>82.00</td>
             <td>82.00</td>
@@ -326,19 +326,19 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>ConBee II</td>
+            <td>[ConBee II](https://amzn.to/3DfZWq9)</td>
             <td>1</td>
             <td>37.42</td>
             <td>37.42</td>
         </tr>
         <tr>
-            <td>Aqara M2 Hub</td>
+            <td>[Aqara M2 Hub](https://amzn.to/3QC57DT)</td>
             <td>1</td>
             <td>54.99</td>
             <td>54.99</td>
         </tr>
         <tr>
-            <td>SwitchBot Hub</td>
+            <td>[SwitchBot Hub](https://amzn.to/3DhHHRd)</td>
             <td>1</td>
             <td>35.00</td>
             <td>35.00</td>
@@ -366,37 +366,37 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Raspberry Pi 4 Model B, 8GB RAM</td>
+            <td>[Raspberry Pi 4 Model B, 8GB RAM](https://thepihut.com/collections/raspberry-pi-boards/products/raspberry-pi-4-model-b?variant=31994565689406)</td>
             <td>2</td>
             <td>75.50</td>
             <td>151.00</td>
         </tr>
         <tr>
-            <td>Raspberry Pi 4 IceBerry Cooling Case</td>
+            <td>[Raspberry Pi 4 IceBerry Cooling Case](https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4)</td>
             <td>2</td>
             <td>16.00</td>
             <td>32.00</td>
         </tr>
         <tr>
-            <td>250GB SSD in Case</td>
+            <td>[250GB SSD in Case](https://amzn.to/3RSLQyV)</td>
             <td>2</td>
             <td>35.00</td>
             <td>70.00</td>
         </tr>
         <tr>
-            <td>TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch</td>
+            <td>[TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch](https://amzn.to/3evknF8)</td>
             <td>1</td>
             <td>10.49</td>
             <td>10.49</td>
         </tr>
         <tr>
-            <td>Coral USB Accelerator</td>
+            <td>[Coral USB Accelerator](https://amzn.to/3xceHXm)</td>
             <td>1</td>
             <td>120.00</td>
             <td>120.00</td>
         </tr>
         <tr>
-            <td>TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter</td>
+            <td>[TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter](https://amzn.to/3DxxWyD)</td>
             <td>3</td>
             <td>23.41</td>
             <td>70.23</td>
@@ -424,13 +424,13 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>iPhone 13 Pro Max with Companion App & Life360</td>
+            <td>[iPhone 13 Pro Max with Companion App](https://amzn.to/3eJRXHu)</td>
             <td>1</td>
             <td>1049.00</td>
             <td>1049.00</td>
         </tr>
         <tr>
-            <td>iPhone 11 with Companion App & Life360</td>
+            <td>[iPhone 11 with Companion App](https://amzn.to/3xe5HAO)</td>
             <td>1</td>
             <td>429.00</td>
             <td>429.00</td>
@@ -453,7 +453,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <th>Total of Smart Home Devices (excl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
             <th></th>
             <th></th>
-            <th><b>£1,461.11</b></th>
+            <th><b>£1,565.52</b></th>
         </tr>
     </thead>
     <thead>
@@ -461,7 +461,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <th>Total of All Devices (incl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
             <th></th>
             <th></th>
-            <th><b>😳£6,632.74😳</b></th>
+            <th><b>😳£6,737.15😳</b></th>
         </tr>
     </thead>
 </table>
