@@ -353,9 +353,35 @@ cards:
       grid-area: "title1"
     type: horizontal-stack
     cards:
-    - type: "custom:button-card"
-      template: "card_title"
-      name: "Rooms"
+    - type: 'custom:button-card'
+      template: chip_icon_label
+      icon: 'mdi:speaker'
+      tap_action:
+        action: fire-dom-event
+        browser_mod:
+          service: browser_mod.popup
+          data:
+            size: fullscreen
+            title: Spotify Control
+            content:
+              type: custom:spotify-card
+              limit: 15
+              always_play_random_song: true
+              device: media_player.living_room_sonos
+              filter_devices:
+                - media_player.spotify
+              display_style: grid
+              known_connect_devices:
+                - id: 4840d2555bd5f0b995eb76723c6c9055
+                  name: Bedroom
+                  entity_id: media_player.bedroom_google_home
+                - id: f45b0e6aec165544faccaf2cad820542
+                  name: Living Room
+                  entity_id: media_player.living_room_google_home
+                - id: 317ff7c2ac5a9513d9102dfcdf9ec6591a736126
+                  name: Living Room Sonos
+                  entitiy_id: media_player.living_room_sonos
+              grid_show_title: true
     - type: 'custom:button-card'
       template: chip_icon_label
       icon: 'mdi:lightbulb'

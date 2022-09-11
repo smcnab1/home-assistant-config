@@ -48,7 +48,7 @@ action:
 
         {{states.sensor.daily_fact.state}}
 
-        Oh and today's your day so here's a wee joke for you too.
+        Oh, and today's your day so here's a wee joke for you too.
 
         {{states.sensor.daily_joke.state}}
 
@@ -57,7 +57,7 @@ action:
   - delay:
       hours: 0
       minutes: 0
-      seconds: 50
+      seconds: 55
       milliseconds: 0
   - repeat:
       count: 2

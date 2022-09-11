@@ -159,3 +159,5 @@ resources:
     type: module
   - url: /hacsfiles/lovelace-layout-card/layout-card.js
     type: module
+  - url: /local/community/spotify-card/spotify-card.js
+    type: module
