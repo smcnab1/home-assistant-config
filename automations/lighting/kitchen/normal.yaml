@@ -7,17 +7,18 @@
 
 alias: 'Lighting Kitchen Normal'
 description: 'Automation to activate normal kitchen scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data:
-      transition: 20
-    target:
-      entity_id: scene.kitchen_normal
-  - service: light.turn_off
-    data:
-      transition: 20
-    target:
-      entity_id: light.kitchen_main_lights
-mode: single
+  - parallel:
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 255
+            - 127
+            - 0
+          brightness: 178
+        target:
+          entity_id: light.kitchen_leds

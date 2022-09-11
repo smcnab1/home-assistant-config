@@ -7,11 +7,39 @@
 
 alias: 'Lighting Living Room Day'
 description: 'Automation to activate living room day time scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data: {}
-    target:
-      entity_id: scene.living_room_day
-mode: single
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.living_room_dreamview
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_dreamview
+      - if:
+          - condition: state
+            entity_id: light.living_room_lava_lamp
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_lava_lamp
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 255
+            - 127
+            - 0
+          brightness: 255
+        target:
+          entity_id:
+            - light.living_room_display_led
+            - light.living_room_tv_leds
+            - light.living_room_leds

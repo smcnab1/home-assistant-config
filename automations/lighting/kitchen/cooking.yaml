@@ -7,12 +7,25 @@
 
 alias: 'Lighting Kitchen Cooking'
 description: 'Automation to activate kitchen cooking scene during certain times.'
+mode: single
 trigger: []
 condition: []
 action:
-- service: scene.turn_on
-  data:
-    transition: 20
-  target:
-    entity_id: scene.kitchen_cooking
-mode: single
+  - parallel:
+      - service: light.turn_on
+        data:
+          transition: 10
+          brightness: 177
+        target:
+          entity_id:
+            - light.kitchen_main_lights
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 255
+            - 255
+            - 255
+          brightness: 178
+        target:
+          entity_id: light.kitchen_leds

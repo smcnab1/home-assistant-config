@@ -226,28 +226,18 @@ card_esh_room_hall:
                           service: automation.trigger
                           service_data:
                             entity_id: automation.lighting_hall_night
-                      - type: 'custom:button-card'
-                        template: card_vertical_button
-                        entity: automation.lighting_hall_sleep
-                        name: Sleeping
-                        icon: mdi:sleep
-                        tap_action:
-                          action: call-service
-                          service: automation.trigger
-                          service_data:
-                            entity_id: automation.lighting_hall_sleep
-                  - type: "horizontal-stack"
-                    cards:
-                      - type: 'custom:button-card'
-                        template: card_vertical_button
-                        entity: automation.lighting_hall_off
-                        name: All Off
-                        icon: mdi:lightbulb-off
-                        tap_action:
-                          action: call-service
-                          service: automation.trigger
-                          service_data:
-                            entity_id: automation.lighting_hall_off
+                      - type: "horizontal-stack"
+                        cards:
+                          - type: 'custom:button-card'
+                            template: card_vertical_button
+                            entity: automation.lighting_hall_off
+                            name: All Off
+                            icon: mdi:lightbulb-off
+                            tap_action:
+                              action: call-service
+                              service: automation.trigger
+                              service_data:
+                                entity_id: automation.lighting_hall_off
 
 
     climate:

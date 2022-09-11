@@ -7,25 +7,52 @@
 
 alias: 'Lighting Living Room Movie'
 description: 'Automation to activate living room movie scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data:
-      transition: 60
-    target:
-      entity_id: scene.living_room_movie
-  - service: light.turn_on
-    data:
-      profile: Video
-    target:
-      entity_id: light.living_room_dreamview
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id:
-      - light.living_room_main_light_2
-      - light.living_room_tv_leds
-      - light.living_room_lamp
-      - light.all_kitchen_lights
-mode: single
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.living_room_tv_leds
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_tv_leds
+      - if:
+          - condition: state
+            entity_id: light.living_room_main_light
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_main_light
+      - if:
+          - condition: state
+            entity_id: light.living_room_lamp
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_lamp
+      - service: light.turn_on
+        data:
+          transition: 20
+          rgb_color:
+            - 0
+            - 0
+            - 255
+          brightness: 38
+        target:
+          entity_id:
+            - light.living_room_display_led
+            - light.living_room_leds
+      - service: light.turn_on
+        data:
+          profile: Video
+        target:
+          entity_id: light.living_room_dreamview

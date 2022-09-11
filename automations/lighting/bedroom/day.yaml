@@ -7,11 +7,49 @@
 
 alias: 'Lighting Bedroom Day'
 description: 'Automation to activate day time bedroom scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data: {}
-    target:
-      entity_id: scene.bedroom_day
-mode: single
+  - parallel:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.bedroom_main_light
+      - service: light.turn_on
+        data:
+          brightness: 255
+          rgb_color:
+            - 255
+            - 127
+            - 0
+          transition: 10
+        target:
+          entity_id: light.bedroom_leds
+      - if:
+          - condition: state
+            entity_id: light.bedroom_fairy_lights
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedroom_fairy_lights
+      - if:
+          - condition: state
+            entity_id: light.bedside_leah
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_leah
+      - if:
+          - condition: state
+            entity_id: light.bedside_sam
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_sam

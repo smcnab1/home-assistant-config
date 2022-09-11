@@ -10,8 +10,23 @@ description: 'Automation to turn off all kitchen lights.'
 trigger: []
 condition: []
 action:
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id: light.all_kitchen_lights
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.kitchen_leds
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.kitchen_leds
+      - if:
+          - condition: state
+            entity_id: light.kitchen_main_lights
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.kitchen_main_lights
 mode: single

@@ -7,12 +7,23 @@
 
 alias: 'Lighting Hall Day'
 description: 'Automation to activate hallway day time scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data:
-      transition: 20
-    target:
-      entity_id: scene.hall_day
-mode: single
+  - parallel:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.hall_lamp
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 255
+            - 127
+            - 0
+          brightness: 255
+        target:
+          entity_id:
+            - light.hall_leds

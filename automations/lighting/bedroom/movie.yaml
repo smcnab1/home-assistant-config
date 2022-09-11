@@ -7,17 +7,49 @@
 
 alias: 'Lighting Bedroom Movie'
 description: 'Automation to activate bedroom movie scene.'
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data: {}
-    target:
-      entity_id: scene.bedroom_movie
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id:
-      - light.bedroom_main_light
-      - light.bedside_lamps
-mode: single
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.bedroom_main_light
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedroom_main_light
+      - if:
+          - condition: state
+            entity_id: light.bedside_leah
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_leah
+      - if:
+          - condition: state
+            entity_id: light.bedside_sam
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_sam
+      - service: light.turn_on
+        data:
+          transition: 20
+          rgb_color:
+            - 0
+            - 0
+            - 255
+          brightness: 76
+        target:
+          entity_id: light.bedroom_leds
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.bedroom_fairy_lights

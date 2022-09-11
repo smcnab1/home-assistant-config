@@ -7,12 +7,13 @@
 
 alias: 'Lighting Bathroom Normal'
 description: Automation to activate normal bathroom scene.
+mode: single
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
+  - service: light.turn_on
     data:
-      transition: 30
+      transition: 10
+      brightness: 117
     target:
-      entity_id: scene.bathroom_day
-mode: single
+      entity_id: light.bathroom_main_lights

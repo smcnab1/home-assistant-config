@@ -13,17 +13,7 @@ condition: []
 action:
   - service: light.turn_on
     data:
-      transition: 30
-      brightness: 117
-      hs_color:
-        - 2
-        - 100
-      xy_color:
-        - 0.699
-        - 0.3
-      rgb_color:
-        - 255
-        - 8
-        - 0
+      transition: 10
+      brightness: 18
     target:
       entity_id: light.bathroom_main_lights

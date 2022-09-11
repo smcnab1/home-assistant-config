@@ -8,15 +8,21 @@
 alias: 'Lighting Office Dull'
 description: 'Automation to activate dull office scene.'
 trigger: []
-condition: []
+condition:
+  - condition: state
+    entity_id: binary_sensor.xbox_status
+    state: "off"
 action:
-  - service: scene.turn_on
-    data:
-      transition: 30
-    target:
-      entity_id: scene.office_dull
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id: light.office_desk_lamp
+  - parallel:
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 0
+            - 191
+            - 255
+          brightness: 143
+        target:
+          entity_id:
+            - light.office_leds
 mode: single

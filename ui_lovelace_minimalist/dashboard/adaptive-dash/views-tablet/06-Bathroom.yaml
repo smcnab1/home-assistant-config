@@ -115,16 +115,6 @@ cards:
           service: automation.trigger
           service_data:
             entity_id: automation.lighting_bathroom_normal
-      - type: 'custom:button-card'
-        template: card_vertical_button
-        entity: input_boolean.bath_time
-        name: Bath
-        icon: mdi:bathtub
-        tap_action:
-          action: call-service
-          service: input_boolean.toggle
-          service_data:
-            entity_id: input_boolean.bath_time
       - type: "custom:button-card"
         template: card_vertical_button
         entity: automation.lighting_bathroom_off

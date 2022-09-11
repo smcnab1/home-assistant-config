@@ -26,6 +26,11 @@ entities:
     - 0.612
     - 0.374
     state: 'on'
+  light.bedroom_main_light:
+    friendly_name: Fairy Lights
+    supported_features: 0
+    color_mode: onoff
+    state: 'on'
 icon: mdi:weather-sunny
 metadata:
   light.bedroom_leds:

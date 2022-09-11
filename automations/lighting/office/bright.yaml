@@ -10,13 +10,16 @@ description: 'Automation to activate bright office scene.'
 trigger: []
 condition: []
 action:
-  - service: scene.turn_on
-    data:
-      transition: 30
-    target:
-      entity_id: scene.office_bright
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id: light.office_desk_lamp
+  - parallel:
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 194
+            - 223
+            - 255
+          brightness: 181
+        target:
+          entity_id:
+            - light.office_leds
 mode: single

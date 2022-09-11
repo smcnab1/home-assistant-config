@@ -12,8 +12,8 @@ trigger:
     tag_id: d779b88d-464d-4b8b-96fe-cb4ea167bf63
 condition: []
 action:
-  - service: light.toggle
+  - service: automation.trigger
     data: {}
     target:
-      entity_id: light.office_desk_led
+      entity_id: automation.lighting_office_bright
 mode: single

@@ -16,6 +16,7 @@ layout:
     "title4 title4 . . . ."
     "card4 card4 card4 card4 card4 card4"
     "card5 card5 card5 card5 card5 card5"
+    "card6 card6 card6 card6 card6 card6"
   mediaquery:
     # Tablet
     "(max-width: 1280px)":
@@ -32,6 +33,7 @@ layout:
         "title4 title4 . . . ."
         "card4 card4 card4 card4 card4 card4"
         "card5 card5 card5 card5 card5 card5"
+        "card6 card6 card6 card6 card6 card6"
 
 view_layout:
   grid-area: "popup"
@@ -156,7 +158,7 @@ cards:
     template: "card_title"
     name: "Media"
   - view_layout:
-      grid-area: "card4"
+      grid-area: "card3"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"

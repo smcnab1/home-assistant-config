@@ -5,13 +5,73 @@
 #                |___/                                          
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Lighting Living Room Off'
-description: 'Automation to turn off all living room lights.'
+alias: Lighting Living Room Off
+description: Automation to turn off all living room lights.
 trigger: []
 condition: []
 action:
-  - service: light.turn_off
-    data: {}
-    target:
-      entity_id: light.all_living_room_lights
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.living_room_main_light
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_main_light
+      - if:
+          - condition: state
+            entity_id: light.living_room_lamp
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_lamp
+      - if:
+          - condition: state
+            entity_id: light.living_room_leds
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_leds
+      - if:
+          - condition: state
+            entity_id: light.living_room_lava_lamp
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_lava_lamp
+      - if:
+          - condition: state
+            entity_id: light.living_room_tv_leds
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_tv_leds
+      - if:
+          - condition: state
+            entity_id: light.living_room_display_led
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_display_led
+      - if:
+          - condition: state
+            entity_id: light.living_room_dreamview
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.living_room_dreamview
 mode: single
