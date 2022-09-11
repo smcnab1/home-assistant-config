@@ -57,21 +57,3 @@ action:
         data:
           title: HA - System Notification
           message: Home Assistant has Shutdown
-  - if:
-      - condition: time
-        after: "10:00:00"
-        before: "22:00:00"
-    then:
-      - parallel:
-          - service: tts.cloud_say
-            data:
-              entity_id: media_player.living_room_google_home
-              message: >-
-                Home Assistant is Restarting. Things may not work until it is
-                back up. So silly, so silly
-          - service: tts.cloud_say
-            data:
-              entity_id: media_player.bedroom_google_home
-              message: >-
-                Home Assistant is Restarting. Things may not work until it is
-                back up. So silly, so silly
