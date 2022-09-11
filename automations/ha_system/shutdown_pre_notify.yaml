@@ -60,3 +60,12 @@ action:
       message: >-
         Home Assistant is Restarting. Things may not work until it is back up.
         So silly, so silly
+  - if:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: HA - System Notification
+          message: Home Assistant has Shutdown
