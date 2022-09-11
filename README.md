@@ -94,25 +94,25 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[TP-Link Tapo P100](https://amzn.to/3Qw7cBb)</td>
+            <td><a href="https://amzn.to/3Qw7cBb">TP-Link Tapo P100</a></td>
             <td>7</td>
             <td>9.49</td>
             <td>66.43</td>
         </tr>
         <tr>
-            <td>[Xiaomi Aqara Single Button](https://amzn.to/3qtOL5D)</td>
+            <td><a href="https://amzn.to/3qtOL5D">Xiaomi Aqara Single Button</a></td>
             <td>1</td>
             <td>17.99</td>
             <td>17.99</td>
         </tr>
         <tr>
-            <td>[SONOFF Micro USB Smart Adapter](https://amzn.to/3TYq6DL)</td>
+            <td><a href="https://amzn.to/3TYq6DL">SONOFF Micro USB Smart Adapter</a></td>
             <td>2</td>
             <td>11.99</td>
             <td>23.98</td>
         </tr>
         <tr>
-            <td>[SwitchBot Smart Switch](https://amzn.to/3B41VeB)</td>
+            <td><a href="https://amzn.to/3B41VeB">[SwitchBot Smart Switch]</a></td>
             <td>2</td>
             <td>29.99</td>
             <td>59.98</td>
@@ -140,43 +140,43 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[Xiaomi Aqara Door Sensor](https://amzn.to/3BGwOaB)</td>
+            <td><a href="https://amzn.to/3BGwOaB">Xiaomi Aqara Door Sensor</a></td>
             <td>2</td>
             <td>16.99</td>
             <td>33.98</td>
         </tr>
         <tr>
-            <td>[Xiaomi Aqara Temperature Sensor](https://amzn.to/3DguZlz)</td>
+            <td><a href="https://amzn.to/3DguZlz">Xiaomi Aqara Temperature Sensor</a></td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>[Xiaomi Aqara Motion Sensor](https://amzn.to/3DlSMAV)</td>
+            <td><a href="https://amzn.to/3DlSMAV">Xiaomi Aqara Motion Sensor</a></td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>[Xiaomi Aqara Vibration Sensor](https://amzn.to/3RUy13b)</td>
+            <td><a href="https://amzn.to/3RUy13b">Xiaomi Aqara Vibration Sensor</a></td>
             <td>2</td>
             <td>19.99</td>
             <td>39.98</td>
         </tr>
         <tr>
-            <td>[ESP32 Boards](https://amzn.to/3QzIksm)</td>
+            <td><a href="https://amzn.to/3QzIksm">ESP32 Boards</a></td>
             <td>6</td>
             <td>7.00</td>
             <td>42.00</td>
         </tr>
         <tr>
-            <td>[ESP32 Cases](https://www.thingiverse.com/thing:4125952)</td>
+            <td><a href="https://www.thingiverse.com/thing:4125952">ESP32 Cases</a></td>
             <td>6</td>
             <td>8.00</td>
             <td>48.00</td>
         </tr>
         <tr>
-            <td>[Bed Pressure Mats](https://amzn.to/3BwBIXv)</td>
+            <td><a href="https://amzn.to/3BwBIXv">Bed Pressure Mats</a></td>
             <td>4</td>
             <td>11.79</td>
             <td>47.16</td>
@@ -204,49 +204,49 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[Samsung Q60AA](https://amzn.to/3DfYOmp)</td>
+            <td><a href="https://amzn.to/3DfYOmp">Samsung Q60AA</a></td>
             <td>1</td>
             <td>559.00</td>
             <td>559.00</td>
         </tr>
         <tr>
-            <td>[BLAUPUNKT 32"](https://amzn.to/3Qydv7u)</td>
+            <td><a href="https://amzn.to/3Qydv7u">BLAUPUNKT 32"</a></td>
             <td>1</td>
             <td>139.95</td>
             <td>139.95</td>
         </tr>
         <tr>
-            <td>[SONOS Play 1](https://amzn.to/3RWi2Sk)</td>
+            <td><a href="https://amzn.to/3RWi2Sk">SONOS Play 1</a></td>
             <td>1</td>
             <td>164.99</td>
             <td>164.99</td>
         </tr>
         <tr>
-            <td>[Google Nest Hub Mini](https://store.google.com/gb/product/google_nest_mini?hl=en-GB&pli=1)</td>
+            <td><a href="https://store.google.com/gb/product/google_nest_mini?hl=en-GB&pli=1">Google Nest Hub Mini</a></td>
             <td>2</td>
             <td>27.99</td>
             <td>55.98</td>
         </tr>
         <tr>
-            <td>[Lenovo M10 Tablet with Ethernet Connection](https://amzn.to/3RHybLK)</td>
+            <td><a href="https://amzn.to/3RHybLK">Lenovo M10 Tablet with Ethernet Connection</a></td>
             <td>1</td>
             <td>79.99</td>
             <td>79.99</td>
         </tr>
         <tr>
-            <td>[XBOX One Console](https://amzn.to/3But0J8)</td>
+            <td><a href="https://amzn.to/3But0J8">XBOX One Console</a></td>
             <td>1</td>
             <td>164.97</td>
             <td>164.97</td>
         </tr>
         <tr>
-            <td>[Apple Mac Mini](https://amzn.to/3RyR7Mo)</td>
+            <td><a href="https://amzn.to/3RyR7Mo">Apple Mac Mini</a></td>
             <td>1</td>
             <td>629.97</td>
             <td>629.97</td>
         </tr>
         <tr>
-            <td>[MacBook Air](https://amzn.to/3d2Ivi6)</td>
+            <td><a href="https://amzn.to/3d2Ivi6">MacBook Air</a></td>
             <td>2</td>
             <td>949.00</td>
             <td>1898.00</td>
@@ -274,31 +274,31 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[Lepro GU10 LED RGB Bulb](https://amzn.to/3RKY4K6)</td>
+            <td><a href="https://amzn.to/3RKY4K6">Lepro GU10 LED RGB Bulb</a></td>
             <td>10</td>
             <td>9.00</td>
             <td>90.00</td>
         </tr>
         <tr>
-            <td>[Lepro E14 LED Dimmable Bulb](https://amzn.to/3RNhQEY)</td>
+            <td><a href="https://amzn.to/3RNhQEY">Lepro E14 LED Dimmable Bulb</a></td>
             <td>2</td>
             <td>8.50</td>
             <td>17.00</td>
         </tr>
         <tr>
-            <td>[Lepro LED Strip RGB 5m](https://amzn.to/3RVTDME)</td>
+            <td><a href="https://amzn.to/3RVTDME">Lepro LED Strip RGB 5m</a></td>
             <td>10</td>
             <td>15.99</td>
             <td>159.90</td>
         </tr>
         <tr>
-            <td>[Govee DreamView T1 Immersion LED Kit](https://amzn.to/3U59JFI)</td>
+            <td><a href="https://amzn.to/3U59JFI">Govee DreamView T1 Immersion LED Kit</a></td>
             <td>1</td>
             <td>56.09</td>
             <td>56.09</td>
         </tr>
         <tr>
-            <td>[Mathmos Astro Lava Lamp](https://amzn.to/3DgTnnb)</td>
+            <td><a href="https://amzn.to/3DgTnnb">Mathmos Astro Lava Lamp</a></td>
             <td>1</td>
             <td>82.00</td>
             <td>82.00</td>
@@ -326,19 +326,19 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[ConBee II](https://amzn.to/3DfZWq9)</td>
+            <td><a href="https://amzn.to/3DfZWq9">ConBee II</a></td>
             <td>1</td>
             <td>37.42</td>
             <td>37.42</td>
         </tr>
         <tr>
-            <td>[Aqara M2 Hub](https://amzn.to/3QC57DT)</td>
+            <td><a href="https://amzn.to/3QC57DT">Aqara M2 Hub</a></td>
             <td>1</td>
             <td>54.99</td>
             <td>54.99</td>
         </tr>
         <tr>
-            <td>[SwitchBot Hub](https://amzn.to/3DhHHRd)</td>
+            <td><a href="https://amzn.to/3DhHHRd">SwitchBot Hub</a></td>
             <td>1</td>
             <td>35.00</td>
             <td>35.00</td>
@@ -366,37 +366,37 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[Raspberry Pi 4 Model B, 8GB RAM](https://thepihut.com/collections/raspberry-pi-boards/products/raspberry-pi-4-model-b?variant=31994565689406)</td>
+            <td><a href="https://thepihut.com/collections/raspberry-pi-boards/products/raspberry-pi-4-model-b?variant=31994565689406">Raspberry Pi 4 Model B, 8GB RAM</a></td>
             <td>2</td>
             <td>75.50</td>
             <td>151.00</td>
         </tr>
         <tr>
-            <td>[Raspberry Pi 4 IceBerry Cooling Case](https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4)</td>
+            <td><a href="https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4<">Raspberry Pi 4 IceBerry Cooling Case/a></td>
             <td>2</td>
             <td>16.00</td>
             <td>32.00</td>
         </tr>
         <tr>
-            <td>[250GB SSD in Case](https://amzn.to/3RSLQyV)</td>
+            <td><a href="https://amzn.to/3RSLQyV">250GB SSD in Case</a></td>
             <td>2</td>
             <td>35.00</td>
             <td>70.00</td>
         </tr>
         <tr>
-            <td>[TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch](https://amzn.to/3evknF8)</td>
+            <td><a href="https://amzn.to/3evknF8">TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch</a></td>
             <td>1</td>
             <td>10.49</td>
             <td>10.49</td>
         </tr>
         <tr>
-            <td>[Coral USB Accelerator](https://amzn.to/3xceHXm)</td>
+            <td><a href="https://amzn.to/3xceHXm">Coral USB Accelerator</a></td>
             <td>1</td>
             <td>120.00</td>
             <td>120.00</td>
         </tr>
         <tr>
-            <td>[TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter](https://amzn.to/3DxxWyD)</td>
+            <td><a href="https://amzn.to/3DxxWyD">TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter</a></td>
             <td>3</td>
             <td>23.41</td>
             <td>70.23</td>
@@ -424,13 +424,13 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>[iPhone 13 Pro Max with Companion App](https://amzn.to/3eJRXHu)</td>
+            <td><a href="https://amzn.to/3eJRXHu">iPhone 13 Pro Max with Companion App</a></td>
             <td>1</td>
             <td>1049.00</td>
             <td>1049.00</td>
         </tr>
         <tr>
-            <td>[iPhone 11 with Companion App](https://amzn.to/3xe5HAO)</td>
+            <td><a href="https://amzn.to/3xe5HAO">iPhone 11 with Companion App</a></td>
             <td>1</td>
             <td>429.00</td>
             <td>429.00</td>
