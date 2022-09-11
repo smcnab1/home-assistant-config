@@ -5,7 +5,6 @@
 #                        |_|                                            |__/ 
 #--FROM https://github.com/smcnab1/op-question-mark
 
-
 alias: HA System Backup Stale Notify
 description: >-
   Sends me notification if backups go stale in order to then complete a backup.
