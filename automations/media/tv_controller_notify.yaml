@@ -22,7 +22,7 @@ action:
         entity_id: person.leah
         state: home
     then:
-      - service: notify.mobile_app_leah_s_iphone
+      - service: notify.mobile_app_leah_iphone
         data:
           title: TV has been turned on
           message: Do you want to control it?

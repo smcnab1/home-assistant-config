@@ -105,7 +105,7 @@ action:
             seconds: 0
             milliseconds: 250
     else: []
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       message: clear_notification
       data:

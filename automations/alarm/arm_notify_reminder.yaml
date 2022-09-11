@@ -38,7 +38,7 @@ action:
       - condition: trigger
         id: LEAHLEAVE
     then:
-      - service: notify.mobile_app_leah_s_iphone
+      - service: notify.mobile_app_leah_iphone
         data:
           message: Would you like to set it?
           title: The alarm isn't set and nobody is home!

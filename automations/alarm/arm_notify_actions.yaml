@@ -58,7 +58,7 @@ action:
         data:
           message: Leah has armed the Alarm.
           title: ALARM ARMED
-      - service: notify.mobile_app_leah_s_iphone
+      - service: notify.mobile_app_leah_iphone
         data:
           message: You have armed the Alarm.
           title: ALARM ARMED
@@ -80,7 +80,7 @@ action:
         data:
           message: You have armed the Alarm.
           title: ALARM ARMED
-      - service: notify.mobile_app_leah_s_iphone
+      - service: notify.mobile_app_leah_iphone
         data:
           message: Sam has armed the Alarm.
           title: ALARM ARMED
