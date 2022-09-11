@@ -15,7 +15,15 @@ mode: single
 trigger:
   - platform: homeassistant
     event: start
-condition: []
+condition:
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: person.leah
+        state: home
+      - condition: state
+        entity_id: person.sam
+        state: home
 action:
   - parallel:
       - if:
@@ -34,9 +42,6 @@ action:
                     uri: http://homeassistant.local:8123/
                     icon: sfsymbols:safari
       - if:
-          - condition: state
-            entity_id: person.presence
-            state: home
           - condition: time
             before: "22:00:00"
             after: "10:00:00"
@@ -53,4 +58,3 @@ action:
                 Home Assistant is back up. Things should work now. Not so silly
                 now
               entity_id: media_player.living_room_google_home
-
