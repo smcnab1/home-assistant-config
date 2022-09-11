@@ -4,6 +4,5 @@
 #  \___|_|_\\___/ \___/|_|  |___/
 #                                
 #--FROM https://github.com/smcnab1/op-question-mark
-#---Links to groups within the groups directory.
 
-group: !include_dir_named ../entities/group
+group: !include ../entities/group.yaml
