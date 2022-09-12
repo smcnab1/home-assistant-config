@@ -83,4 +83,15 @@ action:
         data: {}
         target:
           entity_id: scene.premovie
+  - delay:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+  - service: automation.trigger
+    data:
+      skip_condition: false
+    target:
+      entity_id: automation.lighting_living_room_off
 mode: single
+
