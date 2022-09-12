@@ -1,0 +1,14 @@
+#                 _           _ _         _        
+#  _ __  __ _ _ _(_)__ _   __| | |__   __(_)______ 
+# | '  \/ _` | '_| / _` | / _` | '_ \ (_-< |_ / -_)
+# |_|_|_\__,_|_| |_\__,_| \__,_|_.__/ /__/_/__\___|
+#                                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+
+platform: sql
+db_url: !secret recorder_db_url
+queries:
+  - name: 'DataBase size'
+    query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1024, 1) "value" FROM information_schema.tables WHERE table_schema="homeassistant" GROUP BY table_schema;'
+    column: 'value'
+    unit_of_measurement: MB
