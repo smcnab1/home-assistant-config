@@ -1,8 +1,1 @@
-- id: '1662775125376'
-  alias: Wallpanel Battery Management
-  description: ''
-  use_blueprint:
-    path: seamus65/wallpanel-battery-management.yaml
-    input:
-      battery: sensor.dashboard_tablet_battery
-      charger: switch.tablet_charger
+[]
