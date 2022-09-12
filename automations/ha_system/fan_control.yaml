@@ -9,16 +9,20 @@ alias: HA System Fan Control
 description: >-
   Controls server cabinet temperature using temperature sensor and USB fans in
   Sonoff USB plugs
-trigger: []
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.server_temperature
+    above: 30
+    id: HOT
+  - platform: numeric_state
+    entity_id: sensor.server_temperature
+    below: 30
+    id: COOL
 condition: []
 action:
   - if:
-      - type: is_temperature
-        condition: device
-        device_id: 7ab72c275e4466f60c318693cc65c5dd
-        entity_id: sensor.server_temperature
-        domain: sensor
-        above: 30
+      - condition: trigger
+        id: HOT
     then:
       - service: switch.turn_on
         data: {}
@@ -29,19 +33,17 @@ action:
           message: It's getting a little hot in there
           title: Server Fans On
     else: []
-  - wait_for_trigger:
-      - type: temperature
-        platform: device
-        device_id: 7ab72c275e4466f60c318693cc65c5dd
-        entity_id: sensor.server_temperature
-        domain: sensor
-        below: 30
-  - service: switch.turn_off
-    data: {}
-    target:
-      entity_id: switch.server_fans
-  - service: notify.mobile_app_sam_s_mac_mini
-    data:
-      title: Server Fans Off
-      message: It's not so hot in there
+  - if:
+      - condition: trigger
+        id: COOL
+    then:
+      - service: switch.turn_off
+        data: {}
+        target:
+          entity_id: switch.server_fans
+      - service: notify.mobile_app_sam_s_mac_mini
+        data:
+          title: Server Fans Off
+          message: It's not so hot in there
 mode: single
+
