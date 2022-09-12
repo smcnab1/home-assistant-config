@@ -353,917 +353,930 @@ cards:
       grid-area: "title1"
     type: horizontal-stack
     cards:
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:speaker'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            size: fullscreen
-            title: Spotify Control
-            content:
-              type: custom:spotify-card
-              limit: 15
-              always_play_random_song: true
-              device: media_player.living_room_sonos
-              filter_devices:
-                - media_player.spotify
-              display_style: grid
-              known_connect_devices:
-                - id: 4840d2555bd5f0b995eb76723c6c9055
-                  name: Bedroom
-                  entity_id: media_player.bedroom_google_home
-                - id: f45b0e6aec165544faccaf2cad820542
-                  name: Living Room
-                  entity_id: media_player.living_room_google_home
-                - id: 317ff7c2ac5a9513d9102dfcdf9ec6591a736126
-                  name: Living Room Sonos
-                  entitiy_id: media_player.living_room_sonos
-              grid_show_title: true
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:lightbulb'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "All Lights"
-            content:
-              type: "vertical-stack"
-              cards:
-                - type: "horizontal-stack"
-                  cards:
-                    - type: custom:gap-card
-                      height: 10px
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:door-open
-                      tap_action:
-                        action: call-service
-                        service: light.turn_off
-                        service_data:
-                          entity_id: light.all_hall_lights
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:sofa
-                      tap_action:
-                        action: call-service
-                        service: light.turn_off
-                        service_data:
-                          entity_id: light.all_living_room_lights
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:chef-hat
-                      tap_action:
-                        action: call-service
-                        service: light.turn_off
-                        service_data:
-                          entity_id: light.all_kitchen_lights
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:bed-double
-                      tap_action:
-                        action: call-service
-                        service: light.turn_off
-                        service_data:
-                          entity_id: light.all_bedroom_lights
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:bathtub
-                      tap_action:
-                        action: call-service
-                        service: light.toggle
-                        service_data:
-                          entity_id: light.all_bathroom_lights
-                    - type: 'custom:button-card'
-                      template: chip_mdi_icon_only
-                      variables:
-                        ulm_chip_mdi_icon_only_icon: mdi:desk
-                      tap_action:
-                        action: call-service
-                        service: light.turn_off
-                        service_data:
-                          entity_id: light.all_office_lights
-                    - type: custom:gap-card
-                      height: 10px
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Hall"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.hall_main_lights
-                      variables:
-                        ulm_card_light_name: Main Lights
-                        ulm_card_light_icon: mdi:ceiling-light
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: tru
-                        ulm_card_light_enable_popup: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.hall_leds
-                      variables:
-                        ulm_card_light_name: Hall LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.hall_lamp
-                      variables:
-                        ulm_card_light_name: Hall Lamp
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Living Room"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_main_light
-                      variables:
-                        ulm_card_light_name: Main Light
-                        ulm_card_light_icon: mdi:ceiling-light
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_leds
-                      variables:
-                        ulm_card_light_name: Main LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_display_led
-                      variables:
-                        ulm_card_light_name: Display LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_tv_leds
-                      variables:
-                        ulm_card_light_name: TV LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_lava_lamp
-                      variables:
-                        ulm_card_light_name: Lava Lamp
-                        ulm_card_light_icon: mdi:lava-lamp
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_lamp
-                      variables:
-                        ulm_card_light_name: Lamp
-                        ulm_card_light_icon: mdi:floor-lamp
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.living_room_dreamview
-                      variables:
-                        ulm_card_light_name: DreamView
-                        ulm_card_light_icon: mdi:movie
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Kitchen"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.kitchen_main_lights
-                      variables:
-                        ulm_card_light_name: Main Lights
-                        ulm_card_light_icon: mdi:ceiling-light
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.kitchen_leds
-                      variables:
-                        ulm_card_light_name: Kitchen LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Bedroom"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bedroom_main_light
-                      variables:
-                        ulm_card_light_name: Main Lights
-                        ulm_card_light_icon: mdi:ceiling-light
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bedroom_leds
-                      variables:
-                        ulm_card_light_name: Bedroom LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bedside_leah
-                      variables:
-                        ulm_card_light_name: Bedside Leah
-                        ulm_card_light_icon: mdi:lamp
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bedside_sam
-                      variables:
-                        ulm_card_light_name: Bedside Sam
-                        ulm_card_light_icon: mdi:lamp
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bedroom_fairy_lights
-                      variables:
-                        ulm_card_light_name: Fairy Lights
-                        ulm_card_light_icon: mdi:string-lights
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Bathroom"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.bathroom_main_lights
-                      variables:
-                        ulm_card_light_name: Bathroom Lights
-                        ulm_card_light_icon: mdi:ceiling-light
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Office"
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.office_leds
-                      variables:
-                        ulm_card_light_name: Desk LEDs
-                        ulm_card_light_icon: mdi:led-strip
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-                        ulm_card_light_enable_popup: true
-                    - type: "custom:button-card"
-                      template: card_light
-                      entity: light.office_desk_lamp
-                      variables:
-                        ulm_card_light_name: Desk Lamp
-                        ulm_card_light_icon: mdi:desk-lamp
-                        ulm_card_light_enable_slider: true
-                        ulm_card_light_enable_color: true
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:palette'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "All Scenes"
-            content:
-              type: "vertical-stack"
-              cards:
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Hall"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_hall_day
-                      name: Day
-                      icon: mdi:weather-sunny
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_hall_day
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_hall_night
-                      name: Night
-                      icon: mdi:weather-night
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_hall_night
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_hall_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_hall_off
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Living Room"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_living_room_day
-                      name: Day
-                      icon: mdi:weather-sunny
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_living_room_day
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_living_room_night
-                      name: Night
-                      icon: mdi:weather-night
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_living_room_night
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_living_room_movie
-                      name: Movie
-                      icon: mdi:movie
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_living_room_movie
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_living_room_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_living_room_off
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Kitchen"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_kitchen_normal
-                      name: Normal
-                      icon: mdi:chef-hat
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_kitchen_normal
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_kitchen_cooking
-                      name: Cooking
-                      icon: mdi:stove
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_kitchen_cooking
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_kitchen_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_kitchen_off
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Bedroom"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bedroom_day
-                      name: Day
-                      icon: mdi:weather-sunny
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bedroom_day
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bedroom_night
-                      name: Night
-                      icon: mdi:weather-night
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bedroom_night
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bedroom_movie
-                      name: Movie
-                      icon: mdi:movie
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bedroom_movie
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bedroom_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bedroom_off
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Bathroom"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bathroom_morning
-                      name: Morning
-                      icon: mdi:weather-sunset-up
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bathroom_morning
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bathroom_normal
-                      name: Normal
-                      icon: mdi:weather-sunny
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bathroom_normal
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_bathroom_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_bathroom_off
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Office"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_office_bright
-                      name: Bright
-                      icon: mdi:weather-sunny
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_office_bright
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_office_dull
-                      name: Dull
-                      icon: mdi:weather-night
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_office_dull
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_office_lamp
-                      name: Lamp
-                      icon: mdi:desk-lamp
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_office_lamp
-                    - type: 'custom:button-card'
-                      template: card_vertical_button
-                      entity: automation.lighting_office_off
-                      name: All Off
-                      icon: mdi:lightbulb-off
-                      tap_action:
-                        action: call-service
-                        service: automation.trigger
-                        service_data:
-                          entity_id: automation.lighting_office_off
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:shield'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "Security"
-            content:
-              type: "vertical-stack"
-              cards:
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      template: "card_title"
-                      name: "Cameras"
-                    - type: 'custom:button-card'
-                      template: chip_alarm
-                      entity: alarm_control_panel.home_alarm
-                      states:
-                        - arm_away
-                - type: custom:frigate-card
-                  cameras:
-                    - camera_entity: camera.hall_frigate
-                      camera_name: Hall
-                    - camera_entity: camera.bedroom_camera_frigate
-                      camera_name: Bedroom
-                    - camera_entity: camera.living_room_camera_frigate
-                      camera_name: Living Room
-                  view:
-                    default: live
-                  menu:
-                    mode: overlay-bottom
-                    buttons:
-                      image: true
-                  live:
-                    lazy_load: false
-                    auto_unmute: true
-                    preload: true
-                    controls:
-                      thumbnails:
-                        media: clips
-                        mode: below
-                - type: "custom:button-card"
-                  template: "card_title"
-                  name: "Sensors"
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Door
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Door
-                      entity: binary_sensor.front_door_sensor
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.front_door_sensor_battery
-                      name: Door
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.front_door_sensor_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Door
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Hall
-                      entity: binary_sensor.hall_motion_sensor
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.hall_motion_sensor_battery
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Hall
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Living Room
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Living Room
-                      entity: binary_sensor.living_room_motion
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.living_room_motion_battery
-                      name: Living Room
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Living Room
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Kitchen
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Kitchen
-                      entity: binary_sensor.kitchen_motion_sensor
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.kitchen_motion_sensor_battery
-                      name: Kitchen
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Kitchen
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Bedroom
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Bedroom
-                      entity: binary_sensor.bedroom_motion_sensor
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.bedroom_motion_sensor_battery
-                      name: Bedroom
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Bedroom
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Bathroom
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Bathroom
-                      entity: binary_sensor.bathroom_motion_sensor
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.bathroom_motion_sensor_battery
-                      name: Bathroom
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Bathroom
-                - type: horizontal-stack
-                  cards:
-                    - type: 'custom:button-card'
-                      template: card_binary_sensor_alert
-                      name: Office
-                      variables:
-                        ulm_card_binary_sensor_alert: true
-                        ulm_show_last_changed: true
-                        ulm_card_binary_sensor_alert_name: Office
-                      entity: binary_sensor.living_room_motion
-                    - type: 'custom:button-card'
-                      template: card_battery
-                      entity: sensor.living_room_motion_battery
-                      name: Office
-                      variables:
-                        ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
-                        ulm_card_battery_battery_level_danger: 30
-                        ulm_card_battery_battery_level_warning: 80
-                        ulm_card_battery_name: Office
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:google-assistant'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "Notification Manager"
-            content:
-              type: "vertical-stack"
-              cards:
-                - type: "horizontal-stack"
-                  cards:
-                    - type: "custom:button-card"
-                      entity_picture: "/local/avatar_sam.png"
-                      show_entity_picture: true
-                      tap_action:
-                        action: fire-dom-event
-                        browser_mod:
-                          service: browser_mod.popup
-                          data:
-                            title: "Choose a Device"
-                            content:
-                              type: "vertical-stack"
-                              cards:
-                                - type: 'custom:notify-card'
-                                  target: mobile_app_iphone
-                                  label: Notify Sam's Phone
-                                  card_title: Send Notification to Sam's Phone
-                                  notification_title: 'New Notification'
-                                - type: 'custom:notify-card'
-                                  target: mobile_app_sam_s_mac_mini
-                                  label: Notify Sam's PC
-                                  card_title: Send Notification to Sam's PC
-                                  notification_title: 'New Notification'
-                                - type: 'custom:notify-card'
-                                  target: mobile_app_sams_macbook_air
-                                  label: Notify Sam's Laptop
-                                  card_title: Send Notification to Sam's Laptop
-                                  notification_title: 'New Notification'
-                    - type: "custom:button-card"
-                      entity_picture: "/local/avatar_leah.png"
-                      show_entity_picture: true
-                      tap_action:
-                        action: fire-dom-event
-                        browser_mod:
-                          service: browser_mod.popup
-                          data:
-                            title: "Choose a Device"
-                            content:
-                              type: "vertical-stack"
-                              cards:
-                                - type: 'custom:notify-card'
-                                  target: mobile_app_leah_s_iphone
-                                  label: Notify Leah's Phone
-                                  card_title: Send Notification to Leah's Phone
-                                  notification_title: 'New Notification'
-                    - type: "custom:button-card"
-                      entity_picture: "/local/google-assistant-logo.png"
-                      show_entity_picture: true
-                      tap_action:
-                        action: fire-dom-event
-                        browser_mod:
-                          service: browser_mod.popup
-                          data:
-                            title: "Choose a Device"
-                            content:
-                              type: "vertical-stack"
-                              cards:
-                                - type: "custom:button-card"
-                                  template: "card_title"
-                                  name: "Living Room"
-                                - type: entities
-                                  entities: 
-                                    - input_text.tts_message_living_room
-                                - type: custom:slider-button-card
-                                  entity: media_player.living_room_google_home
-                                  slider:
-                                    direction: left-right
-                                    background: gradient
-                                    use_state_color: true
-                                  compact: true
-                                  icon:
-                                    show: false
-                                  action_button:
-                                    icon: mdi:send
-                                    tap_action:
-                                      action: call-service
-                                      service: automation.trigger
-                                      service_data:
-                                        entity_id: automation.tts_input_push_living_room
-                                  name: Living Room Speaker
-                                - type: "custom:button-card"
-                                  template: "card_title"
-                                  name: "Bedroom"
-                                - type: entities
-                                  entities: 
-                                    - input_text.tts_message_bedroom
-                                - type: custom:slider-button-card
-                                  entity: media_player.bedroom_google_home
-                                  slider:
-                                    direction: left-right
-                                    background: gradient
-                                    use_state_color: true
-                                  compact: true
-                                  icon:
-                                    show: false
-                                  action_button:
-                                    icon: mdi:send
-                                    tap_action:
-                                      action: call-service
-                                      service: automation.trigger
-                                      service_data:
-                                        entity_id: automation.tts_input_push_bedroom
-                                - type: "custom:button-card"
-                                  template: "card_title"
-                                  name: "Hall"
-                                - type: entities
-                                  entities: 
-                                    - input_text.tts_message_hall
-                                - type: custom:slider-button-card
-                                  entity: media_player.dashboard_tablet
-                                  slider:
-                                    direction: left-right
-                                    background: gradient
-                                    use_state_color: true
-                                  compact: true
-                                  icon:
-                                    show: false
-                                  action_button:
-                                    icon: mdi:send
-                                    tap_action:
-                                      action: call-service
-                                      service: automation.trigger
-                                      service_data:
-                                        entity_id: automation.tts_input_push_hall
-                                  name: Hall Tablet
-                - type: 'custom:notify-card'
-                  target: notify.notify
-                  label: Notify Everyone
-                  card_title: Send Notification to All
-                  notification_title: 'New Notification'
-                - type: 'custom:notify-card'
-                  target: notify.bedroom_tv_notify
-                  label: Notify Bedroom TV
-                  card_title: Send Notification to Bedroom TV
-                  notification_title: 'New Notification'
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:movie'
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            title: "Watch List"
-            content:
-              type: "shopping-list"
-    - type: 'custom:button-card'
-      template: chip_icon_label
-      icon: 'mdi:network'
-      tap_action:
-        action: navigate
-        navigation_path: "system"
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:lightbulb'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "All Lights"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: custom:gap-card
+                        height: 10px
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:door-open
+                        tap_action:
+                          action: call-service
+                          service: light.turn_off
+                          service_data:
+                            entity_id: light.all_hall_lights
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:sofa
+                        tap_action:
+                          action: call-service
+                          service: light.turn_off
+                          service_data:
+                            entity_id: light.all_living_room_lights
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:chef-hat
+                        tap_action:
+                          action: call-service
+                          service: light.turn_off
+                          service_data:
+                            entity_id: light.all_kitchen_lights
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:bed-double
+                        tap_action:
+                          action: call-service
+                          service: light.turn_off
+                          service_data:
+                            entity_id: light.all_bedroom_lights
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:bathtub
+                        tap_action:
+                          action: call-service
+                          service: light.toggle
+                          service_data:
+                            entity_id: light.all_bathroom_lights
+                      - type: 'custom:button-card'
+                        template: chip_mdi_icon_only
+                        variables:
+                          ulm_chip_mdi_icon_only_icon: mdi:desk
+                        tap_action:
+                          action: call-service
+                          service: light.turn_off
+                          service_data:
+                            entity_id: light.all_office_lights
+                      - type: custom:gap-card
+                        height: 10px
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Hall"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_main_lights
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: tru
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_leds
+                        variables:
+                          ulm_card_light_name: Hall LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.hall_lamp
+                        variables:
+                          ulm_card_light_name: Hall Lamp
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Living Room"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_main_light
+                        variables:
+                          ulm_card_light_name: Main Light
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_leds
+                        variables:
+                          ulm_card_light_name: Main LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_display_led
+                        variables:
+                          ulm_card_light_name: Display LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_tv_leds
+                        variables:
+                          ulm_card_light_name: TV LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_lava_lamp
+                        variables:
+                          ulm_card_light_name: Lava Lamp
+                          ulm_card_light_icon: mdi:lava-lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_lamp
+                        variables:
+                          ulm_card_light_name: Lamp
+                          ulm_card_light_icon: mdi:floor-lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.living_room_dreamview
+                        variables:
+                          ulm_card_light_name: DreamView
+                          ulm_card_light_icon: mdi:movie
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Kitchen"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.kitchen_main_lights
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.kitchen_leds
+                        variables:
+                          ulm_card_light_name: Kitchen LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Bedroom"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bedroom_main_light
+                        variables:
+                          ulm_card_light_name: Main Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bedroom_leds
+                        variables:
+                          ulm_card_light_name: Bedroom LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bedside_leah
+                        variables:
+                          ulm_card_light_name: Bedside Leah
+                          ulm_card_light_icon: mdi:lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bedside_sam
+                        variables:
+                          ulm_card_light_name: Bedside Sam
+                          ulm_card_light_icon: mdi:lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bedroom_fairy_lights
+                        variables:
+                          ulm_card_light_name: Fairy Lights
+                          ulm_card_light_icon: mdi:string-lights
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Bathroom"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.bathroom_main_lights
+                        variables:
+                          ulm_card_light_name: Bathroom Lights
+                          ulm_card_light_icon: mdi:ceiling-light
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Office"
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.office_leds
+                        variables:
+                          ulm_card_light_name: Desk LEDs
+                          ulm_card_light_icon: mdi:led-strip
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+                          ulm_card_light_enable_popup: true
+                      - type: "custom:button-card"
+                        template: card_light
+                        entity: light.office_desk_lamp
+                        variables:
+                          ulm_card_light_name: Desk Lamp
+                          ulm_card_light_icon: mdi:desk-lamp
+                          ulm_card_light_enable_slider: true
+                          ulm_card_light_enable_color: true
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:palette'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "All Scenes"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Hall"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_hall_day
+                        name: Day
+                        icon: mdi:weather-sunny
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_hall_day
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_hall_night
+                        name: Night
+                        icon: mdi:weather-night
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_hall_night
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_hall_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_hall_off
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Living Room"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_living_room_day
+                        name: Day
+                        icon: mdi:weather-sunny
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_living_room_day
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_living_room_night
+                        name: Night
+                        icon: mdi:weather-night
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_living_room_night
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_living_room_movie
+                        name: Movie
+                        icon: mdi:movie
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_living_room_movie
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_living_room_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_living_room_off
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Kitchen"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_normal
+                        name: Normal
+                        icon: mdi:chef-hat
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_normal
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_cooking
+                        name: Cooking
+                        icon: mdi:stove
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_cooking
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_kitchen_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_kitchen_off
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Bedroom"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bedroom_day
+                        name: Day
+                        icon: mdi:weather-sunny
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bedroom_day
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bedroom_night
+                        name: Night
+                        icon: mdi:weather-night
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bedroom_night
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bedroom_movie
+                        name: Movie
+                        icon: mdi:movie
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bedroom_movie
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bedroom_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bedroom_off
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Bathroom"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bathroom_morning
+                        name: Morning
+                        icon: mdi:weather-sunset-up
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bathroom_morning
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bathroom_normal
+                        name: Normal
+                        icon: mdi:weather-sunny
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bathroom_normal
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_bathroom_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_bathroom_off
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Office"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_office_bright
+                        name: Bright
+                        icon: mdi:weather-sunny
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_office_bright
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_office_dull
+                        name: Dull
+                        icon: mdi:weather-night
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_office_dull
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_office_lamp
+                        name: Lamp
+                        icon: mdi:desk-lamp
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_office_lamp
+                      - type: 'custom:button-card'
+                        template: card_vertical_button
+                        entity: automation.lighting_office_off
+                        name: All Off
+                        icon: mdi:lightbulb-off
+                        tap_action:
+                          action: call-service
+                          service: automation.trigger
+                          service_data:
+                            entity_id: automation.lighting_office_off
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:speaker'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              title: Spotify Control
+              content:
+                type: custom:spotify-card
+                limit: 15
+                always_play_random_song: true
+                device: media_player.living_room_sonos
+                filter_devices:
+                  - media_player.spotify
+                display_style: grid
+                known_connect_devices:
+                  - id: 4840d2555bd5f0b995eb76723c6c9055
+                    name: Bedroom
+                    entity_id: media_player.bedroom_google_home
+                  - id: f45b0e6aec165544faccaf2cad820542
+                    name: Living Room
+                    entity_id: media_player.living_room_google_home
+                  - id: 317ff7c2ac5a9513d9102dfcdf9ec6591a736126
+                    name: Living Room Sonos
+                    entitiy_id: media_player.living_room_sonos
+                grid_show_title: true
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:television'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              title: Living Room TV Control
+              content:
+                type: custom:tv-card
+                
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:shield'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Security"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: "card_title"
+                        name: "Cameras"
+                      - type: 'custom:button-card'
+                        template: chip_alarm
+                        entity: alarm_control_panel.home_alarm
+                        states:
+                          - arm_away
+                  - type: custom:frigate-card
+                    cameras:
+                      - camera_entity: camera.hall_frigate
+                        camera_name: Hall
+                      - camera_entity: camera.bedroom_camera_frigate
+                        camera_name: Bedroom
+                      - camera_entity: camera.living_room_camera_frigate
+                        camera_name: Living Room
+                    view:
+                      default: live
+                    menu:
+                      mode: overlay-bottom
+                      buttons:
+                        image: true
+                    live:
+                      lazy_load: false
+                      auto_unmute: true
+                      preload: true
+                      controls:
+                        thumbnails:
+                          media: clips
+                          mode: below
+                  - type: "custom:button-card"
+                    template: "card_title"
+                    name: "Sensors"
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Door
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Door
+                        entity: binary_sensor.front_door_sensor
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.front_door_sensor_battery
+                        name: Door
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.front_door_sensor_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Door
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Hall
+                        entity: binary_sensor.hall_motion_sensor
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.hall_motion_sensor_battery
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Hall
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Living Room
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Living Room
+                        entity: binary_sensor.living_room_motion
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.living_room_motion_battery
+                        name: Living Room
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Living Room
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Kitchen
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Kitchen
+                        entity: binary_sensor.kitchen_motion_sensor
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.kitchen_motion_sensor_battery
+                        name: Kitchen
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Kitchen
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Bedroom
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Bedroom
+                        entity: binary_sensor.bedroom_motion_sensor
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.bedroom_motion_sensor_battery
+                        name: Bedroom
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Bedroom
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Bathroom
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Bathroom
+                        entity: binary_sensor.bathroom_motion_sensor
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.bathroom_motion_sensor_battery
+                        name: Bathroom
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Bathroom
+                  - type: horizontal-stack
+                    cards:
+                      - type: 'custom:button-card'
+                        template: card_binary_sensor_alert
+                        name: Office
+                        variables:
+                          ulm_card_binary_sensor_alert: true
+                          ulm_show_last_changed: true
+                          ulm_card_binary_sensor_alert_name: Office
+                        entity: binary_sensor.living_room_motion
+                      - type: 'custom:button-card'
+                        template: card_battery
+                        entity: sensor.living_room_motion_battery
+                        name: Office
+                        variables:
+                          ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
+                          ulm_card_battery_battery_level_danger: 30
+                          ulm_card_battery_battery_level_warning: 80
+                          ulm_card_battery_name: Office
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:google-assistant'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Notification Manager"
+              content:
+                type: "vertical-stack"
+                cards:
+                  - type: "horizontal-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        entity_picture: "/local/avatar_sam.png"
+                        show_entity_picture: true
+                        tap_action:
+                          action: fire-dom-event
+                          browser_mod:
+                            service: browser_mod.popup
+                            data:
+                              title: "Choose a Device"
+                              content:
+                                type: "vertical-stack"
+                                cards:
+                                  - type: 'custom:notify-card'
+                                    target: mobile_app_iphone
+                                    label: Notify Sam's Phone
+                                    card_title: Send Notification to Sam's Phone
+                                    notification_title: 'New Notification'
+                                  - type: 'custom:notify-card'
+                                    target: mobile_app_sam_s_mac_mini
+                                    label: Notify Sam's PC
+                                    card_title: Send Notification to Sam's PC
+                                    notification_title: 'New Notification'
+                                  - type: 'custom:notify-card'
+                                    target: mobile_app_sams_macbook_air
+                                    label: Notify Sam's Laptop
+                                    card_title: Send Notification to Sam's Laptop
+                                    notification_title: 'New Notification'
+                      - type: "custom:button-card"
+                        entity_picture: "/local/avatar_leah.png"
+                        show_entity_picture: true
+                        tap_action:
+                          action: fire-dom-event
+                          browser_mod:
+                            service: browser_mod.popup
+                            data:
+                              title: "Choose a Device"
+                              content:
+                                type: "vertical-stack"
+                                cards:
+                                  - type: 'custom:notify-card'
+                                    target: mobile_app_leah_s_iphone
+                                    label: Notify Leah's Phone
+                                    card_title: Send Notification to Leah's Phone
+                                    notification_title: 'New Notification'
+                      - type: "custom:button-card"
+                        entity_picture: "/local/google-assistant-logo.png"
+                        show_entity_picture: true
+                        tap_action:
+                          action: fire-dom-event
+                          browser_mod:
+                            service: browser_mod.popup
+                            data:
+                              title: "Choose a Device"
+                              content:
+                                type: "vertical-stack"
+                                cards:
+                                  - type: "custom:button-card"
+                                    template: "card_title"
+                                    name: "Living Room"
+                                  - type: entities
+                                    entities: 
+                                      - input_text.tts_message_living_room
+                                  - type: custom:slider-button-card
+                                    entity: media_player.living_room_google_home
+                                    slider:
+                                      direction: left-right
+                                      background: gradient
+                                      use_state_color: true
+                                    compact: true
+                                    icon:
+                                      show: false
+                                    action_button:
+                                      icon: mdi:send
+                                      tap_action:
+                                        action: call-service
+                                        service: automation.trigger
+                                        service_data:
+                                          entity_id: automation.tts_input_push_living_room
+                                    name: Living Room Speaker
+                                  - type: "custom:button-card"
+                                    template: "card_title"
+                                    name: "Bedroom"
+                                  - type: entities
+                                    entities: 
+                                      - input_text.tts_message_bedroom
+                                  - type: custom:slider-button-card
+                                    entity: media_player.bedroom_google_home
+                                    slider:
+                                      direction: left-right
+                                      background: gradient
+                                      use_state_color: true
+                                    compact: true
+                                    icon:
+                                      show: false
+                                    action_button:
+                                      icon: mdi:send
+                                      tap_action:
+                                        action: call-service
+                                        service: automation.trigger
+                                        service_data:
+                                          entity_id: automation.tts_input_push_bedroom
+                                  - type: "custom:button-card"
+                                    template: "card_title"
+                                    name: "Hall"
+                                  - type: entities
+                                    entities: 
+                                      - input_text.tts_message_hall
+                                  - type: custom:slider-button-card
+                                    entity: media_player.dashboard_tablet
+                                    slider:
+                                      direction: left-right
+                                      background: gradient
+                                      use_state_color: true
+                                    compact: true
+                                    icon:
+                                      show: false
+                                    action_button:
+                                      icon: mdi:send
+                                      tap_action:
+                                        action: call-service
+                                        service: automation.trigger
+                                        service_data:
+                                          entity_id: automation.tts_input_push_hall
+                                    name: Hall Tablet
+                  - type: 'custom:notify-card'
+                    target: notify.notify
+                    label: Notify Everyone
+                    card_title: Send Notification to All
+                    notification_title: 'New Notification'
+                  - type: 'custom:notify-card'
+                    target: notify.bedroom_tv_notify
+                    label: Notify Bedroom TV
+                    card_title: Send Notification to Bedroom TV
+                    notification_title: 'New Notification'
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:movie'
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Watch List"
+              content:
+                type: "shopping-list"
+      - type: 'custom:button-card'
+        template: chip_icon_label
+        icon: 'mdi:network'
+        tap_action:
+          action: navigate
+          navigation_path: "system"
 
   - view_layout:  ### HALL & LIVING ROOM ###
       grid-area: "card1"

@@ -139,3 +139,5 @@ resources:
     type: module
   - url: /local/community/spotify-card/spotify-card.js
     type: module
+  - url: /local/community/tv-card.js
+    type: module
