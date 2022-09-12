@@ -4,9 +4,77 @@
 # |_|_\___\___\___/|_|_\___/|___|_|_\
 #                                    
 #--FROM https://github.com/smcnab1/op-question-mark
-#---Activates recording of entities states into MariaDB.
+#---Manages entities that are shown or redacted from HA DB
 
 recorder:
   db_url: !secret recorder_db_url
-  purge_keep_days: 3
+  purge_keep_days: 7
   auto_purge: true
+  exclude:
+    domains:
+      - automation
+      - binary_sensor
+      - button
+      - calendar
+      - camera
+      - device_tracker
+      - govee
+      - input_boolean
+      - input_number
+      - input_text
+      - light
+      - media_player
+      - number
+      - person
+      - proximity
+      - scene
+      - script
+      - sensor
+      - sun
+      - switch
+      - update
+      - weather
+      - zone
+    entities:
+      - alarm_control_panel.aqara_hub_m2
+  include:
+    entities:
+      - alarm_control_panel.home_alarm
+      - binary_sensor.backups_stale
+      - binary_sensor.bed_sensor_leah
+      - binary_sensor.bed_sensor_sam
+      - input_boolean.all_sleeping
+      - input_boolean.leah_sleeping
+      - input_boolean.sam_sleeping
+      - input_button.hubert_watered
+      - light.all_bathroom_lights
+      - light.all_bedroom_lights
+      - light.all_hall_lights
+      - light.all_kitchen_lights
+      - light.all_living_room_lights
+      - light.all_office_lights
+      - sensor.backup_state
+      - sensor.bedroom_temperature
+      - sensor.coral_inference_speed
+      - sensor.database_size
+      - sensor.detection_fps
+      - sensor.disk_free
+      - sensor.disk_use_percent
+      - sensor.kitchen_humidity
+      - sensor.kitchen_temperature
+      - sensor.last_boot
+      - sensor.living_room_camera_process_fps
+      - sensor.living_room_humidity
+      - sensor.living_room_temperature
+      - sensor.memory_use_percent
+      - sensor.network_in_eth0
+      - sensor.network_out_eth0
+      - sensor.network_throughput_in_eth0
+      - sensor.network_throughput_out_eth0
+      - sensor.processor_temperature
+      - sensor.processor_use
+      - sensor.server_humidity
+      - sensor.server_temperature
+      - sensor.speed_test_download
+      - sensor.speed_test_ping
+      - sensor.speed_test_upload

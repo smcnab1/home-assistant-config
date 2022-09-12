@@ -1166,7 +1166,7 @@ cards:
                                 type: "vertical-stack"
                                 cards:
                                   - type: 'custom:notify-card'
-                                    target: mobile_app_leah_s_iphone
+                                    target: mobile_app_leah_iphone
                                     label: Notify Leah's Phone
                                     card_title: Send Notification to Leah's Phone
                                     notification_title: 'New Notification'
