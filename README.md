@@ -544,6 +544,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Kiosk Mode](https://github.com/NemesisRE/kiosk-mode) version 1.7.3 by @NemesisRE
 - [My Cards Bundle](https://github.com/AnthonMS/my-cards) version 1.0.2 by @AnthonMS
 - [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) version 1.11.0 by @thomasloven
+- [Spotify Lovelace Card](https://github.com/custom-cards/spotify-card) version 2.4.0 by @fondberg
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </details>
 <!-- end-hacs-frontend -->
