@@ -6,7 +6,7 @@ labels: "☀️Type: Enhancement"
 assignees: smcnab1
 
 ---
-# **🚀 Enhancement Request**
+## **🚀 Enhancement Request**
 
 **Is your enhancement request related to a problem? Please describe.**
 <!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->
