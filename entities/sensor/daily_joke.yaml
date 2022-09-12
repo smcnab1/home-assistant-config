@@ -1,0 +1,13 @@
+#     _      _ _          _     _       
+#  __| |__ _(_) |_  _    (_)___| |_____ 
+# / _` / _` | | | || |   | / _ \ / / -_)
+# \__,_\__,_|_|_|\_, |  _/ \___/_\_\___|
+#                |__/  |__/             
+#--FROM https://github.com/smcnab1/op-question-mark
+
+platform: rest
+resource: https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun,Spooky,Christmas?blacklistFlags=racist&type=single
+method: GET
+name: "Daily Joke"
+scan_interval: 600
+value_template: "{{ value_json.joke }}"

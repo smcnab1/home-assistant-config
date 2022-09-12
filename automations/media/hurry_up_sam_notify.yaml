@@ -19,7 +19,7 @@ condition:
     entity_id: person.leah
     state: home
 action:
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       title: Sam's on his XBOX
       message: What would you like to do?
@@ -49,7 +49,7 @@ action:
         event_data:
           action: IGNORE
     continue_on_timeout: false
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       message: clear_notification
       data:

@@ -7,7 +7,7 @@
 #---Script which outputs message tone to Leah's phone to assist in finding. Triggered from Dashboard.
 
 sequence:
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       title: Home Assistant is looking for your phone
       message: Find my Phone

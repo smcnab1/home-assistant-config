@@ -15,7 +15,7 @@ trigger:
       - alarm_control_panel.home_alarm
     to: triggered
 action:
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       title: INTRUDER ALERT - HOME ALARM TRIGGERED
       message: What would you like to do?
@@ -82,7 +82,7 @@ action:
       minutes: 1
       seconds: 0
       milliseconds: 0
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       title: INTRUDER ALERT - HOME ALARM TRIGGERED
       message: What would you like to do?

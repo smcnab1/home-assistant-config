@@ -30,7 +30,7 @@ action:
             entity_id: person.leah
             state: home
         then:
-          - service: notify.mobile_app_leah_s_iphone
+          - service: notify.mobile_app_leah_iphone
             data:
               message: Things won't work. So silly eh
               title: Home Assistant - Restarting
@@ -48,15 +48,12 @@ action:
             data:
               message: Home Assistant is Restarting
               title: Home Assistant - System Management
-  - service: tts.cloud_say
-    data:
-      entity_id: media_player.bedroom_google_home
-      message: >-
-        Home Assistant is Restarting. Things may not work until it is back up.
-        So silly, so silly
-  - service: tts.cloud_say
-    data:
-      entity_id: media_player.living_room_google_home
-      message: >-
-        Home Assistant is Restarting. Things may not work until it is back up.
-        So silly, so silly
+  - if:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: HA - System Notification
+          message: Home Assistant has Shutdown

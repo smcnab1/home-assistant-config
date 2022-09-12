@@ -13,7 +13,7 @@ condition:
     entity_id: person.leah
     state: home
 action:
-  - service: notify.mobile_app_leah_s_iphone
+  - service: notify.mobile_app_leah_iphone
     data:
       title: Want help getting somewhere?
       message: Open Citymapper

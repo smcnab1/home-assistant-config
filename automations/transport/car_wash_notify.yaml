@@ -5,8 +5,11 @@
 #                                                               |__/
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: "Transport Car Wash Notify"
-description: "Using the car wash input boolean to predict upcoming weather to see if it is worth washing my car or not. Then providing options as to either book car wash at home or show me navigation to nearest car wash."
+alias: Transport Car Wash Notify
+description: >-
+  Using the car wash input boolean to predict upcoming weather to see if it is
+  worth washing my car or not. Then providing options as to either book car wash
+  at home or show me navigation to nearest car wash.
 mode: single
 trigger:
   - platform: state
@@ -29,3 +32,8 @@ action:
           - action: OPEN
             title: Book Car Wash Visit
             uri: !secret car_wash_booking
+  - delay:
+      hours: 12
+      minutes: 0
+      seconds: 0
+      milliseconds: 0

@@ -1,24 +1,24 @@
-#                     _             _        _      __ _                   _          _    
-#  _ __  ___ _ _ _ _ (_)_ _  __ _  | |__ _ _(_)___ / _(_)_ _  __ _   ___  | |___ __ _| |_  
-# | '  \/ _ \ '_| ' \| | ' \/ _` | | '_ \ '_| / -_)  _| | ' \/ _` | |___| | / -_) _` | ' \ 
+#                     _             _        _      __ _                   _          _
+#  _ __  ___ _ _ _ _ (_)_ _  __ _  | |__ _ _(_)___ / _(_)_ _  __ _   ___  | |___ __ _| |_
+# | '  \/ _ \ '_| ' \| | ' \/ _` | | '_ \ '_| / -_)  _| | ' \/ _` | |___| | / -_) _` | ' \
 # |_|_|_\___/_| |_||_|_|_||_\__, | |_.__/_| |_\___|_| |_|_||_\__, |       |_\___\__,_|_||_|
-#                           |___/                            |___/                         
+#                           |___/                            |___/
 #--FROM https://github.com/smcnab1/op-question-mark
 
 alias: TTS Leah Morning Briefing
-description: Automation which sends TTS morning briefing for wife when she gets up for work. Provides update on weather and travel time. Then plays relaxing music from Spotify.
+description: >-
+  Automation which sends TTS morning briefing for wife when she gets up for
+  work. Provides update on weather and travel time. Then plays relaxing music
+  from Spotify.
 trigger:
   - platform: state
     entity_id:
-    - binary_sensor.living_room_motion
-    to: 'on'
+      - binary_sensor.living_room_motion
+    to: "on"
 condition:
-  - condition: state
-    entity_id: sensor.sams_iphone_ha_app_battery_state
-    state: 'charging'
   - condition: time
-    after: 05:00:00
-    before: 06:00:00
+    after: "05:00:00"
+    before: "06:00:00"
 action:
   - service: media_player.turn_on
     data: {}
@@ -32,38 +32,51 @@ action:
   - service: tts.cloud_say
     data_template:
       entity_id: media_player.living_room_google_home
-      message: 'Good Morning Leah. It is currently {{now().strftime(''%H:%M %p'')
-        }}. It is currently {{states.sensor.open_weather_feels_like_temperature.state|round}}
-        degrees outside and {{states.sensor.open_weather_condition.state}}. It is
-        going to be {{states.sensor.open_weather_forecast_condition.state}} today
-        with a high of {{states.sensor.open_weather_forecast_temperature.state|round}}
-        degrees and a low of {{states.sensor.open_weather_forecast_temperature_low.state|round}}
-        degrees. It is going to take you {{states.sensor.leah_to_work.state}} minutes
-        to get to work via the tube at the moment. Lets get your day off to a great
-        start with some choonage whilst you eat breakfast.'
+      message: >-
+        Good Morning Leah. It is currently {{now().strftime('%H:%M %p') }}. 
+        It's currently
+        {{states.sensor.open_weather_feels_like_temperature.state|round}}
+        degrees outside and {{states.sensor.open_weather_condition.state}}. 
+        It's is going to be
+        {{states.sensor.open_weather_forecast_condition.state}} today with a
+        high of {{states.sensor.open_weather_forecast_temperature.state|round}}
+        degrees and a low of
+        {{states.sensor.open_weather_forecast_temperature_low.state|round}}
+        degrees.  It is going to take you {{states.sensor.leah_to_work.state}}
+        minutes to get to work via the tube at the moment.  Here's a fun fact to
+        start off your day.
+
+        {{states.sensor.daily_fact.state}}
+
+        Oh and today's your day so here's a wee joke for you too.
+
+        {{states.sensor.daily_joke.state}}
+
+        Now that you are giggling, here's some choonage whilst you eat
+        breakfast.
   - delay:
       hours: 0
       minutes: 0
-      seconds: 25
+      seconds: 50
       milliseconds: 0
-  - service: media_player.volume_set
-    data:
-      volume_level: 0.4
-    target:
-      entity_id: media_player.living_room_google_home
-  - service: spotcast.start
-    data:
-      device_name: Living Room speaker
-      entity_id: media_player.living_room_google_home
-      uri: spotify:playlist:4OrLCnci10VO8DlSQ7VK5d
-      random_song: true
-      shuffle: true
+  - repeat:
+      count: 2
+      sequence:
+        - service: spotcast.start
+          data:
+            device_name: Living Room speaker
+            entity_id: media_player.living_room_google_home
+            uri: spotify:playlist:37i9dQZF1DXcgZcN2HVMoe
+            random_song: true
+            force_playback: true
+            start_volume: 40
+          continue_on_error: true
   - delay:
       hours: 1
       minutes: 0
       seconds: 0
       milliseconds: 0
-  - service: media_player.media_pause
+  - service: media_player.media_stop
     data: {}
     target:
       entity_id: media_player.living_room_google_home

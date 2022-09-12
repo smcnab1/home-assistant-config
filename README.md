@@ -94,25 +94,25 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>TP-Link Tapo P100</td>
+            <td><a href="https://amzn.to/3Qw7cBb">TP-Link Tapo P100</a></td>
             <td>7</td>
             <td>9.49</td>
             <td>66.43</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Single Button</td>
+            <td><a href="https://amzn.to/3qtOL5D">Xiaomi Aqara Single Button</a></td>
             <td>1</td>
             <td>17.99</td>
             <td>17.99</td>
         </tr>
         <tr>
-            <td>SONOFF Micro USB Smart Adapter</td>
+            <td><a href="https://amzn.to/3TYq6DL">SONOFF Micro USB Smart Adapter</a></td>
             <td>2</td>
             <td>11.99</td>
             <td>23.98</td>
         </tr>
         <tr>
-            <td>SwitchBot Smart Switch</td>
+            <td><a href="https://amzn.to/3B41VeB">SwitchBot Smart Switch</a></td>
             <td>2</td>
             <td>29.99</td>
             <td>59.98</td>
@@ -140,52 +140,52 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Xiaomi Aqara Door Sensor</td>
+            <td><a href="https://amzn.to/3BGwOaB">Xiaomi Aqara Door Sensor</a></td>
             <td>2</td>
             <td>16.99</td>
             <td>33.98</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Temperature Sensor</td>
+            <td><a href="https://amzn.to/3DguZlz">Xiaomi Aqara Temperature Sensor</a></td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Motion Sensor</td>
+            <td><a href="https://amzn.to/3DlSMAV">Xiaomi Aqara Motion Sensor</a></td>
             <td>5</td>
             <td>19.99</td>
             <td>99.95</td>
         </tr>
         <tr>
-            <td>Xiaomi Aqara Vibration Sensor</td>
-            <td>1</td>
-            <td>19.99</td>
-            <td>19.99</td>
-        </tr>
-        <tr>
-            <td>ESP32 for Presense</td>
-            <td>3</td>
-            <td>7.29</td>
-            <td>21.87</td>
-        </tr>
-        <tr>
-            <td>ESP32 for Bed Sensor</td>
-            <td>1</td>
-            <td>7.29</td>
-            <td>7.29</td>
-        </tr>
-        <tr>
-            <td>Bed Pressure Mats</td>
+            <td><a href="https://amzn.to/3RUy13b">Xiaomi Aqara Vibration Sensor</a></td>
             <td>2</td>
+            <td>19.99</td>
+            <td>39.98</td>
+        </tr>
+        <tr>
+            <td><a href="https://amzn.to/3QzIksm">ESP32 Boards</a></td>
+            <td>6</td>
+            <td>7.00</td>
+            <td>42.00</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.thingiverse.com/thing:4125952">ESP32 Cases</a></td>
+            <td>6</td>
+            <td>8.00</td>
+            <td>48.00</td>
+        </tr>
+        <tr>
+            <td><a href="https://amzn.to/3BwBIXv">Bed Pressure Mats</a></td>
+            <td>4</td>
             <td>11.79</td>
-            <td>23.58</td>
+            <td>47.16</td>
         </tr>
         <tr>
             <td><i><b>Total</b></i></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td><b>306.61</b></td>
+            <td><b>411.02</b></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -204,49 +204,49 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Samsung Q60AA</td>
+            <td><a href="https://amzn.to/3DfYOmp">Samsung Q60AA</a></td>
             <td>1</td>
             <td>559.00</td>
             <td>559.00</td>
         </tr>
         <tr>
-            <td>BLAUPUNKT 32"</td>
+            <td><a href="https://amzn.to/3Qydv7u">BLAUPUNKT 32"</a></td>
             <td>1</td>
             <td>139.95</td>
             <td>139.95</td>
         </tr>
         <tr>
-            <td>SONOS Play 1</td>
+            <td><a href="https://amzn.to/3RWi2Sk">SONOS Play 1</a></td>
             <td>1</td>
             <td>164.99</td>
             <td>164.99</td>
         </tr>
         <tr>
-            <td>Google Nest Hub Mini</td>
+            <td><a href="https://store.google.com/gb/product/google_nest_mini?hl=en-GB&pli=1">Google Nest Hub Mini</a></td>
             <td>2</td>
             <td>27.99</td>
             <td>55.98</td>
         </tr>
         <tr>
-            <td>Lenovo M10 Tablet with Ethernet Connection</td>
+            <td><a href="https://amzn.to/3RHybLK">Lenovo M10 Tablet with Ethernet Connection</a></td>
             <td>1</td>
             <td>79.99</td>
             <td>79.99</td>
         </tr>
         <tr>
-            <td>XBOX One Console</td>
+            <td><a href="https://amzn.to/3But0J8">XBOX One Console</a></td>
             <td>1</td>
             <td>164.97</td>
             <td>164.97</td>
         </tr>
         <tr>
-            <td>Apple Mac Mini</td>
+            <td><a href="https://amzn.to/3RyR7Mo">Apple Mac Mini</a></td>
             <td>1</td>
             <td>629.97</td>
             <td>629.97</td>
         </tr>
         <tr>
-            <td>MacBook Air</td>
+            <td><a href="https://amzn.to/3d2Ivi6">MacBook Air</a></td>
             <td>2</td>
             <td>949.00</td>
             <td>1898.00</td>
@@ -274,31 +274,31 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Lepro GU10 LED RGB Bulb</td>
+            <td><a href="https://amzn.to/3RKY4K6">Lepro GU10 LED RGB Bulb</a></td>
             <td>10</td>
             <td>9.00</td>
             <td>90.00</td>
         </tr>
         <tr>
-            <td>Lepro E14 LED Dimmable Bulb</td>
+            <td><a href="https://amzn.to/3RNhQEY">Lepro E14 LED Dimmable Bulb</a></td>
             <td>2</td>
             <td>8.50</td>
             <td>17.00</td>
         </tr>
         <tr>
-            <td>Lepro LED Strip RGB 5m</td>
+            <td><a href="https://amzn.to/3RVTDME">Lepro LED Strip RGB 5m</a></td>
             <td>10</td>
             <td>15.99</td>
             <td>159.90</td>
         </tr>
         <tr>
-            <td>Govee DreamView T1 Immersion LED Kit</td>
+            <td><a href="https://amzn.to/3U59JFI">Govee DreamView T1 Immersion LED Kit</a></td>
             <td>1</td>
             <td>56.09</td>
             <td>56.09</td>
         </tr>
         <tr>
-            <td>Mathmos Astro Lava Lamp</td>
+            <td><a href="https://amzn.to/3DgTnnb">Mathmos Astro Lava Lamp</a></td>
             <td>1</td>
             <td>82.00</td>
             <td>82.00</td>
@@ -326,19 +326,19 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>ConBee II</td>
+            <td><a href="https://amzn.to/3DfZWq9">ConBee II</a></td>
             <td>1</td>
             <td>37.42</td>
             <td>37.42</td>
         </tr>
         <tr>
-            <td>Aqara M2 Hub</td>
+            <td><a href="https://amzn.to/3QC57DT">Aqara M2 Hub</a></td>
             <td>1</td>
             <td>54.99</td>
             <td>54.99</td>
         </tr>
         <tr>
-            <td>SwitchBot Hub</td>
+            <td><a href="https://amzn.to/3DhHHRd">SwitchBot Hub</a></td>
             <td>1</td>
             <td>35.00</td>
             <td>35.00</td>
@@ -366,37 +366,37 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>Raspberry Pi 4 Model B, 8GB RAM</td>
+            <td><a href="https://thepihut.com/collections/raspberry-pi-boards/products/raspberry-pi-4-model-b?variant=31994565689406">Raspberry Pi 4 Model B, 8GB RAM</a></td>
             <td>2</td>
             <td>75.50</td>
             <td>151.00</td>
         </tr>
         <tr>
-            <td>Raspberry Pi 4 IceBerry Cooling Case</td>
+            <td><a href="https://thepihut.com/products/iceberry-all-in-one-cooling-case-for-raspberry-pi-4<">Raspberry Pi 4 IceBerry Cooling Case</a></td>
             <td>2</td>
             <td>16.00</td>
             <td>32.00</td>
         </tr>
         <tr>
-            <td>250GB SSD in Case</td>
+            <td><a href="https://amzn.to/3RSLQyV">250GB SSD in Case</a></td>
             <td>2</td>
             <td>35.00</td>
             <td>70.00</td>
         </tr>
         <tr>
-            <td>TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch</td>
+            <td><a href="https://amzn.to/3evknF8">TP-Link TL-SG1005D, 5 Port Gigabit Ethernet Network Switch</a></td>
             <td>1</td>
             <td>10.49</td>
             <td>10.49</td>
         </tr>
         <tr>
-            <td>Coral USB Accelerator</td>
+            <td><a href="https://amzn.to/3xceHXm">Coral USB Accelerator</a></td>
             <td>1</td>
             <td>120.00</td>
             <td>120.00</td>
         </tr>
         <tr>
-            <td>TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter</td>
+            <td><a href="https://amzn.to/3DxxWyD">TP-Link TL-PA4010KIT Nano AV600 Powerline Adapter</a></td>
             <td>3</td>
             <td>23.41</td>
             <td>70.23</td>
@@ -424,13 +424,13 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
     </thead>
     <tbody>
         <tr>
-            <td>iPhone 13 Pro Max with Companion App & Life360</td>
+            <td><a href="https://amzn.to/3eJRXHu">iPhone 13 Pro Max with Companion App</a></td>
             <td>1</td>
             <td>1049.00</td>
             <td>1049.00</td>
         </tr>
         <tr>
-            <td>iPhone 11 with Companion App & Life360</td>
+            <td><a href="https://amzn.to/3xe5HAO">iPhone 11 with Companion App</a></td>
             <td>1</td>
             <td>429.00</td>
             <td>429.00</td>
@@ -453,7 +453,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <th>Total of Smart Home Devices (excl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
             <th></th>
             <th></th>
-            <th><b>£1,461.11</b></th>
+            <th><b>£1,565.52</b></th>
         </tr>
     </thead>
     <thead>
@@ -461,7 +461,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
             <th>Total of All Devices (incl Media/Device Tracker) <br /> [as at Sept 22 (UK)]</th>
             <th></th>
             <th></th>
-            <th><b>😳£6,632.74😳</b></th>
+            <th><b>😳£6,737.15😳</b></th>
         </tr>
     </thead>
 </table>
@@ -544,6 +544,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Kiosk Mode](https://github.com/NemesisRE/kiosk-mode) version 1.7.3 by @NemesisRE
 - [My Cards Bundle](https://github.com/AnthonMS/my-cards) version 1.0.2 by @AnthonMS
 - [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) version 1.11.0 by @thomasloven
+- [Spotify Lovelace Card](https://github.com/custom-cards/spotify-card) version 2.4.0 by @fondberg
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </details>
 <!-- end-hacs-frontend -->
@@ -565,7 +566,7 @@ There is a full list of all of my automations <a href="#allautomations">here</a>
 1.  [Security 👮🚨](#security) (10 automations)
 2.  [Lighting 🌄🌇](#lighting) (37 automations)
 3.  [Transport 🚌🚝](#transport) (7 automations)
-4.  [HA-System ⏰🖥️](#hasystem) (6 automations)
+4.  [HA-System ⏰🖥️](#hasystem) (8 automations)
 5.  [Media 🔊📺](#media) (5 automations)
 6.  [TTS 🔊📱](#tts) (5 automations)
 7.  [Sleeping 🛏️📡](#sleep) (1 automations)
@@ -1136,7 +1137,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- HA-SYSTEM AUTOMATIONS -->
   <a name="hasystem"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (6 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (8 automations)</a></b></summary><blockquote>
 
 <details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/fan_control.yaml">Server Cabinet Fan Control</a></b></summary>
 <b><i>Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs</b></i>
@@ -1184,6 +1185,21 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 - [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)
 - [Wall Panel Battery Blueprint](https://github.com/smcnab1/op-question-mark/blob/master/blueprints/automation/seamus65/wallpanel-battery-management.yaml)</details>
+
+<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Develop/automations/ha_system/backup_stale_notify.yaml">Back-Up Stale Notification</a></b></summary>
+<b><i>Alerts me when updates become stale which require an update. Also gives me ability to remind me later through actionable notifications.</b></i>
+
+&nbsp;&nbsp;_which uses:_
+
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
+- [HA Google Drive Backup Add-On](https://github.com/sabeechen/hassio-google-drive-backup)</details>
+
+<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/smcnab1/issue104/automations/ha_system/tablet_screen_time.yaml">Tablet Screen Time</a></b></summary>
+<b><i>Turns the screen of dashboard tablet off at 23:00hrs unless motion is detected so light doesn't shine under bedroom door.</b></i>
+
+&nbsp;&nbsp;_which uses:_
+
+- [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)</details>
 
 </blockquote></details>
 

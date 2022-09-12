@@ -32,7 +32,7 @@ action:
         sequence:
           - service: media_player.volume_set
             data:
-              volume_level: 0.38
+              volume_level: 0.35
             target:
               entity_id:
                 - media_player.bedroom_google_home
@@ -43,7 +43,7 @@ action:
         sequence:
           - service: media_player.volume_set
             data:
-              volume_level: 0.65
+              volume_level: 0.60
             target:
               entity_id:
                 - media_player.bedroom_google_home
