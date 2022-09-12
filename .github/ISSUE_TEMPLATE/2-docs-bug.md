@@ -6,6 +6,7 @@ labels: "\U0001F4DAFor: Documentation, \U0001F41BType: Bug"
 assignees: smcnab1
 
 ---
+## **📖 Documentation Issue Report**
 
 **Describe the bug**
 <!-- A clear and concise description of what the bug is. -->
