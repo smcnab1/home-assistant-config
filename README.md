@@ -1193,7 +1193,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [HA Google Drive Backup Add-On](https://github.com/sabeechen/hassio-google-drive-backup)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Develop/automations/ha_system/backup_stale_notify.yaml">Tablet Screen Time</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/smcnab1/issue104/automations/ha_system/tablet_screen_time.yaml">Tablet Screen Time</a></b></summary>
 <b><i>Turns the screen of dashboard tablet off at 23:00hrs unless motion is detected so light doesn't shine under bedroom door.</b></i>
 
 &nbsp;&nbsp;_which uses:_
