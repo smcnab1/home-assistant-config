@@ -90,6 +90,7 @@ DS_Store
 node_modules
 package-lock.json
 package.json
+travis_secrets.yaml
 
 #  _                     _ _            _           _        
 # | |_____ ___ _ __   __| (_)_ _ ___ __| |_ ___ _ _(_)___ ___
