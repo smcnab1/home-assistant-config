@@ -15,35 +15,48 @@ trigger:
       - media_player.living_room_tv
     attribute: source
     to: Disney+
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     attribute: source
     to: DVD Player
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     attribute: source
     to: Prime Video
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     attribute: source
     to: Paramount Plus
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     attribute: source
     to: Discovery+
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     attribute: source
     to: org.tizen.netflix-app
+    id: "ON"
   - platform: state
     entity_id:
       - media_player.living_room_tv
     to: Netflix
+    id: "ON"
+    attribute: source
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: "off"
+    id: "OFF"
 condition: []
 action:
   - service: scene.create
@@ -62,15 +75,12 @@ action:
           skip_condition: false
         target:
           entity_id: automation.lighting_living_room_movie
-  - wait_for_trigger:
-      - platform: state
-        entity_id:
-          - media_player.living_room_tv
-        to: "off"
-  - service: scene.turn_on
-    data:
-      transition: 60
-    target:
-      entity_id: scene.premovie
+  - if:
+      - condition: trigger
+        id: "OFF"
+    then:
+      - service: scene.turn_on
+        data: {}
+        target:
+          entity_id: scene.premovie
 mode: single
-
