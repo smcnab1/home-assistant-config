@@ -88,6 +88,8 @@ notebooks
 nodered.json
 DS_Store
 node_modules
+package-lock.json
+package.json
 
 #  _                     _ _            _           _        
 # | |_____ ___ _ __   __| (_)_ _ ___ __| |_ ___ _ _(_)___ ___
