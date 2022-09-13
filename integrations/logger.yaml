@@ -15,6 +15,7 @@ logger:
     hass_nabucasa.cloud_api: error
     queueman: error
     homeassistant.core: error
+    androidtv.adb_manager.adb_manager_async: error
     homeassistant.config_entries: error
     homeassistant.components.automation: error
     homeassistant.components.binary_sensor: error

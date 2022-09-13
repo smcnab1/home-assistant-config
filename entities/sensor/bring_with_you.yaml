@@ -1,0 +1,18 @@
+#  _        _                    _ _   _                    
+# | |__ _ _(_)_ _  __ _  __ __ _(_) |_| |_    _  _ ___ _  _ 
+# | '_ \ '_| | ' \/ _` | \ V  V / |  _| ' \  | || / _ \ || |
+# |_.__/_| |_|_||_\__, |  \_/\_/|_|\__|_||_|  \_, \___/\_,_|
+#                 |___/                       |__/          
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensor to indicate what you'll need to bring with you dependent on the weather.
+
+platform: template
+sensors:
+  bring_with_you: 
+    friendly_name: Bring with You
+    value_template: >-
+      {% set rain = states('sensor.open_weather_forecast_precipitation_probability') | float(0) %}
+      {% if rain <=1 %} so you should bring your sunglasses!
+      {% elif rain > 3 %} so you may need an umberella!
+      {% elif rain > 20 %} so you will need an umberella!
+      {% endif %}
