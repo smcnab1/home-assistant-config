@@ -1,0 +1,33 @@
+name: 📖 Documentation Issue Report
+description: Report an issue in the project's documentation or README.md file.
+title: "[DOC] "
+labels: [Type: Bug, Needs Triage, For: Documentation]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  attributes:
+    label: Current Issue with documentation
+    description: Concise description of what you've found in the documentation.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Expected Spelling/Formatting.
+    description: Concise description of what you expected to read.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Anything else?
+    description: |
+      Links? References? Anything that will give us more context about the issue you are encountering!
+
+      Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
