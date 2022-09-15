@@ -16,11 +16,12 @@ logger:
     queueman: error
     homeassistant.core: error
     androidtv.adb_manager.adb_manager_async: error
+    homeassistant.bootstrap: error
     homeassistant.config_entries: error
     homeassistant.components.automation: error
     homeassistant.components.binary_sensor: error
-    homeassistant.bootstrap: error
     homeassistant.components.camera: error
+    homeassistant.components.cloud.google_config: error
     homeassistant.components.device_tracker: error
     homeassistant.components.discovery: warn
     homeassistant.components.http: warn
@@ -42,6 +43,7 @@ logger:
     requests.packages.urllib3.connectionpool: critical
     root: warn
     websocket: error
+    govee_api_laggat.govee_api_laggat: error
 
   filters:
     homeassistant:
