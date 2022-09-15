@@ -1,0 +1,39 @@
+name: 🚀 Enhancement Request
+description: Suggest an enhancement for this project. Improve an existing feature
+title: "[ENH] "
+labels: [☀️Type: Enhancement, Needs Triage]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing suggestion for this?
+    description: Please search to see if a suggestion already exists for your suggestion.
+    options:
+    - label: I have searched the existing suggestions
+      required: true
+- type: textarea
+  attributes:
+    label: Is your enhancement request related to a problem? Please describe.
+    description: CA clear and concise description of what the problem is.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Describe the solution you'd like
+    description: A clear and concise description of what you want to happen.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Describe alternatives you've considered
+    description: A clear and concise description of any alternative solutions or features you've considered.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Anything else?
+    description: |
+      Links? References? Anything that will give us more context about the suggestion you have!
+
+      Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
