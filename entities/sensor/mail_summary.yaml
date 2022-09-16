@@ -1,0 +1,61 @@
+#             _ _                                     
+#  _ __  __ _(_) |  ____  _ _ __  _ __  __ _ _ _ _  _ 
+# | '  \/ _` | | | (_-< || | '  \| '  \/ _` | '_| || |
+# |_|_|_\__,_|_|_| /__/\_,_|_|_|_|_|_|_\__,_|_|  \_, |
+#                                                |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensors indicating any mail or parcels incoming to house.
+
+platform: template
+sensors:
+  mail_summary:
+    friendly_name: "Mail Summary"
+    value_template: >-
+      {%- if states("sensor.mail_packages_in_transit")|int(0) == 0 -%} 
+          No
+        {%- else -%}
+          {{states("sensor.mail_packages_in_transit")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_packages_in_transit")|int(0) == 1 -%}
+          packages
+        {%- else -%}
+          packages are
+        {%- endif -%}
+      {{' '}}in transit.{{' '}}
+      {%- if states("sensor.mail_amazon_packages")|int(0) == 0 -%}
+          No
+        {%- else -%}
+          {{states("sensor.mail_amazon_packages")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_amazon_packages")|int(0) == 1 -%}
+          Amazon package is
+        {%- else -%}
+          Amazon packages are
+        {%- endif -%}
+      {{' '}}in transit.{{' '}}
+      {%- if states("sensor.mail_hermes_delivering")|int(0) == 0 -%}
+          No
+        {%- else -%}
+          {{states("sensor.mail_hermes_delivering")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_hermes_delivering")|int(0) == 1 -%}
+          Hermes package is
+        {%- else -%}
+          Hermes packages are
+        {%- endif -%}
+      {{' '}}in transit.{{' '}}
+      {%- if states("sensor.mail_royal_mail_delivering")|int(0) == 0 -%}
+          No
+        {%- else -%}
+          {{states("sensor.mail_royal_mail_delivering")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_royal_mail_delivering")|int(0) == 1 -%}
+          Royal Mail package is
+        {%- else -%}
+          Royal Mail packages are
+        {%- endif -%}
+      {{' '}}in transit.{{' '}}Packages last updated @ {{ as_timestamp(states('sensor.mail_updated'))  | timestamp_custom('%H%Mhrs on the %d/%m/%y') }}.
