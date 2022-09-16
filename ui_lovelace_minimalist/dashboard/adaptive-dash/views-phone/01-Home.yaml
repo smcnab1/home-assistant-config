@@ -95,7 +95,7 @@ cards:
               padding: 4px;
             }
         content: |
-            {% if states('sensor.living_room_temperature_temperature') >= ('sensor.open_weather_temperature') %}
+            {% if states('sensor.living_room_temperature') >= ('sensor.open_weather_temperature') %}
               ## <ha-icon icon="mdi:snowflake"></ha-icon><br>It's warmer outside than inside <br> Close windows and turn on fans
             {% else %}
               ### <ha-icon icon="mdi:weather-sunny"></ha-icon><br>It's cooler outside than inside <br> Open windows and turn on the fans
@@ -1008,12 +1008,12 @@ cards:
                           ulm_card_binary_sensor_alert: true
                           ulm_show_last_changed: true
                           ulm_card_binary_sensor_alert_name: Hall
-                        entity: binary_sensor.hall_motion_sensor
+                        entity: binary_sensor.hall_motion
                       - type: 'custom:button-card'
                         template: card_battery
-                        entity: sensor.hall_motion_sensor_battery
+                        entity: sensor.hall_motion_battery
                         variables:
-                          ulm_card_battery_charger_type_entity_id: sensor.hall_motion_sensor_battery
+                          ulm_card_battery_charger_type_entity_id: sensor.hall_motion_battery
                           ulm_card_battery_battery_level_danger: 30
                           ulm_card_battery_battery_level_warning: 80
                           ulm_card_battery_name: Hall
@@ -1045,13 +1045,13 @@ cards:
                           ulm_card_binary_sensor_alert: true
                           ulm_show_last_changed: true
                           ulm_card_binary_sensor_alert_name: Kitchen
-                        entity: binary_sensor.kitchen_motion_sensor
+                        entity: binary_sensor.kitchen_motion
                       - type: 'custom:button-card'
                         template: card_battery
-                        entity: sensor.kitchen_motion_sensor_battery
+                        entity: sensor.kitchen_motion_battery
                         name: Kitchen
                         variables:
-                          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
+                          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_battery
                           ulm_card_battery_battery_level_danger: 30
                           ulm_card_battery_battery_level_warning: 80
                           ulm_card_battery_name: Kitchen
@@ -1064,13 +1064,13 @@ cards:
                           ulm_card_binary_sensor_alert: true
                           ulm_show_last_changed: true
                           ulm_card_binary_sensor_alert_name: Bedroom
-                        entity: binary_sensor.bedroom_motion_sensor
+                        entity: binary_sensor.bedroom_motion
                       - type: 'custom:button-card'
                         template: card_battery
-                        entity: sensor.bedroom_motion_sensor_battery
+                        entity: sensor.bedroom_motion_battery
                         name: Bedroom
                         variables:
-                          ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_sensor_battery
+                          ulm_card_battery_charger_type_entity_id: sensor.bedroom_motion_battery
                           ulm_card_battery_battery_level_danger: 30
                           ulm_card_battery_battery_level_warning: 80
                           ulm_card_battery_name: Bedroom
@@ -1083,13 +1083,13 @@ cards:
                           ulm_card_binary_sensor_alert: true
                           ulm_show_last_changed: true
                           ulm_card_binary_sensor_alert_name: Bathroom
-                        entity: binary_sensor.bathroom_motion_sensor
+                        entity: binary_sensor.bathroom_motion
                       - type: 'custom:button-card'
                         template: card_battery
-                        entity: sensor.bathroom_motion_sensor_battery
+                        entity: sensor.bathroom_motion_battery
                         name: Bathroom
                         variables:
-                          ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery
+                          ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_battery
                           ulm_card_battery_battery_level_danger: 30
                           ulm_card_battery_battery_level_warning: 80
                           ulm_card_battery_name: Bathroom
@@ -1391,5 +1391,5 @@ cards:
         ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
       label: >
         [[[
-          return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C " + " 💻 " + states[ 'sensor.server_temperature'].state + "°C"
+          return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
         ]]]

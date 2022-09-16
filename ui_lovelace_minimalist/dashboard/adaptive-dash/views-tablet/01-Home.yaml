@@ -484,5 +484,5 @@ cards:
       ulm_custom_card_esh_room_climate_entity: light.hall_tablet_screen
     label: >
       [[[
-        return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C " + " 💻 " + states[ 'sensor.server_temperature'].state + "°C"
+        return "🌡️ " + states[ 'sensor.living_room_temperature'].state + "°C"
       ]]]

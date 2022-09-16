@@ -162,13 +162,13 @@ cards:
           ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.kitchen_motion_sensor
+        entity: binary_sensor.kitchen_motion
       - type: "custom:button-card"
         template: card_battery
-        entity: sensor.kitchen_motion_sensor_battery
+        entity: sensor.kitchen_motion_battery
         name: Motion
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
+          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_battery
           ulm_card_battery_battery_level_danger: 30
           ulm_card_battery_battery_level_warning: 80
           ulm_card_battery_name: Motion
