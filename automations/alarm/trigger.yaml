@@ -21,9 +21,6 @@ condition:
   - condition: state
     entity_id: alarm_control_panel.home_alarm
     state: armed_away
-  - condition: state
-    entity_id: input_boolean.guest_mode
-    state: off
 action:
   - service: alarm_control_panel.alarm_trigger
     data: {}
