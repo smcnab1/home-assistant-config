@@ -1,0 +1,35 @@
+alias: Close Issue
+description: Close an existing issue.
+icon: mdi:close-circle-outline
+fields:
+  issue_number:
+    name: Issue Number
+    description: The issue number to close
+    example: 42
+    selector:
+      text:
+  user:
+    name: User
+    description: The user that closed this issue
+    example: Arthur Dent
+    default: ""
+    selector:
+      text:
+variables:
+  issue_num: "{{ int(issue_number) }}"
+  issue: "binary_sensor.issue_{{ issue_num }}"
+  time: "{{ utcnow() }}"
+sequence:
+  - alias: Close issue
+    service: mqtt.publish
+    data_template:
+      topic: "issue_tracker/{{ issue_num }}"
+      retain: true
+      payload: >-
+        {
+          "status": "closed",
+          "description": "{{ state_attr(issue, 'description') }}",
+          "time": "{{ as_datetime(time) | as_local }}",
+          "number": "{{ issue_num }}",
+          "user": "{{ user }}"
+        }

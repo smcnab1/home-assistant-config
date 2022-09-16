@@ -179,3 +179,9 @@ resources:
     type: module
   - url: /local/stack-in-card.js
     type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
