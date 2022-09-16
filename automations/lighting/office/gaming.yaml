@@ -26,4 +26,14 @@ action:
         data: {}
         target:
           entity_id: switch.xbox
+  - wait_for_trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.xbox_status
+        to: "off"
+    continue_on_timeout: false
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.xbox
 mode: single

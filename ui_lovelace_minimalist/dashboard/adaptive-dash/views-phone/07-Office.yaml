@@ -169,6 +169,17 @@ cards:
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
           ulm_card_media_player_icon: mdi:google-assistant
+      - type: 'custom:button-card'
+        template: card_script
+        variables:
+          ulm_card_script_title: XBOX One
+          ulm_card_script_icon: 'mdi:microsoft-xbox'
+        tap_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: script.xbox_on
+
 
   - view_layout: ### SECURITY ###
       grid-area: "title4"
