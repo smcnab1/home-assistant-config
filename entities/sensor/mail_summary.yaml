@@ -11,18 +11,6 @@ sensors:
   mail_summary:
     friendly_name: "Mail Summary"
     value_template: >-
-      {%- if states("sensor.mail_packages_in_transit")|int(0) == 0 -%} 
-          No
-        {%- else -%}
-          {{states("sensor.mail_packages_in_transit")|int(0)}}
-        {%- endif -%}
-      {{' '}} 
-        {%- if states("sensor.mail_packages_in_transit")|int(0) == 1 -%}
-          packages
-        {%- else -%}
-          packages are
-        {%- endif -%}
-      {{' '}}in transit.{{' '}}
       {%- if states("sensor.mail_amazon_packages")|int(0) == 0 -%}
           No
         {%- else -%}
@@ -35,16 +23,16 @@ sensors:
           Amazon packages are
         {%- endif -%}
       {{' '}}in transit.{{' '}}
-      {%- if states("sensor.mail_hermes_delivering")|int(0) == 0 -%}
+      {%- if states("sensor.mail_evri_delivering")|int(0) == 0 -%}
           No
         {%- else -%}
-          {{states("sensor.mail_hermes_delivering")|int(0)}}
+          {{states("sensor.mail_evri_delivering")|int(0)}}
         {%- endif -%}
       {{' '}} 
-        {%- if states("sensor.mail_hermes_delivering")|int(0) == 1 -%}
-          Hermes package is
+        {%- if states("sensor.mail_evri_delivering")|int(0) == 1 -%}
+          Evri package is
         {%- else -%}
-          Hermes packages are
+          Evri packages are
         {%- endif -%}
       {{' '}}in transit.{{' '}}
       {%- if states("sensor.mail_royal_mail_delivering")|int(0) == 0 -%}
