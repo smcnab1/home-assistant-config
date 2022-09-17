@@ -139,6 +139,7 @@ cards:
         browser_mod:
           service: browser_mod.popup
           data:
+            size: fullscreen
             content:
               type: "custom:button-card"
               template: "popup_weather_forecast"

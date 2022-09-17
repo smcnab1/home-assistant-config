@@ -108,6 +108,7 @@ cards:
         browser_mod:
           service: browser_mod.popup
           data:
+            size: fullscreen
             content:
               type: "custom:button-card"
               template: "popup_weather_forecast"
@@ -361,6 +362,7 @@ cards:
           browser_mod:
             service: browser_mod.popup
             data:
+              size: fullscreen
               title: "All Lights"
               content:
                 type: "vertical-stack"
@@ -648,6 +650,7 @@ cards:
           browser_mod:
             service: browser_mod.popup
             data:
+              size: fullscreen
               title: "All Scenes"
               content:
                 type: "vertical-stack"
@@ -942,6 +945,7 @@ cards:
           browser_mod:
             service: browser_mod.popup
             data:
+              size: fullscreen
               title: "Security"
               content:
                 type: "vertical-stack"
@@ -1120,6 +1124,7 @@ cards:
           browser_mod:
             service: browser_mod.popup
             data:
+              size: fullscreen
               title: "Notification Manager"
               content:
                 type: "vertical-stack"
@@ -1268,6 +1273,7 @@ cards:
           browser_mod:
             service: browser_mod.popup
             data:
+              size: fullscreen
               title: "Watch List"
               content:
                 type: "shopping-list"

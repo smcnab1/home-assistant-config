@@ -167,7 +167,7 @@ card_esh_room_hall:
             service: browser_mod.popup
             data:
               title: "Hall Lighting"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:
@@ -252,7 +252,7 @@ card_esh_room_hall:
             service: browser_mod.popup
             data:
               title: "Hall Media"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:

@@ -61,8 +61,7 @@ action:
       milliseconds: 0
   - service: spotcast.start
     data:
-      device_name: Living Room Google Home
-      entity_id: media_player.living_room_google_home
+      entity_id: media_player.living_room
       uri: spotify:playlist:37i9dQZF1DXcgZcN2HVMoe
       random_song: true
       force_playback: true
