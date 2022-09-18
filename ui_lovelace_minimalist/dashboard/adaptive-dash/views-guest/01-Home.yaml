@@ -5,8 +5,8 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
+    "nav nav nav nav nav nav"
     "welcome welcome welcome welcome welcome welcome"
-    "person person person person person person"
     "intro intro intro intro intro intro"
     "title1 title1 title1 title1 title1 title1"
     "card1 card1 card1 card1 card1 card1"
@@ -18,8 +18,8 @@ layout:
     "(max-width: 800px)":
       grid-template-columns: "1fr 1fr"
       grid-template-areas: |
+        "nav nav"
         "welcome welcome"
-        "person person"
         "intro intro"
         "title1 title1"
         "card1 card2"
@@ -31,119 +31,21 @@ view_layout:
   grid-area: "main"
 cards:
   - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar_guest
+    variables:
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-3/hall'
+
+  - view_layout:
       grid-area: "welcome"
-    type: horizontal-stack
-    flex-grow: 2
-    style: |
-      ha-card {
-        box-shadow: none;
-        border-style: hidden;
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-      }
-    cards:
-    - type: vertical-stack
-      cards:
-      - type: markdown  ### WELCOME TEXT TL ###
-        style:
-          .: |
-            ha-card {
-                background-color: rgba(0,0,0,0) !important;
-                box-shadow: none;
-                padding: 1px;
-            }
-          ha-markdown:
-            $: |
-              ha-markdown-element:first-of-type h2 {
-                background-color: rgba(0,0,0,0);
-                color: var(--primary-color);
-                font-size: 18px;
-                line-height: 18px;
-              }
-              ha-markdown-element:first-of-type h3 {
-                background-color: rgba(0,0,0,0);
-                font-weight: normal;
-                color: var(--primary-text-color);
-                font-size: 12px;
-                line-height: 12px;
-              }
-              ha-markdown-element:second-of-type h3 {
-                background-color: rgba(0,0,0,0);
-                color: var(--primary-text-color);
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 12px;
-              }
-        content: |
-            ## Good {{ states('sensor.time_of_day') }}, {{ states('input_text.guest_name')}}!
-            ### Today will be {{ states('sensor.open_weather_temperature')|round(1)|replace('.0','' ) }}°C with a {{ states('sensor.open_weather_forecast_precipitation_probability') }} % chance of Rain today, {{states('sensor.bring_with_you') }}
-
-      - type: markdown  ### LOCATION TEXT ###
-        style:
-          .: |
-            ha-card {
-                background-color: rgba(0,0,0,0) !important;
-                box-shadow: none;
-                padding: 1px;
-              }
-          ha-markdown:
-            $: |
-              ha-markdown-element:first-of-type h3 {
-                background-color: rgba(0,0,0,0);
-                font-weight: normal;
-                color: var(--primary-text-color);
-                font-size: 12px;
-                line-height: 12px;
-              }
-        content: |
-            {% set samtohome = states('sensor.sam_to_home') %}
-            {% set samhome = states('person.sam') %}
-            {% set samroom = states('sensor.sam_phone_ble') %}
-              {% if samtohome == '1' %}
-                {% set samsing = 'true' %}
-                {% else %}
-                {% set samsing = 'false' %}
-              {% endif %}
-            {% if samhome == 'home' and samroom == 'living_room' %}<h3>Sam is in the {{samroom | replace('_',' ') | title }}.</h3>
-            {% elif samhome == 'home' and samroom == 'kitchen' %}<h3>Sam is in the {{samroom | title }}.</h3>
-            {% elif samhome == 'home' and samroom == 'bathroom' %}<h3>Sam is in the {{samroom | title }}.</h3>
-            {% elif samhome == 'home' and samroom == 'bedroom' %}<h3>Sam is in the {{samroom | title }}.</h3>
-            {% elif samhome == 'away' and samsing == 'true' %}<h3>Sam is {{samtohome}} min away from home.</h3>
-            {% elif samhome == 'away' and samsing == 'false' %}<h3>Sam is {{samtohome}} mins away from home.</h3>
-            {% elif samhome == 'work' %}<h3>Sam is at Work.</h3>
-            {% elif samhome == 'gym' %}<h3>Sam is at the Gym.</h3>
-            {% endif %}
-
-            {% set leahtohome = states('sensor.leah_to_home') %}
-            {% set leahhome = states('person.leah') %}
-            {% set leahroom = states('sensor.leah_phone_ble') %}
-              {% if leahtohome == '1' %}
-                {% set leahsing = 'true' %}
-                {% else %}
-                {% set leahsing = 'false' %}
-              {% endif %}
-            {% if leahhome == 'home' and leahroom == 'living_room' %}<h3>Leah is in the {{leahroom | replace('_',' ') | title }}.</h3>
-            {% elif leahhome == 'home' and leahroom == 'kitchen' %}<h3>Leah is in the {{leahroom | title }}.</h3>
-            {% elif leahhome == 'home' and leahroom == 'bathroom' %}<h3>Leah is in the {{leahroom | title }}.</h3>
-            {% elif leahhome == 'home' and leahroom == 'bedroom' %}<h3>Leah is in the {{leahroom | title }}.</h3>
-            {% elif leahhome == 'away' and leahsing == 'true' %}<h3>Leah is {{leahtohome}} min away from home.</h3>
-            {% elif leahhome == 'away' and leahsing == 'false' %}<h3>Leah is {{leahtohome}} mins away from home.</h3>
-            {% elif leahhome == 'work' %}<h3>Leah is at Work.</h3>
-            {% elif leahhome == 'gym' %}<h3>Leah is at the Gym.</h3>
-            {% endif %}
-
-    - type: weather-forecast  ### WEATHER ###
-      entity: weather.weather
-      tap_action:
-        action: fire-dom-event
-        browser_mod:
-          service: browser_mod.popup
-          data:
-            size: fullscreen
-            content:
-              type: "custom:button-card"
-              template: "popup_weather_forecast"
-              entity: weather.weather
+    type: "custom:button-card"
+    template: "card_esh_welcome_guest"
+    variables:
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: sensor.house_lights_on
+      ulm_chip_double_state_entity2: sensor.house_switches_on
+      ulm_weather: "weather.weather"
 
   - view_layout:
       grid-area: "intro"
