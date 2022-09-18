@@ -5,6 +5,7 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
+    "nav nav nav nav nav nav"
     "topbar topbar topbar topbar topbar topbar"
     "title1 title1 title1 title1 title1 title1"
     "card1 card1 card1 card1 card1 card1"
@@ -12,14 +13,13 @@ layout:
     "card2 card2 card2 card2 card2 card2"
     "title3 title3 title3 title3 title3 title3"
     "card3 card3 card3 card3 card3 card3"
-    "title4 title4 title4 title4 title4 title4"
     "card4 card4 card4 card4 card4 card4"
-    "card5 card5 card5 card5 card5 card5"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
       grid-template-columns: "1fr 1fr"
       grid-template-areas: |
+        "nav nav"
         "topbar topbar"
         "title1 title1"
         "card1 card1"
@@ -27,34 +27,54 @@ layout:
         "card2 card2"
         "title3 title3"
         "card3 card3"
-        "title4 title4"
         "card4 card4"
-        "card5 card5"
 
 view_layout:
   grid-area: "popup"
 cards:
+  - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/living-room'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/bedroom'
   - view_layout: ### TOP BAR ###
       grid-area: "topbar"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: chip_back
-        variables:
-          ulm_chip_back_path: /lovelace-minimalist-2/home
-      - type: "custom:button-card"
-        template: "card_title"
-        name: "Kitchen"
-      - type: "custom:button-card"
-        template: chip_mdi_icon_state
-        variables:
-          ulm_chip_mdi_icon_state_entity: sensor.kitchen_temperature
-          ulm_chip_mdi_icon_state_icon: mdi:thermometer
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Kitchen
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.kitchen_temperature"
+      ulm_chip_double_state_entity1: "sensor.kitchen_lights_on"
+      ulm_chip_double_state_entity2: "sensor.kitchen_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_kitchen_normal"
+        icon: "mdi:weather-sunny" 
+        name: "Day" 
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_kitchen_cooking"
+        icon: "mdi:chef-hat" 
+        name: "Cooking" 
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_kitchen_off"
+        icon: "mdi:lightbulb-off" 
+        name: "Off" 
+        color: "red"
+      entity_4:
+        entity_id: "camera.living_room_camera_frigate"
+        icon: "mdi:cctv" 
+        name: "Camera" 
+        color: "purple"
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Lighting"
   - view_layout:
       grid-area: "card1"
@@ -66,65 +86,26 @@ cards:
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
-          ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
           ulm_card_light_enable_popup: true
+          ulm_card_light_force_background_color: true
       - type: "custom:button-card"
         template: card_light
         entity: light.kitchen_leds
         variables:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
-          ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
           ulm_card_light_enable_popup: true
-  - view_layout: ### SCENES ###
-      grid-area: "title2"
-    type: "custom:button-card"
-    template: "card_title"
-    name: "Scenes"
-  - view_layout:
-      grid-area: "card2"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_kitchen_normal
-        name: Normal
-        icon: mdi:chef-hat
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_kitchen_normal
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_kitchen_cooking
-        name: Cooking
-        icon: mdi:stove
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_kitchen_cooking
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_kitchen_off
-        name: All Off
-        icon: mdi:lightbulb-off
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_kitchen_off
+          ulm_card_light_force_background_color: true
 
   - view_layout: ### MEDIA ###
-      grid-area: "title3"
+      grid-area: "title2"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Media"
   - view_layout:
-      grid-area: "card3"
+      grid-area: "card2"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
@@ -138,7 +119,7 @@ cards:
           ulm_card_media_player_icon: mdi:speaker
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.living_room_google_home
+        entity: media_player.living_room
         variables:
           ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
@@ -147,33 +128,25 @@ cards:
           ulm_card_media_player_icon: mdi:google-assistant
 
   - view_layout: ### SECURITY ###
-      grid-area: "title4"
+      grid-area: "title3"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Security"
   - view_layout:
-      grid-area: "card4"
+      grid-area: "card3"
     type: horizontal-stack
     cards:
-      - type: "custom:button-card"
-        template: card_binary_sensor_alert
-        name: Motion
+      - type: 'custom:button-card'
+        template:
+          - card_binary_sensor_alert
+          - battery_info
+        entity: binary_sensor.kitchen_motion
         variables:
-          ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
+          ulm_battery_entity: sensor.kitchen_motion_battery
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.kitchen_motion_sensor
-      - type: "custom:button-card"
-        template: card_battery
-        entity: sensor.kitchen_motion_sensor_battery
-        name: Motion
-        variables:
-          ulm_card_battery_charger_type_entity_id: sensor.kitchen_motion_sensor_battery
-          ulm_card_battery_battery_level_danger: 30
-          ulm_card_battery_battery_level_warning: 80
-          ulm_card_battery_name: Motion
   - view_layout: ### CAMERA ###
-      grid-area: "card5"
+      grid-area: "card4"
     type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle

@@ -167,7 +167,7 @@ card_esh_room_lr:
             service: browser_mod.popup
             data:
               title: "Living Room Lighting"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:
@@ -300,7 +300,7 @@ card_esh_room_lr:
             service: browser_mod.popup
             data:
               title: "Living Room Media"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:

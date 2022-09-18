@@ -1,0 +1,39 @@
+#  _          _   _                                         _ _      _    
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   ____ __ _(_) |_ __| |_  
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| (_-< V  V / |  _/ _| ' \ 
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       /__/\_/\_/|_|\__\__|_||_|
+#                                                                         
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting Bathroom Switch
+description: Automation which uses mini switch as a switch for lighting in Bathroom.
+use_blueprint:
+  path: SeanM/zha-aqara-wireless-mini-switch.yaml
+  input:
+    aqara_mini_switch: c3ca0558cbe65bc1d67e07ecdda8c5a1
+    button_single_press:
+      - if:
+          - condition: time
+            after: "00:00:00"
+            before: "10:30:00"
+        then:
+          - service: light.toggle
+            data:
+              transition: 15
+              brightness: 18
+            target:
+              entity_id: light.bathroom_main_lights
+        else:
+          - service: light.toggle
+            data:
+              transition: 15
+              brightness: 117
+            target:
+              entity_id: light.bathroom_main_lights
+    button_double_press:
+      - service: light.turn_on
+        data:
+          transition: 15
+          brightness: 117
+        target:
+          entity_id: light.bathroom_main_lights

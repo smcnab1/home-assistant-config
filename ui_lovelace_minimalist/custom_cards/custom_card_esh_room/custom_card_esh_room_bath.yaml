@@ -167,7 +167,7 @@ card_esh_room_bath:
             service: browser_mod.popup
             data:
               title: "Bathroom Lights"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:
@@ -253,7 +253,7 @@ card_esh_room_bath:
             service: browser_mod.popup
             data:
               title: "Bathroom Media"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:

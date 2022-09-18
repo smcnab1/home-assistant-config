@@ -116,10 +116,10 @@ cards:
       ulm_custom_card_irmajavi_speedtest_router_name: Nokia
       ulm_custom_card_irmajavi_speedtest_router_model: G-2426G-A
 
-  ### PARTY CONTROL ###
+  ### PARTY CONTROL & GUEST LOGIN(POPUP) ###
   - view_layout:
       grid-area: "party"
-    type: horizontal-stack
+    type: vertical-stack
     cards:
       - type: 'custom:button-card'
         template: card_input_party
@@ -127,4 +127,18 @@ cards:
         variables:
           ulm_card_input_boolean_name: House Party Time
           ulm_card_input_boolean_icon: mdi:party-popper
+      - type: conditional
+        conditions:
+          - entity: input_boolean.guest_mode
+            state: "on"
+        card:
+          type: 'custom:button-card'
+          template: custom_card_generic_guest
+          entity: input_boolean.test_toggle
+          title: Home Assistant Login
+          icon: mdi:home
+          style: |
+            {
+              padding: 0px;
+            }
 

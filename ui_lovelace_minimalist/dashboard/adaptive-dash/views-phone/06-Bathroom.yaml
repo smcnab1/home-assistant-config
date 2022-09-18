@@ -5,50 +5,70 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
+    "nav nav nav nav nav nav"
     "topbar topbar topbar topbar topbar topbar"
     "title1 title1 title1 title1 title1 title1"
     "card1 card1 card1 card1 card1 card1"
     "title2 title2 title2 title2 title2 title2"
     "card2 card2 card2 card2 card2 card2"
-    "title3 title3 title3 title3 title3 title3"
-    "card3 card3 card3 card3 card3 card3"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
       grid-template-columns: "1fr 1fr"
       grid-template-areas: |
+        "nav nav"
         "topbar topbar"
         "title1 title1"
         "card1 card1"
         "title2 title2"
         "card2 card2"
-        "title3 title3"
-        "card3 card3"
 
 view_layout:
   grid-area: "popup"
 cards:
+  - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/bedroom'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/office'
   - view_layout: ### TOP BAR ###
       grid-area: "topbar"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: chip_back
-        variables:
-          ulm_chip_back_path: /lovelace-minimalist-2/home
-      - type: "custom:button-card"
-        template: "card_title"
-        name: "Bathroom"
-      - type: "custom:button-card"
-        template: chip_mdi_icon_state
-        variables:
-          ulm_chip_mdi_icon_state_entity: sensor.bathroom_temperature
-          ulm_chip_mdi_icon_state_icon: mdi:thermometer
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Bathroom
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.bathroom_temperature"
+      ulm_chip_double_state_entity1: "sensor.bathroom_lights_on"
+      ulm_chip_double_state_entity2: "sensor.bathroom_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_bathroom_morning"
+        icon: "mdi:weather-sunset-up" 
+        name: "Morning" 
+        color: "blue"
+      entity_2:
+        entity_id: "automation.lighting_bathroom_normal"
+        icon: "mdi:weather-sunny" 
+        name: "Day" 
+        color: "yellow"
+      entity_3:
+        entity_id: "automation.lighting_bathroom_bath"
+        icon: "mdi:bathtub" 
+        name: "Bath" 
+        color: "purple"
+      entity_4:
+        entity_id: "automation.lighting_bathroom_off"
+        icon: "mdi:lightbulb-off"
+        name: "Off"
+        color: "red"
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Lighting"
   - view_layout:
       grid-area: "card1"
@@ -60,72 +80,25 @@ cards:
         variables:
           ulm_card_light_name: Main Lights
           ulm_card_light_icon: mdi:ceiling-light
-          ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
           ulm_card_light_enable_popup: true
-  - view_layout: ### SCENES ###
-      grid-area: "title2"
-    type: "custom:button-card"
-    template: "card_title"
-    name: "Scenes"
-  - view_layout:
-      grid-area: "card2"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_bathroom_morning
-        name: Morning
-        icon: mdi:weather-sunset-up
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_bathroom_morning
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_bathroom_normal
-        name: Normal
-        icon: mdi:weather-sunny
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_bathroom_normal
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_bathroom_off
-        name: All Off
-        icon: mdi:lightbulb-off
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_bathroom_off
+          ulm_card_light_force_background_color: true
 
   - view_layout: ### SECURITY ###
-      grid-area: "title3"
+      grid-area: "title2"
     type: "custom:button-card"
     template: "card_title"
     name: "Security"
   - view_layout:
-      grid-area: "card3"
+      grid-area: "card2"
     type: horizontal-stack
     cards:
-      - type: "custom:button-card"
-        template: card_binary_sensor_alert
-        name: Motion
+      - type: 'custom:button-card'
+        template:
+          - card_binary_sensor_alert
+          - battery_info
+        entity: binary_sensor.bathroom_motion
         variables:
-          ulm_card_binary_sensor_alert: true
           ulm_show_last_changed: true
+          ulm_battery_entity: sensor.bathroom_motion_battery
           ulm_card_binary_sensor_alert_name: Motion
-        entity: binary_sensor.bathroom_motion_sensor
-      - type: "custom:button-card"
-        template: card_battery
-        entity: sensor.bathroom_motion_sensor_battery
-        name: Motion
-        variables:
-          ulm_card_battery_charger_type_entity_id: sensor.bathroom_motion_sensor_battery
-          ulm_card_battery_battery_level_danger: 30
-          ulm_card_battery_battery_level_warning: 80
-          ulm_card_battery_name: Motion
