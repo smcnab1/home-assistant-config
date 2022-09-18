@@ -150,6 +150,7 @@ views:
     cards:
       - !include "views-guest/08-Help.yaml"
 
+      
 resources:
   - url: /browser_mod.js
     type: module
@@ -184,4 +185,6 @@ resources:
   - url: /local/config-template-card.js
     type: module
   - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
     type: module

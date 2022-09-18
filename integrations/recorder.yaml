@@ -55,6 +55,11 @@ recorder:
       - light.all_office_lights
       - sensor.backup_state
       - sensor.bedroom_temperature
+      - sensor.bedroom_humidity
+      - sensor.bedroom_air_pressure
+      - sensor.bathroom_temperature
+      - sensor.bathroom_humidity
+      - sensor.bathroom_air_pressure
       - sensor.coral_inference_speed
       - sensor.database_size
       - sensor.detection_fps
@@ -62,10 +67,12 @@ recorder:
       - sensor.disk_use_percent
       - sensor.kitchen_humidity
       - sensor.kitchen_temperature
+      - sensor.kitchen_air_pressure
       - sensor.last_boot
       - sensor.living_room_camera_process_fps
       - sensor.living_room_humidity
       - sensor.living_room_temperature
+      - sensor.living_room_air_pressure
       - sensor.memory_use_percent
       - sensor.network_in_eth0
       - sensor.network_out_eth0
@@ -75,6 +82,7 @@ recorder:
       - sensor.processor_use
       - sensor.server_humidity
       - sensor.server_temperature
+      - sensor.server_air_pressure
       - sensor.speed_test_download
       - sensor.speed_test_ping
       - sensor.speed_test_upload

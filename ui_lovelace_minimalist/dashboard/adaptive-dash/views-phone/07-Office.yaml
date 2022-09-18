@@ -5,58 +5,88 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
+    "nav nav nav nav nav nav"
     "topbar topbar topbar topbar topbar topbar"
     "title1 title1 title1 title1 title1 title1"
     "card1 card1 card1 card1 card1 card1"
     "title2 title2 title2 title2 title2 title2"
     "card2 card2 card2 card2 card2 card2"
-    "title3 title3 title3 title3 title3 title3"
     "card3 card3 card3 card3 card3 card3"
+    "title3 title3 title3 title3 title3 title3"
     "card4 card4 card4 card4 card4 card4"
-    "title4 title4 title4 title4 title4 title4"
     "card5 card5 card5 card5 card5 card5"
-    "card6 card6 card6 card6 card6 card6"
   mediaquery:
     # Mobile
     "(max-width: 800px)":
       grid-template-columns: "1fr 1fr"
       grid-template-areas: |
+        "nav nav"
         "topbar topbar"
         "title1 title1"
         "card1 card1"
         "title2 title2"
         "card2 card2"
-        "title3 title3"
         "card3 card3"
+        "title3 title3"
         "card4 card4"
-        "title4 title4"
         "card5 card5"
-        "card6 card6"
 
 view_layout:
   grid-area: "popup"
 cards:
+  - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/bathroom'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/system'
   - view_layout: ### TOP BAR ###
       grid-area: "topbar"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: chip_back
-        variables:
-          ulm_chip_back_path: /lovelace-minimalist-2/home
-      - type: "custom:button-card"
-        template: "card_title"
-        name: "Office"
-      - type: "custom:button-card"
-        template: chip_mdi_icon_state
-        variables:
-          ulm_chip_mdi_icon_state_entity: sensor.living_room_temperature
-          ulm_chip_mdi_icon_state_icon: mdi:thermometer
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Office
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: "sensor.office_lights_on"
+      ulm_chip_double_state_entity2: "sensor.office_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_office_bright"
+        icon: "mdi:weather-sunny" 
+        name: "Bright" 
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_office_dull"
+        icon: "mdi:weather-night" 
+        name: "Dull" 
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_office_lamp"
+        icon: "mdi:desk-lamp" 
+        name: "Lamp" 
+        color: "pink"
+      entity_4:
+        entity_id: "automation.lighting_office_gaming"
+        icon: "mdi:microsoft-xbox"
+        name: "Game"
+        color: "green"
+      entity_5:
+        entity_id: "automation.lighting_office_off"
+        icon: "mdi:lightbulb-off"
+        name: "Off"
+        color: "red"
+      entity_6:
+        entity_id: "camera.living_room_camera_frigate"
+        icon: "mdi:cctv" 
+        name: "Camera" 
+        color: "purple"
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Lighting"
   - view_layout:
       grid-area: "card1"
@@ -68,7 +98,6 @@ cards:
         variables:
           ulm_card_light_name: LEDs
           ulm_card_light_icon: mdi:led-strip
-          ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
           ulm_card_light_enable_popup: true
       - type: "custom:button-card"
@@ -77,65 +106,17 @@ cards:
         variables:
           ulm_card_light_name: Desk Lamp
           ulm_card_light_icon: mdi:desk-lamp
-          ulm_card_light_enable_slider: true
           ulm_card_light_enable_color: true
-  - view_layout: ### SCENES ###
-      grid-area: "title2"
-    type: "custom:button-card"
-    template: "card_title"
-    name: "Scenes"
-  - view_layout:
-      grid-area: "card2"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_office_bright
-        name: Bright
-        icon: mdi:weather-sunny
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_office_bright
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_office_dull
-        name: Dull
-        icon: mdi:weather-night
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_office_dull
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_office_lamp
-        name: Lamp
-        icon: mdi:desk-lamp
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_office_lamp
-      - type: "custom:button-card"
-        template: card_vertical_button
-        entity: automation.lighting_office_off
-        name: All Off
-        icon: mdi:lightbulb-off
-        tap_action:
-          action: call-service
-          service: automation.trigger
-          service_data:
-            entity_id: automation.lighting_office_off
+          ulm_card_light_enable_popup: true
+          ulm_card_light_force_background_color: true
 
   - view_layout: ### MEDIA ###
-      grid-area: "title3"
+      grid-area: "title2"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Media"
   - view_layout:
-      grid-area: "card3"
+      grid-area: "card2"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
@@ -157,58 +138,40 @@ cards:
           ulm_card_media_player_more_info: true
           ulm_card_media_player_icon: mdi:speaker
   - view_layout:
-      grid-area: "card4"
+      grid-area: "card3"
     type: horizontal-stack
     cards:
       - type: "custom:button-card"
         template: card_media_player
-        entity: media_player.living_room_google_home
+        entity: media_player.living_room
         variables:
           ulm_card_media_player_name: Google Assistant
           ulm_card_media_player_enable_popup: true
           ulm_card_media_player_enable_art: true
           ulm_card_media_player_more_info: true
           ulm_card_media_player_icon: mdi:google-assistant
-      - type: 'custom:button-card'
-        template: card_script
-        variables:
-          ulm_card_script_title: XBOX One
-          ulm_card_script_icon: 'mdi:microsoft-xbox'
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.xbox_on
 
 
   - view_layout: ### SECURITY ###
-      grid-area: "title4"
+      grid-area: "title3"
     type: "custom:button-card"
-    template: "card_title"
+    template: "custom_card_title"
     name: "Security"
   - view_layout:
-      grid-area: "card5"
+      grid-area: "card4"
     type: horizontal-stack
     cards:
-      - type: "custom:button-card"
-        template: card_binary_sensor_alert
-        name: Motion
-        variables:
-          ulm_card_binary_sensor_alert: true
-          ulm_show_last_changed: true
-          ulm_card_binary_sensor_alert_name: Motion
+      - type: 'custom:button-card'
+        template:
+          - card_binary_sensor_alert
+          - battery_info
         entity: binary_sensor.living_room_motion
-      - type: "custom:button-card"
-        template: card_battery
-        entity: sensor.living_room_motion_battery
-        name: Motion
         variables:
-          ulm_card_battery_charger_type_entity_id: sensor.living_room_motion_battery
-          ulm_card_battery_battery_level_danger: 30
-          ulm_card_battery_battery_level_warning: 80
-          ulm_card_battery_name: Motion
+          ulm_show_last_changed: true
+          ulm_battery_entity: sensor.living_room_motion_battery
+          ulm_card_binary_sensor_alert_name: Motion
   - view_layout: ### CAMERA ###
-      grid-area: "card6"
+      grid-area: "card5"
     type: "custom:button-card"
     template: card_vertical_button
     entity: input_boolean.test_toggle
