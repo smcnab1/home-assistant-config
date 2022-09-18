@@ -139,5 +139,13 @@ resources:
     type: module
   - url: /local/community/spotify-card/spotify-card.js
     type: module
-  - url: /local/community/tv-card.js
+  - url: /local/stack-in-card.js
+    type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
     type: module

@@ -1,0 +1,61 @@
+#  _        _                    _ _   _                    
+# | |__ _ _(_)_ _  __ _  __ __ _(_) |_| |_    _  _ ___ _  _ 
+# | '_ \ '_| | ' \/ _` | \ V  V / |  _| ' \  | || / _ \ || |
+# |_.__/_| |_|_||_\__, |  \_/\_/|_|\__|_||_|  \_, \___/\_,_|
+#                 |___/                       |__/          
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensor to indicate what you'll need to bring with you dependent on the weather.
+
+platform: template
+sensors:
+  bring_with_you_rain: 
+    friendly_name: Bring with You Rain
+    value_template: >-
+      {% set rain = states('sensor.open_weather_forecast_precipitation_probability') | float(0) %}
+      {% if rain <=1 %} so you shouldn't need an umbrella!
+      {% elif rain > 3 %} so you may need an umberella!
+      {% elif rain > 20 %} so you will need an umberella!
+      {% endif %}
+
+  bring_with_you_temp: 
+    friendly_name: Bring with You Temp
+    value_template: >-
+      {% set temp = states('sensor.open_weather_forecast_temperature') | round(1) %}
+      {% if temp < 24.0 %} so you should bring a light jacket!
+      {% elif temp < 16.0 %} so you should bring a bigger jacket!
+      {% elif temp > 24.0 %} so you should bring your sunglasses!
+      {% endif %}
+
+  uv_index: 
+    friendly_name: UV Index
+    value_template: >-
+      {% set uv = states('sensor.open_weather_uv_index') | round(0) %}
+      {% if uv <= 2 %} UV Index is Low
+      {% elif uv <= 5 %} UV Index is Moderate
+      {% elif uv <= 7 %} UV Index is HIGH
+      {% elif uv <= 10 %} UV Index is VERY HIGH
+      {% elif uv >= 11 %} UV Index is EXTREME
+      {% endif %}
+
+  bring_with_you_uv: 
+    friendly_name: Bring with You UV
+    value_template: >-
+      {% set uv = states('sensor.open_weather_uv_index') | round(0) %}
+      {% if uv <= 7 %} so it might be worth wearing suncream.
+      {% elif uv <= 10 %} so you should wear suncream.
+      {% elif uv >= 11 %} so you should definitely wear suncream!!
+      {% endif %}
+
+  weather_forecast_text:
+    friendly_name: Weather Forecast Text
+    value_template: >-
+      {% set tempnow = states('sensor.open_weather_forecast_temperature') | round(1) | string + "°C"%}
+      {% set bringtemp = states('sensor.bring_with_you_temp') %}
+      {% set precnow = states('sensor.open_weather_forecast_precipitation_probability') + "%" %}
+      {% set uv = states('sensor.uv_index') %}
+      {% set bringuv = states('sensor.bring_with_you_uv') %}
+      {% set condition = states('sensor.open_weather_condition') %}
+      {% set bringrain = states('sensor.bring_with_you_rain') %}
+      {% if condition == "partlycloudy" %}{% set condition = "Partly Cloudy" %}
+      {% endif %}
+      {{ "It will be " + condition + " today, with a temperature of " + tempnow + " outside " + bringtemp + " There's a " + precnow + " chance of rain today, " + bringrain + " The current " + uv + " " + bringuv }}

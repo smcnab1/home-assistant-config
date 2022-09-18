@@ -1,0 +1,76 @@
+#             _ _                                     
+#  _ __  __ _(_) |  ____  _ _ __  _ __  __ _ _ _ _  _ 
+# | '  \/ _` | | | (_-< || | '  \| '  \/ _` | '_| || |
+# |_|_|_\__,_|_|_| /__/\_,_|_|_|_|_|_|_\__,_|_|  \_, |
+#                                                |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensors indicating any mail or parcels incoming to house.
+
+platform: template
+sensors:
+  mail_summary:
+    friendly_name: "Mail Summary"
+    value_template: >-
+      {%- if states("sensor.mail_amazon_packages")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_amazon_packages")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_amazon_packages")|int(0) == 1 -%}
+          Amazon package is in transit.
+        {%- elif states("sensor.mail_amazon_packages")|int(0) > 1 -%}
+          Amazon packages are in transit.
+        {%- endif -%}
+      {%- if states("sensor.mail_evri_delivering")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_evri_delivering")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_evri_delivering")|int(0) == 1 -%}
+          Evri package is in transit.
+        {%- elif states("sensor.mail_evri_delivering")|int(0) > 1 -%}
+          Evri packages are in transit.
+        {%- endif -%}
+      {%- if states("sensor.mail_royal_mail_delivering")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_royal_mail_delivering")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_royal_mail_delivering")|int(0) == 1 -%}
+          Royal Mail package is in transit.
+        {%- elif states("sensor.mail_royal_mail_delivering")|int(0) > 1 -%}
+          Royal Mail packages are in transit.
+        {%- endif -%}
+        Packages last updated @ {{ as_timestamp(states('sensor.mail_updated'))  | timestamp_custom('%H%Mhrs on the %d/%m/%y') }}.
+
+  mail_summary_delivered:
+    friendly_name: "Mail Summary Delivered"
+    value_template: >-
+      {%- if states("sensor.mail_amazon_packages_delivered")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_amazon_packages_delivered")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_amazon_packages_delivered")|int(0) > 0 -%}
+          Amazon package has been delivered.
+        {%- else -%}
+        {%- endif -%}
+      {%- if states("sensor.mail_evri_delivered")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_evri_delivered")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_evri_delivered")|int(0) > 0 -%}
+          Evri package has been delivered.
+        {%- else -%}
+        {%- endif -%}
+      {%- if states("sensor.mail_royal_mail_delivered")|int(0) == 0 -%}
+        {%- else -%}
+          {{states("sensor.mail_royal_mail_delivered")|int(0)}}
+        {%- endif -%}
+      {{' '}} 
+        {%- if states("sensor.mail_royal_mail_delivered")|int(0) > 0 -%}
+          Evri package has been delivered.
+        {%- else -%}
+        {%- endif -%}
+      Packages last updated @ {{ as_timestamp(states('sensor.mail_updated'))  | timestamp_custom('%H%Mhrs on the %d/%m/%y') }}.

@@ -6,4 +6,4 @@
 #--FROM https://github.com/smcnab1/op-question-mark
 #---Links to notify entities within the notify directory.
 
-notify: !include_dir_list ../entities/notify
+notify: !include ../entities/notify.yaml

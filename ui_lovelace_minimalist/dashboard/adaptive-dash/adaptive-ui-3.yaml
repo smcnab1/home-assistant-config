@@ -7,6 +7,22 @@ theme: "minimalist-mobile"
 background: "var(--background-image)"
 views:
   - type: "custom:grid-layout"
+    title: "welcome"
+    icon: "mdi:hand-wave"
+    path: "welcome"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "main popup"
+      mediaquery:
+        "(max-width: 1100px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "main"
+    cards:
+      - !include "views-guest/00-Welcome.yaml"
+
+  - type: "custom:grid-layout"
     title: "home"
     icon: "mdi:home"
     path: "home"
@@ -71,22 +87,6 @@ views:
       - !include "views-guest/04-Kitchen.yaml"
 
   - type: "custom:grid-layout"
-    title: "Bedroom"
-    icon: "mdi:bed-double"
-    path: "bedroom"
-    layout:
-      grid-template-columns: "1fr 1fr"
-      grid-template-rows: "min-content"
-      grid-template-areas: |
-        "popup"
-      mediaquery:
-        "(max-width: 800px), (orientation: portrait)":
-          grid-template-columns: "100%"
-          grid-template-areas: "popup"
-    cards:
-      - !include "views-guest/05-Bedroom.yaml"
-
-  - type: "custom:grid-layout"
     title: "Bathroom"
     icon: "mdi:bathtub"
     path: "bathroom"
@@ -100,12 +100,12 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/06-Bathroom.yaml"
+      - !include "views-guest/05-Bathroom.yaml"
 
   - type: "custom:grid-layout"
-    title: "Office"
-    icon: "mdi:desk"
-    path: "office"
+    title: "Lighting"
+    icon: "mdi:lightbulb-group"
+    path: "lights"
     layout:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
@@ -116,12 +116,12 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/07-Office.yaml"
+      - !include "views-guest/06-Lights.yaml"
 
   - type: "custom:grid-layout"
-    title: "System"
-    icon: "mdi:network"
-    path: "system"
+    title: "Media"
+    icon: "mdi:devices"
+    path: "media"
     layout:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
@@ -132,8 +132,25 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/08-System.yaml"
+      - !include "views-guest/07-Media.yaml"
 
+  - type: "custom:grid-layout"
+    title: "Help"
+    icon: "mdi:help-circle"
+    path: "help"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-guest/08-Help.yaml"
+
+      
 resources:
   - url: /browser_mod.js
     type: module
@@ -161,5 +178,13 @@ resources:
     type: module
   - url: /local/community/spotify-card/spotify-card.js
     type: module
-  - url: /local/community/tv-card.js
+  - url: /local/stack-in-card.js
+    type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
     type: module

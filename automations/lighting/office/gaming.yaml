@@ -5,8 +5,8 @@
 #                              |___/                  |___/ 
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: 'Lighting Office Gaming'
-description: 'Automation to activate gaming scene when xbox turned on.'
+alias: Lighting Office Gaming
+description: Automation to activate gaming scene when xbox turned on.
 trigger: []
 condition: []
 action:
@@ -22,4 +22,8 @@ action:
         target:
           entity_id:
             - light.office_leds
+      - service: switch.turn_on
+        data: {}
+        target:
+          entity_id: switch.xbox
 mode: single

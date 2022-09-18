@@ -119,9 +119,9 @@ views:
       - !include "views-phone/07-Office.yaml"
 
   - type: "custom:grid-layout"
-    title: "System"
-    icon: "mdi:network"
-    path: "system"
+    title: "Lights"
+    icon: "mdi:lightbulb-group"
+    path: "lights"
     layout:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
@@ -132,7 +132,71 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/08-System.yaml"
+      - !include "views-phone/08-Lights.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Media"
+    icon: "mdi:speaker"
+    path: "media"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/09-Media.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Security"
+    icon: "mdi:shield"
+    path: "security"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/10-Security.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Notification"
+    icon: "mdi:google-assistant"
+    path: "notification"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/11-Notification.yaml"
+
+  - type: "custom:grid-layout"
+    title: "Watch List"
+    icon: "mdi:movie"
+    path: "watch"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/12-Watch.yaml"
 
 resources:
   - url: /browser_mod.js
@@ -161,5 +225,13 @@ resources:
     type: module
   - url: /local/community/spotify-card/spotify-card.js
     type: module
-  - url: /local/community/tv-card.js
+  - url: /local/stack-in-card.js
+    type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
     type: module

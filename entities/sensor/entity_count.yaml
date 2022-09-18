@@ -13,23 +13,39 @@
 #                        
 platform: template
 sensors:
-  house_lights_on: ## LIGHTING ##
+  house_lights_on: ## LIGHTING ##asd
     friendly_name: House Lights On
     unit_of_measurement: "On"
     value_template: >
-      {{ states.light | selectattr("state", "equalto", "on") | list | length }}
+      {{ [ states('sensor.bathroom_lights_on'),
+          states('sensor.bedroom_lights_on'),
+          states('sensor.hall_lights_on'),
+          states('sensor.kitchen_lights_on'),
+          states('sensor.living_room_lights_on'),
+          states('sensor.office_lights_on') ]
+          | map('float') | sum | int }}
   house_media_on: ## MEDIA ##
     friendly_name: House Media On
     unit_of_measurement: "On"
     value_template: >
-      {{ states.media_player | selectattr("state", "equalto", "on") | list | length }}
+      {{ [ states('sensor.bathroom_media_on'),
+          states('sensor.bedroom_media_on'),
+          states('sensor.hall_media_on'),
+          states('sensor.kitchen_media_on'),
+          states('sensor.living_room_media_on'),
+          states('sensor.office_media_on') ]
+          | map('float') | sum | int }}
   house_switches_on: ## SWITCHES ##
     friendly_name: House Switches On
     unit_of_measurement: "On"
     value_template: >
-      {{ states.switch | selectattr('state', 'eq', 'on')
-        | rejectattr('name', 'search', 'frigate')
-        | list | count }}
+      {{ [ states('sensor.bathroom_switches_on'),
+          states('sensor.bedroom_switches_on'),
+          states('sensor.hall_switches_on'),
+          states('sensor.kitchen_switches_on'),
+          states('sensor.living_room_switches_on'),
+          states('sensor.office_switches_on') ]
+          | map('float') | sum | int }}
 
 #  _          _   _                       
 # | |__  __ _| |_| |_  _ _ ___  ___ _ __  
@@ -42,6 +58,8 @@ sensors:
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
         | map(attribute='entity_id') | map('area_name')
+        | rejectattr('entity_id', 'search', 'all_bathroom')
+        | rejectattr('entity_id', 'search', 'bathroom_main_light_')
         | select('in', ['Bathroom'])
         | list | count }}
   bathroom_media_on: ## MEDIA ##
@@ -58,7 +76,7 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.switch | selectattr('state', 'eq', 'on')
-        | rejectattr('name', 'search', 'frigate')
+        | rejectattr('entity_id', 'search', 'espresense')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Bathroom'])
         | list | count }}
@@ -73,6 +91,7 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'all_bedroom')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Bedroom'])
         | list | count }}
@@ -90,7 +109,10 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'lamp')
         | rejectattr('name', 'search', 'frigate')
+        | rejectattr('entity_id', 'search', 'espresense')
+        | rejectattr('entity_id', 'search', 'fairy')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Bedroom'])
         | list | count }}
@@ -105,6 +127,8 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'all_hall')
+        | rejectattr('entity_id', 'search', 'hall_main_light_')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Hall'])
         | list | count }}
@@ -122,7 +146,8 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.switch | selectattr('state', 'eq', 'on')
-        | rejectattr('name', 'search', 'frigate')
+        | rejectattr('entity_id', 'search', 'lamp')
+        | rejectattr('entity_id', 'search', '_frigate')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Hall'])
         | list | count }}
@@ -137,6 +162,8 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'all_kitchen')
+        | rejectattr('entity_id', 'search', 'kitchen_main_light_')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Kitchen'])
         | list | count }}
@@ -154,7 +181,8 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.switch | selectattr('state', 'eq', 'on')
-        | rejectattr('name', 'search', 'frigate')
+        | rejectattr('entity_id', 'search', 'espresense')
+        | rejectattr('entity_id', 'search', 'sonos')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Kitchen'])
         | list | count }}
@@ -169,6 +197,7 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'all_living')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Living Room'])
         | list | count }}
@@ -186,7 +215,11 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.switch | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'lamp')
         | rejectattr('name', 'search', 'frigate')
+        | rejectattr('entity_id', 'search', 'espresense')
+        | rejectattr('entity_id', 'search', 'main_light')
+        | rejectattr('entity_id', 'search', 'sonos')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Living Room'])
         | list | count }}
@@ -201,6 +234,7 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {{ states.light | selectattr('state', 'eq', 'on')
+        | rejectattr('entity_id', 'search', 'all_office')
         | map(attribute='entity_id') | map('area_name')
         | select('in', ['Office'])
         | list | count }}

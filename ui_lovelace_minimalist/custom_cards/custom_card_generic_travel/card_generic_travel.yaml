@@ -9,6 +9,7 @@ card_generic_travel:
     browser_mod:
       service: browser_mod.popup
       data:
+        size: fullscreen
         title: "Choose a User"
         content:
           type: "vertical-stack"

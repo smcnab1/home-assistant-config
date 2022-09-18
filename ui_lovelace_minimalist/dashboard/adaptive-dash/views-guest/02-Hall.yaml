@@ -5,9 +5,9 @@ layout:
   # Tablet portrait
   grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
   grid-template-areas: |
-    "topbar topbar topbar topbar topbar topbar"
-    "title1 title1 title1 title1 title1 title1"
-    "card1 card1 card1 card1 card1 card1"
+    "nav nav nav nav nav nav"
+    "welcome welcome welcome welcome welcome welcome"
+    "intro intro intro intro intro intro"
     "card11 card11 card11 card11 card11 card11"
     "title2 title2 title2 title2 title2 title2"
     "card3 card3 card3 card3 card3 card3"
@@ -20,9 +20,9 @@ layout:
     "(max-width: 800px)":
       grid-template-columns: "1fr 1fr"
       grid-template-areas: |
-        "topbar topbar"
-        "title1 title1"
-        "card1 card1"
+        "nav nav"
+        "welcome welcome"
+        "intro intro"
         "card11 card11"
         "title2 title2"
         "card3 card3"
@@ -34,22 +34,24 @@ layout:
 view_layout:
   grid-area: "popup"
 cards:
-  - view_layout: ### TOP BAR ###
-      grid-area: "topbar"
-    type: horizontal-stack
-    cards:
-      - type: "custom:button-card"
-        template: chip_back
-        variables:
-          ulm_chip_back_path: /lovelace-minimalist-2/home
-      - type: "custom:button-card"
-        template: "card_title"
-        name: "Hall"
-      - type: "custom:button-card"
-        template: chip_mdi_icon_state
-        variables:
-          ulm_chip_mdi_icon_state_entity: sensor.living_room_temperature
-          ulm_chip_mdi_icon_state_icon: mdi:thermometer
+  - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar_guest
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-3/home'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-3/living-room'
+
+  - view_layout:
+      grid-area: "welcome"
+    type: "custom:button-card"
+    template: "card_esh_welcome_guest"
+    variables:
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: sensor.house_lights_on
+      ulm_chip_double_state_entity2: sensor.house_switches_on
+      ulm_chip_back_path: "/lovelace-minimalist-3/home"
+      ulm_weather: "weather.weather"
 
   - view_layout: ### LIGHTING ###
       grid-area: "title1"

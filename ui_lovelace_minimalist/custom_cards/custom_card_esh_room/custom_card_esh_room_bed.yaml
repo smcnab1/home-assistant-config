@@ -167,7 +167,7 @@ card_esh_room_bed:
             service: browser_mod.popup
             data:
               title: "Bedroom Lights"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:
@@ -280,9 +280,9 @@ card_esh_room_bed:
             service: browser_mod.popup
             data:
               title: "Bedroom Media"
+              size: fullscreen
               content:
                 type: "vertical-stack"
-                size: wide
                 cards:
                   - type: "custom:button-card"
                     template: card_media_player
