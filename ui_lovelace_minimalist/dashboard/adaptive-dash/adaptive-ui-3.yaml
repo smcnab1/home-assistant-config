@@ -1,4 +1,10 @@
----
+#   ___ _   _ ___ ___ _____   ___   _   ___ _  _ ___  ___   _   ___ ___  
+#  / __| | | | __/ __|_   _| |   \ /_\ / __| || | _ )/ _ \ /_\ | _ \   \ 
+# | (_ | |_| | _|\__ \ | |   | |) / _ \\__ \ __ | _ \ (_) / _ \|   / |) |
+#  \___|\___/|___|___/ |_|   |___/_/ \_\___/_||_|___/\___/_/ \_\_|_\___/ 
+#                                                                        
+#--FROM https://github.com/smcnab1/op-question-mark
+
 button_card_templates: !include_dir_merge_named "../../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
 decluttering_templates: !include "/config/ui_lovelace_minimalist/dashboard/adaptive-dash/decluttering_templates/decluttering_templates.yaml"
 
@@ -6,6 +12,9 @@ title: "Minimalist Guest"
 theme: "minimalist-mobile"
 background: "var(--background-image)"
 views:
+        ###############
+        ### WELCOME ###
+        ###############
   - type: "custom:grid-layout"
     title: "welcome"
     icon: "mdi:hand-wave"
@@ -14,14 +23,17 @@ views:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "popup"
       mediaquery:
         "(max-width: 1100px), (orientation: portrait)":
           grid-template-columns: "100%"
           grid-template-areas: "main"
     cards:
-      - !include "views-guest/00-Welcome.yaml"
+      - !include "views-guest/01-Home/01-Welcome.yaml"
 
+        ############
+        ### HOME ###
+        ############
   - type: "custom:grid-layout"
     title: "home"
     icon: "mdi:home"
@@ -30,14 +42,17 @@ views:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "popup"
       mediaquery:
         "(max-width: 1100px), (orientation: portrait)":
           grid-template-columns: "100%"
           grid-template-areas: "main"
     cards:
-      - !include "views-guest/01-Home.yaml"
+      - !include "views-guest/01-Home/02-Home.yaml"
 
+        ############
+        ### HALL ###
+        ############
   - type: "custom:grid-layout"
     title: "Hall"
     icon: "mdi:door-open"
@@ -52,8 +67,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/02-Hall.yaml"
+      - !include "views-guest/02-Rooms/01-Hall.yaml"
 
+        ###################
+        ### LIVING ROOM ###
+        ###################
   - type: "custom:grid-layout"
     title: "Living Room"
     icon: "mdi:sofa"
@@ -68,8 +86,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest//03-Living-Room.yaml"
+      - !include "views-guest/02-Rooms/02-Living-Room.yaml"
 
+        ###############
+        ### KITCHEN ###
+        ###############
   - type: "custom:grid-layout"
     title: "Kitchen"
     icon: "mdi:chef-hat"
@@ -84,8 +105,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/04-Kitchen.yaml"
+      - !include "views-guest/02-Rooms/03-Kitchen.yaml"
 
+        ################
+        ### BATHROOM ###
+        ################
   - type: "custom:grid-layout"
     title: "Bathroom"
     icon: "mdi:bathtub"
@@ -100,8 +124,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/05-Bathroom.yaml"
+      - !include "views-guest/02-Rooms/04-Bathroom.yaml"
 
+        ##############
+        ### LIGHTS ###
+        ##############
   - type: "custom:grid-layout"
     title: "Lighting"
     icon: "mdi:lightbulb-group"
@@ -116,8 +143,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/06-Lights.yaml"
+      - !include "views-guest/01-Home/03-Lights.yaml"
 
+        #############
+        ### MEDIA ###
+        #############
   - type: "custom:grid-layout"
     title: "Media"
     icon: "mdi:devices"
@@ -132,8 +162,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/07-Media.yaml"
+      - !include "views-guest/01-Home/04-Media.yaml"
 
+        ############
+        ### HELP ###
+        ############
   - type: "custom:grid-layout"
     title: "Help"
     icon: "mdi:help-circle"
@@ -148,9 +181,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-guest/08-Help.yaml"
+      - !include "views-guest/01-Home/05-Help.yaml"
 
-      
+        #################
+        ### RESOURCES ###
+        #################
 resources:
   - url: /browser_mod.js
     type: module

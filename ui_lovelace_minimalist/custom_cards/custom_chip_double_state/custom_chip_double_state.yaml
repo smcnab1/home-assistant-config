@@ -7,13 +7,7 @@ chip_double_state:
     [[[
       var icon1 = "💡";
       var icon2 = "🔌";
-      var state1 = "";
-      if (states[variables.ulm_chip_double_state_entity1].state){
-        var state1 = states[variables.ulm_chip_double_state_entity1].state;
-        }
-      var state2 = "";
-      if (states[variables.ulm_chip_double_state_entity2].state){
-        var state2 = states[variables.ulm_chip_double_state_entity2].state;
-        }
+      var state1 = states[variables.ulm_chip_double_state_entity1].state;
+      var state2 = states[variables.ulm_chip_double_state_entity2].state;
       return icon1 + " " + state1 + " | " + state2 + " " + icon2;
     ]]]

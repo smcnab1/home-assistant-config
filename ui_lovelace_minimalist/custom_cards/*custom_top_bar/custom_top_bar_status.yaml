@@ -1,0 +1,59 @@
+---
+### TOP BAR STATUS CARD ###
+top_bar_status:
+  variables:
+    - top_bar_status_room_name: ""
+    - top_bar_status_room_icon: ""
+    - ulm_chip_double_state_entity1: ""
+    - ulm_chip_double_state_entity2: ""
+    - ulm_chip_icon_state_entity: ""
+  styles:
+    grid:
+      - display: "flex"   
+      - justify-content: "space-between"
+    card:
+      - background-color: "#ffffff7d"
+      - box-shadow: "none"
+      - padding: "6px"
+      - color: "rgba(0,0,0,0.8)"
+      - backdrop-filter: "blur(33px)"
+      - background-blend-mode: "overlay"
+    icon:
+      - color: "[[[ return variables.ulm_chip_navigate_icon_color; ]]]"
+    label:
+      - color: "[[[ return variables.ulm_chip_navigate_label_color; ]]]"
+
+  custom_fields:
+    temp:   
+      card:
+        type: "custom:button-card"
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: "🌡️"
+          ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity; ]]]"
+        styles:
+          card:
+            - width: "100px"
+
+    room:   
+      card:
+        type: "custom:button-card"
+        template: chip_navigate
+        label: "[[[ return variables.top_bar_status_room_name ]]]"  
+        variables:
+          ulm_chip_navigate_path: ''
+          ulm_chip_navigate_icon: "[[[ return variables.top_bar_status_room_icon ]]]"
+        styles:
+          card:
+            - width: "150px"
+
+    states:   
+      card:
+        type: "custom:button-card"
+        template: chip_double_state
+        variables:
+          ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
+          ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+        styles:
+          card:
+            - width: "100px"

@@ -1,0 +1,309 @@
+---
+find_my_phone_button:
+  template:
+    - "ulm_card_person_language_variables"
+  tap_action:
+    action: "toggle"
+  icon: "mdi:volume-high"
+  name: "[[[ return variables.ulm_custom_card_person_mobile_findmy; ]]]"
+  size: "1.4em"
+  styles:
+    icon:
+      - color: "rgba(var(--color-blue),1)"
+    name:
+      - font-size: "1.06em"
+      - letterspacing: "0.015em"
+    grid:
+      - grid-template-areas: "'i n'"
+      - grid-column-gap: "0.3em"
+    card:
+      - color: "rgba(var(--color-blue),1)"
+      - background: "rgba(var(--color-blue),0.2"
+      - border-radius: "0.6em"
+      - padding: "1em 1.4em"
+      - width: "max-content"
+      - font-size: "1.06em"
+      - font-weight: "500"
+      - letter-spacing: "0.015em"
+      - box-shadow: "none"
+      - align-self: center
+
+custom_card_person_mobile:
+  template:
+    - "icon_info_bg"
+    - "ulm_language_variables"
+    - "ulm_card_person_language_variables"
+    - "custom_popup_person"
+  variables:
+    ulm_card_person_use_entity_picture: false
+    ulm_card_person_zones: ""
+  triggers_update: "all"
+  show_entity_picture: "[[[ return variables.ulm_card_person_use_entity_picture ]]]"
+  show_label: false
+  show_name: false
+  icon: "mdi:face-man"
+  entity_picture: >
+    [[[
+      if (variables.ulm_card_person_use_entity_picture == true){
+        return states[variables.ulm_card_person_entity].attributes.entity_picture;
+      } else{
+        return null;
+      }
+    ]]]
+  label: >
+    [[[
+      var location = states[variables.ulm_card_person_entity].state
+      if (location == "unavailable"){
+        return variables.ulm_unavailable;
+      } else if (location == "not_home"){
+        return variables.ulm_custom_card_person_mobile_not_home;
+      } else if (location == "gym"){
+        return variables.ulm_custom_card_person_mobile_gym;
+      } else if (location == "work"){
+        return variables.ulm_custom_card_person_mobile_work;
+      } else{
+        return (location == "home") ? variables.ulm_custom_card_person_mobile_home : location;
+      }
+    ]]]
+  name: "[[[ return states[variables.ulm_card_person_entity].attributes.friendly_name ]]]"
+  entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+  styles:
+    icon:
+      - color: "rgba(var(--color-theme), 0.9)"
+      - width: >
+          [[[
+            if (variables.ulm_card_person_use_entity_picture == true){
+              return "42px";
+            } else {
+              return "20px";
+            }
+          ]]]
+    img_cell:
+      - place-self: center left
+    grid:
+      - grid-template-areas: "'i n network battery find' 'i l network battery find'"
+      - grid-template-columns: "auto 1fr auto auto"
+      - justify-items: "center"
+    custom_fields:
+      notification:
+        - border-radius: "50%"
+        - position: "absolute"
+        - left: "38px"
+        - top: "8px"
+        - height: "16px"
+        - width: "16px"
+        - border: "2px solid var(--card-background-color)"
+        - font-size: "12px"
+        - line-height: "14px"
+        - background-color: >
+            [[[
+              if (states[variables.ulm_card_person_entity].state == 'home'){
+                return "rgba(var(--color-green),1)";
+              } else if (states[variables.ulm_card_person_entity].state == 'gym') {
+                return "rgba(var(--color-purple),1)";
+              } else if (states[variables.ulm_card_person_entity].state == 'work') {
+                return "rgba(var(--color-yellow),1)";
+              } else {
+                return "rgba(var(--color-red),1)";
+              }
+            ]]]
+      network:
+        - align-self: center
+      battery:
+        - align-self: center
+    card:
+      - opacity: >
+          [[[
+            if (states[variables.ulm_card_person_entity].state == 'home'){
+              return "1";
+            } else if (states[variables.ulm_card_person_entity].state == 'gym') {
+              return "0.6";
+            } else if (states[variables.ulm_card_person_entity].state == 'work') {
+              return "0.6";
+            } else {
+              return "0.6";
+            }
+          ]]]
+
+  custom_fields:
+    notification: >
+      [[[
+        var zones = variables.ulm_card_person_zones;
+        var person_location = states[variables.ulm_card_person_entity].state;
+        if (person_location !== 'home'){
+          for (const item of zones){
+            if (person_location == states[item]?.attributes?.friendly_name){
+              var icon = (states[item].attributes.icon !== null) ? states[item].attributes.icon : 'mdi:help-circle';
+              return '<ha-icon icon="' + icon + '" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'not_home'){
+              return '<ha-icon icon="mdi:home-minus" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'Gym'){
+              return '<ha-icon icon="mdi:dumbbell" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'Work'){
+              return '<ha-icon icon="mdi:briefcase" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            }
+          }
+        } else{
+          return '<ha-icon icon="mdi:home-variant" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+        }
+      ]]]
+
+    battery: |
+      [[[
+        if (states[variables.ulm_card_person_battery_state].state == 'Charging' ) { 
+          return `<ha-icon
+          icon="mdi:battery-charging"
+          style="width: 14px; height: 14px; color: rgba(var(--color-yellow), 0.9)">
+          </ha-icon><span style="font-size: 14px; font-weight: bold; color: rgba(var(--color-yellow), 0.9)">${states[variables.ulm_card_person_battery_level].state}%</span>`;
+        } else {
+          return `<ha-icon
+          icon="mdi:battery"
+          style="width: 14px; height: 14px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon><span style="font-size: 14px; font-weight: bold; color: rgba(var(--color-theme), 0.9)">${states[variables.ulm_card_person_battery_level].state}%</span>`;
+        }
+      ]]]
+
+    network: |
+      [[[
+        if (states[variables.ulm_card_person_wifi_connection].state == 'Wi-Fi' ) { 
+          return `<ha-icon
+          icon="mdi:wifi"
+          style="width: 16px; height: 16px; padding-right: 5px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon>`;
+        } else {
+          return `<ha-icon
+          icon="mdi:signal"
+          style="width: 16px; height: 16px; padding-right: 5px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon>`; 
+        }
+      ]]]
+
+    find:
+      card:
+        template:
+          - "icon_info_bg"
+          - "blue"
+        show_name: false
+        show_label: false
+        type: "custom:button-card"
+        entity: "[[[ return variables.ulm_card_person_findmy_script ]]]"
+        icon: "mdi:phone-alert"
+        tap_action:
+          action: "toggle"
+        styles:
+          card:
+            - box-shadow: "none"
+            - padding: "2px"
+
+custom_popup_person:
+  tap_action:
+    action: "fire-dom-event"
+    browser_mod:
+      service: "browser_mod.popup"
+      data:
+        title: "[[[ return states[variables.ulm_card_person_entity].attributes.friendly_name ]]]"
+        style:
+          $: >
+            [[[
+              if (hass.themes.theme.includes("desktop")){
+                var dialog = `
+                  .mdc-dialog__surface{
+                    border-radius: var(--border-radius) !important;
+                  }
+                `;
+              } else{
+                var dialog = "";
+              }
+              return `
+                *{
+                  --secondary-background-color: none !important;
+                }
+                ${dialog}
+              `;
+            ]]]
+          hui-vertical-stack-card:
+            $: >
+              button-card {
+                align-self: center;
+                padding: 0.2em 0 2.3em 0;
+              }
+              hui-entities-card{
+                padding: 0.8em 1.4em;
+              }
+            $hui-entities-card$: >
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-history-graph-card$: >
+              .content {
+                padding: 0 2.4em !important;
+              }
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-glance-card$: >
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-map-card:
+              $: >
+                ha-icon-button {
+                  color: rgba(var(--color-blue),1);
+                }
+              $ha-map:
+                $: >
+                  .leaflet-control-attribution {
+                    display: none;
+                  }
+                  .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+                    border: 2px solid rgba(var(--color-blue),0.4) !important;
+                  }
+                  .leaflet-bar a {
+                    background-color: rgba(var(--color-blue),0.2) !important;
+                    color: rgba(var(--color-blue),1) !important;
+                  }
+                  .leaflet-bar a:first-child {
+                    border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
+                  }
+                  .leaflet-pane.leaflet-tile-pane {
+                    filter: contrast(95%);
+                  }
+        content:
+          type: "vertical-stack"
+          cards:
+            - type: "entities"
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+                  secondary_info: "last-changed"
+            - type: "history-graph"
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+            - type: "glance"
+              show_state: false
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_wifi_tracker; ]]]"
+                  name: "WiFi"
+                  icon: "mdi:wifi"
+                  style: &state >
+                    state-badge{
+                      color: {{ 'rgba(var(--color-blue),1)' if is_state(config.entity, 'home') }};
+                      filter: {{ 'opacity(100%)' if is_state(config.entity, 'home') else 'opacity(40%)'}};
+                    }
+                - entity: "[[[ return variables.ulm_card_person_gps_tracker; ]]]"
+                  name: "GPS"
+                  icon: "mdi:map-marker"
+                  style: *state
+            - type: "horizontal-stack"
+              cards:
+                - type: custom:gap-card
+                  height: 10px
+                - type: "custom:button-card"
+                  template:
+                    - "find_my_phone_button"
+                  entity: "[[[ return variables.ulm_card_person_findmy_script; ]]]"
+                - type: custom:gap-card
+                  height: 10px
+            - type: "map"
+              aspect_ratio: "12x10"
+              default_zoom: 16
+              entities: "[[[ return [variables.ulm_card_person_gps_tracker]; ]]]"

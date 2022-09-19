@@ -1,0 +1,50 @@
+#  _        _    _     _           _                       _     _        _ _ 
+# | |_ __ _| |__| |___| |_   ___  | |_  ___ _ __  ___   __| |___| |_ __ _(_) |
+# |  _/ _` | '_ \ / -_)  _| |___| | ' \/ _ \ '  \/ -_) / _` / -_)  _/ _` | | |
+#  \__\__,_|_.__/_\___|\__|       |_||_\___/_|_|_\___| \__,_\___|\__\__,_|_|_|
+#                                                                             
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "alarm alarm alarm alarm alarm alarm"
+    "wifi wifi wifi wifi wifi wifi"
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "alarm alarm alarm alarm alarm alarm"
+        "wifi wifi wifi wifi wifi wifi"
+
+view_layout:
+  grid-area: "popup2"
+cards:
+        ###################
+        ### ALARM PANEL ###
+        ###################
+  - view_layout: ### ALARM PANEL ###
+      grid-area: "alarm"
+    type: alarm-panel
+    entity: alarm_control_panel.home_alarm
+    name: Home Alarm
+    states:
+      - arm_away
+
+        ##################
+        ### WIFI SPEED ###
+        ##################
+  - view_layout: ### WIFI SPEED ###
+      grid-area: "wifi"
+    type: "custom:button-card"
+    template: custom_card_speedtest
+    variables:
+      ulm_custom_card_speedtest_download_speed_entity: sensor.speed_test_download
+      ulm_custom_card_speedtest_upload_speed_entity: sensor.speed_test_upload
+      ulm_custom_card_speedtest_color: blue
+      ulm_custom_card_speedtest_router_name: NOKIA
+      ulm_custom_card_speedtest_router_model: G-2425G-A

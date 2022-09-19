@@ -1,0 +1,181 @@
+#                   _           _                                        
+#  __ _ _  _ ___ __| |_   ___  | |_  ___ _ __  ___   _ __  __ _ __ _ ___ 
+# / _` | || / -_|_-<  _| |___| | ' \/ _ \ '  \/ -_) | '_ \/ _` / _` / -_)
+# \__, |\_,_\___/__/\__|       |_||_\___/_|_|_\___| | .__/\__,_\__, \___|
+# |___/                                             |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "welcome welcome welcome welcome welcome welcome"
+    "intro intro intro intro intro intro"
+    "title1 title1 title1 title1 title1 title1"
+    "card1 card1 card1 card1 card1 card1"
+    "card2 card2 card2 card2 card2 card2"
+    "card3 card3 card3 card3 card3 card3"
+    "card4 card4 card4 card4 card4 card4"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "welcome welcome"
+        "intro intro"
+        "title1 title1"
+        "card1 card2"
+        "card2 card2"
+        "card3 card3"
+        "card4 card4"
+
+view_layout:
+  grid-area: "popup"
+cards:
+  - view_layout:
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar_guest
+    variables:
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-3/hall'
+
+  - view_layout:
+      grid-area: "welcome"
+    type: "custom:button-card"
+    template: "card_esh_welcome_guest"
+    variables:
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: sensor.house_lights_on
+      ulm_chip_double_state_entity2: sensor.house_switches_on
+      ulm_weather: "weather.weather"
+
+  - view_layout:
+      grid-area: "intro"
+    type: custom:stack-in-card
+    mode: vertical
+    cards:
+      - type: markdown  ### INTRO INSTRUCTIONS ###
+        style:
+          .: |
+            ha-card {
+                background-color: rgba(193, 66, 66, 0.3) !important;
+                box-shadow: none;
+                padding: 1px;
+              }
+          ha-markdown:
+            $: |
+              ha-markdown-element:first-of-type h3 {
+                background-color: rgba(0,0,0,0);
+                font-weight: normal;
+                color: var(--primary-text-color);
+                font-size: 12px;
+                line-height: 12px;
+              }
+        content: |
+            ### Welcome to the mad house {{ states('input_text.guest_name')}}!
+            #### First off, this is the 🏠 page. It has buttons to access rooms in the house that allow you to control devices. Most things should work automatically though 🧙.
+            #### You will find a red box on each page talking you through the page. If you need more help you can click on the button below it and choose an option.
+      - type: custom:button-card
+        icon: mdi:help-circle
+        styles:
+          card:
+            - padding: 1px
+            - height: 50px
+          icon:
+            - animation: rotating 2s linear infinite
+            - height: 30px
+        style:
+          .: |
+            ha-card {
+                background-color: rgba(193, 66, 66, 0.3) !important;
+                box-shadow: none;
+                padding: 1px;
+              }
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Choose an Option"
+              content:
+                type: "horizontal-stack"
+                cards:
+                  - type: "custom:button-card"
+                    name: "View Help Page"
+                    icon: "mdi:help-circle"
+                    tap_action:
+                      action: navigate
+                      navigation_path: /lovelace-minimalist-3/help
+                  - type: "custom:button-card"
+                    name: "Contact Sam"
+                    icon: "mdi:comment-question"
+                    tap_action:
+                      action: url
+                      url_path: https://wa.link/hbu9e1
+  - view_layout:
+      grid-area: "title1"
+    type: "custom:button-card"
+    template: "card_title"
+    name: "Rooms"
+  - view_layout:
+      grid-area: "card1"
+    type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/hall
+          ulm_card_navigate_title: Hall
+          ulm_card_navigate_icon: mdi:door-open
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/living-room
+          ulm_card_navigate_title: Living Room
+          ulm_card_navigate_icon: mdi:sofa
+  - view_layout:
+      grid-area: "card2"
+    type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/kitchen
+          ulm_card_navigate_title: Kitchen
+          ulm_card_navigate_icon: mdi:chef-hat
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/bathroom
+          ulm_card_navigate_title: Bathroom
+          ulm_card_navigate_icon: mdi:bathtub
+  - view_layout:
+      grid-area: "card3"
+    type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/kitchen
+          ulm_card_navigate_title: Lighting Control
+          ulm_card_navigate_icon: mdi:lightbulb-group
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/bathroom
+          ulm_card_navigate_title: Media
+          ulm_card_navigate_icon: mdi:devices
+  - view_layout:
+      grid-area: "card4"
+    type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: card_navigate
+        variables:
+          ulm_card_navigate_path: /lovelace-minimalist-3/help
+          ulm_card_navigate_title: Help Page
+          ulm_card_navigate_icon: mdi:help-circle

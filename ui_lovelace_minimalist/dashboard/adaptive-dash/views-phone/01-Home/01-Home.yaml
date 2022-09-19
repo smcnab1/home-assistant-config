@@ -1,0 +1,351 @@
+#       _                         _                                        
+#  _ __| |_  ___ _ _  ___   ___  | |_  ___ _ __  ___   _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | ' \/ _ \ '  \/ -_) | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_||_\___/_|_|_\___| | .__/\__,_\__, \___|
+# |_|                                                 |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "welcome welcome welcome welcome welcome welcome"
+    "person1 person1 person1 person2 person2 person2"
+    "hall hall hall livingroom livingroom livingroom"
+    "kitchen kitchen kitchen bedroom bedroom bedroom"
+    "bathroom bathroom bathroom office office office"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "welcome welcome"
+        "person1 person2"
+        "hall livingroom"
+        "kitchen bedroom"
+        "bathroom office"
+
+view_layout:
+  grid-area: "main"
+cards:
+        ###############
+        ### NAV BAR ###
+        ###############
+  - view_layout: ### NAV BAR ###
+      grid-area: "nav"
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_next: "/lovelace-minimalist-2/hall"
+
+        #####################
+        ### WELCOME CARDS ###
+        #####################
+  - view_layout: ### WELCOME CARD ###
+      grid-area: "welcome"
+    type: "custom:button-card"
+    template: "card_esh_welcome_phone"
+    triggers_update: "input_boolean.welcome_toggle_phone"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_card_esh_welcome_collapse: input_boolean.welcome_toggle_phone
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: "sensor.house_lights_on"
+      ulm_chip_double_state_entity2: "sensor.house_switches_on"
+      entity_1:
+        nav: "lights"
+        icon: "mdi:lightbulb-group"
+        name: "Lights"
+        color: "yellow"
+      entity_2:
+        nav: "media"
+        icon: "mdi:speaker"
+        name: "Media"
+        color: "purple"
+      entity_3:
+        nav: "security"
+        icon: "mdi:shield"
+        name: Secure
+        color: "green"
+      entity_4:
+        nav: "notification"
+        icon: "mdi:google-assistant"
+        name: Notify
+        color: "red"
+      entity_5:
+        nav: "watch"
+        icon: "mdi:movie"
+        name: Watch
+        color: "blue"
+      entity_6:
+        nav: "system"
+        icon: "mdi:server"
+        name: System
+        color: "purple"
+
+        ####################
+        ### PERSON CARDS ###
+        ####################
+  - view_layout: ### SAM CARD ###
+      grid-area: "person1"
+    type: conditional
+    conditions:
+      - entity: input_boolean.welcome_toggle_phone
+        state: "off"
+    card:
+      type: "custom:button-card"
+      template: custom_card_person_mobile
+      variables:
+        ulm_card_person_entity: person.sam
+        ulm_card_person_battery_state: sensor.iphone_battery_state
+        ulm_card_person_battery_level: sensor.iphone_battery_level
+        ulm_card_person_wifi_connection: sensor.iphone_connection_type
+        ulm_card_person_wifi_tracker: person.sam
+        ulm_card_person_gps_tracker: person.sam
+        ulm_card_person_findmy_script: script.find_my_phone_sam
+        ulm_card_person_use_entity_picture: true
+        ulm_card_person_zones:
+          - zone.home
+
+  - view_layout: ### LEAH CARD ###
+      grid-area: "person2"
+    type: conditional
+    conditions:
+      - entity: input_boolean.welcome_toggle_phone
+        state: "off"
+    card:
+      type: "custom:button-card"
+      template: custom_card_person_mobile
+      variables:
+        ulm_card_person_entity: person.leah
+        ulm_card_person_battery_state: sensor.leah_s_iphone_battery_state
+        ulm_card_person_battery_level: sensor.leah_s_iphone_battery_level
+        ulm_card_person_wifi_connection: sensor.leah_s_iphone_connection_type
+        ulm_card_person_wifi_tracker: person.leah
+        ulm_card_person_gps_tracker: person.leah
+        ulm_card_person_findmy_script: script.find_my_phone_leah
+        ulm_card_person_use_entity_picture: true
+        ulm_card_person_zones:
+          - zone.home
+
+        ##################
+        ### ROOM CARDS ###
+        ##################
+  - view_layout: ### HALL ###
+      grid-area: "hall"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - red_no_state
+    name: Hall
+    entity: sensor.living_room_temperature
+    icon: mdi:door-open
+    tap_action:
+      action: navigate
+      navigation_path: "hall"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_hall_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.hall_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_3:
+        entity_id: binary_sensor.front_door_sensor
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_4:
+        entity_id: camera.hall_frigate
+        templates:
+          - purple_no_state
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+
+  - view_layout: ### LIVING ROOM ###
+      grid-area: "livingroom"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - blue_no_state
+    name: Living Room
+    entity: sensor.living_room_temperature
+    icon: mdi:sofa
+    tap_action:
+      action: navigate
+      navigation_path: "living-room"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_living_room_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.living_room_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_3:
+        entity_id: camera.living_room_camera_frigate
+        templates:
+          - purple_no_state
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+
+  - view_layout: ### KITCHEN ###
+      grid-area: "kitchen"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - green_no_state
+    name: Kitchen
+    entity: sensor.kitchen_temperature
+    icon: mdi:chef-hat
+    tap_action:
+      action: navigate
+      navigation_path: "kitchen"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_kitchen_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.kitchen_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_3:
+        entity_id: camera.living_room_camera_frigate
+        templates:
+          - purple_no_state
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+  - view_layout: ### BEDROOM ###
+      grid-area: "bedroom"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - pink_no_state
+    name: Bedroom
+    entity: sensor.bedroom_temperature
+    icon: mdi:bed-double
+    tap_action:
+      action: navigate
+      navigation_path: "bedroom"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_bedroom_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.bedroom_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_3:
+        entity_id: camera.bedroom_camera_frigate
+        templates:
+          - purple_no_state
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+
+  - view_layout: ### BATHROOM ###
+      grid-area: "bathroom"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - yellow_no_state
+    name: Bathroom
+    entity: sensor.bathroom_temperature
+    icon: mdi:bathtub
+    tap_action:
+      action: navigate
+      navigation_path: "bathroom"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_bathroom_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.bathroom_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+
+  - view_layout: ### OFFICE ###
+      grid-area: "office"
+    type: "custom:button-card"
+    template:
+      - card_room
+      - purple_no_state
+    name: Office
+    entity: sensor.living_room_temperature
+    icon: mdi:desk
+    tap_action:
+      action: navigate
+      navigation_path: "office"
+    variables:
+      label_use_temperature: true
+      label_use_brightness: false
+      entity_1:
+        entity_id: light.all_office_lights
+        templates:
+          - yellow_on
+        tap_action:
+          action: toggle
+      entity_2:
+        entity_id: binary_sensor.living_room_motion
+        templates:
+          - red_on
+        tap_action:
+          action: navigate
+          navigation_path: "security"
+      entity_3:
+        entity_id: camera.living_room_camera_frigate
+        templates:
+          - purple_no_state
+        tap_action:
+          action: navigate
+          navigation_path: "security"
