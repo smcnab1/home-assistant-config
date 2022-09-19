@@ -1,0 +1,61 @@
+#  _ _     _                                                  _ _      _    
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    ___   ____ __ _(_) |_ __| |_  
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  |___| (_-< V  V / |  _/ _| ' \ 
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|       /__/\_/\_/|_|\__\__|_||_|
+#                |___/                                                      
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting Living Room Switch
+description: Automation which uses mini switch as a switch for lighting in Living Room.
+use_blueprint:
+  path: SeanM/zha-aqara-wireless-mini-switch.yaml
+  input:
+    aqara_mini_switch: df388fc9f4ec1daf572b4f4119c4e0ea
+    button_single_press:
+      - if:
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: light.all_living_room_lights
+                state: "off"
+              - condition: time
+                after: "09:00:00"
+                before: "18:00:00"
+        then:
+          - service: automation.trigger
+            data:
+              skip_condition: false
+            target:
+              entity_id: automation.lighting_living_room_day
+        else:
+          - if:
+              - condition: state
+                entity_id: light.all_living_room_lights
+                state: "off"
+            then:
+              - service: automation.trigger
+                data:
+                  skip_condition: false
+                target:
+                  entity_id: automation.lighting_living_room_night
+            else:
+              - if:
+                  - condition: state
+                    entity_id: light.all_living_room_lights
+                    state: "on"
+                then:
+                  - service: automation.trigger
+                    data:
+                      skip_condition: false
+                    target:
+                      entity_id: automation.lighting_living_room_off
+    button_double_press:
+      - service: light.toggle
+        data: {}
+        target:
+          entity_id: light.living_room_main_light
+    button_long_press:
+      - service: input_boolean.toggle
+        data: {}
+        target:
+          entity_id: input_boolean.party

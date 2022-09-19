@@ -1,0 +1,57 @@
+#  _   _ _      _                               _ _      _    
+# | |_(_) |_ __| |_  ___ _ _    ___   ____ __ _(_) |_ __| |_  
+# | / / |  _/ _| ' \/ -_) ' \  |___| (_-< V  V / |  _/ _| ' \ 
+# |_\_\_|\__\__|_||_\___|_||_|       /__/\_/\_/|_|\__\__|_||_|
+#                                                             
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting Kitchen Switch
+description: Automation which uses mini switch as a switch for lighting in Kitchen.
+use_blueprint:
+  path: SeanM/zha-aqara-wireless-mini-switch.yaml
+  input:
+    aqara_mini_switch: cbf05f123f79fddfcdef9145d122c580
+    button_single_press:
+      - if:
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: light.all_kitchen_lights
+                state: "off"
+              - condition: time
+                after: "12:30:00"
+                before: "20:30:00"
+        then:
+          - service: automation.trigger
+            data:
+              skip_condition: false
+            target:
+              entity_id: automation.lighting_kitchen_cooking
+        else:
+          - if:
+              - condition: state
+                entity_id: light.all_kitchen_lights
+                state: "off"
+            then:
+              - service: automation.trigger
+                data:
+                  skip_condition: false
+                target:
+                  entity_id: automation.lighting_kitchen_normal
+            else:
+              - if:
+                  - condition: state
+                    entity_id: light.all_kitchen_lights
+                    state: "on"
+                then:
+                  - service: automation.trigger
+                    data:
+                      skip_condition: false
+                    target:
+                      entity_id: automation.lighting_kitchen_off
+    button_double_press: []
+    button_long_press:
+      - service: input_boolean.toggle
+        data: {}
+        target:
+          entity_id: input_boolean.party

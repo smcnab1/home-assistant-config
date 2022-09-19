@@ -15,22 +15,17 @@ card_guest_login:
         title: "Scan QR Code with your Phone to open Home Assistant"
         size: fullscreen
         content:
-          type: markdown
-          content: >
-            <img src="/local/guest-welcome-qr.png" alt="Guest Login"/>
-          style:
-            .: |
-              align: center;
-              justify-content: center;
-              width: 100px!important;
-              padding-right: 0px;
-              margin: 0px;
-              height: 100px!important;
-            hui-image: |
-              align: center;
-              max-width:100%;
-              height:auto;
-              max-height:100%;
+          type: vertical-stack
+          cards:
+            - type: custom:gap-card
+            - type: horizontal-stack
+              cards:
+                - type: custom:gap-card
+                - type: markdown
+                  content: >
+                    <img src="/local/HALogin.png" alt="Guest Login"/>
+                - type: custom:gap-card
+            - type: custom:gap-card
   custom_fields:
     item1:
       card:
@@ -43,22 +38,17 @@ card_guest_login:
               title: "Scan QR Code with your Phone to open Home Assistant"
               size: fullscreen
               content:
-                type: markdown
-                content: >
-                  <img src="/local/guest-welcome-qr.png" alt="Guest Login"/>
-                style:
-                  .: |
-                    align: center;
-                    justify-content: center;
-                    width: 100px!important;
-                    padding-right: 0px;
-                    margin: 0px;
-                    height: 100px!important;
-                  hui-image: |
-                    align: center;
-                    max-width:100%;
-                    height:auto;
-                    max-height:100%;
+                type: vertical-stack
+                cards:
+                  - type: custom:gap-card
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:gap-card
+                      - type: markdown
+                        content: >
+                          <img src="/local/HALogin.png" alt="Guest Login"/>
+                      - type: custom:gap-card
+                  - type: custom:gap-card
         custom_fields:
           item1:
             card:
@@ -72,22 +62,17 @@ card_guest_login:
                     title: "Scan QR Code with your Phone to open Home Assistant"
                     size: fullscreen
                     content:
-                      type: markdown
-                      content: >
-                        <img src="/local/guest-welcome-qr.png" alt="Guest Login"/>
-                      style:
-                        .: |
-                          align: center
-                          justify-content: center
-                          width: 100px!important
-                          padding-right: 0px
-                          margin: 0px
-                          height: 100px!important
-                        hui-image: |
-                          align: center
-                          max-width:100%
-                          height:auto
-                          max-height:100%
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/HALogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
               icon: mdi:home
 
           item2:
@@ -102,21 +87,16 @@ card_guest_login:
                     title: "Scan QR Code with your Phone to open Home Assistant"
                     size: fullscreen
                     content:
-                      type: markdown
-                      content: >
-                        <img src="/local/guest-welcome-qr.png" alt="Guest Login"/>
-                      style:
-                        .: |
-                          align: center;
-                          justify-content: center;
-                          width: 100px!important;
-                          padding-right: 0px;
-                          margin: 0px;
-                          height: 100px!important;
-                        hui-image: |
-                          align: center;
-                          max-width:100%;
-                          height:auto;
-                          max-height:100%;
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/HALogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
               label: Click to open Home Assistant
               name: Home Assistant Access

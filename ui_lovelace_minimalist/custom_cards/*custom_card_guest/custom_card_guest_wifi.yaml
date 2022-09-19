@@ -15,18 +15,17 @@ card_guest_wifi:
         title: "Scan QR Code with your Phone for WiFi Code"
         size: fullscreen
         content:
-          type: markdown
-          content: >
-            <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-          style:
-            .: |
-              align: center;
-              justify-content: center;
-              width: 100px!important;
-              padding-right: 0px;
-              margin: 0px;
-            hui-image: |
-              align: center;
+          type: vertical-stack
+          cards:
+            - type: custom:gap-card
+            - type: horizontal-stack
+              cards:
+                - type: custom:gap-card
+                - type: markdown
+                  content: >
+                    <img src="/local/WiFiLogin.png" alt="Guest Login"/>
+                - type: custom:gap-card
+            - type: custom:gap-card
   custom_fields:
     item1:
       card:
@@ -39,18 +38,17 @@ card_guest_wifi:
               title: "Scan QR Code with your Phone for WiFi Code"
               size: fullscreen
               content:
-                type: markdown
-                content: >
-                  <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-                style:
-                  .: |
-                    align: center;
-                    justify-content: center;
-                    width: 100px!important;
-                    padding-right: 0px;
-                    margin: 0px;
-                  hui-image: |
-                    align: center;
+                type: vertical-stack
+                cards:
+                  - type: custom:gap-card
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:gap-card
+                      - type: markdown
+                        content: >
+                          <img src="/local/WiFiLogin.png" alt="Guest Login"/>
+                      - type: custom:gap-card
+                  - type: custom:gap-card
         custom_fields:
           item1:
             card:
@@ -64,18 +62,17 @@ card_guest_wifi:
                     title: "Scan QR Code with your Phone for WiFi Code"
                     size: fullscreen
                     content:
-                      type: markdown
-                      content: >
-                        <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-                      style:
-                        .: |
-                          align: center;
-                          justify-content: center;
-                          width: 100px!important;
-                          padding-right: 0px;
-                          margin: 0px;
-                        hui-image: |
-                          align: center;
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/WiFiLogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
               icon: mdi:wifi
 
           item2:
@@ -90,17 +87,16 @@ card_guest_wifi:
                     title: "Scan QR Code with your Phone for WiFi Code"
                     size: fullscreen
                     content:
-                      type: markdown
-                      content: >
-                        <img src="/local/WiFiLogin.png" alt="WiFi Login"/>
-                      style:
-                        .: |
-                          align: center;
-                          justify-content: center;
-                          width: 100px!important;
-                          padding-right: 0px;
-                          margin: 0px;
-                        hui-image: |
-                          align: center;
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/WiFiLogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
               label: Click for WiFi Login
               name: WiFi Access
