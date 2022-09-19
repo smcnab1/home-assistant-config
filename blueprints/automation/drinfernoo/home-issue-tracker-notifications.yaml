@@ -20,14 +20,25 @@ variables:
   time: '{{ trigger.payload_json[''time''] }}'
   user: '{{ trigger.payload_json[''user''] }}'
 trigger:
-- platform: mqtt
-  topic: issue_tracker/#
+  - platform: mqtt
+    topic: issue_tracker/#
+  - platform: template
+    value_template: >-
+      {{now() > state_attr('automation.ha_system_issue_notify','last_triggered')
+      + timedelta(seconds=43200)}}
 action:
-- service: notify.{{ notify_group }}
-  data:
-    title: '{{ description }}'
-    message: 'Issue #{{ number }} {{ status.replace(''ed'', '''') + ''ed'' }} on {{
-      float(time | as_timestamp) | timestamp_custom(''%m/%d/%y at %-0I:%M %p'') }}
-      by {{ user }}.'
+  - service: notify.{{ notify_group }}
     data:
-      group: issue_{{ number }}
+      title: "{{ description }}"
+      message: >-
+        Issue #{{ number }} {{ status.replace('ed', '') + 'ed' }} on {{
+        float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M %p')
+        }} by {{ user }}.
+      data:
+        group: issue_{{ number }}
+condition:
+  - condition: template
+    value_template: >-
+      {{ (now()|as_timestamp -
+      state_attr('automation.ha_system_issue_notify','last_triggered')|as_timestamp)
+      > 43200 }}

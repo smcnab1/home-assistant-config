@@ -62,9 +62,9 @@ cards:
         name: "Lights"
         color: "yellow"
       entity_2:
-        nav: "media"
-        icon: "mdi:speaker"
-        name: "Media"
+        nav: "issues"
+        icon: "mdi:ticket-confirmation"
+        name: "Issues"
         color: "purple"
       entity_3:
         nav: "security"

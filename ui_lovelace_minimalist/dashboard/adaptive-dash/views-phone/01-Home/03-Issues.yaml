@@ -1,0 +1,172 @@
+#       _                         _                                      
+#  _ __| |_  ___ _ _  ___   ___  (_)_______  _ ___   _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | (_-<_-< || / -_) | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_/__/__/\_,_\___| | .__/\__,_\__, \___|
+# |_|                                               |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+        "nav nav nav nav nav nav"
+        "topbar topbar topbar topbar topbar topbar"
+        "instr instr instr instr instr instr"
+        "issue issue issue issue issue issue"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "instr instr"
+        "issue issue"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ##################
+        ### STATUS BAR ###
+        ##################
+  - view_layout: ### NAV BAR ###
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/lights'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/security'
+
+  - view_layout:
+      grid-area: "instr"
+    type: custom:stack-in-card
+    mode: vertical
+    cards:
+      - type: markdown  ### INTRO INSTRUCTIONS ###
+        style:
+          .: |
+            ha-card {
+                background-color: rgba(193, 66, 66, 0.3) !important;
+                box-shadow: none;
+                padding: 1px;
+              }
+          ha-markdown:
+            $: |
+              ha-markdown-element:first-of-type h3 {
+                background-color: rgba(0,0,0,0);
+                font-weight: normal;
+                color: var(--primary-text-color);
+                font-size: 12px;
+                line-height: 12px;
+              }
+        content: |
+            #### You can submit an issue about anything Home Assistant related here.
+            #### I get a notification as soon as one is posted and will sort it out, when it says closed next to it, it is an issue that has already been solved.
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_page"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Issue Submission
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+
+        ##################
+        ### ISSUE CARD ###
+        ##################
+  - view_layout: ### ISSUE CARD ###
+      grid-area: "issue"
+    type: entities
+    title: Issue Tracker
+    entities:
+      - entity: input_text.issue_description
+        name: Description
+      - type: custom:config-template-card
+        entities:
+          - counter.issue_number
+          - input_text.issue_description
+        row:
+          type: button
+          entity: script.open_issue
+          name: ' '
+          icon: ' '
+          action_name: Submit
+          tap_action:
+            action: call-service
+            service: script.open_issue
+            service_data:
+              user: ${ user.name }
+              issue_number: ${ states['counter.issue_number'].state }
+              issue_description: ${ states['input_text.issue_description'].state }
+      - type: divider
+      - type: custom:auto-entities
+        card:
+          type: entities
+          show_header_toggle: false
+        show_empty: false
+        entities:
+          - input_select.filter_issues
+        filter:
+          template: >
+            {% if is_state('input_select.filter_issues', 'Open') %}
+              {% set issue_state = ['on'] %}
+            {% elif is_state('input_select.filter_issues', 'Closed') %}
+              {% set issue_state = ['off'] %}
+            {% elif is_state('input_select.filter_issues', 'All') %}
+              {% set issue_state = ['on', 'off'] %}
+            {% endif %} {% set issues = states.binary_sensor |
+            selectattr('entity_id', 'match', 'binary_sensor.issue_*') |
+            selectattr('state', 'in', issue_state) | map(attribute='entity_id') |
+            list %} {% set issues = issues | map('regex_replace', '^.+_(\\d+)$',
+            '\\1') | map('int') | sort | map('string') | map('regex_replace',
+            '^(\\d+)$', 'binary_sensor.issue_\\1') | list %} [ {% for issue in
+            (issues | reverse) %}
+              {
+                "type": "custom:config-template-card",
+                "entities": "[{{ issue }}]",
+                "row": {
+                  "type": "custom:template-entity-row",
+                  "entity": "{{ issue }}",
+                  "name": "{{ state_attr(issue, 'description') }}",
+                  "active": {{ is_state(issue, 'on') }},
+                  "icon": "{{ "mdi:alert-circle-outline" if is_state(issue, 'on') else "mdi:close-circle-outline" }}",
+                  "state": "{{ state_attr(issue, 'user') }}",
+                  "secondary": "{{ '#' + state_attr(issue, 'number') + ' - ' + (state_attr(issue, 'status').replace('ed', '') | title) + 'ed on' }} {{
+                                    float(state_attr(issue, 'time') | as_timestamp) |
+                                    timestamp_custom('%m/%d/%y at %-0I:%M %p') }}",
+                  "hold_action": {% if is_state(issue, 'on') %}
+                  {
+                    "action": "call-service",
+                    "service": "script.close_issue",
+                    "service_data": {
+                      "issue_number": {{ state_attr(issue, "number") }},
+                      "user": "${ user.name }",
+                    },
+                    "confirmation": {
+                      "text": "Close issue #{{ state_attr(issue, 'number') }}?",
+                    }
+                  }
+                {% else %}
+                  {
+                    "action": "call-service",
+                    "service": "script.open_issue",
+                    "service_data": {
+                      "issue_number": {{ state_attr(issue, "number") }},
+                      "issue_description": "{{ state_attr(issue, "description") }}",
+                      "user": "${ user.name }",
+                    },
+                    "confirmation": {
+                      "text": "Reopen issue #{{ state_attr(issue, 'number') }}?",
+                    }
+                  }
+                {% endif %}
+                }
+              },
+            {% endfor %} ]

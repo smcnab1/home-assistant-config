@@ -164,13 +164,13 @@ views:
     cards:
       - !include "views-phone/01-Home/02-Lights.yaml"
 
-        #############
-        ### MEDIA ###
-        #############
+        ##################
+        ### ISSUE CARD ###
+        ##################
   - type: "custom:grid-layout"
-    title: "Media"
-    icon: "mdi:speaker"
-    path: "media"
+    title: "Issues"
+    icon: "mdi:ticket-confirmation"
+    path: "issues"
     layout:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
@@ -181,7 +181,7 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/01-Home/03-Media.yaml"
+      - !include "views-phone/01-Home/03-Issues.yaml"
 
         ################
         ### SECURITY ###
