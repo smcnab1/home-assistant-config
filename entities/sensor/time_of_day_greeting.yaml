@@ -30,5 +30,6 @@ sensors:
 
   neat_time:
     value_template: >
-      {% set time = now().hour~now().strftime('%M') %}
-      {{ time + "hrs"}}
+      {% set hour = states('sensor.time').split(':')[0] | int %}
+      {% set minute = states('sensor.time').split(':')[1] | int %}
+      {{ '%0.2d'|format(hour) }}{{ '%0.2d'|format(minute) + "hrs" }}
