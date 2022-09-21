@@ -1,0 +1,191 @@
+---
+card_esh_welcome_guest:
+  variables:
+    ulm_weather: "[[[ return variables.ulm_weather]]]"
+    ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
+    ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
+    ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+  template:
+    - "ulm_language_variables"
+  show_icon: false
+  show_name: false
+  show_label: true
+  styles:
+    grid:
+      - grid-template-areas: >
+          [[[
+            if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+              return "\'item1\' \'item2\' \'item3\'";
+            } else {
+              return "\'item1\' \'item2\' \'item3\'";
+            }
+          ]]]
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content min-content"
+      - row-gap: "0px"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "10px"
+    custom_fields:
+      item3:
+        - display: >
+            [[[
+              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+                return "none";
+              } else {
+                return "block";
+              }
+            ]]]
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template: "card_esh_welcome_topbar"
+        variables:
+          ulm_weather: "[[[ return variables.ulm_weather]]]"
+          ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
+        styles:
+          card:
+            - border-radius: "none"
+            - box-shadow: "none"
+            - padding: "4px"
+            - margin-left: "relative"
+    item2:
+      card:
+        type: "custom:button-card"
+        show_icon: false
+        show_label: false
+        show_name: true
+        show_entity_picture: false
+        name: |
+          [[[ return `
+              <span style='width:100%;'>
+              Good ${states['sensor.time_of_day'].state}<br />${states['input_text.guest_name'].state} </span>`; ]]]
+
+        styles:
+          name:
+            - align-self: "start"
+            - justify-self: "start"
+            - font-weight: "bold"
+            - font-size: "24px"
+            - margin-left: "16px"
+          grid:
+            - grid-template-areas: "'i n' 'i l'"
+            - grid-template-columns: "min-content auto"
+            - grid-template-rows: "min-content min-content"
+            - text-align: "start"
+          card:
+            - box-shadow: "none"
+            - padding-bottom: "8px"
+    item3:
+      card:
+        type: custom:button-card
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              content:
+                type: "custom:button-card"
+                template: "popup_weather_forecast"
+                entity: weather.weather
+        styles:
+          card:
+            - background-color: "rgba(0,0,0,0)"
+            - font-size: 20px
+            - font-weight: 400
+            - padding: 12px
+            - box-shadow: "none"
+          name:
+            - justify-self: stretch
+        name: |
+          [[[ return `<div style='display: flex';>
+              <div>${states['sensor.neat_time'].state} | </div>
+              <span style='width:100%;'>
+              <marquee>${states['sensor.weather_forecast_text'].state}</marquee></span>`; ]]]
+
+          
+card_esh_welcome_title:
+  tap_action:
+    action: "none"
+  show_icon: false
+  show_label: true
+  show_name: true
+  styles:
+    card:
+      - background-color: "rgba(0,0,0,0)"
+      - box-shadow: "none"
+      - height: "auto"
+      - width: "auto"
+      - margin-top: "-10px"
+      - margin-left: "16px"
+      - margin-bottom: "-15px"
+    grid:
+      - grid-template-areas: "'n' 'l'"
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content min-content"
+    name:
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "20px"
+    label:
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "1rem"
+      - opacity: "0.4"
+
+card_esh_welcome_topbar:
+  show_icon: false
+  show_name: true
+  show_label: false
+  styles:
+    grid:
+      - grid-template-areas: "'item1 item2 item3'"
+      - grid-template-columns: "1fr 7fr 1fr"
+      - grid-template-rows: "min-content"
+      - justify-items: "center"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template: chip_home
+        variables:
+          ulm_chip_back_path: "[[[ return variables.ulm_chip_back_path; ]]]"
+        styles:
+          grid:
+            - grid-template-areas: "'i'"
+          card:
+            - box-shadow: "var(--box-shadow)"
+        tap_action:
+          action: navigate
+          navigation_path: '/lovelace-minimalist-3/home'
+
+    item2:
+      card:
+        type: "horizontal-stack"
+        cards:
+          - type: 'custom:button-card'
+            template: chip_icon_state
+            variables:
+              ulm_chip_icon_state_icon: '🌡️'
+              ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity; ]]]"
+            styles:
+              card:
+                - width: "100px"
+                - box-shadow: "var(--box-shadow)"
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  size: fullscreen
+                  content:
+                    type: "custom:button-card"
+                    template: "popup_weather_forecast"
+                    entity: weather.weather

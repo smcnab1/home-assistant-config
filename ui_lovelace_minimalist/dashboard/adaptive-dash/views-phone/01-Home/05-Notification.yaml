@@ -1,0 +1,197 @@
+#       _                                  _   _  __ _         _   _                                
+#  _ __| |_  ___ _ _  ___   ___   _ _  ___| |_(_)/ _(_)__ __ _| |_(_)___ _ _    _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | ' \/ _ \  _| |  _| / _/ _` |  _| / _ \ ' \  | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_||_\___/\__|_|_| |_\__\__,_|\__|_\___/_||_| | .__/\__,_\__, \___|
+# |_|                                                                          |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+        "nav nav nav nav nav nav"
+        "topbar topbar topbar topbar topbar topbar"
+        "notify notify notify notify notify notify"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "notify notify"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ##################
+        ### STATUS BAR ###
+        ##################
+  - view_layout: ### NAV BAR ###
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/security'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/watch'
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_page"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Notification Manager
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+
+        ###################
+        ### NOTIFY CARD ###
+        ###################
+  - view_layout:
+      grid-area: 'notify'
+    type: "vertical-stack"
+    cards:
+      - type: "horizontal-stack"
+        cards:
+          - type: "custom:button-card"
+            entity_picture: "/local/avatar_sam.png"
+            show_entity_picture: true
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: "Choose a Device"
+                  content:
+                    type: "vertical-stack"
+                    cards:
+                      - type: 'custom:notify-card'
+                        target: mobile_app_iphone
+                        label: Notify Sam's Phone
+                        card_title: Send Notification to Sam's Phone
+                        notification_title: 'New Notification'
+                      - type: 'custom:notify-card'
+                        target: mobile_app_ipad
+                        label: Notify Sam's PC
+                        card_title: Send Notification to Sam's PC
+                        notification_title: 'New Notification'
+                      - type: 'custom:notify-card'
+                        target: mobile_app_sams_macbook_air
+                        label: Notify Sam's Laptop
+                        card_title: Send Notification to Sam's Laptop
+                        notification_title: 'New Notification'
+          - type: "custom:button-card"
+            entity_picture: "/local/avatar_leah.png"
+            show_entity_picture: true
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: "Choose a Device"
+                  content:
+                    type: "vertical-stack"
+                    cards:
+                      - type: 'custom:notify-card'
+                        target: mobile_app_leah_iphone
+                        label: Notify Leah's Phone
+                        card_title: Send Notification to Leah's Phone
+                        notification_title: 'New Notification'
+          - type: "custom:button-card"
+            entity_picture: "/local/google-assistant-logo.png"
+            show_entity_picture: true
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: "Choose a Device"
+                  content:
+                    type: "vertical-stack"
+                    cards:
+                      - type: "custom:button-card"
+                        template: "card_title"
+                        name: "Living Room"
+                      - type: entities
+                        entities: 
+                          - input_text.tts_message_living_room
+                      - type: custom:slider-button-card
+                        entity: media_player.living_room_google_home
+                        slider:
+                          direction: left-right
+                          background: gradient
+                          use_state_color: true
+                        compact: true
+                        icon:
+                          show: false
+                        action_button:
+                          icon: mdi:send
+                          tap_action:
+                            action: call-service
+                            service: automation.trigger
+                            service_data:
+                              entity_id: automation.tts_input_push_living_room
+                        name: Living Room Speaker
+                      - type: "custom:button-card"
+                        template: "card_title"
+                        name: "Bedroom"
+                      - type: entities
+                        entities: 
+                          - input_text.tts_message_bedroom
+                      - type: custom:slider-button-card
+                        entity: media_player.bedroom_google_home
+                        slider:
+                          direction: left-right
+                          background: gradient
+                          use_state_color: true
+                        compact: true
+                        icon:
+                          show: false
+                        action_button:
+                          icon: mdi:send
+                          tap_action:
+                            action: call-service
+                            service: automation.trigger
+                            service_data:
+                              entity_id: automation.tts_input_push_bedroom
+                      - type: "custom:button-card"
+                        template: "card_title"
+                        name: "Hall"
+                      - type: entities
+                        entities: 
+                          - input_text.tts_message_hall
+                      - type: custom:slider-button-card
+                        entity: media_player.dashboard_tablet
+                        slider:
+                          direction: left-right
+                          background: gradient
+                          use_state_color: true
+                        compact: true
+                        icon:
+                          show: false
+                        action_button:
+                          icon: mdi:send
+                          tap_action:
+                            action: call-service
+                            service: automation.trigger
+                            service_data:
+                              entity_id: automation.tts_input_push_hall
+                        name: Hall Tablet
+      - type: "horizontal-stack"
+        cards:
+          - type: 'custom:notify-card'
+            target: notify.notify
+            label: Notify Everyone
+            card_title: Send Notification to All
+            notification_title: 'New Notification'
+          - type: 'custom:notify-card'
+            target: notify.bedroom_tv_notify
+            label: Notify Bedroom TV
+            card_title: Send Notification to Bedroom TV
+            notification_title: 'New Notification'

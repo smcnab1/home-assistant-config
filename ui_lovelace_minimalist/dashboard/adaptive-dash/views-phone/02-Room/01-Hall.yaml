@@ -1,0 +1,218 @@
+#       _                         _         _ _                       
+#  _ __| |_  ___ _ _  ___   ___  | |_  __ _| | |  _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | ' \/ _` | | | | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_||_\__,_|_|_| | .__/\__,_\__, \___|
+# |_|                                            |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "topbar topbar topbar topbar topbar topbar"
+    "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+    "main main main leds leds leds"
+    "lamp lamp lamp lamp lamp lamp"
+    "medtitle medtitle medtitle medtitle medtitle medtitle"
+    "tablet tablet tablet tablet tablet tablet"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "door door door motion motion motion"
+    "camera camera camera camera camera camera"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "lxtitle lxtitle"
+        "main leds"
+        "lamp lamp"
+        "medtitle medtitle"
+        "tablet tablet"
+        "sectitle sectitle"
+        "door motion"
+        "camera camera"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ###############
+        ### NAV BAR ###
+        ###############
+  - view_layout: ### NAV BAR ###
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/home'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/living-room'
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Hall
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: "sensor.hall_lights_on"
+      ulm_chip_double_state_entity2: "sensor.hall_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_hall_day"
+        icon: "mdi:weather-sunny" 
+        name: "Day" 
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_hall_night"
+        icon: "mdi:weather-night" 
+        name: "Night" 
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_hall_off"
+        icon: "mdi:lightbulb-off" 
+        name: "Off" 
+        color: "red"
+      entity_4:
+        entity_id: "camera.hall_frigate"
+        icon: "mdi:cctv"
+        name: "Camera"
+        color: "purple"
+
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING TITLE ###
+      grid-area: "lxtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Lighting"
+
+  - view_layout: ### MAIN LIGHTS ###
+      grid-area: "main"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.hall_main_lights
+    variables:
+      ulm_card_light_name: Main Lights
+      ulm_card_light_icon: mdi:ceiling-light
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LEDS ###
+      grid-area: "leds"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.hall_leds
+    variables:
+      ulm_card_light_name: LEDs
+      ulm_card_light_icon: mdi:led-strip
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LAMP ###
+      grid-area: "lamp"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.hall_lamp
+    variables:
+      ulm_card_light_name: Lamp
+      ulm_card_light_icon: mdi:lamp
+      ulm_card_light_enable_color: true
+      ulm_card_light_force_background_color: true
+
+        #############
+        ### MEDIA ###
+        #############
+  - view_layout: ### MEDIA TITLE ###
+      grid-area: "medtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Media"
+
+  - view_layout: ### TABLET ###
+      grid-area: "tablet"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.dashboard_tablet
+    variables:
+      ulm_card_media_player_name: Tablet
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_icon: mdi:tablet-dashboard
+
+        ################
+        ### SECURITY ###
+        ################
+  - view_layout: ### SECURITY TITLE ###
+      grid-area: "sectitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Security"
+
+  - view_layout: ### DOOR SENSOR ###
+      grid-area: "door"
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - battery_info
+    entity: binary_sensor.front_door_sensor
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.front_door_sensor_battery
+      ulm_card_binary_sensor_alert_name: Door
+
+  - view_layout: ### MOTION SENSOR ###
+      grid-area: "motion"
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - battery_info
+    entity: binary_sensor.hall_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.hall_motion_battery
+      ulm_card_binary_sensor_alert_name: Motion
+
+  - view_layout: ### CAMERA ###
+      grid-area: "camera"
+    type: "custom:button-card"
+    template: card_vertical_button
+    entity: input_boolean.test_toggle
+    name: Hall Camera
+    icon: mdi:cctv
+    tap_action:
+      action: fire-dom-event
+      browser_mod:
+        service: browser_mod.popup
+        data:
+          title: "Hall Camera"
+          content:
+            type: custom:frigate-card
+            cameras:
+              - camera_entity: camera.hall_frigate
+                camera_name: Hall Camera
+            view:
+              default: live
+            menu:
+              mode: overlay-bottom
+              buttons:
+                image: true
+            live:
+              lazy_load: false
+              auto_unmute: true
+              preload: true
+              controls:
+                thumbnails:
+                  media: clips
+                  mode: below

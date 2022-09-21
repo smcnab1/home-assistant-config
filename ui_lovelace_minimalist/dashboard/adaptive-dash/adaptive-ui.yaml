@@ -1,117 +1,153 @@
----
-button_card_templates: 
-  !include_dir_merge_named "../../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
-decluttering_templates:
-  !include "/config/ui_lovelace_minimalist/dashboard/adaptive-dash/decluttering_templates/decluttering_templates.yaml"
+#  _____ _   ___ _    ___ _____   ___   _   ___ _  _ ___  ___   _   ___ ___  
+# |_   _/_\ | _ ) |  | __|_   _| |   \ /_\ / __| || | _ )/ _ \ /_\ | _ \   \ 
+#   | |/ _ \| _ \ |__| _|  | |   | |) / _ \\__ \ __ | _ \ (_) / _ \|   / |) |
+#   |_/_/ \_\___/____|___| |_|   |___/_/ \_\___/_||_|___/\___/_/ \_\_|_\___/ 
+#                                                                            
+#--FROM https://github.com/smcnab1/op-question-mark
+
+button_card_templates: !include_dir_merge_named "../../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
+decluttering_templates: !include "/config/ui_lovelace_minimalist/dashboard/adaptive-dash/decluttering_templates/decluttering_templates.yaml"
 
 title: "Minimalist Tablet"
-theme: "minimalist-navbar"
+theme: "minimalist-mobile"
 background: "var(--background-image)"
 views:
+        ############
+        ### HOME ###
+        ############
   - type: "custom:grid-layout"
-    title: "home"
+    title: "Home"
     icon: "mdi:home"
     path: "home"
     layout:
-      grid-template-columns: "1fr 1fr"
-      grid-template-rows: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
+      grid-template-rows: "min-content"
       grid-template-areas: |
-        "main right"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/01-Home-Right.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/01-Home/01-Home-Room.yaml"
+      - !include "views-tablet/01-Home/01-Home-Detail.yaml"
 
+        ############
+        ### HALL ###
+        ############
   - type: "custom:grid-layout"
     title: "Hall"
     icon: "mdi:door-open"
     path: "hall"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/02-Hall.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/02-Hall/02-Hall.yaml"
+      - !include "views-tablet/02-Rooms/02-Hall/02-Hall-Detail.yaml"
 
+        ###################
+        ### LIVING ROOM ###
+        ###################
   - type: "custom:grid-layout"
     title: "Living Room"
     icon: "mdi:sofa"
     path: "living-room"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/03-Living-Room.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/03-Living-Room/03-Living-Room.yaml"
+      - !include "views-tablet/02-Rooms/03-Living-Room/03-Living-Room-Detail.yaml"
 
+        ###############
+        ### KITCHEN ###
+        ###############
   - type: "custom:grid-layout"
     title: "Kitchen"
     icon: "mdi:chef-hat"
     path: "kitchen"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/04-Kitchen.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/04-Kitchen/04-Kitchen.yaml"
+      - !include "views-tablet/02-Rooms/04-Kitchen/04-Kitchen-Detail.yaml"
 
+        ###############
+        ### BEDROOM ###
+        ###############
   - type: "custom:grid-layout"
     title: "Bedroom"
     icon: "mdi:bed-double"
     path: "bedroom"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/05-Bedroom.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/05-Bedroom/05-Bedroom.yaml"
+      - !include "views-tablet/02-Rooms/05-Bedroom/05-Bedroom-Detail.yaml"
 
+        ################
+        ### BATHROOM ###
+        ################
   - type: "custom:grid-layout"
     title: "Bathroom"
     icon: "mdi:bathtub"
     path: "bathroom"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/06-Bathroom.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/06-Bathroom/06-Bathroom.yaml"
+      - !include "views-tablet/02-Rooms/06-Bathroom/06-Bathroom-Detail.yaml"
 
+        ##############
+        ### OFFICE ###
+        ##############
   - type: "custom:grid-layout"
     title: "Office"
     icon: "mdi:desk"
     path: "office"
     layout:
-      grid-template-columns: "1fr 1fr"
+      grid-template-columns: "1fr 1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "nav nav nav"
+        "main popup1 popup2"
     cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/07-Office.yaml"
+      - !include "views-tablet/01-Home/01-Nav.yaml"
+      - !include "views-tablet/01-Home/01-Home.yaml"
+      - !include "views-tablet/02-Rooms/07-Office/07-Office.yaml"
+      - !include "views-tablet/02-Rooms/07-Office/07-Office-Detail.yaml"
 
-  - type: "custom:grid-layout"
-    title: "System"
-    icon: "mdi:network"
-    path: "system"
-    layout:
-      grid-template-columns: "1fr 1fr"
-      grid-template-rows: "min-content"
-      grid-template-areas: |
-        "main popup"
-    cards:
-      - !include "views-tablet/01-Home.yaml"
-      - !include "views-tablet/08-System.yaml"
-
+        #################
+        ### RESOURCES ###
+        #################
 resources:
   - url: /browser_mod.js
     type: module
@@ -136,4 +172,18 @@ resources:
   - url: /local/custom-lovelace/swipe-card/swipe-card.js
     type: module
   - url: /hacsfiles/lovelace-layout-card/layout-card.js
+    type: module
+  - url: /local/community/spotify-card/spotify-card.js
+    type: module
+  - url: /local/stack-in-card.js
+    type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
+    type: module
+  - url: /local/state-switch.js
     type: module

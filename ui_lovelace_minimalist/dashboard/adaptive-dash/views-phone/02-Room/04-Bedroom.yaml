@@ -1,0 +1,267 @@
+#       _                         _            _                                          
+#  _ __| |_  ___ _ _  ___   ___  | |__  ___ __| |_ _ ___  ___ _ __    _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_.__/\___\__,_|_| \___/\___/_|_|_| | .__/\__,_\__, \___|
+# |_|                                                                |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "topbar topbar topbar topbar topbar topbar"
+    "lights lights lights lights lights lights"
+    "medtitle medtitle medtitle medtitle medtitle medtitle"
+    "tv tv tv google google google"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "motion motion motion motion motion motion"
+    "sleepingl sleepingl sleepingl sleepings sleepings sleepings"
+    "camera camera camera camera camera camera"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "lights lights"
+        "medtitle medtitle"
+        "tv google"
+        "sectitle sectitle"
+        "motion motion"
+        "sleepingl sleepings"
+        "camera camera"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ##################
+        ### STATUS BAR ###
+        ##################
+  - view_layout: ### NAV BAR ###
+      grid-area: "nav"
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: "/lovelace-minimalist-2/kitchen"
+      custom_top_bar_navigate_path_next: "/lovelace-minimalist-2/bathroom"
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Bedroom
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.bedroom_temperature"
+      ulm_chip_double_state_entity1: "sensor.bedroom_lights_on"
+      ulm_chip_double_state_entity2: "sensor.bedroom_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_bedroom_day"
+        icon: "mdi:weather-sunny"
+        name: "Day"
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_bedroom_night"
+        icon: "mdi:weather-night"
+        name: "Night"
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_bedroom_movie"
+        icon: "mdi:movie"
+        name: "Movie"
+        color: "green"
+      entity_4:
+        entity_id: "media_player.bedroom_tv"
+        icon: "mdi:television"
+        name: "TV"
+        color: "pink"
+      entity_5:
+        entity_id: "camera.bedroom_camera_frigate"
+        icon: "mdi:cctv"
+        name: "Camera"
+        color: "purple"
+
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING SWIPE PAGE 1 ###
+      grid-area: "lights"
+    type: custom:swipe-card
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: "custom:button-card"
+            template: "custom_card_title"
+            name: "Lighting"
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_light
+                entity: light.bedroom_main_light
+                variables:
+                  ulm_card_light_name: Main Lights
+                  ulm_card_light_icon: mdi:ceiling-light
+                  ulm_card_light_enable_color: true
+                  ulm_card_light_enable_popup: true
+                  ulm_card_light_force_background_color: true
+              - type: "custom:button-card"
+                template: card_light
+                entity: light.bedroom_leds
+                variables:
+                  ulm_card_light_name: LEDs
+                  ulm_card_light_icon: mdi:led-strip
+                  ulm_card_light_enable_color: true
+                  ulm_card_light_enable_popup: true
+                  ulm_card_light_force_background_color: true
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_light
+                entity: light.bedside_leah
+                variables:
+                  ulm_card_light_name: Bedside Leah
+                  ulm_card_light_icon: mdi:lamp
+                  ulm_card_light_enable_color: true
+                  ulm_card_light_enable_popup: true
+                  ulm_card_light_force_background_color: true
+              - type: "custom:button-card"
+                template: card_light
+                entity: light.bedside_sam
+                variables:
+                  ulm_card_light_name: Bedside Sam
+                  ulm_card_light_icon: mdi:lamp
+                  ulm_card_light_enable_color: true
+                  ulm_card_light_enable_popup: true
+                  ulm_card_light_force_background_color: true
+      - type: vertical-stack ### LIGHTING SWIPE PAGE 2 ###
+        cards:
+          - type: "custom:button-card"
+            template: "custom_card_title"
+            name: "Lighting"
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                template: card_light
+                entity: light.bedroom_fairy_lights
+                variables:
+                  ulm_card_light_name: Fairy Lights
+                  ulm_card_light_icon: mdi:string-lights
+                  ulm_card_light_enable_color: true
+                  ulm_card_light_enable_popup: true
+                  ulm_card_light_force_background_color: true
+
+        #############
+        ### MEDIA ###
+        #############
+  - view_layout: ### MEDIA TITLE ###
+      grid-area: "medtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Media"
+
+  - view_layout: ### TV ###
+      grid-area: "tv"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.bedroom_tv
+    variables:
+      ulm_card_media_player_name: TV
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon: mdi:television
+
+  - view_layout: ### GOOGLE HOME ###
+      grid-area: "google"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.bedroom_google_home
+    variables:
+      ulm_card_media_player_name: Google Home
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon: mdi:google-assistant
+
+        ################
+        ### SECURITY ###
+        ################
+  - view_layout: ### SECURITY TITLE ###
+      grid-area: "sectitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Security"
+
+  - view_layout: ### MOTION SENSOR ###
+      grid-area: "motion"
+    type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_binary_sensor_alert
+          - card_battery_info
+        entity: binary_sensor.bedroom_motion
+        variables:
+          ulm_show_last_changed: true
+          ulm_battery_entity: sensor.bedroom_motion_battery
+          ulm_card_binary_sensor_alert_name: Motion
+
+  - view_layout: ### SLEEP SENSOR ###
+      grid-area: "sleepingl"
+    type: "custom:button-card"
+    template: card_binary_sensor_alert
+    name: Leah Sleeping
+    variables:
+      ulm_card_binary_sensor_alert: true
+      ulm_show_last_changed: true
+    entity: binary_sensor.bed_sensor_leah
+  - view_layout:
+      grid-area: "sleepings"
+    type: "custom:button-card"
+    template: card_binary_sensor_alert
+    name: Sam Sleeping
+    variables:
+      ulm_card_binary_sensor_alert: true
+      ulm_show_last_changed: true
+    entity: binary_sensor.bed_sensor_sam
+
+  - view_layout: ### CAMERA ###
+      grid-area: "camera"
+    type: "custom:button-card"
+    template: card_vertical_button
+    entity: input_boolean.test_toggle
+    name: Camera
+    icon: mdi:cctv
+    tap_action:
+      action: fire-dom-event
+      browser_mod:
+        service: browser_mod.popup
+        data:
+          title: "Bedroom Camera"
+          content:
+            type: custom:frigate-card
+            cameras:
+              - camera_entity: camera.bedroom_camera_frigate
+                camera_name: Bedroom
+            view:
+              default: live
+            menu:
+              mode: overlay-bottom
+              buttons:
+                image: true
+            live:
+              lazy_load: false
+              auto_unmute: true
+              preload: true
+              controls:
+                thumbnails:
+                  media: clips
+                  mode: below

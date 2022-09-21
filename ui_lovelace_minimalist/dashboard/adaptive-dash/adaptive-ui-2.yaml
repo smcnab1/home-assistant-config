@@ -1,4 +1,10 @@
----
+#  ___ _  _  ___  _  _ ___   ___   _   ___ _  _ ___  ___   _   ___ ___  
+# | _ \ || |/ _ \| \| | __| |   \ /_\ / __| || | _ )/ _ \ /_\ | _ \   \ 
+# |  _/ __ | (_) | .` | _|  | |) / _ \\__ \ __ | _ \ (_) / _ \|   / |) |
+# |_| |_||_|\___/|_|\_|___| |___/_/ \_\___/_||_|___/\___/_/ \_\_|_\___/ 
+#                                                                       
+#--FROM https://github.com/smcnab1/op-question-mark
+
 button_card_templates: !include_dir_merge_named "../../../custom_components/ui_lovelace_minimalist/__ui_minimalist__/ulm_templates/"
 decluttering_templates: !include "/config/ui_lovelace_minimalist/dashboard/adaptive-dash/decluttering_templates/decluttering_templates.yaml"
 
@@ -6,6 +12,9 @@ title: "Minimalist Phone"
 theme: "minimalist-mobile"
 background: "var(--background-image)"
 views:
+        ############
+        ### HOME ###
+        ############
   - type: "custom:grid-layout"
     title: "home"
     icon: "mdi:home"
@@ -14,14 +23,17 @@ views:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
       grid-template-areas: |
-        "main popup"
+        "main"
       mediaquery:
         "(max-width: 1100px), (orientation: portrait)":
           grid-template-columns: "100%"
           grid-template-areas: "main"
     cards:
-      - !include "views-phone/01-Home.yaml"
+      - !include "views-phone/01-Home/01-Home.yaml"
 
+        ############
+        ### HALL ###
+        ############
   - type: "custom:grid-layout"
     title: "Hall"
     icon: "mdi:door-open"
@@ -36,8 +48,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/02-Hall.yaml"
+      - !include "views-phone/02-Room/01-Hall.yaml"
 
+        ###################
+        ### LIVING ROOM ###
+        ###################
   - type: "custom:grid-layout"
     title: "Living Room"
     icon: "mdi:sofa"
@@ -52,8 +67,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone//03-Living-Room.yaml"
+      - !include "views-phone/02-Room/02-Living-Room.yaml"
 
+        ###############
+        ### KITCHEN ###
+        ###############
   - type: "custom:grid-layout"
     title: "Kitchen"
     icon: "mdi:chef-hat"
@@ -68,8 +86,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/04-Kitchen.yaml"
+      - !include "views-phone/02-Room/03-Kitchen.yaml"
 
+        ###############
+        ### BEDROOM ###
+        ###############
   - type: "custom:grid-layout"
     title: "Bedroom"
     icon: "mdi:bed-double"
@@ -84,8 +105,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/05-Bedroom.yaml"
+      - !include "views-phone/02-Room/04-Bedroom.yaml"
 
+        ################
+        ### BATHROOM ###
+        ################
   - type: "custom:grid-layout"
     title: "Bathroom"
     icon: "mdi:bathtub"
@@ -100,8 +124,11 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/06-Bathroom.yaml"
+      - !include "views-phone/02-Room/05-Bathroom.yaml"
 
+        ##############
+        ### OFFICE ###
+        ##############
   - type: "custom:grid-layout"
     title: "Office"
     icon: "mdi:desk"
@@ -116,12 +143,15 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/07-Office.yaml"
+      - !include "views-phone/02-Room/06-Office.yaml"
 
+        ##############
+        ### LIGHTS ###
+        ##############
   - type: "custom:grid-layout"
-    title: "System"
-    icon: "mdi:network"
-    path: "system"
+    title: "Lights"
+    icon: "mdi:lightbulb-group"
+    path: "lights"
     layout:
       grid-template-columns: "1fr 1fr"
       grid-template-rows: "min-content"
@@ -132,8 +162,87 @@ views:
           grid-template-columns: "100%"
           grid-template-areas: "popup"
     cards:
-      - !include "views-phone/08-System.yaml"
+      - !include "views-phone/01-Home/02-Lights.yaml"
 
+        ##################
+        ### ISSUE CARD ###
+        ##################
+  - type: "custom:grid-layout"
+    title: "Issues"
+    icon: "mdi:ticket-confirmation"
+    path: "issues"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/01-Home/03-Issues.yaml"
+
+        ################
+        ### SECURITY ###
+        ################
+  - type: "custom:grid-layout"
+    title: "Security"
+    icon: "mdi:shield"
+    path: "security"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/01-Home/04-Security.yaml"
+
+        ##############
+        ### NOTIFY ###
+        ##############
+  - type: "custom:grid-layout"
+    title: "Notification"
+    icon: "mdi:google-assistant"
+    path: "notification"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/01-Home/05-Notification.yaml"
+
+        ##################
+        ### WATCH LIST ###
+        ##################
+  - type: "custom:grid-layout"
+    title: "Watch List"
+    icon: "mdi:movie"
+    path: "watch"
+    layout:
+      grid-template-columns: "1fr 1fr"
+      grid-template-rows: "min-content"
+      grid-template-areas: |
+        "popup"
+      mediaquery:
+        "(max-width: 800px), (orientation: portrait)":
+          grid-template-columns: "100%"
+          grid-template-areas: "popup"
+    cards:
+      - !include "views-phone/01-Home/06-Watch.yaml"
+
+        #################
+        ### RESOURCES ###
+        #################
 resources:
   - url: /browser_mod.js
     type: module
@@ -158,4 +267,16 @@ resources:
   - url: /local/custom-lovelace/swipe-card/swipe-card.js
     type: module
   - url: /hacsfiles/lovelace-layout-card/layout-card.js
+    type: module
+  - url: /local/community/spotify-card/spotify-card.js
+    type: module
+  - url: /local/stack-in-card.js
+    type: module
+  - url: /local/template-entity-row.js
+    type: module
+  - url: /local/config-template-card.js
+    type: module
+  - url: /www/community/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /local/simple-weather-card-bundle.js?v=0.8.3
     type: module

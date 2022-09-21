@@ -1,0 +1,121 @@
+#       _                         _          _   _                                             
+#  _ __| |_  ___ _ _  ___   ___  | |__  __ _| |_| |_  _ _ ___  ___ _ __    _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_| | .__/\__,_\__, \___|
+# |_|                                                                     |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "topbar topbar topbar topbar topbar topbar"
+    "lighttitle lighttitle lighttitle lighttitle lighttitle lighttitle"
+    "main main main main main main"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "motion motion motion motion motion motion"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "lighttitle lighttitle"
+        "main main"
+        "sectitle sectitle"
+        "motion motion"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ##################
+        ### STATUS BAR ###
+        ##################
+  - view_layout: ### NAV BAR ###
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/bedroom'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/office'
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_welcome"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Bathroom
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.bathroom_temperature"
+      ulm_chip_double_state_entity1: "sensor.bathroom_lights_on"
+      ulm_chip_double_state_entity2: "sensor.bathroom_switches_on"
+      entity_1:
+        entity_id: "automation.lighting_bathroom_morning"
+        icon: "mdi:weather-sunset-up" 
+        name: "Morning" 
+        color: "blue"
+      entity_2:
+        entity_id: "automation.lighting_bathroom_normal"
+        icon: "mdi:weather-sunny" 
+        name: "Day" 
+        color: "yellow"
+      entity_3:
+        entity_id: "automation.lighting_bathroom_bath"
+        icon: "mdi:bathtub" 
+        name: "Bath" 
+        color: "purple"
+      entity_4:
+        entity_id: "automation.lighting_bathroom_off"
+        icon: "mdi:lightbulb-off"
+        name: "Off"
+        color: "red"
+
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING TITLE ###
+      grid-area: "lighttitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Lighting"
+
+  - view_layout: ### MAIN LIGHTS ###
+      grid-area: "main"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.bathroom_main_lights
+    variables:
+      ulm_card_light_name: Main Lights
+      ulm_card_light_icon: mdi:ceiling-light
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+        ################
+        ### SECURITY ###
+        ################
+  - view_layout: ### SECURITY TITLE ###
+      grid-area: "sectitle"
+    type: "custom:button-card"
+    template: "card_title"
+    name: "Security"
+
+  - view_layout: ### MOTION SENSOR ###
+      grid-area: "motion"
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.bathroom_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.bathroom_motion_battery
+      ulm_card_binary_sensor_alert_name: Motion

@@ -1,0 +1,44 @@
+#  _    ___   ___ ___  ___   ___  _  __
+# | |  / _ \ / __| _ )/ _ \ / _ \| |/ /
+# | |_| (_) | (_ | _ \ (_) | (_) | ' < 
+# |____\___/ \___|___/\___/ \___/|_|\_\
+#                                      
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Manages entities that are shown or redacted from HA Logbook
+
+logbook:
+  exclude:
+    domains:
+      - automation
+      - binary_sensor
+      - button
+      - calendar
+      - camera
+      - device_tracker
+      - govee
+      - input_boolean
+      - input_number
+      - input_text
+      - light
+      - media_player
+      - number
+      - person
+      - proximity
+      - scene
+      - script
+      - sensor
+      - sun
+      - switch
+      - update
+      - weather
+      - zone
+  include:
+    entities:
+      - alarm_control_panel.home_alarm
+      - input_button.hubert_watered
+      - light.all_bathroom_lights
+      - light.all_bedroom_lights
+      - light.all_hall_lights
+      - light.all_kitchen_lights
+      - light.all_living_room_lights
+      - light.all_office_lights

@@ -1,0 +1,102 @@
+---
+### GUEST LOGIN CARD ###
+card_guest_login:
+  template:
+    - "icon_more_info_new"
+    - "ulm_translation_engine"
+  variables:
+    ulm_card_generic_icon: "[[[ return entity.attributes.icon ]]]"
+    ulm_card_generic_name: "[[[ return entity.attributes.friendly_name ]]]"
+  tap_action:
+    action: fire-dom-event
+    browser_mod:
+      service: browser_mod.popup
+      data:
+        title: "Scan QR Code with your Phone to open Home Assistant"
+        size: fullscreen
+        content:
+          type: vertical-stack
+          cards:
+            - type: custom:gap-card
+            - type: horizontal-stack
+              cards:
+                - type: custom:gap-card
+                - type: markdown
+                  content: >
+                    <img src="/local/HALogin.png" alt="Guest Login"/>
+                - type: custom:gap-card
+            - type: custom:gap-card
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Scan QR Code with your Phone to open Home Assistant"
+              size: fullscreen
+              content:
+                type: vertical-stack
+                cards:
+                  - type: custom:gap-card
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:gap-card
+                      - type: markdown
+                        content: >
+                          <img src="/local/HALogin.png" alt="Guest Login"/>
+                      - type: custom:gap-card
+                  - type: custom:gap-card
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              entity: "[[[ return entity.entity_id ]]]"
+              tap_action:
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: "Scan QR Code with your Phone to open Home Assistant"
+                    size: fullscreen
+                    content:
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/HALogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
+              icon: mdi:home
+
+          item2:
+            card:
+              type: "custom:button-card"
+              entity: "[[[ return entity.entity_id ]]]"
+              tap_action:
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: "Scan QR Code with your Phone to open Home Assistant"
+                    size: fullscreen
+                    content:
+                      type: vertical-stack
+                      cards:
+                        - type: custom:gap-card
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:gap-card
+                            - type: markdown
+                              content: >
+                                <img src="/local/HALogin.png" alt="Guest Login"/>
+                            - type: custom:gap-card
+                        - type: custom:gap-card
+              label: Click to open Home Assistant
+              name: Home Assistant Access

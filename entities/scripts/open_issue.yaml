@@ -1,0 +1,101 @@
+alias: Open Issue
+description: Open a new issue.
+icon: mdi:alert-circle-outline
+fields:
+  issue_number:
+    name: Issue Number
+    description: The issue number to open
+    example: 42
+    default: ""
+    selector:
+      text:
+  issue_description:
+    name: Issue Description
+    description: Short description of the issue
+    example: Something's broken!
+    default: ""
+    selector:
+      text:
+  user:
+    name: User
+    description: The user that opened this issue
+    example: Arthur Dent
+    default: ""
+    selector:
+      text:
+variables:
+  issue_num: "{{ issue_number }}"
+  issue_desc: "{{ issue_description }}"
+  time: "{{ utcnow() }}"
+  giturl: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG] {{ issue_desc }}&assignee=smcnab1&body=**From Local Issue** - {{ issue_desc }}&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"
+sequence:
+  - alias: Skip opening empty issues
+    condition: template
+    value_template: "{{ issue_desc != '' }}"
+  - alias: Open issue
+    service: mqtt.publish
+    data_template:
+      topic: "issue_tracker/{{ issue_num }}"
+      retain: true
+      payload: >-
+        {
+          "status": "open",
+          "description": "{{ issue_desc }}",
+          "time": "{{ as_datetime(time) | as_local }}",
+          "number": "{{ issue_num }}",
+          "user": "{{ user }}"
+        }
+  - alias: Create sensor for issue
+    service: mqtt.publish
+    data_template:
+      topic: "homeassistant/binary_sensor/issue_tracker/{{ issue_num }}/config"
+      retain: true
+      payload: >-
+        {
+          "name": "Issue #{{ issue_num }}",
+          "unique_id": "issue_{{ time | as_timestamp }}",
+          "state_topic": "issue_tracker/{{ issue_num }}",
+          "json_attributes_topic": "issue_tracker/{{ issue_num }}",
+          "value_template": "{{ '{{ ' + 'value_json.status' + ' }}' }}",
+          "icon": "mdi:bug",
+          "device": {
+            "identifiers": ["issue_tracker"], "name": "Issue Tracker"
+          },
+          "payload_on": "open",
+          "payload_off": "closed"
+        }
+  - alias: Increment counter
+    service: counter.increment
+    target:
+      entity_id: counter.issue_number
+  - alias: Reset description
+    service: input_text.set_value
+    target:
+      entity_id: input_text.issue_description
+    data:
+      value: ""
+  - service: notify.mobile_app_iphone
+    data:
+      title: "{{ issue_desc }}"
+      message: >-
+        {{ user }} has submitted Issue #{{ issue_num }} on {{
+        float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M
+        %p') }}.
+      data:
+        group: issue_{{ number }}
+        url: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG]&assignee=smcnab1&body=**From%20Local%20Issue**-&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"
+  - if:
+      - condition: state
+        entity_id: binary_sensor.mac_mini_active
+        state: "on"
+    then:
+      - service: notify.mobile_app_ipad
+        data:
+          title: "{{ issue_desc }}"
+          message: >-
+            {{ user }} has submitted Issue #{{ issue_num }} on {{
+            float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M
+            %p') }}.
+          data:
+            group: issue_{{ number }}
+            url: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG]&assignee=smcnab1&body=**From%20Local%20Issue**-&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"

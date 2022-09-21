@@ -1,0 +1,70 @@
+#           _     _                         _       _    _            _                       _   _  __      
+#  _ __ _ _(_)_ _| |_ ___ _ _   __ __ _ _ _| |_ _ _(_)__| |__ _ ___  | |_____ __ __  _ _  ___| |_(_)/ _|_  _ 
+# | '_ \ '_| | ' \  _/ -_) '_| / _/ _` | '_|  _| '_| / _` / _` / -_) | / _ \ V  V / | ' \/ _ \  _| |  _| || |
+# | .__/_| |_|_||_\__\___|_|   \__\__,_|_|  \__|_| |_\__,_\__, \___| |_\___/\_/\_/  |_||_\___/\__|_|_|  \_, |
+# |_|                                                     |___/                                         |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Script that pushes notification as part of printer cartridge low notification
+
+alias: Printer Cartridge Low Notification
+sequence:
+  - service: notify.mobile_app_iphone
+    data:
+      message: "Your printer cartridges are almost empty - Ink Status | Black: {{states('sensor.office_printer_black_ink')}}% | Colour: {{states('sensor.office_printer_tri_color_ink')}}%"
+      title: Printer Ink Alert
+      data:
+        actions:
+          - action: ORDER_URI
+            title: Order new cartridges now
+            icon: sfsymbols:cart
+            uri: >-
+              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+          - action: REMIND
+            title: Remind me Later
+            icon: sfsymbols:clock
+          - action: IGNORE
+            title: Ignore
+            icon: sfsymbols:xmark
+            destructive: true
+  - service: notify.mobile_app_leah_iphone
+    data:
+      message: "Your printer cartridges are almost empty - Ink Status | Black: {{states('sensor.office_printer_black_ink')}}% | Colour: {{states('sensor.office_printer_tri_color_ink')}}%"
+      title: Printer Ink Alert
+      data:
+        actions:
+          - action: ORDER_URI
+            title: Order new cartridges now
+            icon: sfsymbols:cart
+            uri: >-
+              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+          - action: REMIND
+            title: Remind me Later
+            icon: sfsymbols:clock
+          - action: IGNORE
+            title: Ignore
+            icon: sfsymbols:xmark
+            destructive: true
+  - if:
+      - condition: state
+        entity_id: binary_sensor.mac_mini_active
+        state: "on"
+    then:
+      - service: notify.mobile_app_ipad
+        data:
+          message: "Your printer cartridges are almost empty - Ink Status | Black: {{states('sensor.office_printer_black_ink')}}% | Colour: {{states('sensor.office_printer_tri_color_ink')}}%"
+          title: Printer Ink Alert
+          data:
+            actions:
+              - action: ORDER_URI
+                title: Order new cartridges now
+                icon: sfsymbols:cart
+                uri: >-
+                  https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+              - action: REMIND
+                title: Remind me Later
+                icon: sfsymbols:clock
+              - action: IGNORE
+                title: Ignore
+                icon: sfsymbols:xmark
+                destructive: true
+mode: single

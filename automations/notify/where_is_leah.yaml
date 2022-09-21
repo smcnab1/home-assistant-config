@@ -1,0 +1,15 @@
+alias: Notify Where is Leah
+mode: single
+trigger: []
+condition: []
+action:
+  - service: notify.mobile_app_iphone
+    data:
+      title: Where is Leah?
+      message: Leah is {{ states('sensor.leah_to_sam') }} mins away.
+      data:
+        action_data:
+          latitude: "{{ state_attr('person.leah', 'latitude') }}"
+          longitude: "{{ state_attr('person.leah', 'longitude') }}"
+          second_latitude: "{{ state_attr('person.sam', 'latitude') }}"
+          second_longitude: "{{ state_attr('person.sam', 'longitude') }}"

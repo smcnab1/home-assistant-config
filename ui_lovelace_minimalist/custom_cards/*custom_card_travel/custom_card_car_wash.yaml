@@ -1,0 +1,129 @@
+---
+### CAR WASH CARD ###
+card_car_wash:
+  template:
+    - "icon_more_info_alert"
+    - "blue"
+    - "ulm_translation_engine"
+  show_last_changed: false
+  tap_action:
+    action: fire-dom-event
+    browser_mod:
+      service: browser_mod.popup
+      data:
+        title: "Choose an Option"
+        content:
+          type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              name: "Send Notification"
+              icon: "mdi:car-wash"
+              tap_action:
+                action: "call-service"
+                service: "automation.trigger"
+                service_data:
+                  entity_id: "automation.transport_car_wash_notify"
+  variables:
+    ulm_show_last_changed: false
+    ulm_card_binary_sensor_alert_icon: mdi:car-wash
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template:
+          - "blue"
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: "Choose an Option"
+              content:
+                type: horizontal-stack
+                cards:
+                  - type: "custom:button-card"
+                    name: "Send Notification"
+                    icon: "mdi:car-wash"
+                    tap_action:
+                      action: "call-service"
+                      service: "automation.trigger"
+                      service_data:
+                        entity_id: "automation.transport_car_wash_notify"
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              template:
+                - "blue"
+              tap_action:
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: "Choose an Option"
+                    content:
+                      type: horizontal-stack
+                      cards:
+                        - type: "custom:button-card"
+                          name: "Send Notification"
+                          icon: "mdi:car-wash"
+                          tap_action:
+                            action: "call-service"
+                            service: "automation.trigger"
+                            service_data:
+                              entity_id: "automation.transport_car_wash_notify"
+              entity: binary_sensor.car_wash
+              icon: mdi:car-wash
+              styles:
+                icon: 
+                  - color: >
+                      [[[
+                        if (states['binary_sensor.car_wash'].state == 'on')
+                          return "rgba(var(--color-red), 1)";
+                        else
+                          return "rgba(var(--color-grey), 1)";
+                        ]]]
+
+                  
+                img-cell: 
+                  - background-color: >
+                      [[[
+                        if (states['binary_sensor.car_wash'].state == 'on')
+                          return "rgba(var(--color-red), 0.2)";
+                        else
+                          return "rgba(var(--color-grey), 0.2)";
+                        ]]]
+                card:
+                  - background-color: >
+                      [[[
+                        if (states['binary_sensor.car_wash'].state == 'on')
+                          return "rgba(var(--color-red), 0.2)";
+                        else
+                          return "rgba(var(--color-grey), 0.2)";
+                        ]]]
+          item2:
+            card:
+              type: "custom:button-card"
+              template:
+                - "blue_no_card"
+              tap_action:
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: "Choose an Option"
+                    content:
+                      type: horizontal-stack
+                      cards:
+                        - type: "custom:button-card"
+                          name: "Send Notification"
+                          icon: "mdi:car-wash"
+                          tap_action:
+                            action: "call-service"
+                            service: "automation.trigger"
+                            service_data:
+                              entity_id: "automation.transport_car_wash_notify"
+              entity: binary_sensor.car_wash
+              name: "[[[ return variables.ulm_translation_state;]]]"
+              label: Car Wash Status
+              show_last_changed: "[[[ return variables.ulm_show_last_changed; ]]]"

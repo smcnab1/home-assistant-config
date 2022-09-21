@@ -1,0 +1,959 @@
+---
+card_esh_welcome_tab:
+  variables:
+    ulm_weather: "[[[ return variables.ulm_weather]]]"
+    ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
+    ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
+    ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+  template:
+    - "ulm_language_variables"
+  show_icon: false
+  show_name: false
+  show_label: true
+  styles:
+    grid:
+      - grid-template-areas: >
+          [[[
+            if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+              return "\'item1\' \'item2\' \'item3\' \'item4\' \'item5\'";
+            } else {
+              return "\'item1\' \'item2\' \'item3\' \'item4\' \'item5\'";
+            }
+          ]]]
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content min-content"
+      - row-gap: "0px"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "10px"
+    custom_fields:
+      item3:
+        - display: >
+            [[[
+              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+                return "none";
+              } else {
+                return "block";
+              }
+            ]]]
+      item4:
+        - display: >
+            [[[
+              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+                return "none";
+              } else {
+                return "block";
+              }
+            ]]]
+      item5:
+        - display: >
+            [[[
+              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
+                return "none";
+              } else {
+                return "block";
+              }
+            ]]]
+
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template: "card_esh_welcome_topbar_tab"
+        variables:
+          ulm_card_esh_welcome_collapse: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
+          ulm_weather: "[[[ return variables.ulm_weather]]]"
+          ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
+          ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
+          ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+        styles:
+          card:
+            - border-radius: "none"
+            - box-shadow: "none"
+            - padding: "4px"
+            - margin-left: "relative"
+    item2:
+      card:
+        type: "custom:button-card"
+        show_icon: false
+        show_label: false
+        show_name: true
+        show_entity_picture: false
+        name: |
+          [[[ return `
+              <span style='width:100%;'>
+              Good ${states['sensor.time_of_day'].state}</span>`; ]]]
+        styles:
+          name:
+            - align-self: "start"
+            - justify-self: "start"
+            - font-weight: "bold"
+            - font-size: "24px"
+            - margin-left: "16px"
+          grid:
+            - grid-template-areas: "'i n' 'i l'"
+            - grid-template-columns: "min-content auto"
+            - grid-template-rows: "min-content min-content"
+            - text-align: "start"
+          card:
+            - box-shadow: "none"
+            - padding-bottom: "8px"
+    item3:
+      card:
+        type: custom:button-card
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              content:
+                type: "custom:button-card"
+                template: "popup_weather_forecast"
+                entity: weather.weather
+        styles:
+          card:
+            - background-color: "rgba(0,0,0,0)"
+            - font-size: 20px
+            - font-weight: 400
+            - padding: 12px
+            - box-shadow: "none"
+          name:
+            - justify-self: stretch
+        name: |
+          [[[ return `<div style='display: flex';>
+              <div>${states['sensor.neat_time'].state} | </div>
+              <span style='width:100%;'>
+              <marquee>${states['sensor.weather_forecast_text'].state}</marquee></span>`; ]]]
+
+    item4:
+      card:
+        type: 'custom:button-card'
+        template: custom_card_pollen
+        variables:
+          custom_card_pollen_tree: sensor.tomorrow_io_home_tree_pollen_index
+          custom_card_pollen_grass: sensor.tomorrow_io_home_grass_pollen_index
+          custom_card_pollen_weed: sensor.tomorrow_io_home_weed_pollen_index
+
+    item5:
+      card:
+        type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            template: custom_card_person_mobile
+            variables:
+              ulm_card_person_entity: person.sam
+              ulm_card_person_battery_state: sensor.iphone_battery_state
+              ulm_card_person_battery_level: sensor.iphone_battery_level
+              ulm_card_person_wifi_connection: sensor.iphone_connection_type
+              ulm_card_person_wifi_tracker: person.sam
+              ulm_card_person_gps_tracker: person.sam
+              ulm_card_person_findmy_script: script.find_my_phone_sam
+              ulm_card_person_use_entity_picture: true
+              ulm_card_person_zones:
+                  - zone.home
+
+          - type: "custom:button-card"
+            template: custom_card_person_mobile
+            variables:
+              ulm_card_person_entity: person.leah
+              ulm_card_person_battery_state: sensor.leah_s_iphone_battery_state
+              ulm_card_person_battery_level: sensor.leah_s_iphone_battery_level
+              ulm_card_person_wifi_connection: sensor.leah_s_iphone_connection_type
+              ulm_card_person_wifi_tracker: person.leah
+              ulm_card_person_gps_tracker: person.leah
+              ulm_card_person_findmy_script: script.find_my_phone_leah
+              ulm_card_person_use_entity_picture: true
+              ulm_card_person_zones:
+                - zone.home
+
+card_esh_welcome_title_tab:
+  tap_action:
+    action: "none"
+  show_icon: false
+  show_label: true
+  show_name: true
+  styles:
+    card:
+      - background-color: "rgba(0,0,0,0)"
+      - box-shadow: "none"
+      - height: "auto"
+      - width: "auto"
+      - margin-top: "-10px"
+      - margin-left: "16px"
+      - margin-bottom: "-15px"
+    grid:
+      - grid-template-areas: "'n' 'l'"
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content min-content"
+    name:
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "20px"
+    label:
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "1rem"
+      - opacity: "0.4"
+
+card_esh_welcome_topbar_tab:
+  show_icon: false
+  show_name: false
+  show_label: false
+  styles:
+    grid:
+      - grid-template-areas: "item1 item2 item3 item4 item5"
+      - justify-content: "space-between"
+      - display: "flex"
+    card:
+      - border-radius: "none"
+      - box-shadow: "none"
+      - padding: "12px"
+      - background: "none"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template: "chips"
+        entity: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
+        icon: "mdi:chevron-up"
+        show_icon: true
+        styles:
+          grid:
+            - grid-template-areas: "'i'"
+          card:
+            - box-shadow: >
+                [[[
+                  if (hass.themes.darkMode){
+                    return "0px 2px 4px 0px rgba(0,0,0,0.80)";
+                  } else {
+                    return "var(--box-shadow)";
+                  }
+                ]]]
+        state:
+          - value: "on"
+            icon: "mdi:chevron-down"
+            styles:
+              icon:
+                - color: "rgb(var(--color-theme))"
+        tap_action:
+          action: "call-service"
+          service: "input_boolean.toggle"
+          service_data:
+            entity_id: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
+    item2:
+      card:
+        type: "custom:button-card"
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: "🌡️"
+          ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity; ]]]"
+        styles:
+          card:
+            - width: "90px"
+            - box-shadow: "var(--box-shadow)"
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              content:
+                type: "custom:button-card"
+                template: "popup_weather_forecast"
+                entity: weather.weather
+    item3:
+      card:
+        type: "custom:button-card"
+        template: chip_icon_only
+        variables:
+          ulm_chip_icon_only: "📈"
+        styles:
+          card:
+            - width: "90px"
+            - box-shadow: "var(--box-shadow)"
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              size: fullscreen
+              title: Climate Charts
+              content:
+                type: vertical-stack
+                cards:
+                  - type: "custom:button-card"
+                    template: card_weather
+                    entity: weather.weather
+                    variables:
+                      ulm_card_weather_primary_info:
+                        - extrema
+                      ulm_card_weather_secondary_info:
+                        - precipitation_probability
+                      ulm_card_weather_backdrop:
+                        fade: true
+                  - type: custom:swipe-card
+                    cards:
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Hall"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.living_room_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.living_room_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.living_room_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Living Room"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.living_room_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.living_room_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.living_room_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Kitchen"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.kitchen_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.kitchen_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.kitchen_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.kitchen_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.kitchen_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.kitchen_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Bedroom"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bedroom_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.bedroom_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bedroom_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.bedroom_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bedroom_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.bedroom_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Bathroom"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bathroom_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.bathroom_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bathroom_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.bathroom_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.bathroom_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.bathroom_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                      - type: vertical-stack
+                        cards:
+                          - type: "custom:button-card"
+                            template: "card_title"
+                            name: "Bedroom"
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_temperature
+                            variables:
+                              ulm_card_graph_color: "var(--google-yellow)"
+                              ulm_card_graph_name: Temperature
+                              ulm_card_graph_entity: sensor.living_room_temperature
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_humidity
+                            variables:
+                              ulm_card_graph_color: "var(--google-violet)"
+                              ulm_card_graph_name: Humidity
+                              ulm_card_graph_entity: sensor.living_room_humidity
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+                          - type: "custom:button-card"
+                            template: card_graph
+                            entity: sensor.living_room_air_pressure
+                            variables:
+                              ulm_card_graph_color: "var(--google-green)"
+                              ulm_card_graph_name: Air Pressure
+                              ulm_card_graph_entity: sensor.living_room_air_pressure
+                              ulm_card_graph_type: fill
+                              ulm_card_graph_hours: 24
+                              ulm_card_graph_group_by: interval
+    item4:
+      card:
+        type: "custom:button-card"
+        template: chip_double_state
+        styles:
+          card:
+            - width: "90px"
+            - box-shadow: "var(--box-shadow)"
+        variables:
+          ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
+          ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+    item5:
+      card:
+        type: "custom:button-card"
+        tap_action:
+          action: "navigate"
+          navigation_path: "/config/dashboard"
+        template: "chip_mdi_icon_only"
+        variables:
+          ulm_chip_mdi_icon_only_icon: "mdi:cog-outline"
+        styles:
+          card:
+            - align-self: "end"
+            - box-shadow: >
+                [[[
+                  if (hass.themes.darkMode){
+                    return "0px 2px 4px 0px rgba(0,0,0,0.80)";
+                  } else {
+                    return "var(--box-shadow)";
+                  }
+                ]]]
+
+custom_card_pollen:
+  type: "custom:button-card"
+  template:
+    - "custom_card_pollen_language_variables"
+    - "list_3_items"
+  triggers_update: "all"
+  styles:
+    card:
+      - border-radius: "var(--border-radius)"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template: "custom_card_pollen_item"
+        entity: "[[[ return variables.custom_card_pollen_tree ]]]"
+        name: "[[[ return variables.custom_card_pollen_tree_name || states[variables.custom_card_pollen_tree].attributes.friendly_name ]]]"
+        icon: "[[[ return variables.custom_card_pollen_tree_icon || states[variables.custom_card_pollen_tree].attributes.icon ]]]"
+    item2:
+      card:
+        type: "custom:button-card"
+        template: "custom_card_pollen_item"
+        entity: "[[[ return variables.custom_card_pollen_grass ]]]"
+        name: "[[[ return variables.custom_card_pollen_grass_name || states[variables.custom_card_pollen_grass].attributes.friendly_name ]]]"
+        icon: "[[[ return variables.custom_card_pollen_grass_icon || states[variables.custom_card_pollen_grass].attributes.icon ]]]"
+    item3:
+      card:
+        type: "custom:button-card"
+        template: "custom_card_pollen_item"
+        entity: "[[[ return variables.custom_card_pollen_weed ]]]"
+        name: "[[[ return variables.custom_card_pollen_weed_name || states[variables.custom_card_pollen_weed].attributes.friendly_name ]]]"
+        icon: "[[[ return variables.custom_card_pollen_weed_icon || states[variables.custom_card_pollen_weed].attributes.icon ]]]"
+
+custom_card_pollen_item:
+  type: "custom:button-card"
+  template:
+    - "custom_card_pollen_language_variables"
+    - "vertical_buttons"
+  label: >
+    [[[
+      let pollen_state_label = variables.custom_card_pollen_none;
+      if (entity.state == "very_low") pollen_state_label = variables.custom_card_pollen_very_low;
+      else if (entity.state == "low") pollen_state_label = variables.custom_card_pollen_low;
+      else if (entity.state == "medium") pollen_state_label = variables.custom_card_pollen_medium;
+      else if (entity.state == "high") pollen_state_label = variables.custom_card_pollen_high;
+      else if (entity.state == "very_high") pollen_state_label = variables.custom_card_pollen_very_high;
+      return pollen_state_label;
+    ]]]
+  state:
+    - value: "none"
+      styles:
+        icon:
+          - color: "rgba(var(--color-grey), 1)"
+        img_cell:
+          - background-color: "rgba(var(--color-grey), 0.2)"
+    - value: "very_low"
+      styles:
+        icon:
+          - color: "rgba(var(--color-green), 1)"
+        img_cell:
+          - background-color: "rgba(var(--color-green), 0.2)"
+    - value: "low"
+      styles:
+        icon:
+          - color: "rgba(241, 196, 15, 1)"
+        img_cell:
+          - background-color: "rgba(241, 196, 15, 0.2)"
+    - value: "medium"
+      styles:
+        icon:
+          - color: "rgba(243, 156, 18, 1)"
+        img_cell:
+          - background-color: "rgba(243, 156, 18, 0.2)"
+    - value: "high"
+      styles:
+        icon:
+          - color: "rgba(231, 76, 60, 1)"
+        img_cell:
+          - background-color: "rgba(231, 76, 60, 0.2)"
+    - value: "very_high"
+      styles:
+        icon:
+          - color: "rgba(var(--color-pink), 1)"
+        img_cell:
+          - background-color: "rgba(var(--color-pink), 0.2)"
+  styles:
+    card:
+      - box-shadow: "none"
+      - border-radius: "var(--border-radius)"
+    custom_fields:
+      extreme:
+        - border-radius: "50%"
+        - position: "absolute"
+        - margin-left: "auto"
+        - margin-right: "auto"
+        - left: "38px"
+        - right: "0"
+        - top: "8px"
+        - height: "16px"
+        - width: "16px"
+        - border: "2px solid var(--card-background-color)"
+        - font-size: "12px"
+        - line-height: "14px"
+        - background-color: "rgba(var(--color-red),1)"
+        - color: "white"
+  custom_fields:
+    extreme: >
+      [[[
+        if (entity.state == "very_high"){
+          return `<ha-icon icon="mdi:exclamation-thick" style="width: 12px; height: 12px; color: var(--primary-background-color);"></ha-icon>`
+        }
+      ]]]
+
+find_my_phone_button:
+  template:
+    - "ulm_card_person_language_variables"
+  tap_action:
+    action: "toggle"
+  icon: "mdi:volume-high"
+  name: "[[[ return variables.ulm_custom_card_person_mobile_findmy; ]]]"
+  size: "1.4em"
+  styles:
+    icon:
+      - color: "rgba(var(--color-blue),1)"
+    name:
+      - font-size: "1.06em"
+      - letterspacing: "0.015em"
+    grid:
+      - grid-template-areas: "'i n'"
+      - grid-column-gap: "0.3em"
+    card:
+      - color: "rgba(var(--color-blue),1)"
+      - background: "rgba(var(--color-blue),0.2"
+      - border-radius: "0.6em"
+      - padding: "1em 1.4em"
+      - width: "max-content"
+      - font-size: "1.06em"
+      - font-weight: "500"
+      - letter-spacing: "0.015em"
+      - box-shadow: "none"
+      - align-self: center
+
+custom_card_person_mobile:
+  template:
+    - "icon_info_bg"
+    - "ulm_language_variables"
+    - "ulm_card_person_language_variables"
+    - "custom_popup_person"
+  variables:
+    ulm_card_person_use_entity_picture: false
+    ulm_card_person_zones: ""
+  triggers_update: "all"
+  show_entity_picture: "[[[ return variables.ulm_card_person_use_entity_picture ]]]"
+  show_label: false
+  show_name: false
+  icon: "mdi:face-man"
+  entity_picture: >
+    [[[
+      if (variables.ulm_card_person_use_entity_picture == true){
+        return states[variables.ulm_card_person_entity].attributes.entity_picture;
+      } else{
+        return null;
+      }
+    ]]]
+  label: >
+    [[[
+      var location = states[variables.ulm_card_person_entity].state
+      if (location == "unavailable"){
+        return variables.ulm_unavailable;
+      } else if (location == "not_home"){
+        return variables.ulm_custom_card_person_mobile_not_home;
+      } else if (location == "gym"){
+        return variables.ulm_custom_card_person_mobile_gym;
+      } else if (location == "work"){
+        return variables.ulm_custom_card_person_mobile_work;
+      } else{
+        return (location == "home") ? variables.ulm_custom_card_person_mobile_home : location;
+      }
+    ]]]
+  name: "[[[ return states[variables.ulm_card_person_entity].attributes.friendly_name ]]]"
+  entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+  styles:
+    icon:
+      - color: "rgba(var(--color-theme), 0.9)"
+      - width: >
+          [[[
+            if (variables.ulm_card_person_use_entity_picture == true){
+              return "42px";
+            } else {
+              return "20px";
+            }
+          ]]]
+    img_cell:
+      - place-self: center left
+    grid:
+      - grid-template-areas: "'i n network battery find' 'i l network battery find'"
+      - grid-template-columns: "auto 1fr auto auto"
+      - justify-items: "center"
+    custom_fields:
+      notification:
+        - border-radius: "50%"
+        - position: "absolute"
+        - left: "38px"
+        - top: "8px"
+        - height: "16px"
+        - width: "16px"
+        - border: "2px solid var(--card-background-color)"
+        - font-size: "12px"
+        - line-height: "14px"
+        - background-color: >
+            [[[
+              if (states[variables.ulm_card_person_entity].state == 'home'){
+                return "rgba(var(--color-green),1)";
+              } else if (states[variables.ulm_card_person_entity].state == 'gym') {
+                return "rgba(var(--color-purple),1)";
+              } else if (states[variables.ulm_card_person_entity].state == 'work') {
+                return "rgba(var(--color-yellow),1)";
+              } else {
+                return "rgba(var(--color-red),1)";
+              }
+            ]]]
+      network:
+        - align-self: center
+      battery:
+        - align-self: center
+    card:
+      - opacity: >
+          [[[
+            if (states[variables.ulm_card_person_entity].state == 'home'){
+              return "1";
+            } else if (states[variables.ulm_card_person_entity].state == 'gym') {
+              return "0.6";
+            } else if (states[variables.ulm_card_person_entity].state == 'work') {
+              return "0.6";
+            } else {
+              return "0.6";
+            }
+          ]]]
+
+  custom_fields:
+    notification: >
+      [[[
+        var zones = variables.ulm_card_person_zones;
+        var person_location = states[variables.ulm_card_person_entity].state;
+        if (person_location !== 'home'){
+          for (const item of zones){
+            if (person_location == states[item]?.attributes?.friendly_name){
+              var icon = (states[item].attributes.icon !== null) ? states[item].attributes.icon : 'mdi:help-circle';
+              return '<ha-icon icon="' + icon + '" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'not_home'){
+              return '<ha-icon icon="mdi:home-minus" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'Gym'){
+              return '<ha-icon icon="mdi:dumbbell" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            } else if (person_location == 'Work'){
+              return '<ha-icon icon="mdi:briefcase" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+            }
+          }
+        } else{
+          return '<ha-icon icon="mdi:home-variant" style="width: 10px; height: 10px; color: var(--primary-background-color);"></ha-icon>';
+        }
+      ]]]
+
+    battery: |
+      [[[
+        if (states[variables.ulm_card_person_battery_state].state == 'Charging' ) { 
+          return `<ha-icon
+          icon="mdi:battery-charging"
+          style="width: 14px; height: 14px; color: rgba(var(--color-yellow), 0.9)">
+          </ha-icon><span style="font-size: 14px; font-weight: bold; color: rgba(var(--color-yellow), 0.9)">${states[variables.ulm_card_person_battery_level].state}%</span>`;
+        } else {
+          return `<ha-icon
+          icon="mdi:battery"
+          style="width: 14px; height: 14px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon><span style="font-size: 14px; font-weight: bold; color: rgba(var(--color-theme), 0.9)">${states[variables.ulm_card_person_battery_level].state}%</span>`;
+        }
+      ]]]
+
+    network: |
+      [[[
+        if (states[variables.ulm_card_person_wifi_connection].state == 'Wi-Fi' ) { 
+          return `<ha-icon
+          icon="mdi:wifi"
+          style="width: 16px; height: 16px; padding-right: 5px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon>`;
+        } else {
+          return `<ha-icon
+          icon="mdi:signal"
+          style="width: 16px; height: 16px; padding-right: 5px; color: rgba(var(--color-theme), 0.9)">
+          </ha-icon>`; 
+        }
+      ]]]
+
+    find:
+      card:
+        template:
+          - "icon_info_bg"
+          - "blue"
+        show_name: false
+        show_label: false
+        type: "custom:button-card"
+        entity: "[[[ return variables.ulm_card_person_findmy_script ]]]"
+        icon: "mdi:phone-alert"
+        tap_action:
+          action: "toggle"
+        styles:
+          card:
+            - box-shadow: "none"
+            - padding: "2px"
+
+custom_popup_person:
+  tap_action:
+    action: "fire-dom-event"
+    browser_mod:
+      service: "browser_mod.popup"
+      data:
+        title: "[[[ return states[variables.ulm_card_person_entity].attributes.friendly_name ]]]"
+        style:
+          $: >
+            [[[
+              if (hass.themes.theme.includes("desktop")){
+                var dialog = `
+                  .mdc-dialog__surface{
+                    border-radius: var(--border-radius) !important;
+                  }
+                `;
+              } else{
+                var dialog = "";
+              }
+              return `
+                *{
+                  --secondary-background-color: none !important;
+                }
+                ${dialog}
+              `;
+            ]]]
+          hui-vertical-stack-card:
+            $: >
+              button-card {
+                align-self: center;
+                padding: 0.2em 0 2.3em 0;
+              }
+              hui-entities-card{
+                padding: 0.8em 1.4em;
+              }
+            $hui-entities-card$: >
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-history-graph-card$: >
+              .content {
+                padding: 0 2.4em !important;
+              }
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-glance-card$: >
+              ha-card{
+                box-shadow: none;
+              }
+            $hui-map-card:
+              $: >
+                ha-icon-button {
+                  color: rgba(var(--color-blue),1);
+                }
+              $ha-map:
+                $: >
+                  .leaflet-control-attribution {
+                    display: none;
+                  }
+                  .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+                    border: 2px solid rgba(var(--color-blue),0.4) !important;
+                  }
+                  .leaflet-bar a {
+                    background-color: rgba(var(--color-blue),0.2) !important;
+                    color: rgba(var(--color-blue),1) !important;
+                  }
+                  .leaflet-bar a:first-child {
+                    border-bottom: 2px solid rgba(var(--color-blue),0.4) !important;
+                  }
+                  .leaflet-pane.leaflet-tile-pane {
+                    filter: contrast(95%);
+                  }
+        content:
+          type: "vertical-stack"
+          cards:
+            - type: "entities"
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+                  secondary_info: "last-changed"
+            - type: "history-graph"
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_entity; ]]]"
+            - type: "glance"
+              show_state: false
+              entities:
+                - entity: "[[[ return variables.ulm_card_person_wifi_tracker; ]]]"
+                  name: "WiFi"
+                  icon: "mdi:wifi"
+                  style: &state >
+                    state-badge{
+                      color: {{ 'rgba(var(--color-blue),1)' if is_state(config.entity, 'home') }};
+                      filter: {{ 'opacity(100%)' if is_state(config.entity, 'home') else 'opacity(40%)'}};
+                    }
+                - entity: "[[[ return variables.ulm_card_person_gps_tracker; ]]]"
+                  name: "GPS"
+                  icon: "mdi:map-marker"
+                  style: *state
+            - type: "horizontal-stack"
+              cards:
+                - type: custom:gap-card
+                  height: 10px
+                - type: "custom:button-card"
+                  template:
+                    - "find_my_phone_button"
+                  entity: "[[[ return variables.ulm_card_person_findmy_script; ]]]"
+                - type: custom:gap-card
+                  height: 10px
+            - type: "map"
+              aspect_ratio: "12x10"
+              default_zoom: 16
+              entities: "[[[ return [variables.ulm_card_person_gps_tracker]; ]]]"

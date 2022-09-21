@@ -26,7 +26,7 @@ action:
       entity_id: media_player.living_room_google_home
   - service: media_player.volume_set
     data:
-      volume_level: 0.6
+      volume_level: 0.5
     target:
       entity_id: media_player.living_room_google_home
   - service: tts.cloud_say
@@ -48,7 +48,7 @@ action:
 
         {{states.sensor.daily_fact.state}}
 
-        Oh and today's your day so here's a wee joke for you too.
+        Oh, and today's your day so here's a wee joke for you too.
 
         {{states.sensor.daily_joke.state}}
 
@@ -57,20 +57,16 @@ action:
   - delay:
       hours: 0
       minutes: 0
-      seconds: 50
+      seconds: 55
       milliseconds: 0
-  - repeat:
-      count: 2
-      sequence:
-        - service: spotcast.start
-          data:
-            device_name: Living Room speaker
-            entity_id: media_player.living_room_google_home
-            uri: spotify:playlist:37i9dQZF1DXcgZcN2HVMoe
-            random_song: true
-            force_playback: true
-            start_volume: 40
-          continue_on_error: true
+  - service: spotcast.start
+    data:
+      entity_id: media_player.living_room
+      uri: spotify:playlist:37i9dQZF1DXcgZcN2HVMoe
+      random_song: true
+      force_playback: true
+      start_volume: 40
+    continue_on_error: true
   - delay:
       hours: 1
       minutes: 0

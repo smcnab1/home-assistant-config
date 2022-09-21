@@ -1,0 +1,14 @@
+#      _                        
+# __ _| |__  _____ __  ___ _ _  
+# \ \ / '_ \/ _ \ \ / / _ \ ' \ 
+# /_\_\_.__/\___/_\_\ \___/_||_|
+#                               
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Script which turns on xbox for frontend control.
+
+sequence:
+  - service: switch.toggle
+    data: {}
+    target:
+      entity_id: switch.xbox
+mode: single

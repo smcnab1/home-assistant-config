@@ -1,0 +1,412 @@
+---
+### PARTY CARD ###
+card_party:
+  template:
+    - "icon_more_info_new"
+    - "ulm_translation_engine"
+    - "blue"
+  variables:
+    ulm_card_input_boolean_icon: "[[[ return entity.attributes.icon ]]]"
+    ulm_card_input_boolean_name: "[[[ return entity.attributes.friendly_name ]]]"
+  tap_action:
+    action: fire-dom-event
+    browser_mod:
+      service: browser_mod.popup
+      data:
+        title: Control Your Party
+        content:
+          type: vertical-stack
+          cards:
+            - type: 'custom:button-card'
+              template: card_party_activate
+              entity: input_boolean.party
+              variables:
+                ulm_card_input_boolean_name: Activate House Party Mode
+              tap_action:
+                action: toggle
+              state:
+                - value: 'on'
+                  styles:
+                    icon:
+                      - animation:
+                          - blink .5s linear infinite
+                          - rotating 1s linear infinite
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+            - type: 'custom:button-card'
+              template: card_input_number
+              entity: input_number.party_speed
+              variables:
+                ulm_card_input_number_name: "House Party Speed"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              entity: "[[[ return entity.entity_id ]]]"
+              icon: mdi:party-popper
+              state:
+                - value: 'on'
+                  styles:
+                    icon:
+                      - animation:
+                          - blink .5s linear infinite
+                          - rotating 1s linear infinite
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+              tap_action: ##############################
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: Control Your Party
+                    content:
+                      type: vertical-stack
+                      cards:
+                        - type: 'custom:button-card'
+                          template: card_party_activate
+                          entity: input_boolean.party
+                          variables:
+                            ulm_card_input_boolean_name: Activate House Party Mode
+                          tap_action:
+                            action: toggle
+                          state:
+                            - value: 'on'
+                              styles:
+                                icon:
+                                  - animation:
+                                      - blink .5s linear infinite
+                                      - rotating 1s linear infinite
+                                  - color: |
+                                      [[[
+                                          return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                                      ]]]
+                        - type: 'custom:button-card'
+                          template: card_input_number
+                          entity: input_number.party_speed
+                          variables:
+                            ulm_card_input_number_name: "House Party Speed"
+          item2:
+            card:
+              type: "custom:button-card"
+              template:
+                - "blue_no_card"
+              entity: "[[[ return entity.entity_id ]]]"
+              name: "[[[ return variables.ulm_card_input_boolean_name; ]]]"
+              state:
+                - value: 'on'
+                  styles:
+                    icon:
+                      - animation: blink .9s linear infinite
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+              label: "[[[ return variables.ulm_translation_state ]]]"
+              tap_action: ##############################
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data:
+                    title: Control Your Party
+                    content:
+                      type: vertical-stack
+                      cards:
+                        - type: 'custom:button-card'
+                          template: card_party_activate
+                          entity: input_boolean.party
+                          variables:
+                            ulm_card_input_boolean_name: Activate House Party Mode
+                          tap_action:
+                            action: toggle
+                          state:
+                            - value: 'on'
+                              styles:
+                                icon:
+                                  - animation:
+                                      - blink .5s linear infinite
+                                      - rotating 1s linear infinite
+                                  - color: |
+                                      [[[
+                                          return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                                      ]]]
+                        - type: 'custom:button-card'
+                          template: card_input_number
+                          entity: input_number.party_speed
+                          variables:
+                            ulm_card_input_number_name: "House Party Speed"
+
+card_party_activate:
+  template:
+    - "icon_more_info_new"
+    - "ulm_translation_engine"
+  variables:
+    ulm_card_input_boolean_icon: "[[[ return entity.attributes.icon ]]]"
+    ulm_card_input_boolean_name: "[[[ return entity.attributes.friendly_name ]]]"
+  tap_action:
+    action: toggle
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template:
+          - "blue"
+        tap_action:
+          action: toggle
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              entity: "[[[ return entity.entity_id ]]]"
+              icon: "[[[ return variables.ulm_card_input_boolean_icon; ]]]"
+              state:
+                - value: 'on'
+                  styles:
+                    icon:
+                      - animation:
+                          - rotating 1s linear infinite
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+              tap_action:
+                action: toggle
+          item2:
+            card:
+              type: "custom:button-card"
+              entity: input_boolean.party
+              name: "[[[ return variables.ulm_card_input_boolean_name; ]]]"
+              label: "[[[ return variables.ulm_translation_state ]]]"
+              state:
+                - value: 'on'
+                  styles:
+                    name:
+                      - color: |
+                          [[[
+                              return "rgb(" + states['light.kitchen_leds'].attributes.rgb_color + ")";
+                          ]]]
+              tap_action:
+                action: toggle
+
+
+card_input_party_speed:
+  variables:
+    ulm_card_input_number_name: "[[[ return entity.attributes.friendly_name ]]]"
+  triggers_update: "all"
+  show_icon: false
+  show_label: false
+  show_name: false
+  styles:
+    grid:
+      - grid-template-areas: "'item1' 'item2'"
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content  min-content"
+      - row-gap: "12px"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template:
+          - "icon_info"
+          - "ulm_translation_engine"
+          - "input_number"
+        tap_action:
+          action: "more-info"
+        entity: "[[[ return entity.entity_id ]]]"
+        name: "[[[ return variables.ulm_card_input_number_name ]]]"
+        icon: mdi:party-popper
+    item2:
+      card:
+        type: "custom:button-card"
+        template: "list_3_items"
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              template: "widget_icon"
+              tap_action:
+                action: "call-service"
+                service: |
+                  [[[
+                    if( entity.entity_id.startsWith("input_number.") )
+                      return "input_number.decrement";
+                    if( entity.entity_id.startsWith("counter.") )
+                      return "counter.decrement";
+                    return "";
+                  ]]]
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+              icon: "mdi:arrow-down"
+          item2:
+            card:
+              type: "custom:button-card"
+              template: "widget_text"
+              entity: "[[[ return entity.entity_id ]]]"
+              tap_action:
+                action: "call-service"
+                service: "cover.stop_cover"
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+          item3:
+            card:
+              type: "custom:button-card"
+              template: "widget_icon"
+              tap_action:
+                action: "call-service"
+                service: |
+                  [[[
+                    if( entity.entity_id.startsWith("input_number.") )
+                      return "input_number.increment";
+                    if( entity.entity_id.startsWith("counter.") )
+                      return "counter.increment";
+                    return "";
+                  ]]]
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+              icon: "mdi:arrow-up"
+
+input_number:
+  tap_action:
+    action: "more-info"
+  show_last_changed: true
+
+widget_text:
+  tap_action:
+    action: "toggle"
+  template:
+    - "ulm_translation_engine"
+  show_icon: false
+  show_label: true
+  show_name: false
+  label: "[[[ return variables.ulm_translation_state_unit ]]]"
+  styles:
+    grid:
+      - grid-template-areas: "'l'"
+    card:
+      - box-shadow: "none"
+      - padding: "0px"
+      - border-radius: "14px"
+      - place-self: "center"
+      - height: "42px"
+    state:
+      - color: "rgba(var(--color-theme),0.9)"
+  size: "20px"
+  color: "var(--google-grey)"
+
+card_input_number:
+  variables:
+    ulm_card_input_number_name: "[[[ return entity.attributes.friendly_name ]]]"
+  triggers_update: "all"
+  show_icon: false
+  show_label: false
+  show_name: false
+  styles:
+    grid:
+      - grid-template-areas: "'item1' 'item2'"
+      - grid-template-columns: "1fr"
+      - grid-template-rows: "min-content  min-content"
+      - row-gap: "12px"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        template:
+          - "icon_info"
+          - "ulm_translation_engine"
+          - "input_number"
+        tap_action:
+          action: "more-info"
+        entity: "[[[ return entity.entity_id ]]]"
+        name: "[[[ return variables.ulm_card_input_number_name ]]]"
+    item2:
+      card:
+        type: "custom:button-card"
+        template: "list_3_items"
+        custom_fields:
+          item1:
+            card:
+              type: "custom:button-card"
+              template: "widget_icon"
+              tap_action:
+                action: "call-service"
+                service: |
+                      [[[
+                        if( entity.entity_id.startsWith("input_number.") )
+                          return "input_number.decrement";
+                        if( entity.entity_id.startsWith("counter.") )
+                          return "counter.decrement";
+                        return "";
+                      ]]]
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+              icon: "mdi:arrow-down"
+          item2:
+            card:
+              type: "custom:button-card"
+              template: "widget_text"
+              entity: "[[[ return entity.entity_id ]]]"
+              tap_action:
+                action: "call-service"
+                service: "cover.stop_cover"
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+          item3:
+            card:
+              type: "custom:button-card"
+              template: "widget_icon"
+              tap_action:
+                action: "call-service"
+                service: |
+                      [[[
+                        if( entity.entity_id.startsWith("input_number.") )
+                          return "input_number.increment";
+                        if( entity.entity_id.startsWith("counter.") )
+                          return "counter.increment";
+                        return "";
+                      ]]]
+                service_data:
+                  entity_id: "[[[ return entity.entity_id ]]]"
+              icon: "mdi:arrow-up"
+
+input_number:
+  tap_action:
+    action: "more-info"
+  show_last_changed: true
+
+widget_text:
+  tap_action:
+    action: "toggle"
+  template:
+    - "ulm_translation_engine"
+  show_icon: false
+  show_label: true
+  show_name: false
+  label: "[[[ return variables.ulm_translation_state_unit ]]]"
+  styles:
+    grid:
+      - grid-template-areas: "'l'"
+    card:
+      - box-shadow: "none"
+      - padding: "0px"
+      - border-radius: "14px"
+      - place-self: "center"
+      - height: "42px"
+    state:
+      - color: "rgba(var(--color-theme),0.9)"
+  size: "20px"
+  color: "var(--google-grey)"

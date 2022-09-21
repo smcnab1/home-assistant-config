@@ -1,0 +1,118 @@
+#  _        _    _     _           _          _   _                                    _           _ 
+# | |_ __ _| |__| |___| |_   ___  | |__  __ _| |_| |_  _ _ ___  ___ _ __    __ ___ _ _| |_ _ _ ___| |
+# |  _/ _` | '_ \ / -_)  _| |___| | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  / _/ _ \ ' \  _| '_/ _ \ |
+#  \__\__,_|_.__/_\___|\__|       |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_| \__\___/_||_\__|_| \___/_|
+#                                                                                                    
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "topbar topbar topbar topbar topbar topbar"
+    "scenes scenes scenes scenes scenes scenes"
+    "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+    "main main main main main main"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "motion motion motion motion motion motion"
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "topbar topbar topbar topbar topbar topbar"
+        "scenes scenes scenes scenes scenes scenes"
+        "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+        "main main main main main main"
+        "sectitle sectitle sectitle sectitle sectitle sectitle"
+        "motion motion motion motion motion motion"
+
+view_layout:
+  grid-area: "popup1"
+cards:
+  ##################
+  ### STATUS BAR ###
+  ##################
+  - view_layout: ### TOP BAR STATUS ###
+      grid-area: "topbar"
+    type: custom:button-card
+    template: top_bar_status
+    variables:
+      top_bar_status_room_name: "Bathroom"
+      top_bar_status_room_icon: "mdi:bathtub"
+      ulm_chip_double_state_entity1: sensor.bathroom_lights_on
+      ulm_chip_double_state_entity2: sensor.bathroom_switches_on
+      ulm_chip_icon_state_entity: sensor.bathroom_temperature
+
+        #################
+        ### SCENE BAR ###
+        #################
+  - view_layout: ### SCENES TOGGLE ###
+      grid-area: "scenes"
+    type: "custom:button-card"
+    template: "card_scenes_welcome"
+    variables:
+      entity_1:
+        entity_id: "automation.lighting_bathroom_morning"
+        icon: "mdi:weather-sunset-up"
+        name: "Morning"
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_bathroom_normal"
+        icon: "mdi:weather-sunny"
+        name: "Normal"
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_bathroom_bath"
+        icon: "mdi:bathtub"
+        name: "Bath"
+        color: "purple"
+      entity_4:
+        entity_id: "automation.lighting_bathroom_off"
+        icon: "mdi:lightbulb-off"
+        name: "All Off"
+        color: "red"
+
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING TITLE ###
+      grid-area: "lxtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Lighting"
+
+  - view_layout: ### MAIN LIGHTS ###
+      grid-area: "main"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.bathroom_main_lights
+    variables:
+      ulm_card_light_name: Main Lights
+      ulm_card_light_icon: mdi:ceiling-light
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+        ################
+        ### SECURITY ###
+        ################
+  - view_layout: ### SECURITY TITLE ###
+      grid-area: "sectitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Security"
+
+  - view_layout: ### MOTION SENSOR ###
+      grid-area: "motion"
+    type: "custom:button-card"
+    template:
+      - card_binary_sensor_alert
+      - battery_info
+    entity: binary_sensor.bathroom_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.bathroom_motion_battery
+      ulm_card_binary_sensor_alert_name: Motion

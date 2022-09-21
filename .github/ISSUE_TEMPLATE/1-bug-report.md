@@ -2,6 +2,11 @@
 name: "\U0001F41BBug Report"
 about: Create a report to help fix current bugs found
 title: "[BUG] "
+labels: "\U0001F41BType: Bug"
+assignees: smcnab1
+
+---
+=======
 labels: "\U0001F3F7️ Needs Triage, \U0001F41BType: Bug"
 assignees: smcnab1
 

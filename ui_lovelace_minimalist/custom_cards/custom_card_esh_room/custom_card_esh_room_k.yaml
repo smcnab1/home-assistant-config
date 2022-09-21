@@ -168,7 +168,7 @@ card_esh_room_k:
             service: browser_mod.popup
             data:
               title: "Kitchen Lighting"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:
@@ -242,7 +242,7 @@ card_esh_room_k:
             service: browser_mod.popup
             data:
               title: "Kitchen Media"
-              size: wide
+              size: fullscreen
               content:
                 type: "vertical-stack"
                 cards:

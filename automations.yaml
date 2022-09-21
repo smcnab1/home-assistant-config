@@ -1,8 +1,33 @@
-- id: '1662775125376'
-  alias: Wallpanel Battery Management
+- id: '1663511490519'
+  alias: Light/Scene Show
   description: ''
-  use_blueprint:
-    path: seamus65/wallpanel-battery-management.yaml
-    input:
-      battery: sensor.dashboard_tablet_battery
-      charger: switch.tablet_charger
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.light_show
+    to: 'on'
+    id: LIGHT ON
+  - platform: state
+    entity_id:
+    - input_boolean.scene_show
+    to: 'on'
+    id: SCENE ON
+  condition: []
+  action:
+  - if:
+    - condition: trigger
+      id: LIGHT ON
+    then:
+    - service: input_boolean.turn_off
+      data: {}
+      target:
+        entity_id: input_boolean.scene_show
+  - if:
+    - condition: trigger
+      id: SCENE ON
+    then:
+    - service: input_boolean.turn_off
+      data: {}
+      target:
+        entity_id: input_boolean.light_show
+  mode: single

@@ -1,0 +1,6 @@
+
+platform: group
+name: "Sam Notify Group"
+services:
+  - service: mobile_app_iphone
+  - service: mobile_app_ipad

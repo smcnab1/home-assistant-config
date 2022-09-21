@@ -18,3 +18,18 @@ sensors:
       {% else %}
         Evening
       {% endif %}
+
+  neat_date:
+    value_template: >
+      {% set months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] %}
+      {% set month = months[now().strftime('%m') | int -1] %}
+      {% set days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"] %}
+      {% set day = days[now().strftime('%w') | int -1] %}
+      {% set time = now().hour~now().strftime('%M') %}
+      {{ day + ' ' + now().strftime('%d') + ' ' + month + " | " + time +"hrs" }}
+
+  neat_time:
+    value_template: >
+      {% set hour = states('sensor.time').split(':')[0] | int %}
+      {% set minute = states('sensor.time').split(':')[1] | int %}
+      {{ '%0.2d'|format(hour) }}{{ '%0.2d'|format(minute) + "hrs" }}

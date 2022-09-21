@@ -1,0 +1,294 @@
+#  _                                _                           _   _  __      
+# | |_ ___ _ __  _ __  ___ _ _ __ _| |_ _  _ _ _ ___   _ _  ___| |_(_)/ _|_  _ 
+# |  _/ -_) '  \| '_ \/ -_) '_/ _` |  _| || | '_/ -_) | ' \/ _ \  _| |  _| || |
+#  \__\___|_|_|_| .__/\___|_| \__,_|\__|\_,_|_| \___| |_||_\___/\__|_|_|  \_, |
+#               |_|                                                       |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Notify House Temp
+description: Automation to let us know if the temperature in the house gets too hot or too cold
+mode: single
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.living_room_temperature
+    id: LRH
+    above: 27
+  - platform: numeric_state
+    entity_id: sensor.bedroom_temperature
+    id: BRH
+    above: 27
+  - platform: numeric_state
+    entity_id: sensor.kitchen_temperature
+    id: KH
+    above: 27
+  - platform: numeric_state
+    entity_id: sensor.living_room_temperature
+    id: LRL
+    below: 20
+  - platform: numeric_state
+    entity_id: sensor.bedroom_temperature
+    id: BRL
+    below: 20
+  - platform: numeric_state
+    entity_id: sensor.kitchen_temperature
+    id: KL
+    below: 20
+action:
+  - if:
+      - condition: trigger
+        id: LRH
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Living Room)
+          message: >-
+            It's getting hot in here, so take off all your clothes (and open the
+            bloody windows, oh and maybe turn me on... the fans that is.)
+          data:
+            video: /media/local/sweaty-sweating.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              title: House Temperature Notification (Living Room)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Living Room)
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+  - if:
+      - condition: trigger
+        id: BRH
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Bedroom)
+          message: >-
+            It's getting hot in here, so take off all your clothes (and open the
+            bloody windows, oh and maybe turn me on... the fans that is.)
+          data:
+            video: /media/local/sweaty-sweating.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              title: House Temperature Notification (Bedroom)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Bedroom)
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+  - if:
+      - condition: trigger
+        id: KH
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Kitchen)
+          message: >-
+            It's getting hot in here, so take off all your clothes (and open the
+            bloody windows, oh and maybe turn me on... the fans that is.)
+          data:
+            video: /media/local/sweaty-sweating.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              title: House Temperature Notification (Kitchen)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Kitchen)
+              message: >-
+                It's getting hot in here, so take off all your clothes (and open
+                the bloody windows, oh and maybe turn me on... the fans that
+                is.)
+              data:
+                video: /media/local/sweaty-sweating.mp4
+  - if:
+      - condition: trigger
+        id: LRL
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Living Room)
+          message: >-
+            Now, what cooler than being cool? (Ice cold!) I can't hear you I say
+            what's, what's cooler than being cool? (Ice cold!) Alright, alright,
+            alright, alright, alright (close the bloody windows, oh and maybe
+            turn off the fans)
+          data:
+            video: /media/local/freezing-the-shining.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              title: House Temperature Notification (Living Room)
+              data:
+                video: /media/local/freezing-the-shining.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Living Room)
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              data:
+                video: /media/local/freezing-the-shining.mp4
+  - if:
+      - condition: trigger
+        id: BRL
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Bedroom)
+          message: >-
+            Now, what cooler than being cool? (Ice cold!) I can't hear you I say
+            what's, what's cooler than being cool? (Ice cold!) Alright, alright,
+            alright, alright, alright (close the bloody windows, oh and maybe
+            turn off the fans)
+          data:
+            video: /media/local/freezing-the-shining.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              title: House Temperature Notification (Bedroom)
+              data:
+                video: /media/local/freezing-the-shining.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Bedroom)
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              data:
+                video: /media/local/freezing-the-shining.mp4
+  - if:
+      - condition: trigger
+        id: KL
+    then:
+      - service: notify.mobile_app_iphone
+        data:
+          title: House Temperature Notification (Kitchen)
+          message: >-
+            Now, what cooler than being cool? (Ice cold!) I can't hear you I say
+            what's, what's cooler than being cool? (Ice cold!) Alright, alright,
+            alright, alright, alright (close the bloody windows, oh and maybe
+            turn off the fans)
+          data:
+            video: /media/local/freezing-the-shining.mp4
+      - if:
+          - condition: state
+            entity_id: binary_sensor.mac_mini_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_ipad
+            data:
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              title: House Temperature Notification (Kitchen)
+              data:
+                video: /media/local/freezing-the-shining.mp4
+    else:
+      - if:
+          - condition: state
+            entity_id: person.leah
+            state: home
+        then:
+          - service: notify.mobile_app_leah_iphone
+            data:
+              title: House Temperature Notification (Kitchen)
+              message: >-
+                Now, what cooler than being cool? (Ice cold!) I can't hear you I
+                say what's, what's cooler than being cool? (Ice cold!) Alright,
+                alright, alright, alright, alright (close the bloody windows, oh
+                and maybe turn off the fans)
+              data:
+                video: /media/local/freezing-the-shining.mp4

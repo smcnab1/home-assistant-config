@@ -1,0 +1,198 @@
+#       _                                             _ _                              
+#  _ __| |_  ___ _ _  ___   ___   ___ ___ __ _  _ _ _(_) |_ _  _   _ __  __ _ __ _ ___ 
+# | '_ \ ' \/ _ \ ' \/ -_) |___| (_-</ -_) _| || | '_| |  _| || | | '_ \/ _` / _` / -_)
+# | .__/_||_\___/_||_\___|       /__/\___\__|\_,_|_| |_|\__|\_, | | .__/\__,_\__, \___|
+# |_|                                                       |__/  |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "nav nav nav nav nav nav"
+    "topbar topbar topbar topbar topbar topbar"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "camera camera camera camera camera camera"
+    "sensortitle sensortitle sensortitle sensortitle sensortitle sensortitle"
+    "door door door hall hall hall"
+    "lr lr lr kitchen kitchen kitchen"
+    "bedroom bedroom bedroom bathroom bathroom bathroom"
+    "office office office office office office"
+  mediaquery:
+    # Mobile
+    "(max-width: 800px)":
+      grid-template-columns: "1fr 1fr"
+      grid-template-areas: |
+        "nav nav"
+        "topbar topbar"
+        "sectitle sectitle"
+        "camera camera"
+        "sensortitle sensortitle"
+        "door hall"
+        "lr kitchen"
+        "bedroom bathroom"
+        "office office"
+
+view_layout:
+  grid-area: "popup"
+cards:
+        ##################
+        ### STATUS BAR ###
+        ##################
+  - view_layout: ### NAV BAR ###
+      grid-area: 'nav'
+    type: "custom:button-card"
+    template: custom_top_bar
+    variables:
+      custom_top_bar_navigate_path_back: '/lovelace-minimalist-2/media'
+      custom_top_bar_navigate_path_next: '/lovelace-minimalist-2/notification'
+
+        ###############
+        ### TOP BAR ###
+        ###############
+  - view_layout: ### TOP BAR ###
+      grid-area: "topbar"
+    type: "custom:button-card"
+    template: "custom_card_page"
+    variables:
+      ulm_weather: "weather.weather"
+      ulm_room_name: Security Control
+      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+
+        ###############
+        ### CAMERAS ###
+        ###############
+  - view_layout: ### SECURITY TITLE & ALARM CHIP ###
+      grid-area: 'sectitle'
+    type: "horizontal-stack"
+    cards:
+      - type: "custom:button-card"
+        template: "card_title"
+        name: "Cameras"
+      - type: custom:gap-card
+      - type: 'custom:button-card'
+        template: chip_alarm
+        entity: alarm_control_panel.home_alarm
+        states:
+          - arm_away
+
+  - view_layout: ### CAMERAS ###
+      grid-area: 'camera'
+    type: custom:frigate-card
+    cameras:
+      - camera_entity: camera.hall_frigate
+        camera_name: Hall
+      - camera_entity: camera.bedroom_camera_frigate
+        camera_name: Bedroom
+      - camera_entity: camera.living_room_camera_frigate
+        camera_name: Living Room
+    view:
+      default: live
+    menu:
+      mode: overlay-bottom
+      buttons:
+        image: true
+    live:
+      lazy_load: false
+      auto_unmute: true
+      preload: true
+      controls:
+        thumbnails:
+          media: clips
+          mode: below
+
+        ###############
+        ### SENSORS ###
+        ###############
+  - view_layout: ### SENSOR TITLE ###
+      grid-area: 'sensortitle'
+    type: "custom:button-card"
+    template: "card_title"
+    name: "Sensors"
+
+  - view_layout: ### DOOR ###
+      grid-area: 'door'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.front_door_sensor
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.front_door_sensor_battery
+      ulm_card_binary_sensor_alert_name: Front Door
+
+  - view_layout: ### HALL ###
+      grid-area: 'hall'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.hall_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.hall_motion_battery
+      ulm_card_binary_sensor_alert_name: Hall
+
+  - view_layout: ### LIVING ROOM ###
+      grid-area: 'lr'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.living_room_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.living_room_motion_battery
+      ulm_card_binary_sensor_alert_name: Living Room
+
+  - view_layout: ### KITCHEN ###
+      grid-area: 'kitchen'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.kitchen_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.kitchen_motion_battery
+      ulm_card_binary_sensor_alert_name: Kitchen
+
+  - view_layout: ### BEDROOM ###
+      grid-area: 'bedroom'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.bedroom_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.bedroom_motion_battery
+      ulm_card_binary_sensor_alert_name: Bedroom
+
+  - view_layout: ### BATHROOM ###
+      grid-area: 'bathroom'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.bathroom_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.bathroom_motion_battery
+      ulm_card_binary_sensor_alert_name: Bathroom
+
+  - view_layout: ### OFFICE ###
+      grid-area: 'office'
+    type: 'custom:button-card'
+    template:
+      - card_binary_sensor_alert
+      - card_battery_info
+    entity: binary_sensor.living_room_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.living_room_motion_battery
+      ulm_card_binary_sensor_alert_name: Office

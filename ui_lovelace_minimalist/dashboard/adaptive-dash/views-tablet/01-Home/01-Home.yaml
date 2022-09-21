@@ -1,0 +1,110 @@
+#  _        _    _     _           _                                        
+# | |_ __ _| |__| |___| |_   ___  | |_  ___ _ __  ___   _ __  __ _ __ _ ___ 
+# |  _/ _` | '_ \ / -_)  _| |___| | ' \/ _ \ '  \/ -_) | '_ \/ _` / _` / -_)
+#  \__\__,_|_.__/_\___|\__|       |_||_\___/_|_|_\___| | .__/\__,_\__, \___|
+#                                                      |_|        |___/     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "welcome welcome welcome welcome welcome welcome"
+    "person1 person1 person1 person2 person2 person2"
+    "tube tube tube traffic traffic traffic"
+    "login login login wifi wifi wifi"
+    "pollen pollen pollen pollen pollen pollen"
+    ". . . carwash carwash carwash"
+    
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "welcome welcome welcome welcome welcome welcome"
+        "person1 person1 person1 person2 person2 person2"
+        "tube tube tube traffic traffic traffic"
+        "login login login wifi wifi wifi"
+        "pollen pollen pollen pollen pollen pollen"
+        ". . . carwash carwash carwash"
+
+view_layout:
+  grid-area: "main"
+cards:
+        #####################
+        ### WELCOME CARDS ###
+        #####################
+  - view_layout: ### WELCOME CARD ###
+      grid-area: "welcome"
+    type: "custom:button-card"
+    template: "card_esh_welcome_tab"
+    triggers_update: "input_boolean.welcome_toggle_tablet"
+    variables:
+      ulm_card_esh_welcome_collapse: input_boolean.welcome_toggle_tablet
+      ulm_chip_icon_state_entity: "sensor.living_room_temperature"
+      ulm_chip_double_state_entity1: sensor.house_lights_on
+      ulm_chip_double_state_entity2: sensor.house_switches_on
+      ulm_weather: "weather.weather"
+
+        #######################
+        ### TRANSPORT CARDS ###
+        #######################
+  - view_layout: ### TUBE STATUS ###
+      grid-area: "tube"
+    type: 'custom:button-card'
+    template: card_travel_nav
+    entity: sensor.london_tfl_jubilee_city
+
+  - view_layout: ### TRAFFIC STATUS ###
+      grid-area: "traffic"
+    type: 'custom:button-card'
+    template: card_travel_map
+    entity: sensor.sam_to_work
+    name: Local Traffic
+
+  - view_layout: ### CAR WASH STATUS ###
+      grid-area: "carwash"
+    type: 'custom:button-card'
+    template: card_car_wash
+    variables:
+      ulm_card_binary_sensor_alert: true
+    entity: binary_sensor.car_wash
+
+        ###################
+        ### GUEST CARDS ###
+        ###################
+  - view_layout: ### GUEST HA LOGIN ###
+      grid-area: "login"
+    type: conditional
+    conditions:
+      - entity: input_boolean.guest_mode
+        state: "on"
+    card:
+      type: 'custom:button-card'
+      template: card_guest_login
+      entity: input_boolean.test_toggle
+      title: Home Assistant Login
+      icon: mdi:home
+      style: |
+        {
+          padding: 0px;
+        }
+
+  - view_layout: ### GUEST WIFI LOGIN ###
+      grid-area: "wifi"
+    type: conditional
+    conditions:
+      - entity: input_boolean.guest_mode
+        state: "on"
+    card:
+      type: 'custom:button-card'
+      template: card_guest_wifi
+      entity: input_boolean.test_toggle
+      title: WiFi Login
+      icon: mdi:wifi
+      style: |
+        {
+          padding: 0px;
+        }
