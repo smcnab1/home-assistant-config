@@ -14,10 +14,10 @@ use_blueprint:
     actions:
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               title: HA System - Battery Alert
               message: "Low battery warning for: {{sensors}}"

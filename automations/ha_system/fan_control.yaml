@@ -28,7 +28,7 @@ action:
         data: {}
         target:
           entity_id: switch.server_fans
-      - service: notify.mobile_app_sam_s_mac_mini
+      - service: notify.mobile_app_ipad
         data:
           message: It's getting a little hot in there
           title: Server Fans On
@@ -41,7 +41,7 @@ action:
         data: {}
         target:
           entity_id: switch.server_fans
-      - service: notify.mobile_app_sam_s_mac_mini
+      - service: notify.mobile_app_ipad
         data:
           title: Server Fans Off
           message: It's not so hot in there

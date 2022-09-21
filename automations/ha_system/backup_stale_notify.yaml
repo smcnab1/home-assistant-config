@@ -38,7 +38,7 @@ action:
                 title: Remind me when I am Home
                 icon: sfsymbols:timer
     else:
-      - service: notify.mobile_app_sam_s_mac_mini
+      - service: notify.mobile_app_ipad
         data:
           message: >-
             Back-Ups are Stale - Visit the Home Assistant Google Drive Backup
@@ -68,10 +68,10 @@ action:
             entity_id: person.sam
             state: home
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
     then:
-      - service: notify.mobile_app_sam_s_mac_mini
+      - service: notify.mobile_app_ipad
         data:
           message: >-
             Back-Ups are Stale - Visit the Home Assistant Google Drive Backup

@@ -15,7 +15,7 @@ condition:
     entity_id: person.sam
     state: home
   - condition: state
-    entity_id: binary_sensor.sam_s_mac_mini_active
+    entity_id: binary_sensor.mac_mini_active
     state: 'on'
 action:
   - if:

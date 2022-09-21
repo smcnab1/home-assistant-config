@@ -77,7 +77,7 @@ cards:
                         card_title: Send Notification to Sam's Phone
                         notification_title: 'New Notification'
                       - type: 'custom:notify-card'
-                        target: mobile_app_sam_s_mac_mini
+                        target: mobile_app_ipad
                         label: Notify Sam's PC
                         card_title: Send Notification to Sam's PC
                         notification_title: 'New Notification'

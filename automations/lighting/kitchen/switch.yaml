@@ -49,7 +49,12 @@ use_blueprint:
                       skip_condition: false
                     target:
                       entity_id: automation.lighting_kitchen_off
-    button_double_press: []
+    button_double_press:
+      - service: automation.trigger
+        data:
+          skip_condition: false
+        target:
+          entity_id: automation.lighting_kitchen_cooking
     button_long_press:
       - service: input_boolean.toggle
         data: {}

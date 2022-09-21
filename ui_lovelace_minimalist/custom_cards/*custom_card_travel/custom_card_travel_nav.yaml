@@ -4,6 +4,15 @@ card_travel_nav:
   template:
     - "icon_more_info_new"
     - "ulm_translation_engine"
+  styles:
+    card:
+      - background-color: >
+            [[[
+            if (entity.attributes.next_departure_minutes < 4)
+              return "rgba(var(--color-red), 0.1)";
+            else;
+              return "null";
+            ]]]
   tap_action:
     action: fire-dom-event
     browser_mod:

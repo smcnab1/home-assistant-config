@@ -5,7 +5,7 @@
 #               |_|                                                       |__/ 
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: HA System House Temp
+alias: Notify House Temp
 description: Automation to let us know if the temperature in the house gets too hot or too cold
 mode: single
 trigger:
@@ -48,10 +48,10 @@ action:
             video: /media/local/sweaty-sweating.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 It's getting hot in here, so take off all your clothes (and open
@@ -89,10 +89,10 @@ action:
             video: /media/local/sweaty-sweating.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 It's getting hot in here, so take off all your clothes (and open
@@ -130,10 +130,10 @@ action:
             video: /media/local/sweaty-sweating.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 It's getting hot in here, so take off all your clothes (and open
@@ -173,10 +173,10 @@ action:
             video: /media/local/freezing-the-shining.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 Now, what cooler than being cool? (Ice cold!) I can't hear you I
@@ -218,10 +218,10 @@ action:
             video: /media/local/freezing-the-shining.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 Now, what cooler than being cool? (Ice cold!) I can't hear you I
@@ -263,10 +263,10 @@ action:
             video: /media/local/freezing-the-shining.mp4
       - if:
           - condition: state
-            entity_id: binary_sensor.sam_s_mac_mini_active
+            entity_id: binary_sensor.mac_mini_active
             state: "on"
         then:
-          - service: notify.mobile_app_sam_s_mac_mini
+          - service: notify.mobile_app_ipad
             data:
               message: >-
                 Now, what cooler than being cool? (Ice cold!) I can't hear you I

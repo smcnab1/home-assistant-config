@@ -7,8 +7,7 @@
 #---Manages entities that are shown or redacted from HA DB
 
 recorder:
-  db_url: !secret recorder_db_url
-  purge_keep_days: 7
+  purge_keep_days: 1
   auto_purge: true
   exclude:
     domains:
@@ -40,49 +39,20 @@ recorder:
   include:
     entities:
       - alarm_control_panel.home_alarm
-      - binary_sensor.backups_stale
       - binary_sensor.bed_sensor_leah
       - binary_sensor.bed_sensor_sam
-      - input_boolean.all_sleeping
-      - input_boolean.leah_sleeping
-      - input_boolean.sam_sleeping
-      - input_button.hubert_watered
-      - light.all_bathroom_lights
-      - light.all_bedroom_lights
-      - light.all_hall_lights
-      - light.all_kitchen_lights
-      - light.all_living_room_lights
-      - light.all_office_lights
-      - sensor.backup_state
       - sensor.bedroom_temperature
       - sensor.bedroom_humidity
       - sensor.bedroom_air_pressure
       - sensor.bathroom_temperature
       - sensor.bathroom_humidity
       - sensor.bathroom_air_pressure
-      - sensor.coral_inference_speed
-      - sensor.database_size
-      - sensor.detection_fps
-      - sensor.disk_free
-      - sensor.disk_use_percent
       - sensor.kitchen_humidity
       - sensor.kitchen_temperature
       - sensor.kitchen_air_pressure
-      - sensor.last_boot
-      - sensor.living_room_camera_process_fps
       - sensor.living_room_humidity
       - sensor.living_room_temperature
       - sensor.living_room_air_pressure
-      - sensor.memory_use_percent
-      - sensor.network_in_eth0
-      - sensor.network_out_eth0
-      - sensor.network_throughput_in_eth0
-      - sensor.network_throughput_out_eth0
-      - sensor.processor_temperature
-      - sensor.processor_use
       - sensor.server_humidity
       - sensor.server_temperature
       - sensor.server_air_pressure
-      - sensor.speed_test_download
-      - sensor.speed_test_ping
-      - sensor.speed_test_upload

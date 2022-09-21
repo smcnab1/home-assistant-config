@@ -7,25 +7,25 @@ fields:
     description: The issue number to close
     example: 42
     selector:
-      text:
+      text: null
   user:
     name: User
     description: The user that closed this issue
     example: Arthur Dent
     default: ""
     selector:
-      text:
+      text: null
 variables:
   issue_num: "{{ int(issue_number) }}"
-  issue: "binary_sensor.issue_{{ issue_num }}"
+  issue: binary_sensor.issue_{{ issue_num }}
   time: "{{ utcnow() }}"
 sequence:
   - alias: Close issue
     service: mqtt.publish
     data_template:
-      topic: "issue_tracker/{{ issue_num }}"
+      topic: issue_tracker/{{ issue_num }}
       retain: true
-      payload: >-
+      payload: |-
         {
           "status": "closed",
           "description": "{{ state_attr(issue, 'description') }}",
@@ -33,3 +33,26 @@ sequence:
           "number": "{{ issue_num }}",
           "user": "{{ user }}"
         }
+  - service: notify.mobile_app_iphone
+    data:
+      title: "{{ state_attr(issue, 'description') }}"
+      message: >-
+        Sam has fixed Issue #{{ issue_num }} that you submitted on {{
+        float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M
+        %p') }}.
+      data:
+        group: issue_{{ number }}
+  - alias: Delete Issue
+    service: mqtt.publish
+    data_template:
+      topic: issue_tracker/{{ issue_num }}
+      retain: true
+      payload: ""
+  - alias: Delete Binary Sensor
+    service: mqtt.publish
+    data_template:
+      topic: homeassistant/binary_sensor/issue_tracker/{{ issue_num }}/config
+      retain: true
+      payload: ""
+
+mode: single

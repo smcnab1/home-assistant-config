@@ -32,16 +32,9 @@ logbook:
       - update
       - weather
       - zone
-    entities:
-      - alarm_control_panel.aqara_hub_m2
   include:
     entities:
       - alarm_control_panel.home_alarm
-      - binary_sensor.backups_stale
-      - input_boolean.all_sleeping
-      - input_boolean.holiday
-      - input_boolean.leah_sleeping
-      - input_boolean.sam_sleeping
       - input_button.hubert_watered
       - light.all_bathroom_lights
       - light.all_bedroom_lights
@@ -49,7 +42,3 @@ logbook:
       - light.all_kitchen_lights
       - light.all_living_room_lights
       - light.all_office_lights
-      - sensor.backup_state
-      - sensor.speed_test_download
-      - sensor.speed_test_ping
-      - sensor.speed_test_upload

@@ -200,7 +200,7 @@ cards:
             content:
               type: custom:frigate-card
               cameras:
-                - camera_entity: camera.hall_camera_frigate
+                - camera_entity: camera.hall_frigate
                   camera_name: Hall Camera
               view:
                 default: live

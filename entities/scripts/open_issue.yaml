@@ -27,6 +27,7 @@ variables:
   issue_num: "{{ issue_number }}"
   issue_desc: "{{ issue_description }}"
   time: "{{ utcnow() }}"
+  giturl: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG] {{ issue_desc }}&assignee=smcnab1&body=**From Local Issue** - {{ issue_desc }}&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"
 sequence:
   - alias: Skip opening empty issues
     condition: template
@@ -73,3 +74,28 @@ sequence:
       entity_id: input_text.issue_description
     data:
       value: ""
+  - service: notify.mobile_app_iphone
+    data:
+      title: "{{ issue_desc }}"
+      message: >-
+        {{ user }} has submitted Issue #{{ issue_num }} on {{
+        float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M
+        %p') }}.
+      data:
+        group: issue_{{ number }}
+        url: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG]&assignee=smcnab1&body=**From%20Local%20Issue**-&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"
+  - if:
+      - condition: state
+        entity_id: binary_sensor.mac_mini_active
+        state: "on"
+    then:
+      - service: notify.mobile_app_ipad
+        data:
+          title: "{{ issue_desc }}"
+          message: >-
+            {{ user }} has submitted Issue #{{ issue_num }} on {{
+            float(time | as_timestamp) | timestamp_custom('%m/%d/%y at %-0I:%M
+            %p') }}.
+          data:
+            group: issue_{{ number }}
+            url: "https://github.com/smcnab1/op-question-mark/issues/new?title=[BUG]&assignee=smcnab1&body=**From%20Local%20Issue**-&labels=%F0%9F%8F%B7%EF%B8%8F+Needs+Triage%2C+%F0%9F%90%9BType%3A+Bug"

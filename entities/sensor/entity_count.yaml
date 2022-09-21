@@ -17,32 +17,32 @@ sensors:
     friendly_name: House Lights On
     unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_lights_on')|float) + 
-        (states('sensor.bedroom_lights_on')|float) +
-        (states('sensor.hall_lights_on')|float) +
-        (states('sensor.kitchen_lights_on')|float) +
-        (states('sensor.living_room_lights_on')|float) +
-        (states('sensor.office_lights_on')|float) }}
+      {{ (states('sensor.bathroom_lights_on')|float(0)|round(0)) + 
+        (states('sensor.bedroom_lights_on')|float(0)|round(0)) +
+        (states('sensor.hall_lights_on')|float(0)|round(0)) +
+        (states('sensor.kitchen_lights_on')|float(0)|round(0)) +
+        (states('sensor.living_room_lights_on')|float(0)|round(0)) +
+        (states('sensor.office_lights_on')|float(0)|round(0)) }}
   house_media_on: ## MEDIA ##
     friendly_name: House Media On
     unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_media_on')|float) + 
-        (states('sensor.bedroom_media_on')|float) +
-        (states('sensor.hall_media_on')|float) +
-        (states('sensor.kitchen_media_on')|float) +
-        (states('sensor.living_room_media_on')|float) +
-        (states('sensor.office_media_on')|float) }}
+      {{ (states('sensor.bathroom_media_on')|float(0)|round(0)) + 
+        (states('sensor.bedroom_media_on')|float(0)|round(0)) +
+        (states('sensor.hall_media_on')|float(0)|round(0)) +
+        (states('sensor.kitchen_media_on')|float(0)|round(0)) +
+        (states('sensor.living_room_media_on')|float(0)|round(0)) +
+        (states('sensor.office_media_on')|float(0)|round(0)) }}
   house_switches_on: ## SWITCHES ##
     friendly_name: House Switches On
     unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_switches_on')|float) + 
-        (states('sensor.bedroom_switches_on')|float) +
-        (states('sensor.hall_switches_on')|float) +
-        (states('sensor.kitchen_switches_on')|float) +
-        (states('sensor.living_room_switches_on')|float) +
-        (states('sensor.office_switches_on')|float) }}
+      {{ (states('sensor.bathroom_switches_on')|float(0)|round(0)) + 
+        (states('sensor.bedroom_switches_on')|float(0)|round(0)) +
+        (states('sensor.hall_switches_on')|float(0)|round(0)) +
+        (states('sensor.kitchen_switches_on')|float(0)|round(0)) +
+        (states('sensor.living_room_switches_on')|float(0)|round(0)) +
+        (states('sensor.office_switches_on')|float(0)|round(0)) }}
 
 #  _          _   _                       
 # | |__  __ _| |_| |_  _ _ ___  ___ _ __  
@@ -63,7 +63,7 @@ sensors:
     unit_of_measurement: "On"
     value_template: >
       {% set media = [
-        states.media_player.as_aftsss_cast,
+        states.media_player.spotify,
 
         ] %}
       {{ media | selectattr('state','eq','on') | list | count }}

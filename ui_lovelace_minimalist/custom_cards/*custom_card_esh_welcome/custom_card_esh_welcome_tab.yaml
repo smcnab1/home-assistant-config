@@ -82,7 +82,7 @@ card_esh_welcome_tab:
         show_entity_picture: false
         name: |
           [[[ return `
-              <span style='color:black;width:100%;'>
+              <span style='width:100%;'>
               Good ${states['sensor.time_of_day'].state}</span>`; ]]]
         styles:
           name:
@@ -115,7 +115,6 @@ card_esh_welcome_tab:
         styles:
           card:
             - background-color: "rgba(0,0,0,0)"
-            - color: var(--text-color-off)
             - font-size: 20px
             - font-weight: 400
             - padding: 12px
@@ -125,7 +124,7 @@ card_esh_welcome_tab:
         name: |
           [[[ return `<div style='display: flex';>
               <div>${states['sensor.neat_time'].state} | </div>
-              <span style='color:black;width:100%;'>
+              <span style='width:100%;'>
               <marquee>${states['sensor.weather_forecast_text'].state}</marquee></span>`; ]]]
 
     item4:

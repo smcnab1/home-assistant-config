@@ -1,0 +1,554 @@
+#           _     _             _                             _   _  __      
+#  _ __ _ _(_)_ _| |_ ___ _ _  | |_____ __ __  ___   _ _  ___| |_(_)/ _|_  _ 
+# | '_ \ '_| | ' \  _/ -_) '_| | / _ \ V  V / |___| | ' \/ _ \  _| |  _| || |
+# | .__/_| |_|_||_\__\___|_|   |_\___/\_/\_/        |_||_\___/\__|_|_|  \_, |
+# |_|                                                                   |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: "Notify Printer Ink Low"
+description: Automation to send me notification when ink in printer gets low.
+mode: single
+trigger:
+  - type: value
+    platform: device
+    device_id: 3b8f7690f18b15d59864af03afac628e
+    entity_id: sensor.office_printer_black_ink
+    domain: sensor
+    below: 10
+    id: BLACKLOW
+    alias: Black - Low
+  - type: value
+    platform: device
+    device_id: 3b8f7690f18b15d59864af03afac628e
+    entity_id: sensor.office_printer_tri_color_ink
+    domain: sensor
+    below: 10
+    id: COLOURLOW
+    alias: Colour - Low
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: REMIND
+    context:
+      user_id:
+        - d5de2d519885447495a552f1d87f0a9d
+    id: REMINDLEAH
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: REMIND
+    context:
+      user_id:
+        - 47cefae3ba0f490c8ccafd6bfedad232
+    id: REMINDSAM
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: ORDER_URI
+    context:
+      user_id:
+        - d5de2d519885447495a552f1d87f0a9d
+    id: ORDEREDLEAH
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: ORDER_URI
+    context:
+      user_id:
+        - 47cefae3ba0f490c8ccafd6bfedad232
+    id: ORDEREDSAM
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: IGNORE
+    context:
+      user_id:
+        - d5de2d519885447495a552f1d87f0a9d
+    id: IGNORELEAH
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: IGNORE
+    context:
+      user_id:
+        - 47cefae3ba0f490c8ccafd6bfedad232
+    id: IGNORESAM
+  - platform: time
+    at: "12:00:00"
+    id: REMINDERTIME
+condition: []
+action:
+  - parallel:
+      - if:
+          - condition: trigger
+            id: BLACKLOW
+            alias: Black Triggered
+        then:
+          - service: notify.mobile_app_iphone
+            data:
+              message: >-
+                The black printer cartridge is almost empty, what would you like
+                to do?
+              title: >-
+                Printer Ink Alert - Black:
+                {{states('sensor.office_printer_black_ink')}}% | Colour:
+                {{states('sensor.office_printer_tri_color_ink')}}%
+              data:
+                actions:
+                  - action: ORDER_URI
+                    title: Order new cartridges now
+                    icon: sfsymbols:cart
+                    uri: >-
+                      https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                  - action: REMIND
+                    title: Remind me Later
+                    icon: sfsymbols:clock
+                  - action: IGNORE
+                    title: Ignore
+                    icon: sfsymbols:xmark
+                    destructive: true
+            alias: Sam Phone - Notify
+          - if:
+              - condition: state
+                entity_id: binary_sensor.mac_mini_active
+                state: "on"
+                alias: If Mac On
+            then:
+              - service: notify.mobile_app_ipad
+                data:
+                  message: >-
+                    The black printer cartridge is almost empty, what would you
+                    like to do?
+                  title: >-
+                    Printer Ink Alert - Black:
+                    {{states('sensor.office_printer_black_ink')}}% | Colour:
+                    {{states('sensor.office_printer_tri_color_ink')}}%
+                  data:
+                    actions:
+                      - action: ORDER_URI
+                        title: Order new cartridges now
+                        icon: sfsymbols:cart
+                        uri: >-
+                          https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                      - action: REMIND
+                        title: Remind me Later
+                        icon: sfsymbols:clock
+                      - action: IGNORE
+                        title: Ignore
+                        icon: sfsymbols:xmark
+                        destructive: true
+                alias: Sam Mac - Notify
+            alias: Sam Mac - Notify (if on)
+          - service: notify.mobile_app_leah_iphone
+            data:
+              message: >-
+                The black printer cartridge is almost empty, what would you like
+                to do?
+              title: >-
+                Printer Ink Alert - Black:
+                {{states('sensor.office_printer_black_ink')}}% | Colour:
+                {{states('sensor.office_printer_tri_color_ink')}}%
+              data:
+                actions:
+                  - action: ORDER_URI
+                    title: Order new cartridges now
+                    icon: sfsymbols:cart
+                    uri: >-
+                      https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                  - action: REMIND
+                    title: Remind me Later
+                    icon: sfsymbols:clock
+                  - action: IGNORE
+                    title: Ignore
+                    icon: sfsymbols:xmark
+                    destructive: true
+            alias: Leah Phone - Notify
+        alias: Black Low
+      - if:
+          - condition: trigger
+            id: COLOURLOW
+            alias: Colour Triggered
+        then:
+          - service: notify.mobile_app_iphone
+            data:
+              message: >-
+                The colour printer cartridge is almost empty, what would you
+                like to do?
+              title: >-
+                Printer Ink Alert - Colour:
+                {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
+                {{states('sensor.office_printer_black_ink')}}%
+              data:
+                actions:
+                  - action: ORDER_URI
+                    title: Order new cartridges now
+                    icon: sfsymbols:cart
+                    uri: >-
+                      https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                  - action: REMIND
+                    title: Remind me Later
+                    icon: sfsymbols:clock
+                  - action: IGNORE
+                    title: Ignore
+                    icon: sfsymbols:xmark
+                    destructive: true
+            alias: Sam Phone - Notify
+          - if:
+              - condition: state
+                entity_id: binary_sensor.mac_mini_active
+                state: "on"
+                alias: If Mac On
+            then:
+              - service: notify.mobile_app_ipad
+                data:
+                  message: >-
+                    The colour printer cartridge is almost empty, what would you
+                    like to do?
+                  title: >-
+                    Printer Ink Alert - Colour:
+                    {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
+                    {{states('sensor.office_printer_black_ink')}}%
+                  data:
+                    actions:
+                      - action: ORDER_URI
+                        title: Order new cartridges now
+                        icon: sfsymbols:cart
+                        uri: >-
+                          https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                      - action: REMIND
+                        title: Remind me Later
+                        icon: sfsymbols:clock
+                      - action: IGNORE
+                        title: Ignore
+                        icon: sfsymbols:xmark
+                        destructive: true
+                alias: Sam Mac - Notify
+            alias: Sam Mac - Notify (if on)
+          - service: notify.mobile_app_leah_iphone
+            data:
+              message: >-
+                The colour printer cartridge is almost empty, what would you
+                like to do?
+              title: >-
+                Printer Ink Alert - Colour:
+                {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
+                {{states('sensor.office_printer_black_ink')}}%
+              data:
+                actions:
+                  - action: ORDER_URI
+                    title: Order new cartridges now
+                    icon: sfsymbols:cart
+                    uri: >-
+                      https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                  - action: REMIND
+                    title: Remind me Later
+                    icon: sfsymbols:clock
+                  - action: IGNORE
+                    title: Ignore
+                    icon: sfsymbols:xmark
+                    destructive: true
+            alias: Leah Phone - Notify
+        alias: Colour Low
+    alias: Notify if Ink Low
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: REMINDLEAH
+            alias: Leah Reminder Set
+        sequence:
+          - service: input_boolean.turn_on
+            data: {}
+            target:
+              entity_id: input_boolean.printer_ink_reminder_leah
+      - conditions:
+          - condition: trigger
+            id: REMINDSAM
+            alias: Sam Reminder Set
+        sequence:
+          - service: input_boolean.turn_on
+            data: {}
+            target:
+              entity_id: input_boolean.printer_ink_reminder_sam
+      - conditions:
+          - condition: trigger
+            id: ORDEREDLEAH
+            alias: Leah Ordered
+        sequence:
+          - service: input_boolean.turn_off
+            data: {}
+            target:
+              entity_id:
+                - input_boolean.printer_ink_reminder_leah
+                - input_boolean.printer_ink_reminder_sam
+            alias: Cancel ALL Reminders
+          - service: notify.mobile_app_iphone
+            data:
+              message: >-
+                It looks like Leah has opened up Amazon to order. What would you
+                like to do?
+              title: Printer Ink Alert
+              data:
+                actions:
+                  - action: OPEN
+                    title: Text Leah
+                    icon: sfsymbols:message.fill
+                    uri: https://wa.link/70vcih
+            alias: Leah Ordered - Notify Sam
+      - conditions:
+          - condition: trigger
+            id: ORDEREDSAM
+            alias: Sam Ordered
+        sequence:
+          - service: input_boolean.turn_off
+            data: {}
+            target:
+              entity_id:
+                - input_boolean.printer_ink_reminder_leah
+                - input_boolean.printer_ink_reminder_sam
+            alias: Cancel ALL Reminders
+          - service: notify.mobile_app_leah_iphone
+            data:
+              message: >-
+                It looks like Sam has opened up Amazon to order. What would you
+                like to do?
+              title: Printer Ink Alert
+              data:
+                actions:
+                  - action: OPEN
+                    title: Text Sam
+                    icon: sfsymbols:message.fill
+                    uri: https://wa.link/3qaoc4
+            alias: Sam Ordered - Notify Leah
+      - conditions:
+          - condition: trigger
+            id: IGNORELEAH
+            alias: Leah Ignored
+        sequence:
+          - service: input_boolean.turn_off
+            data: {}
+            target:
+              entity_id: input_boolean.printer_ink_reminder_leah
+            alias: Stop Notifications
+      - conditions:
+          - condition: trigger
+            id: IGNORESAM
+            alias: Sam Ignored
+        sequence:
+          - service: input_boolean.turn_off
+            data: {}
+            target:
+              entity_id: input_boolean.printer_ink_reminder_sam
+            alias: Stop Notifications
+      - conditions:
+          - condition: trigger
+            id: REMINDERTIME
+        sequence:
+          - choose:
+              - conditions:
+                  - condition: and
+                    conditions:
+                      - type: is_value
+                        condition: device
+                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        entity_id: sensor.office_printer_black_ink
+                        domain: sensor
+                        below: 10
+                      - condition: state
+                        entity_id: input_boolean.printer_ink_reminder_leah
+                        state: "on"
+                sequence:
+                  - service: notify.mobile_app_leah_iphone
+                    data:
+                      message: >-
+                        The black printer cartridge is almost empty, what would
+                        you like to do?
+                      title: >-
+                        Printer Ink Alert - Black:
+                        {{states('sensor.office_printer_black_ink')}}% | Colour:
+                        {{states('sensor.office_printer_tri_color_ink')}}%
+                      data:
+                        actions:
+                          - action: ORDER_URI
+                            title: Order new cartridges now
+                            icon: sfsymbols:cart
+                            uri: >-
+                              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                          - action: REMIND
+                            title: Remind me Later
+                            icon: sfsymbols:clock
+                          - action: IGNORE
+                            title: Ignore
+                            icon: sfsymbols:xmark
+                            destructive: true
+                    alias: Leah Phone - Notify
+              - conditions:
+                  - condition: and
+                    conditions:
+                      - type: is_value
+                        condition: device
+                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        entity_id: sensor.office_printer_black_ink
+                        domain: sensor
+                        below: 10
+                      - condition: state
+                        entity_id: input_boolean.printer_ink_reminder_leah
+                        state: "on"
+                sequence:
+                  - service: notify.mobile_app_leah_iphone
+                    data:
+                      message: >-
+                        The colour printer cartridge is almost empty, what would
+                        you like to do?
+                      title: >-
+                        Printer Ink Alert - Colour:
+                        {{states('sensor.office_printer_tri_color_ink')}}% | 
+                        Black: {{states('sensor.office_printer_black_ink')}}%
+                      data:
+                        actions:
+                          - action: ORDER_URI
+                            title: Order new cartridges now
+                            icon: sfsymbols:cart
+                            uri: >-
+                              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                          - action: REMIND
+                            title: Remind me Later
+                            icon: sfsymbols:clock
+                          - action: IGNORE
+                            title: Ignore
+                            icon: sfsymbols:xmark
+                            destructive: true
+                    alias: Leah Phone - Notify
+              - conditions:
+                  - condition: and
+                    conditions:
+                      - type: is_value
+                        condition: device
+                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        entity_id: sensor.office_printer_black_ink
+                        domain: sensor
+                        below: 10
+                      - condition: state
+                        entity_id: input_boolean.printer_ink_reminder_leah
+                        state: "on"
+                sequence:
+                  - service: notify.mobile_app_iphone
+                    data:
+                      message: >-
+                        The black printer cartridge is almost empty, what would
+                        you like to do?
+                      title: >-
+                        Printer Ink Alert - Black:
+                        {{states('sensor.office_printer_black_ink')}}% | Colour:
+                        {{states('sensor.office_printer_tri_color_ink')}}%
+                      data:
+                        actions:
+                          - action: ORDER_URI
+                            title: Order new cartridges now
+                            icon: sfsymbols:cart
+                            uri: >-
+                              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                          - action: REMIND
+                            title: Remind me Later
+                            icon: sfsymbols:clock
+                          - action: IGNORE
+                            title: Ignore
+                            icon: sfsymbols:xmark
+                            destructive: true
+                    alias: Sam Phone - Notify
+                  - if:
+                      - condition: state
+                        entity_id: binary_sensor.mac_mini_active
+                        state: "on"
+                    then:
+                      - service: notify.mobile_app_ipad
+                        data:
+                          message: >-
+                            The black printer cartridge is almost empty, what
+                            would you like to do?
+                          title: >-
+                            Printer Ink Alert - Black:
+                            {{states('sensor.office_printer_black_ink')}}% |
+                            Colour:
+                            {{states('sensor.office_printer_tri_color_ink')}}%
+                          data:
+                            actions:
+                              - action: ORDER_URI
+                                title: Order new cartridges now
+                                icon: sfsymbols:cart
+                                uri: >-
+                                  https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                              - action: REMIND
+                                title: Remind me Later
+                                icon: sfsymbols:clock
+                              - action: IGNORE
+                                title: Ignore
+                                icon: sfsymbols:xmark
+                                destructive: true
+                        alias: Sam Mac - Notify
+              - conditions:
+                  - condition: and
+                    conditions:
+                      - type: is_value
+                        condition: device
+                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        entity_id: sensor.office_printer_black_ink
+                        domain: sensor
+                        below: 10
+                      - condition: state
+                        entity_id: input_boolean.printer_ink_reminder_leah
+                        state: "on"
+                sequence:
+                  - service: notify.mobile_app_iphone
+                    data:
+                      message: >-
+                        The colour printer cartridge is almost empty, what would
+                        you like to do?
+                      title: >-
+                        Printer Ink Alert - Colour:
+                        {{states('sensor.office_printer_tri_color_ink')}}% | 
+                        Black: {{states('sensor.office_printer_black_ink')}}%
+                      data:
+                        actions:
+                          - action: ORDER_URI
+                            title: Order new cartridges now
+                            icon: sfsymbols:cart
+                            uri: >-
+                              https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                          - action: REMIND
+                            title: Remind me Later
+                            icon: sfsymbols:clock
+                          - action: IGNORE
+                            title: Ignore
+                            icon: sfsymbols:xmark
+                            destructive: true
+                    alias: Sam Phone - Notify
+                  - if:
+                      - condition: state
+                        entity_id: binary_sensor.mac_mini_active
+                        state: "on"
+                    then:
+                      - service: notify.mobile_app_ipad
+                        data:
+                          message: >-
+                            The colour printer cartridge is almost empty, what
+                            would you like to do?
+                          title: >-
+                            Printer Ink Alert - Colour:
+                            {{states('sensor.office_printer_tri_color_ink')}}%
+                            |  Black:
+                            {{states('sensor.office_printer_black_ink')}}%
+                          data:
+                            actions:
+                              - action: ORDER_URI
+                                title: Order new cartridges now
+                                icon: sfsymbols:cart
+                                uri: >-
+                                  https://www.amazon.co.uk/hp-deskjet-2600-ink-cartridge/s?k=hp+deskjet+2600+ink+cartridge&af=%7B%22quartzVehicle%22%3A%222-32%22%2C%22replacementKeywords%22%3A%22hp+deskjet+ink+cartridge%22%7D
+                              - action: REMIND
+                                title: Remind me Later
+                                icon: sfsymbols:clock
+                              - action: IGNORE
+                                title: Ignore
+                                icon: sfsymbols:xmark
+                                destructive: true
+                        alias: Sam Mac - Notify
