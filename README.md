@@ -544,6 +544,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 - [Kiosk Mode](https://github.com/NemesisRE/kiosk-mode) version 1.7.3 by @NemesisRE
 - [My Cards Bundle](https://github.com/AnthonMS/my-cards) version 1.0.2 by @AnthonMS
 - [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities) version 1.11.0 by @thomasloven
+- [Spotify Lovelace Card](https://github.com/custom-cards/spotify-card) version 2.4.0 by @fondberg
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </details>
 <!-- end-hacs-frontend -->
@@ -565,7 +566,7 @@ There is a full list of all of my automations <a href="#allautomations">here</a>
 1.  [Security 👮🚨](#security) (10 automations)
 2.  [Lighting 🌄🌇](#lighting) (37 automations)
 3.  [Transport 🚌🚝](#transport) (7 automations)
-4.  [HA-System ⏰🖥️](#hasystem) (6 automations)
+4.  [HA-System ⏰🖥️](#hasystem) (8 automations)
 5.  [Media 🔊📺](#media) (5 automations)
 6.  [TTS 🔊📱](#tts) (5 automations)
 7.  [Sleeping 🛏️📡](#sleep) (1 automations)
@@ -1136,7 +1137,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- HA-SYSTEM AUTOMATIONS -->
   <a name="hasystem"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (6 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (8 automations)</a></b></summary><blockquote>
 
 <details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/fan_control.yaml">Server Cabinet Fan Control</a></b></summary>
 <b><i>Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs</b></i>
@@ -1184,6 +1185,21 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 - [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)
 - [Wall Panel Battery Blueprint](https://github.com/smcnab1/op-question-mark/blob/master/blueprints/automation/seamus65/wallpanel-battery-management.yaml)</details>
+
+<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Develop/automations/ha_system/backup_stale_notify.yaml">Back-Up Stale Notification</a></b></summary>
+<b><i>Alerts me when updates become stale which require an update. Also gives me ability to remind me later through actionable notifications.</b></i>
+
+&nbsp;&nbsp;_which uses:_
+
+- [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
+- [HA Google Drive Backup Add-On](https://github.com/sabeechen/hassio-google-drive-backup)</details>
+
+<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/smcnab1/issue104/automations/ha_system/tablet_screen_time.yaml">Tablet Screen Time</a></b></summary>
+<b><i>Turns the screen of dashboard tablet off at 23:00hrs unless motion is detected so light doesn't shine under bedroom door.</b></i>
+
+&nbsp;&nbsp;_which uses:_
+
+- [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)</details>
 
 </blockquote></details>
 

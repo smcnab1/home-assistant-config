@@ -6,6 +6,12 @@ labels: "\U0001F41BType: Bug"
 assignees: smcnab1
 
 ---
+=======
+labels: "\U0001F3F7️ Needs Triage, \U0001F41BType: Bug"
+assignees: smcnab1
+
+---
+
 ## **🐛Bug Report**
 
 **Describe the bug**

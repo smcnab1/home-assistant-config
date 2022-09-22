@@ -1,0 +1,19 @@
+#  _        _    _     _                               _   _           
+# | |_ __ _| |__| |___| |_   ___ __ _ _ ___ ___ _ _   | |_(_)_ __  ___ 
+# |  _/ _` | '_ \ / -_)  _| (_-</ _| '_/ -_) -_) ' \  |  _| | '  \/ -_)
+#  \__\__,_|_.__/_\___|\__| /__/\__|_| \___\___|_||_|  \__|_|_|_|_\___|
+#                                                                      
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Tablet Screen Time
+description: Automatically turns off tablet screen to stop shining under bedroom door at 23:00hrs unless motion detected as normal.
+mode: single
+trigger:
+  - platform: time
+    at: "23:00:00"
+condition: []
+action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.dashboard_tablet_screen
