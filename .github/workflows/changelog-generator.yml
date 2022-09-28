@@ -1,0 +1,2 @@
+- name: Simple Changelog Generator
+  uses: srepollock/changelog-generator-action@v0.1.2
