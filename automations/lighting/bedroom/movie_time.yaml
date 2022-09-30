@@ -30,14 +30,34 @@ action:
     target:
       entity_id: automation.lighting_bedroom_movie
   - wait_for_trigger:
-      - platform: state
-        entity_id:
-          - media_player.bedroom_tv
-        to: "off"
+      - platform: device
+        device_id: 222b8d47a5b3ba080ee5e8d36235080a
+        domain: media_player
+        entity_id: media_player.bedroom_tv
+        type: turned_off
     continue_on_timeout: false
-  - service: scene.turn_on
-    data:
-      transition: 60
-    target:
-      entity_id: scene.prebedmovie
+  - if:
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: input_boolean.all_sleeping
+            state: "on"
+          - condition: state
+            entity_id: input_boolean.leah_sleeping
+            state: "on"
+          - condition: state
+            entity_id: input_boolean.sam_sleeping
+            state: "on"
+    then:
+      - service: automation.trigger
+        data:
+          skip_condition: false
+        target:
+          entity_id: automation.lighting_living_room_off
+    else:
+      - service: scene.turn_on
+        data:
+          transition: 20
+        target:
+          entity_id: scene.prebedmovie
 mode: single
