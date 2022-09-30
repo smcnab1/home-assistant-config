@@ -1,0 +1,40 @@
+#       _                                 _   _  __      
+#  __ _| |__ _ _ _ _ __    ___   _ _  ___| |_(_)/ _|_  _ 
+# / _` | / _` | '_| '  \  |___| | ' \/ _ \  _| |  _| || |
+# \__,_|_\__,_|_| |_|_|_|       |_||_\___/\__|_|_|  \_, |
+#                                                   |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Notify
+description: Notification to confirm alarm status
+mode: single
+trigger:
+  - platform: state
+    entity_id:
+      - alarm_control_panel.home_alarm
+    to: armed_away
+    id: ARMED
+  - platform: state
+    entity_id:
+      - alarm_control_panel.home_alarm
+    to: disarmed
+    id: DISARMED
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: ARMED
+        sequence:
+          - service: notify.notify
+            data:
+              title: Alarm Armed
+              message: The Alarm has been Armed
+      - conditions:
+          - condition: trigger
+            id: DISARMED
+        sequence:
+          - service: notify.notify
+            data:
+              title: Alarm Disarmed
+              message: Alarm has been Disarmed

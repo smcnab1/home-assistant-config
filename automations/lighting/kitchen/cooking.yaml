@@ -24,8 +24,8 @@ action:
           transition: 10
           rgb_color:
             - 255
-            - 255
-            - 255
+            - 31
+            - 91
           brightness: 178
         target:
           entity_id: light.kitchen_leds

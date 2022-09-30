@@ -40,16 +40,12 @@ action:
           data:
             push:
               thread-id: homeassistant-mail
-              sound:
-                name: US-EN-Alexa-Mail-Has-Arrived.wav
-                critical: 1
-                volume: 0.3
             actions:
               - action: OPEN
                 title: Amazon
                 uri: https://www.amazon.co.uk/gp/css/order-history
                 icon: |
-                  {%- if states("sensor.mail_amazon_packages")|int(0) > 1 -%}
+                  {%- if states("sensor.mail_amazon_packages")|int(0) > 0 -%}
                     sfsymbols:envelope.badge
                   {%- else -%}
                     sfsymbols:envelope
@@ -58,7 +54,7 @@ action:
                 title: Royal Mail
                 uri: https://www.royalmail.com/track-your-item
                 icon: >
-                  {%- if states("sensor.mail_royal_mail_delivering")|int(0) > 1 -%}
+                  {%- if states("sensor.mail_royal_mail_delivering")|int(0) > 0 -%}
                     sfsymbols:envelope.badge
                   {%- else -%}
                     sfsymbols:envelope
@@ -67,7 +63,7 @@ action:
                 title: Evri
                 uri: https://www.evri.com/track-a-parcel
                 icon: |
-                  {%- if states("sensor.mail_evri_delivering")|int(0) > 1 -%}
+                  {%- if states("sensor.mail_evri_delivering")|int(0) > 0 -%}
                     sfsymbols:envelope.badge
                   {%- else -%}
                     sfsymbols:envelope
@@ -76,7 +72,7 @@ action:
                 title: Mail App
                 uri: message:Mail+and+Parcels
                 icon: >
-                  {%- if states("sensor.mail_packages_in_transit")|int(0) > 1 -%}
+                  {%- if states("sensor.mail_packages_in_transit")|int(0) > 0 -%}
                     sfsymbols:envelope.badge
                   {%- else -%}
                     sfsymbols:envelope
@@ -93,16 +89,12 @@ action:
               data:
                 push:
                   thread-id: homeassistant-mail
-                  sound:
-                    name: US-EN-Alexa-Mail-Has-Arrived.wav
-                    critical: 1
-                    volume: 0.3
                 actions:
                   - action: OPEN
                     title: Amazon
                     uri: https://www.amazon.co.uk/gp/css/order-history
                     icon: >
-                      {%- if states("sensor.mail_amazon_packages")|int(0) > 1 -%}
+                      {%- if states("sensor.mail_amazon_packages")|int(0) > 0 -%}
                         sfsymbols:envelope.badge
                       {%- else -%}
                         sfsymbols:envelope
@@ -111,7 +103,7 @@ action:
                     title: Royal Mail
                     uri: https://www.royalmail.com/track-your-item
                     icon: >
-                      {%- if states("sensor.mail_royal_mail_delivering")|int(0) > 1 -%}
+                      {%- if states("sensor.mail_royal_mail_delivering")|int(0) > 0 -%}
                         sfsymbols:envelope.badge
                       {%- else -%}
                         sfsymbols:envelope
@@ -120,7 +112,7 @@ action:
                     title: Evri
                     uri: https://www.evri.com/track-a-parcel
                     icon: >
-                      {%- if states("sensor.mail_evri_delivering")|int(0) > 1 -%}
+                      {%- if states("sensor.mail_evri_delivering")|int(0) > 0 -%}
                         sfsymbols:envelope.badge
                       {%- else -%}
                         sfsymbols:envelope
@@ -129,7 +121,7 @@ action:
                     title: Mail App
                     uri: message:Mail+and+Parcels
                     icon: >
-                      {%- if states("sensor.mail_amazon_packages")|int(0) > 1 -%}
+                      {%- if states("sensor.mail_amazon_packages")|int(0) > 0 -%}
                         sfsymbols:envelope.badge
                       {%- else -%}
                         sfsymbols:envelope

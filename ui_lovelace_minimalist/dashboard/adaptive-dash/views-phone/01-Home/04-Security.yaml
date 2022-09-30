@@ -83,26 +83,21 @@ cards:
       grid-area: 'camera'
     type: custom:frigate-card
     cameras:
-      - camera_entity: camera.hall_frigate
-        camera_name: Hall
       - camera_entity: camera.bedroom_camera_frigate
-        camera_name: Bedroom
+      - camera_entity: camera.hall_frigate
       - camera_entity: camera.living_room_camera_frigate
-        camera_name: Living Room
     view:
       default: live
+      camera_select: live
+      update_force: true
+      update_cycle_camera: true
     menu:
-      mode: overlay-bottom
-      buttons:
-        image: true
-    live:
-      lazy_load: false
-      auto_unmute: true
-      preload: true
-      controls:
-        thumbnails:
-          media: clips
-          mode: below
+      style: overlay
+      position: top
+      alignment: left
+    timeline:
+      media: all
+
 
         ###############
         ### SENSORS ###
