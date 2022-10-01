@@ -98,6 +98,7 @@ custom_card_page:
             - border-radius: "none"
             - box-shadow: "none"
             - padding: "2px"
+            - margin-left: "relative"
     item2:
       card:
         type: "custom:button-card"
@@ -617,6 +618,11 @@ card_topbar_welcome:
                                   ulm_card_graph_type: fill
                                   ulm_card_graph_hours: 24
                                   ulm_card_graph_group_by: interval
+          - type: 'custom:button-card'
+            template: chip_alarm
+            entity: alarm_control_panel.home_alarm
+            states:
+              - arm_away
     item3:
       card:
         type: "custom:button-card"

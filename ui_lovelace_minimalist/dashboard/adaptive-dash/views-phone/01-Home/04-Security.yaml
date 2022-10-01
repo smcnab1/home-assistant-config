@@ -73,11 +73,6 @@ cards:
         template: "card_title"
         name: "Cameras"
       - type: custom:gap-card
-      - type: 'custom:button-card'
-        template: chip_alarm
-        entity: alarm_control_panel.home_alarm
-        states:
-          - arm_away
 
   - view_layout: ### CAMERAS ###
       grid-area: 'camera'
@@ -114,10 +109,10 @@ cards:
     template:
       - card_binary_sensor_alert
       - card_battery_info
-    entity: binary_sensor.front_door_sensor
+    entity: binary_sensor.front_door
     variables:
       ulm_show_last_changed: true
-      ulm_battery_entity: sensor.front_door_sensor_battery
+      ulm_battery_entity: sensor.front_door_battery
       ulm_card_binary_sensor_alert_name: Front Door
 
   - view_layout: ### HALL ###

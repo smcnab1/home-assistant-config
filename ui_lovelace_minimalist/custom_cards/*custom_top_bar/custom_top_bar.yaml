@@ -62,6 +62,23 @@ custom_top_bar:
             show_label: true
             show_name: true
             variables:
+              custom_top_bar_navigate_path_titlelivingroom: "your topbar navigation path title"        
+            grid-area: "back"
+            styles: 
+              grid:
+                - grid-template-areas: "'i l'"          
+                - justify-self: "center"  
+              card:
+                - background-color: "[[[ return variables.custom_top_bar_color; ]]]"
+            tap_action:
+              action: "navigate"
+              navigation_path: "/lovelace-minimalist-2"
+            icon: "mdi:home"
+          - type: 'custom:button-card'
+            template: chip_mdi_icon_only
+            show_label: true
+            show_name: true
+            variables:
               custom_top_bar_navigate_path_titlehall: "your topbar navigation path title"        
             grid-area: "back"
             styles: 

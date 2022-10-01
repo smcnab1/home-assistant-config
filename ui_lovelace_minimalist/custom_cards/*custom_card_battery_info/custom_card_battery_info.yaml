@@ -1,5 +1,5 @@
 ---
-card_battery_info:
+battery_info:
   variables:
     - ulm_battery_entity:
   styles:

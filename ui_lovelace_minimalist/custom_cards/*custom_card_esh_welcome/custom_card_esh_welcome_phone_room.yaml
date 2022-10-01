@@ -1,14 +1,13 @@
 ---
-card_esh_welcome_phone:
+card_esh_welcome_phone_room:
   variables:
     ulm_weather: "[[[ return variables.ulm_weather]]]"
     ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
     ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
     ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+    ulm_language: "[[[ return hass['language']; ]]]"
     entity_1:
-      entity_id:
-      icon: "[[[ return entity.attributes.icon ]]]"
-      name: "[[[ return entity.attributes.friendly_name ]]]"
+      entity_id: ""
       color: >
         [[[
           var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
@@ -16,9 +15,7 @@ card_esh_welcome_phone:
           return color;
         ]]]
     entity_2:
-      entity_id:
-      icon: "[[[ return entity.attributes.icon  ]]]"
-      name: "[[[ return entity.attributes.friendly_name ]]]"
+      entity_id: ""
       color: >
         [[[
           var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
@@ -26,9 +23,7 @@ card_esh_welcome_phone:
           return color;
         ]]]
     entity_3:
-      entity_id:
-      icon: "[[[ return entity.attributes.icon  ]]]"
-      name: "[[[ return entity.attributes.friendly_name ]]]"
+      entity_id: ""
       color: >
         [[[
           var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
@@ -36,9 +31,7 @@ card_esh_welcome_phone:
           return color;
         ]]]
     entity_4:
-      entity_id:
-      icon: "[[[ return entity.attributes.icon  ]]]"
-      name: "[[[ return entity.attributes.friendly_name ]]]"
+      entity_id: ""
       color: >
         [[[
           var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
@@ -46,9 +39,23 @@ card_esh_welcome_phone:
           return color;
         ]]]
     entity_5:
-      entity_id:
-      icon: "[[[ return entity.attributes.icon  ]]]"
-      name: "[[[ return entity.attributes.friendly_name ]]]"
+      entity_id: ""
+      color: >
+        [[[
+          var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
+          var color = colors[Math.floor(Math.random() * colors.length)];
+          return color;
+        ]]]
+    entity_6:
+      entity_id: ""
+      color: >
+        [[[
+          var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
+          var color = colors[Math.floor(Math.random() * colors.length)];
+          return color;
+        ]]]
+    entity_7:
+      entity_id: ""
       color: >
         [[[
           var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
@@ -57,19 +64,17 @@ card_esh_welcome_phone:
         ]]]
   template:
     - "ulm_language_variables"
+    - "ulm_translation_engine"
   show_icon: false
   show_name: false
   show_label: true
   styles:
     grid:
-      - grid-template-areas: >
-          [[[
-            if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
-              return "\'item1\' \'item2\'";
-            } else {
-              return "\'item1\' \'item2\' \'item3\' \'item4\'";
-            }
-          ]]]
+      - grid-template-areas: |
+          "item1"
+          "item2"
+          "item3"
+          "item4"
       - grid-template-columns: "1fr"
       - grid-template-rows: "min-content min-content"
       - row-gap: "0px"
@@ -79,31 +84,15 @@ card_esh_welcome_phone:
       - padding: "10px"
     custom_fields:
       item3:
-        - display: >
-            [[[
-              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
-                return "none";
-              } else {
-                return "block";
-              }
-            ]]]
+        - display: "block"
       item4:
-        - display: >
-            [[[
-              if(variables.ulm_card_esh_welcome_collapse && states[variables.ulm_card_esh_welcome_collapse].state == 'on'){
-                return "none";
-              } else {
-                return "block";
-              }
-            ]]]
-
+        - display: "block"
   custom_fields:
     item1:
       card:
         type: "custom:button-card"
         template: "card_esh_welcome_topbar_phone"
         variables:
-          ulm_card_esh_welcome_collapse: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
           ulm_weather: "[[[ return variables.ulm_weather]]]"
           ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity ]]]"
           ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
@@ -121,22 +110,7 @@ card_esh_welcome_phone:
         show_label: false
         show_name: true
         show_entity_picture: false
-        name: |
-          [[[
-            var today = new Date();
-            var time = today.getHours()
-            let welcome = '';
-            if (time >= '18'){
-              welcome = variables.ulm_evening;
-            } else if (time >= '12'){
-              welcome = variables.ulm_afternoon;
-            } else if (time >= '5'){
-              welcome = variables.ulm_morning;
-            } else {
-              welcome = variables.ulm_hello;
-            }
-            return welcome + ', ' + '   <br>' + user.name + '!';
-          ]]]
+        name: "[[[ return variables.room_name ]]]"
         styles:
           name:
             - align-self: "start"
@@ -154,38 +128,41 @@ card_esh_welcome_phone:
             - padding-bottom: "8px"
     item3:
       card:
-        type: custom:button-card
-        tap_action:
-          action: fire-dom-event
-          browser_mod:
-            service: browser_mod.popup
-            data:
-              size: fullscreen
-              content:
-                type: "custom:button-card"
-                template: "popup_weather_forecast"
-                entity: weather.weather
+        type: "custom:button-card"
+        show_icon: true
+        show_label: true
+        show_name: true
+        show_entity_picture: false
+        name: "Quick Actions"
+        icon: "mdi:dots-vertical"
         styles:
-          card:
-            - background-color: "rgba(0,0,0,0)"
-            - font-size: 20px
-            - font-weight: 400
-            - padding: 12px
-            - box-shadow: "none"
+          icon:
+            - height: "20px"
+            - filter: "opacity(50%)"
           name:
-            - justify-self: stretch
-        name: |
-          [[[ return `<div style='display: flex';>
-              <div>${states['sensor.neat_time'].state} | </div>
-              <span style='width:100%;'>
-              <marquee>${states['sensor.weather_forecast_text'].state}</marquee></span>`; ]]]
+            - align-self: "start"
+            - justify-self: "start"
+            - font-weight: "bold"
+            - font-size: "18px"
+            - margin-left: "16px"
+          grid:
+            - grid-template-areas: "'n i'"
+            - grid-template-columns: "6fr 1fr"
+            - grid-template-rows: "min-content min-content"
+            - text-align: "start"
+          card:
+            - box-shadow: "none"
+            - padding-bottom: "0px"
+            - bottom: "10px"
     item4:
       card:
         type: "custom:button-card"
         template: >
           [[[
-            if(variables.entity_1.nav && variables.entity_2.nav && variables.entity_3.nav && variables.entity_4.nav && variables.entity_5.nav){
-              return 'card_esh_welcome_nav_phone'
+            if(variables?.entity_1?.entity_id != ""){
+              return 'card_scenes_welcome'
+            } else {
+              return 'card_scenes_welcome_auto'
             }
           ]]]
         styles:
@@ -199,8 +176,9 @@ card_esh_welcome_phone:
           entity_3: "[[[ return variables.entity_3]]]"
           entity_4: "[[[ return variables.entity_4]]]"
           entity_5: "[[[ return variables.entity_5]]]"
-
-card_esh_welcome_title_phone:
+          entity_6: "[[[ return variables.entity_6]]]"
+          entity_7: "[[[ return variables.entity_7]]]"
+card_title_welcome:
   tap_action:
     action: "none"
   show_icon: false
@@ -229,152 +207,17 @@ card_esh_welcome_title_phone:
       - font-size: "1rem"
       - opacity: "0.4"
 
-card_esh_welcome_nav_phone:
-  show_icon: false
-  show_name: true
-  show_label: false
-  styles:
-    grid:
-      - grid-template-areas: "'item1 item2 item3 item4 item5'"
-      - grid-template-columns: "1fr 1fr 1fr 1fr 1fr"
-      - grid-template-rows: "min-content"
-      - justify-items: "center"
-    card:
-      - border-radius: "var(--border-radius)"
-      - box-shadow: "var(--box-shadow)"
-      - padding: "12px"
-      - overflow: "visible"
-  custom_fields:
-    item1:
-      card:
-        type: "custom:button-card"
-        template: "card_esh_welcome_pill_nav_phone"
-        custom_fields:
-          item1:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_1.nav; ]]]"
-              icon: "[[[ return variables.entity_1.icon ]]]"
-              styles:
-                icon:
-                  - color: "[[[ return `rgba(var(--color-${variables.entity_1.color}), 1)`;]]]"
-                img_cell:
-                  - background-color: "[[[ return `rgba(var(--color-${variables.entity_1.color}), 0.20)`;]]]"
-          item2:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_1.nav; ]]]"
-              name: "[[[ return variables.entity_1.name ]]]"
-    item2:
-      card:
-        type: "custom:button-card"
-        template: "card_esh_welcome_pill_nav_phone"
-        entity: "[[[ return variables.entity_2.entity_id ]]]"
-        custom_fields:
-          item1:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_2.nav; ]]]"
-              icon: "[[[ return variables.entity_2.icon ]]]"
-              styles:
-                icon:
-                  - color: "[[[ return `rgba(var(--color-${variables.entity_2.color}), 1)`;]]]"
-                img_cell:
-                  - background-color: "[[[ return `rgba(var(--color-${variables.entity_2.color}), 0.20)`;]]]"
-          item2:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_2.nav; ]]]"
-              name: "[[[ return variables.entity_2.name ]]]"
-    item3:
-      card:
-        type: "custom:button-card"
-        template: "card_esh_welcome_pill_nav_phone"
-        entity: "[[[ return variables.entity_3.entity_id ]]]"
-        custom_fields:
-          item1:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_3.nav; ]]]"
-              icon: "[[[ return variables.entity_3.icon ]]]"
-              styles:
-                icon:
-                  - color: "[[[ return `rgba(var(--color-${variables.entity_3.color}), 1)`;]]]"
-                img_cell:
-                  - background-color: "[[[ return `rgba(var(--color-${variables.entity_3.color}), 0.20)`;]]]"
-          item2:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_3.nav; ]]]"
-              name: "[[[ return variables.entity_3.name ]]]"
-    item4:
-      card:
-        type: "custom:button-card"
-        template: "card_esh_welcome_pill_nav_phone"
-        entity: "[[[ return variables.entity_4.entity_id ]]]"
-        custom_fields:
-          item1:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_4.nav; ]]]"
-              icon: "[[[ return variables.entity_4.icon ]]]"
-              styles:
-                icon:
-                  - color: "[[[ return `rgba(var(--color-${variables.entity_4.color}), 1)`;]]]"
-                img_cell:
-                  - background-color: "[[[ return `rgba(var(--color-${variables.entity_4.color}), 0.20)`;]]]"
-          item2:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_4.nav; ]]]"
-              name: "[[[ return variables.entity_4.name ]]]"
-    item5:
-      card:
-        type: "custom:button-card"
-        template: "card_esh_welcome_pill_nav_phone"
-        custom_fields:
-          item1:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_5.nav; ]]]"
-              icon: "[[[ return variables.entity_5.icon ]]]"
-              styles:
-                icon:
-                  - color: "[[[ return `rgba(var(--color-${variables.entity_5.color}), 1)`;]]]"
-                img_cell:
-                  - background-color: "[[[ return `rgba(var(--color-${variables.entity_5.color}), 0.20)`;]]]"
-          item2:
-            card:
-              type: "custom:button-card"
-              tap_action:
-                action: "navigate"
-                navigation_path: "[[[ return variables.entity_1.nav; ]]]"
-              name: "[[[ return variables.entity_5.name ]]]"
-
-card_esh_welcome_pill_nav_phone:
+# pill
+card_scenes_pill_welcome:
   show_icon: false
   show_label: false
   show_name: false
   state:
-    - value: "on"
+    - operator: "template"
+      value: >
+        [[[
+          return (entity.state !== 'on' && entity.state !== 'playing' && entity.state != variables?.state)
+        ]]]
       styles:
         card:
           - overflow: "visible"
@@ -408,14 +251,61 @@ card_esh_welcome_pill_nav_phone:
         show_icon: true
         show_label: false
         show_name: false
+        tap_action:
+          action: >
+            [[[
+              if(variables?.nav_path){
+                return "navigate"
+              } else {
+                return "call-service"
+              }
+            ]]]
+          service: >
+            [[[
+              if(entity.entity_id.startsWith("scene.")){
+                return "scene.turn_on"
+              }
+              else if(entity.entity_id.startsWith("media_player.")){
+                return "media_player.media_play_pause"
+              }
+              else if(entity.entity_id.startsWith("automation.")){
+                return "automation.trigger"
+              }
+              else if(entity.entity_id.startsWith("input_select.")){
+                return "input_select.select_option"
+              } else {
+                return "homeassistant.toggle"
+              }
+            ]]]
+          navigation_path: "[[[ return variables?.nav_path; ]]]"
+          service_data: |
+            [[[
+              var obj;
+              if( entity.entity_id.startsWith("input_select.") )
+                obj = { entity_id: entity.entity_id, option: variables.state };
+              else
+                obj = { entity_id: entity.entity_id };
+              return obj;
+            ]]]
         styles:
           grid:
             - grid-template-areas: "i"
           icon:
-            - color: "[[[ return `rgba(var(--color-theme), 0.20)`;]]]"
+            - color: >
+                [[[
+                  var color = variables?.color
+                  if(hass.themes.darkMode){var color = "#FAFAFA";}
+                  return `rgba(var(--color-${color}), 1)`;
+                ]]]
             - width: "20px"
           img_cell:
-            - background-color: "[[[ return `rgba(var(--color-theme), 0.05)`;]]] "
+            - background-color: >
+                [[[
+                  var color = variables?.color
+                  var opacity = '0.20'
+                  if(hass.themes.darkMode){var opacity = '1'}
+                  return `rgba(var(--color-${color}), ${opacity})`;
+                ]]]
             - border-radius: "50%"
             - width: "42px"
             - height: "42px"
@@ -424,7 +314,11 @@ card_esh_welcome_pill_nav_phone:
             - border-radius: "50px"
             - padding: "5px"
         state:
-          - value: "on"
+          - operator: "template"
+            value: >
+              [[[
+                return (entity.state !== 'on' && entity.state !== 'playing' && entity.state != variables?.state)
+              ]]]
             styles:
               card:
                 - overflow: "visible"
@@ -441,19 +335,57 @@ card_esh_welcome_pill_nav_phone:
         type: "custom:button-card"
         show_icon: false
         show_label: false
+        tap_action:
+          action: >
+            [[[
+              if(variables?.nav_path){
+                return "navigate"
+              } else {
+                return "call-service"
+              }
+            ]]]
+          navigation_path: "[[[ return variables?.nav_path; ]]]"
+          service: >
+            [[[
+              if(entity.entity_id.startsWith("scene.")){
+                return "scene.turn_on"
+              }
+              else if(entity.entity_id.startsWith("media_player.")){
+                return "media_player.media_play_pause"
+              }
+              else if(entity.entity_id.startsWith("automation.")){
+                return "automation.trigger"
+              }
+              else if(entity.entity_id.startsWith("input_select.")){
+                return "input_select.select_option"
+              } else {
+                return "homeassistant.toggle"
+              }
+            ]]]
+          service_data: |
+            [[[
+              var obj;
+              if( entity.entity_id.startsWith("input_select.") )
+                obj = { entity_id: entity.entity_id, option: variables.state };
+              else
+                obj = { entity_id: entity.entity_id };
+              return obj;
+            ]]]
         styles:
           grid:
             - grid-template-areas: "n"
           name:
+            - justify-self: "center"
             - font-weight: "bold"
             - font-size: "9.5px"
-            - width: "33px"
             - padding-bottom: "7px"
+            - overflow: "[[[return (entity.state !== 'on' && entity.state !== 'playing' && entity.state != variables?.state) ? 'visible' : 'hidden']]]"
           card:
             - box-shadow: "none"
             - padding: "0px 5px 5px 5px"
             - margin-top: "-5px"
             - border-radius: "50px"
+            - overflow: "[[[return (entity.state !== 'on' && entity.state !== 'playing' && entity.state != variables?.state) ? 'visible' : 'hidden']]]"
 
 card_esh_welcome_topbar_phone:
   show_icon: false
@@ -474,8 +406,7 @@ card_esh_welcome_topbar_phone:
       card:
         type: "custom:button-card"
         template: "chips"
-        entity: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
-        icon: "mdi:chevron-up"
+        icon: "mdi:home"
         show_icon: true
         styles:
           grid:
@@ -489,17 +420,10 @@ card_esh_welcome_topbar_phone:
                     return "var(--box-shadow)";
                   }
                 ]]]
-        state:
-          - value: "on"
-            icon: "mdi:chevron-down"
-            styles:
-              icon:
-                - color: "rgb(var(--color-theme))"
         tap_action:
-          action: "call-service"
-          service: "input_boolean.toggle"
-          service_data:
-            entity_id: "[[[ return variables.ulm_card_esh_welcome_collapse ]]]"
+          action: "navigate"
+          navigation_path: "/lovelace-minimalist-2/home"
+          
     item2:
       card:
         type: "horizontal-stack"
@@ -762,8 +686,10 @@ card_esh_welcome_topbar_phone:
                                   ulm_card_graph_hours: 24
                                   ulm_card_graph_group_by: interval
           - type: 'custom:button-card'
-            template: chip_alarm
-            entity: alarm_control_panel.alarm
+            template: chip_double_state
+            variables:
+              ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1 ]]]"
+              ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2 ]]]"
     item3:
       card:
         type: "custom:button-card"
@@ -784,3 +710,67 @@ card_esh_welcome_topbar_phone:
                     return "var(--box-shadow)";
                   }
                 ]]]
+# auto-entities
+card_scenes_welcome_auto:
+  show_icon: false
+  show_name: true
+  show_label: false
+  variables:
+    colors: >
+      [[[
+        var colors = ['yellow', 'blue', 'red', 'purple','green', 'pink'];
+        var color = colors[Math.floor(Math.random() * colors.length)];
+        return color;
+      ]]]
+  styles:
+    grid:
+      - grid-template-areas: "item1"
+      - display: "flex"
+      - justify-content: "center"
+    card:
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:auto-entities"
+        card:
+          type: "grid"
+          columns: 5
+          square: false
+        card_param: "cards"
+        sort:
+          count: 5
+        filter:
+          include:
+            - domain: "light"
+              options:
+                type: "custom:button-card"
+                template: "card_scenes_pill_welcome"
+                custom_fields:
+                  item1:
+                    card:
+                      type: "custom:button-card"
+                      entity: "this.entity_id"
+                      styles:
+                        icon:
+                          - color: >
+                              [[[
+                                var color = variables.colors
+                                if(hass.themes.darkMode){var color = "#FAFAFA";}
+                                return `rgba(var(--color-${color}), 1)`;
+                              ]]]
+                          - width: "20px"
+                        img_cell:
+                          - background-color: >
+                              [[[
+                                var color = variables.colors
+                                var opacity = '0.20'
+                                if(hass.themes.darkMode){var opacity = '1'}
+                                return `rgba(var(--color-${color}), ${opacity})`;
+                              ]]]
+                  item2:
+                    card:
+                      type: "custom:button-card"
+                      entity: "this.entity_id"

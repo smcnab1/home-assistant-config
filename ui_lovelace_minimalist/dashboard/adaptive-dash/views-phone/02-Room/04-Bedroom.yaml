@@ -55,11 +55,10 @@ cards:
   - view_layout: ### TOP BAR ###
       grid-area: "topbar"
     type: "custom:button-card"
-    template: "custom_card_welcome"
+    template: "card_esh_welcome_phone_room"
     variables:
       ulm_weather: "weather.weather"
-      ulm_room_name: Bedroom
-      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      room_name: Bedroom
       ulm_chip_icon_state_entity: "sensor.bedroom_temperature"
       ulm_chip_double_state_entity1: "sensor.bedroom_lights_on"
       ulm_chip_double_state_entity2: "sensor.bedroom_switches_on"
@@ -78,16 +77,6 @@ cards:
         icon: "mdi:movie"
         name: "Movie"
         color: "green"
-      entity_4:
-        entity_id: "media_player.bedroom_tv"
-        icon: "mdi:television"
-        name: "TV"
-        color: "pink"
-      entity_5:
-        entity_id: "camera.bedroom_camera_frigate"
-        icon: "mdi:cctv"
-        name: "Camera"
-        color: "purple"
 
         ################
         ### LIGHTING ###
