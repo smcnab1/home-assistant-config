@@ -1,0 +1,68 @@
+#  _        _    _     _           _            _                         _        _           
+# | |_ __ _| |__| |___| |_   ___  | |__  ___ __| |_ _ ___  ___ _ __    __| |_ __ _| |_ _  _ ___
+# |  _/ _` | '_ \ / -_)  _| |___| | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  (_-<  _/ _` |  _| || (_-<
+#  \__\__,_|_.__/_\___|\__|       |_.__/\___\__,_|_| \___/\___/_|_|_| /__/\__\__,_|\__|\_,_/__/
+#                                                                                              
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "bar bar bar bar bar bar"
+    "scenes scenes scenes scenes scenes scenes"
+
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "bar bar bar bar bar bar"
+        "scenes scenes scenes scenes scenes scenes"
+
+view_layout:
+  grid-area: "stat"
+cards:
+  ##################
+  ### STATUS BAR ###
+  ##################
+  - view_layout: ### TOP BAR STATUS ###
+      grid-area: "bar"
+    type: custom:button-card
+    template: top_bar_status
+    variables:
+      top_bar_status_room_name: "Bedroom"
+      top_bar_status_room_icon: "mdi:sofa"
+      ulm_chip_double_state_entity1: sensor.bedroom_lights_on
+      ulm_chip_double_state_entity2: sensor.bedroom_switches_on
+      ulm_chip_icon_state_entity: sensor.bedroom_temperature
+        #################
+        ### SCENE BAR ###
+        #################
+  - view_layout: ### SCENES TOGGLE ###
+      grid-area: "scenes"
+    type: "custom:button-card"
+    template: "card_scenes_welcome"
+    variables:
+      entity_1:
+        entity_id: "automation.lighting_bedroom_day"
+        icon: "mdi:weather-sunny"
+        name: "Day"
+        color: "yellow"
+      entity_2:
+        entity_id: "automation.lighting_bedroom_night"
+        icon: "mdi:weather-night"
+        name: "Night"
+        color: "blue"
+      entity_3:
+        entity_id: "automation.lighting_bedroom_movie"
+        icon: "mdi:movie"
+        name: "Movie"
+        color: "green"
+      entity_4:
+        entity_id: "automation.lighting_bedroom_off"
+        icon: "mdi:lightbulb-off"
+        name: "All Off"
+        color: "red"

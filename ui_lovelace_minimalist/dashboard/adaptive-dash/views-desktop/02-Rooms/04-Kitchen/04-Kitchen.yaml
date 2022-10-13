@@ -1,0 +1,159 @@
+#  _        _    _     _           _   _ _      _                          _           _ 
+# | |_ __ _| |__| |___| |_   ___  | |_(_) |_ __| |_  ___ _ _    __ ___ _ _| |_ _ _ ___| |
+# |  _/ _` | '_ \ / -_)  _| |___| | / / |  _/ _| ' \/ -_) ' \  / _/ _ \ ' \  _| '_/ _ \ |
+#  \__\__,_|_.__/_\___|\__|       |_\_\_|\__\__|_||_\___|_||_| \__\___/_||_\__|_| \___/_|
+#                                                                                        
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+    "main main main leds leds leds"
+    "medtitle medtitle medtitle medtitle medtitle medtitle"
+    "tv tv tv tv tv tv"
+    "sonos sonos sonos google google google"
+    "sectitle sectitle sectitle sectitle sectitle sectitle"
+    "motion motion motion motion motion motion"
+    "camera camera camera camera camera camera"
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+        "main main main leds leds leds"
+        "disp disp disp tvleds tvleds tvleds"
+        "lava lava lava lamp lamp lamp"
+        "medtitle medtitle medtitle medtitle medtitle medtitle"
+        "sonos sonos sonos google google google"
+        "sectitle sectitle sectitle sectitle sectitle sectitle"
+        "motion motion motion motion motion motion"
+        "camera camera camera camera camera camera"
+
+view_layout:
+  grid-area: "popup1"
+cards:
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING TITLE ###
+      grid-area: "lxtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Lighting"
+
+  - view_layout: ### MAIN LIGHTS ###
+      grid-area: "main"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.kitchen_main_lights
+    variables:
+      ulm_card_light_name: Main Lights
+      ulm_card_light_icon: mdi:ceiling-light
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LEDS ###
+      grid-area: "leds"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.kitchen_leds
+    variables:
+      ulm_card_light_name: LEDs
+      ulm_card_light_icon: mdi:led-strip
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+
+        #############
+        ### MEDIA ###
+        #############
+  - view_layout: ### MEDIA TITLE ###
+      grid-area: "medtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Media"
+
+  - view_layout: ### SONOS ###
+      grid-area: "sonos"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.living_room_sonos
+    variables:
+      ulm_card_media_player_name: Sonos
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon: mdi:speaker
+
+  - view_layout: ### GOOGLE HOME ###
+      grid-area: "google"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.living_room
+    variables:
+      ulm_card_media_player_name: Google Home
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon:
+        mdi:google-assistant
+
+        ################
+        ### SECURITY ###
+        ################
+  - view_layout: ### SECURITY TITLE ###
+      grid-area: "sectitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Security"
+
+  - view_layout: ### MOTION SENSOR ###
+      grid-area: "motion"
+    type: "custom:button-card"
+    template:
+      - card_binary_sensor_alert
+      - battery_info
+    entity: binary_sensor.kitchen_motion
+    variables:
+      ulm_show_last_changed: true
+      ulm_battery_entity: sensor.kitchen_motion_battery
+      ulm_card_binary_sensor_alert_name: Motion
+
+  - view_layout: ### CAMERA ###
+      grid-area: "camera"
+    type: custom:restriction-card
+    restrictions:
+      pin:
+        code: 1550
+    card:
+      type: "custom:button-card"
+      template: card_vertical_button
+      entity: input_boolean.test_toggle
+      name: Kitchen Camera
+      icon: mdi:cctv
+      tap_action:
+        action: fire-dom-event
+        browser_mod:
+          service: browser_mod.popup
+          data:
+            title: "Kitchen Camera"
+            content:
+              type: custom:frigate-card
+              cameras:
+                - camera_entity: camera.living_room_camera_frigate
+              view:
+                default: live
+                camera_select: live
+                update_force: true
+                update_cycle_camera: true
+              menu:
+                style: overlay
+                position: top
+                alignment: left
+              timeline:
+                media: all

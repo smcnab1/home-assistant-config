@@ -1,0 +1,161 @@
+#  _        _    _     _           _ _     _                                             _           _
+# | |_ __ _| |__| |___| |_   ___  | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    __ ___ _ _| |_ _ _ ___| |
+# |  _/ _` | '_ \ / -_)  _| |___| | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  / _/ _ \ ' \  _| '_/ _ \ |
+#  \__\__,_|_.__/_\___|\__|       |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_| \__\___/_||_\__|_| \___/_|
+#                                                |___/
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+    "main main main leds leds leds"
+    "disp disp disp tvleds tvleds tvleds"
+    "lava lava lava lamp lamp lamp"
+    "medtitle medtitle medtitle medtitle medtitle medtitle"
+    "tv tv tv tv tv tv"
+    "sonos sonos sonos google google google"
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "lxtitle lxtitle lxtitle lxtitle lxtitle lxtitle"
+        "main main main leds leds leds"
+        "disp disp disp tvleds tvleds tvleds"
+        "lava lava lava lamp lamp lamp"
+        "medtitle medtitle medtitle medtitle medtitle medtitle"
+        "tv tv tv tv tv tv"
+        "sonos sonos sonos google google google"
+
+view_layout:
+  grid-area: "popup1"
+cards:
+        ################
+        ### LIGHTING ###
+        ################
+  - view_layout: ### LIGHTING TITLE ###
+      grid-area: "lxtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Lighting"
+
+  - view_layout: ### MAIN LIGHTS ###
+      grid-area: "main"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_main_light
+    variables:
+      ulm_card_light_name: Main Lights
+      ulm_card_light_icon: mdi:ceiling-light
+      ulm_card_light_enable_color: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LEDS ###
+      grid-area: "leds"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_leds
+    variables:
+      ulm_card_light_name: LEDs
+      ulm_card_light_icon: mdi:led-strip
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### DISPLAY LED ###
+      grid-area: "disp"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_display_led
+    variables:
+      ulm_card_light_name: Display LEDs
+      ulm_card_light_icon: mdi:led-strip
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### TV LED ###
+      grid-area: "tvleds"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_tv_leds
+    variables:
+      ulm_card_light_name: TV LEDs
+      ulm_card_light_icon: mdi:led-strip
+      ulm_card_light_enable_color: true
+      ulm_card_light_enable_popup: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LAVA LAMP ###
+      grid-area: "lava"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_lava_lamp
+    variables:
+      ulm_card_light_name: Lava Lamp
+      ulm_card_light_icon: mdi:lava-lamp
+      ulm_card_light_enable_color: true
+      ulm_card_light_force_background_color: true
+
+  - view_layout: ### LAMP ###
+      grid-area: "lamp"
+    type: "custom:button-card"
+    template: card_light
+    entity: light.living_room_lamp
+    variables:
+      ulm_card_light_name: Lamp
+      ulm_card_light_icon: mdi:floor-lamp
+      ulm_card_light_enable_color: true
+      ulm_card_light_force_background_color:
+        true
+
+        #############
+        ### MEDIA ###
+        #############
+  - view_layout: ### MEDIA TITLE ###
+      grid-area: "medtitle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Media"
+
+  - view_layout: ### TV ###
+      grid-area: "tv"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.living_room_tv
+    variables:
+      ulm_card_media_player_name: TV
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon: mdi:television
+
+  - view_layout: ### SONOS ###
+      grid-area: "sonos"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.living_room_sonos
+    variables:
+      ulm_card_media_player_name: Sonos
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon: mdi:speaker
+
+  - view_layout: ### GOOGLE HOME ###
+      grid-area: "google"
+    type: "custom:button-card"
+    template: card_media_player
+    entity: media_player.living_room
+    variables:
+      ulm_card_media_player_name: Google Home
+      ulm_card_media_player_enable_popup: true
+      ulm_card_media_player_enable_controls: true
+      ulm_card_media_player_enable_art: true
+      ulm_card_media_player_more_info: true
+      ulm_card_media_player_icon:
+        mdi:google-assistant
