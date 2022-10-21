@@ -1,0 +1,76 @@
+#  _        _    _     _           _   _ _      _                  _     _        _ _ 
+# | |_ __ _| |__| |___| |_   ___  | |_(_) |_ __| |_  ___ _ _    __| |___| |_ __ _(_) |
+# |  _/ _` | '_ \ / -_)  _| |___| | / / |  _/ _| ' \/ -_) ' \  / _` / -_)  _/ _` | | |
+#  \__\__,_|_.__/_\___|\__|       |_\_\_|\__\__|_||_\___|_||_| \__,_\___|\__\__,_|_|_|
+#                                                                                     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+type: "custom:layout-card"
+layout_type: "custom:grid-layout"
+layout:
+  # Tablet portrait
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+  grid-template-areas: |
+    "clititle clititle clititle clititle clititle clititle"
+    "temp temp temp temp temp temp"
+    "humid humid humid pres pres pres"
+
+  mediaquery:
+    # Tablet
+    "(max-width: 1280px)":
+      grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr"
+      grid-template-areas: |
+        "clititle clititle clititle clititle clititle clititle"
+        "temp temp temp temp temp temp"
+        "humid humid humid pres pres pres"
+
+view_layout:
+  grid-area: "popup2"
+cards:
+        ######################
+        ### CLIMATE STATUS ###
+        ######################
+  - view_layout: ### CLIMATE TITLE ###
+      grid-area: "clititle"
+    type: "custom:button-card"
+    template: "custom_card_title"
+    name: "Climate"
+
+  - view_layout: ### TEMPERATURE STATUS ###
+      grid-area: "temp"
+    type: 'custom:button-card'
+    template: card_graph
+    entity: sensor.kitchen_temperature
+    variables:
+      ulm_card_graph_color: "var(--google-red)"
+      ulm_card_graph_name: Temperature
+      ulm_card_graph_entity: sensor.kitchen_temperature
+      ulm_card_graph_type: fill
+      ulm_card_graph_hours: 24
+      ulm_card_graph_group_by: interval
+
+  - view_layout: ### HUMIDITY STATUS ###
+      grid-area: "humid"
+    type: 'custom:button-card'
+    template: card_graph
+    entity: sensor.kitchen_humidity
+    variables:
+      ulm_card_graph_color: "var(--google-blue)"
+      ulm_card_graph_name: Humidity
+      ulm_card_graph_entity: sensor.kitchen_humidity
+      ulm_card_graph_type: fill
+      ulm_card_graph_hours: 24
+      ulm_card_graph_group_by: interval
+
+  - view_layout: ### AIR PRESSURE STATUS ###
+      grid-area: "pres"
+    type: 'custom:button-card'
+    template: card_graph
+    entity: sensor.kitchen_air_pressure
+    variables:
+      ulm_card_graph_color: "var(--google-yellow)"
+      ulm_card_graph_name: Air Pressure
+      ulm_card_graph_entity: sensor.kitchen_air_pressure
+      ulm_card_graph_type: fill
+      ulm_card_graph_hours: 24
+      ulm_card_graph_group_by: interval

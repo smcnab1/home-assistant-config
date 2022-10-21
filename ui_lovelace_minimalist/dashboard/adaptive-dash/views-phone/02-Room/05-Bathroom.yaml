@@ -49,11 +49,10 @@ cards:
   - view_layout: ### TOP BAR ###
       grid-area: "topbar"
     type: "custom:button-card"
-    template: "custom_card_welcome"
+    template: "card_esh_welcome_phone_room"
     variables:
       ulm_weather: "weather.weather"
-      ulm_room_name: Bathroom
-      ulm_chip_back_path: "/lovelace-minimalist-2/home"
+      room_name: Bathroom
       ulm_chip_icon_state_entity: "sensor.bathroom_temperature"
       ulm_chip_double_state_entity1: "sensor.bathroom_lights_on"
       ulm_chip_double_state_entity2: "sensor.bathroom_switches_on"

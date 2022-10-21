@@ -509,6 +509,8 @@ card_esh_welcome_topbar_phone:
             variables:
               ulm_chip_icon_state_icon: "🌡️"
               ulm_chip_icon_state_entity: "[[[ return variables.ulm_chip_icon_state_entity; ]]]"
+              ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1 ]]]"
+              ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2 ]]]"
             styles:
               card:
                 - width: "100px"
@@ -759,11 +761,9 @@ card_esh_welcome_topbar_phone:
                                   ulm_card_graph_type: fill
                                   ulm_card_graph_hours: 24
                                   ulm_card_graph_group_by: interval
-          - type: "custom:button-card"
-            template: chip_double_state
-            variables:
-              ulm_chip_double_state_entity1: "[[[ return variables.ulm_chip_double_state_entity1; ]]]"
-              ulm_chip_double_state_entity2: "[[[ return variables.ulm_chip_double_state_entity2; ]]]"
+          - type: 'custom:button-card'
+            template: chip_alarm
+            entity: alarm_control_panel.alarm
     item3:
       card:
         type: "custom:button-card"

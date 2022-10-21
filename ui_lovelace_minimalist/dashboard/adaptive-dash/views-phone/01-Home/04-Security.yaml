@@ -73,36 +73,26 @@ cards:
         template: "card_title"
         name: "Cameras"
       - type: custom:gap-card
-      - type: 'custom:button-card'
-        template: chip_alarm
-        entity: alarm_control_panel.home_alarm
-        states:
-          - arm_away
 
   - view_layout: ### CAMERAS ###
       grid-area: 'camera'
     type: custom:frigate-card
     cameras:
-      - camera_entity: camera.hall_frigate
-        camera_name: Hall
       - camera_entity: camera.bedroom_camera_frigate
-        camera_name: Bedroom
+      - camera_entity: camera.hall_frigate
       - camera_entity: camera.living_room_camera_frigate
-        camera_name: Living Room
     view:
       default: live
+      camera_select: live
+      update_force: true
+      update_cycle_camera: true
     menu:
-      mode: overlay-bottom
-      buttons:
-        image: true
-    live:
-      lazy_load: false
-      auto_unmute: true
-      preload: true
-      controls:
-        thumbnails:
-          media: clips
-          mode: below
+      style: overlay
+      position: top
+      alignment: left
+    timeline:
+      media: all
+
 
         ###############
         ### SENSORS ###
@@ -119,10 +109,10 @@ cards:
     template:
       - card_binary_sensor_alert
       - card_battery_info
-    entity: binary_sensor.front_door_sensor
+    entity: binary_sensor.front_door
     variables:
       ulm_show_last_changed: true
-      ulm_battery_entity: sensor.front_door_sensor_battery
+      ulm_battery_entity: sensor.front_door_battery
       ulm_card_binary_sensor_alert_name: Front Door
 
   - view_layout: ### HALL ###

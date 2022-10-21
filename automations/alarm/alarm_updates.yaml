@@ -1,0 +1,40 @@
+#       _                                _      _                           _   _  __      
+#  __ _| |__ _ _ _ _ __    _  _ _ __  __| |__ _| |_ ___ ___  ___   _ _  ___| |_(_)/ _|_  _ 
+# / _` | / _` | '_| '  \  | || | '_ \/ _` / _` |  _/ -_|_-< |___| | ' \/ _ \  _| |  _| || |
+# \__,_|_\__,_|_| |_|_|_|  \_,_| .__/\__,_\__,_|\__\___/__/       |_||_\___/\__|_|_|  \_, |
+#                              |_|                                                    |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Arm Notify Actions
+description: Sends notification when alarm is armed or disarmed.
+mode: single
+trigger:
+  - platform: state
+    entity_id:
+      - alarm_control_panel.home_alarm
+    to: armed_away
+    id: armed
+  - platform: state
+    entity_id:
+      - alarm_control_panel.home_alarm
+    to: disarmed
+    id: disarmed
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: armed
+        sequence:
+          - service: notify.mobile_app_iphone
+            data:
+              title: ALARM HAS BEEN ARMED
+              message: The alarm has been armed
+      - conditions:
+          - condition: trigger
+            id: disarmed
+        sequence:
+          - service: notify.mobile_app_iphone
+            data:
+              title: ALARM HAS BEEN DISARMED
+              message: The alarm has been armed

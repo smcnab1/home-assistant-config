@@ -13,10 +13,6 @@ condition: []
 action:
   - parallel:
       - service: light.turn_on
-        data: {}
-        target:
-          entity_id: light.bedroom_main_light
-      - service: light.turn_on
         data:
           brightness: 255
           rgb_color:

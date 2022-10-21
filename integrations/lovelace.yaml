@@ -20,3 +20,9 @@ lovelace:
       icon: mdi:bag-suitcase
       show_in_sidebar: true
       filename: ui_lovelace_minimalist/dashboard/adaptive-dash/adaptive-ui-3.yaml
+    lovelace-minimalist-4:
+      mode: yaml
+      title: Minimalist Desktop
+      icon: mdi:desk
+      show_in_sidebar: true
+      filename: ui_lovelace_minimalist/dashboard/adaptive-dash/adaptive-ui-4.yaml

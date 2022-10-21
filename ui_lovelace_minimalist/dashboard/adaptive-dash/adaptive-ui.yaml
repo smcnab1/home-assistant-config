@@ -43,12 +43,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/02-Hall/02-Hall.yaml"
       - !include "views-tablet/02-Rooms/02-Hall/02-Hall-Detail.yaml"
+      - !include "views-tablet/02-Rooms/02-Hall/02-Hall-Status.yaml"
 
         ###################
         ### LIVING ROOM ###
@@ -62,12 +64,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/03-Living-Room/03-Living-Room.yaml"
       - !include "views-tablet/02-Rooms/03-Living-Room/03-Living-Room-Detail.yaml"
+      - !include "views-tablet/02-Rooms/03-Living-Room/03-Living-Room-Status.yaml"
 
         ###############
         ### KITCHEN ###
@@ -81,12 +85,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/04-Kitchen/04-Kitchen.yaml"
       - !include "views-tablet/02-Rooms/04-Kitchen/04-Kitchen-Detail.yaml"
+      - !include "views-tablet/02-Rooms/04-Kitchen/04-Kitchen-Status.yaml"
 
         ###############
         ### BEDROOM ###
@@ -100,12 +106,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/05-Bedroom/05-Bedroom.yaml"
       - !include "views-tablet/02-Rooms/05-Bedroom/05-Bedroom-Detail.yaml"
+      - !include "views-tablet/02-Rooms/05-Bedroom/05-Bedroom-Status.yaml"
 
         ################
         ### BATHROOM ###
@@ -119,12 +127,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/06-Bathroom/06-Bathroom.yaml"
       - !include "views-tablet/02-Rooms/06-Bathroom/06-Bathroom-Detail.yaml"
+      - !include "views-tablet/02-Rooms/06-Bathroom/06-Bathroom-Status.yaml"
 
         ##############
         ### OFFICE ###
@@ -138,12 +148,14 @@ views:
       grid-template-rows: "min-content"
       grid-template-areas: |
         "nav nav nav"
+        "main stat stat"
         "main popup1 popup2"
     cards:
       - !include "views-tablet/01-Home/01-Nav.yaml"
       - !include "views-tablet/01-Home/01-Home.yaml"
       - !include "views-tablet/02-Rooms/07-Office/07-Office.yaml"
       - !include "views-tablet/02-Rooms/07-Office/07-Office-Detail.yaml"
+      - !include "views-tablet/02-Rooms/07-Office/07-Office-Status.yaml"
 
         #################
         ### RESOURCES ###
