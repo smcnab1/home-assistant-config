@@ -1,0 +1,59 @@
+#  _            _                                 __  __ 
+# | |__  ___ __| |_ _ ___  ___ _ __    ___   ___ / _|/ _|
+# | '_ \/ -_) _` | '_/ _ \/ _ \ '  \  |___| / _ \  _|  _|
+# |_.__/\___\__,_|_| \___/\___/_|_|_|       \___/_| |_|  
+#                                                        
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Bedroom Off'
+description: 'Automation to turn off all bedroom lights.'
+trigger: []
+condition: []
+action:
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: light.bedroom_fairy_lights
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedroom_fairy_lights
+      - if:
+          - condition: state
+            entity_id: light.bedroom_leds
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedroom_leds
+      - if:
+          - condition: state
+            entity_id: light.bedroom_main_light
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedroom_main_light
+      - if:
+          - condition: state
+            entity_id: light.bedside_leah
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_leah
+      - if:
+          - condition: state
+            entity_id: light.bedside_sam
+            state: "on"
+        then:
+          - service: light.turn_off
+            data: {}
+            target:
+              entity_id: light.bedside_sam
+mode: single

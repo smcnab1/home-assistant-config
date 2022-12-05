@@ -1,0 +1,16 @@
+#                 _                          _ _      _    
+#  _ __  __ _ _ _| |_ _  _   ___   ____ __ _(_) |_ __| |_  
+# | '_ \/ _` | '_|  _| || | |___| (_-< V  V / |  _/ _| ' \ 
+# | .__/\__,_|_|  \__|\_, |       /__/\_/\_/|_|\__\__|_||_|
+# |_|                 |__/                                 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+party_house:
+  value_template: '{{ states("input_boolean.party") }}'
+  friendly_name: "House Party Time"
+  turn_on:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.party
+  turn_off:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.party

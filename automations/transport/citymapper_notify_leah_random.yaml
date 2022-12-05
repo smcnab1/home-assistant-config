@@ -1,0 +1,26 @@
+#     _ _                                        _          _                       _                            _   _  __      
+#  __(_) |_ _  _ _ __  __ _ _ __ _ __  ___ _ _  | |___ __ _| |_    _ _ __ _ _ _  __| |___ _ __    ___   _ _  ___| |_(_)/ _|_  _ 
+# / _| |  _| || | '  \/ _` | '_ \ '_ \/ -_) '_| | / -_) _` | ' \  | '_/ _` | ' \/ _` / _ \ '  \  |___| | ' \/ _ \  _| |  _| || |
+# \__|_|\__|\_, |_|_|_\__,_| .__/ .__/\___|_|   |_\___\__,_|_||_| |_| \__,_|_||_\__,_\___/_|_|_|       |_||_\___/\__|_|_|  \_, |
+#           |__/           |_|  |_|                                                                                        |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Transport Citymapper Notify Leah Random
+description: 'Automation triggered by dashboard pushing actionable notification to wifes phone to input end location from current location on the Citymapper Mobile App.'
+trigger: []
+condition:
+  - condition: state
+    entity_id: person.leah
+    state: home
+action:
+  - service: notify.mobile_app_leah_iphone
+    data:
+      title: Want help getting somewhere?
+      message: Open Citymapper
+      data:
+        actions:
+        - action: OPEN
+          title: Somewhere Else
+          uri: !secret citymapper_leah_home_to
+          icon: sfsymbols:tram.fill.tunnel
+mode: single

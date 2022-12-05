@@ -1,0 +1,198 @@
+#  ___ _  _ _____ ___ _______   __   ___ ___  _   _ _  _ _____ ___ 
+# | __| \| |_   _|_ _|_   _\ \ / /  / __/ _ \| | | | \| |_   _/ __|
+# | _|| .` | | |  | |  | |  \ V /  | (_| (_) | |_| | .` | | | \__ \
+# |___|_|\_| |_| |___| |_|   |_|    \___\___/ \___/|_|\_| |_| |___/
+#                                                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Sensors indicating what entities are on throughout the house and in individual rooms, outputted to dashboard.
+
+#  _                     
+# | |_  ___ _  _ ___ ___ 
+# | ' \/ _ \ || (_-</ -_)
+# |_||_\___/\_,_/__/\___|
+#                        
+platform: template
+sensors:
+  house_lights_on: ## LIGHTING ##
+    friendly_name: House Lights On
+    value_template: >
+      {{(states('sensor.bathroom_lights_on')|float(0)|round(0)) + 
+        (states('sensor.bedroom_lights_on')|float(0)|round(0)) +
+        (states('sensor.hall_lights_on')|float(0)|round(0)) +
+        (states('sensor.kitchen_lights_on')|float(0)|round(0)) +
+        (states('sensor.living_room_lights_on')|float(0)|round(0)) +
+        (states('sensor.office_lights_on')|float(0)|round(0)) }}
+  house_media_on: ## MEDIA ##
+    friendly_name: House Media On
+    value_template: >
+      {{(states('sensor.bedroom_media_on')|float(0)|round(0)) +
+        (states('sensor.kitchen_media_on')|float(0)|round(0)) +
+        (states('sensor.living_room_media_on')|float(0)|round(0)) +
+        (states('sensor.office_media_on')|float(0)|round(0)) }}
+  house_switches_on: ## SWITCHES ##
+    friendly_name: House Switches On
+    value_template: >
+      {{(states('sensor.hall_switches_on')|float(0)|round(0)) +
+        (states('sensor.living_room_switches_on')|float(0)|round(0)) +
+        (states('sensor.office_switches_on')|float(0)|round(0)) }}
+
+#  _          _   _                       
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __  
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \ 
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|
+#                                         
+  bathroom_lights_on: ## LIGHTING ##
+    friendly_name: Bathroom Lights On
+    value_template: >
+      {% set lights = [
+        states.light.bathroom_main_lights
+
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+
+#  _            _                    
+# | |__  ___ __| |_ _ ___  ___ _ __  
+# | '_ \/ -_) _` | '_/ _ \/ _ \ '  \ 
+# |_.__/\___\__,_|_| \___/\___/_|_|_|
+#                                    
+  bedroom_lights_on: ## LIGHTING ##
+    friendly_name: Bedroom Lights On
+    value_template: >
+      {% set lights = [
+        states.light.bedroom_fairy_lights,
+        states.light.bedroom_leds,
+        states.light.bedroom_main_light,
+        states.light.bedside_leah,
+        states.light.bedside_sam
+
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+  bedroom_media_on: ## MEDIA ##
+    friendly_name: Bedroom Media On
+    value_template: >
+      {% set media = [
+        states.media_player.bedroom_tv,
+        states.media_player.bedroom_google_speaker
+
+        ] %}
+      {{ media | selectattr('state','eq','on') | list | count }}
+
+#  _         _ _ 
+# | |_  __ _| | |
+# | ' \/ _` | | |
+# |_||_\__,_|_|_|
+#                
+  hall_lights_on: ## LIGHTING ##
+    friendly_name: Hall Lights On
+    value_template: >
+      {% set lights = [
+        states.light.hall_lamp,
+        states.light.hall_leds,
+        states.light.hall_main_lights
+
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+  hall_switches_on: ## SWITCHES ##
+    friendly_name: Hall Switches On
+    value_template: >
+      {% set switch = [
+        states.switch.tablet_charger
+
+        ] %}
+      {{ switch | selectattr('state','eq','on') | list | count }}
+
+#  _   _ _      _             
+# | |_(_) |_ __| |_  ___ _ _  
+# | / / |  _/ _| ' \/ -_) ' \ 
+# |_\_\_|\__\__|_||_\___|_||_|
+#                             
+  kitchen_lights_on: ## LIGHTING ##
+    friendly_name: Kitchen Lights On
+    value_template: >
+      {% set lights = [
+        states.light.kitchen_leds,
+        states.light.kitchen_main_lights
+
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+  kitchen_media_on: ## MEDIA ##
+    friendly_name: Kitchen Media On
+    value_template: >
+      {% set media = [
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
+        states.media_player.living_room_tv
+
+        ] %}
+      {{ media | selectattr('state','eq','on') | list | count }}
+
+#  _ _     _                                
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __  
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \ 
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|
+#                |___/                      
+  living_room_lights_on: ## LIGHTING ##
+    friendly_name: Living Room Lights On
+    value_template: >
+      {% set lights = [
+        states.light.living_room_display_leds,
+        states.light.living_room_lamp,
+        states.light.living_room_lava_lamp,
+        states.light.living_room_leds,
+        states.light.living_room_main_light,
+        states.light.living_room_tv_leds,
+        states.light.living_room_dreamview
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+  living_room_media_on: ## MEDIA ##
+    friendly_name: Living Room Media On
+    value_template: >
+      {% set media = [
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
+        states.media_player.living_room_tv
+
+        ] %}
+      {{ media | selectattr('state','eq','on') | list | count }}
+  living_room_switches_on: ## SWITCHES ##
+    friendly_name: Living Room Switches On
+    value_template: >
+      {% set switch = [
+        states.switch.living_room_snowman,
+        states.switch.living_room_christmas_tree
+
+        ] %}
+      {{ switch | selectattr('state','eq','on') | list | count }}
+#       __  __ _        
+#  ___ / _|/ _(_)__ ___ 
+# / _ \  _|  _| / _/ -_)
+# \___/_| |_| |_\__\___|
+#                       
+  office_lights_on: ## LIGHTING ##
+    friendly_name: Office Lights On
+    value_template: >
+      {% set lights = [
+        states.light.office_desk_leds
+
+        ] %}
+      {{ lights | selectattr('state','eq','on') | list | count }}
+  office_media_on: ## MEDIA ##
+    friendly_name: Office Media On
+    value_template: >
+      {% set media = [
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
+        states.media_player.living_room_tv,
+        states.binary_sensor.sams_desktop_active,
+        states.media_player.office_xbox
+
+        ] %}
+      {{ media | selectattr('state','eq','on') | list | count }}
+  office_switches_on: ## SWITCHES ##
+    friendly_name: Office Switches On
+    value_template: >
+      {% set switches = [
+        states.switch.xbox_power
+
+        ] %}
+      {{ switches | selectattr('state','eq','on') | list | count }}

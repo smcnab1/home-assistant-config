@@ -1,0 +1,22 @@
+#                 _                         
+#  _ __  __ _ _ _| |_ _  _   ___   ___ _ _  
+# | '_ \/ _` | '_|  _| || | |___| / _ \ ' \ 
+# | .__/\__,_|_|  \__|\_, |       \___/_||_|
+# |_|                 |__/                  
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Script which turns on party mode.
+
+sequence:
+  - service: scene.create
+    data:
+      scene_id: houseparty
+      snapshot_entities:
+        - light.bedroom_leds
+        - light.hall_leds
+        - light.kitchen_leds
+        - light.living_room_display_leds
+        - light.living_room_leds
+        - light.living_room_tv_leds
+        - light.office_leds
+  - service: script.turn_on
+    entity_id: script.party_lighting

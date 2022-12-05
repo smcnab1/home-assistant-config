@@ -1,0 +1,58 @@
+#  ___ ___ ___ ___  ___ ___  ___ ___ 
+# | _ \ __/ __/ _ \| _ \   \| __| _ \
+# |   / _| (_| (_) |   / |) | _||   /
+# |_|_\___\___\___/|_|_\___/|___|_|_\
+#                                    
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Manages entities that are shown or redacted from HA DB
+
+recorder:
+  purge_keep_days: 1
+  auto_purge: true
+  exclude:
+    domains:
+      - automation
+      - binary_sensor
+      - button
+      - calendar
+      - camera
+      - device_tracker
+      - govee
+      - input_boolean
+      - input_number
+      - input_text
+      - light
+      - media_player
+      - number
+      - person
+      - proximity
+      - scene
+      - script
+      - sensor
+      - sun
+      - switch
+      - update
+      - weather
+      - zone
+    entities:
+      - alarm_control_panel.aqara_hub_m2
+  include:
+    entities:
+      - alarm_control_panel.home_alarm
+      - binary_sensor.bed_sensor_leah
+      - binary_sensor.bed_sensor_sam
+      - sensor.bedroom_temperature
+      - sensor.bedroom_humidity
+      - sensor.bedroom_air_pressure
+      - sensor.bathroom_temperature
+      - sensor.bathroom_humidity
+      - sensor.bathroom_air_pressure
+      - sensor.kitchen_humidity
+      - sensor.kitchen_temperature
+      - sensor.kitchen_air_pressure
+      - sensor.living_room_humidity
+      - sensor.living_room_temperature
+      - sensor.living_room_air_pressure
+      - sensor.server_humidity
+      - sensor.server_temperature
+      - sensor.server_air_pressure

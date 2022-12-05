@@ -1,0 +1,13 @@
+#   ___ ___  ___  _   _ ___  ___ 
+#  / __| _ \/ _ \| | | | _ \/ __|
+# | (_ |   / (_) | |_| |  _/\__ \
+#  \___|_|_\\___/ \___/|_|  |___/
+#                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
+presense:
+  name: "Presense"
+  entities:
+    - person.leah
+    - person.sam
+  all: true

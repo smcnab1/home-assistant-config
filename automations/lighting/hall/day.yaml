@@ -1,0 +1,29 @@
+#  _         _ _            _           
+# | |_  __ _| | |  ___   __| |__ _ _  _ 
+# | ' \/ _` | | | |___| / _` / _` | || |
+# |_||_\__,_|_|_|       \__,_\__,_|\_, |
+#                                  |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Hall Day'
+description: 'Automation to activate hallway day time scene.'
+mode: single
+trigger: []
+condition: []
+action:
+  - parallel:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.hall_lamp
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 255
+            - 127
+            - 0
+          brightness: 255
+        target:
+          entity_id:
+            - light.hall_leds

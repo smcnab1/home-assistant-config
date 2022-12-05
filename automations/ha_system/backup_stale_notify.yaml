@@ -1,0 +1,86 @@
+#  _             _                  _        _                _   _  __      
+# | |__  __ _ __| |___  _ _ __   __| |_ __ _| |___   _ _  ___| |_(_)/ _|_  _ 
+# | '_ \/ _` / _| / / || | '_ \ (_-<  _/ _` | / -_) | ' \/ _ \  _| |  _| || |
+# |_.__/\__,_\__|_\_\\_,_| .__/ /__/\__\__,_|_\___| |_||_\___/\__|_|_|  \_, |
+#                        |_|                                            |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Backup Stale Notify
+description: >-
+  Sends me notification if backups go stale in order to then complete a backup.
+  Also provides me with the option to remind me when I get home.
+trigger:
+  - platform: state
+    entity_id: binary_sensor.backups_stale
+    from: "off"
+    to: "on"
+condition: []
+action:
+  - if:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+    then:
+      - service: notify.mobile_app_sams_iphone
+        data:
+          title: HA - Backup Status
+          message: >-
+            Back-Ups are Stale - Visit the Home Assistant Google Drive Backup
+            add-on status page for details.
+          data:
+            actions:
+              - action: OPEN
+                title: Open Google Drive
+                uri: >-
+                  http://homeassistant.local:8123/hassio/ingress/cebe7a76_hassio_google_drive_backup
+                icon: sfsymbols:tray.and.arrow.up.fill
+              - action: REMIND_ME
+                title: Remind me when I am Home
+                icon: sfsymbols:timer
+    else:
+      - service: notify.mobile_app_sam_s_desktop
+        data:
+          message: >-
+            Back-Ups are Stale - Visit the Home Assistant Google Drive Backup
+            add-on status page for details.
+          title: HA - Backup Status
+          data:
+            actions:
+              - action: OPEN
+                title: Open Google Drive
+                uri: >-
+                  http://homeassistant.local:8123/hassio/ingress/cebe7a76_hassio_google_drive_backup
+                icon: sfsymbols:tray.and.arrow.up.fill
+              - action: REMIND_ME
+                title: Remind me when I am Home
+                uri: >-
+                  http://homeassistant.local:8123/hassio/ingress/cebe7a76_hassio_google_drive_backup
+                icon: sfsymbols:timer
+  - wait_for_trigger:
+      - platform: event
+        event_type: mobile_app_notification_action
+        event_data:
+          action: REMIND_ME
+  - if:
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: person.sam
+            state: home
+          - condition: state
+            entity_id: binary_sensor.sams_desktop_active
+            state: "on"
+    then:
+      - service: notify.mobile_app_sam_s_desktop
+        data:
+          message: >-
+            Back-Ups are Stale - Visit the Home Assistant Google Drive Backup
+            add-on status page for details.
+          title: HA - Backup Status
+          data:
+            actions:
+              - action: OPEN
+                title: Open Google Drive
+                uri: >-
+                  http://homeassistant.local:8123/hassio/ingress/cebe7a76_hassio_google_drive_backup
+                icon: sfsymbols:tray.and.arrow.up.fill

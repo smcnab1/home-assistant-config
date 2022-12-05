@@ -1,0 +1,19 @@
+#  _          _   _                                                       _ 
+# | |__  __ _| |_| |_  _ _ ___  ___ _ __    ___   _ _  ___ _ _ _ __  __ _| |
+# | '_ \/ _` |  _| ' \| '_/ _ \/ _ \ '  \  |___| | ' \/ _ \ '_| '  \/ _` | |
+# |_.__/\__,_|\__|_||_|_| \___/\___/_|_|_|       |_||_\___/_| |_|_|_\__,_|_|
+#                                                                           
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Bathroom Normal'
+description: Automation to activate normal bathroom scene.
+mode: single
+trigger: []
+condition: []
+action:
+  - service: light.turn_on
+    data:
+      transition: 10
+      brightness: 117
+    target:
+      entity_id: light.bathroom_main_lights

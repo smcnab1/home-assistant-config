@@ -1,0 +1,45 @@
+#             _                             _      _                        _   _  __      
+#  ____  _ __| |_ ___ _ __    _  _ _ __  __| |__ _| |_ ___   ___   _ _  ___| |_(_)/ _|_  _ 
+# (_-< || (_-<  _/ -_) '  \  | || | '_ \/ _` / _` |  _/ -_) |___| | ' \/ _ \  _| |  _| || |
+# /__/\_, /__/\__\___|_|_|_|  \_,_| .__/\__,_\__,_|\__\___|       |_||_\___/\__|_|_|  \_, |
+#     |__/                        |_|                                                 |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Update Notify
+description: Sends Notification to iPhone when new Home Assistant Version available.
+use_blueprint:
+  path: mdegat01/update_notifications.yaml
+  input:
+    reminder_hours: "3"
+    update_entities:
+      - update.esphome_update
+      - update.frigate_update
+      - update.home_assistant_core_update
+      - update.home_assistant_google_drive_backup_update
+      - update.home_assistant_operating_system_update
+      - update.home_assistant_supervisor_update
+      - update.mosquitto_broker_update
+      - update.studio_code_server_update
+      - update.terminal_ssh_update
+      - update.zigbee2mqtt_update
+      - update.browser_mod_update
+      - update.car_wash_update
+      - update.config_template_card_update
+      - update.frigate_card_update
+      - update.frigate_update_2
+      - update.govee_update
+      - update.hacs_update
+      - update.hasl_departure_card_update
+      - update.node_red_companion_update
+      - update.notify_card_update
+      - update.restriction_card_update
+      - update.samsungtv_smart_update
+      - update.slider_button_card_update
+      - update.stack_in_card_update
+      - update.swipe_card_update
+      - update.tapo_controller_update
+      - update.template_entity_row_update
+    mobile_app_device: 3252ba723d0c8e797491d6c93161a89e
+    mobile_app_device_2: ccedf7b5399d8245c9c07c4d701aab66
+    send_to_ha: true
+    take_backup: false

@@ -1,0 +1,9 @@
+#  ___ ___ _  _   _   _____   __  ___ ___ _  _ ___  ___  ___  ___ 
+# | _ )_ _| \| | /_\ | _ \ \ / / / __| __| \| / __|/ _ \| _ \/ __|
+# | _ \| || .` |/ _ \|   /\ V /  \__ \ _|| .` \__ \ (_) |   /\__ \
+# |___/___|_|\_/_/ \_\_|_\ |_|   |___/___|_|\_|___/\___/|_|_\|___/
+#                                                                 
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to binary sensors within the binary sensors directory.
+
+binary_sensor: !include_dir_list ../entities/binary_sensor

@@ -1,0 +1,10 @@
+#   ___ ___  _  _ ___ ___ ___ _   _ ___    _ _____ ___ ___  _  _ 
+#  / __/ _ \| \| | __|_ _/ __| | | | _ \  /_\_   _|_ _/ _ \| \| |
+# | (_| (_) | .` | _| | | (_ | |_| |   / / _ \| |  | | (_) | .` |
+#  \___\___/|_|\_|_| |___\___|\___/|_|_\/_/ \_\_| |___\___/|_|\_|
+#                                                                
+#--FROM https://github.com/smcnab1/op-question-mark
+
+homeassistant:
+  # Load packages
+  packages: !include_dir_named integrations

@@ -1,0 +1,10 @@
+#  ___  ___ ___ _  _ ___ ___ 
+# / __|/ __| __| \| | __/ __|
+# \__ \ (__| _|| .` | _|\__ \
+# |___/\___|___|_|\_|___|___/
+#                            
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Links to scenes within the scenes directory.
+
+scene: !include ../scenes.yaml
+scene split: !include_dir_list ../entities/scenes

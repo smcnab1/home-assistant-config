@@ -1,0 +1,11 @@
+#  ___   _   __  __ ___ _   _ _  _  ___   _______   __  ___ __  __   _   ___ _____ 
+# / __| /_\ |  \/  / __| | | | \| |/ __| |_   _\ \ / / / __|  \/  | /_\ | _ \_   _|
+# \__ \/ _ \| |\/| \__ \ |_| | .` | (_ |   | |  \ V /  \__ \ |\/| |/ _ \|   / | |  
+# |___/_/ \_\_|  |_|___/\___/|_|\_|\___|   |_|   \_/   |___/_|  |_/_/ \_\_|_\ |_|  
+#                                                                                  
+#--FROM https://github.com/smcnab1/op-question-mark
+
+samsungtv_smart:
+  - host: !secret samsung_tv_host
+    source_list: '{"TV": "ST_TV", "ST_HDMI1": "DVD", "ST_HDMI2": "LAPTOP", "ST_HDMI3": "UNUSED", "ST_HDMI4": "UNUSED"}'
+    app_list: '{"Netflix": "org.tizen.netflix-app", "Prime Video": "org.tizen.primevideo", "Spotify": "3201606009684/rJeHak5zRg.Spotify", "YouTube": "111299001912/9Ur5IzDKqV.TizenYouTube", "My5": "EkzyZtmneG.My5", "Paramount+": "rJyOSqC6Up.PPlusIntl", "Disney+": "MCmYXNxgcu.DisneyPlus", "4OD": "OCaxbgg9v6.chfourctv", "ITVHub": "OEvCiupaFR.ITVHub", "BBC iPlayer": "DqEoaplKlw.bbchybrid", "Internet": "org.tizen.browser"}'

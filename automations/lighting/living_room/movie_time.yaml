@@ -1,0 +1,164 @@
+#  _ _     _                                                      _       _   _           
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    ___   _ __  _____ _(_)___  | |_(_)_ __  ___ 
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  |___| | '  \/ _ \ V / / -_) |  _| | '  \/ -_)
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|       |_|_|_\___/\_/|_\___|  \__|_|_|_|_\___|
+#                |___/                                                                    
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting Living Room Movie Time
+description: >-
+  Automation automatically turn on movie scene when TV is turned on to certain
+  apps/channels.
+trigger:
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    attribute: source
+    to: Disney+
+    id: "ON"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    attribute: source
+    to: DVD Player
+    id: "ON"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    attribute: source
+    to: Prime Video
+    id: "ON"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    attribute: source
+    to: Paramount Plus
+    id: "ON"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    attribute: source
+    to: Discovery+
+    id: "ON"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: Netflix
+    id: "ON"
+    attribute: source
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: paused
+    id: pause
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: "off"
+    id: "off"
+  - platform: state
+    entity_id:
+      - media_player.living_room_tv
+    to: playing
+    id: playing
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: trigger
+                id: "ON"
+        sequence:
+          - service: scene.create
+            data:
+              scene_id: premovie
+              snapshot_entities:
+                - light.living_room_display_leds
+                - light.living_room_leds
+                - light.living_room_dreamview
+                - light.living_room_lava_lamp
+                - light.living_room_tv_leds
+                - light.living_room_main_light
+          - service: automation.trigger
+            data:
+              skip_condition: false
+            target:
+              entity_id: automation.lighting_living_room_movie
+      - conditions:
+          - condition: trigger
+            id: pause
+        sequence:
+          - service: light.turn_on
+            data:
+              transition: 15
+              rgb_color:
+                - 0
+                - 208
+                - 255
+              brightness: 70
+            target:
+              entity_id: light.living_room_leds
+      - conditions:
+          - condition: and
+            conditions:
+              - condition: trigger
+                id: playing
+              - condition: state
+                entity_id: media_player.living_room_tv
+                state: paused
+        sequence:
+          - service: automation.trigger
+            data:
+              skip_condition: false
+            target:
+              entity_id: automation.lighting_living_room_movie
+      - conditions:
+          - condition: trigger
+            id: "off"
+        sequence:
+          - service: scene.turn_on
+            data:
+              transition: 20
+            target:
+              entity_id: scene.premovie
+          - delay:
+              hours: 0
+              minutes: 3
+              seconds: 0
+              milliseconds: 0
+          - if:
+              - condition: state
+                entity_id: binary_sensor.living_room_motion
+                state: "off"
+                for:
+                  hours: 0
+                  minutes: 2
+                  seconds: 0
+            then:
+              - service: automation.trigger
+                data:
+                  skip_condition: false
+                target:
+                  entity_id: automation.lighting_living_room_off
+            else:
+              - delay:
+                  hours: 0
+                  minutes: 3
+                  seconds: 0
+                  milliseconds: 0
+              - if:
+                  - condition: state
+                    entity_id: binary_sensor.living_room_motion
+                    state: "off"
+                    for:
+                      hours: 0
+                      minutes: 2
+                      seconds: 0
+                then:
+                  - service: automation.trigger
+                    data:
+                      skip_condition: false
+                    target:
+                      entity_id: automation.lighting_living_room_off
+mode: single

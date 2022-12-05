@@ -1,0 +1,29 @@
+#  _         _ _              _      _   _
+# | |_  __ _| | |  ___   _ _ (_)__ _| |_| |_
+# | ' \/ _` | | | |___| | ' \| / _` | ' \  _|
+# |_||_\__,_|_|_|       |_||_|_\__, |_||_\__|
+#                              |___/
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: "Lighting Hall Night"
+description: "Automation to activate hallway night time scene."
+mode: single
+trigger: []
+condition: []
+action:
+  - parallel:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.hall_lamp
+      - service: light.turn_on
+        data:
+          transition: 10
+          rgb_color:
+            - 0
+            - 191
+            - 255
+          brightness: 115
+        target:
+          entity_id:
+            - light.hall_leds

@@ -1,0 +1,79 @@
+#  _    ___   ___  ___ ___ ___ 
+# | |  / _ \ / __|/ __| __| _ \
+# | |_| (_) | (_ | (_ | _||   /
+# |____\___/ \___|\___|___|_|_\
+#                              
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Activates logging and specifies filters.
+
+logger:
+  default: critical
+  logs:
+    custom_components.hacs: error
+    custom_components.govee: error
+    hacs: error
+    hass_nabucasa.cloud_api: error
+    queueman: error
+    homeassistant.core: error
+    androidtv.adb_manager.adb_manager_async: error
+    homeassistant.bootstrap: error
+    homeassistant.config_entries: error
+    homeassistant.components.automation: error
+    homeassistant.components.binary_sensor: error
+    homeassistant.components.camera: error
+    homeassistant.components.cloud.google_config: error
+    homeassistant.components.device_tracker: error
+    homeassistant.components.discovery: warn
+    homeassistant.components.http: warn
+    homeassistant.components.media_player: error
+    homeassistant.components.rest.sensor: critical
+    homeassistant.components.sensor: error
+    homeassistant.components.switch: error
+    homeassistant.components.mqtt: error
+    homeassistant.components.recorder: error
+    homeassistant.components.sensor.rest: info
+    homeassistant.components.websocket_api: error
+    homeassistant.exceptions: info
+    homeassistant.helpers.script: info
+    homeassistant.helpers.entity: critical
+    homeassistant.loader: warn
+    homeassistant.setup: error
+    py.warnings: error
+    urllib3.connectionpool: error
+    requests.packages.urllib3.connectionpool: critical
+    root: warn
+    websocket: error
+    govee_api_laggat.govee_api_laggat: error
+
+  filters:
+    homeassistant:
+      # This can happen during restart having Ingress tabs open.
+      # I really don't care about it.
+      - "Error doing job: Task exception was never retrieved"
+
+    homeassistant.loader:
+      # Really? Cool... I know... I installed them...
+      - "We found a custom integration"
+
+    homeassistant.components.zeroconf:
+      # Yes I am aware, I develop on the thing, I don't rely on it...
+      # Don't bother me about it again.
+      - "instance with identical name present in the local network"
+
+    homeassistant.util.yaml.loader:
+      # I use YAML anchors and aliasses, causing duplicate keys in YAML.
+      # For this use-case, that is on purpose, as an alias is used, but
+      # with some overrides.
+      # While a good warning, I'm going to disable it.
+      - "contains duplicate key"
+
+    pychromecast.socket_client:
+      # Surpress to chatty Cast integration
+      - "Failed to connect to service ServiceInfo"
+      - "Error communicating with socket, resetting connection"
+
+    custom_components.frigate:
+      - "Error fetching frigate data:"
+
+    custom_components.frigate.api:
+      - "Timeout error fetching information from"

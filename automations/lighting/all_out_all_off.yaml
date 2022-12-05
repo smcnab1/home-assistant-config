@@ -1,0 +1,48 @@
+#       _ _            _                _ _        __  __ 
+#  __ _| | |  ___ _  _| |_   ___   __ _| | |  ___ / _|/ _|
+# / _` | | | / _ \ || |  _| |___| / _` | | | / _ \  _|  _|
+# \__,_|_|_| \___/\_,_|\__|       \__,_|_|_| \___/_| |_|  
+#                                                         
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Lighting All Out All Off
+description: Automation which triggers when both of us are out. If so all lights turn off
+mode: single
+trigger:
+  - platform: state
+    entity_id:
+      - person.sam
+      - person.leah
+    to: not_home
+condition:
+  - condition: and
+    conditions:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+      - condition: state
+        entity_id: person.leah
+        state: not_home
+      - condition: state
+        entity_id: input_boolean.guest_mode
+        state: "off"
+action:
+  - service: light.turn_off
+    data: {}
+    target:
+      area_id:
+        - bathroom
+        - bedroom
+        - devices
+        - hall
+        - house
+        - kitchen
+        - living_room
+        - office
+        - server
+        - system
+        - person
+  - service: notify.mobile_app_sams_iphone
+    data:
+      message: All Lights Off
+      title: HA System - Lights Off

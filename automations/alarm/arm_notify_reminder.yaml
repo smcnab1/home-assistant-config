@@ -1,0 +1,70 @@
+#       _                                                  _   _  __                      _         _         
+#  __ _| |__ _ _ _ _ __    __ _ _ _ _ __    ___   _ _  ___| |_(_)/ _|_  _   _ _ ___ _ __ (_)_ _  __| |___ _ _ 
+# / _` | / _` | '_| '  \  / _` | '_| '  \  |___| | ' \/ _ \  _| |  _| || | | '_/ -_) '  \| | ' \/ _` / -_) '_|
+# \__,_|_\__,_|_| |_|_|_| \__,_|_| |_|_|_|       |_||_\___/\__|_|_|  \_, | |_| \___|_|_|_|_|_||_\__,_\___|_|  
+#                                                                    |__/                                     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Arm Notify Reminder
+description: >-
+  Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't
+  already been set.
+mode: single
+trigger:
+  - platform: state
+    entity_id:
+      - person.leah
+    from: home
+    id: LEAHLEAVE
+  - platform: state
+    entity_id:
+      - person.sam
+    from: home
+    id: SAMLEAVE
+condition:
+  - condition: and
+    conditions:
+      - condition: state
+        entity_id: person.sam
+        state: not_home
+      - condition: state
+        entity_id: person.leah
+        state: not_home
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: disarmed
+action:
+  - if:
+      - condition: trigger
+        id: LEAHLEAVE
+    then:
+      - service: notify.mobile_app_leah_iphone
+        data:
+          message: Would you like to set it?
+          title: The alarm isn't set and nobody is home!
+          data:
+            actions:
+              - action: IGNORE
+                title: Don't Arm Alarm
+                icon: sfsymbols:bell.slash.fill
+              - action: ARM_ALARM
+                title: Arm Alarm
+                icon: sfsymbols:bell.fill
+                destructive: true
+  - if:
+      - condition: trigger
+        id: LEAHLEAVE
+    then:
+      - service: notify.mobile_app_sams_iphone
+        data:
+          data:
+            actions:
+              - action: IGNORE
+                title: Don't Arm Alarm
+                icon: sfsymbols:bell.slash.fill
+              - action: ARM_ALARM
+                title: Arm Alarm
+                icon: sfsymbols:bell.fill
+                destructive: true
+          title: The alarm isn't set and nobody is home!
+          message: Would you like to set it?

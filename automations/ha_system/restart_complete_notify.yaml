@@ -1,0 +1,38 @@
+#             _            _                       _     _                        _   _  __      
+#  _ _ ___ __| |_ __ _ _ _| |_   __ ___ _ __  _ __| |___| |_ ___   ___   _ _  ___| |_(_)/ _|_  _ 
+# | '_/ -_|_-<  _/ _` | '_|  _| / _/ _ \ '  \| '_ \ / -_)  _/ -_) |___| | ' \/ _ \  _| |  _| || |
+# |_| \___/__/\__\__,_|_|  \__| \__\___/_|_|_| .__/_\___|\__\___|       |_||_\___/\__|_|_|  \_, |
+#                                            |_|                                            |__/ 
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: HA System Restart Complete Notify
+description: >-
+  Automation which sends notification to my mac and google hubs through TTS to
+  alert us that system restart has been complete and now back up. Gives the wife
+  a heads up that things are now working and gives me actionable notification to
+  open HA from notification on PC.
+mode: single
+trigger:
+  - platform: homeassistant
+    event: start
+condition:
+  - condition: state
+    entity_id: person.sam
+    state: home
+action:
+  - parallel:
+      - if:
+          - condition: state
+            entity_id: binary_sensor.sams_desktop_active
+            state: "on"
+        then:
+          - service: notify.mobile_app_sam_s_desktop
+            data:
+              title: Home Assistant - System Management
+              message: Home Assistant has Restarted
+              data:
+                actions:
+                  - action: OPEN
+                    title: Open Home Assistant
+                    uri: http://homeassistant.local:8123/
+                    icon: sfsymbols:safari

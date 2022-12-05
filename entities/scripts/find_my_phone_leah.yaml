@@ -1,0 +1,18 @@
+#   __ _         _                    _                         _          _    
+#  / _(_)_ _  __| |  _ __ _  _   _ __| |_  ___ _ _  ___   ___  | |___ __ _| |_  
+# |  _| | ' \/ _` | | '  \ || | | '_ \ ' \/ _ \ ' \/ -_) |___| | / -_) _` | ' \ 
+# |_| |_|_||_\__,_| |_|_|_\_, | | .__/_||_\___/_||_\___|       |_\___\__,_|_||_|
+#                         |__/  |_|                                             
+#--FROM https://github.com/smcnab1/op-question-mark
+#---Script which outputs message tone to Leah's phone to assist in finding. Triggered from Dashboard.
+
+sequence:
+  - service: notify.mobile_app_leah_iphone
+    data:
+      title: Home Assistant is looking for your phone
+      message: Find my Phone
+      data:
+        push:
+          sound: "US-EN-Morgan-Freeman-Welcome-Home.wav"
+          interruption-level: critical
+mode: single
