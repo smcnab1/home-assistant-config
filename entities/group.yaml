@@ -5,3 +5,9 @@
 #                                
 #--FROM https://github.com/smcnab1/op-question-mark
 
+presense:
+  name: "Presense"
+  entities:
+    - person.leah
+    - person.sam
+  all: true

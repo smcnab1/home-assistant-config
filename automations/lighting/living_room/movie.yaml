@@ -49,7 +49,7 @@ action:
           brightness: 38
         target:
           entity_id:
-            - light.living_room_display_led
+            - light.living_room_display_leds
             - light.living_room_leds
       - service: light.turn_on
         data:

@@ -55,7 +55,7 @@ action:
       - condition: trigger
         id: LEAHLEAVE
     then:
-      - service: notify.mobile_app_iphone
+      - service: notify.mobile_app_sams_iphone
         data:
           data:
             actions:
@@ -66,5 +66,5 @@ action:
                 title: Arm Alarm
                 icon: sfsymbols:bell.fill
                 destructive: true
+          title: The alarm isn't set and nobody is home!
           message: Would you like to set it?
-          title: Set Alarm?

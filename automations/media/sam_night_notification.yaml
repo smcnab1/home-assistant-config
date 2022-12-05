@@ -17,13 +17,13 @@ condition:
     entity_id: person.sam
     state: home
   - condition: state
-    entity_id: binary_sensor.mac_mini_active
+    entity_id: binary_sensor.sams_desktop_active
     state: "on"
 action:
   - service: scene.create
     data:
       scene_id: prenotify
-      snapshot_entities: light.office_leds light.office_desk_lamp
+      snapshot_entities: light.office_desk_leds
   - if:
       - condition: and
         conditions:
@@ -31,23 +31,23 @@ action:
             entity_id: sensor.leah_phone_ble
             state: bedroom
           - condition: state
-            entity_id: sensor.leah_s_iphone_battery_state
+            entity_id: sensor.leahs_iphone_battery_state
             state: charging
     then:
       - service: media_player.volume_set
         data:
           volume_level: 0.3
         target:
-          entity_id: media_player.living_room
+          entity_id: media_player.living_room_google_speaker
     else:
       - service: media_player.volume_set
         data:
           volume_level: 0.5
         target:
-          entity_id: media_player.living_room
+          entity_id: media_player.living_room_google_speaker
   - service: tts.cloud_say
     data:
-      entity_id: media_player.living_room
+      entity_id: media_player.living_room_google_speaker
       message: Get off your computer dickhead its 9 o'clock
   - repeat:
       count: "30"
@@ -57,7 +57,7 @@ action:
             color_name: red
             brightness: 255
           target:
-            entity_id: light.office_leds
+            entity_id: light.office_desk_leds
         - delay:
             hours: 0
             minutes: 0
@@ -66,7 +66,7 @@ action:
         - service: light.turn_off
           data: {}
           target:
-            entity_id: light.office_leds
+            entity_id: light.office_desk_leds
         - delay:
             hours: 0
             minutes: 0
@@ -74,7 +74,7 @@ action:
             milliseconds: 250
   - service: scene.turn_on
     data:
-      transition: 90
+      transition: 15
     target:
       entity_id: scene.prenotify
   - service: media_player.volume_set
@@ -82,5 +82,5 @@ action:
       volume_level: 0.4
     target:
       entity_id:
-        - media_player.living_room
+        - media_player.living_room_google_speaker
 mode: single

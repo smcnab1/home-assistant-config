@@ -35,8 +35,8 @@ action:
               volume_level: 0.35
             target:
               entity_id:
-                - media_player.bedroom_google_home
-                - media_player.living_room_google_home
+                - media_player.bedroom_google_speaker
+                - media_player.living_room_google_speaker
       - conditions:
           - condition: trigger
             id: TURNUP
@@ -46,5 +46,5 @@ action:
               volume_level: 0.60
             target:
               entity_id:
-                - media_player.bedroom_google_home
-                - media_player.living_room_google_home
+                - media_player.bedroom_google_speaker
+                - media_player.living_room_google_speaker

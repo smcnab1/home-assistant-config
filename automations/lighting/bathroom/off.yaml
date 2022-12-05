@@ -14,5 +14,5 @@ action:
     data:
       transition: 30
     target:
-      entity_id: light.all_bathroom_lights
+      entity_id: light.bathroom_main_lights
 mode: single

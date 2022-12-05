@@ -15,7 +15,7 @@ trigger:
       - binary_sensor.hall_motion
       - binary_sensor.kitchen_motion
       - binary_sensor.living_room_motion
-      - binary_sensor.front_door_sensor
+      - binary_sensor.front_door
     to: "on"
 condition:
   - condition: state

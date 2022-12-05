@@ -26,7 +26,7 @@ action:
           - condition: trigger
             id: armed
         sequence:
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               title: ALARM HAS BEEN ARMED
               message: The alarm has been armed
@@ -34,7 +34,7 @@ action:
           - condition: trigger
             id: disarmed
         sequence:
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               title: ALARM HAS BEEN DISARMED
               message: The alarm has been armed

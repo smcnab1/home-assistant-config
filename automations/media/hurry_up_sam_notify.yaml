@@ -12,7 +12,7 @@ description: >-
 trigger:
   - platform: state
     entity_id:
-      - binary_sensor.xbox_status
+      - binary_sensor.office_xbox_live
     to: "on"
 condition:
   - condition: state
@@ -42,7 +42,7 @@ action:
   - wait_for_trigger:
       - platform: state
         entity_id:
-          - binary_sensor.xbox_status
+          - binary_sensor.office_xbox_live
         to: "off"
       - platform: event
         event_type: mobile_app_notification_action

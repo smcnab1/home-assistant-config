@@ -10,23 +10,13 @@ description: 'Automation to turn off all office lights.'
 trigger: []
 condition: []
 action:
-  - parallel:
-      - if:
-          - condition: state
-            entity_id: light.office_desk_lamp
-            state: "on"
-        then:
-          - service: light.turn_off
-            data: {}
-            target:
-              entity_id: light.office_desk_lamp
-      - if:
-          - condition: state
-            entity_id: light.office_leds
-            state: "on"
-        then:
-          - service: light.turn_off
-            data: {}
-            target:
-              entity_id: light.office_leds
+  - if:
+      - condition: state
+        entity_id: light.office_desk_leds
+        state: "on"
+    then:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.office_desk_leds
 mode: single

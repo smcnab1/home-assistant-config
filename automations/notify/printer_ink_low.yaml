@@ -5,33 +5,31 @@
 # |_|                                                                   |__/ 
 #--FROM https://github.com/smcnab1/op-question-mark
 
-alias: "Notify Printer Ink Low"
+alias: Notify Printer Ink Low
 description: Automation to send me notification when ink in printer gets low.
 mode: single
 trigger:
   - type: value
     platform: device
-    device_id: 3b8f7690f18b15d59864af03afac628e
+    device_id: 1e10d61d326b6709634389999133a3e4
     entity_id: sensor.office_printer_black_ink
     domain: sensor
-    below: 10
     id: BLACKLOW
-    alias: Black - Low
+    below: 20
   - type: value
     platform: device
-    device_id: 3b8f7690f18b15d59864af03afac628e
+    device_id: 1e10d61d326b6709634389999133a3e4
     entity_id: sensor.office_printer_tri_color_ink
     domain: sensor
-    below: 10
     id: COLOURLOW
-    alias: Colour - Low
+    below: 20
   - platform: event
     event_type: mobile_app_notification_action
     event_data:
       action: REMIND
     context:
       user_id:
-        - d5de2d519885447495a552f1d87f0a9d
+        - 9ffd5fe9c4c84dd2b9213f04d70b4495
     id: REMINDLEAH
   - platform: event
     event_type: mobile_app_notification_action
@@ -39,7 +37,7 @@ trigger:
       action: REMIND
     context:
       user_id:
-        - 47cefae3ba0f490c8ccafd6bfedad232
+        - 6728110b2495497fab6d74e5d2ec0861
     id: REMINDSAM
   - platform: event
     event_type: mobile_app_notification_action
@@ -47,7 +45,7 @@ trigger:
       action: ORDER_URI
     context:
       user_id:
-        - d5de2d519885447495a552f1d87f0a9d
+        - 9ffd5fe9c4c84dd2b9213f04d70b4495
     id: ORDEREDLEAH
   - platform: event
     event_type: mobile_app_notification_action
@@ -55,7 +53,7 @@ trigger:
       action: ORDER_URI
     context:
       user_id:
-        - 47cefae3ba0f490c8ccafd6bfedad232
+        - 6728110b2495497fab6d74e5d2ec0861
     id: ORDEREDSAM
   - platform: event
     event_type: mobile_app_notification_action
@@ -63,7 +61,7 @@ trigger:
       action: IGNORE
     context:
       user_id:
-        - d5de2d519885447495a552f1d87f0a9d
+        - 9ffd5fe9c4c84dd2b9213f04d70b4495
     id: IGNORELEAH
   - platform: event
     event_type: mobile_app_notification_action
@@ -71,7 +69,7 @@ trigger:
       action: IGNORE
     context:
       user_id:
-        - 47cefae3ba0f490c8ccafd6bfedad232
+        - 6728110b2495497fab6d74e5d2ec0861
     id: IGNORESAM
   - platform: time
     at: "12:00:00"
@@ -84,7 +82,7 @@ action:
             id: BLACKLOW
             alias: Black Triggered
         then:
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               message: >-
                 The black printer cartridge is almost empty, what would you like
@@ -110,18 +108,19 @@ action:
             alias: Sam Phone - Notify
           - if:
               - condition: state
-                entity_id: binary_sensor.mac_mini_active
+                entity_id: binary_sensor.sams_desktop_active
                 state: "on"
                 alias: If Mac On
             then:
-              - service: notify.mobile_app_ipad
+              - service: notify.mobile_app_sam_s_desktop
                 data:
                   message: >-
                     The black printer cartridge is almost empty, what would you
                     like to do?
                   title: >-
                     Printer Ink Alert - Black:
-                    {{states('sensor.office_printer_black_ink')}}% | Colour:
+                    {{states('sensor.office_printer_black_ink')}}% |
+                    Colour:
                     {{states('sensor.office_printer_tri_color_ink')}}%
                   data:
                     actions:
@@ -169,15 +168,15 @@ action:
             id: COLOURLOW
             alias: Colour Triggered
         then:
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               message: >-
                 The colour printer cartridge is almost empty, what would you
                 like to do?
               title: >-
                 Printer Ink Alert - Colour:
-                {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
-                {{states('sensor.office_printer_black_ink')}}%
+                {{states('sensor.office_printer_tri_color_ink')}}% | 
+                Black: {{states('sensor.office_printer_black_ink')}}%
               data:
                 actions:
                   - action: ORDER_URI
@@ -195,18 +194,19 @@ action:
             alias: Sam Phone - Notify
           - if:
               - condition: state
-                entity_id: binary_sensor.mac_mini_active
+                entity_id: binary_sensor.sams_desktop_active
                 state: "on"
                 alias: If Mac On
             then:
-              - service: notify.mobile_app_ipad
+              - service: notify.mobile_app_sam_s_desktop
                 data:
                   message: >-
                     The colour printer cartridge is almost empty, what would you
                     like to do?
                   title: >-
                     Printer Ink Alert - Colour:
-                    {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
+                    {{states('sensor.office_printer_tri_color_ink')}}%
+                    |  Black:
                     {{states('sensor.office_printer_black_ink')}}%
                   data:
                     actions:
@@ -231,8 +231,8 @@ action:
                 like to do?
               title: >-
                 Printer Ink Alert - Colour:
-                {{states('sensor.office_printer_tri_color_ink')}}% |  Black:
-                {{states('sensor.office_printer_black_ink')}}%
+                {{states('sensor.office_printer_tri_color_ink')}}% | 
+                Black: {{states('sensor.office_printer_black_ink')}}%
               data:
                 actions:
                   - action: ORDER_URI
@@ -281,7 +281,7 @@ action:
                 - input_boolean.printer_ink_reminder_leah
                 - input_boolean.printer_ink_reminder_sam
             alias: Cancel ALL Reminders
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               message: >-
                 It looks like Leah has opened up Amazon to order. What would you
@@ -349,10 +349,10 @@ action:
                     conditions:
                       - type: is_value
                         condition: device
-                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        device_id: 1e10d61d326b6709634389999133a3e4
                         entity_id: sensor.office_printer_black_ink
                         domain: sensor
-                        below: 10
+                        below: 20
                       - condition: state
                         entity_id: input_boolean.printer_ink_reminder_leah
                         state: "on"
@@ -364,7 +364,8 @@ action:
                         you like to do?
                       title: >-
                         Printer Ink Alert - Black:
-                        {{states('sensor.office_printer_black_ink')}}% | Colour:
+                        {{states('sensor.office_printer_black_ink')}}% |
+                        Colour:
                         {{states('sensor.office_printer_tri_color_ink')}}%
                       data:
                         actions:
@@ -386,10 +387,10 @@ action:
                     conditions:
                       - type: is_value
                         condition: device
-                        device_id: 3b8f7690f18b15d59864af03afac628e
-                        entity_id: sensor.office_printer_black_ink
+                        device_id: 1e10d61d326b6709634389999133a3e4
+                        entity_id: sensor.office_printer_tri_color_ink
                         domain: sensor
-                        below: 10
+                        below: 20
                       - condition: state
                         entity_id: input_boolean.printer_ink_reminder_leah
                         state: "on"
@@ -401,8 +402,9 @@ action:
                         you like to do?
                       title: >-
                         Printer Ink Alert - Colour:
-                        {{states('sensor.office_printer_tri_color_ink')}}% | 
-                        Black: {{states('sensor.office_printer_black_ink')}}%
+                        {{states('sensor.office_printer_tri_color_ink')}}%
+                        |  Black:
+                        {{states('sensor.office_printer_black_ink')}}%
                       data:
                         actions:
                           - action: ORDER_URI
@@ -423,22 +425,23 @@ action:
                     conditions:
                       - type: is_value
                         condition: device
-                        device_id: 3b8f7690f18b15d59864af03afac628e
+                        device_id: 1e10d61d326b6709634389999133a3e4
                         entity_id: sensor.office_printer_black_ink
                         domain: sensor
-                        below: 10
+                        below: 20
                       - condition: state
-                        entity_id: input_boolean.printer_ink_reminder_leah
+                        entity_id: input_boolean.printer_ink_reminder_sam
                         state: "on"
                 sequence:
-                  - service: notify.mobile_app_iphone
+                  - service: notify.mobile_app_sams_iphone
                     data:
                       message: >-
                         The black printer cartridge is almost empty, what would
                         you like to do?
                       title: >-
                         Printer Ink Alert - Black:
-                        {{states('sensor.office_printer_black_ink')}}% | Colour:
+                        {{states('sensor.office_printer_black_ink')}}% |
+                        Colour:
                         {{states('sensor.office_printer_tri_color_ink')}}%
                       data:
                         actions:
@@ -457,18 +460,18 @@ action:
                     alias: Sam Phone - Notify
                   - if:
                       - condition: state
-                        entity_id: binary_sensor.mac_mini_active
+                        entity_id: binary_sensor.sams_desktop_active
                         state: "on"
                     then:
-                      - service: notify.mobile_app_ipad
+                      - service: notify.mobile_app_sam_s_desktop
                         data:
                           message: >-
                             The black printer cartridge is almost empty, what
                             would you like to do?
                           title: >-
                             Printer Ink Alert - Black:
-                            {{states('sensor.office_printer_black_ink')}}% |
-                            Colour:
+                            {{states('sensor.office_printer_black_ink')}}%
+                            | Colour:
                             {{states('sensor.office_printer_tri_color_ink')}}%
                           data:
                             actions:
@@ -490,23 +493,24 @@ action:
                     conditions:
                       - type: is_value
                         condition: device
-                        device_id: 3b8f7690f18b15d59864af03afac628e
-                        entity_id: sensor.office_printer_black_ink
+                        device_id: 1e10d61d326b6709634389999133a3e4
+                        entity_id: sensor.office_printer_tri_color_ink
                         domain: sensor
-                        below: 10
+                        below: 20
                       - condition: state
-                        entity_id: input_boolean.printer_ink_reminder_leah
+                        entity_id: input_boolean.printer_ink_reminder_sam
                         state: "on"
                 sequence:
-                  - service: notify.mobile_app_iphone
+                  - service: notify.mobile_app_sams_iphone
                     data:
                       message: >-
                         The colour printer cartridge is almost empty, what would
                         you like to do?
                       title: >-
                         Printer Ink Alert - Colour:
-                        {{states('sensor.office_printer_tri_color_ink')}}% | 
-                        Black: {{states('sensor.office_printer_black_ink')}}%
+                        {{states('sensor.office_printer_tri_color_ink')}}%
+                        |  Black:
+                        {{states('sensor.office_printer_black_ink')}}%
                       data:
                         actions:
                           - action: ORDER_URI
@@ -524,10 +528,10 @@ action:
                     alias: Sam Phone - Notify
                   - if:
                       - condition: state
-                        entity_id: binary_sensor.mac_mini_active
+                        entity_id: binary_sensor.sams_desktop_active
                         state: "on"
                     then:
-                      - service: notify.mobile_app_ipad
+                      - service: notify.mobile_app_sam_s_desktop
                         data:
                           message: >-
                             The colour printer cartridge is almost empty, what

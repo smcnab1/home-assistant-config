@@ -36,15 +36,15 @@ action:
               title: Home Assistant - Restarting
       - if:
           - condition: state
-            entity_id: binary_sensor.mac_mini_active
+            entity_id: binary_sensor.sams_desktop_active
             state: "on"
         then:
-          - service: notify.mobile_app_ipad
+          - service: notify.mobile_app_sam_s_desktop
             data:
               title: Home Assistant - System Management
               message: Home Assistant is Restarting
         else:
-          - service: notify.mobile_app_iphone
+          - service: notify.mobile_app_sams_iphone
             data:
               message: Home Assistant is Restarting
               title: Home Assistant - System Management
@@ -53,7 +53,7 @@ action:
         entity_id: person.sam
         state: not_home
     then:
-      - service: notify.mobile_app_iphone
+      - service: notify.mobile_app_sams_iphone
         data:
           title: HA - System Notification
           message: Home Assistant has Shutdown

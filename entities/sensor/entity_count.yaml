@@ -13,11 +13,10 @@
 #                        
 platform: template
 sensors:
-  house_lights_on: ## LIGHTING ##asd
+  house_lights_on: ## LIGHTING ##
     friendly_name: House Lights On
-    unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_lights_on')|float(0)|round(0)) + 
+      {{(states('sensor.bathroom_lights_on')|float(0)|round(0)) + 
         (states('sensor.bedroom_lights_on')|float(0)|round(0)) +
         (states('sensor.hall_lights_on')|float(0)|round(0)) +
         (states('sensor.kitchen_lights_on')|float(0)|round(0)) +
@@ -25,22 +24,15 @@ sensors:
         (states('sensor.office_lights_on')|float(0)|round(0)) }}
   house_media_on: ## MEDIA ##
     friendly_name: House Media On
-    unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_media_on')|float(0)|round(0)) + 
-        (states('sensor.bedroom_media_on')|float(0)|round(0)) +
-        (states('sensor.hall_media_on')|float(0)|round(0)) +
+      {{(states('sensor.bedroom_media_on')|float(0)|round(0)) +
         (states('sensor.kitchen_media_on')|float(0)|round(0)) +
         (states('sensor.living_room_media_on')|float(0)|round(0)) +
         (states('sensor.office_media_on')|float(0)|round(0)) }}
   house_switches_on: ## SWITCHES ##
     friendly_name: House Switches On
-    unit_of_measurement: "On"
     value_template: >
-      {{ (states('sensor.bathroom_switches_on')|float(0)|round(0)) + 
-        (states('sensor.bedroom_switches_on')|float(0)|round(0)) +
-        (states('sensor.hall_switches_on')|float(0)|round(0)) +
-        (states('sensor.kitchen_switches_on')|float(0)|round(0)) +
+      {{(states('sensor.hall_switches_on')|float(0)|round(0)) +
         (states('sensor.living_room_switches_on')|float(0)|round(0)) +
         (states('sensor.office_switches_on')|float(0)|round(0)) }}
 
@@ -51,31 +43,12 @@ sensors:
 #                                         
   bathroom_lights_on: ## LIGHTING ##
     friendly_name: Bathroom Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
-        states.light.bathroom_main_lights,
+        states.light.bathroom_main_lights
 
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
-  bathroom_media_on: ## MEDIA ##
-    friendly_name: Bathroom Media On
-    unit_of_measurement: "On"
-    value_template: >
-      {% set media = [
-        states.media_player.spotify,
-
-        ] %}
-      {{ media | selectattr('state','eq','on') | list | count }}
-  bathroom_switches_on: ## SWITCHES ##
-    friendly_name: Bathroom Switches On
-    unit_of_measurement: "On"
-    value_template: >
-      {% set switches = [
-        states.switch.espresense_bathroom_arduino_ota,
-
-        ] %}
-      {{ switches | selectattr('state','eq','on') | list | count }}
 
 #  _            _                    
 # | |__  ___ __| |_ _ ___  ___ _ __  
@@ -84,36 +57,25 @@ sensors:
 #                                    
   bedroom_lights_on: ## LIGHTING ##
     friendly_name: Bedroom Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
         states.light.bedroom_fairy_lights,
         states.light.bedroom_leds,
         states.light.bedroom_main_light,
         states.light.bedside_leah,
-        states.light.bedside_sam,
+        states.light.bedside_sam
 
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
   bedroom_media_on: ## MEDIA ##
     friendly_name: Bedroom Media On
-    unit_of_measurement: "On"
     value_template: >
       {% set media = [
-        states.media_player.bedroom_google_home,
         states.media_player.bedroom_tv,
+        states.media_player.bedroom_google_speaker
 
         ] %}
       {{ media | selectattr('state','eq','on') | list | count }}
-  bedroom_switches_on: ## SWITCHES ##
-    friendly_name: Bedroom Switches On
-    unit_of_measurement: "On"
-    value_template: >
-      {% set switches = [
-        states.switch.espresense_bathroom_status_led,
-
-        ] %}
-      {{ switches | selectattr('state','eq','on') | list | count }}
 
 #  _         _ _ 
 # | |_  __ _| | |
@@ -122,33 +84,22 @@ sensors:
 #                
   hall_lights_on: ## LIGHTING ##
     friendly_name: Hall Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
         states.light.hall_lamp,
         states.light.hall_leds,
-        states.light.hall_main_lights,
+        states.light.hall_main_lights
 
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
-  hall_media_on: ## MEDIA ##
-    friendly_name: Hall Media On
-    unit_of_measurement: "On"
-    value_template: >
-      {% set media = [
-        states.media_player.dashboard_tablet,
-
-        ] %}
-      {{ media | selectattr('state','eq','on') | list | count }}
   hall_switches_on: ## SWITCHES ##
     friendly_name: Hall Switches On
-    unit_of_measurement: "On"
     value_template: >
-      {% set switches = [
-        states.switch.tablet_charger,
+      {% set switch = [
+        states.switch.tablet_charger
 
         ] %}
-      {{ switches | selectattr('state','eq','on') | list | count }}
+      {{ switch | selectattr('state','eq','on') | list | count }}
 
 #  _   _ _      _             
 # | |_(_) |_ __| |_  ___ _ _  
@@ -157,34 +108,23 @@ sensors:
 #                             
   kitchen_lights_on: ## LIGHTING ##
     friendly_name: Kitchen Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
         states.light.kitchen_leds,
-        states.light.kitchen_main_lights,
+        states.light.kitchen_main_lights
 
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
   kitchen_media_on: ## MEDIA ##
     friendly_name: Kitchen Media On
-    unit_of_measurement: "On"
     value_template: >
       {% set media = [
-        states.media_player.living_room_sonos,
-        states.media_player.living_room,
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
         states.media_player.living_room_tv
 
         ] %}
       {{ media | selectattr('state','eq','on') | list | count }}
-  kitchen_switches_on: ## SWITCHES ##
-    friendly_name: Kitchen Switches On
-    unit_of_measurement: "On"
-    value_template: >
-      {% set switches = [
-        states.switch.espresense_kitchen_arduino_ota,
-
-        ] %}
-      {{ switches | selectattr('state','eq','on') | list | count }}
 
 #  _ _     _                                
 # | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __  
@@ -193,39 +133,36 @@ sensors:
 #                |___/                      
   living_room_lights_on: ## LIGHTING ##
     friendly_name: Living Room Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
-        states.light.living_room_display_led,
-        states.light.living_room_dreamview,
+        states.light.living_room_display_leds,
         states.light.living_room_lamp,
         states.light.living_room_lava_lamp,
         states.light.living_room_leds,
         states.light.living_room_main_light,
         states.light.living_room_tv_leds,
+        states.light.living_room_dreamview
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
   living_room_media_on: ## MEDIA ##
     friendly_name: Living Room Media On
-    unit_of_measurement: "On"
     value_template: >
       {% set media = [
-        states.media_player.living_room_sonos,
-        states.media_player.living_room,
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
         states.media_player.living_room_tv
 
         ] %}
       {{ media | selectattr('state','eq','on') | list | count }}
   living_room_switches_on: ## SWITCHES ##
     friendly_name: Living Room Switches On
-    unit_of_measurement: "On"
     value_template: >
-      {% set switches = [
-        states.switch.living_room_sonos_crossfade,
+      {% set switch = [
+        states.switch.living_room_snowman,
+        states.switch.living_room_christmas_tree
 
         ] %}
-      {{ switches | selectattr('state','eq','on') | list | count }}
-
+      {{ switch | selectattr('state','eq','on') | list | count }}
 #       __  __ _        
 #  ___ / _|/ _(_)__ ___ 
 # / _ \  _|  _| / _/ -_)
@@ -233,32 +170,29 @@ sensors:
 #                       
   office_lights_on: ## LIGHTING ##
     friendly_name: Office Lights On
-    unit_of_measurement: "On"
     value_template: >
       {% set lights = [
-        states.light.office_leds,
-        states.light.office_desk_lamp,
+        states.light.office_desk_leds
 
         ] %}
       {{ lights | selectattr('state','eq','on') | list | count }}
   office_media_on: ## MEDIA ##
     friendly_name: Office Media On
-    unit_of_measurement: "On"
     value_template: >
       {% set media = [
-        states.media_player.living_room_sonos,
-        states.media_player.living_room,
-        states.media_player.living_room_tv
+        states.media_player.living_room_sonos_speaker,
+        states.media_player.living_room_google_speaker,
+        states.media_player.living_room_tv,
+        states.binary_sensor.sams_desktop_active,
+        states.media_player.office_xbox
 
         ] %}
       {{ media | selectattr('state','eq','on') | list | count }}
   office_switches_on: ## SWITCHES ##
     friendly_name: Office Switches On
-    unit_of_measurement: "On"
     value_template: >
       {% set switches = [
-        states.switch.xbox,
-        states.switch.sonoff_100149c418_1,
+        states.switch.xbox_power
 
         ] %}
       {{ switches | selectattr('state','eq','on') | list | count }}

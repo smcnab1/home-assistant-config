@@ -32,6 +32,7 @@ secrets.yaml
 adbkey
 adbkey.pub
 .shopping_list.json
+automations/alarm/notify.yaml
 
 #     _ _            _                  _                          
 #  __| (_)_ _ ___ __| |_ ___ _ _ _  _  (_)__ _ _ _  ___ _ _ ___ ___
@@ -44,10 +45,7 @@ adbkey.pub
 deps
 .old_config
 custom_components
-themes
 www/
-blueprints/*/homeassistant
-node-red/
 zigbee2mqtt
 
 #  _    _                   _     _     _                          

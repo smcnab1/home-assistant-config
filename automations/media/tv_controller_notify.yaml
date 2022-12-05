@@ -41,7 +41,7 @@ action:
         entity_id: person.sam
         state: home
     then:
-      - service: notify.mobile_app_iphone
+      - service: notify.mobile_app_sams_iphone
         data:
           actions:
             - action: URI

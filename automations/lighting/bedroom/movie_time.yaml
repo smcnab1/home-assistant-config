@@ -25,16 +25,6 @@ trigger:
       - media_player.bedroom_tv
     to: "off"
     id: "off"
-  - platform: state
-    entity_id:
-      - media_player.bedroom_tv
-    to: playing
-    id: playing
-  - platform: state
-    entity_id:
-      - media_player.bedroom_tv
-    to: idle
-    id: pause
 condition: []
 action:
   - choose:
@@ -69,7 +59,7 @@ action:
               entity_id: light.bedside_lamps
       - conditions:
           - condition: trigger
-            id: playing
+            id: "ON"
         sequence:
           - service: automation.trigger
             data:

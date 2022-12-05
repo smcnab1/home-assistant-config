@@ -1,0 +1,12 @@
+#  ___  ___  _  _  ___  ___ 
+# / __|/ _ \| \| |/ _ \/ __|
+# \__ \ (_) | .` | (_) \__ \
+# |___/\___/|_|\_|\___/|___/
+#                           
+#--FROM https://github.com/smcnab1/op-question-mark
+#---SONOS Integration across subnets.
+
+sonos:
+  media_player:
+    hosts:
+      - 10.10.40.12

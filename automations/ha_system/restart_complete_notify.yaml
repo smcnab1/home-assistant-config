@@ -16,22 +16,17 @@ trigger:
   - platform: homeassistant
     event: start
 condition:
-  - condition: or
-    conditions:
-      - condition: state
-        entity_id: person.leah
-        state: home
-      - condition: state
-        entity_id: person.sam
-        state: home
+  - condition: state
+    entity_id: person.sam
+    state: home
 action:
   - parallel:
       - if:
           - condition: state
-            entity_id: binary_sensor.mac_mini_active
+            entity_id: binary_sensor.sams_desktop_active
             state: "on"
         then:
-          - service: notify.mobile_app_ipad
+          - service: notify.mobile_app_sam_s_desktop
             data:
               title: Home Assistant - System Management
               message: Home Assistant has Restarted

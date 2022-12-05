@@ -21,9 +21,9 @@ action:
           brightness: 181
         target:
           entity_id:
-            - light.office_leds
+            - light.office_desk_leds
       - service: switch.turn_on
         data: {}
         target:
-          entity_id: switch.xbox
+          entity_id: switch.xbox_power
 mode: single

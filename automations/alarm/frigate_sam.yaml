@@ -1,0 +1,18 @@
+#       _                   __     _           _                              
+#  __ _| |__ _ _ _ _ __    / _|_ _(_)__ _ __ _| |_ ___   ___   ___ __ _ _ __  
+# / _` | / _` | '_| '  \  |  _| '_| / _` / _` |  _/ -_) |___| (_-</ _` | '  \ 
+# \__,_|_\__,_|_| |_|_|_| |_| |_| |_\__, \__,_|\__\___|       /__/\__,_|_|_|_|
+#                                   |___/                                     
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Frigate Sam
+description: "Sends Live Feed to Sam on Detection"
+use_blueprint:
+  path: hunterjm/frigate_0.10_notification.yaml
+  input:
+    camera: Bedroom,Living_Room,Hall
+    notify_device: 3252ba723d0c8e797491d6c93161a89e
+    base_url: https://zbla5g2emsf0uk7hl17z3xppcn50324m.ui.nabu.casa/
+    critical: true
+    update_thumbnail: true
+    presence_filter: group.presense

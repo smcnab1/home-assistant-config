@@ -18,7 +18,7 @@ trigger:
     to: "on"
 condition: []
 action:
-  - service: notify.mobile_app_iphone
+  - service: notify.mobile_app_sams_iphone
     data:
       message: What would you like to do?
       title: It's a Good Idea to Wash Your Car

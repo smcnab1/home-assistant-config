@@ -43,12 +43,6 @@ trigger:
   - platform: state
     entity_id:
       - media_player.living_room_tv
-    attribute: source
-    to: org.tizen.netflix-app
-    id: "ON"
-  - platform: state
-    entity_id:
-      - media_player.living_room_tv
     to: Netflix
     id: "ON"
     attribute: source
@@ -80,7 +74,7 @@ action:
             data:
               scene_id: premovie
               snapshot_entities:
-                - light.living_room_display_led
+                - light.living_room_display_leds
                 - light.living_room_leds
                 - light.living_room_dreamview
                 - light.living_room_lava_lamp
@@ -106,8 +100,13 @@ action:
             target:
               entity_id: light.living_room_leds
       - conditions:
-          - condition: trigger
-            id: playing
+          - condition: and
+            conditions:
+              - condition: trigger
+                id: playing
+              - condition: state
+                entity_id: media_player.living_room_tv
+                state: paused
         sequence:
           - service: automation.trigger
             data:

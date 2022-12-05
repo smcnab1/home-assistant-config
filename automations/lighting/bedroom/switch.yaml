@@ -8,10 +8,10 @@
 alias: Lighting Bedroom Switch
 description: Automation which uses mini switch as a switch for lighting in Bedroom.
 use_blueprint:
-  path: SeanM/zha-aqara-wireless-mini-switch.yaml
+  path: Drafted/aqara-buttons-all-in-one-zigbee2mqtt.yaml
   input:
-    aqara_mini_switch: ae5c48e7260b5be5c0da2384b469b846
-    button_single_press:
+    action_sensor: sensor.bedroom_switch_action
+    single_action:
       - if:
           - condition: and
             conditions:
@@ -49,15 +49,13 @@ use_blueprint:
                       skip_condition: false
                     target:
                       entity_id: automation.lighting_bedroom_off
-    button_double_press:
+    double_action:
       - service: light.toggle
         data: {}
         target:
           entity_id: light.bedroom_main_light
-    button_long_press:
+    hold_action:
       - service: input_boolean.toggle
         data: {}
         target:
           entity_id: input_boolean.party
-
-

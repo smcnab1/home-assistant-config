@@ -14,7 +14,7 @@ sequence:
         - light.bedroom_leds
         - light.hall_leds
         - light.kitchen_leds
-        - light.living_room_display_led
+        - light.living_room_display_leds
         - light.living_room_leds
         - light.living_room_tv_leds
         - light.office_leds

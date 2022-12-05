@@ -29,16 +29,16 @@ action:
             data: {}
             target:
               entity_id:
-                - media_player.bedroom_google_home
-                - media_player.living_room_google_home
+                - media_player.bedroom_google_speaker
+                - media_player.living_room_google_speaker
           - service: media_player.volume_set
             data:
               volume_level: 1
             target:
               entity_id:
-                - media_player.living_room_sonos
-                - media_player.bedroom_google_home
-                - media_player.living_room_google_home
+                - media_player.living_room_sonos_speaker
+                - media_player.bedroom_google_speaker
+                - media_player.living_room_google_speaker
           - repeat:
               until:
                 - condition: state
@@ -52,7 +52,7 @@ action:
                     media_content_type: music
                     enqueue: play
                   target:
-                    entity_id: media_player.living_room_sonos
+                    entity_id: media_player.living_room_sonos_speaker
                 - delay:
                     hours: 0
                     minutes: 0
@@ -61,13 +61,13 @@ action:
                 - parallel:
                     - service: tts.cloud_say
                       data:
-                        entity_id: media_player.bedroom_google_home
+                        entity_id: media_player.bedroom_google_speaker
                         message: >-
                           Alarm has been activated. Police have been called and
                           are on the way
                     - service: tts.cloud_say
                       data:
-                        entity_id: media_player.living_room_google_home
+                        entity_id: media_player.living_room_google_speaker
                         message: >-
                           Alarm has been activated. Police have been called and
                           are on the way
@@ -79,11 +79,11 @@ action:
                 - parallel:
                     - service: tts.cloud_say
                       data:
-                        entity_id: media_player.bedroom_google_home
+                        entity_id: media_player.bedroom_google_speaker
                         message: Police are now 1 minute away
                     - service: tts.cloud_say
                       data:
-                        entity_id: media_player.living_room_google_home
+                        entity_id: media_player.living_room_google_speaker
                         message: Police are now 1 minute away
       - conditions:
           - condition: trigger
@@ -92,14 +92,14 @@ action:
           - service: media_player.media_stop
             data: {}
             target:
-              entity_id: media_player.living_room_sonos
+              entity_id: media_player.living_room_sonos_speaker
           - service: media_player.volume_set
             data:
               volume_level: 0.4
             target:
               entity_id:
-                - media_player.living_room_sonos
-                - media_player.bedroom_google_home
-                - media_player.living_room_google_home
+                - media_player.living_room_sonos_speaker
+                - media_player.bedroom_google_speaker
+                - media_player.living_room_google_speaker
     default: []
 mode: restart

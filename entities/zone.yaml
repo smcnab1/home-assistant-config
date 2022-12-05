@@ -11,3 +11,4 @@
   longitude: !secret home_lon
   radius: 40
   icon: mdi:home
+  

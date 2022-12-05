@@ -17,7 +17,7 @@ trigger:
       action: ARM_ALARM
     context:
       user_id:
-        - d5de2d519885447495a552f1d87f0a9d
+        - 9ffd5fe9c4c84dd2b9213f04d70b4495
     id: LEAHARM
   - platform: event
     event_type: mobile_app_notification_action
@@ -25,7 +25,7 @@ trigger:
       action: ARM_ALARM
     context:
       user_id:
-        - 47cefae3ba0f490c8ccafd6bfedad232
+        - 6728110b2495497fab6d74e5d2ec0861
     id: SAMARM
 condition:
   - condition: and
@@ -54,9 +54,9 @@ action:
               - alarm_control_panel.home_alarm
             to: armed_away
         continue_on_timeout: false
-      - service: notify.mobile_app_iphone
+      - service: notify.mobile_app_sams_iphone
         data:
-          message: Leah has armed the Alarm.
+          message: Leah has armed the Alarm
           title: ALARM ARMED
       - service: notify.mobile_app_leah_iphone
         data:
@@ -76,9 +76,9 @@ action:
               - alarm_control_panel.home_alarm
             to: armed_away
         continue_on_timeout: false
-      - service: notify.mobile_app_iphone
+      - service: notify.mobile_app_sams_iphone
         data:
-          message: You have armed the Alarm.
+          message: You have armed the Alarm
           title: ALARM ARMED
       - service: notify.mobile_app_leah_iphone
         data:

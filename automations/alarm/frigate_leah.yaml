@@ -1,0 +1,18 @@
+#       _                   __     _           _               _          _    
+#  __ _| |__ _ _ _ _ __    / _|_ _(_)__ _ __ _| |_ ___   ___  | |___ __ _| |_  
+# / _` | / _` | '_| '  \  |  _| '_| / _` / _` |  _/ -_) |___| | / -_) _` | ' \ 
+# \__,_|_\__,_|_| |_|_|_| |_| |_| |_\__, \__,_|\__\___|       |_\___\__,_|_||_|
+#                                   |___/                                      
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: Alarm Frigate Leah
+description: "Sends Live Feed to Leah on Detection"
+use_blueprint:
+  path: hunterjm/frigate_0.10_notification.yaml
+  input:
+    camera: Bedroom,Living_Room,Hall
+    notify_device: c8b4598a685c3549fd1bc8981007497c
+    base_url: https://zbla5g2emsf0uk7hl17z3xppcn50324m.ui.nabu.casa/
+    critical: true
+    update_thumbnail: true
+    presence_filter: group.presense

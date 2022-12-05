@@ -10,7 +10,7 @@ description: 'Automation triggered by dashboard pushing actionable notification 
 trigger: []
 condition: []
 action:
-  - service: notify.mobile_app_iphone
+  - service: notify.mobile_app_sams_iphone
     data:
       data:
         actions:

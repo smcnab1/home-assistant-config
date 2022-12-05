@@ -13,37 +13,33 @@ use_blueprint:
     reminder_hours: "3"
     update_entities:
       - update.esphome_update
-      - update.frigate_nvr_update
-      - update.frigate_server
-      - update.git_pull_update
-      - update.node_red_update
-      - update.terminal_ssh_update
-      - update.studio_code_server_update
-      - update.samba_share_update
-      - update.mqtt_update
-      - update.home_assistant_supervisor_update
-      - update.home_assistant_operating_system_update
-      - update.home_assistant_google_drive_backup_update
+      - update.frigate_update
       - update.home_assistant_core_update
-      - update.nginx_proxy_manager_update
-      - update.mariadb_update
-    mobile_app_device: 690e4484fd88167f89c15ffbf493a54d
-    mobile_app_device_2: 356340e93d30ee5fd991ec3189919a27
+      - update.home_assistant_google_drive_backup_update
+      - update.home_assistant_operating_system_update
+      - update.home_assistant_supervisor_update
+      - update.mosquitto_broker_update
+      - update.studio_code_server_update
+      - update.terminal_ssh_update
+      - update.zigbee2mqtt_update
+      - update.browser_mod_update
+      - update.car_wash_update
+      - update.config_template_card_update
+      - update.frigate_card_update
+      - update.frigate_update_2
+      - update.govee_update
+      - update.hacs_update
+      - update.hasl_departure_card_update
+      - update.node_red_companion_update
+      - update.notify_card_update
+      - update.restriction_card_update
+      - update.samsungtv_smart_update
+      - update.slider_button_card_update
+      - update.stack_in_card_update
+      - update.swipe_card_update
+      - update.tapo_controller_update
+      - update.template_entity_row_update
+    mobile_app_device: 3252ba723d0c8e797491d6c93161a89e
+    mobile_app_device_2: ccedf7b5399d8245c9c07c4d701aab66
     send_to_ha: true
-    run_config_check: true
-    changelog_urls:
-      update.esphome_update: https://esphome.io/changelog/index.html
-      update.frigate_nvr_update: https://github.com/blakeblackshear/frigate/releases
-      update.git_pull_update: >-
-        https://github.com/home-assistant/addons/blob/master/git_pull/CHANGELOG.md
-      update.home_assistant_google_drive_backup_update: https://github.com/sabeechen/hassio-google-drive-backup/releases
-      update.mariadb_update: >-
-        https://github.com/home-assistant/addons/blob/master/mariadb/CHANGELOG.md
-      update.mqtt_update: >-
-        https://github.com/home-assistant/addons/blob/master/mosquitto/CHANGELOG.md
-      update.nginx_proxy_manager_update: https://github.com/hassio-addons/addon-nginx-proxy-manager/releases
-      update.node_red_update: https://github.com/hassio-addons/addon-node-red/releases
-      update.samba_share_update: https://github.com/home-assistant/addons/blob/master/samba/CHANGELOG.md
-      update.studio_code_server_update: https://github.com/hassio-addons/addon-vscode/releases
-      update.terminal_ssh_update: https://github.com/home-assistant/addons/blob/master/ssh/CHANGELOG.md
-    notification_channel: HA-Updates
+    take_backup: false

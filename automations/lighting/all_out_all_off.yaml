@@ -41,7 +41,8 @@ action:
         - office
         - server
         - system
-  - service: notify.mobile_app_iphone
+        - person
+  - service: notify.mobile_app_sams_iphone
     data:
       message: All Lights Off
       title: HA System - Lights Off

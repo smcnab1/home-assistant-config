@@ -11,6 +11,6 @@ trigger: []
 condition: []
 action:
   - data_template:
-      entity_id: media_player.living_room_google_home
+      entity_id: media_player.living_room_google_speaker
       message: '{{ states(''input_text.tts_message_living_room'') }}'
     service: tts.cloud_say

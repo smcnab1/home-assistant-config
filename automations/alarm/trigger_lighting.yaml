@@ -42,8 +42,8 @@ action:
                       - light.kitchen_leds
                       - light.living_room_leds
                       - light.living_room_tv_leds
-                      - light.living_room_display_led
-                      - light.office_leds
+                      - light.living_room_display_leds
+                      - light.office_desk_leds
                 - delay:
                     hours: 0
                     minutes: 0
@@ -58,8 +58,8 @@ action:
                       - light.kitchen_leds
                       - light.living_room_leds
                       - light.living_room_tv_leds
-                      - light.office_leds
-                      - light.living_room_display_led
+                      - light.living_room_display_leds
+                      - light.office_desk_leds
                 - delay:
                     hours: 0
                     minutes: 0
@@ -76,9 +76,9 @@ action:
                 - light.bedroom_leds
                 - light.hall_leds
                 - light.kitchen_leds
-                - light.living_room_display_led
                 - light.living_room_leds
                 - light.living_room_tv_leds
-                - light.office_leds
+                - light.living_room_display_leds
+                - light.office_desk_leds
     default: []
 mode: restart

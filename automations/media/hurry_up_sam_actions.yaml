@@ -14,21 +14,21 @@ trigger:
       action: HURRY
 condition:
   - condition: state
-    entity_id: binary_sensor.xbox_status
+    entity_id: binary_sensor.office_xbox_live
     state: 'on'
 action:
   - service: scene.create
     data:
       scene_id: prehurryup
-      snapshot_entities: light.office_leds
+      snapshot_entities: light.office_desk_leds
   - service: media_player.volume_set
     data:
       volume_level: 0.8
     target:
-      entity_id: media_player.living_room_google_home
+      entity_id: media_player.living_room_google_speaker
   - service: tts.cloud_say
     data:
-      entity_id: media_player.living_room_google_home
+      entity_id: media_player.living_room_google_speaker
       message: Hurry Up and get off your xbox! I want some attention
   - repeat:
       count: '30'
@@ -38,7 +38,7 @@ action:
           color_name: red
           brightness: 255
         target:
-          entity_id: light.office_leds
+          entity_id: light.office_desk_leds
       - delay:
           hours: 0
           minutes: 0
@@ -47,7 +47,7 @@ action:
       - service: light.turn_off
         data: {}
         target:
-          entity_id: light.office_leds
+          entity_id: light.office_desk_leds
       - delay:
           hours: 0
           minutes: 0
@@ -61,7 +61,7 @@ action:
     data:
       volume_level: 0.4
     target:
-      entity_id: media_player.living_room_google_home
+      entity_id: media_player.living_room_google_speaker
   - delay:
       hours: 1
       minutes: 0
@@ -69,17 +69,17 @@ action:
       milliseconds: 0
   - if:
     - condition: state
-      entity_id: binary_sensor.xbox_status
+      entity_id: binary_sensor.office_xbox_live
       state: 'on'
     then:
     - service: media_player.volume_set
       data:
         volume_level: 1
       target:
-        entity_id: media_player.living_room_google_home
+        entity_id: media_player.living_room_google_speaker
     - service: tts.cloud_say
       data:
-        entity_id: media_player.living_room_google_home
+        entity_id: media_player.living_room_google_speaker
         message: Hurry Up and get off your xbox! I want some attention
     - repeat:
         count: '30'
@@ -89,7 +89,7 @@ action:
             color_name: red
             brightness: 255
           target:
-            entity_id: light.office_leds
+            entity_id: light.office_desk_leds
         - delay:
             hours: 0
             minutes: 0
@@ -98,7 +98,7 @@ action:
         - service: light.turn_off
           data: {}
           target:
-            entity_id: light.office_leds
+            entity_id: light.office_desk_leds
         - delay:
             hours: 0
             minutes: 0

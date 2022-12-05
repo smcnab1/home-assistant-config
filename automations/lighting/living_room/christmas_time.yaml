@@ -1,0 +1,68 @@
+#  _ _     _                                           _        _    _                   _   _           
+# | (_)_ _(_)_ _  __ _   _ _ ___  ___ _ __    ___   __| |_  _ _(_)__| |_ _ __  __ _ ___ | |_(_)_ __  ___ 
+# | | \ V / | ' \/ _` | | '_/ _ \/ _ \ '  \  |___| / _| ' \| '_| (_-<  _| '  \/ _` (_-< |  _| | '  \/ -_)
+# |_|_|\_/|_|_||_\__, | |_| \___/\___/_|_|_|       \__|_||_|_| |_/__/\__|_|_|_\__,_/__/  \__|_|_|_|_\___|
+#                |___/                                                                                   
+#--FROM https://github.com/smcnab1/op-question-mark
+
+alias: 'Lighting Living Room Christmas Time'
+description: "Automation to turn on Christmas lights and play bell sound effects at 1600hrs everyday unless nobody is home"
+mode: single
+trigger:
+  - platform: time
+    at: "16:00:00"
+    id: "ON"
+  - platform: time
+    at: "23:00:00"
+    id: "OFF"
+condition:
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: person.sam
+        state: home
+      - condition: state
+        entity_id: person.leah
+        state: home
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: "ON"
+        sequence:
+          - service: switch.turn_on
+            data: {}
+            target:
+              entity_id:
+                - switch.living_room_christmas_tree
+                - switch.living_room_snowman
+          - service: media_player.volume_set
+            data:
+              volume_level: 0.35
+            target:
+              entity_id: media_player.living_room_sonos_speaker
+          - service: media_player.play_media
+            target:
+              entity_id: media_player.living_room_sonos_speaker
+            data:
+              media_content_id: media-source://media_source/local/Jingle-bells-sound-effect.mp3
+              media_content_type: audio/mpeg
+            metadata:
+              title: Jingle-bells-sound-effect.mp3
+              thumbnail: null
+              media_class: music
+              children_media_class: null
+              navigateIds:
+                - {}
+                - media_content_type: app
+                  media_content_id: media-source://media_source
+      - conditions:
+          - condition: trigger
+            id: "OFF"
+        sequence:
+          - service: switch.turn_off
+            data: {}
+            target:
+              entity_id:
+                - switch.living_room_snowman
+                - switch.living_room_christmas_tree

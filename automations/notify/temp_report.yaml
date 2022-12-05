@@ -11,7 +11,7 @@ mode: single
 trigger: []
 condition: []
 action:
-  - service: notify.mobile_app_iphone
+  - service: notify.mobile_app_sams_iphone
     data:
       title: Temperature Report
       message: >

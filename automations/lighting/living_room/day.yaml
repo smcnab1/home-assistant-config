@@ -40,6 +40,6 @@ action:
           brightness: 255
         target:
           entity_id:
-            - light.living_room_display_led
+            - light.living_room_display_leds
             - light.living_room_tv_leds
             - light.living_room_leds
