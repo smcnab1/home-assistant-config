@@ -1474,11 +1474,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
 [product-screenshot]: images/screenshot.png
 [email-badge]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[email-url]: mailto:sammcnab.email@gmail.com
-[signal-badge]: https://img.shields.io/badge/Signal-%23039BE5.svg?&style=for-the-badge&logo=Signal&logoColor=white
-[signal-url]: https://signal.me/#p/+447513595678
-[telegram-badge]: https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white
-[telegram-url]: https://t.me/sam_mcnab
+[email-url]: mailto:shacodinggit@gmail.com
 [git-badge]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [git-url]: https://github.com/smcnab1
 [kofi-badge]: https://ko-fi.com/img/githubbutton_sm.svg
