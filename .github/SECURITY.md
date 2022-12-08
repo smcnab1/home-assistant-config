@@ -6,6 +6,6 @@ We appreciate your efforts to responsibly disclose your findings and will make e
 
 To report a security issue, go to the project's issues and create a new issue using the ⚠️ Security Report 'issue template'.
 
-Read carefully the instructions of this issue template, and if your report could leak data or might expose how to gain access to a restricted area or break the system, please email [sammcnab.email@gmail.com](mailto:sammcnab.email@gmail.com) and include the word "SECURITY" in the subject line.
+Read carefully the instructions of this issue template, and if your report could leak data or might expose how to gain access to a restricted area or break the system, please email [shacodinggit@gmail.com](mailto:shacodinggit@gmail.com) and include the word "SECURITY" in the subject line.
 
 We'll endeavour to respond quickly, and will keep you updated throughout the process.
