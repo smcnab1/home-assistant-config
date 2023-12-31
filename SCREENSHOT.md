@@ -1,5 +1,4 @@
 <!-- TOP ROW OF BADGES -->
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -24,37 +23,30 @@
 ## Contents
 
 <div align="center">
-<a href="https://github.com/smcnab1/home-assistant-config">
-
-**View Full Repo**
-</a>
+  
+[**View Full Repo**](https://github.com/smcnab1/home-assistant-config)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues">
-**Report Bug**
-</a>
+[**Report Bug**](https://github.com/smcnab1/home-assistant-config/issues)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues">
-**Request Feature**
-</a>
+[**Request Feature**](https://github.com/smcnab1/home-assistant-config/issues)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues">
-**ToDo List**
-</a>
+[**ToDo List**](https://github.com/smcnab1/home-assistant-config/issues)
 
 </div>
 
 <div align="center">
-<a href="https://github.com/smcnab1/home-assistant-config#devices">Devices</a>
+  
+[Devices](https://github.com/smcnab1/home-assistant-config#devices)
 |
-<a href="https://github.com/smcnab1/home-assistant-config#addon">Add-Ons</a>
+[Add-Ons](https://github.com/smcnab1/home-assistant-config#addon)
 |
-<a href="https://github.com/smcnab1/home-assistant-config#automations">Automations</a>
+[Automations](https://github.com/smcnab1/home-assistant-config#automations)
 |
-<a href="https://github.com/smcnab1/home-assistant-config#contributing">Contributing</a>
+[Contributing](https://github.com/smcnab1/home-assistant-config#contributing)
 |
-<a href="https://github.com/smcnab1/home-assistant-config#license">License</a>
+[License](https://github.com/smcnab1/home-assistant-config#license)
 |
-<a href="https://github.com/smcnab1/home-assistant-config#contact">Contact</a>
+[Contact](https://github.com/smcnab1/home-assistant-config#contact)
 </div>
 
 <!-- START OF SCREENSHOTS -->
