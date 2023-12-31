@@ -10,10 +10,10 @@
 
 <!-- PROJECT HEADING -->
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark">
+<a href="https://github.com/smcnab1/home-assistant-config">
 <img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150"></a>
 
-## **Op Question Mark - Screenshots**
+## **Home Assistant Config - Screenshots**
 
 #### Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!
 
@@ -24,37 +24,37 @@
 ## Contents
 
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark">
+<a href="https://github.com/smcnab1/home-assistant-config">
 
 **View Full Repo**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues">
+<a href="https://github.com/smcnab1/home-assistant-config/issues">
 **Report Bug**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues">
+<a href="https://github.com/smcnab1/home-assistant-config/issues">
 **Request Feature**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues">
+<a href="https://github.com/smcnab1/home-assistant-config/issues">
 **ToDo List**
 </a>
 
 </div>
 
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark#devices">Devices</a>
+<a href="https://github.com/smcnab1/home-assistant-config#devices">Devices</a>
 |
-<a href="https://github.com/smcnab1/op-question-mark#addon">Add-Ons</a>
+<a href="https://github.com/smcnab1/home-assistant-config#addon">Add-Ons</a>
 |
-<a href="https://github.com/smcnab1/op-question-mark#automations">Automations</a>
+<a href="https://github.com/smcnab1/home-assistant-config#automations">Automations</a>
 |
-<a href="https://github.com/smcnab1/op-question-mark#contributing">Contributing</a>
+<a href="https://github.com/smcnab1/home-assistant-config#contributing">Contributing</a>
 |
-<a href="https://github.com/smcnab1/op-question-mark#license">License</a>
+<a href="https://github.com/smcnab1/home-assistant-config#license">License</a>
 |
-<a href="https://github.com/smcnab1/op-question-mark#contact">Contact</a>
+<a href="https://github.com/smcnab1/home-assistant-config#contact">Contact</a>
 </div>
 
 <!-- START OF SCREENSHOTS -->
@@ -79,16 +79,16 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/smcnab1/op-question-mark.svg?style=for-the-badge
-[contributors-url]: https://github.com/smcnab1/op-question-mark/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/smcnab1/op-question-mark.svg?style=for-the-badge
-[forks-url]: https://github.com/smcnab1/op-question-mark/network/members
-[stars-shield]: https://img.shields.io/github/stars/smcnab1/op-question-mark.svg?style=for-the-badge
-[stars-url]: https://github.com/smcnab1/op-question-mark/stargazers
-[issues-shield]: https://img.shields.io/github/issues/smcnab1/op-question-mark.svg?style=for-the-badge
-[issues-url]: https://github.com/smcnab1/op-question-mark/issues
-[license-shield]: https://img.shields.io/github/license/smcnab1/op-question-mark.svg?style=for-the-badge
-[license-url]: https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/smcnab1/home-assistant-config.svg?style=for-the-badge
+[contributors-url]: https://github.com/smcnab1/home-assistant-config/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/smcnab1/home-assistant-config.svg?style=for-the-badge
+[forks-url]: https://github.com/smcnab1/home-assistant-config/network/members
+[stars-shield]: https://img.shields.io/github/stars/smcnab1/home-assistant-config.svg?style=for-the-badge
+[stars-url]: https://github.com/smcnab1/home-assistant-config/stargazers
+[issues-shield]: https://img.shields.io/github/issues/smcnab1/home-assistant-config.svg?style=for-the-badge
+[issues-url]: https://github.com/smcnab1/home-assistant-config/issues
+[license-shield]: https://img.shields.io/github/license/smcnab1/home-assistant-config.svg?style=for-the-badge
+[license-url]: https://github.com/smcnab1/home-assistant-config/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
 [product-screenshot]: images/screenshot.png
