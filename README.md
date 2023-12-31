@@ -1406,8 +1406,8 @@ This project is licensed under the [MIT License](LICENSE.md).
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
 [product-screenshot]: images/screenshot.png
-[email-badge]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[email-url]: mailto:shacodinggit@gmail.com
+[email-badge]: https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[email-url]: mailto:sam@sammcnab.co.uk
 [git-badge]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [git-url]: https://github.com/smcnab1
 [kofi-badge]: https://ko-fi.com/img/githubbutton_sm.svg
