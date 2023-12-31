@@ -10,10 +10,10 @@
 
 <!-- PROJECT HEADING -->
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark">
+<a href="https://github.com/smcnab1/home-assistant-config">
 <img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150"></a>
 
-## **Op Question Mark**
+## **Home Assistant Config**
 
 #### Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!
 
@@ -34,20 +34,20 @@ This repo will be updated regularly and I am keen to make it an open & learning 
 ## Contents
 
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark/blob/master/SCREENSHOT.md">
+<a href="https://github.com/smcnab1/home-assistant-config/blob/master/SCREENSHOT.md">
 
 **View Demo**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues/new?assignees=smcnab1&labels=Priority%3A+High%2C+Type%3A+Bug&template=bug_report.md&title=%5BBUG%5D">
+<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+High%2C+Type%3A+Bug&template=bug_report.md&title=%5BBUG%5D">
 **Report Bug**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">
+<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">
 **Request Feature**
 </a>
 **·**
-<a href="https://github.com/smcnab1/op-question-mark/issues/new?assignees=smcnab1&labels=&template=to-do-list.md&title=%5BTDL%5D">
+<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=&template=to-do-list.md&title=%5BTDL%5D">
 **ToDo List**
 </a>
 
@@ -68,7 +68,7 @@ This repo will be updated regularly and I am keen to make it an open & learning 
 </div>
 &nbsp;
 <div align="center">
-<a href="https://github.com/smcnab1/op-question-mark/blob/master/SCREENSHOT.md">Click the image to see more screenshots of my current Dashboard
+<a href="https://github.com/smcnab1/home-assistant-config/blob/master/SCREENSHOT.md">Click the image to see more screenshots of my current Dashboard
 <img src="https://i.imgur.com/z3pnxzt.png" alt="Screenshot Desktop"></a>
 </div>
 
@@ -78,7 +78,7 @@ This repo will be updated regularly and I am keen to make it an open & learning 
 
 ## All Devices _(as at Oct 22)_
 
-This is a list of the devices I **currently** use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/op-question-mark/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">feature request.</a>
+This is a list of the devices I **currently** use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">feature request.</a>
 <br />
 
 <!-- start-table -->
@@ -620,7 +620,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md">`LICENSE.md`</a> for more information.
+Distributed under the MIT License. See <a href="https://github.com/smcnab1/home-assistant-config/blob/master/LICENSE.md">`LICENSE.md`</a> for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -648,48 +648,48 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- SECURITY AUTOMATIONS -->
 <a name="security"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/alarm">Security 👮🚨 Automations (10 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/alarm">Security 👮🚨 Automations (10 automations)</a></b></summary><blockquote>
     
 <!-- 1 -->
     
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml">Alarm Arm Notifiction Reminder</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml">Alarm Arm Notifiction Reminder</a></b></summary>
 <b><i>Remind everyone to arm the alarm when leaving the house. Only if alarm hasn't already been set.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/entities/alarm.yaml)
-- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zone.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/entities/alarm.yaml)
+- [zone.home](https://github.com/smcnab1/home-assistant-config/blob/master/entities/zone.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
   
 <!-- 2 -->
  
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_actions.yaml">Alarm Arm Notifiction Actions</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_actions.yaml">Alarm Arm Notifiction Actions</a></b></summary>
 <b><i>This automation arms the alarm and sends notifications to everyone to confirm it is now armed.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
-- [zone.home](https://github.com/smcnab1/op-question-mark/blob/master/entities/zone.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [zone.home](https://github.com/smcnab1/home-assistant-config/blob/master/entities/zone.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
     
 <!-- 3 -->
     
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/disarm_notify.yaml">Alarm Disarm Nofification</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/disarm_notify.yaml">Alarm Disarm Nofification</a></b></summary>
 <b><i>Automation to disarm the alarm and notify everyone that it has been disarmed following the alarm triggering.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 <!-- 4 -->
     
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/overnight_living_room.yaml">Alarm Overnight Living Room</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/overnight_living_room.yaml">Alarm Overnight Living Room</a></b></summary>
 <b><i>Automation to send notification and camera screenshot to bedroom TV if motion detected in Living Room when everyone is asleep.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [input_boolean.sleeping](https://github.com/smcnab1/op-question-mark/blob/master/entities/input_boolean/all_sleeping.yaml)
+- [input_boolean.sleeping](https://github.com/smcnab1/home-assistant-config/blob/master/entities/input_boolean/all_sleeping.yaml)
 - [MQTT Add-On](https://github.com/home-assistant/addons/tree/master/mosquitto)
 - [Frigate Add-On](https://github.com/blakeblackshear/frigate)
 - [Android TV Notifications Integration](https://www.home-assistant.io/integrations/nfandroidtv/)
@@ -697,70 +697,70 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- 5 -->
     
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/trigger.yaml">Alarm Trigger</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/trigger.yaml">Alarm Trigger</a></b></summary>
 <b><i>Automation to trigger the alarm if motion is detected within the house when set to armed away and nobody home.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml) </details>
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml) </details>
 
 <!-- 6 -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/trigger_lighting.yaml">Alarm Trigger Lighting</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/trigger_lighting.yaml">Alarm Trigger Lighting</a></b></summary>
 <b><i>Automation to trigger the lighting sequence if alarm is triggered when set to armed away and nobody home.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml) </details>
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml) </details>
 
 <!-- 7 -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/trigger_sound.yaml">Alarm Trigger Sound</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/trigger_sound.yaml">Alarm Trigger Sound</a></b></summary>
 <b><i>Automation to trigger the sound sequence if alarm is triggered when set to armed away and nobody home. Includes audible siren and TTS.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/) </details>
 
 <!-- 8 -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/trigger_notify.yaml">Alarm Trigger Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/trigger_notify.yaml">Alarm Trigger Notify</a></b></summary>
 <b><i>Automation to notify everyone when the alarm is triggered when set to armed away and nobody home.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
 <!-- 9 -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/disarm_tag.yaml">Alarm Disarm Tag</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/disarm_tag.yaml">Alarm Disarm Tag</a></b></summary>
 <b><i>NFC Tag used to easily disarm the alarm system</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
 <!-- 10 -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_tag.yaml">Alarm Arm Tag</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_tag.yaml">Alarm Arm Tag</a></b></summary>
 <b><i>NFC Tag used to easily arm the alarm system</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [alarm_control_panel.home_alarm](https://github.com/smcnab1/op-question-mark/blob/master/automations/alarm/arm_notify_reminder.yaml)
+- [alarm_control_panel.home_alarm](https://github.com/smcnab1/home-assistant-config/blob/master/automations/alarm/arm_notify_reminder.yaml)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
 </blockquote></details>
 
 <!-- LIGHTING AUTOMATIONS -->
 <a name="lighting"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting">Lighting 🌄🌇 Automations (42 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting">Lighting 🌄🌇 Automations (42 automations)</a></b></summary><blockquote>
 
 <!-- BATHROOM LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/bathroom">Bathroom 🛀 Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/bathroom">Bathroom 🛀 Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Bathroom Motion Automation</b></summary><blockquote>
 <b><i>Automation which works with motion sensors to activate and de-activate lighting. Also depends on time of day.</b></i>
@@ -777,37 +777,37 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows)
 - [ESPresense Integration](https://espresense.com/)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bathroom/bath.yaml">Bath Time</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bathroom/bath.yaml">Bath Time</a></b></summary><blockquote>
 <b><i>Automation to activate bath time scene.</b></i>
 
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bathroom/morning.yaml">Morning</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bathroom/morning.yaml">Morning</a></b></summary><blockquote>
 <b><i>Automation to activate morning bathroom scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bathroom_morning](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bathroom/morning.yaml) </details>
+- [scene.bathroom_morning](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bathroom/morning.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bathroom/normal.yaml">Normal</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bathroom/normal.yaml">Normal</a></b></summary><blockquote>
 <b><i>Automation to activate normal bathroom scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bathroom_day](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bathroom/day.yaml) </details>
+- [scene.bathroom_day](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bathroom/day.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/bathroom/switch.yaml">Switch Control</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/bathroom/switch.yaml">Switch Control</a></b></summary><blockquote>
 <b><i>Using Aqara Switch to toggle lighting, overrides motion triggers</b></i>
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bathroom/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bathroom/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all bathroom lights.</b></i>
 </details>
 
 </blockquote></details>
 
 <!-- BEDROOM LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/bedroom">Bedroom 🛏️ Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/bedroom">Bedroom 🛏️ Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Bedroom Motion Automation</b></summary><blockquote>
 <b><i>Automation which works with motion sensors to activate and de-activate lighting. Also depends on current sleeping status through Bed Sensors.</b></i>
@@ -824,47 +824,47 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows)
 - [Sleep Sensor Control](#sleep) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bedroom/day.yaml">Day</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bedroom/day.yaml">Day</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom day time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bedroom_day](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bedroom/day.yaml) </details>
+- [scene.bedroom_day](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bedroom/day.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bedroom/night.yaml">Night</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bedroom/night.yaml">Night</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom night time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bedroom_night](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bedroom/night.yaml) </details>
+- [scene.bedroom_night](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bedroom/night.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bedroom/movie.yaml">Movie Scene</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bedroom/movie.yaml">Movie Scene</a></b></summary><blockquote>
 <b><i>Automation to activate bedroom movie scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bedroom_movie](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bedroom/movie.yaml) </details>
+- [scene.bedroom_movie](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bedroom/movie.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bedroom/movie_time.yaml">Movie Time</a></b></summary><blockquote>
-<b><i>Automation automatically turn on <a name="https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bedroom/movie.yaml">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bedroom/movie_time.yaml">Movie Time</a></b></summary><blockquote>
+<b><i>Automation automatically turn on <a name="https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bedroom/movie.yaml">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.bedroom_movie](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/bedroom/movie.yaml)
+- [scene.bedroom_movie](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/bedroom/movie.yaml)
 - [Android TV Integration](https://www.home-assistant.io/integrations/androidtv/) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/bedroom/switch.yaml">Switch Control</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/bedroom/switch.yaml">Switch Control</a></b></summary><blockquote>
 <b><i>Using Aqara Switch to toggle lighting, overrides motion triggers</b></i>
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/bedroom/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/bedroom/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all bedroom lights.</b></i>
 </details>
 
 </blockquote></details>
 
 <!-- HALL LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/hall">Hall 🚪 Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/hall">Hall 🚪 Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Hall Motion Automations</b></summary><blockquote>
 <b><i>Automation which works with motion and door sensors to activate and de-activate lighting. Also depends on time of day.</b></i>
@@ -880,35 +880,35 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/hall/day.yaml">Day</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/hall/day.yaml">Day</a></b></summary><blockquote>
 <b><i>Automation to activate hallway day time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.hall_day](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/hall/day.yaml) </details>
+- [scene.hall_day](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/hall/day.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/hall/night.yaml">Night</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/hall/night.yaml">Night</a></b></summary><blockquote>
 <b><i>Automation to activate hallway night time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.hall_night](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/hall/night.yaml) </details>
+- [scene.hall_night](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/hall/night.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/hall/sleep.yaml">Sleep Scene</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/hall/sleep.yaml">Sleep Scene</a></b></summary><blockquote>
 <b><i>Automation to activate hallway sleeping scene when going for a pee at night.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.hall_sleep](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/hall/sleep.yaml) </details>
+- [scene.hall_sleep](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/hall/sleep.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/hall/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/hall/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all hallway lights.</b></i>
 </details>
 
 </blockquote></details>
 
 <!-- KITCHEN LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/kitchen">Kitchen 🧑‍🍳 Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/kitchen">Kitchen 🧑‍🍳 Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Kitchen Motion Automations</b></summary><blockquote>
 <b><i>Automation which works with motion sensors to activate and de-activate lighting. Also depends on time of day.</b></i>
@@ -924,32 +924,32 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/kitchen/cooking.yaml">Cooking</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/kitchen/cooking.yaml">Cooking</a></b></summary><blockquote>
 <b><i>Automation to activate kitchen cooking scene during certain times.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.kitchen_cooking](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/kitchen/cooking.yaml) </details>
+- [scene.kitchen_cooking](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/kitchen/cooking.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/kitchen/normal.yaml">Normal</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/kitchen/normal.yaml">Normal</a></b></summary><blockquote>
 <b><i>Automation to activate normal kitchen scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.kitchen_normal](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/kitchen/normal.yaml) </details>
+- [scene.kitchen_normal](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/kitchen/normal.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/kitchen/switch.yaml">Switch Control</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/kitchen/switch.yaml">Switch Control</a></b></summary><blockquote>
 <b><i>Using Aqara Switch to toggle lighting, overrides motion triggers</b></i>
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/kitchen/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/kitchen/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all kitchen lights.</b></i>
 </details>
 
 </blockquote></details>
 
 <!-- LIVING ROOM LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/living_room">Living Room 🛋️ Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/living_room">Living Room 🛋️ Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Living Room Motion Automations</b></summary><blockquote>
 <b><i>Automation which works with motion sensors to activate and de-activate lighting. Also depends on time of day.</b></i>
@@ -966,47 +966,47 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
 - [@dortamur's Node-Red Motion Lighting Flow Template](https://github.com/dortamur/ha-node-red-flows) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/living_room/day.yaml">Day</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/living_room/day.yaml">Day</a></b></summary><blockquote>
 <b><i>Automation to activate living room day time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.living_room_day](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/living_room/day.yaml) </details>
+- [scene.living_room_day](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/living_room/day.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/living_room/night.yaml">Night</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/living_room/night.yaml">Night</a></b></summary><blockquote>
 <b><i>Automation to activate living room night time scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.living_room_night](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/living_room/night.yaml) </details>
+- [scene.living_room_night](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/living_room/night.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/living_room/movie.yaml">Movie</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/living_room/movie.yaml">Movie</a></b></summary><blockquote>
 <b><i>Automation to activate living room movie scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.living_room_movie](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/living_room/movie.yaml) </details>
+- [scene.living_room_movie](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/living_room/movie.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/living_room/movie_time.yaml">Movie Time</a></b></summary><blockquote>
-<b><i>Automation automatically turn on <a name="https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/living_room/movie.yaml">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/living_room/movie_time.yaml">Movie Time</a></b></summary><blockquote>
+<b><i>Automation automatically turn on <a name="https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/living_room/movie.yaml">Movie Scene</a> when TV is turned on to certain apps/channels.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.living_room_movie](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/living_room/movie.yaml)
+- [scene.living_room_movie](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/living_room/movie.yaml)
 - [Samsung SmartTV Integration](https://github.com/ollo69/ha-samsungtv-smart) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/living_room/switch.yaml">Switch Control</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/living_room/switch.yaml">Switch Control</a></b></summary><blockquote>
 <b><i>Using Aqara Switch to toggle lighting, overrides motion triggers</b></i>
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/living_room/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/living_room/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all living room lights.</b></i>
  </details>
 
 </blockquote></details>
 
 <!-- OFFICE LIGHTING AUTOMATIONS -->
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/office">Office 🖥️ Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/office">Office 🖥️ Lighting</a></b></summary><blockquote>
 
 <details><summary><b>Office Motion Lighting Automations</b></summary><blockquote>
 <b><i>Automation which works with motion sensors and mac system status to activate and de-activate lighting. Also depends on time of day.</b></i>
@@ -1024,21 +1024,21 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 </details></details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/bright.yaml">Bright</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/bright.yaml">Bright</a></b></summary><blockquote>
 <b><i>Automation to activate bright office scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.office_bright](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/office/bright.yaml) </details>
+- [scene.office_bright](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/office/bright.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/dull.yaml">Dull</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/dull.yaml">Dull</a></b></summary><blockquote>
 <b><i>Automation to activate dull office scene.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.office_dull](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/office/dull.yaml) </details>
+- [scene.office_dull](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/office/dull.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/gaming.yaml">Gaming</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/gaming.yaml">Gaming</a></b></summary><blockquote>
 <b><i>Automation to activate gaming scene when xbox turned on.</b></i>
 
 ![Node-Red Flow](https://i.imgur.com/mEJb7J4.png)
@@ -1050,22 +1050,22 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 &nbsp;&nbsp;_which uses:_
 
 - [Node-RED Add-On](https://github.com/hassio-addons/addon-node-red)
-- [scene.office_gaming](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/office/gaming.yaml) </details>
+- [scene.office_gaming](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/office/gaming.yaml) </details>
   
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/lamp.yaml">Lamp</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/lamp.yaml">Lamp</a></b></summary><blockquote>
 <b><i>Automation to activate bright office scene with desk lamp.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.office_lamp](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/office/lamp.yaml) </details>
+- [scene.office_lamp](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/office/lamp.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/desk_lamp_tag.yaml">Desk Lamp Tag</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/desk_lamp_tag.yaml">Desk Lamp Tag</a></b></summary><blockquote>
 <b><i>NFC Tag used to easily turn on the desk lamp.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [scene.office_lamp](https://github.com/smcnab1/op-question-mark/blob/master/entities/scenes/office/lamp.yaml)
+- [scene.office_lamp](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scenes/office/lamp.yaml)
 - [HA NFC Tag Integration](https://www.home-assistant.io/blog/2020/09/15/home-assistant-tags/) </details>
 
 <details><summary><b>Meeting</b></summary><blockquote>
@@ -1083,36 +1083,36 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
   </details></details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/office/off.yaml">Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/office/off.yaml">Off</a></b></summary><blockquote>
 <b><i>Automation to turn off all office lights.</b></i>
 
 </blockquote></details></details>
 
 <!-- PARTY LIGHTING AUTOMATIONS -->
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/tree/master/automations/lighting/party">Party 🎉 Lighting</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/tree/master/automations/lighting/party">Party 🎉 Lighting</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/party/on.yaml">Party On</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/party/on.yaml">Party On</a></b></summary><blockquote>
 <b><i>Automation to activate party mode which alternates lighting using a script.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [input_boolean.party](https://github.com/smcnab1/op-question-mark/blob/master/entities/input_boolean/party.yaml)
-- [script.party_on](https://github.com/smcnab1/op-question-mark/blob/master/entities/scripts/party_on.yaml)
-- [script.party_lighting](https://github.com/smcnab1/op-question-mark/blob/master/entities/scripts/party_lighting.yaml)</details>
+- [input_boolean.party](https://github.com/smcnab1/home-assistant-config/blob/master/entities/input_boolean/party.yaml)
+- [script.party_on](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scripts/party_on.yaml)
+- [script.party_lighting](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scripts/party_lighting.yaml)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/party/off.yaml">Party Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/party/off.yaml">Party Off</a></b></summary><blockquote>
 <b><i>Automation to de-activate party mode.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [input_boolean.party](https://github.com/smcnab1/op-question-mark/blob/master/entities/input_boolean/party.yaml)
-- [script.party_off](https://github.com/smcnab1/op-question-mark/blob/master/entities/scripts/party_off.yaml)
-- [script.party_lighting](https://github.com/smcnab1/op-question-mark/blob/master/entities/scripts/party_lighting.yaml)</details>
+- [input_boolean.party](https://github.com/smcnab1/home-assistant-config/blob/master/entities/input_boolean/party.yaml)
+- [script.party_off](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scripts/party_off.yaml)
+- [script.party_lighting](https://github.com/smcnab1/home-assistant-config/blob/master/entities/scripts/party_lighting.yaml)</details>
 
 </blockquote></details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/lighting/tag_lights_off.yaml">Tag All Off</a></b></summary><blockquote>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/lighting/tag_lights_off.yaml">Tag All Off</a></b></summary><blockquote>
 <b><i>Automation to turn all lights off using NFC Tags next to our bed.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1123,52 +1123,52 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <!-- TRANSPORT AUTOMATIONS -->
   <a name="transport"></a>
   
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/transport">Transport 🚌🚝 Automations (7 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/transport">Transport 🚌🚝 Automations (7 automations)</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/car_wash_notify.yaml">Car Wash Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/car_wash_notify.yaml">Car Wash Notify</a></b></summary>
 <b><i>Using the car wash input boolean to predict upcoming weather to see if it is worth washing my car or not. Then providing options as to either book car wash at home or show me navigation to nearest car wash.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [binary_sensor.car_wash](https://github.com/smcnab1/op-question-mark/blob/master/entities/binary_sensor/car_wash.yaml)
+- [binary_sensor.car_wash](https://github.com/smcnab1/home-assistant-config/blob/master/entities/binary_sensor/car_wash.yaml)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Car Wash Binary Sensor Integration (HACS)](https://github.com/Limych/ha-car_wash) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/citymapper_notify_leah_random.yaml">Citymapper Notify Wife (Random)</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/citymapper_notify_leah_random.yaml">Citymapper Notify Wife (Random)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to wifes phone to input end location from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/citymapper_notify_leah_work.yaml">Citymapper Notify Wife (Work)</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/citymapper_notify_leah_work.yaml">Citymapper Notify Wife (Work)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to wifes phone to work which auto populates directions from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/citymapper_notify_sam_random.yaml">Citymapper Notify Sam (Random)</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/citymapper_notify_sam_random.yaml">Citymapper Notify Sam (Random)</a></b></summary>
 <b><i>Automation triggered by dashboard pushing actionable notification to my phone to input end location from current location on the <a href="https://citymapper.com/?lang=en">Citymapper Mobile App.</a></b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Citymapper URL API](https://citymapper.com/tools/1053/launch-citymapper-for-directions)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/waze_camden.yaml">Waze to Work x2</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/waze_camden.yaml">Waze to Work x2</a></b></summary>
 <b><i>2x automations triggered by dashboard pushing actionable notification to my phone that automatically navigates to two work locations with the <a href="https://www.waze.com/en-GB/live-map/">Waze Mobile App.</a></b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Waze URL API](https://developers.google.com/waze/deeplinks)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet) </details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet) </details>
 
 </blockquote></details>
 
@@ -1178,7 +1178,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 <details><summary><b><a href="">Apple Watch 🍎⌚ Automations (1 automations with 13 actions)</a></b></summary><blockquote>
 
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/transport/waze_camden.yaml">Apple Watch Automations</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/transport/waze_camden.yaml">Apple Watch Automations</a></b></summary>
 <b><i>13 actions that can be triggered by my apple watch. From alarm control to controlling lighting and manually triggering sleep sensors.</a></b></i>
 
 ![Node-Red Flow](https://i.imgur.com/7RNvbEd.png)
@@ -1190,8 +1190,8 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 &nbsp;&nbsp;_actions include:_
 
 - [All Lights Off]()
-- [Living Room Movie Time](https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/living_room/movie_time.yaml)
-- [Bedroom Movie Time](https://github.com/smcnab1/op-question-mark/blob/Master/automations/lighting/bedroom/movie_time.yaml)
+- [Living Room Movie Time](https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/living_room/movie_time.yaml)
+- [Bedroom Movie Time](https://github.com/smcnab1/home-assistant-config/blob/Master/automations/lighting/bedroom/movie_time.yaml)
 - [Arm Alarm]()
 - [Disarm Alarm]()
 - [Bedroom Lights Toggle]()
@@ -1200,8 +1200,8 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Bathroom Lights Toggle]()
 - [Office Lights Toggle]()
 - [Sleep Sensor Toggle]()
-- [Temperature Report](https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/temp_report.yaml)
-- [Where is the Wife?](https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/where_is_leah.yaml)
+- [Temperature Report](https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/temp_report.yaml)
+- [Where is the Wife?](https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/where_is_leah.yaml)
 
 &nbsp;&nbsp;_which uses:_
 
@@ -1211,21 +1211,21 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- HA-SYSTEM AUTOMATIONS -->
   <a name="hasystem"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (9 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/ha_system">HA-System ⏰🖥️ Automations (9 automations)</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/fan_control.yaml">Server Cabinet Fan Control</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/fan_control.yaml">Server Cabinet Fan Control</a></b></summary>
 <b><i>Controls server cabinet temperature using temperature sensor and USB fans in Sonoff USB plugs</b></i>
 
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/git_auto_update.yaml">Git Auto Update</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/git_auto_update.yaml">Git Auto Update</a></b></summary>
 <b><i>Script that automatically updates github at 23:23:23 everyday to keep repo up-to-date.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [ha_gitpush.sh](***)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/restart_complete_notify.yaml">Restart Complete Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/restart_complete_notify.yaml">Restart Complete Notify</a></b></summary>
 <b><i>Automation which sends notification to my mac and google hubs through TTS to alert us that system restart has been complete and now back up. Gives the wife a heads up that things are now working and gives me actionable notification to open HA from notification on PC.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1234,7 +1234,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/shutdown_pre_notify.yaml">Pre-Shutdown Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/shutdown_pre_notify.yaml">Pre-Shutdown Notify</a></b></summary>
 <b><i>Automation which sends notification to my mac, wifes phone and google hubs through TTS to alert us that system is restarting. Gives the wife a heads up that things won't work for a few minutes.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1242,25 +1242,25 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/update_notify.yaml">System Updates Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/update_notify.yaml">System Updates Notify</a></b></summary>
 <b><i>Provides notifications for all system notifications including HACS and Add-Ons. Sensors are also pushed to the HA Dashboard.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [HA Supervisor Update Sensors](https://www.home-assistant.io/integrations/hassio)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)
-- [Update Notifications Blueprint](https://github.com/smcnab1/op-question-mark/blob/master/blueprints/automation/mdegat01/update_notifications.yaml) </details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)
+- [Update Notifications Blueprint](https://github.com/smcnab1/home-assistant-config/blob/master/blueprints/automation/mdegat01/update_notifications.yaml) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/ha_system/tablet_charging.yaml">Tablet Charging</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/ha_system/tablet_charging.yaml">Tablet Charging</a></b></summary>
 <b><i>Automation to trigger dashboard tablet's charging schedule. When battery level gets below 40%, charging begins. When above 90%, charging stops.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)
-- [Wall Panel Battery Blueprint](https://github.com/smcnab1/op-question-mark/blob/master/blueprints/automation/seamus65/wallpanel-battery-management.yaml)</details>
+- [Wall Panel Battery Blueprint](https://github.com/smcnab1/home-assistant-config/blob/master/blueprints/automation/seamus65/wallpanel-battery-management.yaml)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Develop/automations/ha_system/backup_stale_notify.yaml">Back-Up Stale Notification</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Develop/automations/ha_system/backup_stale_notify.yaml">Back-Up Stale Notification</a></b></summary>
 <b><i>Alerts me when updates become stale which require an update. Also gives me ability to remind me later through actionable notifications.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1268,27 +1268,27 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [HA Google Drive Backup Add-On](https://github.com/sabeechen/hassio-google-drive-backup)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/smcnab1/issue104/automations/ha_system/tablet_screen_time.yaml">Tablet Screen Time</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/smcnab1/issue104/automations/ha_system/tablet_screen_time.yaml">Tablet Screen Time</a></b></summary>
 <b><i>Turns the screen of dashboard tablet off at 23:00hrs unless motion is detected so light doesn't shine under bedroom door.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Fully Kiosk Browswer Integration](https://github.com/cgarwood/homeassistant-fullykiosk)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/ha_system/battery_alert.yaml">Battery Alert</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/ha_system/battery_alert.yaml">Battery Alert</a></b></summary>
 <b><i>Alerts me when any of the sensors batteries reach 15% for me to then replace</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
-- [Battery Alert Blueprint](https://github.com/smcnab1/op-question-mark/blob/Master/blueprints/automation/sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml)</details>
+- [Battery Alert Blueprint](https://github.com/smcnab1/home-assistant-config/blob/Master/blueprints/automation/sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml)</details>
 
 </blockquote></details>
 
 <!-- MEDIA AUTOMATIONS -->
   <a name="media"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/media">Media 🔊📺 Automations (5 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/media">Media 🔊📺 Automations (5 automations)</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/tv_controller_notify.yaml">TV Control Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/tv_controller_notify.yaml">TV Control Notify</a></b></summary>
 <b><i>Automation which sends actionable notification to open Smartthings Remote App to control TV when switched on.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1296,7 +1296,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [Samsung SmartTV Integration](https://github.com/ollo69/ha-samsungtv-smart) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/sam_night_notification.yaml">Night Reminder</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/sam_night_notification.yaml">Night Reminder</a></b></summary>
 <b><i>Automation which triggers at 21:30 to remind me to get off my PC if I am still on it. Using flashing red lights, TTS & Actionable Notification through my PC.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1304,8 +1304,8 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/hurry_up_sam_notify.yaml">XBOX Hurry Up Notify</a></b></summary>
-<b><i>Automation which sends notification to wifes phone when I turn on my XBOX and she is home. Uses actionable notifications to trigger a hurry up <a href="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/hurry_up_sam_actions.yaml">automation.</a></b></i>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/hurry_up_sam_notify.yaml">XBOX Hurry Up Notify</a></b></summary>
+<b><i>Automation which sends notification to wifes phone when I turn on my XBOX and she is home. Uses actionable notifications to trigger a hurry up <a href="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/hurry_up_sam_actions.yaml">automation.</a></b></i>
 
 &nbsp;&nbsp;_which uses:_
 
@@ -1314,7 +1314,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA XBOX Integration](https://www.home-assistant.io/integrations/xbox/)
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/hurry_up_sam_actions.yaml">XBOX Hurry Up Actions</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/hurry_up_sam_actions.yaml">XBOX Hurry Up Actions</a></b></summary>
 <b><i>Automation which is triggered by the wife through actionable notification. Flashes lights in office red and plays TTS through google home telling me to hurry up. Also sends me a notification on PC on other monitor.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1323,16 +1323,16 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 - [HA XBOX Integration](https://www.home-assistant.io/integrations/xbox/) </details>
   
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/media/volume_auto_set.yaml">Auto Volume Set</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/media/volume_auto_set.yaml">Auto Volume Set</a></b></summary>
 <b><i>Automation requested by the wife to automatically set the volume of all google home's so that we can listen to music when sleeping at a pre-set volume.</b></i> </details>
 
 </blockquote></details>
 
 <!-- NOTIFY AUTOMATIONS -->
   <a name="notify"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/Master/automations/notify">Notify 🔔📱 Automations (6 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/Master/automations/notify">Notify 🔔📱 Automations (6 automations)</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/house_temp.yaml">House Temperature</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/house_temp.yaml">House Temperature</a></b></summary>
 <b><i>Automation to let us know if the temperature in the house gets too hot or too cold including funny GIF & song lyrics</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1340,7 +1340,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/mail_delivered.yaml">Mail Notify - Delivered</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/mail_delivered.yaml">Mail Notify - Delivered</a></b></summary>
 <b><i>Automation that notifies me if any parcels have been delivered using the Mail & Packages Integration. Also has variable actionable notifications dependent on what packages have been delivered taking me to the app/email.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1349,7 +1349,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/mail_update.yaml">Mail Notify - Delivering</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/mail_update.yaml">Mail Notify - Delivering</a></b></summary>
 <b><i>Automation that notifies me if any parcels are on the way using the Mail & Packages Integration. Also has variable actionable notifications dependent on what packages are on the way taking me to the app/email.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1358,21 +1358,21 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/)
 </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/printer_ink_low.yaml">Printer Ink Low Status Notify</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/printer_ink_low.yaml">Printer Ink Low Status Notify</a></b></summary>
 <b><i>Automation to send me notification when ink in printer gets low. Provides link to buy the black or colour cartridge depending on what is low. Offers reminder and silence of notifications.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/temp_report.yaml">Temperature Report</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/temp_report.yaml">Temperature Report</a></b></summary>
 <b><i>Automation which sends overview of temperature across house.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [HA Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/Master/automations/notify/where_is_leah.yaml">Where is the Wife?</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/Master/automations/notify/where_is_leah.yaml">Where is the Wife?</a></b></summary>
 <b><i>Automation which sends me notification with mine and the wifes location and distance away from eachother and time,</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1383,9 +1383,9 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- TTS AUTOMATIONS -->
 <a name="tts"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/master/automations/tts">TTS 🔊📱 Automations (4 automations)</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/master/automations/tts">TTS 🔊📱 Automations (4 automations)</a></b></summary><blockquote>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/tts/leah_morning_briefing.yaml">Wife Morning Briefing</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/tts/leah_morning_briefing.yaml">Wife Morning Briefing</a></b></summary>
 <b><i>Automation which sends TTS morning briefing for wife when she gets up for work. Provides update on weather and travel time. Then plays relaxing music from Spotify.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1393,23 +1393,23 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
 - [Spotify Integration](https://www.home-assistant.io/integrations/spotify/) </details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/tts/input_push_bedroom.yaml">TTS Input Bedroom</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/tts/input_push_bedroom.yaml">TTS Input Bedroom</a></b></summary>
 <b><i>Automation that sends input from HA Dashboard to Google Hub Mini's as TTS Message.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/tts/input_push_living_room.yaml">TTS Input Living Room</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/tts/input_push_living_room.yaml">TTS Input Living Room</a></b></summary>
 <b><i>Automation that sends input from HA Dashboard to Google Hub Mini's as TTS Message.</b></i>
 
 &nbsp;&nbsp;_which uses:_
 
 - [Nabu-Casa TTS Cloud](https://www.nabucasa.com/config/tts/)
-- [Home Assistant Dashboard](https://github.com/smcnab1/op-question-mark/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
+- [Home Assistant Dashboard](https://github.com/smcnab1/home-assistant-config/tree/master/ui_lovelace_minimalist/dashboard/adaptive-dash/views-tablet)</details>
 
-<details><summary><b><a name="https://github.com/smcnab1/op-question-mark/blob/master/automations/tts/welcome_home_message.yaml">TTS Welcome Home Message</a></b></summary>
+<details><summary><b><a name="https://github.com/smcnab1/home-assistant-config/blob/master/automations/tts/welcome_home_message.yaml">TTS Welcome Home Message</a></b></summary>
 <b><i>Automation which triggers TTS Briefing when arriving back at home. Pulls person who arrives home into the automation for personalised message.</b></i>
 
 &nbsp;&nbsp;_which uses:_
@@ -1441,7 +1441,7 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- ISSUE TRACKER -->
   <a name="issue"></a>
-<details><summary><b><a href="https://github.com/smcnab1/op-question-mark/tree/Master/automations/notify">Local Issue Tracker  Automations 🎟️</a></b></summary><blockquote>
+<details><summary><b><a href="https://github.com/smcnab1/home-assistant-config/tree/Master/automations/notify">Local Issue Tracker  Automations 🎟️</a></b></summary><blockquote>
 
 <b><i>System that lets the wife complain about the HA system. Provides notifications when new issues are created and notifies wife when something she reported has been fixed. Utilises MQTT entities to produce binary sensors for issues open or complete.</b></i>
 
@@ -1460,16 +1460,16 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/op-qu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/smcnab1/op-question-mark.svg?style=for-the-badge
-[contributors-url]: https://github.com/smcnab1/op-question-mark/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/smcnab1/op-question-mark.svg?style=for-the-badge
-[forks-url]: https://github.com/smcnab1/op-question-mark/network/members
-[stars-shield]: https://img.shields.io/github/stars/smcnab1/op-question-mark.svg?style=for-the-badge
-[stars-url]: https://github.com/smcnab1/op-question-mark/stargazers
-[issues-shield]: https://img.shields.io/github/issues/smcnab1/op-question-mark.svg?style=for-the-badge
-[issues-url]: https://github.com/smcnab1/op-question-mark/issues
-[license-shield]: https://img.shields.io/github/license/smcnab1/op-question-mark.svg?style=for-the-badge
-[license-url]: https://github.com/smcnab1/op-question-mark/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/smcnab1/home-assistant-config.svg?style=for-the-badge
+[contributors-url]: https://github.com/smcnab1/home-assistant-config/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/smcnab1/home-assistant-config.svg?style=for-the-badge
+[forks-url]: https://github.com/smcnab1/home-assistant-config/network/members
+[stars-shield]: https://img.shields.io/github/stars/smcnab1/home-assistant-config.svg?style=for-the-badge
+[stars-url]: https://github.com/smcnab1/home-assistant-config/stargazers
+[issues-shield]: https://img.shields.io/github/issues/smcnab1/home-assistant-config.svg?style=for-the-badge
+[issues-url]: https://github.com/smcnab1/home-assistant-config/issues
+[license-shield]: https://img.shields.io/github/license/smcnab1/home-assistant-config.svg?style=for-the-badge
+[license-url]: https://github.com/smcnab1/home-assistant-config/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sammcnab/
 [product-screenshot]: images/screenshot.png
