@@ -34,41 +34,35 @@ This repo will be updated regularly and I am keen to make it an open & learning 
 ## Contents
 
 <div align="center">
-<a href="https://github.com/smcnab1/home-assistant-config/blob/master/SCREENSHOT.md">
-
-**View Demo**
-</a>
+  
+[**View Full Repo**](https://github.com/smcnab1/home-assistant-config)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+High%2C+Type%3A+Bug&template=bug_report.md&title=%5BBUG%5D">
-**Report Bug**
-</a>
+[**Report Bug**](https://github.com/smcnab1/home-assistant-config/issues)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">
-**Request Feature**
-</a>
+[**Request Feature**](https://github.com/smcnab1/home-assistant-config/issues)
 **·**
-<a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=&template=to-do-list.md&title=%5BTDL%5D">
-**ToDo List**
-</a>
+[**ToDo List**](https://github.com/smcnab1/home-assistant-config/issues)
 
 </div>
 
 <div align="center">
-<a href="#devices">Devices</a>
+  
+[Devices](https://github.com/smcnab1/home-assistant-config#devices)
 |
-<a href="#addon">Add-Ons</a>
+[Add-Ons](https://github.com/smcnab1/home-assistant-config#addon)
 |
-<a href="#automations">Automations</a>
+[Automations](https://github.com/smcnab1/home-assistant-config#automations)
 |
-<a href="#contributing">Contributing</a>
+[Contributing](https://github.com/smcnab1/home-assistant-config#contributing)
 |
-<a href="#license">License</a>
+[License](https://github.com/smcnab1/home-assistant-config#license)
 |
-<a href="#contact">Contact</a>
+[Contact](https://github.com/smcnab1/home-assistant-config#contact)
 </div>
 &nbsp;
 <div align="center">
 <a href="https://github.com/smcnab1/home-assistant-config/blob/master/SCREENSHOT.md">Click the image to see more screenshots of my current Dashboard
+        <br />
 <img src="https://i.imgur.com/z3pnxzt.png" alt="Screenshot Desktop"></a>
 </div>
 
