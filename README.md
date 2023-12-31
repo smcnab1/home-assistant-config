@@ -9,41 +9,14 @@
 <a name="readme-top"></a>
 
 <!-- PROJECT HEADING -->
-<div align="center">
-<a href="https://github.com/smcnab1/home-assistant-config">
-<img src="https://i.imgur.com/U4zDHO8.png" alt="Logo" width="150" height="150"></a>
 
-## **Home Assistant Config**
-
-#### Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!
-
-</div>
-
----
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
+# Home Assistant Config
 
 This is my **first** repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system.
 
 This repo will be updated regularly and I am keen to make it an open & learning venture. Looking for feature suggestions and advice to increase the **wife-approval level**😎.
 
 <!-- CONTENTS -->
-
-## Contents
-
-<div align="center">
-  
-[**View Full Repo**](https://github.com/smcnab1/home-assistant-config)
-**·**
-[**Report Bug**](https://github.com/smcnab1/home-assistant-config/issues)
-**·**
-[**Request Feature**](https://github.com/smcnab1/home-assistant-config/issues)
-**·**
-[**ToDo List**](https://github.com/smcnab1/home-assistant-config/issues)
-
-</div>
 
 <div align="center">
   
@@ -561,78 +534,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 <!-- end-hacs-frontend -->
 &nbsp;
 
-<!-- AUTOMATIONS TOC -->
-
-<a name="automations"></a>
-
-## Automations _(as at Oct 22)_
-
-There is a full list of all of my automations <a href="#allautomations">here</a>. Below is the table of contents of all of the automations.
-<br />
-
 <!-- start-automations -->
-
-**Table of Contents**
-
-1.  [Security 👮🚨](#security) (10 automations)
-2.  [Lighting 🌄🌇](#lighting) (42 automations)
-3.  [Transport 🚌🚝](#transport) (7 automations)
-4.  [Apple Watch 🍎⌚](#watch) (1 automation with 13 actions)
-5.  [HA-System ⏰🖥️](#hasystem) (9 automations)
-6.  [Media 🔊📺](#media) (5 automations)
-7.  [Notify 🔔📱](#notify) (6 automations)
-8.  [TTS 🔊📱](#tts) (5 automations)
-9.  [Sleeping 🛏️📡](#sleep) (1 automation)
-10. [Local Issue Tracking 🎟️](#issue) (1 automation)
-
-⚠️ Total number of automations: **85** ⚠️
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-<a name="contributing"></a>
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement" or "feature-request".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-<a name="license"></a>
-
-## License
-
-Distributed under the MIT License. See <a href="https://github.com/smcnab1/home-assistant-config/blob/master/LICENSE.md">`LICENSE.md`</a> for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-<a name="contact"></a>
-
-## Contact
-
-[![Email][email-badge]][email-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![GitHub][git-badge]][git-url]
-[![Kofi][kofi-badge]][kofi-url]
-[![Signal][signal-badge]][signal-url]
-[![Telegram][telegram-badge]][telegram-url]
-<br />
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ALL AUTOMATIONS -->
 
@@ -1449,6 +1351,43 @@ Distributed under the MIT License. See <a href="https://github.com/smcnab1/home-
 </details>
 
 </blockquotes></details>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Back Matter
+
+<!-- CONTRIBUTING -->
+
+<a name="contributing"></a>
+
+### Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement" or "feature-request".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### License
+
+This project is licensed under the [MIT License](LICENSE.md).
+
+<!-- CONTACT -->
+
+<a name="contact"></a>
+
+### Contact
+
+[![Email][email-badge]][email-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![GitHub][git-badge]][git-url]
+[![Kofi][kofi-badge]][kofi-url]
+<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
