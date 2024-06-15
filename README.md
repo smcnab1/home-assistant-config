@@ -6,44 +6,71 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![Kofi][kofi-badge]][kofi-url]
-<a name="readme-top"></a>
 
 <!-- PROJECT HEADING -->
 
-# Home Assistant Config
+<a name="readme-top"></a>
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/smcnab1/home-assistant-config">
+    <img src="docs/my-avatar.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Home Assistant Config</h3>
+
+  <p align="center">
+Your shortcut to seamless Home Assistant setups. Elevate your smart living experience effortlessly. 🏡✨
+    <br />
+    <a href="https://smcnab1.github.io/home-assistant-config/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/smcnab1/home-assistant-config">View Demo</a>
+    ·
+    <a href="https://github.com/smcnab1/home-assistant-config/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/smcnab1/home-assistant-config/issues">Request Feature</a>
+  </p>
+</div>
+
+<details>
+  <summary>View Contents</summary>
+
+_Last Updated June 2024_
+<!-- toc -->
+
+- [About The Project](#about-the-project)
+  - [Devices](#devices)
+  - [Add-Ons](#addons)
+  - [Automations](#automations)
+- [Back Matter](#back-matter)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+<!-- tocstop -->
+  
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<div align="center">
+  <a href="https://github.com/smcnab1/home-assistant-config">
+    <img src="https://i.imgur.com/z3pnxzt.png" alt="Logo" width="100%" height="auto">
+  </a>
+  </div>
+  
 This is my **first** repo on GitHub and first time utilising Home Assistant to it's fullest potential. I began with a few sensors and just playing but got bitten by the HA bug and have created a full smart home system.
 
 This repo will be updated regularly and I am keen to make it an open & learning venture. Looking for feature suggestions and advice to increase the **wife-approval level**😎.
 
-<!-- CONTENTS -->
-
-<div align="center">
-  
-[Devices](https://github.com/smcnab1/home-assistant-config#devices)
-|
-[Add-Ons](https://github.com/smcnab1/home-assistant-config#addon)
-|
-[Automations](https://github.com/smcnab1/home-assistant-config#automations)
-|
-[Contributing](https://github.com/smcnab1/home-assistant-config#contributing)
-|
-[License](https://github.com/smcnab1/home-assistant-config#license)
-|
-[Contact](https://github.com/smcnab1/home-assistant-config#contact)
-</div>
-&nbsp;
-<div align="center">
-<a href="https://github.com/smcnab1/home-assistant-config/blob/master/SCREENSHOT.md">Click the image to see more screenshots of my current Dashboard
-        <br />
-<img src="https://i.imgur.com/z3pnxzt.png" alt="Screenshot Desktop"></a>
-</div>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- DEVICES -->
-
 <a name="devices"></a>
 
-## All Devices _(as at Oct 22)_
+## Devices _(as at Oct 22)_
 
 This is a list of the devices I **currently** use as part of my Home Assistant setup. Any suggestions drop them as a <a href="https://github.com/smcnab1/home-assistant-config/issues/new?assignees=smcnab1&labels=Priority%3A+Low%2C+Type%3A+Feature&template=feature_request.md&title=%5BFR%5D">feature request.</a>
 <br />
@@ -456,8 +483,7 @@ This is a list of the devices I **currently** use as part of my Home Assistant s
 </details>
 &nbsp;
 <!-- ADD-ONS -->
-
-<a name="addon"></a>
+<a name="addons"></a>
 
 ## Add-Ons _(as at Oct 22)_
 
@@ -538,7 +564,7 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 
 <!-- ALL AUTOMATIONS -->
 
-<a name="allautomations"></a>
+<a name="automations"></a>
 
 ## All Automations _(as at Sept 22)_
 
@@ -1356,6 +1382,15 @@ This is a list of all of my add-ons within my setup. These also include the HACS
 
 ## Back Matter
 
+<!-- ROADMAP -->
+### Roadmap
+
+- [ ] Finalise Documentation.
+
+See the [open issues](https://github.com/smcnab1/home-assistant-config/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 <a name="contributing"></a>
@@ -1376,18 +1411,6 @@ Don't forget to give the project a star! Thanks again!
 ### License
 
 This project is licensed under the [MIT License](LICENSE.md).
-
-<!-- CONTACT -->
-
-<a name="contact"></a>
-
-### Contact
-
-[![Email][email-badge]][email-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![GitHub][git-badge]][git-url]
-[![Kofi][kofi-badge]][kofi-url]
-<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
