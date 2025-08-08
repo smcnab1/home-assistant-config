@@ -12,11 +12,8 @@
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/smcnab1/home-assistant-config">
-    <img src="docs/my-avatar.png" alt="Logo" width="80" height="80">
-  </a>
+> [!WARNING] 
+> Repository Archived: 08 Aug 25 _(read-only)_
 
 <h3 align="center">Home Assistant Config</h3>
 
